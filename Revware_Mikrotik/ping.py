@@ -9,8 +9,10 @@ def ping(ip):
 
 	while current_try < max_tries:
 		p = subprocess.Popen("ping -n 1 " + ip, stdout=subprocess.PIPE).communicate()[0]
-		print(p)
-		if b"unreachable" or b"timed out" in p:
+		#print(p.decode("utf-8"))
+		if b"unreachable" in p:
+			print(".", end="", flush=True)
+		elif b"timed out" in p:
 			print(".", end="", flush=True)
 		else:
 			print("Radio online \n")

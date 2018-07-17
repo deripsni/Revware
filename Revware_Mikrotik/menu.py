@@ -1,11 +1,11 @@
-from Revware_Mikrotik import ping
-from Revware_Mikrotik import ssh
-from Revware_Mikrotik import telnet
+import ping
+import ssh
+import telnet
 import time
 import sys
 
 
-def main():
+def menu():
 	print(25 * "-", "REVWARE Mikrotik", 24 * "-")
 	print("1. Firmware")
 	print("2. Password")
@@ -20,7 +20,7 @@ def main():
 loop = True
 
 while loop:
-	main()
+	menu()
 	choice = input("Enter choice: ")
 
 	if choice == "1":
@@ -41,9 +41,10 @@ while loop:
 		ipInput = input("IP: ")
 		usernameInput = input("Username [admin]: ") or "admin"
 		passwordInput = input("Password [west09]: ") or "west09"
-
+		newPassword = input("New Password [!nter@P1n00]: ") or "!inter@P1n00"
+		mCommand = "user set admin password=" + newPassword
 		ssh.ssh(ip=ipInput, username=usernameInput, password=passwordInput,
-				mikrotikCommand="user set admin password=!nter@P1n00")
+				mikrotikCommand=mCommand)
 		print("Password Changed")
 
 	elif choice == "3":
@@ -79,12 +80,14 @@ while loop:
 
 		telnet.telnet(ipInput, usernameInput, passwordInput)
 
-	elif choice == 7:
+	elif choice == "7":
 		print("Exit")
 		loop = False
 
 	else:
 		print("Try Again")
 
-if __name__ == "__main__":
-	main()
+
+#this was running the menu function after exit was chosen
+#if __name__ == "__main__":
+#	menu()
