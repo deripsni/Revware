@@ -17,5 +17,5 @@ def telnet(ip, username, password):
 	tn.read_until(b">", 5)
 	tn.write(b"/system reboot" + b"\n")
 	tn.write(b"quit \n")
-
+	print("swag")
 	print(tn.read_all())

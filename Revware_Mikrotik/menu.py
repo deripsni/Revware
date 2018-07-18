@@ -3,6 +3,7 @@ import ssh
 import telnet
 import time
 import sys
+import ftp
 
 
 def menu():
@@ -13,7 +14,8 @@ def menu():
 	print("4. Radio Name")
 	print("5. Custom Command")
 	print("6. Telnet [WIP]")
-	print("7. Exit")
+	print("7. Batch SFTP")
+	print("8. Exit")
 	print(67 * "-")
 
 
@@ -29,7 +31,7 @@ while loop:
 		usernameInput = input("Username [admin]: ") or "admin"
 		passwordInput = input("Password [west09]: ") or "west09"
 
-		ssh.sftp(ip=ipInput, username=usernameInput, password=passwordInput)
+		ssh.firmwaresftp(ip=ipInput, username=usernameInput, password=passwordInput)
 		ssh.ssh(ip=ipInput, username=usernameInput, password=passwordInput, mikrotikCommand="system reboot")
 
 		sys.stdout.flush()
@@ -42,7 +44,7 @@ while loop:
 		usernameInput = input("Username [admin]: ") or "admin"
 		passwordInput = input("Password [west09]: ") or "west09"
 		newPassword = input("New Password [!nter@P1n00]: ") or "!inter@P1n00"
-		mCommand = "user set admin password=" + newPassword
+		mCommand = "user set admin password="  + newPassword
 		ssh.ssh(ip=ipInput, username=usernameInput, password=passwordInput,
 				mikrotikCommand=mCommand)
 		print("Password Changed")
@@ -81,6 +83,13 @@ while loop:
 		telnet.telnet(ipInput, usernameInput, passwordInput)
 
 	elif choice == "7":
+		print("Batch FTP")
+		usernameInput = input("Username [admin]: ") or "admin"
+		passwordInput = input("Password [west09]: ") or "west09"
+		ftp.batchsftp(username=usernameInput, password=passwordInput)
+
+
+	elif choice == "8":
 		print("Exit")
 		loop = False
 
