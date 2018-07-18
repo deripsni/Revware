@@ -1,6 +1,5 @@
 import paramiko
-import socket
-from ftplib import FTP
+
 
 
 def printProgress(iteration, total, pre = '', suf = '', dec = 2, len = 100, fill = '█'):
@@ -24,14 +23,16 @@ def ssh(ip, username, password, mikrotikCommand):
 		client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 		client.connect(ip, port=port, username=username, password=password)
 		stdin, stdout, stderr = client.exec_command(mikrotikCommand)
-
+		#result, stdin, stdout, stderr=client.exec_command(mikrotikCommand)
+		#result = stdin.read().strip() + stdout.read().strip()
+		#result = ' '
 		if mikrotikCommand == "system reboot":
 			print("Rebooting Radio...",  end='')
 
 		else:
-			print(stdout.read().decode('UTF-8'))
-
 			client.close()
+
+		#return result
 
 	except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.NoValidConnectionsError):
 		print("Command not succesfully executed, please try again")
