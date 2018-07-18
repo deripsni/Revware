@@ -39,7 +39,7 @@ while loop:
 		sys.stdout.flush()
 		time.sleep(10)
 
-		ping.ping(ipInput)
+		ping.ping(ipInput, tries=50)
 
 	elif choice == "2":
 		ipInput = input("IP: ")
@@ -93,7 +93,6 @@ while loop:
 		usernameInput = input("Username [admin]: ") or "admin"
 		passwordInput = input("Password [west09]: ") or "west09"
 		ftp.batchsftp(username=usernameInput, password=passwordInput)
-
 
 	elif choice == "8":
 		print("Exit")
