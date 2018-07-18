@@ -12,7 +12,7 @@ def main():
 	print("3. Firewall")
 	print("4. Radio Name")
 	print("5. Custom Command")
-	print("6. Telnet [WIP]")
+	print("6. Telnet")
 	print("7. Exit")
 	print(67 * "-")
 
@@ -76,10 +76,13 @@ while loop:
 		ipInput = input("IP: ")
 		usernameInput = input("Username [admin]: ") or "admin"
 		passwordInput = input("Password [west09]: ") or "west09"
+		option = input("Protocol to turn on (ssh, ftp, winbox) [ssh]: ") or "ssh"
+		if option != "ssh" or "ftp" or "winbox":
+			print("Invalid command, please try again!\n")
+		else:
+			telnet.telnet(ipInput, usernameInput, passwordInput, option)
 
-		telnet.telnet(ipInput, usernameInput, passwordInput)
-
-	elif choice == 7:
+	elif choice == "7":
 		print("Exit")
 		loop = False
 
