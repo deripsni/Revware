@@ -26,3 +26,5 @@ def telnet(ip, username, password, option):
 	tn.write(b"quit" + b"\r\n")
 
 	tn.read_all()
+
+
