@@ -1,9 +1,14 @@
 import ssh
+import paramiko
 import time
 import ping
 from ftplib import FTP
 
-def batchftp(username, password):
+
+
+
+
+def batchsftp(username, password):
 
 	username = username
 	password = password
@@ -20,21 +25,13 @@ def batchftp(username, password):
 	with open(ifile, 'r') as infile:
 		ips = infile.read().splitlines()
 
-	for i in range(len(ips)):
-		ftp = FTP(ips[i])
-		ftp.login(username, password)
-		file = open(cfile, 'rb')
-		ftp.storbinary('STOR batch.auto.rsc', file)
-		directory= [] 			#list to store mikrotik directory
-		files = ''				#string to concatenate the list into
-		ftp.retrlines('LIST', directory.append)
 
-		if 'auto.log' in files.join(directory):
-			log = ftp.retrbinary("RETR batch.auto.log", open('lfile', 'wb').write)
-			ftp.delete('batch.auto.log')
-			ftp.delete('batch.auto.rsc')
-			print(ips[i], "executed the file successfully")
-		ftp.close()
+
+
+
+
+	for i in range(len(ips)):
+		batchsftp2(username,password,ips[i],cfile)
 		if reboot == 'Y' or reboot == 'y':
 			ssh.ssh(ips[i], username, password, 'system reboot')
 
@@ -42,10 +39,28 @@ def batchftp(username, password):
 		print('\n\n')
 		if len(ips) < 5:  # avoids an issue where the radios are pinged before they shut down for short ip lists
 			time.sleep(4)
-		print('checking for rebooted machines.')
+		print('Checking for rebooted machines')
 		for i in range(len(ips)):
 			print("Waiting.", end = '')
 			ping.ping(ips[i])
+
+
+def batchsftp2(username, password, ip, cfile):
+	transport = paramiko.Transport(ip, 22)
+	transport.connect(username=username, password=password)
+	sftp = paramiko.SFTPClient.from_transport(transport)
+	filepath = '/batch.bat'
+	print("Uploading file...")
+	sftp.put(cfile, filepath, callback=ssh.transfer)
+	print("DONE: File Uploaded")
+	ssh.ssh(ip, username, password, mikrotikCommand='/import batch.bat')
+
+	# if "executed successfully" in result:
+	# 	print("Script Executed Successfully")
+	# else:
+	# 	print("Script Did not Execute Successfully")
+	sftp.close()
+	transport.close()
 
 
 def filecallback(i):   #callback function that does nothing
