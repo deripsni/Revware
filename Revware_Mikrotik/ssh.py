@@ -1,4 +1,7 @@
 import paramiko
+import socket
+from ftplib import FTP
+
 
 def printProgress(iteration, total, pre = '', suf = '', dec = 2, len = 100, fill = '█'):
 	percent = ("{0:." + str(dec) + "f}").format(100 * (iteration/float(total)))
@@ -31,7 +34,7 @@ def ssh(ip, username, password, mikrotikCommand):
 			client.close()
 
 	except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.NoValidConnectionsError):
-		print("SSH not enabled on Radio")
+		print("Command not succesfully executed, please try again")
 
 
 
@@ -40,7 +43,7 @@ def transfer(transferred, to_transfer):
 	#print("Transferred: {0}/{1}".format(transferred, to_transfer))
 	printProgress(transferred, to_transfer, pre = 'Progress:', suf = 'Complete', len=60)
 
-def sftp(ip, username, password):
+def firmwaresftp(ip, username, password):
 	ip = ip
 	username = username
 	password = password
@@ -63,3 +66,5 @@ def sftp(ip, username, password):
 
 	except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.NoValidConnectionsError):
 		print("SSH not enabled on Radio")
+
+
