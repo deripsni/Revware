@@ -3,7 +3,7 @@ import ssh
 import telnet
 import time
 import sys
-import ftp
+import sftp
 
 
 def menu():
@@ -13,7 +13,6 @@ def menu():
 	print("3. Firewall")
 	print("4. Radio Name")
 	print("5. Custom Command")
-
 	print("6. Telnet [WIP]")
 	print("7. Batch SFTP")
 	print("8. Exit")
@@ -92,7 +91,7 @@ while loop:
 		print("Batch FTP")
 		usernameInput = input("Username [admin]: ") or "admin"
 		passwordInput = input("Password [west09]: ") or "west09"
-		ftp.batchsftp(username=usernameInput, password=passwordInput)
+		sftp.batchsftp(username=usernameInput, password=passwordInput)
 
 	elif choice == "8":
 		print("Exit")
