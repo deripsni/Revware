@@ -45,9 +45,8 @@ while loop:
 		usernameInput = input("Username [admin]: ") or "admin"
 		passwordInput = input("Password [west09]: ") or "west09"
 		newPassword = input("New Password [!nter@P1n00]: ") or "!inter@P1n00"
-		mCommand = "user set admin password="  + newPassword
-		ssh.ssh(ip=ipInput, username=usernameInput, password=passwordInput,
-				mikrotikCommand=mCommand)
+		mCommand = "user set admin password=" + newPassword
+		ssh.ssh(ip=ipInput, username=usernameInput, password=passwordInput, mikrotikCommand=mCommand)
 		print("Password Changed")
 
 	elif choice == "3":
@@ -86,7 +85,6 @@ while loop:
 		else:
 			telnet.telnet(ipInput, usernameInput, passwordInput, option)
 
-
 	elif choice == "7":
 		print("Batch FTP")
 		usernameInput = input("Username [admin]: ") or "admin"
@@ -101,6 +99,6 @@ while loop:
 		print("Try Again")
 
 
-#this was running the menu function after exit was chosen
-#if __name__ == "__main__":
-#	menu()
+# this was running the menu function after exit was chosen
+# if __name__ == "__main__":
+	# menu()
