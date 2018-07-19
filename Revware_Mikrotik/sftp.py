@@ -42,7 +42,7 @@ def batchsftp(username, password):
 		print('Checking for rebooted machines')
 		for i in range(len(ips)):
 			print("Waiting.", end = '')
-			ping.ping(ips[i], tries=5, timeout_include=False)
+			ping.ping(ips[i], tries=50, timeout_include=False)
 
 
 def batchsftp2(username, password, ip, cfile):
