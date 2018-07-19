@@ -13,9 +13,10 @@ def menu():
 	print("3. Firewall")
 	print("4. Radio Name")
 	print("5. Custom Command")
-	print("6. Telnet [WIP]")
+	print("6. Telnet")
 	print("7. Batch SFTP")
-	print("8. Exit")
+	print("8. Mikrotik Checker")
+	print("9. Exit")
 
 	print(67 * "-")
 
@@ -86,7 +87,6 @@ while loop:
 		else:
 			telnet.telnet(ipInput, usernameInput, passwordInput, option)
 
-
 	elif choice == "7":
 		print("Batch FTP")
 		usernameInput = input("Username [admin]: ") or "admin"
@@ -94,6 +94,12 @@ while loop:
 		sftp.batchsftp(username=usernameInput, password=passwordInput)
 
 	elif choice == "8":
+		print("Mikrotik Checker")
+		ipInput = input("IP: ")
+		subnetInput = input("Subnet: ")
+		ping.mikrotik_checker(ip=ipInput, subnet=subnetInput)
+
+	elif choice == "9":
 		print("Exit")
 		loop = False
 
