@@ -1,10 +1,10 @@
 import subprocess
 
 
-def ping(ip):
+def ping(ip, tries):
 	ip = ip
 
-	max_tries = 50
+	max_tries = tries
 	current_try = 0
 
 	while current_try < max_tries:
