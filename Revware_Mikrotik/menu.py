@@ -39,7 +39,7 @@ while loop:
 		sys.stdout.flush()
 		time.sleep(10)
 
-		ping.ping(ipInput, tries=50)
+		ping.ping(ipInput, tries=50, timeout_include=False)
 
 	elif choice == "2":
 		ipInput = input("IP: ")
@@ -96,7 +96,12 @@ while loop:
 		print("Mikrotik Checker")
 		ipInput = input("IP: ")
 		subnetInput = input("Subnet: ")
-		ping.mikrotik_checker(ip=ipInput, subnet=subnetInput)
+		timeoutInput = input("Would you like to include timed out devices in the search? (Yy/Nn): ")
+		if timeoutInput == "Y" or "y":
+			timeoutInput = True
+		else:
+			timeoutInput = False
+		ping.mikrotik_checker(ip=ipInput, subnet=subnetInput, option=timeoutInput)
 
 	elif choice == "9":
 		print("Exit")
