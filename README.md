@@ -9,10 +9,20 @@ Revware is a Python Tool to manipulate Mikrotik device(s) using SSH. Originally 
 
 
 # Installation
+  WIP
 
 # Version
+- 0.1.0 Intial Release
+  - Firmware
+  - Password
+  - Radio Name
+  - Custom Command
+  - Telnet
+  - Batch SFTP
+  - Mikrotik Checker
 
-# Contributors & Developers
-@revand
-@deripsni
-@orangedude27
+# Developers & Contributors
+
+* [Revand](https://github.com/revand)
+* [Deripsni](https://github.com/deripsni)
+* [Orangedude27](https://github.com/orangedude27)
