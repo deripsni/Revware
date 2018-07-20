@@ -2,10 +2,6 @@ import ssh
 import paramiko
 import time
 import ping
-from ftplib import FTP
-
-
-
 
 
 def batchsftp(username, password):
@@ -21,14 +17,8 @@ def batchsftp(username, password):
 	with open(cfile, 'r') as infile:
 		commands = infile.read()
 
-
 	with open(ifile, 'r') as infile:
 		ips = infile.read().splitlines()
-
-
-
-
-
 
 	for i in range(len(ips)):
 		batchsftp2(username,password,ips[i],cfile)
@@ -43,7 +33,6 @@ def batchsftp(username, password):
 		for i in range(len(ips)):
 			print("Waiting.", end = '')
 			ping.ping(ips[i])
-
 
 def batchsftp2(username, password, ip, cfile):
 	transport = paramiko.Transport(ip, 22)
@@ -61,7 +50,6 @@ def batchsftp2(username, password, ip, cfile):
 	# 	print("Script Did not Execute Successfully")
 	sftp.close()
 	transport.close()
-
 
 def filecallback(i):   #callback function that does nothing
 	x=1
