@@ -24,15 +24,16 @@ def Menu():
 class Firmware(QtCore.QObject):
 
 	signalStatus = QtCore.pyqtSignal()
-	firmwaresftpSignal = QtCore.pyqtSignal(str,str,str)
-	sshSignal = QtCore.pyqtSignal(str,str,str,str)
-	pingSignal = QtCore.pyqtSignal(str,int)
+	firmwaresftpSignal = QtCore.pyqtSignal(str, str, str)
+	sshSignal = QtCore.pyqtSignal(str, str, str, str)
+	pingSignal = QtCore.pyqtSignal(str, int)
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
+
 		self.createSSH()
 
-	@QtCore.pyqtSlot()
+	@QtCore.pyqtSlot(str,str,str)
 	def runFirmware(self, ipInput, usernameInput, passwordInput):
 		print("Firmware")
 		print (ipInput + usernameInput, passwordInput)
@@ -58,15 +59,36 @@ class Firmware(QtCore.QObject):
 		self.ip = ping.IPTest(parent=self)
 		self.pingSignal.connect(self.ip.ping)
 
+class Password(QtCore.QObject):
 
-def Password():
-	ipInput = input("IP: ")
-	usernameInput = input("Username [admin]: ") or "admin"
-	passwordInput = input("Password [west09]: ") or "west09"
-	newPassword = input("New Password [!nter@P1n00]: ") or "!inter@P1n00"
-	mCommand = "user set admin password=" + newPassword
-	ssh.ssh(ip=ipInput, username=usernameInput, password=passwordInput, mikrotikCommand=mCommand)
-	print("Password Changed")
+	printToScreen = QtCore.pyqtSignal(str)
+	sshSignal = QtCore.pyqtSignal(str, str, str, str)
+
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.printToScreen.connect(self.parent().gui.updateStatus)
+		self.createSSH()
+
+	@QtCore.pyqtSlot(str,str,str)
+	def runPassword(self, ipInput, usernameInput, passwordInput):
+		print("Password")
+		print (ipInput + usernameInput, passwordInput)
+
+		self.localip=ipInput
+		self.localu=usernameInput
+		self.localp=passwordInput
+
+	def createSSH(self):
+		self.sshc = ssh.sshConnection(parent=self)
+		self.sshSignal.connect(self.sshc.ssh)
+
+
+	@QtCore.pyqtSlot(str, str)
+	def setPassword(self, nPassword, cPassword):
+		if nPassword == cPassword:
+			self.command =  "user set admin password=" + nPassword
+			self.sshSignal.emit(self.localip, self.localu, self.localp, self.command)
+			self.printToScreen.emit("Password Set")
 
 def main():
 	loop = True
