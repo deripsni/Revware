@@ -66,7 +66,6 @@ class Password(QtCore.QObject):
 	sshSignal = QtCore.pyqtSignal(str, str, str, str)
 
 	def __init__(self, parent=None):
-		print("Password Thread Initialized")
 		super(self.__class__, self).__init__(parent)
 		self.printToScreen.connect(self.parent().gui.updateStatus)
 		self.createSSH()

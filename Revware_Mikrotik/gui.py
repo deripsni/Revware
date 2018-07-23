@@ -46,43 +46,27 @@ class Master(QtCore.QObject):
 		self.firmware.moveToThread(self.firmware_thread)
 		self.firmware_thread.start()
 		self.firmwareSignal.connect(self.firmware.runFirmware)
-		#print("swag3")
 		self.firmwareSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
 		self.firmware_thread.exit()
 
 	def CreatePasswordThread(self):
-		print("check1")
-		# if not self.password_thread:
-		# 	self.password_thread.exit()
-		# 	print("check")
-		print("check3")
-		# self.password=None
-		# self.password_thread=None
-		print("check4")
 		self.password= menu.Password(parent=self)
 		self.password_thread = QtCore.QThread()
 		self.password.moveToThread(self.password_thread)
 		self.password_thread.start()
 		self.pwindow.show()
 		self.passwordSignal.connect(self.password.runPassword)
-		#print("yeet3")
 		self.passwordSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
 		self.password_thread.exit()
 
 	def CreateFirewallThread(self):
-		print("lit1")
 		self.firewall=menu.Firewall(parent=self)
-		print("lit4")
 		self.firewall_thread = QtCore.QThread()
-		print("lit5")
 		self.firewall.moveToThread(self.firewall_thread)
-		print("lit6")
 		self.firewall_thread.start()
-		print("lit7")
 		self.firewallSignal.connect(self.firewall.runFirewall)
-		print("lit3")
 		self.firewallSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
-		#self.firewall_thread.exit()
+		self.firewall_thread.exit()
 
 class Password_window(QMainWindow):
 
@@ -107,6 +91,7 @@ class Password_window(QMainWindow):
 
 		self.btn = QPushButton("Submit", self)
 		self.btn.move(100, 65)
+		self.btn.setAutoDefault(True)
 
 
 
