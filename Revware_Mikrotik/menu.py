@@ -30,7 +30,7 @@ class Firmware(QtCore.QObject):
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
-
+		print("Firmware Thread Initialized")
 		self.createSSH()
 
 	@QtCore.pyqtSlot(str,str,str)
@@ -51,6 +51,7 @@ class Firmware(QtCore.QObject):
 		time.sleep(5)
 
 		self.pingSignal.emit(localip, 50)
+		#self.parent.firmware_thread.exit()
 
 	def createSSH(self):
 		self.sshc = ssh.sshConnection(parent=self)
@@ -65,6 +66,7 @@ class Password(QtCore.QObject):
 	sshSignal = QtCore.pyqtSignal(str, str, str, str)
 
 	def __init__(self, parent=None):
+		print("Password Thread Initialized")
 		super(self.__class__, self).__init__(parent)
 		self.printToScreen.connect(self.parent().gui.updateStatus)
 		self.createSSH()
@@ -89,6 +91,34 @@ class Password(QtCore.QObject):
 			self.command =  "user set admin password=" + nPassword
 			self.sshSignal.emit(self.localip, self.localu, self.localp, self.command)
 			self.printToScreen.emit("Password Set")
+			#self.parent.firmware_thread.exit()
+
+class Firewall(QtCore.QObject):
+
+	printToScreen = QtCore.pyqtSignal(str)
+	sshSignal = QtCore.pyqtSignal(str, str, str, str)
+
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.printToScreen.connect(self.parent().gui.updateStatus)
+		self.createSSH()
+
+	@QtCore.pyqtSlot(str,str,str)
+	def runFirewall(self, ipInput, usernameInput, passwordInput):
+		print("Firewall")
+		print (ipInput + usernameInput, passwordInput)
+
+		self.localip=ipInput
+		self.localu=usernameInput
+		self.localp=passwordInput
+		self.sshSignal.emit(self.localip, self.localu, self.localp, "ip firewall filter print")
+		#self.thread().exit()
+
+	def createSSH(self):
+		self.sshc = ssh.sshConnection(parent=self)
+		self.sshSignal.connect(self.sshc.ssh)
+
+
 
 def main():
 	loop = True

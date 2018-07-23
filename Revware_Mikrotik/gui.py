@@ -10,6 +10,79 @@ import ctypes
 myappid = 'RevWare.Mikrotik.version'
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)		#these lines set the taskbar icon to the window icon instead of the pythonw.exe icon
 
+class Master(QtCore.QObject):
+
+	firmwareSignal = QtCore.pyqtSignal(str,str,str)
+	passwordSignal = QtCore.pyqtSignal(str,str,str)
+	submitPassword = QtCore.pyqtSignal(str,str)
+	firewallSignal = QtCore.pyqtSignal(str,str,str)
+
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+
+		self.gui = MainWindow()
+		self.pwindow = Password_window()
+		self.ConnectSignals()
+		self.gui.show()
+
+		print("initialized")
+
+	def ConnectSignals(self):
+		self.gui.btn1.clicked.connect(self.CreateFirmwareThread)
+		self.gui.btn2.clicked.connect(self.CreatePasswordThread)
+		self.gui.btn3.clicked.connect(self.CreateFirewallThread)
+		self.gui.btn4.clicked.connect(menu.Password)
+		self.gui.btn5.clicked.connect(menu.Firmware)
+		self.gui.btn6.clicked.connect(menu.Password)
+		self.gui.btn7.clicked.connect(menu.Firmware)
+		self.gui.btn8.clicked.connect(menu.Password)
+		self.gui.clearbtn.clicked.connect(self.gui.clearInfo)
+
+		self.pwindow.btn.clicked.connect(lambda: self.password.setPassword(self.pwindow.npbox.text(),self.pwindow.pbox.text()))
+		self.pwindow.btn.clicked.connect(self.pwindow.close)
+	def CreateFirmwareThread(self):
+		self.firmware=menu.Firmware(parent=self)
+		self.firmware_thread = QtCore.QThread()
+		self.firmware.moveToThread(self.firmware_thread)
+		self.firmware_thread.start()
+		self.firmwareSignal.connect(self.firmware.runFirmware)
+		#print("swag3")
+		self.firmwareSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
+		self.firmware_thread.exit()
+
+	def CreatePasswordThread(self):
+		print("check1")
+		# if not self.password_thread:
+		# 	self.password_thread.exit()
+		# 	print("check")
+		print("check3")
+		# self.password=None
+		# self.password_thread=None
+		print("check4")
+		self.password= menu.Password(parent=self)
+		self.password_thread = QtCore.QThread()
+		self.password.moveToThread(self.password_thread)
+		self.password_thread.start()
+		self.pwindow.show()
+		self.passwordSignal.connect(self.password.runPassword)
+		#print("yeet3")
+		self.passwordSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
+		self.password_thread.exit()
+
+	def CreateFirewallThread(self):
+		print("lit1")
+		self.firewall=menu.Firewall(parent=self)
+		print("lit4")
+		self.firewall_thread = QtCore.QThread()
+		print("lit5")
+		self.firewall.moveToThread(self.firewall_thread)
+		print("lit6")
+		self.firewall_thread.start()
+		print("lit7")
+		self.firewallSignal.connect(self.firewall.runFirewall)
+		print("lit3")
+		self.firewallSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
+		#self.firewall_thread.exit()
 
 class Password_window(QMainWindow):
 
@@ -49,55 +122,6 @@ class Password_window(QMainWindow):
 	def buttonClicked(self):
 		sender = self.sender()
 		self.statusBar().showMessage(sender.text() + ' was pressed')
-
-class Master(QtCore.QObject):
-
-	firmwareSignal = QtCore.pyqtSignal(str,str,str)
-	passwordSignal = QtCore.pyqtSignal(str,str,str)
-	submitPassword = QtCore.pyqtSignal(str,str)
-
-	def __init__(self, parent=None):
-		super(self.__class__, self).__init__(parent)
-
-		self.gui = MainWindow()
-		self.pwindow = Password_window()
-		self.ConnectSignals()
-		self.gui.show()
-
-		print("initialized")
-
-	def ConnectSignals(self):
-		self.gui.btn1.clicked.connect(self.CreateFirmwareThread)
-		self.gui.btn2.clicked.connect(self.CreatePasswordThread)
-		self.gui.btn3.clicked.connect(menu.Firmware)
-		self.gui.btn4.clicked.connect(menu.Password)
-		self.gui.btn5.clicked.connect(menu.Firmware)
-		self.gui.btn6.clicked.connect(menu.Password)
-		self.gui.btn7.clicked.connect(menu.Firmware)
-		self.gui.btn8.clicked.connect(menu.Password)
-		self.gui.clearbtn.clicked.connect(self.gui.clearInfo)
-
-		self.pwindow.btn.clicked.connect(lambda: self.password.setPassword(self.pwindow.npbox.text(),self.pwindow.pbox.text()))
-		self.pwindow.btn.clicked.connect(self.pwindow.close)
-	def CreateFirmwareThread(self):
-		self.firmware=menu.Firmware(parent=self)
-		self.firmware_thread = QtCore.QThread()
-		self.firmware.moveToThread(self.firmware_thread)
-		self.firmware_thread.start()
-		self.firmwareSignal.connect(self.firmware.runFirmware)
-		print("swag3")
-		self.firmwareSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
-
-	def CreatePasswordThread(self):
-		print("yeet0")
-		self.password=menu.Password(parent=self)
-		self.password_thread = QtCore.QThread()
-		self.password.moveToThread(self.password_thread)
-		self.password_thread.start()
-		self.pwindow.show()
-		self.passwordSignal.connect(self.password.runPassword)
-		print("yeet3")
-		self.passwordSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
 
 
 class MainWindow(QMainWindow):

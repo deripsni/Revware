@@ -47,7 +47,7 @@ class sshConnection(QtCore.QObject):
 			stdin, stdout, stderr = self.client.exec_command(mikrotikCommand)
 			#result, stdin, stdout, stderr=client.exec_command(mikrotikCommand)
 			#result = stdin.read().strip() + stdout.read().strip()
-			#result = ' '
+			#print(result)
 			if mikrotikCommand == "system reboot":
 				self.printToScreen.emit("Rebooting Radio...")
 				QtCore.QCoreApplication.processEvents()
