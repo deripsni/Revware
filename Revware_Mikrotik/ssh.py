@@ -1,5 +1,6 @@
 import paramiko
 import time
+import os
 from PyQt5 import QtCore
 
 class sshConnection(QtCore.QObject):
@@ -8,7 +9,6 @@ class sshConnection(QtCore.QObject):
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
-		print("its lit")
 		self.username = ''
 		self.password = ''
 		self.port = '0'
@@ -45,13 +45,13 @@ class sshConnection(QtCore.QObject):
 			self.client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 			self.client.connect(ip, port=self.port, username=self.username, password=self.password)
 			stdin, stdout, stderr = self.client.exec_command(mikrotikCommand)
-			#result, stdin, stdout, stderr=client.exec_command(mikrotikCommand)
-			#result = stdin.read().strip() + stdout.read().strip()
-			#result = ' '
+			x=stdout.read()
 			if mikrotikCommand == "system reboot":
 				self.printToScreen.emit("Rebooting Radio...")
 				QtCore.QCoreApplication.processEvents()
-
+			elif mikrotikCommand == "ip firewall filter print":
+				y=x.decode("UTF-8")
+				self.printToScreen.emit(y)
 			else:
 				self.client.close()
 
