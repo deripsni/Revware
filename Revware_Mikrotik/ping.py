@@ -1,4 +1,7 @@
+
 import subprocess
+import ipaddress
+import socket
 from PyQt5 import QtCore
 
 
@@ -35,3 +38,21 @@ class IPTest(QtCore.QObject):
 
 		else:
 			print("{}{}{}".format("Radio didn't return after: ", self.max_tries, " tries."))
+
+	def mikrotik_checker(self, ip, subnet, option):
+		self.ip = ip
+		self.subnet = subnet
+		self.option = option
+
+		self.network = ipaddress.IPv4Network(self.ip + self.subnet)
+		file = open("ipList.txt", "w")
+		for addr in self.network:
+			self.status = self.ping(str(addr), tries=2, timeout_include=option)
+			if self.status == "online":
+				self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+				self.result = self.sock.connect_ex((str(addr), 8291))
+				if self.result == 0:
+					file.write(str(addr) + "\n")
+				# print("Winbox is enabled! Mikrotik found!")  # Success Message
+				self.sock.close()
+		file.close()

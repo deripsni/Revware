@@ -76,7 +76,6 @@ class Master(QtCore.QObject):
 
 		self.twindow.sshbtn.clicked.connect(self.twindow.close)
 		self.twindow.sshbtn.clicked.connect(lambda: self.telnet.setTelnet("ssh"))
-
 		self.twindow.ftpbtn.clicked.connect(lambda: self.telnet.setTelnet("ftp"))
 		self.twindow.ftpbtn.clicked.connect(self.twindow.close)
 		self.twindow.winbtn.clicked.connect(lambda: self.telnet.setTelnet("winbox"))
@@ -147,6 +146,16 @@ class Master(QtCore.QObject):
 		self.twindow.show()
 		self.telnetSignal.connect(self.telnet.runTelnet)
 		self.telnetSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
+		self.telnet_thread.exit()
+
+	def CreateTelnetThread(self):
+		self.mikro= menu.Mikrotik(parent=self)
+		self.mikro_thread = QtCore.QThread()
+		self.mikro.moveToThread(self.mikro_thread)
+		self.mikro_thread.start()
+		self.mwindow.show()
+		self.mikroSignal.connect(self.mikro.runMikro)
+		self.mikroSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
 		self.telnet_thread.exit()
 
 class Password_window(QMainWindow):
