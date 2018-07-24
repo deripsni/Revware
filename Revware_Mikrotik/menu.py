@@ -176,35 +176,44 @@ class CustomCommand(QtCore.QObject):
 
 class BatchSFTP(QtCore.QObject):
 
-	printToScreen = QtCore.pyqtSignal(str)
+
+	signalStatus = QtCore.pyqtSignal()
+	firmwaresftpSignal = QtCore.pyqtSignal(str, str, str)
 	sshSignal = QtCore.pyqtSignal(str, str, str, str)
+	pingSignal = QtCore.pyqtSignal(str, int)
+	printToScreen = QtCore.pyqtSignal(str)
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
 		self.printToScreen.connect(self.parent().gui.updateStatus)
 		self.createSSH()
 
-	@QtCore.pyqtSlot(str,str,str)
-	def runPassword(self, ipInput, usernameInput, passwordInput):
+	@QtCore.pyqtSlot(str,str)
+	def runBatchSFTP(self, usernameInput, passwordInput):
 		print("Batch SFTP")
-		print (ipInput + usernameInput, passwordInput)
+		print (usernameInput, passwordInput)
 
-		self.localip=ipInput
 		self.localu=usernameInput
 		self.localp=passwordInput
 
+
 	def createSSH(self):
 		self.sshc = ssh.sshConnection(parent=self)
+		self.firmwaresftpSignal.connect(self.sshc.firmwaresftp)
 		self.sshSignal.connect(self.sshc.ssh)
+		self.ip = ping.IPTest(parent=self)
+		self.pingSignal.connect(self.ip.ping)
+		self.mysftp= sftp.SFTP(parent=self)
 
 
 	@QtCore.pyqtSlot(str, str)
-	def setPassword(self, nPassword, cPassword):
-		if nPassword == cPassword:
-			self.command =  "user set admin password=" + nPassword
-			self.sshSignal.emit(self.localip, self.localu, self.localp, self.command)
-			self.printToScreen.emit("Password Set")
-			#self.parent.firmware_thread.exit()
+	def setBatchSFTP(self, cfile, ifile):
+
+		self.cmdFile = cfile
+		self.ipFile	= ifile
+
+		self.mysftp.batchsftp(username=self.localu, password=self.localp,cfile=self.cmdFile, ifile=self.ipFile, reboot='yes')
+
 
 def main():
 	loop = True
