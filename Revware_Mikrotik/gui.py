@@ -28,7 +28,9 @@ class Master(QtCore.QObject):
 	cSend = QtCore.pyqtSignal(str)
 	iSend = QtCore.pyqtSignal(str)
 
-	# Makes the program output silent exceptions for debugging
+	telnetSignal = QtCore.pyqtSignal(str,str,str)
+
+	# Makes the program display silent exceptions for debugging
 	sys._excepthook = sys.excepthook
 	def exception_hook(exctype, value, traceback):
 		print(exctype, value, traceback)
@@ -44,6 +46,7 @@ class Master(QtCore.QObject):
 		self.pwindow = Password_window()
 		self.cwindow = Command_window()
 		self.bwindow = BatchSFTP_Window()
+		self.twindow = Telnet_window()
 		self.ConnectSignals()
 		self.gui.show()
 
@@ -55,7 +58,7 @@ class Master(QtCore.QObject):
 		self.gui.btn3.clicked.connect(self.CreateFirewallThread)
 		self.gui.btn4.clicked.connect(self.CreateDeviceNameThread)
 		self.gui.btn5.clicked.connect(self.CreateCustomCommandThread)
-		self.gui.btn6.clicked.connect(menu.Password)
+		self.gui.btn6.clicked.connect(self.CreateTelnetThread)
 		self.gui.btn7.clicked.connect(self.CreateBatchThread)
 		self.gui.btn8.clicked.connect(menu.Password)
 		self.gui.clearbtn.clicked.connect(self.gui.clearInfo)
@@ -70,6 +73,15 @@ class Master(QtCore.QObject):
 		self.bwindow.ipbtn.clicked.connect(self.bwindow.iSet)
 		self.bwindow.btn.clicked.connect(lambda: self.batch.setBatchSFTP(self.bwindow.ctxt.text(), self.bwindow.iptxt.text()))
 		self.bwindow.btn.clicked.connect(self.bwindow.close)
+
+		self.twindow.sshbtn.clicked.connect(self.twindow.close)
+		self.twindow.sshbtn.clicked.connect(lambda: self.telnet.setTelnet("ssh"))
+
+		self.twindow.ftpbtn.clicked.connect(lambda: self.telnet.setTelnet("ftp"))
+		self.twindow.ftpbtn.clicked.connect(self.twindow.close)
+		self.twindow.winbtn.clicked.connect(lambda: self.telnet.setTelnet("winbox"))
+		self.twindow.winbtn.clicked.connect(self.twindow.close)
+
 	def CreateFirmwareThread(self):
 		self.firmware=menu.Firmware(parent=self)
 		self.firmware_thread = QtCore.QThread()
@@ -126,6 +138,16 @@ class Master(QtCore.QObject):
 		self.batchSignal.connect(self.batch.runBatchSFTP)
 		self.batchSignal.emit(self.gui.ubox.text(), self.gui.pbox.text())
 		self.batch_thread.exit()
+
+	def CreateTelnetThread(self):
+		self.telnet= menu.Telnet(parent=self)
+		self.telnet_thread = QtCore.QThread()
+		self.telnet.moveToThread(self.telnet_thread)
+		self.telnet_thread.start()
+		self.twindow.show()
+		self.telnetSignal.connect(self.telnet.runTelnet)
+		self.telnetSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
+		self.telnet_thread.exit()
 
 class Password_window(QMainWindow):
 
@@ -229,6 +251,38 @@ class BatchSFTP_Window(QMainWindow):
 	def iSet(self, file):
 		fname = QFileDialog.getOpenFileName(self, 'Open file', filter="Text files (*.txt)")
 		self.iptxt.setText(fname[0])
+
+class Telnet_window(QMainWindow):
+
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.initUI()
+
+	def initUI(self):
+		self.nplabel = QLabel('Which Protocol would you like to enable?', self)
+		self.nplabel.resize(200,30)
+		self.nplabel.move(60, 5)
+
+		self.sshbtn = QPushButton("SSH", self)
+		self.sshbtn.move(40, 35)
+		self.sshbtn.resize(60,20)
+		self.sshbtn.setAutoDefault(True)
+
+		self.ftpbtn = QPushButton("FTP", self)
+		self.ftpbtn.move(120, 35)
+		self.ftpbtn.resize(60,20)
+		self.ftpbtn.setAutoDefault(True)
+
+		self.winbtn = QPushButton("Winbox", self)
+		self.winbtn.move(200, 35)
+		self.winbtn.resize(60,20)
+		self.winbtn.setAutoDefault(True)
+
+		self.statusBar()
+
+		self.setGeometry(90, 200, 300, 80)
+		self.setWindowTitle('Enable Protocol')
+
 
 
 class MainWindow(QMainWindow):

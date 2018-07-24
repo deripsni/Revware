@@ -214,6 +214,32 @@ class BatchSFTP(QtCore.QObject):
 
 		self.mysftp.batchsftp(username=self.localu, password=self.localp,cfile=self.cmdFile, ifile=self.ipFile, reboot='yes')
 
+class Telnet(QtCore.QObject):
+
+	printToScreen = QtCore.pyqtSignal(str)
+	telnetSignal = QtCore.pyqtSignal(str,str,str,str)
+
+
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.printToScreen.connect(self.parent().gui.updateStatus)
+		self.tel=telnet.Telnet(parent=self)
+		self.telnetSignal.connect(self.tel.telnet)
+
+	@QtCore.pyqtSlot(str,str,str)
+	def runTelnet(self, ipInput, usernameInput, passwordInput):
+		print("Password")
+		print (ipInput + usernameInput, passwordInput)
+
+		self.localip=ipInput
+		self.localu=usernameInput
+		self.localp=passwordInput
+
+
+	@QtCore.pyqtSlot(str)
+	def setTelnet(self, method):
+		self.telnetSignal.emit(self.localip, self.localu, self.localp, method)
+
 
 def main():
 	loop = True
@@ -248,10 +274,7 @@ def main():
 				telnet.telnet(ipInput, usernameInput, passwordInput, option)
 
 		elif choice == "7":
-			print("Batch FTP")
-			usernameInput = input("Username [admin]: ") or "admin"
-			passwordInput = input("Password [west09]: ") or "west09"
-			sftp.batchsftp(username=usernameInput, password=passwordInput)
+			BatchSFTP()
 
 		elif choice == "8":
 			print("Exit")
