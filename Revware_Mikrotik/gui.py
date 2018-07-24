@@ -16,12 +16,16 @@ class Master(QtCore.QObject):
 	passwordSignal = QtCore.pyqtSignal(str,str,str)
 	submitPassword = QtCore.pyqtSignal(str,str)
 	firewallSignal = QtCore.pyqtSignal(str,str,str)
+	devicenameSignal = QtCore.pyqtSignal(str,str,str)
+	commandSignal = QtCore.pyqtSignal(str, str, str)
+	submitCommand = QtCore.pyqtSignal(str)
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
 
 		self.gui = MainWindow()
 		self.pwindow = Password_window()
+		self.cwindow = Command_window()
 		self.ConnectSignals()
 		self.gui.show()
 
@@ -31,8 +35,8 @@ class Master(QtCore.QObject):
 		self.gui.btn1.clicked.connect(self.CreateFirmwareThread)
 		self.gui.btn2.clicked.connect(self.CreatePasswordThread)
 		self.gui.btn3.clicked.connect(self.CreateFirewallThread)
-		self.gui.btn4.clicked.connect(menu.Password)
-		self.gui.btn5.clicked.connect(menu.Firmware)
+		self.gui.btn4.clicked.connect(self.CreateDeviceNameThread)
+		self.gui.btn5.clicked.connect(self.CreateCustomCommandThread)
 		self.gui.btn6.clicked.connect(menu.Password)
 		self.gui.btn7.clicked.connect(menu.Firmware)
 		self.gui.btn8.clicked.connect(menu.Password)
@@ -40,6 +44,9 @@ class Master(QtCore.QObject):
 
 		self.pwindow.btn.clicked.connect(lambda: self.password.setPassword(self.pwindow.npbox.text(),self.pwindow.pbox.text()))
 		self.pwindow.btn.clicked.connect(self.pwindow.close)
+
+		self.cwindow.btn.clicked.connect(lambda: self.command.setCommand(self.cwindow.cbox.text()))
+		self.cwindow.btn.clicked.connect(self.cwindow.close)
 	def CreateFirmwareThread(self):
 		self.firmware=menu.Firmware(parent=self)
 		self.firmware_thread = QtCore.QThread()
@@ -67,6 +74,26 @@ class Master(QtCore.QObject):
 		self.firewallSignal.connect(self.firewall.runFirewall)
 		self.firewallSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
 		self.firewall_thread.exit()
+
+	def CreateDeviceNameThread(self):
+		self.devicename=menu.DeviceName(parent=self)
+		self.devicename_thread = QtCore.QThread()
+		self.devicename.moveToThread(self.devicename_thread)
+		self.devicename_thread.start()
+		self.devicenameSignal.connect(self.devicename.runDeviceName)
+		self.devicenameSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
+		self.devicename_thread.exit()
+
+	def CreateCustomCommandThread(self):
+		print("yolo")
+		self.command= menu.CustomCommand(parent=self)
+		self.command_thread = QtCore.QThread()
+		self.command.moveToThread(self.command_thread)
+		self.command_thread.start()
+		self.cwindow.show()
+		self.commandSignal.connect(self.command.runCustomCommand)
+		self.commandSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
+		self.command_thread.exit()
 
 class Password_window(QMainWindow):
 
@@ -109,13 +136,44 @@ class Password_window(QMainWindow):
 		self.statusBar().showMessage(sender.text() + ' was pressed')
 
 
+class Command_window(QMainWindow):
+
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.initUI()
+
+	def initUI(self):
+		self.cbox = QLineEdit(self)
+		self.cbox.move(105, 10)
+		self.cbox.resize(200, 20)
+
+		self.clabel = QLabel('Custom Command: ', self)
+		self.clabel.move(11, 5)
+
+		self.btn = QPushButton("Submit", self)
+		self.btn.move(200, 35)
+		self.btn.setAutoDefault(True)
+
+		self.statusBar()
+
+		self.setGeometry(90, 200, 320, 70)
+		self.setWindowTitle('Enter Custom Command')
+
+
+	def submit(self):
+		self.doneSignal.emit(self.npbox.text,self.pbox.text)
+
+	def buttonClicked(self):
+		sender = self.sender()
+		self.statusBar().showMessage(sender.text() + ' was pressed')
+
+
 class MainWindow(QMainWindow):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
 
 	def initUI(self):
-		self.pwindow = Password_window(parent=self)
 
 		self.ipbox = QLineEdit(self)
 		self.ipbox.move(60, 10)
