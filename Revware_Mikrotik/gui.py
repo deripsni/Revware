@@ -29,7 +29,8 @@ class Master(QtCore.QObject):
 	iSend = QtCore.pyqtSignal(str)
 
 	telnetSignal = QtCore.pyqtSignal(str,str,str)
-	# Makes the program output silent exceptions for debugging
+
+	# Makes the program display silent exceptions for debugging
 	sys._excepthook = sys.excepthook
 	def exception_hook(exctype, value, traceback):
 		print(exctype, value, traceback)
@@ -72,6 +73,15 @@ class Master(QtCore.QObject):
 		self.bwindow.ipbtn.clicked.connect(self.bwindow.iSet)
 		self.bwindow.btn.clicked.connect(lambda: self.batch.setBatchSFTP(self.bwindow.ctxt.text(), self.bwindow.iptxt.text()))
 		self.bwindow.btn.clicked.connect(self.bwindow.close)
+
+		self.twindow.sshbtn.clicked.connect(self.twindow.close)
+		self.twindow.sshbtn.clicked.connect(lambda: self.telnet.setTelnet("ssh"))
+
+		self.twindow.ftpbtn.clicked.connect(lambda: self.telnet.setTelnet("ftp"))
+		self.twindow.ftpbtn.clicked.connect(self.twindow.close)
+		self.twindow.winbtn.clicked.connect(lambda: self.telnet.setTelnet("winbox"))
+		self.twindow.winbtn.clicked.connect(self.twindow.close)
+
 	def CreateFirmwareThread(self):
 		self.firmware=menu.Firmware(parent=self)
 		self.firmware_thread = QtCore.QThread()

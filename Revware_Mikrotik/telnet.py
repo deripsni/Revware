@@ -2,10 +2,13 @@ import telnetlib
 from PyQt5 import QtCore
 
 class Telnet(QtCore.QObject):
+	printToScreen = QtCore.pyqtSignal(str)
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
+		self.printToScreen.connect(parent.parent().gui.updateStatus)
 
+	@QtCore.pyqtSlot(str,str,str,str)
 	def telnet(self, ip, username, password, option):
 		self.ip = ip
 		self.username = username
@@ -20,13 +23,13 @@ class Telnet(QtCore.QObject):
 		self.tn.read_until(b">", 5)
 		if self.option == "ssh":
 			self.tn.write(b"/ip service enable ssh" + b"\r\n")
-			print("\nSSH has been enabled\n")
+			self.printToScreen.emit("SSH had been enabled")
 		elif self.option == "ftp":
 			self.tn.write(b"/ip service enable ftp" + b"\r\n")
-			print("\nFTP has been enabled\n")
+			self.printToScreen.emit("FTP has been enabled")
 		elif self.option == "winbox":
 			self.tn.write(b"/ip service enable winbox" + b"\r\n")
-			print("\nWinbox has been enabled\n")
+			self.printToScreen.emit("Winbox has been enabled")
 		self.tn.write(b"quit" + b"\r\n")
 
 		self.tn.read_all()

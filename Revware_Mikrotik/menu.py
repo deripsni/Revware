@@ -217,10 +217,14 @@ class BatchSFTP(QtCore.QObject):
 class Telnet(QtCore.QObject):
 
 	printToScreen = QtCore.pyqtSignal(str)
+	telnetSignal = QtCore.pyqtSignal(str,str,str,str)
+
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
 		self.printToScreen.connect(self.parent().gui.updateStatus)
+		self.tel=telnet.Telnet(parent=self)
+		self.telnetSignal.connect(self.tel.telnet)
 
 	@QtCore.pyqtSlot(str,str,str)
 	def runTelnet(self, ipInput, usernameInput, passwordInput):
@@ -234,7 +238,7 @@ class Telnet(QtCore.QObject):
 
 	@QtCore.pyqtSlot(str)
 	def setTelnet(self, method):
-		telnet.telnet(self.localip, self.localu, self.localp, method)
+		self.telnetSignal.emit(self.localip, self.localu, self.localp, method)
 
 
 def main():
