@@ -2,7 +2,7 @@ import ssh
 import menu
 import sys
 import time
-from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication, QPlainTextEdit, QLabel, QLineEdit
+from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication, QPlainTextEdit, QLabel, QLineEdit, QFileDialog
 from PyQt5 import QtGui, QtCore
 import ctypes
 
@@ -13,15 +13,37 @@ ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)		#these l
 class Master(QtCore.QObject):
 
 	firmwareSignal = QtCore.pyqtSignal(str,str,str)
+
 	passwordSignal = QtCore.pyqtSignal(str,str,str)
 	submitPassword = QtCore.pyqtSignal(str,str)
+
 	firewallSignal = QtCore.pyqtSignal(str,str,str)
+
+	devicenameSignal = QtCore.pyqtSignal(str,str,str)
+
+	commandSignal = QtCore.pyqtSignal(str, str, str)
+	submitCommand = QtCore.pyqtSignal(str)
+
+	batchSignal = QtCore.pyqtSignal(str,str)
+	cSend = QtCore.pyqtSignal(str)
+	iSend = QtCore.pyqtSignal(str)
+
+	# Makes the program output silent exceptions for debugging
+	sys._excepthook = sys.excepthook
+	def exception_hook(exctype, value, traceback):
+		print(exctype, value, traceback)
+		sys._excepthook(exctype, value, traceback)
+		sys.exit(1)
+	sys.excepthook = exception_hook
+	#########################################################
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
 
 		self.gui = MainWindow()
 		self.pwindow = Password_window()
+		self.cwindow = Command_window()
+		self.bwindow = BatchSFTP_Window()
 		self.ConnectSignals()
 		self.gui.show()
 
@@ -31,15 +53,23 @@ class Master(QtCore.QObject):
 		self.gui.btn1.clicked.connect(self.CreateFirmwareThread)
 		self.gui.btn2.clicked.connect(self.CreatePasswordThread)
 		self.gui.btn3.clicked.connect(self.CreateFirewallThread)
-		self.gui.btn4.clicked.connect(menu.Password)
-		self.gui.btn5.clicked.connect(menu.Firmware)
+		self.gui.btn4.clicked.connect(self.CreateDeviceNameThread)
+		self.gui.btn5.clicked.connect(self.CreateCustomCommandThread)
 		self.gui.btn6.clicked.connect(menu.Password)
-		self.gui.btn7.clicked.connect(menu.Firmware)
+		self.gui.btn7.clicked.connect(self.CreateBatchThread)
 		self.gui.btn8.clicked.connect(menu.Password)
 		self.gui.clearbtn.clicked.connect(self.gui.clearInfo)
 
 		self.pwindow.btn.clicked.connect(lambda: self.password.setPassword(self.pwindow.npbox.text(),self.pwindow.pbox.text()))
 		self.pwindow.btn.clicked.connect(self.pwindow.close)
+
+		self.cwindow.btn.clicked.connect(lambda: self.command.setCommand(self.cwindow.cbox.text()))
+		self.cwindow.btn.clicked.connect(self.cwindow.close)
+
+		self.bwindow.cbtn.clicked.connect(self.bwindow.cSet)
+		self.bwindow.ipbtn.clicked.connect(self.bwindow.iSet)
+		self.bwindow.btn.clicked.connect(lambda: self.batch.setBatchSFTP(self.bwindow.ctxt.text(), self.bwindow.iptxt.text()))
+		self.bwindow.btn.clicked.connect(self.bwindow.close)
 	def CreateFirmwareThread(self):
 		self.firmware=menu.Firmware(parent=self)
 		self.firmware_thread = QtCore.QThread()
@@ -68,6 +98,35 @@ class Master(QtCore.QObject):
 		self.firewallSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
 		self.firewall_thread.exit()
 
+	def CreateDeviceNameThread(self):
+		self.devicename=menu.DeviceName(parent=self)
+		self.devicename_thread = QtCore.QThread()
+		self.devicename.moveToThread(self.devicename_thread)
+		self.devicename_thread.start()
+		self.devicenameSignal.connect(self.devicename.runDeviceName)
+		self.devicenameSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
+		self.devicename_thread.exit()
+
+	def CreateCustomCommandThread(self):
+		self.command= menu.CustomCommand(parent=self)
+		self.command_thread = QtCore.QThread()
+		self.command.moveToThread(self.command_thread)
+		self.command_thread.start()
+		self.cwindow.show()
+		self.commandSignal.connect(self.command.runCustomCommand)
+		self.commandSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
+		self.command_thread.exit()
+
+	def CreateBatchThread(self):
+		self.batch= menu.BatchSFTP(parent=self)
+		self.batch_thread = QtCore.QThread()
+		self.batch.moveToThread(self.batch_thread)
+		self.batch_thread.start()
+		self.bwindow.show()
+		self.batchSignal.connect(self.batch.runBatchSFTP)
+		self.batchSignal.emit(self.gui.ubox.text(), self.gui.pbox.text())
+		self.batch_thread.exit()
+
 class Password_window(QMainWindow):
 
 	def __init__(self, parent=None):
@@ -93,20 +152,83 @@ class Password_window(QMainWindow):
 		self.btn.move(100, 65)
 		self.btn.setAutoDefault(True)
 
-
-
 		self.statusBar()
 
 		self.setGeometry(90, 200, 220, 100)
 		self.setWindowTitle('Set New Password')
 
 
-	def submit(self):
-		self.doneSignal.emit(self.npbox.text,self.pbox.text)
+class Command_window(QMainWindow):
 
-	def buttonClicked(self):
-		sender = self.sender()
-		self.statusBar().showMessage(sender.text() + ' was pressed')
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.initUI()
+
+	def initUI(self):
+		self.cbox = QLineEdit(self)
+		self.cbox.move(105, 10)
+		self.cbox.resize(200, 20)
+
+		self.clabel = QLabel('Custom Command: ', self)
+		self.clabel.move(11, 5)
+
+		self.btn = QPushButton("Submit", self)
+		self.btn.move(200, 35)
+		self.btn.setAutoDefault(True)
+
+		self.statusBar()
+
+		self.setGeometry(90, 200, 320, 70)
+		self.setWindowTitle('Enter Custom Command')
+
+
+class BatchSFTP_Window(QMainWindow):
+
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.initUI()
+
+	def initUI(self):
+		self.cbtn = QPushButton('Browse', self)
+		self.cbtn.move(100, 10)
+		self.cbtn.resize(50, 20)
+		self.cbtn.setAutoDefault(True)
+
+		self.clabel = QLabel('Command File: ', self)
+		self.clabel.move(23, 5)
+
+		self.ctxt = QLineEdit(self)
+		self.ctxt.move(160, 10)
+		self.ctxt.resize(250, 20)
+
+		self.ipbtn = QPushButton('Browse', self)
+		self.ipbtn.move(100, 35)
+		self.ipbtn.resize(50, 20)
+		self.ipbtn.setAutoDefault(True)
+
+		self.iplabel = QLabel('IP List:', self)
+		self.iplabel.move(59, 30)
+
+		self.iptxt = QLineEdit(self)
+		self.iptxt.move(160, 35)
+		self.iptxt.resize(250, 20)
+
+		self.btn = QPushButton("Submit", self)
+		self.btn.move(100, 65)
+		self.btn.setAutoDefault(True)
+
+		self.statusBar()
+
+		self.setGeometry(90, 200, 420, 100)
+		self.setWindowTitle('Batch SFTP')
+
+	def cSet(self, file):
+		fname = QFileDialog.getOpenFileName(self, 'Open file', filter="Text files (*.txt)")
+		self.ctxt.setText(fname[0])
+
+	def iSet(self, file):
+		fname = QFileDialog.getOpenFileName(self, 'Open file', filter="Text files (*.txt)")
+		self.iptxt.setText(fname[0])
 
 
 class MainWindow(QMainWindow):
@@ -115,7 +237,6 @@ class MainWindow(QMainWindow):
 		self.initUI()
 
 	def initUI(self):
-		self.pwindow = Password_window(parent=self)
 
 		self.ipbox = QLineEdit(self)
 		self.ipbox.move(60, 10)

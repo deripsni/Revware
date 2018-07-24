@@ -117,6 +117,102 @@ class Firewall(QtCore.QObject):
 		self.sshc = ssh.sshConnection(parent=self)
 		self.sshSignal.connect(self.sshc.ssh)
 
+class DeviceName(QtCore.QObject):
+
+	printToScreen = QtCore.pyqtSignal(str)
+	sshSignal = QtCore.pyqtSignal(str, str, str, str)
+
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.printToScreen.connect(self.parent().gui.updateStatus)
+		self.createSSH()
+
+	@QtCore.pyqtSlot(str,str,str)
+	def runDeviceName(self, ipInput, usernameInput, passwordInput):
+		print("Device Name")
+		print (ipInput + usernameInput, passwordInput)
+
+		self.localip=ipInput
+		self.localu=usernameInput
+		self.localp=passwordInput
+		self.sshSignal.emit(self.localip, self.localu, self.localp, "system identity print")
+
+	def createSSH(self):
+		self.sshc = ssh.sshConnection(parent=self)
+		self.sshSignal.connect(self.sshc.ssh)
+
+
+class CustomCommand(QtCore.QObject):
+
+	printToScreen = QtCore.pyqtSignal(str)
+	sshSignal = QtCore.pyqtSignal(str, str, str, str)
+
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.printToScreen.connect(self.parent().gui.updateStatus)
+		self.createSSH()
+
+	@QtCore.pyqtSlot(str,str,str)
+	def runCustomCommand(self, ipInput, usernameInput, passwordInput):
+		print("Custom Command")
+		print (ipInput + usernameInput, passwordInput)
+
+		self.localip=ipInput
+		self.localu=usernameInput
+		self.localp=passwordInput
+
+	def createSSH(self):
+		self.sshc = ssh.sshConnection(parent=self)
+		self.sshSignal.connect(self.sshc.ssh)
+
+
+	@QtCore.pyqtSlot(str)
+	def setCommand(self, cmd):
+
+		self.command = cmd
+		self.sshSignal.emit(self.localip, self.localu, self.localp, self.command)
+		self.printToScreen.emit("Command Sent")
+		#self.parent.firmware_thread.exit()
+
+class BatchSFTP(QtCore.QObject):
+
+
+	signalStatus = QtCore.pyqtSignal()
+	firmwaresftpSignal = QtCore.pyqtSignal(str, str, str)
+	sshSignal = QtCore.pyqtSignal(str, str, str, str)
+	pingSignal = QtCore.pyqtSignal(str, int)
+	printToScreen = QtCore.pyqtSignal(str)
+
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.printToScreen.connect(self.parent().gui.updateStatus)
+		self.createSSH()
+
+	@QtCore.pyqtSlot(str,str)
+	def runBatchSFTP(self, usernameInput, passwordInput):
+		print("Batch SFTP")
+		print (usernameInput, passwordInput)
+
+		self.localu=usernameInput
+		self.localp=passwordInput
+
+
+	def createSSH(self):
+		self.sshc = ssh.sshConnection(parent=self)
+		self.firmwaresftpSignal.connect(self.sshc.firmwaresftp)
+		self.sshSignal.connect(self.sshc.ssh)
+		self.ip = ping.IPTest(parent=self)
+		self.pingSignal.connect(self.ip.ping)
+		self.mysftp= sftp.SFTP(parent=self)
+
+
+	@QtCore.pyqtSlot(str, str)
+	def setBatchSFTP(self, cfile, ifile):
+
+		self.cmdFile = cfile
+		self.ipFile	= ifile
+
+		self.mysftp.batchsftp(username=self.localu, password=self.localp,cfile=self.cmdFile, ifile=self.ipFile, reboot='yes')
 
 
 def main():
@@ -132,29 +228,13 @@ def main():
 			Password()
 
 		elif choice == "3":
-			print("Firewall")
-			ipInput = input("IP: ")
-			usernameInput = input("Username [admin]: ") or "admin"
-			passwordInput = input("Password [west09]: ") or "west09"
-
-			ssh.ssh(ip=ipInput, username=usernameInput, password=passwordInput, mikrotikCommand="ip firewall filter print")
+			Firewall()
 
 		elif choice == "4":
-			print("Radio Name")
-			ipInput = input("IP: ")
-			usernameInput = input("Username [admin]: ") or "admin"
-			passwordInput = input("Password [west09]: ") or "west09"
-
-			ssh.ssh(ip=ipInput, username=usernameInput, password=passwordInput, mikrotikCommand="system identity print")
+			DeviceName()
 
 		elif choice == "5":
-			print("Custom Command")
-			ipInput = input("IP: ")
-			usernameInput = input("Username [admin]: ") or "admin"
-			passwordInput = input("Password [west09]: ") or "west09"
-			mikrotikInput = input("Command: ") or ""
-
-			ssh.ssh(ip=ipInput, username=usernameInput, password=passwordInput, mikrotikCommand=mikrotikInput)
+			CustomCommand()
 
 		elif choice == "6":
 			print("Telnet")

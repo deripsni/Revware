@@ -49,10 +49,9 @@ class sshConnection(QtCore.QObject):
 			if mikrotikCommand == "system reboot":
 				self.printToScreen.emit("Rebooting Radio...")
 				QtCore.QCoreApplication.processEvents()
-			elif mikrotikCommand == "ip firewall filter print":
+			else :
 				y=x.decode("UTF-8")
 				self.printToScreen.emit(y)
-			else:
 				self.client.close()
 
 			#return result
