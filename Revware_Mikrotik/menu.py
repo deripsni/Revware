@@ -223,7 +223,7 @@ class Telnet(QtCore.QObject):
 		self.printToScreen.connect(self.parent().gui.updateStatus)
 
 	@QtCore.pyqtSlot(str,str,str)
-	def runPassword(self, ipInput, usernameInput, passwordInput):
+	def runTelnet(self, ipInput, usernameInput, passwordInput):
 		print("Password")
 		print (ipInput + usernameInput, passwordInput)
 
@@ -232,12 +232,9 @@ class Telnet(QtCore.QObject):
 		self.localp=passwordInput
 
 
-	@QtCore.pyqtSlot(str, str)
-	def setPassword(self, nPassword, cPassword):
-		if nPassword == cPassword:
-			self.command =  "user set admin password=" + nPassword
-			self.printToScreen.emit("Password Set")
-			#self.parent.firmware_thread.exit()
+	@QtCore.pyqtSlot(str)
+	def setTelnet(self, method):
+		telnet.telnet(self.localip, self.localu, self.localp, method)
 
 
 def main():
