@@ -8,10 +8,16 @@ from PyQt5 import QtCore
 class IPTest(QtCore.QObject):
 
 	printToScreen = QtCore.pyqtSignal(str)
+	progressSignal = QtCore.pyqtSignal(int)
+	pMaxSignal = QtCore.pyqtSignal(int)
+	pCloseSignal = QtCore.pyqtSignal()
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
 		self.printToScreen.connect(parent.parent().gui.updateStatus)
+		self.progressSignal.connect(parent.parent().progresswindow.updateProgress)
+		self.pMaxSignal.connect(parent.parent().progresswindow.setMax)
+		self.pCloseSignal.connect(parent.parent().progresswindow.close)
 
 	@QtCore.pyqtSlot(str,int,bool)
 	def ping(self, ip1, tries, timeout_include):
@@ -62,9 +68,14 @@ class IPTest(QtCore.QObject):
 		self.option = option1
 		print(self.ip + " is the IP")
 		print(self.subnet + "is the Subnet")
+		self.number = 2**(32-int(subnet1[-2:]))
+		self.count =0
+		print(self.number)
 		self.network = ipaddress.IPv4Network(self.ip + self.subnet)
 		file = open("ipList.txt", "w")
+		self.pMaxSignal.emit(self.number)
 		for addr in self.network:
+			self.count = self.count +1
 			QtCore.QCoreApplication.processEvents()
 			self.status = self.ping(str(addr), tries=2, timeout_include=self.option)
 			if self.status == "online":
@@ -74,4 +85,6 @@ class IPTest(QtCore.QObject):
 					file.write(str(addr) + "\n")
 				# print("Winbox is enabled! Mikrotik found!")  # Success Message
 				self.sock.close()
+			self.progressSignal.emit(self.count)
+		self.pCloseSignal.emit()
 		file.close()

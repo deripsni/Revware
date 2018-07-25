@@ -264,6 +264,7 @@ class Mikrotik(QtCore.QObject):
 
 	@QtCore.pyqtSlot(str,str,bool)
 	def setMikro(self, ip, subnet, to):
+
 		self.pingSignal.emit(ip, subnet, to)
 
 def main():

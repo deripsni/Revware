@@ -2,7 +2,7 @@ import ssh
 import menu
 import sys
 import time
-from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication, QPlainTextEdit, QLabel, QLineEdit, QFileDialog, QRadioButton, QCheckBox
+from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication, QPlainTextEdit, QLabel, QLineEdit, QFileDialog, QRadioButton, QCheckBox, QProgressBar
 from PyQt5 import QtGui, QtCore
 import ctypes
 
@@ -50,6 +50,7 @@ class Master(QtCore.QObject):
 		self.bwindow = BatchSFTP_Window()
 		self.twindow = Telnet_window()
 		self.mwindow = Mikro_window()
+		self.progresswindow = Progress_window()
 		self.ConnectSignals()
 		self.gui.show()
 
@@ -86,7 +87,9 @@ class Master(QtCore.QObject):
 		self.twindow.winbtn.clicked.connect(self.twindow.close)
 
 		self.mwindow.btn.clicked.connect(self.mwindow.close)
+		self.mwindow.btn.clicked.connect(self.progresswindow.show)
 		self.mwindow.btn.clicked.connect(lambda: self.mikro.setMikro(self.mwindow.ibox.text(), self.mwindow.sbox.text(), self.mwindow.b1.isChecked()))
+
 		#self.mwindow.btn.clicked.connect(self.mwindow.close)
 
 	def CreateFirmwareThread(self):
@@ -337,7 +340,34 @@ class Mikro_window(QMainWindow):
 		self.setGeometry(90, 200, 220, 100)
 		self.setWindowTitle('Polling Information')
 
+class Progress_window(QMainWindow):
 
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.initUI()
+
+	def initUI(self):
+		self.label = QLabel('Working...', self)
+		self.label.resize(200,30)
+		self.label.move(60, 5)
+
+		self.pbar = QProgressBar(self)
+		self.pbar.move(40, 35)
+		self.pbar.resize(200,20)
+		self.pbar.setMinimum(0)
+
+		self.statusBar()
+
+		self.setGeometry(90, 200, 300, 80)
+		self.setWindowTitle('Enable Protocol')
+
+	@QtCore.pyqtSlot(int)
+	def updateProgress(self, value):
+		self.pbar.setValue(value)
+
+	@QtCore.pyqtSlot(int)
+	def setMax(self, value):
+		self.pbar.setMaximum(value)
 
 class MainWindow(QMainWindow):
 	def __init__(self):
