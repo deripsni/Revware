@@ -2,7 +2,7 @@ import ssh
 import menu
 import sys
 import time
-from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication, QPlainTextEdit, QLabel, QLineEdit, QFileDialog
+from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication, QPlainTextEdit, QLabel, QLineEdit, QFileDialog, QRadioButton, QCheckBox
 from PyQt5 import QtGui, QtCore
 import ctypes
 
@@ -30,6 +30,8 @@ class Master(QtCore.QObject):
 
 	telnetSignal = QtCore.pyqtSignal(str,str,str)
 
+	mikroSignal = QtCore.pyqtSignal(str,str,str)
+
 	# Makes the program display silent exceptions for debugging
 	sys._excepthook = sys.excepthook
 	def exception_hook(exctype, value, traceback):
@@ -47,6 +49,7 @@ class Master(QtCore.QObject):
 		self.cwindow = Command_window()
 		self.bwindow = BatchSFTP_Window()
 		self.twindow = Telnet_window()
+		self.mwindow = Mikro_window()
 		self.ConnectSignals()
 		self.gui.show()
 
@@ -60,7 +63,8 @@ class Master(QtCore.QObject):
 		self.gui.btn5.clicked.connect(self.CreateCustomCommandThread)
 		self.gui.btn6.clicked.connect(self.CreateTelnetThread)
 		self.gui.btn7.clicked.connect(self.CreateBatchThread)
-		self.gui.btn8.clicked.connect(menu.Password)
+		self.gui.btn8.clicked.connect(self.CreateMikroThread)
+
 		self.gui.clearbtn.clicked.connect(self.gui.clearInfo)
 
 		self.pwindow.btn.clicked.connect(lambda: self.password.setPassword(self.pwindow.npbox.text(),self.pwindow.pbox.text()))
@@ -80,6 +84,8 @@ class Master(QtCore.QObject):
 		self.twindow.ftpbtn.clicked.connect(self.twindow.close)
 		self.twindow.winbtn.clicked.connect(lambda: self.telnet.setTelnet("winbox"))
 		self.twindow.winbtn.clicked.connect(self.twindow.close)
+
+		self.mwindow.btn.clicked.connect(lambda: self.mikro.setMikro(self.mwindow.ibox.text(), self.mwindow.sbox.text(), self.mwindow.b1.isChecked()))
 
 	def CreateFirmwareThread(self):
 		self.firmware=menu.Firmware(parent=self)
@@ -148,7 +154,7 @@ class Master(QtCore.QObject):
 		self.telnetSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
 		self.telnet_thread.exit()
 
-	def CreateTelnetThread(self):
+	def CreateMikroThread(self):
 		self.mikro= menu.Mikrotik(parent=self)
 		self.mikro_thread = QtCore.QThread()
 		self.mikro.moveToThread(self.mikro_thread)
@@ -156,7 +162,7 @@ class Master(QtCore.QObject):
 		self.mwindow.show()
 		self.mikroSignal.connect(self.mikro.runMikro)
 		self.mikroSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
-		self.telnet_thread.exit()
+		self.mikro_thread.exit()
 
 class Password_window(QMainWindow):
 
@@ -292,6 +298,43 @@ class Telnet_window(QMainWindow):
 		self.setGeometry(90, 200, 300, 80)
 		self.setWindowTitle('Enable Protocol')
 
+class Mikro_window(QMainWindow):
+
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.initUI()
+
+	def initUI(self):
+		self.ibox = QLineEdit(self)
+		self.ibox.move(100, 10)
+		self.ibox.resize(100, 20)
+
+		self.ilabel = QLabel('Base Ip: ', self)
+		self.ilabel.move(21, 5)
+
+		self.sbox = QLineEdit(self)
+		self.sbox.move(100, 35)
+		self.sbox.resize(100, 20)
+
+		self.slabel = QLabel('Subnet Mask:', self)
+		self.slabel.move(7, 30)
+
+		self.b1 = QCheckBox("Include Timed Out Devices")
+		self.b1.setChecked(False)
+		self.b1.move(5, 65)
+		self.b1.resize(100,20)
+
+		self.btn = QPushButton("Submit", self)
+		self.btn.move(100, 65)
+		self.btn.setAutoDefault(True)
+
+
+
+		self.statusBar()
+
+		self.setGeometry(90, 200, 300, 80)
+		self.setWindowTitle('Polling Information')
+
 
 
 class MainWindow(QMainWindow):
@@ -348,7 +391,7 @@ class MainWindow(QMainWindow):
 		self.btn7 = QPushButton("Batch SFTP", self)
 		self.btn7.move(30, 190)
 		self.btn7.setAutoDefault(True)
-		self.btn8 = QPushButton("Exit", self)
+		self.btn8 = QPushButton("Mikro Checker", self)
 		self.btn8.move(150, 190)
 		self.btn8.setAutoDefault(True)
 

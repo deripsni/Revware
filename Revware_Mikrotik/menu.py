@@ -244,15 +244,14 @@ class Telnet(QtCore.QObject):
 class Mikrotik(QtCore.QObject):
 
 	printToScreen = QtCore.pyqtSignal(str)
-	telnetSignal = QtCore.pyqtSignal(str,str,str,str)
-
+	#pingSignal = QtCore.pyqtSignal(str, str, bool)
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
 
 		self.printToScreen.connect(self.parent().gui.updateStatus)
-		#self.tel=telnet.Telnet(parent=self)
-		#self.telnetSignal.connect(self.tel.telnet)
+		self.ip = ping.IPTest(parent=self)
+		#self.pingSignal.connect(self.ip.ping)
 
 	@QtCore.pyqtSlot(str,str,str)
 	def runMikro(self, ipInput, usernameInput, passwordInput):
@@ -263,9 +262,9 @@ class Mikrotik(QtCore.QObject):
 		self.localu=usernameInput
 		self.localp=passwordInput
 
-	@QtCore.pyqtSlot(str)
-	def setTelnet(self, method):
-		self.telnetSignal.emit(self.localip, self.localu, self.localp, method)
+	@QtCore.pyqtSlot(str,str,bool)
+	def setMikro(self, ip, subnet, to):
+		self.ip.mikrotik_checker(ip1=ip, subnet1=subnet, option1=to)
 
 def main():
 	loop = True

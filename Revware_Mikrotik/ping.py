@@ -13,20 +13,22 @@ class IPTest(QtCore.QObject):
 		super(self.__class__, self).__init__(parent)
 		self.printToScreen.connect(parent.parent().gui.updateStatus)
 
-	@QtCore.pyqtSlot(str,int)
-	def ping(self, ip1, tries):
+	@QtCore.pyqtSlot(str,int,bool)
+	def ping(self, ip1, tries, timeout_include):
 		print("pinging stuff")
 		self.ip = ip1
-
+		self.timeout_include = timeout_include
 		self.max_tries = tries
 		self.current_try = 0
+		timeout_total = 0
 
 		while self.current_try < self.max_tries:
 			self.p = subprocess.Popen("ping -n 1 " + self.ip, stdout=subprocess.PIPE).communicate()[0]
 			#print(p.decode("utf-8")) 		#display ping results
 			if b"unreachable" in self.p:
-				print(".", end="", flush=True)
+				print("!", end="", flush=True)
 			elif b"timed out" in self.p:
+				timeout_total+=1
 				print(".", end="", flush=True)
 			else:
 				x= "%s online \n" % self.ip
@@ -36,18 +38,33 @@ class IPTest(QtCore.QObject):
 
 			self.current_try += 1
 
+		if timeout_include:
+
+			if timeout_total > 0:
+
+				print("%s is not responding to pings \n" % self.ip)
+
+				return "online"
+
+			else:
+
+				print("{}{}{}".format("Radio didn't return after: ", self.max_tries, " tries."))
+
 		else:
+
 			print("{}{}{}".format("Radio didn't return after: ", self.max_tries, " tries."))
 
-	def mikrotik_checker(self, ip, subnet, option):
-		self.ip = ip
-		self.subnet = subnet
-		self.option = option
-
+	@QtCore.pyqtSlot(str,str,bool)
+	def mikrotik_checker(self, ip1, subnet1, option1):
+		self.ip = ip1
+		self.subnet = subnet1
+		self.option = option1
+		print(self.ip + " is the IP")
+		print(self.subnet + "is the Subnet")
 		self.network = ipaddress.IPv4Network(self.ip + self.subnet)
 		file = open("ipList.txt", "w")
 		for addr in self.network:
-			self.status = self.ping(str(addr), tries=2, timeout_include=option)
+			self.status = self.ping(str(addr), tries=2, timeout_include=self.option)
 			if self.status == "online":
 				self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 				self.result = self.sock.connect_ex((str(addr), 8291))
