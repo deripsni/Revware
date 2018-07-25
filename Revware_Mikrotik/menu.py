@@ -26,7 +26,7 @@ class Firmware(QtCore.QObject):
 	signalStatus = QtCore.pyqtSignal()
 	firmwaresftpSignal = QtCore.pyqtSignal(str, str, str)
 	sshSignal = QtCore.pyqtSignal(str, str, str, str)
-	pingSignal = QtCore.pyqtSignal(str, int)
+	pingSignal = QtCore.pyqtSignal(str, int, bool)
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
@@ -50,7 +50,7 @@ class Firmware(QtCore.QObject):
 		sys.stdout.flush()
 		time.sleep(5)
 
-		self.pingSignal.emit(localip, 50)
+		self.pingSignal.emit(localip, 50, True)
 		#self.parent.firmware_thread.exit()
 
 	def createSSH(self):
@@ -180,7 +180,7 @@ class BatchSFTP(QtCore.QObject):
 	signalStatus = QtCore.pyqtSignal()
 	firmwaresftpSignal = QtCore.pyqtSignal(str, str, str)
 	sshSignal = QtCore.pyqtSignal(str, str, str, str)
-	pingSignal = QtCore.pyqtSignal(str, int)
+	pingSignal = QtCore.pyqtSignal(str, int, bool)
 	printToScreen = QtCore.pyqtSignal(str)
 
 	def __init__(self, parent=None):
@@ -241,6 +241,32 @@ class Telnet(QtCore.QObject):
 		self.telnetSignal.emit(self.localip, self.localu, self.localp, method)
 
 
+class Mikrotik(QtCore.QObject):
+
+	printToScreen = QtCore.pyqtSignal(str)
+	pingSignal = QtCore.pyqtSignal(str, str, bool)
+
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+
+		self.printToScreen.connect(self.parent().gui.updateStatus)
+		self.ip = ping.IPTest(parent=self)
+		self.pingSignal.connect(self.ip.mikrotik_checker)
+
+	@QtCore.pyqtSlot(str,str,str)
+	def runMikro(self, ipInput, usernameInput, passwordInput):
+		print("Password")
+		print (ipInput + usernameInput, passwordInput)
+
+		self.localip=ipInput
+		self.localu=usernameInput
+		self.localp=passwordInput
+
+	@QtCore.pyqtSlot(str,str,bool)
+	def setMikro(self, ip, subnet, to):
+
+		self.pingSignal.emit(ip, subnet, to)
+
 def main():
 	loop = True
 	while loop:
@@ -263,22 +289,32 @@ def main():
 			CustomCommand()
 
 		elif choice == "6":
-			print("Telnet")
-			ipInput = input("IP: ")
-			usernameInput = input("Username [admin]: ") or "admin"
-			passwordInput = input("Password [west09]: ") or "west09"
-			option = input("Protocol to turn on (ssh, ftp, winbox) [ssh]: ") or "ssh"
-			if option != "ssh" or "ftp" or "winbox":
-				print("Invalid command, please try again!\n")
-			else:
-				telnet.telnet(ipInput, usernameInput, passwordInput, option)
+			Telnet()
 
 		elif choice == "7":
 			BatchSFTP()
 
+
 		elif choice == "8":
-			print("Exit")
-			loop = False
+
+			print("Mikrotik Checker")
+
+			ipInput = input("IP: ")
+
+			subnetInput = input("Subnet: ")
+
+			timeoutInput = input("Would you like to include timed out devices in the search? (Yy/Nn): ")
+
+			if timeoutInput == "Y" or "y":
+
+				timeoutInput = True
+
+			else:
+
+				timeoutInput = False
+
+			ping.mikrotik_checker(ip=ipInput, subnet=subnetInput, option=timeoutInput)
+
 
 		else:
 			print("Try Again")
