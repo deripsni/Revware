@@ -85,7 +85,9 @@ class Master(QtCore.QObject):
 		self.twindow.winbtn.clicked.connect(lambda: self.telnet.setTelnet("winbox"))
 		self.twindow.winbtn.clicked.connect(self.twindow.close)
 
+		self.mwindow.btn.clicked.connect(self.mwindow.close)
 		self.mwindow.btn.clicked.connect(lambda: self.mikro.setMikro(self.mwindow.ibox.text(), self.mwindow.sbox.text(), self.mwindow.b1.isChecked()))
+		#self.mwindow.btn.clicked.connect(self.mwindow.close)
 
 	def CreateFirmwareThread(self):
 		self.firmware=menu.Firmware(parent=self)
@@ -332,7 +334,7 @@ class Mikro_window(QMainWindow):
 
 		self.statusBar()
 
-		self.setGeometry(90, 200, 300, 80)
+		self.setGeometry(90, 200, 220, 100)
 		self.setWindowTitle('Polling Information')
 
 

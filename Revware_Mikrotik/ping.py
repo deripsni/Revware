@@ -23,6 +23,7 @@ class IPTest(QtCore.QObject):
 		timeout_total = 0
 
 		while self.current_try < self.max_tries:
+			QtCore.QCoreApplication.processEvents()
 			self.p = subprocess.Popen("ping -n 1 " + self.ip, stdout=subprocess.PIPE).communicate()[0]
 			#print(p.decode("utf-8")) 		#display ping results
 			if b"unreachable" in self.p:
@@ -64,6 +65,7 @@ class IPTest(QtCore.QObject):
 		self.network = ipaddress.IPv4Network(self.ip + self.subnet)
 		file = open("ipList.txt", "w")
 		for addr in self.network:
+			QtCore.QCoreApplication.processEvents()
 			self.status = self.ping(str(addr), tries=2, timeout_include=self.option)
 			if self.status == "online":
 				self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

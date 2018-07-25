@@ -26,7 +26,7 @@ class Firmware(QtCore.QObject):
 	signalStatus = QtCore.pyqtSignal()
 	firmwaresftpSignal = QtCore.pyqtSignal(str, str, str)
 	sshSignal = QtCore.pyqtSignal(str, str, str, str)
-	pingSignal = QtCore.pyqtSignal(str, int)
+	pingSignal = QtCore.pyqtSignal(str, int, bool)
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
@@ -50,7 +50,7 @@ class Firmware(QtCore.QObject):
 		sys.stdout.flush()
 		time.sleep(5)
 
-		self.pingSignal.emit(localip, 50)
+		self.pingSignal.emit(localip, 50, True)
 		#self.parent.firmware_thread.exit()
 
 	def createSSH(self):
@@ -180,7 +180,7 @@ class BatchSFTP(QtCore.QObject):
 	signalStatus = QtCore.pyqtSignal()
 	firmwaresftpSignal = QtCore.pyqtSignal(str, str, str)
 	sshSignal = QtCore.pyqtSignal(str, str, str, str)
-	pingSignal = QtCore.pyqtSignal(str, int)
+	pingSignal = QtCore.pyqtSignal(str, int, bool)
 	printToScreen = QtCore.pyqtSignal(str)
 
 	def __init__(self, parent=None):
@@ -244,14 +244,14 @@ class Telnet(QtCore.QObject):
 class Mikrotik(QtCore.QObject):
 
 	printToScreen = QtCore.pyqtSignal(str)
-	#pingSignal = QtCore.pyqtSignal(str, str, bool)
+	pingSignal = QtCore.pyqtSignal(str, str, bool)
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
 
 		self.printToScreen.connect(self.parent().gui.updateStatus)
 		self.ip = ping.IPTest(parent=self)
-		#self.pingSignal.connect(self.ip.ping)
+		self.pingSignal.connect(self.ip.mikrotik_checker)
 
 	@QtCore.pyqtSlot(str,str,str)
 	def runMikro(self, ipInput, usernameInput, passwordInput):
@@ -264,7 +264,7 @@ class Mikrotik(QtCore.QObject):
 
 	@QtCore.pyqtSlot(str,str,bool)
 	def setMikro(self, ip, subnet, to):
-		self.ip.mikrotik_checker(ip1=ip, subnet1=subnet, option1=to)
+		self.pingSignal.emit(ip, subnet, to)
 
 def main():
 	loop = True
