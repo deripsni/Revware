@@ -376,55 +376,64 @@ class MainWindow(QMainWindow):
 
 	def initUI(self):
 
+		mainMenu = self.menuBar()
+		fileMenu = mainMenu.addMenu('File')
+		editMenu = mainMenu.addMenu('Edit')
+		viewMenu = mainMenu.addMenu('View')
+		searchMenu = mainMenu.addMenu('Search')
+		toolsMenu = mainMenu.addMenu('Tools')
+		helpMenu = mainMenu.addMenu('Help')
+
+
 		self.ipbox = QLineEdit(self)
-		self.ipbox.move(60, 10)
+		self.ipbox.move(60, 30)
 		self.ipbox.resize(200, 20)
 
 		self.iplabel = QLabel('Ip: ', self)
-		self.iplabel.move(43, 5)
+		self.iplabel.move(43, 25)
 
 		self.ubox = QLineEdit(self)
-		self.ubox.move(60, 35)
+		self.ubox.move(60, 55)
 		self.ubox.resize(200, 20)
 
 		self.ulabel = QLabel('Username: ', self)
-		self.ulabel.move(5, 30)
+		self.ulabel.move(5, 50)
 
 		self.pbox = QLineEdit(self)
 		self.pbox.setEchoMode(QLineEdit.Password)
-		self.pbox.move(60, 60)
+		self.pbox.move(60, 80)
 		self.pbox.resize(200, 20)
 
 		self.plabel = QLabel('Password:', self)
-		self.plabel.move(7, 55)
+		self.plabel.move(7, 75)
 
 		self.clearbtn = QPushButton("Clear", self)
 		self.clearbtn.resize(50,20)
-		self.clearbtn.move(200, 85)
+		self.clearbtn.move(200, 105)
 
 		self.btn1 = QPushButton("Firmware", self)
-		self.btn1.move(30, 115)
+		self.btn1.move(30, 135)
 		self.btn1.setAutoDefault(True)				#this sets the button to be clicked by pressing the enter key
 		self.btn2 = QPushButton("Password", self)
-		self.btn2.move(150, 115)
+		self.btn2.move(150, 135)
 		self.btn2.setAutoDefault(True)
 		self.btn3 = QPushButton("Firewall", self)
-		self.btn3.move(30, 140)
+		self.btn3.move(30, 160)
 		self.btn3.setAutoDefault(True)
 		self.btn4 = QPushButton("Radio Name", self)
-		self.btn4.move(150, 140)
+		self.btn4.move(150, 160)
 		self.btn4.setAutoDefault(True)
 		self.btn5 = QPushButton("Custom Command", self)
-		self.btn5.move(30, 165)
+		self.btn5.move(30, 185)
 		self.btn5.setAutoDefault(True)
 		self.btn6 = QPushButton("Telnet", self)
-		self.btn6.move(150, 165)
+		self.btn6.move(150, 185)
 		self.btn6.setAutoDefault(True)
 		self.btn7 = QPushButton("Batch SFTP", self)
-		self.btn7.move(30, 190)
+		self.btn7.move(30, 210)
 		self.btn7.setAutoDefault(True)
 		self.btn8 = QPushButton("Mikro Checker", self)
-		self.btn8.move(150, 190)
+		self.btn8.move(150, 210)
 		self.btn8.setAutoDefault(True)
 
 		#iupbtn = QPushButton("IUP", self)
@@ -432,7 +441,7 @@ class MainWindow(QMainWindow):
 
 		self.textbox = QPlainTextEdit(self)
 		self.textbox.setReadOnly(True)
-		self.textbox.move(40, 250)
+		self.textbox.move(40, 270)
 		self.textbox.resize(200, 130)
 
 		self.statusBar()
