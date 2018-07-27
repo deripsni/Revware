@@ -1,9 +1,10 @@
 import menu
 import sys
-from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication, QPlainTextEdit, QLabel, QLineEdit, QFileDialog, QRadioButton, QCheckBox, QProgressBar
+from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication, QPlainTextEdit, QLabel, QLineEdit, QFileDialog, \
+							QRadioButton, QCheckBox, QProgressBar
 from PyQt5 import QtGui, QtCore
 import ctypes
-
+from yaml import load, dump
 
 myappid = 'RevWare.Mikrotik.version'
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
@@ -44,6 +45,16 @@ class Master(QtCore.QObject):
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
+		with open('settings.yaml', 'r') as f:
+			self.settings = load(f)
+		print(self.settings)
+
+		self.theme= self.settings["defaultTheme"]
+		with open(self.theme, 'r') as myfile:
+			self.theme = myfile.read()
+
+		app.setStyleSheet(self.theme)
+		app.setWindowIcon(QtGui.QIcon('Logo.PNG'))
 
 		self.gui = MainWindow()
 		self.pwindow = PasswordWindow()
@@ -89,7 +100,9 @@ class Master(QtCore.QObject):
 
 		self.mwindow.btn.clicked.connect(self.mwindow.close)
 		self.mwindow.btn.clicked.connect(self.progresswindow.show)
-		self.mwindow.btn.clicked.connect(lambda: self.mikro.set_mikro(self.mwindow.ibox.text(), self.mwindow.sbox.text(), self.mwindow.b1.isChecked()))
+		self.mwindow.btn.clicked.connect(lambda: self.mikro.set_mikro(self.mwindow.ibox.text(),
+																		self.mwindow.sbox.text(),
+																		self.mwindow.b1.isChecked()))
 
 	def create_firmware_thread(self):
 		self.firmware = menu.Firmware(parent=self)
@@ -398,12 +411,6 @@ class MainWindow(QMainWindow):
 
 	def init_ui(self):
 
-		with open('Coffee.qss', 'r') as myfile:
-			data = myfile.read()
-
-		app.setStyleSheet(data)
-		app.setWindowIcon(QtGui.QIcon('Logo.PNG'))
-
 		self.mainMenu = self.menuBar()
 		self.fileMenu = self.mainMenu.addMenu('File')
 		self.editMenu = self.mainMenu.addMenu('Edit')
@@ -510,19 +517,10 @@ class MainWindow(QMainWindow):
 	def update_theme(self, name):
 		with open(name, 'r') as myfile:
 			theme = myfile.read()
-
+		master.settings['defaultTheme'] = name
+		with open('settings.yaml', 'w') as f:
+			dump(master.settings, f)
 		app.setStyleSheet(theme)
-
-
-class Settings(QtCore.QObject):
-
-	def __init__(self, parent=None):
-		super(self.__class__, self).__init__(parent)
-
-		with open('settings.txt') as f:
-			self.settings = f.read().splitlines()
-			print("Settings Successfully Integrated")
-
 
 if __name__ == '__main__':
 	app = QApplication(sys.argv)
