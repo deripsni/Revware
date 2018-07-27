@@ -182,6 +182,7 @@ class Password_window(QMainWindow):
 
 		self.nplabel = QLabel('New Password: ', self)
 		self.nplabel.move(21, 5)
+		self.nplabel.resize(70,30)
 
 		self.pbox = QLineEdit(self)
 		self.pbox.move(100, 35)
@@ -189,6 +190,7 @@ class Password_window(QMainWindow):
 
 		self.plabel = QLabel('Retype Password:', self)
 		self.plabel.move(7, 30)
+		self.plabel.resize(90,30)
 
 		self.btn = QPushButton("Submit", self)
 		self.btn.move(100, 65)
@@ -196,7 +198,7 @@ class Password_window(QMainWindow):
 
 		self.statusBar()
 
-		self.setGeometry(90, 200, 220, 100)
+		self.setGeometry(90, 200, 220, 120)
 		self.setWindowTitle('Set New Password')
 
 
@@ -386,28 +388,28 @@ class MainWindow(QMainWindow):
 
 
 		self.ipbox = QLineEdit(self)
-		self.ipbox.move(60, 30)
-		self.ipbox.resize(200, 20)
+		self.ipbox.move(80, 30)
+		self.ipbox.resize(170, 20)
 
 		self.iplabel = QLabel('Ip: ', self)
-		self.iplabel.move(43, 23)
+		self.iplabel.move(63, 23)
 		self.iplabel.resize(15,30)
 
 		self.ubox = QLineEdit(self)
-		self.ubox.move(60, 55)
-		self.ubox.resize(200, 20)
+		self.ubox.move(80, 55)
+		self.ubox.resize(170, 20)
 
 		self.ulabel = QLabel('Username: ', self)
-		self.ulabel.move(5, 48)
+		self.ulabel.move(25, 48)
 		self.ulabel.resize(50,30)
 
 		self.pbox = QLineEdit(self)
 		self.pbox.setEchoMode(QLineEdit.Password)
-		self.pbox.move(60, 80)
-		self.pbox.resize(200, 20)
+		self.pbox.move(80, 80)
+		self.pbox.resize(170, 20)
 
 		self.plabel = QLabel('Password:', self)
-		self.plabel.move(7, 78)
+		self.plabel.move(27, 78)
 		self.plabel.resize(50, 20)
 
 		self.clearbtn = QPushButton("Clear", self)
@@ -460,11 +462,11 @@ class MainWindow(QMainWindow):
 
 		self.textbox = QPlainTextEdit(self)
 		self.textbox.setReadOnly(True)
-		self.textbox.move(40, 290)
-		self.textbox.resize(200, 130)
+		self.textbox.move(20, 290)
+		self.textbox.resize(230, 130)
 
 		self.statusBar()
-		self.setGeometry(0, 0, 290, 440)
+		self.setGeometry(0, 0, 270, 440)
 		self.setWindowTitle('Revware Mikrotik Control')
 
 	@QtCore.pyqtSlot()
