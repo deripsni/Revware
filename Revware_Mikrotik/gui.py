@@ -201,6 +201,7 @@ class Password_window(QMainWindow):
 		self.setGeometry(90, 200, 220, 120)
 		self.setWindowTitle('Set New Password')
 
+		self.setWindowModality(QtCore.Qt.ApplicationModal)
 
 class Command_window(QMainWindow):
 
@@ -215,6 +216,7 @@ class Command_window(QMainWindow):
 
 		self.clabel = QLabel('Custom Command: ', self)
 		self.clabel.move(11, 5)
+		self.clabel.resize(90,30)
 
 		self.btn = QPushButton("Submit", self)
 		self.btn.move(200, 35)
@@ -222,9 +224,10 @@ class Command_window(QMainWindow):
 
 		self.statusBar()
 
-		self.setGeometry(90, 200, 320, 70)
+		self.setGeometry(90, 200, 320, 90)
 		self.setWindowTitle('Enter Custom Command')
 
+		self.setWindowModality(QtCore.Qt.ApplicationModal)
 
 class BatchSFTP_Window(QMainWindow):
 
@@ -240,6 +243,7 @@ class BatchSFTP_Window(QMainWindow):
 
 		self.clabel = QLabel('Command File: ', self)
 		self.clabel.move(23, 5)
+		self.clabel.resize(70,30)
 
 		self.ctxt = QLineEdit(self)
 		self.ctxt.move(160, 10)
@@ -252,19 +256,22 @@ class BatchSFTP_Window(QMainWindow):
 
 		self.iplabel = QLabel('IP List:', self)
 		self.iplabel.move(59, 30)
+		self.iplabel.resize(40,30)
 
 		self.iptxt = QLineEdit(self)
 		self.iptxt.move(160, 35)
 		self.iptxt.resize(250, 20)
 
 		self.btn = QPushButton("Submit", self)
-		self.btn.move(100, 65)
+		self.btn.move(310, 65)
 		self.btn.setAutoDefault(True)
 
 		self.statusBar()
 
-		self.setGeometry(90, 200, 420, 100)
+		self.setGeometry(90, 200, 420, 120)
 		self.setWindowTitle('Batch SFTP')
+
+		self.setWindowModality(QtCore.Qt.ApplicationModal)
 
 	def cSet(self, file):
 		fname = QFileDialog.getOpenFileName(self, 'Open file', filter="Text files (*.txt)")
@@ -305,6 +312,8 @@ class Telnet_window(QMainWindow):
 		self.setGeometry(90, 200, 300, 80)
 		self.setWindowTitle('Enable Protocol')
 
+		self.setWindowModality(QtCore.Qt.ApplicationModal)
+
 class Mikro_window(QMainWindow):
 
 	def __init__(self, parent=None):
@@ -317,14 +326,16 @@ class Mikro_window(QMainWindow):
 		self.ibox.resize(100, 20)
 
 		self.ilabel = QLabel('Base Ip: ', self)
-		self.ilabel.move(21, 5)
+		self.ilabel.move(55, 4)
+		self.ilabel.resize(40,30)
 
 		self.sbox = QLineEdit(self)
 		self.sbox.move(100, 35)
 		self.sbox.resize(100, 20)
 
 		self.slabel = QLabel('Subnet Mask:', self)
-		self.slabel.move(7, 30)
+		self.slabel.move(29, 30)
+		self.slabel.resize(65,30)
 
 		self.b1 = QCheckBox("Include Timed Out Devices")
 		self.b1.setChecked(False)
@@ -335,12 +346,12 @@ class Mikro_window(QMainWindow):
 		self.btn.move(100, 65)
 		self.btn.setAutoDefault(True)
 
-
-
 		self.statusBar()
 
-		self.setGeometry(90, 200, 220, 100)
+		self.setGeometry(90, 200, 220, 120)
 		self.setWindowTitle('Polling Information')
+
+		self.setWindowModality(QtCore.Qt.ApplicationModal)
 
 class Progress_window(QMainWindow):
 
@@ -362,6 +373,8 @@ class Progress_window(QMainWindow):
 
 		self.setGeometry(90, 200, 300, 80)
 		self.setWindowTitle('Enable Protocol')
+
+		self.setWindowModality(QtCore.Qt.ApplicationModal)
 
 	@QtCore.pyqtSlot(int)
 	def updateProgress(self, value):
