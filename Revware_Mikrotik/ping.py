@@ -57,10 +57,6 @@ class IPTest(QtCore.QObject):
 
 				print("{}{}{}".format("Radio didn't return after: ", self.max_tries, " tries."))
 
-		else:
-
-			print("{}{}{}".format("Radio didn't return after: ", self.max_tries, " tries."))
-
 	@QtCore.pyqtSlot(str, str, bool)
 	def mikrotik_checker(self, ip1, subnet1, option1):
 		self.ip = ip1
@@ -88,3 +84,5 @@ class IPTest(QtCore.QObject):
 			self.progressSignal.emit(self.count)
 		self.pCloseSignal.emit()
 		file.close()
+
+    

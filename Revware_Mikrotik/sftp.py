@@ -19,6 +19,7 @@ class SFTP(QtCore.QObject):
 			ips = infile.read().splitlines()
 
 		for i in range(len(ips)):
+
 			self.batchsftp2(username, password, ips[i], cfile)
 			if reboot == 'Y' or reboot == 'y':
 				ssh.ssh(ips[i], username, password, 'system reboot')
@@ -47,3 +48,5 @@ class SFTP(QtCore.QObject):
 
 	def filecallback(self):   # callback function that does nothing
 		pass
+
+  

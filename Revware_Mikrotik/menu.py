@@ -14,9 +14,10 @@ def menu():
 	print("3. Firewall")
 	print("4. Radio Name")
 	print("5. Custom Command")
-	print("6. Telnet [WIP]")
+	print("6. Telnet")
 	print("7. Batch SFTP")
-	print("8. Exit")
+	print("8. Mikrotik Checker")
+	print("9. Exit")
 	print(67 * "-")
 
 
@@ -86,7 +87,6 @@ class Password(QtCore.QObject):
 			self.command = "user set admin password=" + n_password
 			self.sshSignal.emit(self.localip, self.localu, self.localp, self.command)
 			self.printToScreen.emit("Password Set")
-
 
 # self.parent.firmware_thread.exit()
 
@@ -254,3 +254,5 @@ class Mikrotik(QtCore.QObject):
 	@QtCore.pyqtSlot(str, str, bool)
 	def set_mikro(self, ip, subnet, to):
 		self.pingSignal.emit(ip, subnet, to)
+
+    
