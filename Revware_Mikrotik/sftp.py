@@ -4,26 +4,22 @@ import time
 import ping
 from PyQt5 import QtCore
 
+
 class SFTP(QtCore.QObject):
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
 
-
 	def batchsftp(self, username, password, cfile, ifile, reboot):
 
 		self.uname = username
 		self.password = password
-		port = 22
-
-		with open(cfile, 'r') as infile:
-			commands = infile.read()
 
 		with open(ifile, 'r') as infile:
 			ips = infile.read().splitlines()
 
 		for i in range(len(ips)):
-			self.batchsftp2(username,password,ips[i],cfile)
+			self.batchsftp2(username, password, ips[i], cfile)
 			if reboot == 'Y' or reboot == 'y':
 				ssh.ssh(ips[i], username, password, 'system reboot')
 
@@ -33,7 +29,7 @@ class SFTP(QtCore.QObject):
 				time.sleep(4)
 			print('Checking for rebooted machines')
 			for i in range(len(ips)):
-				print("Waiting.", end = '')
+				print("Waiting.", end='')
 				ping.ping(ips[i])
 
 	def batchsftp2(self, username, password, ip, cfile):
@@ -44,11 +40,10 @@ class SFTP(QtCore.QObject):
 		print("Uploading file...")
 		sftp.put(cfile, filepath, callback=self.parent().sshc.transfer)
 		print("DONE: File Uploaded")
-		self.parent().sshc.ssh(ip, username, password, mikrotikCommand='/import batch.bat')
-
+		self.parent().sshc.ssh(ip, username, password, mikrotik_command='/import batch.bat')
 
 		sftp.close()
 		transport.close()
 
-	def filecallback(i):   #callback function that does nothing
-		x=1
+	def filecallback(self):   # callback function that does nothing
+		pass

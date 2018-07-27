@@ -51,7 +51,7 @@ class Firmware(QtCore.QObject):
 		self.pingSignal.emit(localip, 50, True)
 
 	def create_ssh(self):
-		self.sshc = ssh.sshConnection(parent=self)
+		self.sshc = ssh.SSHConnection(parent=self)
 		self.firmwaresftpSignal.connect(self.sshc.firmwaresftp)
 		self.sshSignal.connect(self.sshc.ssh)
 		self.ip = ping.IPTest(parent=self)
@@ -77,7 +77,7 @@ class Password(QtCore.QObject):
 		self.localp = password_input
 
 	def create_ssh(self):
-		self.sshc = ssh.sshConnection(parent=self)
+		self.sshc = ssh.SSHConnection(parent=self)
 		self.sshSignal.connect(self.sshc.ssh)
 
 	@QtCore.pyqtSlot(str, str)
@@ -113,7 +113,7 @@ class Firewall(QtCore.QObject):
 	# self.thread().exit()
 
 	def create_ssh(self):
-		self.sshc = ssh.sshConnection(parent=self)
+		self.sshc = ssh.SSHConnection(parent=self)
 		self.sshSignal.connect(self.sshc.ssh)
 
 
@@ -137,7 +137,7 @@ class DeviceName(QtCore.QObject):
 		self.sshSignal.emit(self.localip, self.localu, self.localp, "system identity print")
 
 	def create_ssh(self):
-		self.sshc = ssh.sshConnection(parent=self)
+		self.sshc = ssh.SSHConnection(parent=self)
 		self.sshSignal.connect(self.sshc.ssh)
 
 
@@ -160,7 +160,7 @@ class CustomCommand(QtCore.QObject):
 		self.localp = password_input
 
 	def create_ssh(self):
-		self.sshc = ssh.sshConnection(parent=self)
+		self.sshc = ssh.SSHConnection(parent=self)
 		self.sshSignal.connect(self.sshc.ssh)
 
 	@QtCore.pyqtSlot(str)
@@ -191,7 +191,7 @@ class BatchSFTP(QtCore.QObject):
 		self.localp = password_input
 
 	def create_ssh(self):
-		self.sshc = ssh.sshConnection(parent=self)
+		self.sshc = ssh.SSHConnection(parent=self)
 		self.firmwaresftpSignal.connect(self.sshc.firmwaresftp)
 		self.sshSignal.connect(self.sshc.ssh)
 		self.ip = ping.IPTest(parent=self)

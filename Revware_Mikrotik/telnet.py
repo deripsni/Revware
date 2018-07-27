@@ -1,6 +1,7 @@
 import telnetlib
 from PyQt5 import QtCore
 
+
 class Telnet(QtCore.QObject):
 	printToScreen = QtCore.pyqtSignal(str)
 
@@ -33,5 +34,3 @@ class Telnet(QtCore.QObject):
 		self.tn.write(b"quit" + b"\r\n")
 
 		self.tn.read_all()
-
-
