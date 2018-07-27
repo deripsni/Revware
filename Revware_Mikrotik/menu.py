@@ -67,7 +67,7 @@ class Password(QtCore.QObject):
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
-		self.printToScreen.connect(self.parent().gui.updateStatus)
+		self.printToScreen.connect(self.parent().gui.update_status)
 		self.createSSH()
 
 	@QtCore.pyqtSlot(str,str,str)
@@ -99,7 +99,7 @@ class Firewall(QtCore.QObject):
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
-		self.printToScreen.connect(self.parent().gui.updateStatus)
+		self.printToScreen.connect(self.parent().gui.update_status)
 		self.createSSH()
 
 	@QtCore.pyqtSlot(str,str,str)
@@ -124,7 +124,7 @@ class DeviceName(QtCore.QObject):
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
-		self.printToScreen.connect(self.parent().gui.updateStatus)
+		self.printToScreen.connect(self.parent().gui.update_status)
 		self.createSSH()
 
 	@QtCore.pyqtSlot(str,str,str)
@@ -149,7 +149,7 @@ class CustomCommand(QtCore.QObject):
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
-		self.printToScreen.connect(self.parent().gui.updateStatus)
+		self.printToScreen.connect(self.parent().gui.update_status)
 		self.createSSH()
 
 	@QtCore.pyqtSlot(str,str,str)
@@ -185,7 +185,7 @@ class BatchSFTP(QtCore.QObject):
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
-		self.printToScreen.connect(self.parent().gui.updateStatus)
+		self.printToScreen.connect(self.parent().gui.update_status)
 		self.createSSH()
 
 	@QtCore.pyqtSlot(str,str)
@@ -222,7 +222,7 @@ class Telnet(QtCore.QObject):
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
-		self.printToScreen.connect(self.parent().gui.updateStatus)
+		self.printToScreen.connect(self.parent().gui.update_status)
 		self.tel=telnet.Telnet(parent=self)
 		self.telnetSignal.connect(self.tel.telnet)
 
@@ -249,7 +249,7 @@ class Mikrotik(QtCore.QObject):
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
 
-		self.printToScreen.connect(self.parent().gui.updateStatus)
+		self.printToScreen.connect(self.parent().gui.update_status)
 		self.ip = ping.IPTest(parent=self)
 		self.pingSignal.connect(self.ip.mikrotik_checker)
 

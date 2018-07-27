@@ -17,7 +17,7 @@ class sshConnection(QtCore.QObject):
 		self.filepath=None
 		self.localpath=None
 		self.client=None
-		self.printToScreen.connect(parent.parent().gui.updateStatus)
+		self.printToScreen.connect(parent.parent().gui.update_status)
 
 
 	def printProgress(self,iteration, total, pre = '', suf = '', dec = 2, len = 100, fill = '█'):

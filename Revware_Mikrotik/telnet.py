@@ -6,7 +6,7 @@ class Telnet(QtCore.QObject):
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
-		self.printToScreen.connect(parent.parent().gui.updateStatus)
+		self.printToScreen.connect(parent.parent().gui.update_status)
 
 	@QtCore.pyqtSlot(str,str,str,str)
 	def telnet(self, ip, username, password, option):

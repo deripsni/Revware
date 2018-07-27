@@ -14,9 +14,9 @@ class IPTest(QtCore.QObject):
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
-		self.printToScreen.connect(parent.parent().gui.updateStatus)
-		self.progressSignal.connect(parent.parent().progresswindow.updateProgress)
-		self.pMaxSignal.connect(parent.parent().progresswindow.setMax)
+		self.printToScreen.connect(parent.parent().gui.update_status)
+		self.progressSignal.connect(parent.parent().progresswindow.update_progress)
+		self.pMaxSignal.connect(parent.parent().progresswindow.set_max)
 		self.pCloseSignal.connect(parent.parent().progresswindow.close)
 
 	@QtCore.pyqtSlot(str,int,bool)
