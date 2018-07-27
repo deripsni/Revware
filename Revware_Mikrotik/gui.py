@@ -391,13 +391,25 @@ class MainWindow(QMainWindow):
 
 	def initUI(self):
 
-		mainMenu = self.menuBar()
-		fileMenu = mainMenu.addMenu('File')
-		editMenu = mainMenu.addMenu('Edit')
-		viewMenu = mainMenu.addMenu('View')
-		searchMenu = mainMenu.addMenu('Search')
-		toolsMenu = mainMenu.addMenu('Tools')
-		helpMenu = mainMenu.addMenu('Help')
+
+
+
+		self.mainMenu = self.menuBar()
+		self.fileMenu = self.mainMenu.addMenu('File')
+		self.editMenu = self.mainMenu.addMenu('Edit')
+		self.viewMenu = self.mainMenu.addMenu('View')
+		self.searchMenu = self.mainMenu.addMenu('Search')
+		self.toolsMenu = self.mainMenu.addMenu('Tools')
+		self.helpMenu = self.mainMenu.addMenu('Help')
+
+		self.themeMenu = self.viewMenu.addMenu('Themes')
+		self.darkAction = self.themeMenu.addAction('Dark')
+		self.darkAction.triggered.connect(lambda: self.updateTheme("StyleSheet2.qss"))
+		self.coffeeAction = self.themeMenu.addAction('Coffee')
+		self.coffeeAction.triggered.connect(lambda: self.updateTheme("StyleSheet1.qss"))
+
+
+
 
 
 		self.ipbox = QLineEdit(self)
@@ -493,10 +505,17 @@ class MainWindow(QMainWindow):
 		self.textbox.appendPlainText(status)
 		print(status)
 
+
+	def updateTheme(self, name):
+		with open(name, 'r') as myfile:
+			theme = myfile.read()
+
+		app.setStyleSheet(theme)
+
 if __name__ == '__main__':
 	app = QApplication(sys.argv)
 
-	with open('StyleSheet2.qss', 'r') as myfile:
+	with open('StyleSheet1.qss', 'r') as myfile:
 		data = myfile.read()
 
 	app.setStyleSheet(data)

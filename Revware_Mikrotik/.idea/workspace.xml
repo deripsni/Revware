@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7315902-3ca4-45e6-a654-f5510cc2e68e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StyleSheet1.qss" beforeDir="false" afterPath="$PROJECT_DIR$/StyleSheet1.qss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,7 +41,7 @@
       <file leaf-file-name="menu.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/menu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4522">
+            <state relative-caret-position="-375">
               <caret line="266" selection-start-line="266" selection-end-line="266" />
             </state>
           </provider>
@@ -50,15 +50,20 @@
       <file leaf-file-name="gui.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="229" column="8" selection-start-line="229" selection-start-column="8" selection-end-line="229" selection-end-column="8" />
+            <state relative-caret-position="495">
+              <caret line="413" lean-forward="true" selection-start-line="413" selection-end-line="413" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#8015#9184#0" />
-                <element signature="e#9222#9968#0" />
-                <element signature="e#10802#11389#0" />
-                <element signature="e#11423#14064#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StyleSheet1.qss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StyleSheet1.qss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="35" column="50" lean-forward="true" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -66,8 +71,8 @@
       <file leaf-file-name="StyleSheet2.qss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StyleSheet2.qss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1734">
-              <caret line="102" column="17" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
+            <state relative-caret-position="-36">
+              <caret line="101" column="17" lean-forward="true" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -124,6 +129,7 @@
       <find>submit</find>
       <find>done</find>
       <find>doneSignal</find>
+      <find>font</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -140,8 +146,8 @@
         <option value="$PROJECT_DIR$/telnet.py" />
         <option value="$PROJECT_DIR$/menu.py" />
         <option value="$PROJECT_DIR$/ping.py" />
-        <option value="$PROJECT_DIR$/StyleSheet1.qss" />
         <option value="$PROJECT_DIR$/StyleSheet2.qss" />
+        <option value="$PROJECT_DIR$/StyleSheet1.qss" />
         <option value="$PROJECT_DIR$/gui.py" />
       </list>
     </option>
@@ -519,10 +525,6 @@
           <caret line="488" selection-start-line="488" selection-end-line="488" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#8015#9184#0" />
-            <element signature="e#9222#9968#0" />
-            <element signature="e#10802#11389#0" />
-            <element signature="e#11423#14064#0" />
           </folding>
         </state>
       </provider>
@@ -573,37 +575,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/StyleSheet2.qss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="101" column="17" lean-forward="true" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/StyleSheet1.qss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1853">
-          <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
+        <state relative-caret-position="595">
+          <caret line="35" column="50" lean-forward="true" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4522">
+        <state relative-caret-position="-375">
           <caret line="266" selection-start-line="266" selection-end-line="266" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StyleSheet2.qss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
-          <caret line="102" column="17" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="229" column="8" selection-start-line="229" selection-start-column="8" selection-end-line="229" selection-end-column="8" />
+        <state relative-caret-position="495">
+          <caret line="413" lean-forward="true" selection-start-line="413" selection-end-line="413" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#8015#9184#0" />
-            <element signature="e#9222#9968#0" />
-            <element signature="e#10802#11389#0" />
-            <element signature="e#11423#14064#0" />
           </folding>
         </state>
       </provider>
