@@ -4,12 +4,10 @@ import telnet
 import time
 import sys
 import sftp
-import gui
 from PyQt5 import QtCore
-from PyQt5.QtWidgets import QApplication
-import threading
 
-def Menu():
+
+def menu():
 	print(25 * "-", "REVWARE Mikrotik", 24 * "-")
 	print("1. Firmware")
 	print("2. Password")
@@ -21,8 +19,8 @@ def Menu():
 	print("8. Exit")
 	print(67 * "-")
 
-class Firmware(QtCore.QObject):
 
+class Firmware(QtCore.QObject):
 	signalStatus = QtCore.pyqtSignal()
 	firmwaresftpSignal = QtCore.pyqtSignal(str, str, str)
 	sshSignal = QtCore.pyqtSignal(str, str, str, str)
@@ -31,16 +29,16 @@ class Firmware(QtCore.QObject):
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
 		print("Firmware Thread Initialized")
-		self.createSSH()
+		self.create_ssh()
 
-	@QtCore.pyqtSlot(str,str,str)
-	def runFirmware(self, ipInput, usernameInput, passwordInput):
+	@QtCore.pyqtSlot(str, str, str)
+	def run_firmware(self, ip_input, username_input, password_input):
 		print("Firmware")
-		print (ipInput + usernameInput, passwordInput)
+		print(ip_input + username_input, password_input)
 
-		localip=ipInput
-		localu=usernameInput
-		localp=passwordInput
+		localip = ip_input
+		localu = username_input
+		localp = password_input
 
 		time.sleep(1)
 		self.firmwaresftpSignal.emit(localip, localu, localp)
@@ -51,132 +49,128 @@ class Firmware(QtCore.QObject):
 		time.sleep(5)
 
 		self.pingSignal.emit(localip, 50, True)
-		#self.parent.firmware_thread.exit()
 
-	def createSSH(self):
+	def create_ssh(self):
 		self.sshc = ssh.sshConnection(parent=self)
 		self.firmwaresftpSignal.connect(self.sshc.firmwaresftp)
 		self.sshSignal.connect(self.sshc.ssh)
 		self.ip = ping.IPTest(parent=self)
 		self.pingSignal.connect(self.ip.ping)
 
-class Password(QtCore.QObject):
 
+class Password(QtCore.QObject):
 	printToScreen = QtCore.pyqtSignal(str)
 	sshSignal = QtCore.pyqtSignal(str, str, str, str)
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
 		self.printToScreen.connect(self.parent().gui.update_status)
-		self.createSSH()
+		self.create_ssh()
 
-	@QtCore.pyqtSlot(str,str,str)
-	def runPassword(self, ipInput, usernameInput, passwordInput):
+	@QtCore.pyqtSlot(str, str, str)
+	def run_password(self, ip_input, username_input, password_input):
 		print("Password")
-		print (ipInput + usernameInput, passwordInput)
+		print(ip_input + username_input, password_input)
 
-		self.localip=ipInput
-		self.localu=usernameInput
-		self.localp=passwordInput
+		self.localip = ip_input
+		self.localu = username_input
+		self.localp = password_input
 
-	def createSSH(self):
+	def create_ssh(self):
 		self.sshc = ssh.sshConnection(parent=self)
 		self.sshSignal.connect(self.sshc.ssh)
-
 
 	@QtCore.pyqtSlot(str, str)
-	def setPassword(self, nPassword, cPassword):
-		if nPassword == cPassword:
-			self.command =  "user set admin password=" + nPassword
+	def set_password(self, n_password, c_password):
+		if n_password == c_password:
+			self.command = "user set admin password=" + n_password
 			self.sshSignal.emit(self.localip, self.localu, self.localp, self.command)
 			self.printToScreen.emit("Password Set")
-			#self.parent.firmware_thread.exit()
+
+
+# self.parent.firmware_thread.exit()
+
 
 class Firewall(QtCore.QObject):
-
 	printToScreen = QtCore.pyqtSignal(str)
 	sshSignal = QtCore.pyqtSignal(str, str, str, str)
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
 		self.printToScreen.connect(self.parent().gui.update_status)
-		self.createSSH()
+		self.create_ssh()
 
-	@QtCore.pyqtSlot(str,str,str)
-	def runFirewall(self, ipInput, usernameInput, passwordInput):
+	@QtCore.pyqtSlot(str, str, str)
+	def run_firewall(self, ip_input, username_input, password_input):
 		print("Firewall")
-		print (ipInput + usernameInput, passwordInput)
+		print(ip_input + username_input, password_input)
 
-		self.localip=ipInput
-		self.localu=usernameInput
-		self.localp=passwordInput
+		self.localip = ip_input
+		self.localu = username_input
+		self.localp = password_input
 		self.sshSignal.emit(self.localip, self.localu, self.localp, "ip firewall filter print")
-		#self.thread().exit()
 
-	def createSSH(self):
+	# self.thread().exit()
+
+	def create_ssh(self):
 		self.sshc = ssh.sshConnection(parent=self)
 		self.sshSignal.connect(self.sshc.ssh)
 
-class DeviceName(QtCore.QObject):
 
+class DeviceName(QtCore.QObject):
 	printToScreen = QtCore.pyqtSignal(str)
 	sshSignal = QtCore.pyqtSignal(str, str, str, str)
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
 		self.printToScreen.connect(self.parent().gui.update_status)
-		self.createSSH()
+		self.create_ssh()
 
-	@QtCore.pyqtSlot(str,str,str)
-	def runDeviceName(self, ipInput, usernameInput, passwordInput):
+	@QtCore.pyqtSlot(str, str, str)
+	def run_device_name(self, ip_input, username_input, password_input):
 		print("Device Name")
-		print (ipInput + usernameInput, passwordInput)
+		print(ip_input + username_input, password_input)
 
-		self.localip=ipInput
-		self.localu=usernameInput
-		self.localp=passwordInput
+		self.localip = ip_input
+		self.localu = username_input
+		self.localp = password_input
 		self.sshSignal.emit(self.localip, self.localu, self.localp, "system identity print")
 
-	def createSSH(self):
+	def create_ssh(self):
 		self.sshc = ssh.sshConnection(parent=self)
 		self.sshSignal.connect(self.sshc.ssh)
 
 
 class CustomCommand(QtCore.QObject):
-
 	printToScreen = QtCore.pyqtSignal(str)
 	sshSignal = QtCore.pyqtSignal(str, str, str, str)
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
 		self.printToScreen.connect(self.parent().gui.update_status)
-		self.createSSH()
+		self.create_ssh()
 
-	@QtCore.pyqtSlot(str,str,str)
-	def runCustomCommand(self, ipInput, usernameInput, passwordInput):
+	@QtCore.pyqtSlot(str, str, str)
+	def run_custom_command(self, ip_input, username_input, password_input):
 		print("Custom Command")
-		print (ipInput + usernameInput, passwordInput)
+		print(ip_input + username_input, password_input)
 
-		self.localip=ipInput
-		self.localu=usernameInput
-		self.localp=passwordInput
+		self.localip = ip_input
+		self.localu = username_input
+		self.localp = password_input
 
-	def createSSH(self):
+	def create_ssh(self):
 		self.sshc = ssh.sshConnection(parent=self)
 		self.sshSignal.connect(self.sshc.ssh)
 
-
 	@QtCore.pyqtSlot(str)
-	def setCommand(self, cmd):
-
+	def set_command(self, cmd):
 		self.command = cmd
 		self.sshSignal.emit(self.localip, self.localu, self.localp, self.command)
 		self.printToScreen.emit("Command Sent")
-		#self.parent.firmware_thread.exit()
+
 
 class BatchSFTP(QtCore.QObject):
-
-
 	signalStatus = QtCore.pyqtSignal()
 	firmwaresftpSignal = QtCore.pyqtSignal(str, str, str)
 	sshSignal = QtCore.pyqtSignal(str, str, str, str)
@@ -186,63 +180,58 @@ class BatchSFTP(QtCore.QObject):
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
 		self.printToScreen.connect(self.parent().gui.update_status)
-		self.createSSH()
+		self.create_ssh()
 
-	@QtCore.pyqtSlot(str,str)
-	def runBatchSFTP(self, usernameInput, passwordInput):
+	@QtCore.pyqtSlot(str, str)
+	def run_batch_sftp(self, username_input, password_input):
 		print("Batch SFTP")
-		print (usernameInput, passwordInput)
+		print(username_input, password_input)
 
-		self.localu=usernameInput
-		self.localp=passwordInput
+		self.localu = username_input
+		self.localp = password_input
 
-
-	def createSSH(self):
+	def create_ssh(self):
 		self.sshc = ssh.sshConnection(parent=self)
 		self.firmwaresftpSignal.connect(self.sshc.firmwaresftp)
 		self.sshSignal.connect(self.sshc.ssh)
 		self.ip = ping.IPTest(parent=self)
 		self.pingSignal.connect(self.ip.ping)
-		self.mysftp= sftp.SFTP(parent=self)
-
+		self.mysftp = sftp.SFTP(parent=self)
 
 	@QtCore.pyqtSlot(str, str)
-	def setBatchSFTP(self, cfile, ifile):
-
+	def set_batch_sftp(self, cfile, ifile):
 		self.cmdFile = cfile
-		self.ipFile	= ifile
+		self.ipFile = ifile
 
-		self.mysftp.batchsftp(username=self.localu, password=self.localp,cfile=self.cmdFile, ifile=self.ipFile, reboot='yes')
+		self.mysftp.batchsftp(username=self.localu, password=self.localp, cfile=self.cmdFile, ifile=self.ipFile,
+							reboot='yes')
+
 
 class Telnet(QtCore.QObject):
-
 	printToScreen = QtCore.pyqtSignal(str)
-	telnetSignal = QtCore.pyqtSignal(str,str,str,str)
-
+	telnetSignal = QtCore.pyqtSignal(str, str, str, str)
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
 		self.printToScreen.connect(self.parent().gui.update_status)
-		self.tel=telnet.Telnet(parent=self)
+		self.tel = telnet.Telnet(parent=self)
 		self.telnetSignal.connect(self.tel.telnet)
 
-	@QtCore.pyqtSlot(str,str,str)
-	def runTelnet(self, ipInput, usernameInput, passwordInput):
+	@QtCore.pyqtSlot(str, str, str)
+	def run_telnet(self, ip_input, username_input, password_input):
 		print("Password")
-		print (ipInput + usernameInput, passwordInput)
+		print(ip_input + username_input, password_input)
 
-		self.localip=ipInput
-		self.localu=usernameInput
-		self.localp=passwordInput
-
+		self.localip = ip_input
+		self.localu = username_input
+		self.localp = password_input
 
 	@QtCore.pyqtSlot(str)
-	def setTelnet(self, method):
+	def set_telnet(self, method):
 		self.telnetSignal.emit(self.localip, self.localu, self.localp, method)
 
 
 class Mikrotik(QtCore.QObject):
-
 	printToScreen = QtCore.pyqtSignal(str)
 	pingSignal = QtCore.pyqtSignal(str, str, bool)
 
@@ -253,72 +242,15 @@ class Mikrotik(QtCore.QObject):
 		self.ip = ping.IPTest(parent=self)
 		self.pingSignal.connect(self.ip.mikrotik_checker)
 
-	@QtCore.pyqtSlot(str,str,str)
-	def runMikro(self, ipInput, usernameInput, passwordInput):
+	@QtCore.pyqtSlot(str, str, str)
+	def run_mikro(self, ip_input, username_input, password_input):
 		print("Password")
-		print (ipInput + usernameInput, passwordInput)
+		print(ip_input + username_input, password_input)
 
-		self.localip=ipInput
-		self.localu=usernameInput
-		self.localp=passwordInput
+		self.localip = ip_input
+		self.localu = username_input
+		self.localp = password_input
 
-	@QtCore.pyqtSlot(str,str,bool)
-	def setMikro(self, ip, subnet, to):
-
+	@QtCore.pyqtSlot(str, str, bool)
+	def set_mikro(self, ip, subnet, to):
 		self.pingSignal.emit(ip, subnet, to)
-
-def main():
-	loop = True
-	while loop:
-		Menu()
-		choice = input("Enter choice: ")
-
-		if choice == "1":
-			Firmware()
-
-		elif choice == "2":
-			Password()
-
-		elif choice == "3":
-			Firewall()
-
-		elif choice == "4":
-			DeviceName()
-
-		elif choice == "5":
-			CustomCommand()
-
-		elif choice == "6":
-			Telnet()
-
-		elif choice == "7":
-			BatchSFTP()
-
-
-		elif choice == "8":
-
-			print("Mikrotik Checker")
-
-			ipInput = input("IP: ")
-
-			subnetInput = input("Subnet: ")
-
-			timeoutInput = input("Would you like to include timed out devices in the search? (Yy/Nn): ")
-
-			if timeoutInput == "Y" or "y":
-
-				timeoutInput = True
-
-			else:
-
-				timeoutInput = False
-
-			ping.mikrotik_checker(ip=ipInput, subnet=subnetInput, option=timeoutInput)
-
-
-		else:
-			print("Try Again")
-
-
-if __name__ == "__main__":
-	main()
