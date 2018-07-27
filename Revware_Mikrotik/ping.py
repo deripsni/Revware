@@ -1,53 +1,88 @@
+
 import subprocess
 import ipaddress
 import socket
+from PyQt5 import QtCore
 
 
-def ping(ip, tries, timeout_include):
-	ip = ip
-	timeout_include = timeout_include
-	max_tries = tries
-	current_try = 0
-	timeout_total = 0
+class IPTest(QtCore.QObject):
 
-	while current_try < max_tries:
-		p = subprocess.Popen("ping -n 1 " + ip, stdout=subprocess.PIPE).communicate()[0]
-		# print(p.decode("utf-8")) 		# display ping results
-		if b"unreachable" in p:
-			print("!", end="", flush=True)
-		elif b"timed out" in p:
-			timeout_total += 1
-			print(".", end="", flush=True)
-		else:
-			print("%s is online \n" % ip)
-			return "online"
+	printToScreen = QtCore.pyqtSignal(str)
+	progressSignal = QtCore.pyqtSignal(int)
+	pMaxSignal = QtCore.pyqtSignal(int)
+	pCloseSignal = QtCore.pyqtSignal()
 
-		current_try += 1
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.printToScreen.connect(parent.parent().gui.update_status)
+		self.progressSignal.connect(parent.parent().progresswindow.update_progress)
+		self.pMaxSignal.connect(parent.parent().progresswindow.set_max)
+		self.pCloseSignal.connect(parent.parent().progresswindow.close)
 
-	if timeout_include:
-		if timeout_total > 0:
-			print("%s is not responding to pings \n" % ip)
-			return "online"
-		else:
-			print("{}{}{}".format("Radio didn't return after: ", max_tries, " tries."))
-	else:
-		print("{}{}{}".format("Radio didn't return after: ", max_tries, " tries."))
+	@QtCore.pyqtSlot(str, int, bool)
+	def ping(self, ip1, tries, timeout_include):
+		print("pinging stuff")
+		self.ip = ip1
+		self.timeout_include = timeout_include
+		self.max_tries = tries
+		self.current_try = 0
+		timeout_total = 0
 
+		while self.current_try < self.max_tries:
+			QtCore.QCoreApplication.processEvents()
+			self.p = subprocess.Popen("ping -n 1 " + self.ip, stdout=subprocess.PIPE).communicate()[0]
+			# print(p.decode("utf-8")) 		# display ping results
+			if b"unreachable" in self.p:
+				print("!", end="", flush=True)
+			elif b"timed out" in self.p:
+				timeout_total += 1
+				print(".", end="", flush=True)
+			else:
+				x = "%s online \n" % self.ip
+				self.printToScreen.emit(x)
+				QtCore.QCoreApplication.processEvents()
+				break
 
-def mikrotik_checker(ip, subnet, option):
-	ip = ip
-	subnet = subnet
-	option = option
+			self.current_try += 1
 
-	network = ipaddress.IPv4Network(ip + subnet)
-	file = open("ipList.txt", "w")
-	for addr in network:
-		status = ping(str(addr), tries=2, timeout_include=option)
-		if status == "online":
-			sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-			result = sock.connect_ex((str(addr), 8291))
-			if result == 0:
-				file.write(str(addr) + "\n")
+		if timeout_include:
+
+			if timeout_total > 0:
+
+				print("%s is not responding to pings \n" % self.ip)
+
+				return "online"
+
+			else:
+
+				print("{}{}{}".format("Radio didn't return after: ", self.max_tries, " tries."))
+
+	@QtCore.pyqtSlot(str, str, bool)
+	def mikrotik_checker(self, ip1, subnet1, option1):
+		self.ip = ip1
+		self.subnet = subnet1
+		self.option = option1
+		print(self.ip + " is the IP")
+		print(self.subnet + "is the Subnet")
+		self.number = 2**(32-int(subnet1[-2:]))
+		self.count = 0
+		print(self.number)
+		self.network = ipaddress.IPv4Network(self.ip + self.subnet)
+		file = open("ipList.txt", "w")
+		self.pMaxSignal.emit(self.number)
+		for addr in self.network:
+			self.count = self.count + 1
+			QtCore.QCoreApplication.processEvents()
+			self.status = self.ping(str(addr), tries=2, timeout_include=self.option)
+			if self.status == "online":
+				self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+				self.result = self.sock.connect_ex((str(addr), 8291))
+				if self.result == 0:
+					file.write(str(addr) + "\n")
 				# print("Winbox is enabled! Mikrotik found!")  # Success Message
-			sock.close()
-	file.close()
+				self.sock.close()
+			self.progressSignal.emit(self.count)
+		self.pCloseSignal.emit()
+		file.close()
+
+    

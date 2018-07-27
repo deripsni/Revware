@@ -1,71 +1,85 @@
 import paramiko
+import time
+from PyQt5 import QtCore
 
 
+class SSHConnection(QtCore.QObject):
 
-def printProgress(iteration, total, pre = '', suf = '', dec = 2, len = 100, fill = '█'):
-	percent = ("{0:." + str(dec) + "f}").format(100 * (iteration/float(total)))
-	filledLength = int(len * iteration // total)
-	bar = fill * filledLength + '-' * (len - filledLength)
-	print('\r%s |%s| %s%% %s' % (pre, bar, percent, suf), end = '')
+	printToScreen = QtCore.pyqtSignal(str)
 
-	if iteration == total:
-		print()
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.username = ''
+		self.password = ''
+		self.port = '0'
+		self.transport = None
+		self.sftp = None
+		self.filepath = None
+		self.localpath = None
+		self.client = None
+		self.printToScreen.connect(parent.parent().gui.update_status)
 
-def ssh(ip, username, password, mikrotikCommand):
-	ip = ip
-	username = username
-	password = password
-	port = 22
+	def print_progress(self, iteration, total, pre ='', suf ='', dec = 2, len = 100, fill ='█'):
+		percent = ("{0:." + str(dec) + "f}").format(100 * (iteration/float(total)))
+		filled_length = int(len * iteration // total)
+		bar = fill * filled_length + '-' * (len - filled_length)
+		print('\r%s |%s| %s%% %s' % (pre, bar, percent, suf), end='')
 
-	try:
-		client = paramiko.SSHClient()
-		client.load_system_host_keys()
-		client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-		client.connect(ip, port=port, username=username, password=password)
-		stdin, stdout, stderr = client.exec_command(mikrotikCommand)
-		#result, stdin, stdout, stderr=client.exec_command(mikrotikCommand)
-		#result = stdin.read().strip() + stdout.read().strip()
-		#result = ' '
-		if mikrotikCommand == "system reboot":
-			print("Rebooting Radio...",  end='')
+		if iteration == total:
+			print()
 
-		else:
-			client.close()
+	@QtCore.pyqtSlot(str, str, str, str)
+	def ssh(self, ip, username, password, mikrotik_command):
+		self.ip = ip
+		self.username = username
+		self.password = password
+		self.port = 22
 
-		#return result
+		try:
+			self.client = paramiko.SSHClient()
+			self.client.load_system_host_keys()
+			self.client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+			self.client.connect(ip, port=self.port, username=self.username, password=self.password)
+			stdin, stdout, stderr = self.client.exec_command(mikrotik_command)
+			x=stdout.read()
+			if mikrotik_command == "system reboot":
+				self.printToScreen.emit("Rebooting Radio...")
+				QtCore.QCoreApplication.processEvents()
+			else :
+				y=x.decode("UTF-8")
+				self.printToScreen.emit(y)
+				self.client.close()
 
-	except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.NoValidConnectionsError):
-		print("Command not succesfully executed, please try again")
+		except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.NoValidConnectionsError):
+			self.printToScreen.emit("Command not succesfully executed, please try again")
 
+	def transfer(self, transferred, to_transfer):
+		self.print_progress(transferred, to_transfer, pre='Progress:', suf='Complete', len=60)
 
+	@QtCore.pyqtSlot(str, str, str)
+	def firmwaresftp(self, ip1, username1, password1):
+		self.ip = ip1
+		self.username = username1
+		self.password = password1
+		self.port = 22
+		time.sleep(1)
+		try:
 
+			self.transport = paramiko.Transport(self.ip, self.port)
+			self.transport.connect(username=self.username, password=self.password)
+			self.sftp = paramiko.SFTPClient.from_transport(self.transport)
 
-def transfer(transferred, to_transfer):
-	#print("Transferred: {0}/{1}".format(transferred, to_transfer))
-	printProgress(transferred, to_transfer, pre = 'Progress:', suf = 'Complete', len=60)
+			self.filepath = '/routeros-mipsbe-6.39.1.npk'
+			self.localpath = r'C:\Mikrotik\routeros-mipsbe-6.39.3.npk'
 
-def firmwaresftp(ip, username, password):
-	ip = ip
-	username = username
-	password = password
-	port = 22
+			self.printToScreen.emit("Uploading file...")
+			QtCore.QCoreApplication.processEvents()
+			self.sftp.put(self.localpath, self.filepath, callback=self.transfer)
+			self.printToScreen.emit("DONE: File Uploaded")
+			QtCore.QCoreApplication.processEvents()
+			self.sftp.close()
+			self.transport.close()
 
-	try:
-		transport = paramiko.Transport(ip, port)
-		transport.connect(username=username, password=password)
-		sftp = paramiko.SFTPClient.from_transport(transport)
-
-		filepath = '/routeros-mipsbe-6.39.1.npk'
-		localpath = r'C:\Mikrotik\routeros-mipsbe-6.39.3.npk'
-
-		print("Uploading file...")
-		sftp.put(localpath, filepath, callback=transfer)
-		print("DONE: File Uploaded")
-
-		sftp.close()
-		transport.close()
-
-	except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.NoValidConnectionsError):
-		print("SSH not enabled on Radio")
-
-
+		except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.NoValidConnectionsError):
+			self.printToScreen.emit("SSH not enabled on Radio")
+			QtCore.QCoreApplication.processEvents()
