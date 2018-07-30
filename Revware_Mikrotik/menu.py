@@ -110,6 +110,7 @@ class DeviceName(QtCore.QObject):
 		self.printToScreen.connect(self.parent().gui.update_status)
 		self.create_ssh()
 
+
 	@QtCore.pyqtSlot(str, str, str)
 	def run_device_name(self, ip_input, username_input, password_input):
 		print("Device Name")

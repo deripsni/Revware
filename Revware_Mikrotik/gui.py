@@ -84,27 +84,35 @@ class Master(QtCore.QObject):
 		self.fwindow.fbtn.clicked.connect(self.fwindow.f_set)
 		self.fwindow.btn.clicked.connect(self.fwindow.close)
 		self.fwindow.btn.clicked.connect(lambda: self.firmware.set_firmware(self.fwindow.ftxt.text()))
+		self.fwindow.btn.clicked.connect(lambda: self.firmware.deleteLater())
 
 		self.pwindow.btn.clicked.connect(lambda: self.password.set_password(self.pwindow.npbox.text(), self.pwindow.pbox.text()))
+		self.pwindow.btn.clicked.connect(lambda: self.password.deleteLater())
 		self.pwindow.btn.clicked.connect(self.pwindow.close)
 
 		self.cwindow.btn.clicked.connect(lambda: self.command.set_command(self.cwindow.cbox.text()))
 		self.cwindow.btn.clicked.connect(self.cwindow.close)
+		self.cwindow.btn.clicked.connect(lambda: self.command.deleteLater())
 
 		self.bwindow.cbtn.clicked.connect(self.bwindow.c_set)
 		self.bwindow.ipbtn.clicked.connect(self.bwindow.i_set)
 		self.bwindow.btn.clicked.connect(lambda: self.batch.set_batch_sftp(self.bwindow.ctxt.text(), self.bwindow.iptxt.text()))
+		self.bwindow.btn.clicked.connect(lambda: self.batch.deleteLater())
 		self.bwindow.btn.clicked.connect(self.bwindow.close)
 
 		self.twindow.sshbtn.clicked.connect(self.twindow.close)
 		self.twindow.sshbtn.clicked.connect(lambda: self.telnet.set_telnet("ssh"))
+		self.twindow.sshbtn.clicked.connect(lambda: self.telnet.deleteLater())
 		self.twindow.ftpbtn.clicked.connect(lambda: self.telnet.set_telnet("ftp"))
 		self.twindow.ftpbtn.clicked.connect(self.twindow.close)
+		self.twindow.ftpbtn.clicked.connect(lambda: self.telnet.deleteLater())
 		self.twindow.winbtn.clicked.connect(lambda: self.telnet.set_telnet("winbox"))
 		self.twindow.winbtn.clicked.connect(self.twindow.close)
+		self.twindow.winbtn.clicked.connect(lambda: self.telnet.deleteLater())
 
 		self.mwindow.btn.clicked.connect(self.mwindow.close)
 		self.mwindow.btn.clicked.connect(self.progresswindow.show)
+		self.mwindow.btn.clicked.connect(lambda: self.telnet.deleteLater())
 		self.mwindow.btn.clicked.connect(lambda: self.mikro.set_mikro(self.mwindow.ibox.text(),
 																		self.mwindow.sbox.text(),
 																		self.mwindow.b1.isChecked()))
@@ -134,6 +142,7 @@ class Master(QtCore.QObject):
 		self.firewall_thread = QtCore.QThread()
 		self.firewall.moveToThread(self.firewall_thread)
 		self.firewall_thread.start()
+		self.firewall.deleteLater()
 		self.firewallSignal.connect(self.firewall.run_firewall)
 		self.firewallSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
 		self.firewall_thread.exit()
@@ -143,9 +152,10 @@ class Master(QtCore.QObject):
 		self.devicename_thread = QtCore.QThread()
 		self.devicename.moveToThread(self.devicename_thread)
 		self.devicename_thread.start()
+		self.devicename.deleteLater()
 		self.devicenameSignal.connect(self.devicename.run_device_name)
 		self.devicenameSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
-		self.devicename_thread.exit()
+		self.devicename_thread.quit()
 
 	def create_custom_command_thread(self):
 		self.command = menu.CustomCommand(parent=self)

@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7315902-3ca4-45e6-a654-f5510cc2e68e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ssh.py" beforeDir="false" afterPath="$PROJECT_DIR$/ssh.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,8 +44,8 @@
       <file leaf-file-name="menu.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/menu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="120" column="92" lean-forward="true" selection-start-line="120" selection-start-column="92" selection-end-line="120" selection-end-column="92" />
+            <state relative-caret-position="747">
+              <caret line="75" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -54,14 +53,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gui.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gui.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="500" column="29" selection-start-line="500" selection-start-column="29" selection-end-line="500" selection-end-column="29" />
+            <state relative-caret-position="245">
+              <caret line="193" column="33" selection-start-line="193" selection-start-column="33" selection-end-line="193" selection-end-column="33" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="socket.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/socket.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="747" selection-start-line="747" selection-end-line="747" />
             </state>
           </provider>
         </entry>
@@ -75,7 +83,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ssh.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ssh.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ssh.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="356">
@@ -157,9 +165,9 @@
         <option value="$PROJECT_DIR$/sftp.py" />
         <option value="$PROJECT_DIR$/telnet.py" />
         <option value="$PROJECT_DIR$/settings.yaml" />
+        <option value="$PROJECT_DIR$/ssh.py" />
         <option value="$PROJECT_DIR$/menu.py" />
         <option value="$PROJECT_DIR$/gui.py" />
-        <option value="$PROJECT_DIR$/ssh.py" />
       </list>
     </option>
   </component>
@@ -313,7 +321,7 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298292" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" x="1600" y="31" width="1600" height="837" id="Run" order="2" type="WINDOWED" visible="true" weight="0.25098553" />
+      <window_info anchor="bottom" x="1600" y="31" width="1600" height="837" id="Run" order="2" type="WINDOWED" weight="0.25098553" />
       <window_info id="Structure" order="1" sideWeight="0.50328517" side_tool="true" visible="true" weight="0.121875" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3298292" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -575,33 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="500" column="29" selection-start-line="500" selection-start-column="29" selection-end-line="500" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/menu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="120" column="92" lean-forward="true" selection-start-line="120" selection-start-column="92" selection-end-line="120" selection-end-column="92" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/socket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="747" selection-start-line="747" selection-end-line="747" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python37/site-packages/paramiko/client.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
@@ -615,6 +596,33 @@
           <caret line="48" column="44" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="747" selection-start-line="747" selection-end-line="747" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="193" column="33" selection-start-line="193" selection-start-column="33" selection-end-line="193" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
