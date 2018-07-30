@@ -204,6 +204,7 @@ class FirmwareWindow(QMainWindow):
 		super(self.__class__, self).__init__(parent)
 		self.init_ui()
 
+
 	def init_ui(self):
 		self.fbtn = QPushButton('Browse', self)
 		self.fbtn.move(100, 10)
@@ -221,8 +222,6 @@ class FirmwareWindow(QMainWindow):
 		self.btn = QPushButton("Submit", self)
 		self.btn.move(310, 35)
 		self.btn.setAutoDefault(True)
-
-		#self.statusBar()
 
 		self.setGeometry(90, 200, 420, 70)
 		self.setWindowTitle('Firmware')

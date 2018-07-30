@@ -54,7 +54,10 @@ class SSHConnection(QtCore.QObject):
 				self.client.close()
 
 		except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.NoValidConnectionsError):
-			self.printToScreen.emit("Command not succesfully executed, please try again")
+			self.printToScreen.emit("Could not establish an SSH connection")
+		except (UnicodeError, RecursionError):
+			self.printToScreen.emit("Please enter a valid IP")
+
 
 	def transfer(self, transferred, to_transfer):
 		self.print_progress(transferred, to_transfer, pre='Progress:', suf='Complete', len=60)
@@ -84,5 +87,5 @@ class SSHConnection(QtCore.QObject):
 			self.transport.close()
 
 		except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.NoValidConnectionsError):
-			self.printToScreen.emit("SSH not enabled on Radio")
+			self.printToScreen.emit("Could not establish an SSH connection")
 			QtCore.QCoreApplication.processEvents()
