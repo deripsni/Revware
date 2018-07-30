@@ -1,7 +1,7 @@
 import menu
 import sys
 from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication, QPlainTextEdit, QLabel, QLineEdit, QFileDialog, \
-							QRadioButton, QCheckBox, QProgressBar
+							QRadioButton, QCheckBox, QProgressBar, QMessageBox
 from PyQt5 import QtGui, QtCore
 import ctypes
 from yaml import load, dump
@@ -467,7 +467,11 @@ class MainWindow(QMainWindow):
 		self.coffeeAction = self.themeMenu.addAction('Coffee')
 		self.coffeeAction.triggered.connect(lambda: self.update_theme("Coffee.qss"))
 
+		self.reportAction = self.helpMenu.addAction('Report an Issue')
+		self.reportAction.triggered.connect(self.open_url)
+
 		self.ipbox = QLineEdit(self)
+		self.ipbox.setInputMask("000.000.000.000")
 		self.ipbox.move(80, 30)
 		self.ipbox.resize(170, 20)
 
@@ -563,6 +567,11 @@ class MainWindow(QMainWindow):
 		with open('settings.yaml', 'w') as f:
 			dump(master.settings, f)
 		app.setStyleSheet(theme)
+
+	def open_url(self):
+		url = QtCore.QUrl('https://github.com/Revand/Revware/issues')
+		if not QtGui.QDesktopServices.openUrl(url):
+			QtGui.QMessageBox.warning(self, 'Open Url', 'Could not open url')
 
 
 if __name__ == '__main__':
