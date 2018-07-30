@@ -49,7 +49,7 @@ class Master(QtCore.QObject):
 			self.settings = load(f)
 		print(self.settings)
 
-		self.theme= self.settings["defaultTheme"]
+		self.theme = self.settings["defaultTheme"]
 		with open(self.theme, 'r') as myfile:
 			self.theme = myfile.read()
 
@@ -57,6 +57,7 @@ class Master(QtCore.QObject):
 		app.setWindowIcon(QtGui.QIcon('Logo.PNG'))
 
 		self.gui = MainWindow()
+		self.fwindow = FirmwareWindow()
 		self.pwindow = PasswordWindow()
 		self.cwindow = CommandWindow()
 		self.bwindow = BatchWindow()
@@ -79,6 +80,10 @@ class Master(QtCore.QObject):
 		self.gui.btn8.clicked.connect(self.create_mikro_thread)
 
 		self.gui.clearbtn.clicked.connect(self.gui.clear_info)
+
+		self.fwindow.fbtn.clicked.connect(self.fwindow.f_set)
+		self.fwindow.btn.clicked.connect(lambda: self.firmware.set_firmware(self.fwindow.ftxt.text()))
+		self.fwindow.btn.clicked.connect(self.fwindow.close)
 
 		self.pwindow.btn.clicked.connect(lambda: self.password.set_password(self.pwindow.npbox.text(), self.pwindow.pbox.text()))
 		self.pwindow.btn.clicked.connect(self.pwindow.close)
@@ -109,6 +114,7 @@ class Master(QtCore.QObject):
 		self.firmware_thread = QtCore.QThread()
 		self.firmware.moveToThread(self.firmware_thread)
 		self.firmware_thread.start()
+		self.fwindow.show()
 		self.firmwareSignal.connect(self.firmware.run_firmware)
 		self.firmwareSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
 		self.firmware_thread.exit()
@@ -180,6 +186,42 @@ class Master(QtCore.QObject):
 		self.mikroSignal.connect(self.mikro.run_mikro)
 		self.mikroSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
 		self.mikro_thread.exit()
+
+
+class FirmwareWindow(QMainWindow):
+
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.init_ui()
+
+	def init_ui(self):
+		self.fbtn = QPushButton('Browse', self)
+		self.fbtn.move(100, 10)
+		self.fbtn.resize(50, 20)
+		self.fbtn.setAutoDefault(True)
+
+		self.flabel = QLabel('Firmware File: ', self)
+		self.flabel.move(23, 5)
+		self.flabel.resize(70, 30)
+
+		self.ftxt = QLineEdit(self)
+		self.ftxt.move(160, 10)
+		self.ftxt.resize(250, 20)
+
+		self.btn = QPushButton("Submit", self)
+		self.btn.move(310, 35)
+		self.btn.setAutoDefault(True)
+
+		#self.statusBar()
+
+		self.setGeometry(90, 200, 420, 70)
+		self.setWindowTitle('Firmware')
+
+		self.setWindowModality(QtCore.Qt.ApplicationModal)
+
+	def f_set(self,):
+		fname = QFileDialog.getOpenFileName(self, 'Open file')
+		self.ftxt.setText(fname[0])
 
 
 class PasswordWindow(QMainWindow):
@@ -521,6 +563,7 @@ class MainWindow(QMainWindow):
 		with open('settings.yaml', 'w') as f:
 			dump(master.settings, f)
 		app.setStyleSheet(theme)
+
 
 if __name__ == '__main__':
 	app = QApplication(sys.argv)

@@ -23,7 +23,7 @@ def menu():
 
 class Firmware(QtCore.QObject):
 	signalStatus = QtCore.pyqtSignal()
-	firmwaresftpSignal = QtCore.pyqtSignal(str, str, str)
+	firmwaresftpSignal = QtCore.pyqtSignal(str, str, str, str)
 	sshSignal = QtCore.pyqtSignal(str, str, str, str)
 	pingSignal = QtCore.pyqtSignal(str, int, bool)
 
@@ -37,19 +37,21 @@ class Firmware(QtCore.QObject):
 		print("Firmware")
 		print(ip_input + username_input, password_input)
 
-		localip = ip_input
-		localu = username_input
-		localp = password_input
+		self.localip = ip_input
+		self.localu = username_input
+		self.localp = password_input
 
-		time.sleep(1)
-		self.firmwaresftpSignal.emit(localip, localu, localp)
 
-		self.sshSignal.emit(localip, localu, localp, "system reboot")
+	@QtCore.pyqtSlot(str)
+	def set_firmware(self, filepath):
+		self.firmwaresftpSignal.emit(self.localip, self.localu, self.localp, filepath)
+
+		self.sshSignal.emit(self.localip, self.localu, self.localp, "system reboot")
 
 		sys.stdout.flush()
 		time.sleep(5)
 
-		self.pingSignal.emit(localip, 50, True)
+		self.pingSignal.emit(self.localip, 50, True)
 
 	def create_ssh(self):
 		self.sshc = ssh.SSHConnection(parent=self)

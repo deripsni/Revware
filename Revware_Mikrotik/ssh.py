@@ -56,8 +56,8 @@ class SSHConnection(QtCore.QObject):
 	def transfer(self, transferred, to_transfer):
 		self.print_progress(transferred, to_transfer, pre='Progress:', suf='Complete', len=60)
 
-	@QtCore.pyqtSlot(str, str, str)
-	def firmwaresftp(self, ip1, username1, password1):
+	@QtCore.pyqtSlot(str, str, str, str)
+	def firmwaresftp(self, ip1, username1, password1, localpath1):
 		self.ip = ip1
 		self.username = username1
 		self.password = password1
@@ -70,7 +70,7 @@ class SSHConnection(QtCore.QObject):
 			self.sftp = paramiko.SFTPClient.from_transport(self.transport)
 
 			self.filepath = '/routeros-mipsbe-6.39.1.npk'
-			self.localpath = r'C:\Mikrotik\routeros-mipsbe-6.39.3.npk'
+			self.localpath = localpath1
 
 			self.printToScreen.emit("Uploading file...")
 			QtCore.QCoreApplication.processEvents()
