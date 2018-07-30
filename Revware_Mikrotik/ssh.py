@@ -41,13 +41,16 @@ class SSHConnection(QtCore.QObject):
 			self.client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 			self.client.connect(ip, port=self.port, username=self.username, password=self.password)
 			stdin, stdout, stderr = self.client.exec_command(mikrotik_command)
-			x=stdout.read()
+			self.x = stdout.read()
 			if mikrotik_command == "system reboot":
 				self.printToScreen.emit("Rebooting Radio...")
 				QtCore.QCoreApplication.processEvents()
-			else :
-				y=x.decode("UTF-8")
-				self.printToScreen.emit(y)
+			elif mikrotik_command == "system identity print":
+				self.x = "Name: " + self.x[7:].decode("UTF-8")
+				self.printToScreen.emit(self.x)
+			else:
+				self.y = self.x.decode("UTF-8")
+				self.printToScreen.emit(self.y)
 				self.client.close()
 
 		except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.NoValidConnectionsError):

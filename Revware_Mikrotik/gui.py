@@ -473,7 +473,7 @@ class MainWindow(QMainWindow):
 		self.ipbox = QLineEdit(self)
 		self.ipbox.setInputMask("000.000.000.000")
 		self.ipbox.move(80, 30)
-		self.ipbox.resize(170, 20)
+		self.ipbox.resize(390, 20)
 
 		self.iplabel = QLabel('Ip: ', self)
 		self.iplabel.move(63, 23)
@@ -481,7 +481,7 @@ class MainWindow(QMainWindow):
 
 		self.ubox = QLineEdit(self)
 		self.ubox.move(80, 55)
-		self.ubox.resize(170, 20)
+		self.ubox.resize(390, 20)
 
 		self.ulabel = QLabel('Username: ', self)
 		self.ulabel.move(25, 48)
@@ -490,7 +490,7 @@ class MainWindow(QMainWindow):
 		self.pbox = QLineEdit(self)
 		self.pbox.setEchoMode(QLineEdit.Password)
 		self.pbox.move(80, 80)
-		self.pbox.resize(170, 20)
+		self.pbox.resize(390, 20)
 
 		self.plabel = QLabel('Password:', self)
 		self.plabel.move(27, 78)
@@ -498,7 +498,7 @@ class MainWindow(QMainWindow):
 
 		self.clearbtn = QPushButton("Clear", self)
 		self.clearbtn.resize(50, 20)
-		self.clearbtn.move(200, 105)
+		self.clearbtn.move(420, 105)
 
 		self.btn1 = QPushButton("Firmware", self)
 		self.btn1.move(20, 135)
@@ -506,47 +506,47 @@ class MainWindow(QMainWindow):
 		self.btn1.setAutoDefault(True)
 
 		self.btn2 = QPushButton("Password", self)
-		self.btn2.move(150, 135)
+		self.btn2.move(20, 170)
 		self.btn1.resize(100, 30)
 		self.btn2.setAutoDefault(True)
 
 		self.btn3 = QPushButton("Firewall", self)
-		self.btn3.move(20, 170)
+		self.btn3.move(20, 205)
 		self.btn1.resize(100, 30)
 		self.btn3.setAutoDefault(True)
 
 		self.btn4 = QPushButton("Radio Name", self)
-		self.btn4.move(150, 170)
+		self.btn4.move(20, 240)
 		self.btn1.resize(100, 30)
 		self.btn4.setAutoDefault(True)
 
 		self.btn5 = QPushButton("Custom Command", self)
-		self.btn5.move(20, 205)
+		self.btn5.move(20, 275)
 		self.btn1.resize(100, 30)
 		self.btn5.setAutoDefault(True)
 
 		self.btn6 = QPushButton("Telnet", self)
-		self.btn6.move(150, 205)
+		self.btn6.move(20, 310)
 		self.btn1.resize(100, 30)
 		self.btn6.setAutoDefault(True)
 
 		self.btn7 = QPushButton("Batch SFTP", self)
-		self.btn7.move(20, 240)
+		self.btn7.move(20, 345)
 		self.btn1.resize(100, 30)
 		self.btn7.setAutoDefault(True)
 
 		self.btn8 = QPushButton("Mikro Checker", self)
-		self.btn8.move(150, 240)
+		self.btn8.move(20, 380)
 		self.btn1.resize(100, 30)
 		self.btn8.setAutoDefault(True)
 
 		self.textbox = QPlainTextEdit(self)
 		self.textbox.setReadOnly(True)
-		self.textbox.move(20, 290)
-		self.textbox.resize(230, 130)
+		self.textbox.move(140, 135)
+		self.textbox.resize(330, 275)
 
 		self.statusBar()
-		self.setGeometry(0, 0, 270, 440)
+		self.setGeometry(0, 0, 500, 440)
 		self.setWindowTitle('Revware Mikrotik Control')
 
 	@QtCore.pyqtSlot()
