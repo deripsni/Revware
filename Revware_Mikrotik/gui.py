@@ -82,8 +82,8 @@ class Master(QtCore.QObject):
 		self.gui.clearbtn.clicked.connect(self.gui.clear_info)
 
 		self.fwindow.fbtn.clicked.connect(self.fwindow.f_set)
-		self.fwindow.btn.clicked.connect(lambda: self.firmware.set_firmware(self.fwindow.ftxt.text()))
 		self.fwindow.btn.clicked.connect(self.fwindow.close)
+		self.fwindow.btn.clicked.connect(lambda: self.firmware.set_firmware(self.fwindow.ftxt.text()))
 
 		self.pwindow.btn.clicked.connect(lambda: self.password.set_password(self.pwindow.npbox.text(), self.pwindow.pbox.text()))
 		self.pwindow.btn.clicked.connect(self.pwindow.close)

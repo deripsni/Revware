@@ -7,20 +7,6 @@ import sftp
 from PyQt5 import QtCore
 
 
-def menu():
-	print(25 * "-", "REVWARE Mikrotik", 24 * "-")
-	print("1. Firmware")
-	print("2. Password")
-	print("3. Firewall")
-	print("4. Radio Name")
-	print("5. Custom Command")
-	print("6. Telnet")
-	print("7. Batch SFTP")
-	print("8. Mikrotik Checker")
-	print("9. Exit")
-	print(67 * "-")
-
-
 class Firmware(QtCore.QObject):
 	signalStatus = QtCore.pyqtSignal()
 	firmwaresftpSignal = QtCore.pyqtSignal(str, str, str, str)
@@ -90,8 +76,6 @@ class Password(QtCore.QObject):
 			self.sshSignal.emit(self.localip, self.localu, self.localp, self.command)
 			self.printToScreen.emit("Password Set")
 
-# self.parent.firmware_thread.exit()
-
 
 class Firewall(QtCore.QObject):
 	printToScreen = QtCore.pyqtSignal(str)
@@ -111,8 +95,6 @@ class Firewall(QtCore.QObject):
 		self.localu = username_input
 		self.localp = password_input
 		self.sshSignal.emit(self.localip, self.localu, self.localp, "ip firewall filter print")
-
-	# self.thread().exit()
 
 	def create_ssh(self):
 		self.sshc = ssh.SSHConnection(parent=self)
@@ -194,7 +176,7 @@ class BatchSFTP(QtCore.QObject):
 
 	def create_ssh(self):
 		self.sshc = ssh.SSHConnection(parent=self)
-		self.firmwaresftpSignal.connect(self.sshc.firmwaresftp)
+
 		self.sshSignal.connect(self.sshc.ssh)
 		self.ip = ping.IPTest(parent=self)
 		self.pingSignal.connect(self.ip.ping)
@@ -206,7 +188,7 @@ class BatchSFTP(QtCore.QObject):
 		self.ipFile = ifile
 
 		self.mysftp.batchsftp(username=self.localu, password=self.localp, cfile=self.cmdFile, ifile=self.ipFile,
-							reboot='yes')
+								reboot='yes')
 
 
 class Telnet(QtCore.QObject):
@@ -256,5 +238,3 @@ class Mikrotik(QtCore.QObject):
 	@QtCore.pyqtSlot(str, str, bool)
 	def set_mikro(self, ip, subnet, to):
 		self.pingSignal.emit(ip, subnet, to)
-
-    
