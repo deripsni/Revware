@@ -31,9 +31,9 @@ class Firmware(QtCore.QObject):
 	@QtCore.pyqtSlot(str)
 	def set_firmware(self, filepath):
 		self.firmwaresftpSignal.emit(self.localip, self.localu, self.localp, filepath)
-
+		print("made it to the reboot")
 		self.sshSignal.emit(self.localip, self.localu, self.localp, "system reboot")
-
+		print("made it to the flush")
 		sys.stdout.flush()
 		time.sleep(5)
 
@@ -95,6 +95,7 @@ class Firewall(QtCore.QObject):
 		self.localu = username_input
 		self.localp = password_input
 		self.sshSignal.emit(self.localip, self.localu, self.localp, "ip firewall filter print")
+
 
 	def create_ssh(self):
 		self.sshc = ssh.SSHConnection(parent=self)
@@ -204,7 +205,7 @@ class Telnet(QtCore.QObject):
 
 	@QtCore.pyqtSlot(str, str, str)
 	def run_telnet(self, ip_input, username_input, password_input):
-		print("Password")
+		print("Telnet")
 		print(ip_input + username_input, password_input)
 
 		self.localip = ip_input
@@ -214,6 +215,7 @@ class Telnet(QtCore.QObject):
 	@QtCore.pyqtSlot(str)
 	def set_telnet(self, method):
 		self.telnetSignal.emit(self.localip, self.localu, self.localp, method)
+		print("sup")
 
 
 class Mikrotik(QtCore.QObject):

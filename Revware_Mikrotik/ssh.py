@@ -34,18 +34,25 @@ class SSHConnection(QtCore.QObject):
 		self.username = username
 		self.password = password
 		self.port = 22
-
+		print("made it into the ssh")
 		try:
 			self.client = paramiko.SSHClient()
+			print("1")
 			self.client.load_system_host_keys()
+			print("2")
 			self.client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+			print("3")
 			self.client.connect(ip, port=self.port, username=self.username, password=self.password)
+			print("4")
 			stdin, stdout, stderr = self.client.exec_command(mikrotik_command)
-			self.x = stdout.read()
+			print("5")
+			#self.x = stdout.read()
+			print("6")
 			if mikrotik_command == "system reboot":
 				self.printToScreen.emit("Rebooting Radio...")
 				QtCore.QCoreApplication.processEvents()
 			elif mikrotik_command == "system identity print":
+				self.x = stdout.read()
 				self.x = "Name: " + self.x[7:].decode("UTF-8")
 				self.printToScreen.emit(self.x)
 			else:
@@ -83,8 +90,11 @@ class SSHConnection(QtCore.QObject):
 			self.sftp.put(self.localpath, self.filepath, callback=self.transfer)
 			self.printToScreen.emit("DONE: File Uploaded")
 			QtCore.QCoreApplication.processEvents()
+			print("made check 1")
 			self.sftp.close()
+			print("made check 2")
 			self.transport.close()
+			print("made check 3")
 
 		except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.NoValidConnectionsError):
 			self.printToScreen.emit("Could not establish an SSH connection")

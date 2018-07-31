@@ -24,13 +24,14 @@ class Telnet(QtCore.QObject):
 		self.tn.read_until(b">", 5)
 		if self.option == "ssh":
 			self.tn.write(b"/ip service enable ssh" + b"\r\n")
-			self.printToScreen.emit("SSH had been enabled")
+			self.printToScreen.emit("SSH has been enabled")
 		elif self.option == "ftp":
 			self.tn.write(b"/ip service enable ftp" + b"\r\n")
 			self.printToScreen.emit("FTP has been enabled")
 		elif self.option == "winbox":
 			self.tn.write(b"/ip service enable winbox" + b"\r\n")
 			self.printToScreen.emit("Winbox has been enabled")
+		print("right before the quit")
 		self.tn.write(b"quit" + b"\r\n")
-
-		self.tn.read_all()
+		print("right after the quit")
+		#self.tn.read_all()
