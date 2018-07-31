@@ -479,8 +479,13 @@ class MainWindow(QMainWindow):
 		self.reportAction = self.helpMenu.addAction('Report an Issue')
 		self.reportAction.triggered.connect(self.open_url)
 
+		self.exitAction = self.fileMenu.addAction('Exit')
+		self.exitAction.triggered.connect(sys.exit)
+
 		self.ipbox = QLineEdit(self)
-		self.ipbox.setInputMask("000.000.000.000")
+		self.range = "(?:[0-1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])"
+		self.regex = QtCore.QRegExp("^" + self.range + "\\." + self.range + "\\." + self.range + "\\." + self.range + "$")
+		self.ipbox.setValidator(QtGui.QRegExpValidator(self.regex))
 		self.ipbox.move(80, 30)
 		self.ipbox.resize(390, 20)
 
