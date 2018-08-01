@@ -1,7 +1,8 @@
 import menu
 import sys
 from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication, QPlainTextEdit, QLabel, QLineEdit, QFileDialog, \
-							QRadioButton, QCheckBox, QProgressBar, QMessageBox
+							QRadioButton, QCheckBox, QProgressBar, QMessageBox, QFormLayout, QWidget
+
 from PyQt5 import QtGui, QtCore
 import ctypes
 from yaml import load, dump
@@ -49,9 +50,12 @@ class Master(QtCore.QObject):
 			self.settings = load(f)
 		print(self.settings)
 
-		self.theme = self.settings["defaultTheme"]
-		with open(self.theme, 'r') as myfile:
-			self.theme = myfile.read()
+		try:
+			self.theme = self.settings["defaultTheme"]
+			with open(self.theme, 'r') as myfile:
+				self.theme = myfile.read()
+		except FileNotFoundError:
+			pass
 
 		app.setStyleSheet(self.theme)
 		app.setWindowIcon(QtGui.QIcon('Logo.PNG'))
@@ -64,10 +68,21 @@ class Master(QtCore.QObject):
 		self.twindow = TelnetWindow()
 		self.mwindow = MikroWindow()
 		self.progresswindow = ProgressWindow()
+		self.settingswindow = SettingsWindow()
 		self.connect_signals()
 		self.gui.show()
 
+		self.fill_settings()
+
 		print("initialized")
+
+	def fill_settings(self):
+		# print(self.settings["defaultUsername"])
+		self.gui.ubox.setText(self.settings["defaultUsername"])
+		self.gui.pbox.setText(self.settings["defaultPassword"])
+
+		self.settingswindow.b1.setText(self.settings["defaultUsername"])
+		self.settingswindow.b2.setText(self.settings["defaultPassword"])
 
 	def connect_signals(self):
 		self.gui.btn1.clicked.connect(self.fwindow.show)
@@ -110,6 +125,7 @@ class Master(QtCore.QObject):
 		self.mwindow.btn.clicked.connect(self.progresswindow.show)
 		self.mwindow.btn.clicked.connect(self.mwindow.close)
 
+		self.gui.settingsAction.triggered.connect(self.settingswindow.show)
 
 	def create_firmware_thread(self):
 		self.fwindow.show()
@@ -420,6 +436,52 @@ class ProgressWindow(QMainWindow):
 		self.pbar.setMaximum(value)
 
 
+class SettingsWindow(QWidget):
+
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.init_ui()
+
+	def init_ui(self):
+		self.label = QLabel('Settings')
+
+		self.layout = QFormLayout()
+
+		self.l1 = QLabel("Default Username")
+		self.l2 = QLabel("Default Password")
+
+		self.b1 = QLineEdit()
+		self.b2 = QLineEdit()
+
+		self.apply = QPushButton("Apply")
+		self.apply.clicked.connect(self.apply_settings)
+
+		self.layout.addRow(self.label)
+		self.layout.addRow(self.l1, self.b1)
+		self.layout.addRow(self.l2, self.b2)
+		self.layout.addRow(self.apply)
+
+		self.setLayout(self.layout)
+		self.setGeometry(90, 200, 300, 80)
+		self.setWindowTitle('Settings')
+
+		# self.show()
+
+	def apply_settings(self):
+		master.settings['defaultUsername'] = self.b1.text()
+		master.settings['defaultPassword'] = self.b2.text()
+		with open('settings.yaml', 'w') as f:
+			dump(master.settings, f)
+		self.close()
+
+	@QtCore.pyqtSlot(int)
+	def update_progress(self, value):
+		self.pbar.setValue(value)
+
+	@QtCore.pyqtSlot(int)
+	def set_max(self, value):
+		self.pbar.setMaximum(value)
+
 class MainWindow(QMainWindow):
 	def __init__(self):
 		super().__init__()
@@ -446,6 +508,8 @@ class MainWindow(QMainWindow):
 
 		self.exitAction = self.fileMenu.addAction('Exit')
 		self.exitAction.triggered.connect(sys.exit)
+
+		self.settingsAction = self.toolsMenu.addAction('Settings')
 
 		self.ipbox = QLineEdit(self)
 		self.range = "(?:[0-1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])"
