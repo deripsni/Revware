@@ -76,7 +76,7 @@ class SSHConnection(QtCore.QObject):
 		self.pMaxSignal.emit(to_transfer)
 		self.progressSignal.emit(transferred)
 
-	@QtCore.pyqtSlot(str, str, str, str)
+	#@QtCore.pyqtSlot(str, str, str, str)
 	def firmwaresftp(self, ip1, username1, password1, localpath1):
 		self.ip = ip1
 		self.username = username1

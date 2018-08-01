@@ -7,37 +7,32 @@ import sftp
 from PyQt5 import QtCore
 
 
-class Firmware(QtCore.QObject):
+class Firmware(QtCore.QThread):
 	signalStatus = QtCore.pyqtSignal()
 	firmwaresftpSignal = QtCore.pyqtSignal(str, str, str, str)
 	sshSignal = QtCore.pyqtSignal(str, str, str, str)
 	pingSignal = QtCore.pyqtSignal(str, int, bool)
 
-	def __init__(self, parent=None):
+	def __init__(self, ip_input, username_input, password_input, filepath, parent=None):
 		super(self.__class__, self).__init__(parent)
 		print("Firmware Thread Initialized")
-		self.create_ssh()
-
-	@QtCore.pyqtSlot(str, str, str)
-	def run_firmware(self, ip_input, username_input, password_input):
-		print("Firmware")
-		print(ip_input + username_input, password_input)
-
 		self.localip = ip_input
 		self.localu = username_input
 		self.localp = password_input
+		self.filepath = filepath
+		self.create_ssh()
 
+	def run(self):
+		print("Firmware")
 
-	@QtCore.pyqtSlot(str)
-	def set_firmware(self, filepath):
-		self.firmwaresftpSignal.emit(self.localip, self.localu, self.localp, filepath)
+		self.sshc.firmwaresftp(self.localip, self.localu, self.localp, self.filepath)
 		print("made it to the reboot")
-		self.sshSignal.emit(self.localip, self.localu, self.localp, "system reboot")
+		self.sshc.ssh(self.localip, self.localu, self.localp, "system reboot")
 		print("made it to the flush")
 		sys.stdout.flush()
 		time.sleep(10)
 
-		self.pingSignal.emit(self.localip, 50, True)
+		self.ip.ping(self.localip, 50, True)
 
 	def create_ssh(self):
 		self.sshc = ssh.SSHConnection(parent=self)

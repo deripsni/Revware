@@ -70,7 +70,7 @@ class Master(QtCore.QObject):
 		print("initialized")
 
 	def connect_signals(self):
-		self.gui.btn1.clicked.connect(self.create_firmware_thread)
+		self.gui.btn1.clicked.connect(self.fwindow.show)
 		self.gui.btn2.clicked.connect(self.create_password_thread)
 		self.gui.btn3.clicked.connect(self.create_firewall_thread)
 		self.gui.btn4.clicked.connect(self.create_device_name_thread)
@@ -82,10 +82,9 @@ class Master(QtCore.QObject):
 		self.gui.clearbtn.clicked.connect(self.gui.clear_info)
 
 		self.fwindow.fbtn.clicked.connect(self.fwindow.f_set)
-		self.fwindow.btn.clicked.connect(self.fwindow.close)
 		self.fwindow.btn.clicked.connect(self.progresswindow.show)
-		self.fwindow.btn.clicked.connect(lambda: self.firmware.set_firmware(self.fwindow.ftxt.text()))
-		self.fwindow.btn.clicked.connect(lambda: self.firmware.deleteLater())
+		self.fwindow.btn.clicked.connect(self.create_firmware_thread)
+		self.fwindow.btn.clicked.connect(self.fwindow.close)
 
 		self.pwindow.btn.clicked.connect(lambda: self.password.set_password(self.pwindow.npbox.text(), self.pwindow.pbox.text()))
 		self.pwindow.btn.clicked.connect(lambda: self.password.deleteLater())
@@ -119,14 +118,11 @@ class Master(QtCore.QObject):
 																		self.mwindow.b1.isChecked()))
 
 	def create_firmware_thread(self):
-		self.firmware = menu.Firmware(parent=self)
-		self.firmware_thread = QtCore.QThread()
-		self.firmware.moveToThread(self.firmware_thread)
-		self.firmware_thread.start()
 		self.fwindow.show()
-		self.firmwareSignal.connect(self.firmware.run_firmware)
-		self.firmwareSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
-		self.firmware_thread.exit()
+		self.firmware_thread = menu.Firmware(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
+											self.fwindow.ftxt.text(), parent=self)
+		self.firmware_thread.start()
+
 
 	def create_password_thread(self):
 		self.password = menu.Password(parent=self)
