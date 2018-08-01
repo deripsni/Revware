@@ -72,13 +72,27 @@ class Firewall(QtCore.QThread):
 		self.create_ssh()
 
 	def run(self):
-		print("Firewall")
+		print("Drop Rule Check")
 		# self.sshc.ssh(self.localip, self.localu, self.localp, "ip firewall filter print")
 		connection = routeros_api.RouterOsApiPool(self.localip, username=self.localu, password=self.localp)
 		api = connection.get_api()
 		self.list = api.get_resource('/ip/firewall/filter')
 		self.filter = self.list.get()
-		print(self.filter[0])
+		# print(self.filter[2])
+		self.index = -1
+		self.dropindex = None
+		for i in self.filter:
+			self.index = self.index + 1
+			if i['action'] == 'drop' and i['disabled'] == 'false':
+				self.dropindex = self.index
+		if self.index == self.dropindex:
+			self.printToScreen.emit("Drop rule is enabled")
+		else:
+			self.printToScreen.emit("Drop rule is not enabled")
+			self.printToScreen.emit("Adding drop rule...")
+			self.list.add(action="drop", chain='forward', disabled='false')
+			self.run()
+
 
 	def create_ssh(self):
 		self.sshc = ssh.SSHConnection(parent=self)
@@ -104,7 +118,6 @@ class DeviceName(QtCore.QThread):
 		self.list = api.get_resource('/system/identity')
 		self.filter = self.list.get()
 		self.printToScreen.emit('Name: ' + self.filter[0]['name'])
-
 
 	def create_ssh(self):
 		self.sshc = ssh.SSHConnection(parent=self)
