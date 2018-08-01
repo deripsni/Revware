@@ -103,6 +103,8 @@ class Master(QtCore.QObject):
 		self.twindow.ftpbtn.clicked.connect(self.twindow.close)
 		self.twindow.winbtn.clicked.connect(lambda: self.create_telnet_thread("winbox"))
 		self.twindow.winbtn.clicked.connect(self.twindow.close)
+		self.twindow.apibtn.clicked.connect(lambda: self.create_telnet_thread("api"))
+		self.twindow.apibtn.clicked.connect(self.twindow.close)
 
 		self.mwindow.btn.clicked.connect(self.create_mikro_thread)
 		self.mwindow.btn.clicked.connect(self.progresswindow.show)
@@ -319,18 +321,23 @@ class TelnetWindow(QMainWindow):
 		self.nplabel.move(60, 5)
 
 		self.sshbtn = QPushButton("SSH", self)
-		self.sshbtn.move(40, 35)
-		self.sshbtn.resize(60, 20)
+		self.sshbtn.move(30, 35)
+		self.sshbtn.resize(50, 20)
 		self.sshbtn.setAutoDefault(True)
 
 		self.ftpbtn = QPushButton("FTP", self)
-		self.ftpbtn.move(120, 35)
-		self.ftpbtn.resize(60, 20)
+		self.ftpbtn.move(90, 35)
+		self.ftpbtn.resize(50, 20)
 		self.ftpbtn.setAutoDefault(True)
 
+		self.apibtn = QPushButton("API", self)
+		self.apibtn.move(150, 35)
+		self.apibtn.resize(50, 20)
+		self.apibtn.setAutoDefault(True)
+
 		self.winbtn = QPushButton("Winbox", self)
-		self.winbtn.move(200, 35)
-		self.winbtn.resize(60, 20)
+		self.winbtn.move(210, 35)
+		self.winbtn.resize(50, 20)
 		self.winbtn.setAutoDefault(True)
 
 		self.statusBar()
