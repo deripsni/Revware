@@ -12,6 +12,7 @@ class Telnet(QtCore.QObject):
 	@QtCore.pyqtSlot(str,str,str,str)
 	def telnet(self, ip, username, password, option):
 		self.ip = ip
+		print(self.ip)
 		self.username = username
 		self.password = password
 		self.option = option

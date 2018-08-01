@@ -74,10 +74,10 @@ class Master(QtCore.QObject):
 		self.gui.btn2.clicked.connect(self.pwindow.show)
 		self.gui.btn3.clicked.connect(self.create_firewall_thread)
 		self.gui.btn4.clicked.connect(self.create_device_name_thread)
-		self.gui.btn5.clicked.connect(self.create_custom_command_thread)
-		self.gui.btn6.clicked.connect(self.create_telnet_thread)
-		self.gui.btn7.clicked.connect(self.create_batch_thread)
-		self.gui.btn8.clicked.connect(self.create_mikro_thread)
+		self.gui.btn5.clicked.connect(self.cwindow.show)
+		self.gui.btn6.clicked.connect(self.twindow.show)
+		self.gui.btn7.clicked.connect(self.bwindow.show)
+		self.gui.btn8.clicked.connect(self.mwindow.show)
 
 		self.gui.clearbtn.clicked.connect(self.gui.clear_info)
 
@@ -89,32 +89,25 @@ class Master(QtCore.QObject):
 		self.pwindow.btn.clicked.connect(self.create_password_thread)
 		self.pwindow.btn.clicked.connect(self.pwindow.close)
 
-		self.cwindow.btn.clicked.connect(lambda: self.command.set_command(self.cwindow.cbox.text()))
+		self.cwindow.btn.clicked.connect(self.create_custom_command_thread)
 		self.cwindow.btn.clicked.connect(self.cwindow.close)
-		self.cwindow.btn.clicked.connect(lambda: self.command.deleteLater())
 
 		self.bwindow.cbtn.clicked.connect(self.bwindow.c_set)
 		self.bwindow.ipbtn.clicked.connect(self.bwindow.i_set)
-		self.bwindow.btn.clicked.connect(lambda: self.batch.set_batch_sftp(self.bwindow.ctxt.text(), self.bwindow.iptxt.text()))
-		self.bwindow.btn.clicked.connect(lambda: self.batch.deleteLater())
-		self.bwindow.btn.clicked.connect(self.bwindow.close)
+		self.bwindow.btn.clicked.connect(self.create_batch_thread)
 
+
+		self.twindow.sshbtn.clicked.connect(lambda: self.create_telnet_thread("ssh"))
 		self.twindow.sshbtn.clicked.connect(self.twindow.close)
-		self.twindow.sshbtn.clicked.connect(lambda: self.telnet.set_telnet("ssh"))
-		self.twindow.sshbtn.clicked.connect(lambda: self.telnet.deleteLater())
-		self.twindow.ftpbtn.clicked.connect(lambda: self.telnet.set_telnet("ftp"))
+		self.twindow.ftpbtn.clicked.connect(lambda: self.create_telnet_thread("ftp"))
 		self.twindow.ftpbtn.clicked.connect(self.twindow.close)
-		self.twindow.ftpbtn.clicked.connect(lambda: self.telnet.deleteLater())
-		self.twindow.winbtn.clicked.connect(lambda: self.telnet.set_telnet("winbox"))
+		self.twindow.winbtn.clicked.connect(lambda: self.create_telnet_thread("winbox"))
 		self.twindow.winbtn.clicked.connect(self.twindow.close)
-		self.twindow.winbtn.clicked.connect(lambda: self.telnet.deleteLater())
 
-		self.mwindow.btn.clicked.connect(self.mwindow.close)
+		self.mwindow.btn.clicked.connect(self.create_mikro_thread)
 		self.mwindow.btn.clicked.connect(self.progresswindow.show)
-		self.mwindow.btn.clicked.connect(lambda: self.telnet.deleteLater())
-		self.mwindow.btn.clicked.connect(lambda: self.mikro.set_mikro(self.mwindow.ibox.text(),
-																		self.mwindow.sbox.text(),
-																		self.mwindow.b1.isChecked()))
+		self.mwindow.btn.clicked.connect(self.mwindow.close)
+
 
 	def create_firmware_thread(self):
 		self.fwindow.show()
@@ -140,44 +133,27 @@ class Master(QtCore.QObject):
 		self.device_name_thread.start()
 
 	def create_custom_command_thread(self):
-		self.command = menu.CustomCommand(parent=self)
-		self.command_thread = QtCore.QThread()
-		self.command.moveToThread(self.command_thread)
+
+		self.command_thread = menu.CustomCommand(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
+												 self.cwindow.cbox.text(), parent = self)
+
 		self.command_thread.start()
-		self.cwindow.show()
-		self.commandSignal.connect(self.command.run_custom_command)
-		self.commandSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
-		self.command_thread.exit()
 
 	def create_batch_thread(self):
-		self.batch = menu.BatchSFTP(parent=self)
-		self.batch_thread = QtCore.QThread()
-		self.batch.moveToThread(self.batch_thread)
+		self.batch_thread = menu.BatchSFTP(self.gui.ubox.text(), self.gui.pbox.text(), self.bwindow.ctxt.text(),
+											self.bwindow.iptxt.text(), parent = self)
 		self.batch_thread.start()
-		self.bwindow.show()
-		self.batchSignal.connect(self.batch.run_batch_sftp)
-		self.batchSignal.emit(self.gui.ubox.text(), self.gui.pbox.text())
-		self.batch_thread.exit()
 
-	def create_telnet_thread(self):
-		self.telnet = menu.Telnet(parent=self)
-		self.telnet_thread = QtCore.QThread()
-		self.telnet.moveToThread(self.telnet_thread)
+	def create_telnet_thread(self, method):
+		self.telnet_thread = menu.Telnet(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
+											method, parent=self)
 		self.telnet_thread.start()
-		self.twindow.show()
-		self.telnetSignal.connect(self.telnet.run_telnet)
-		self.telnetSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
-		self.telnet_thread.exit()
+
 
 	def create_mikro_thread(self):
-		self.mikro = menu.Mikrotik(parent=self)
-		self.mikro_thread = QtCore.QThread()
-		self.mikro.moveToThread(self.mikro_thread)
+		self.mikro_thread = menu.Mikrotik(self.mwindow.ibox.text(), self.mwindow.sbox.text(),
+											self.mwindow.b1.isChecked(), parent=self)
 		self.mikro_thread.start()
-		self.mwindow.show()
-		self.mikroSignal.connect(self.mikro.run_mikro)
-		self.mikroSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
-		self.mikro_thread.exit()
 
 
 class FirmwareWindow(QMainWindow):
