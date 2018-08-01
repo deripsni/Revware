@@ -35,7 +35,7 @@ class Firmware(QtCore.QObject):
 		self.sshSignal.emit(self.localip, self.localu, self.localp, "system reboot")
 		print("made it to the flush")
 		sys.stdout.flush()
-		time.sleep(5)
+		time.sleep(10)
 
 		self.pingSignal.emit(self.localip, 50, True)
 

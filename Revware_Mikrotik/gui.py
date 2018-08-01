@@ -83,6 +83,7 @@ class Master(QtCore.QObject):
 
 		self.fwindow.fbtn.clicked.connect(self.fwindow.f_set)
 		self.fwindow.btn.clicked.connect(self.fwindow.close)
+		self.fwindow.btn.clicked.connect(self.progresswindow.show)
 		self.fwindow.btn.clicked.connect(lambda: self.firmware.set_firmware(self.fwindow.ftxt.text()))
 		self.fwindow.btn.clicked.connect(lambda: self.firmware.deleteLater())
 

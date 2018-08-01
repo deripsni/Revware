@@ -49,7 +49,7 @@ class IPTest(QtCore.QObject):
 
 			if timeout_total > 0:
 
-				print("%s is not responding to pings \n" % self.ip)
+				#print("%s is not responding to pings \n" % self.ip)
 
 				return "online"
 
