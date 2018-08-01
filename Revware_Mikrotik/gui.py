@@ -71,7 +71,7 @@ class Master(QtCore.QObject):
 
 	def connect_signals(self):
 		self.gui.btn1.clicked.connect(self.fwindow.show)
-		self.gui.btn2.clicked.connect(self.create_password_thread)
+		self.gui.btn2.clicked.connect(self.pwindow.show)
 		self.gui.btn3.clicked.connect(self.create_firewall_thread)
 		self.gui.btn4.clicked.connect(self.create_device_name_thread)
 		self.gui.btn5.clicked.connect(self.create_custom_command_thread)
@@ -86,8 +86,7 @@ class Master(QtCore.QObject):
 		self.fwindow.btn.clicked.connect(self.create_firmware_thread)
 		self.fwindow.btn.clicked.connect(self.fwindow.close)
 
-		self.pwindow.btn.clicked.connect(lambda: self.password.set_password(self.pwindow.npbox.text(), self.pwindow.pbox.text()))
-		self.pwindow.btn.clicked.connect(lambda: self.password.deleteLater())
+		self.pwindow.btn.clicked.connect(self.create_password_thread)
 		self.pwindow.btn.clicked.connect(self.pwindow.close)
 
 		self.cwindow.btn.clicked.connect(lambda: self.command.set_command(self.cwindow.cbox.text()))
@@ -125,14 +124,9 @@ class Master(QtCore.QObject):
 
 
 	def create_password_thread(self):
-		self.password = menu.Password(parent=self)
-		self.password_thread = QtCore.QThread()
-		self.password.moveToThread(self.password_thread)
+		self.password_thread = menu.Password(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
+											self.pwindow.pbox.text(), self.pwindow.npbox.text(), parent=self)
 		self.password_thread.start()
-		self.pwindow.show()
-		self.passwordSignal.connect(self.password.run_password)
-		self.passwordSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
-		self.password_thread.exit()
 
 	def create_firewall_thread(self):
 		self.firewall = menu.Firewall(parent=self)

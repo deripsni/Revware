@@ -8,10 +8,6 @@ from PyQt5 import QtCore
 
 
 class Firmware(QtCore.QThread):
-	signalStatus = QtCore.pyqtSignal()
-	firmwaresftpSignal = QtCore.pyqtSignal(str, str, str, str)
-	sshSignal = QtCore.pyqtSignal(str, str, str, str)
-	pingSignal = QtCore.pyqtSignal(str, int, bool)
 
 	def __init__(self, ip_input, username_input, password_input, filepath, parent=None):
 		super(self.__class__, self).__init__(parent)
@@ -24,52 +20,43 @@ class Firmware(QtCore.QThread):
 
 	def run(self):
 		print("Firmware")
-
 		self.sshc.firmwaresftp(self.localip, self.localu, self.localp, self.filepath)
 		print("made it to the reboot")
 		self.sshc.ssh(self.localip, self.localu, self.localp, "system reboot")
 		print("made it to the flush")
 		sys.stdout.flush()
 		time.sleep(10)
-
 		self.ip.ping(self.localip, 50, True)
 
 	def create_ssh(self):
 		self.sshc = ssh.SSHConnection(parent=self)
-		self.firmwaresftpSignal.connect(self.sshc.firmwaresftp)
-		self.sshSignal.connect(self.sshc.ssh)
 		self.ip = ping.IPTest(parent=self)
-		self.pingSignal.connect(self.ip.ping)
 
 
-class Password(QtCore.QObject):
+class Password(QtCore.QThread):
 	printToScreen = QtCore.pyqtSignal(str)
-	sshSignal = QtCore.pyqtSignal(str, str, str, str)
 
-	def __init__(self, parent=None):
+	def __init__(self, ip_input, username_input, password_input, n_password, c_password, parent=None):
 		super(self.__class__, self).__init__(parent)
 		self.printToScreen.connect(self.parent().gui.update_status)
-		self.create_ssh()
-
-	@QtCore.pyqtSlot(str, str, str)
-	def run_password(self, ip_input, username_input, password_input):
-		print("Password")
-		print(ip_input + username_input, password_input)
-
 		self.localip = ip_input
 		self.localu = username_input
 		self.localp = password_input
+		self.n_password = n_password
+		self.c_password = c_password
+		self.create_ssh()
+
+	@QtCore.pyqtSlot(str, str, str)
+	def run(self):
+		print("Password")
+		if self.n_password == self.c_password:
+			self.command = "user set admin password=" + self.n_password
+			self.sshc.ssh(self.localip, self.localu, self.localp, self.command)
+		else:
+			self.printToScreen.emit("Passwords do not match")
 
 	def create_ssh(self):
 		self.sshc = ssh.SSHConnection(parent=self)
-		self.sshSignal.connect(self.sshc.ssh)
-
-	@QtCore.pyqtSlot(str, str)
-	def set_password(self, n_password, c_password):
-		if n_password == c_password:
-			self.command = "user set admin password=" + n_password
-			self.sshSignal.emit(self.localip, self.localu, self.localp, self.command)
-			self.printToScreen.emit("Password Set")
 
 
 class Firewall(QtCore.QObject):

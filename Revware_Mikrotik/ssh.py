@@ -51,7 +51,6 @@ class SSHConnection(QtCore.QObject):
 			print("4")
 			stdin, stdout, stderr = self.client.exec_command(mikrotik_command)
 			print("5")
-			#self.x = stdout.read()
 			print("6")
 			if mikrotik_command == "system reboot":
 				self.printToScreen.emit("Rebooting Radio...")
@@ -60,7 +59,10 @@ class SSHConnection(QtCore.QObject):
 				self.x = stdout.read()
 				self.x = "Name: " + self.x[7:].decode("UTF-8")
 				self.printToScreen.emit(self.x)
+			elif mikrotik_command[:23] == "user set admin password":
+				self.printToScreen.emit("Password Set")
 			else:
+				self.x = stdout.read()
 				self.y = self.x.decode("UTF-8")
 				self.printToScreen.emit(self.y)
 				self.client.close()
