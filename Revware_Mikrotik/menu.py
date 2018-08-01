@@ -59,54 +59,44 @@ class Password(QtCore.QThread):
 		self.sshc = ssh.SSHConnection(parent=self)
 
 
-class Firewall(QtCore.QObject):
+class Firewall(QtCore.QThread):
 	printToScreen = QtCore.pyqtSignal(str)
-	sshSignal = QtCore.pyqtSignal(str, str, str, str)
 
-	def __init__(self, parent=None):
+	def __init__(self, ip_input, username_input, password_input, parent=None):
 		super(self.__class__, self).__init__(parent)
 		self.printToScreen.connect(self.parent().gui.update_status)
+		self.localip = ip_input
+		self.localu = username_input
+		self.localp = password_input
 		self.create_ssh()
 
-	@QtCore.pyqtSlot(str, str, str)
-	def run_firewall(self, ip_input, username_input, password_input):
+	def run(self):
 		print("Firewall")
-		print(ip_input + username_input, password_input)
-
-		self.localip = ip_input
-		self.localu = username_input
-		self.localp = password_input
-		self.sshSignal.emit(self.localip, self.localu, self.localp, "ip firewall filter print")
-
+		self.sshc.ssh(self.localip, self.localu, self.localp, "ip firewall filter print")
 
 	def create_ssh(self):
 		self.sshc = ssh.SSHConnection(parent=self)
-		self.sshSignal.connect(self.sshc.ssh)
 
 
-class DeviceName(QtCore.QObject):
+class DeviceName(QtCore.QThread):
 	printToScreen = QtCore.pyqtSignal(str)
-	sshSignal = QtCore.pyqtSignal(str, str, str, str)
 
-	def __init__(self, parent=None):
+	def __init__(self, ip_input, username_input, password_input, parent=None):
 		super(self.__class__, self).__init__(parent)
 		self.printToScreen.connect(self.parent().gui.update_status)
-		self.create_ssh()
-
-
-	@QtCore.pyqtSlot(str, str, str)
-	def run_device_name(self, ip_input, username_input, password_input):
-		print("Device Name")
-		print(ip_input + username_input, password_input)
-
 		self.localip = ip_input
 		self.localu = username_input
 		self.localp = password_input
-		self.sshSignal.emit(self.localip, self.localu, self.localp, "system identity print")
+		self.create_ssh()
+
+	@QtCore.pyqtSlot(str, str, str)
+	def run(self):
+		print("Device Name")
+
+		self.sshc.ssh(self.localip, self.localu, self.localp, "system identity print")
 
 	def create_ssh(self):
 		self.sshc = ssh.SSHConnection(parent=self)
-		self.sshSignal.connect(self.sshc.ssh)
 
 
 class CustomCommand(QtCore.QObject):

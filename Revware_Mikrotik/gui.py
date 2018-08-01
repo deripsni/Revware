@@ -129,24 +129,15 @@ class Master(QtCore.QObject):
 		self.password_thread.start()
 
 	def create_firewall_thread(self):
-		self.firewall = menu.Firewall(parent=self)
-		self.firewall_thread = QtCore.QThread()
-		self.firewall.moveToThread(self.firewall_thread)
+
+		self.firewall_thread = menu.Firewall(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
+											parent= self)
 		self.firewall_thread.start()
-		self.firewall.deleteLater()
-		self.firewallSignal.connect(self.firewall.run_firewall)
-		self.firewallSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
-		self.firewall_thread.exit()
 
 	def create_device_name_thread(self):
-		self.devicename = menu.DeviceName(parent=self)
-		self.devicename_thread = QtCore.QThread()
-		self.devicename.moveToThread(self.devicename_thread)
-		self.devicename_thread.start()
-		self.devicename.deleteLater()
-		self.devicenameSignal.connect(self.devicename.run_device_name)
-		self.devicenameSignal.emit(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text())
-		self.devicename_thread.quit()
+		self.device_name_thread = menu.DeviceName(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
+													parent= self)
+		self.device_name_thread.start()
 
 	def create_custom_command_thread(self):
 		self.command = menu.CustomCommand(parent=self)
