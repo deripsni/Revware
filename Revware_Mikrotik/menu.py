@@ -31,6 +31,7 @@ class Firmware(QtCore.QThread):
 
 	def create_ssh(self):
 		self.sshc = ssh.SSHConnection(parent=self)
+		self.tel = telnet.Telnet(parent=self)
 		self.ip = ping.IPTest(parent=self)
 
 
@@ -58,6 +59,7 @@ class Password(QtCore.QThread):
 
 	def create_ssh(self):
 		self.sshc = ssh.SSHConnection(parent=self)
+		self.tel = telnet.Telnet(parent=self)
 
 
 class Firewall(QtCore.QThread):
@@ -118,19 +120,25 @@ class DeviceName(QtCore.QThread):
 	def run(self):
 		print("Device Name")
 
-		connection = routeros_api.RouterOsApiPool(self.localip, username=self.localu, password=self.localp)
-		api = connection.get_api()
-		self.list = api.get_resource('/system/identity')
-		self.filter = self.list.get()
-		self.printToScreen.emit('Name: ' + self.filter[0]['name'])
+		try:
+			connection = routeros_api.RouterOsApiPool(self.localip, username=self.localu, password=self.localp)
+			api = connection.get_api()
+			self.list = api.get_resource('/system/identity')
+			self.filter = self.list.get()
+			self.printToScreen.emit('Name: ' + self.filter[0]['name'])
+		except routeros_api.exceptions.RouterOsApiConnectionError:
+			self.printToScreen.emit("Could not establish API connection")
+			self.printToScreen.emit("Attempting to enable API through Telnet")
+			self.tel.telnet(self.localip, self.localu, self.localp, "api")
+			self.run()
 
 	def create_ssh(self):
 		self.sshc = ssh.SSHConnection(parent=self)
+		self.tel = telnet.Telnet(parent=self)
 
 
 class CustomCommand(QtCore.QThread):
 	printToScreen = QtCore.pyqtSignal(str)
-	sshSignal = QtCore.pyqtSignal(str, str, str, str)
 
 	def __init__(self, ip_input, username_input, password_input, command, parent=None):
 		super(self.__class__, self).__init__(parent)
@@ -148,7 +156,7 @@ class CustomCommand(QtCore.QThread):
 
 	def create_ssh(self):
 		self.sshc = ssh.SSHConnection(parent=self)
-		self.sshSignal.connect(self.sshc.ssh)
+		self.tel = telnet.Telnet(parent=self)
 
 
 class BatchSFTP(QtCore.QThread):
@@ -173,6 +181,7 @@ class BatchSFTP(QtCore.QThread):
 	def create_ssh(self):
 		self.mysftp = sftp.SFTP(parent=self)
 		self.sshc = ssh.SSHConnection(parent=self)
+		self.tel = telnet.Telnet(parent=self)
 
 
 class Telnet(QtCore.QThread):

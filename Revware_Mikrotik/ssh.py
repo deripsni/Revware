@@ -34,11 +34,12 @@ class SSHConnection(QtCore.QObject):
 			print()
 
 	@QtCore.pyqtSlot(str, str, str, str)
-	def ssh(self, ip, username, password, mikrotik_command):
+	def ssh(self, ip, username, password, mikrotik_command, attempts=0):
 		self.ip = ip
 		self.username = username
 		self.password = password
 		self.port = 22
+		self.attempts = attempts
 		print("made it into the ssh")
 		try:
 			self.client = paramiko.SSHClient()
@@ -68,7 +69,15 @@ class SSHConnection(QtCore.QObject):
 				self.client.close()
 
 		except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.NoValidConnectionsError):
-			self.printToScreen.emit("Could not establish an SSH connection")
+			if self.attempts == 0:
+				self.printToScreen.emit("Could not establish an SSH connection")
+				self.printToScreen.emit("Attempting to enable SSH through Telnet")
+				self.parent().tel.telnet(self.ip, self.username, self.password, "ssh")
+				self.ssh(self.ip, self.username, self.password, mikrotik_command, attempts=1)
+			else:
+				self.printToScreen.emit("Still unable to establish connection")
+				self.printToScreen.emit("please check your username and password")
+
 		except (UnicodeError, RecursionError):
 			self.printToScreen.emit("Please enter a valid IP")
 
@@ -78,12 +87,13 @@ class SSHConnection(QtCore.QObject):
 		self.pMaxSignal.emit(to_transfer)
 		self.progressSignal.emit(transferred)
 
-	#@QtCore.pyqtSlot(str, str, str, str)
-	def firmwaresftp(self, ip1, username1, password1, localpath1):
+	def firmwaresftp(self, ip1, username1, password1, localpath1, attempts=0):
 		self.ip = ip1
 		self.username = username1
 		self.password = password1
 		self.port = 22
+		self.attempts = attempts
+
 		time.sleep(1)
 		try:
 
@@ -107,5 +117,12 @@ class SSHConnection(QtCore.QObject):
 			print("made check 3")
 
 		except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.NoValidConnectionsError):
-			self.printToScreen.emit("Could not establish an SSH connection")
-			QtCore.QCoreApplication.processEvents()
+
+			if self.attempts == 0:
+				self.printToScreen.emit("Could not establish an SSH connection")
+				self.printToScreen.emit("Attempting to enable SSH through Telnet")
+				self.parent().tel.telnet(self.ip, self.username, self.password, "ssh")
+				self.firmwaresftp(self.ip, self.username, self.password, self.localpath, attempts=1)
+			else:
+				self.printToScreen.emit("Still unable to establish connection")
+				self.printToScreen.emit("please check your username and password")
