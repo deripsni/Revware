@@ -4,6 +4,7 @@ import telnet
 import time
 import sys
 import sftp
+import routeros_api
 from PyQt5 import QtCore
 
 
@@ -72,7 +73,12 @@ class Firewall(QtCore.QThread):
 
 	def run(self):
 		print("Firewall")
-		self.sshc.ssh(self.localip, self.localu, self.localp, "ip firewall filter print")
+		# self.sshc.ssh(self.localip, self.localu, self.localp, "ip firewall filter print")
+		connection = routeros_api.RouterOsApiPool(self.localip, username=self.localu, password=self.localp)
+		api = connection.get_api()
+		self.list = api.get_resource('/ip/firewall/filter')
+		self.filter = self.list.get()
+		print(self.filter[0])
 
 	def create_ssh(self):
 		self.sshc = ssh.SSHConnection(parent=self)
@@ -93,7 +99,12 @@ class DeviceName(QtCore.QThread):
 	def run(self):
 		print("Device Name")
 
-		self.sshc.ssh(self.localip, self.localu, self.localp, "system identity print")
+		connection = routeros_api.RouterOsApiPool(self.localip, username=self.localu, password=self.localp)
+		api = connection.get_api()
+		self.list = api.get_resource('/system/identity')
+		self.filter = self.list.get()
+		self.printToScreen.emit('Name: ' + self.filter[0]['name'])
+
 
 	def create_ssh(self):
 		self.sshc = ssh.SSHConnection(parent=self)
