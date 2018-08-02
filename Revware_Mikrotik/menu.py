@@ -10,9 +10,11 @@ from PyQt5 import QtCore
 
 class Firmware(QtCore.QThread):
 
+	printToScreen = QtCore.pyqtSignal(str)
+
 	def __init__(self, ip_input, username_input, password_input, filepath, parent=None):
 		super(self.__class__, self).__init__(parent)
-		print("Firmware Thread Initialized")
+		self.printToScreen.connect(self.parent().gui.update_status)
 		self.localip = ip_input
 		self.localu = username_input
 		self.localp = password_input
@@ -23,8 +25,16 @@ class Firmware(QtCore.QThread):
 		print("Firmware")
 		self.sshc.firmwaresftp(self.localip, self.localu, self.localp, self.filepath)
 		print("made it to the reboot")
-		self.sshc.ssh(self.localip, self.localu, self.localp, "system reboot")
-		print("made it to the flush")
+		try:
+			connection = routeros_api.RouterOsApiPool(self.localip, username=self.localu, password=self.localp)
+			api = connection.get_api()
+			api.get_binary_resource('/').call('system/reboot')
+			self.tryagain = 0
+		except routeros_api.exceptions.RouterOsApiConnectionError:
+			self.printToScreen.emit("Could not establish API connection")
+			self.printToScreen.emit("attempting to reboot radio through SSH")
+			self.sshc.ssh(self.localip, self.localu, self.localp, self.command)
+
 		sys.stdout.flush()
 		time.sleep(10)
 		self.ip.ping(self.localip, 50, True)
@@ -75,7 +85,7 @@ class Firewall(QtCore.QThread):
 
 	def run(self):
 		print("Drop Rule Check")
-		# self.sshc.ssh(self.localip, self.localu, self.localp, "ip firewall filter print")
+
 		try:
 			connection = routeros_api.RouterOsApiPool(self.localip, username=self.localu, password=self.localp)
 			api = connection.get_api()

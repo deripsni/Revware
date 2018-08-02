@@ -404,7 +404,7 @@ class MikroWindow(QMainWindow):
 		self.setWindowModality(QtCore.Qt.ApplicationModal)
 
 
-class ProgressWindow(QMainWindow):
+class ProgressWindow(QWidget):
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
@@ -420,10 +420,9 @@ class ProgressWindow(QMainWindow):
 		self.pbar.resize(200, 20)
 		self.pbar.setMinimum(0)
 
-		self.statusBar()
-
 		self.setGeometry(90, 200, 300, 80)
 		self.setWindowTitle('Enable Protocol')
+		self.setWindowFlags(self.windowFlags() | QtCore.Qt.FramelessWindowHint)
 
 		self.setWindowModality(QtCore.Qt.ApplicationModal)
 
@@ -443,20 +442,22 @@ class SettingsWindow(QWidget):
 		self.init_ui()
 
 	def init_ui(self):
-		self.label = QLabel('Settings')
+		self.h1 = QLabel('Settings')
 
 		self.layout = QFormLayout()
 
-		self.l1 = QLabel("Default Username")
-		self.l2 = QLabel("Default Password")
+		self.l1 = QLabel("Username")
+		self.l2 = QLabel("Password")
 
 		self.b1 = QLineEdit()
 		self.b2 = QLineEdit()
 
 		self.apply = QPushButton("Apply")
 		self.apply.clicked.connect(self.apply_settings)
+		self.apply.setAutoDefault(True)
 
-		self.layout.addRow(self.label)
+		self.layout.addRow(self.h1)
+
 		self.layout.addRow(self.l1, self.b1)
 		self.layout.addRow(self.l2, self.b2)
 		self.layout.addRow(self.apply)
@@ -472,15 +473,9 @@ class SettingsWindow(QWidget):
 		master.settings['defaultPassword'] = self.b2.text()
 		with open('settings.yaml', 'w') as f:
 			dump(master.settings, f)
+		master.fill_settings()
 		self.close()
 
-	@QtCore.pyqtSlot(int)
-	def update_progress(self, value):
-		self.pbar.setValue(value)
-
-	@QtCore.pyqtSlot(int)
-	def set_max(self, value):
-		self.pbar.setMaximum(value)
 
 class MainWindow(QMainWindow):
 	def __init__(self):
@@ -542,6 +537,7 @@ class MainWindow(QMainWindow):
 		self.clearbtn = QPushButton("Clear", self)
 		self.clearbtn.resize(50, 20)
 		self.clearbtn.move(420, 105)
+		self.clearbtn.setAutoDefault(True)
 
 		self.btn1 = QPushButton("Firmware", self)
 		self.btn1.move(20, 135)
