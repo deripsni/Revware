@@ -20,6 +20,7 @@ class SFTP(QtCore.QObject):
 	pMaxSignal = QtCore.pyqtSignal(int)
 	pCloseSignal = QtCore.pyqtSignal()
 
+	openexecutewindow = QtCore.pyqtSignal()
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
@@ -34,6 +35,8 @@ class SFTP(QtCore.QObject):
 		self.progressSignal.connect(parent.parent().progresswindow.update_progress)
 		self.pMaxSignal.connect(parent.parent().progresswindow.set_max)
 		self.pCloseSignal.connect(parent.parent().progresswindow.close)
+
+		self.openexecutewindow.connect(parent.parent().batchexecutewindow.show)
 
 	def get_ips(self, ifile):
 		with open(ifile, 'r') as infile:
@@ -132,13 +135,18 @@ class SFTP(QtCore.QObject):
 	def filecallback(self):   # callback function that does nothing
 		pass
 
-	def batchfirmware(self, username, password, cfile, ifile, reboot):
-
+	def setup_batchfirmware(self, username, password, cfile, ifile, reboot):
 		self.uname = username
 		self.password = password
 		print("yeet")
 		self.get_ips(ifile)
 		self.table_setup()
+		self.openexecutewindow.emit()
+		print("Showed the Execute")
+
+		# self.batchfirmware(username, password, cfile, ifile, reboot)
+
+	def batchfirmware(self, username, password, cfile, ifile, reboot):
 
 		print(self.indexesonline)
 

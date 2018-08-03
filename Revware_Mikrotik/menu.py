@@ -173,10 +173,41 @@ class CustomCommand(QtCore.QThread):
 
 class BatchSFTP(QtCore.QThread):
 	printToScreen = QtCore.pyqtSignal(str)
+	savesetup = QtCore.pyqtSignal(sftp.SFTP)
 
 	def __init__(self, username_input, password_input, cfile, ifile, parent=None):
 		super(self.__class__, self).__init__(parent)
 		self.printToScreen.connect(self.parent().gui.update_status)
+		self.savesetup.connect(lambda: self.parent().save_batch_object(self.mysftp))
+		self.localu = username_input
+		self.localp = password_input
+		self.cmdFile = cfile
+		self.ipFile = ifile
+		self.create_ssh()
+
+	@QtCore.pyqtSlot(str, str)
+	def run(self):
+		print("Batch SFTP")
+
+		self.mysftp.setup_batchfirmware(username=self.localu, password=self.localp, cfile=self.cmdFile, ifile=self.ipFile,
+								  reboot='yes')
+		self.savesetup.emit(self.mysftp)
+
+	def create_ssh(self):
+		self.mysftp = sftp.SFTP(parent=self)
+		self.sshc = ssh.SSHConnection(parent=self)
+		self.tel = telnet.Telnet(parent=self)
+		self.ping = ping.IPTest(parent=self)
+
+
+class BatchExecute(QtCore.QThread):
+	printToScreen = QtCore.pyqtSignal(str)
+	savesetup = QtCore.pyqtSignal(sftp.SFTP)
+
+	def __init__(self, username_input, password_input, cfile, ifile, obj, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.printToScreen.connect(self.parent().gui.update_status)
+		self.obj = obj
 		self.localu = username_input
 		self.localp = password_input
 		self.cmdFile = cfile
@@ -191,10 +222,11 @@ class BatchSFTP(QtCore.QThread):
 								  reboot='yes')
 
 	def create_ssh(self):
-		self.mysftp = sftp.SFTP(parent=self)
+		self.mysftp = self.obj
 		self.sshc = ssh.SSHConnection(parent=self)
 		self.tel = telnet.Telnet(parent=self)
 		self.ping = ping.IPTest(parent=self)
+
 
 class Telnet(QtCore.QThread):
 	printToScreen = QtCore.pyqtSignal(str)

@@ -6,6 +6,7 @@ from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication, QPlainTextEd
 
 from PyQt5 import QtGui, QtCore
 import ctypes
+import sftp
 from yaml import load, dump
 
 myappid = 'RevWare.Mikrotik.version'
@@ -71,6 +72,7 @@ class Master(QtCore.QObject):
 		self.progresswindow = ProgressWindow()
 		self.settingswindow = SettingsWindow()
 		self.swindow = StatusWindow()
+		self.batchexecutewindow = BatchExecuteWindow()
 		self.connect_signals()
 		self.gui.show()
 
@@ -111,10 +113,12 @@ class Master(QtCore.QObject):
 
 		self.bwindow.cbtn.clicked.connect(self.bwindow.c_set)
 		self.bwindow.ipbtn.clicked.connect(self.bwindow.i_set)
-		self.bwindow.btn.clicked.connect(self.create_batch_thread)
+		self.bwindow.btn.clicked.connect(self.create_batch_setup_thread)
 		self.bwindow.btn.clicked.connect(self.bwindow.close)
 		self.bwindow.btn.clicked.connect(self.swindow.show)
 
+		self.batchexecutewindow.btn.clicked.connect(self.create_batch_execute_thread)
+		self.batchexecutewindow.btn.clicked.connect(self.batchexecutewindow.close)
 
 		self.twindow.sshbtn.clicked.connect(lambda: self.create_telnet_thread("ssh"))
 		self.twindow.sshbtn.clicked.connect(self.twindow.close)
@@ -161,22 +165,30 @@ class Master(QtCore.QObject):
 
 		self.command_thread.start()
 
-	def create_batch_thread(self):
-		self.batch_thread = menu.BatchSFTP(self.gui.ubox.text(), self.gui.pbox.text(), self.bwindow.ctxt.text(),
-											self.bwindow.iptxt.text(), parent = self)
-		self.batch_thread.start()
+	def create_batch_setup_thread(self):
+		self.batch_setup_thread = menu.BatchSFTP(self.gui.ubox.text(), self.gui.pbox.text(), self.bwindow.ctxt.text(),
+											self.bwindow.iptxt.text(), parent=self)
+		self.batch_setup_thread.start()
+
+	def create_batch_execute_thread(self):
+		self.batch_setup_thread = menu.BatchExecute(self.gui.ubox.text(), self.gui.pbox.text(), self.bwindow.ctxt.text(),
+											self.bwindow.iptxt.text(), self.obj, parent=self)
+		self.batch_setup_thread.start()
 
 	def create_telnet_thread(self, method):
 		self.telnet_thread = menu.Telnet(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
 											method, parent=self)
 		self.telnet_thread.start()
 
-
 	def create_mikro_thread(self):
 		self.mikro_thread = menu.Mikrotik(self.mwindow.ibox.text(), self.mwindow.sbox.text(),
 											self.mwindow.b1.isChecked(), parent=self)
 		self.mikro_thread.start()
 
+	@QtCore.pyqtSlot(sftp.SFTP)
+	def save_batch_object(self, obj):
+		print("saved")
+		self.obj = obj
 
 class FirmwareWindow(QMainWindow):
 
@@ -328,6 +340,21 @@ class BatchWindow(QMainWindow):
 		fname = QFileDialog.getOpenFileName(self, 'Open file', filter="Text files (*.txt)")
 		self.iptxt.setText(fname[0])
 
+class BatchExecuteWindow(QWidget):
+
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.init_ui()
+
+	def init_ui(self):
+
+		self.btn = QPushButton("Execute", self)
+		self.btn.resize(100, 30)
+		self.btn.move(10, 10)
+		self.btn.setAutoDefault(True)
+
+		self.setGeometry(90, 200, 120, 50)
+		self.setWindowTitle('Batch SFTP')
 
 class TelnetWindow(QMainWindow):
 
@@ -551,6 +578,7 @@ class StatusWindow(QWidget):
 			self.tableWidget.item(x, y).setBackground(QtGui.QColor(124, 10, 2))
 		elif color == 'green':
 			self.tableWidget.item(x, y).setBackground(QtGui.QColor(76, 187, 23))
+			self.tableWidget.item(x, y).setForeground(QtGui.QColor(0, 0, 0))
 
 
 class MainWindow(QMainWindow):
