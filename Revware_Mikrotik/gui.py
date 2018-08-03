@@ -66,11 +66,11 @@ class Master(QtCore.QObject):
 		self.pwindow = PasswordWindow()
 		self.cwindow = CommandWindow()
 		self.bwindow = BatchWindow()
-		self.swindow = StatusWindow()
 		self.twindow = TelnetWindow()
 		self.mwindow = MikroWindow()
 		self.progresswindow = ProgressWindow()
 		self.settingswindow = SettingsWindow()
+		self.swindow = StatusWindow()
 		self.connect_signals()
 		self.gui.show()
 
@@ -509,16 +509,13 @@ class StatusWindow(QWidget):
 	def createtable(self):
 		# Create table
 		self.tableWidget = QTableWidget()
-		self.tableWidget.setRowCount(1)
+		self.tableWidget.setRowCount(0)
 		self.tableWidget.setColumnCount(5)
 		self.tableWidget.verticalHeader().setVisible(False)
 
 		self.headers = ["IP", "Name", "Firmware", "Online", "Status"]
 
 		self.tableWidget.setHorizontalHeaderLabels(self.headers)
-
-		self.set_cell(0, 0, "Cell (0,0)")
-		self.set_cell(0, 1, "Cell (0,1)")
 
 		self.tableWidget.move(0, 0)
 
@@ -531,6 +528,10 @@ class StatusWindow(QWidget):
 		for currentQTableWidgetItem in self.tableWidget.selectedItems():
 			print(currentQTableWidgetItem.row(), currentQTableWidgetItem.column(), currentQTableWidgetItem.text())
 
+	@QtCore.pyqtSlot(int, int, QWidget)
+	def set_cell_widget(self, x, y, widget):
+		self.tableWidget.setItem(x, y, widget)
+
 	@QtCore.pyqtSlot(int, int, str)
 	def set_cell(self, x, y, content):
 		self.tableWidget.setItem(x, y, QTableWidgetItem(content))
@@ -542,6 +543,7 @@ class StatusWindow(QWidget):
 	@QtCore.pyqtSlot()
 	def clear(self):
 		self.tableWidget.clearContents()
+		self.tableWidget.setRowCount(0)
 
 	@QtCore.pyqtSlot(int, int, str)
 	def set_cell_color(self, x, y, color):

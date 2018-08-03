@@ -4,6 +4,7 @@ import time
 import ping
 import routeros_api
 from PyQt5 import QtCore
+from PyQt5 import QtWidgets
 
 
 class SFTP(QtCore.QObject):
@@ -11,6 +12,7 @@ class SFTP(QtCore.QObject):
 	printToScreen = QtCore.pyqtSignal(str)
 	setcelltextsignal = QtCore.pyqtSignal(int, int, str)
 	setcellcolorsignal = QtCore.pyqtSignal(int, int, str)
+	setcellwidgetsignal = QtCore.pyqtSignal(int, int, QtWidgets.QWidget)
 	addrowsignal = QtCore.pyqtSignal()
 	clearsignal = QtCore.pyqtSignal()
 
@@ -25,6 +27,7 @@ class SFTP(QtCore.QObject):
 		self.printToScreen.connect(parent.parent().gui.update_status)
 		self.setcelltextsignal.connect(parent.parent().swindow.set_cell)
 		self.setcellcolorsignal.connect(parent.parent().swindow.set_cell_color)
+		self.setcellwidgetsignal.connect(parent.parent().swindow.set_cell_widget)
 		self.addrowsignal.connect(parent.parent().swindow.add_row)
 		self.clearsignal.connect(parent.parent().swindow.clear)
 
@@ -50,15 +53,16 @@ class SFTP(QtCore.QObject):
 		for i in range(len(self.ips)):
 
 			if self.parent().ping.ping(self.ips[i], 1, False) == 'online':
-				self.setcelltextsignal.emit(i, 3, '')
+				self.setcelltextsignal.emit(i, 3, 'Yes')
 				self.setcellcolorsignal.emit(i, 3, 'green')
 				self.indexesonline.append(i)
 				self.tried = False
 				self.get_variables(i)
 
 			else:
-				self.setcelltextsignal.emit(i, 3, '')
+				self.setcelltextsignal.emit(i, 3, 'No')
 				self.setcellcolorsignal.emit(i, 3, 'red')
+				self.setcelltextsignal.emit(i, 4, 'Offline')
 
 	def get_variables(self, i):
 		try:
@@ -75,7 +79,7 @@ class SFTP(QtCore.QObject):
 
 		except routeros_api.exceptions.RouterOsApiConnectionError:
 			if self.tried:
-				self.setcelltextsignal.emit(i, 4, 'FAILED')
+				self.setcelltextsignal.emit(i, 4, 'Failed')
 				self.indexesonline.pop()
 				return None
 
@@ -128,8 +132,8 @@ class SFTP(QtCore.QObject):
 	def filecallback(self):   # callback function that does nothing
 		pass
 
-
 	def batchfirmware(self, username, password, cfile, ifile, reboot):
+
 		self.uname = username
 		self.password = password
 		print("yeet")
@@ -140,10 +144,10 @@ class SFTP(QtCore.QObject):
 
 		for i in self.indexesonline:
 			self.tried = False
-			self.batchfirmware2(username, password, self.ips[i], cfile)
+			self.batchfirmware2(username, password, self.ips[i], cfile, i)
 			self.parent().sshc.ssh(self.ips[i], username, password, 'system reboot')
-
-			self.setcelltextsignal.emit(i, 3, '')
+			self.setcelltextsignal.emit(i, 4, 'Rebooting...')
+			self.setcelltextsignal.emit(i, 3, 'No')
 			self.setcellcolorsignal.emit(i, 3, 'red')
 
 			print('\n\n')
@@ -153,10 +157,13 @@ class SFTP(QtCore.QObject):
 		for j in self.indexesonline:
 				print("Waiting.", end='')
 				if self.parent().ping.ping(self.ips[j], 50, True) == "online":
-					self.setcelltextsignal.emit(j, 3, '')
+					self.setcelltextsignal.emit(j, 4, 'Done')
+					self.setcelltextsignal.emit(j, 3, 'Yes')
 					self.setcellcolorsignal.emit(j, 3, 'green')
+					time.sleep(2)
+					self.get_variables(j)
 
-	def batchfirmware2(self, username, password, ip, cfile):
+	def batchfirmware2(self, username, password, ip, cfile, i):
 
 		try:
 
@@ -165,7 +172,7 @@ class SFTP(QtCore.QObject):
 			sftp = paramiko.SFTPClient.from_transport(transport)
 			filepath = '/routeros-mipsbe-6.39.1.npk'
 			print("Uploading file...")
-			self.parent().parent().progresswindow.show()
+			self.setcelltextsignal.emit(i, 4, 'Uploading...')
 			sftp.put(cfile, filepath, callback=self.parent().sshc.transfer)
 			print("DONE: File Uploaded")
 			sftp.close()
@@ -178,5 +185,5 @@ class SFTP(QtCore.QObject):
 			self.printToScreen.emit("Attempting to enable SSH through Telnet")
 			self.parent().tel.telnet(ip, username, password, "ssh")
 			self.tried = True
-			self.batchfirmware2(username, password, ip, cfile)
+			self.batchfirmware2(username, password, ip, cfile, i)
 
