@@ -1,7 +1,8 @@
 import menu
 import sys
 from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication, QPlainTextEdit, QLabel, QLineEdit, QFileDialog, \
-							QRadioButton, QCheckBox, QProgressBar, QMessageBox, QFormLayout, QWidget
+							QRadioButton, QCheckBox, QProgressBar, QMessageBox, QFormLayout, QWidget,  QVBoxLayout, \
+							QTableWidget, QTableWidgetItem
 
 from PyQt5 import QtGui, QtCore
 import ctypes
@@ -65,6 +66,7 @@ class Master(QtCore.QObject):
 		self.pwindow = PasswordWindow()
 		self.cwindow = CommandWindow()
 		self.bwindow = BatchWindow()
+		self.swindow = StatusWindow()
 		self.twindow = TelnetWindow()
 		self.mwindow = MikroWindow()
 		self.progresswindow = ProgressWindow()
@@ -110,6 +112,8 @@ class Master(QtCore.QObject):
 		self.bwindow.cbtn.clicked.connect(self.bwindow.c_set)
 		self.bwindow.ipbtn.clicked.connect(self.bwindow.i_set)
 		self.bwindow.btn.clicked.connect(self.create_batch_thread)
+		self.bwindow.btn.clicked.connect(self.bwindow.close)
+		self.bwindow.btn.clicked.connect(self.swindow.show)
 
 
 		self.twindow.sshbtn.clicked.connect(lambda: self.create_telnet_thread("ssh"))
@@ -317,7 +321,7 @@ class BatchWindow(QMainWindow):
 		self.setWindowModality(QtCore.Qt.ApplicationModal)
 
 	def c_set(self,):
-		fname = QFileDialog.getOpenFileName(self, 'Open file', filter="Text files (*.txt)")
+		fname = QFileDialog.getOpenFileName(self, 'Open file')
 		self.ctxt.setText(fname[0])
 
 	def i_set(self,):
@@ -475,6 +479,76 @@ class SettingsWindow(QWidget):
 			dump(master.settings, f)
 		master.fill_settings()
 		self.close()
+
+
+class StatusWindow(QWidget):
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.title = 'PyQt5 table - pythonspot.com'
+		self.left = 510
+		self.top = 30
+		self.width = 525
+		self.height = 500
+		self.init_ui()
+
+	def init_ui(self):
+		self.setWindowTitle(self.title)
+		self.setGeometry(self.left, self.top, self.width, self.height)
+
+		self.createtable()
+
+		# Add box layout, add table to box layout and add box layout to widget
+		self.layout = QVBoxLayout()
+		self.layout.addWidget(self.tableWidget)
+		self.setLayout(self.layout)
+
+		# Show widget
+		print("hecks yeah")
+		# self.show()
+
+	def createtable(self):
+		# Create table
+		self.tableWidget = QTableWidget()
+		self.tableWidget.setRowCount(1)
+		self.tableWidget.setColumnCount(5)
+		self.tableWidget.verticalHeader().setVisible(False)
+
+		self.headers = ["IP", "Name", "Firmware", "Online", "Status"]
+
+		self.tableWidget.setHorizontalHeaderLabels(self.headers)
+
+		self.set_cell(0, 0, "Cell (0,0)")
+		self.set_cell(0, 1, "Cell (0,1)")
+
+		self.tableWidget.move(0, 0)
+
+		# table selection change
+		self.tableWidget.doubleClicked.connect(self.on_click)
+
+	@QtCore.pyqtSlot()
+	def on_click(self):
+		print("\n")
+		for currentQTableWidgetItem in self.tableWidget.selectedItems():
+			print(currentQTableWidgetItem.row(), currentQTableWidgetItem.column(), currentQTableWidgetItem.text())
+
+	@QtCore.pyqtSlot(int, int, str)
+	def set_cell(self, x, y, content):
+		self.tableWidget.setItem(x, y, QTableWidgetItem(content))
+
+	@QtCore.pyqtSlot()
+	def add_row(self):
+		self.tableWidget.insertRow(self.tableWidget.rowCount())
+
+	@QtCore.pyqtSlot()
+	def clear(self):
+		self.tableWidget.clearContents()
+
+	@QtCore.pyqtSlot(int, int, str)
+	def set_cell_color(self, x, y, color):
+		if color == 'red':
+			self.tableWidget.item(x, y).setBackground(QtGui.QColor(124, 10, 2))
+		elif color == 'green':
+			self.tableWidget.item(x, y).setBackground(QtGui.QColor(76, 187, 23))
 
 
 class MainWindow(QMainWindow):

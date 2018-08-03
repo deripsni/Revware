@@ -31,9 +31,10 @@ class Firmware(QtCore.QThread):
 			api.get_binary_resource('/').call('system/reboot')
 			self.tryagain = 0
 		except routeros_api.exceptions.RouterOsApiConnectionError:
+			self.parent().progresswindow.close()
 			self.printToScreen.emit("Could not establish API connection")
 			self.printToScreen.emit("attempting to reboot radio through SSH")
-			self.sshc.ssh(self.localip, self.localu, self.localp, self.command)
+			self.sshc.ssh(self.localip, self.localu, self.localp, "system/reboot")
 
 		sys.stdout.flush()
 		time.sleep(10)
@@ -136,6 +137,7 @@ class DeviceName(QtCore.QThread):
 			self.list = api.get_resource('/system/identity')
 			self.filter = self.list.get()
 			self.printToScreen.emit('Name: ' + self.filter[0]['name'])
+
 		except routeros_api.exceptions.RouterOsApiConnectionError:
 			self.printToScreen.emit("Could not establish API connection")
 			self.printToScreen.emit("Attempting to enable API through Telnet")
@@ -185,14 +187,14 @@ class BatchSFTP(QtCore.QThread):
 	def run(self):
 		print("Batch SFTP")
 
-		self.mysftp.batchsftp(username=self.localu, password=self.localp, cfile=self.cmdFile, ifile=self.ipFile,
-								reboot='yes')
+		self.mysftp.batchfirmware(username=self.localu, password=self.localp, cfile=self.cmdFile, ifile=self.ipFile,
+								  reboot='yes')
 
 	def create_ssh(self):
 		self.mysftp = sftp.SFTP(parent=self)
 		self.sshc = ssh.SSHConnection(parent=self)
 		self.tel = telnet.Telnet(parent=self)
-
+		self.ping = ping.IPTest(parent=self)
 
 class Telnet(QtCore.QThread):
 	printToScreen = QtCore.pyqtSignal(str)
