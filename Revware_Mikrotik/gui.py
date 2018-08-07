@@ -515,7 +515,7 @@ class StatusWindow(QWidget):
 		self.left = 510
 		self.top = 30
 		self.width = 525
-		self.height = 500
+		self.height = 440
 		self.init_ui()
 
 	def init_ui(self):
@@ -604,6 +604,8 @@ class MainWindow(QMainWindow):
 
 		self.reportAction = self.helpMenu.addAction('Report an Issue')
 		self.reportAction.triggered.connect(self.open_url)
+		self.wikiAction = self.helpMenu.addAction('Wiki')
+		self.wikiAction.triggered.connect(self.open_wiki)
 
 		self.exitAction = self.fileMenu.addAction('Exit')
 		self.exitAction.triggered.connect(sys.exit)
@@ -716,6 +718,10 @@ class MainWindow(QMainWindow):
 		if not QtGui.QDesktopServices.openUrl(url):
 			QtGui.QMessageBox.warning(self, 'Open Url', 'Could not open url')
 
+	def open_wiki(self):
+		url = QtCore.QUrl('https://github.com/Revand/Revware/wiki')
+		if not QtGui.QDesktopServices.openUrl(url):
+			QtGui.QMessageBox.warning(self, 'Open Url', 'Could not open url')
 
 if __name__ == '__main__':
 	app = QApplication(sys.argv)

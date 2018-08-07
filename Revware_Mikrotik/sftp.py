@@ -91,6 +91,8 @@ class SFTP(QtCore.QObject):
 			self.parent().tel.telnet(self.ips[i], self.uname, self.password, "api")
 			self.tried = True
 			self.get_variables(i)
+		except routeros_api.exceptions.RouterOsApiCommunicationError:
+			print("Communication Error")
 
 	def batchsftp(self, username, password, cfile, ifile, reboot):
 

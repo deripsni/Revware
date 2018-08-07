@@ -39,4 +39,6 @@ class Telnet(QtCore.QObject):
 			self.tn.write(b"quit" + b"\r\n")
 			print("right after the quit")
 		except ConnectionRefusedError:
-			print("Could not establish Telnet Connection")
+			self.printToScreen.emit("Could not establish Telnet Connection")
+		except TimeoutError:
+			self.printToScreen.emit("Telnet connection timed out")
