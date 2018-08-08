@@ -181,8 +181,8 @@ class Master(QtCore.QObject):
 		self.telnet_thread.start()
 
 	def create_mikro_thread(self):
-		self.mikro_thread = menu.Mikrotik(self.mwindow.ibox.text(), self.mwindow.sbox.text(),
-											self.mwindow.b1.isChecked(), parent=self)
+		self.mikro_thread = menu.Mikrotik(self.mwindow.b1.text(), self.mwindow.b2.text(),
+											self.mwindow.r1.isChecked(), parent=self)
 		self.mikro_thread.start()
 
 	@QtCore.pyqtSlot(sftp.SFTP)
@@ -395,44 +395,38 @@ class TelnetWindow(QMainWindow):
 		self.setWindowModality(QtCore.Qt.ApplicationModal)
 
 
-class MikroWindow(QMainWindow):
+class MikroWindow(QWidget):
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
 		self.init_ui()
 
 	def init_ui(self):
-		self.ibox = QLineEdit(self)
-		self.ibox.move(100, 10)
-		self.ibox.resize(100, 20)
 
-		self.ilabel = QLabel('Base Ip: ', self)
-		self.ilabel.move(55, 4)
-		self.ilabel.resize(40, 30)
+		self.layout = QFormLayout()
 
-		self.sbox = QLineEdit(self)
-		self.sbox.move(100, 35)
-		self.sbox.resize(100, 20)
+		self.l1 = QLabel("Base Ip:")
+		self.l2 = QLabel("Subnet Size:")
 
-		self.slabel = QLabel('Subnet Mask:', self)
-		self.slabel.move(29, 30)
-		self.slabel.resize(65, 30)
+		self.b1 = QLineEdit()
+		self.b2 = QLineEdit()
 
-		self.b1 = QCheckBox("Include Timed Out Devices")
-		self.b1.setChecked(False)
-		self.b1.move(5, 65)
-		self.b1.resize(100, 20)
+		self.r1 = QCheckBox("Include Timed out Devices")
+		self.r1.setCheckable(True)
+		self.r1.setChecked(True)
+		self.r1.setVisible(False)
+		self.r1.setCheckable(False)
 
-		self.btn = QPushButton("Submit", self)
-		self.btn.move(100, 65)
+		self.btn = QPushButton("Start")
 		self.btn.setAutoDefault(True)
 
-		self.statusBar()
+		self.layout.addRow(self.l1, self.b1)
+		self.layout.addRow(self.l2, self.b2)
+		self.layout.addRow(self.r1, self.btn)
 
-		self.setGeometry(90, 200, 220, 120)
-		self.setWindowTitle('Polling Information')
-
-		self.setWindowModality(QtCore.Qt.ApplicationModal)
+		self.setLayout(self.layout)
+		self.setGeometry(90, 200, 300, 80)
+		self.setWindowTitle('Settings')
 
 
 class ProgressWindow(QWidget):

@@ -152,28 +152,26 @@ class SFTP(QtCore.QObject):
 
 		print(self.indexesonline)
 
+		self.count = 0
+
 		for i in self.indexesonline:
 			self.tried = False
+			self.count = self.count + 1
 			self.batchfirmware2(username, password, self.ips[i], cfile, i)
 			self.parent().sshc.ssh(self.ips[i], username, password, 'system reboot')
 			self.setcelltextsignal.emit(i, 4, 'Rebooting...')
 			self.setcelltextsignal.emit(i, 3, 'No')
 			self.setcellcolorsignal.emit(i, 3, 'red')
+			if self.count == 3:
+				self.batch_ping_thread = PingMachines(self.indexesonline, self.ips, parent=self)
+				self.batch_ping_thread.start()
 
-			print('\n\n')
-			if len(self.ips) < 5:  # avoids an issue where the radios are pinged before they shut down for short ip lists
-				time.sleep(4)
-			print('Checking for rebooted machines')
-		for j in self.indexesonline:
-				print("Waiting.", end='')
-				if self.parent().ping.ping(self.ips[j], 50, True) == "online":
-					self.setcelltextsignal.emit(j, 4, 'Done')
-					self.setcelltextsignal.emit(j, 3, 'Yes')
-					self.setcellcolorsignal.emit(j, 3, 'green')
-					time.sleep(2)
-					self.get_variables(j)
+
+
 
 	def batchfirmware2(self, username, password, ip, cfile, i):
+
+		self.uploading = i
 
 		try:
 
@@ -197,3 +195,43 @@ class SFTP(QtCore.QObject):
 			self.tried = True
 			self.batchfirmware2(username, password, ip, cfile, i)
 
+class PingMachines(QtCore.QThread):
+
+	setcelltextsignal = QtCore.pyqtSignal(int, int, str)
+	setcellcolorsignal = QtCore.pyqtSignal(int, int, str)
+	setcellwidgetsignal = QtCore.pyqtSignal(int, int, QtWidgets.QWidget)
+
+	def __init__(self, indexesonline, ips, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.indexesonline = indexesonline
+		self.ips = ips
+		self.ping = parent.parent().ping
+		self.parent = parent
+
+		# self.printToScreen.connect(parent.parent.parent().gui.update_status)
+		self.setcelltextsignal.connect(parent.parent().parent().swindow.set_cell)
+		self.setcellcolorsignal.connect(parent.parent().parent().swindow.set_cell_color)
+		self.setcellwidgetsignal.connect(parent.parent().parent().swindow.set_cell_widget)
+
+		print("My parent is")
+		print(parent)
+		print("Their parent is")
+		print(parent.parent())
+		print("Their ping is")
+		print(parent.parent().ping)
+
+	def run(self):
+		for j in self.indexesonline:
+			time.sleep(1)
+
+			while j == self.parent.uploading:
+				pass
+
+			time.sleep(10)
+			print("Waiting.", end='')
+			if self.ping.ping(self.ips[j], 50, True) == "online":
+				self.setcelltextsignal.emit(j, 4, 'Done')
+				self.setcelltextsignal.emit(j, 3, 'Yes')
+				self.setcellcolorsignal.emit(j, 3, 'green')
+				time.sleep(2)
+				self.parent.get_variables(j)

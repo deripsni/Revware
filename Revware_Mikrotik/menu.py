@@ -190,7 +190,7 @@ class BatchSFTP(QtCore.QThread):
 		print("Batch SFTP")
 
 		self.mysftp.setup_batchfirmware(username=self.localu, password=self.localp, cfile=self.cmdFile, ifile=self.ipFile,
-								  reboot='yes')
+								 		reboot='yes')
 		self.savesetup.emit(self.mysftp)
 
 	def create_ssh(self):
@@ -226,6 +226,7 @@ class BatchExecute(QtCore.QThread):
 		self.sshc = ssh.SSHConnection(parent=self)
 		self.tel = telnet.Telnet(parent=self)
 		self.ping = ping.IPTest(parent=self)
+		# self.pingthread = sftp.PingMachines(parent=self)
 
 
 class Telnet(QtCore.QThread):
