@@ -300,7 +300,7 @@ class BatchWindow(QMainWindow):
 		self.cbtn.resize(50, 20)
 		self.cbtn.setAutoDefault(True)
 
-		self.clabel = QLabel('Command File: ', self)
+		self.clabel = QLabel('Firmware File: ', self)
 		self.clabel.move(23, 5)
 		self.clabel.resize(70, 30)
 
