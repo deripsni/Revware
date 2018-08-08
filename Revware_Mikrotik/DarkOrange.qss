@@ -247,6 +247,10 @@ QScrollBar::sub-line:vertical
       subcontrol-origin: margin;
 }
 
+QCheckBox::indicator:checked {
+      background: black;
+}
+
 QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical
 {
       border: 1px solid black;
@@ -277,11 +281,6 @@ QHeaderView::section
     color: white;
     padding-left: 4px;
     border: 1px solid #6c6c6c;
-}
-
-QCheckBox:disabled
-{
-color: #414141;
 }
 
 QDockWidget::title

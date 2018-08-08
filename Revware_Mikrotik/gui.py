@@ -1,10 +1,12 @@
 import menu
 import sys
 from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication, QPlainTextEdit, QLabel, QLineEdit, QFileDialog, \
-							QRadioButton, QCheckBox, QProgressBar, QMessageBox, QFormLayout, QWidget
+							QRadioButton, QCheckBox, QProgressBar, QMessageBox, QFormLayout, QWidget,  QVBoxLayout, \
+							QTableWidget, QTableWidgetItem
 
 from PyQt5 import QtGui, QtCore
 import ctypes
+import sftp
 from yaml import load, dump
 
 myappid = 'RevWare.Mikrotik.version'
@@ -69,6 +71,8 @@ class Master(QtCore.QObject):
 		self.mwindow = MikroWindow()
 		self.progresswindow = ProgressWindow()
 		self.settingswindow = SettingsWindow()
+		self.swindow = StatusWindow()
+		self.batchexecutewindow = BatchExecuteWindow()
 		self.connect_signals()
 		self.gui.show()
 
@@ -109,8 +113,12 @@ class Master(QtCore.QObject):
 
 		self.bwindow.cbtn.clicked.connect(self.bwindow.c_set)
 		self.bwindow.ipbtn.clicked.connect(self.bwindow.i_set)
-		self.bwindow.btn.clicked.connect(self.create_batch_thread)
+		self.bwindow.btn.clicked.connect(self.create_batch_setup_thread)
+		self.bwindow.btn.clicked.connect(self.bwindow.close)
+		self.bwindow.btn.clicked.connect(self.swindow.show)
 
+		self.batchexecutewindow.btn.clicked.connect(self.create_batch_execute_thread)
+		self.batchexecutewindow.btn.clicked.connect(self.batchexecutewindow.close)
 
 		self.twindow.sshbtn.clicked.connect(lambda: self.create_telnet_thread("ssh"))
 		self.twindow.sshbtn.clicked.connect(self.twindow.close)
@@ -157,22 +165,30 @@ class Master(QtCore.QObject):
 
 		self.command_thread.start()
 
-	def create_batch_thread(self):
-		self.batch_thread = menu.BatchSFTP(self.gui.ubox.text(), self.gui.pbox.text(), self.bwindow.ctxt.text(),
-											self.bwindow.iptxt.text(), parent = self)
-		self.batch_thread.start()
+	def create_batch_setup_thread(self):
+		self.batch_setup_thread = menu.BatchSFTP(self.gui.ubox.text(), self.gui.pbox.text(), self.bwindow.ctxt.text(),
+											self.bwindow.iptxt.text(), parent=self)
+		self.batch_setup_thread.start()
+
+	def create_batch_execute_thread(self):
+		self.batch_setup_thread = menu.BatchExecute(self.gui.ubox.text(), self.gui.pbox.text(), self.bwindow.ctxt.text(),
+											self.bwindow.iptxt.text(), self.obj, parent=self)
+		self.batch_setup_thread.start()
 
 	def create_telnet_thread(self, method):
 		self.telnet_thread = menu.Telnet(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
 											method, parent=self)
 		self.telnet_thread.start()
 
-
 	def create_mikro_thread(self):
-		self.mikro_thread = menu.Mikrotik(self.mwindow.ibox.text(), self.mwindow.sbox.text(),
-											self.mwindow.b1.isChecked(), parent=self)
+		self.mikro_thread = menu.Mikrotik(self.mwindow.b1.text(), self.mwindow.b2.text(),
+											self.mwindow.r1.isChecked(), parent=self)
 		self.mikro_thread.start()
 
+	@QtCore.pyqtSlot(sftp.SFTP)
+	def save_batch_object(self, obj):
+		print("saved")
+		self.obj = obj
 
 class FirmwareWindow(QMainWindow):
 
@@ -317,13 +333,28 @@ class BatchWindow(QMainWindow):
 		self.setWindowModality(QtCore.Qt.ApplicationModal)
 
 	def c_set(self,):
-		fname = QFileDialog.getOpenFileName(self, 'Open file', filter="Text files (*.txt)")
+		fname = QFileDialog.getOpenFileName(self, 'Open file')
 		self.ctxt.setText(fname[0])
 
 	def i_set(self,):
 		fname = QFileDialog.getOpenFileName(self, 'Open file', filter="Text files (*.txt)")
 		self.iptxt.setText(fname[0])
 
+class BatchExecuteWindow(QWidget):
+
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.init_ui()
+
+	def init_ui(self):
+
+		self.btn = QPushButton("Execute", self)
+		self.btn.resize(100, 30)
+		self.btn.move(10, 10)
+		self.btn.setAutoDefault(True)
+
+		self.setGeometry(90, 200, 120, 50)
+		self.setWindowTitle('Batch SFTP')
 
 class TelnetWindow(QMainWindow):
 
@@ -364,44 +395,38 @@ class TelnetWindow(QMainWindow):
 		self.setWindowModality(QtCore.Qt.ApplicationModal)
 
 
-class MikroWindow(QMainWindow):
+class MikroWindow(QWidget):
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
 		self.init_ui()
 
 	def init_ui(self):
-		self.ibox = QLineEdit(self)
-		self.ibox.move(100, 10)
-		self.ibox.resize(100, 20)
 
-		self.ilabel = QLabel('Base Ip: ', self)
-		self.ilabel.move(55, 4)
-		self.ilabel.resize(40, 30)
+		self.layout = QFormLayout()
 
-		self.sbox = QLineEdit(self)
-		self.sbox.move(100, 35)
-		self.sbox.resize(100, 20)
+		self.l1 = QLabel("Base Ip:")
+		self.l2 = QLabel("Subnet Size:")
 
-		self.slabel = QLabel('Subnet Mask:', self)
-		self.slabel.move(29, 30)
-		self.slabel.resize(65, 30)
+		self.b1 = QLineEdit()
+		self.b2 = QLineEdit()
 
-		self.b1 = QCheckBox("Include Timed Out Devices")
-		self.b1.setChecked(False)
-		self.b1.move(5, 65)
-		self.b1.resize(100, 20)
+		self.r1 = QCheckBox("Include Timed out Devices")
+		self.r1.setCheckable(True)
+		self.r1.setChecked(True)
+		self.r1.setVisible(False)
+		self.r1.setCheckable(False)
 
-		self.btn = QPushButton("Submit", self)
-		self.btn.move(100, 65)
+		self.btn = QPushButton("Start")
 		self.btn.setAutoDefault(True)
 
-		self.statusBar()
+		self.layout.addRow(self.l1, self.b1)
+		self.layout.addRow(self.l2, self.b2)
+		self.layout.addRow(self.r1, self.btn)
 
-		self.setGeometry(90, 200, 220, 120)
-		self.setWindowTitle('Polling Information')
-
-		self.setWindowModality(QtCore.Qt.ApplicationModal)
+		self.setLayout(self.layout)
+		self.setGeometry(90, 200, 300, 80)
+		self.setWindowTitle('Settings')
 
 
 class ProgressWindow(QWidget):
@@ -477,6 +502,79 @@ class SettingsWindow(QWidget):
 		self.close()
 
 
+class StatusWindow(QWidget):
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.title = 'PyQt5 table - pythonspot.com'
+		self.left = 510
+		self.top = 30
+		self.width = 525
+		self.height = 440
+		self.init_ui()
+
+	def init_ui(self):
+		self.setWindowTitle(self.title)
+		self.setGeometry(self.left, self.top, self.width, self.height)
+
+		self.createtable()
+
+		# Add box layout, add table to box layout and add box layout to widget
+		self.layout = QVBoxLayout()
+		self.layout.addWidget(self.tableWidget)
+		self.setLayout(self.layout)
+
+		# Show widget
+		print("hecks yeah")
+		# self.show()
+
+	def createtable(self):
+		# Create table
+		self.tableWidget = QTableWidget()
+		self.tableWidget.setRowCount(0)
+		self.tableWidget.setColumnCount(5)
+		self.tableWidget.verticalHeader().setVisible(False)
+
+		self.headers = ["IP", "Name", "Firmware", "Online", "Status"]
+
+		self.tableWidget.setHorizontalHeaderLabels(self.headers)
+
+		self.tableWidget.move(0, 0)
+
+		# table selection change
+		self.tableWidget.doubleClicked.connect(self.on_click)
+
+	@QtCore.pyqtSlot()
+	def on_click(self):
+		print("\n")
+		for currentQTableWidgetItem in self.tableWidget.selectedItems():
+			print(currentQTableWidgetItem.row(), currentQTableWidgetItem.column(), currentQTableWidgetItem.text())
+
+	@QtCore.pyqtSlot(int, int, QWidget)
+	def set_cell_widget(self, x, y, widget):
+		self.tableWidget.setItem(x, y, widget)
+
+	@QtCore.pyqtSlot(int, int, str)
+	def set_cell(self, x, y, content):
+		self.tableWidget.setItem(x, y, QTableWidgetItem(content))
+
+	@QtCore.pyqtSlot()
+	def add_row(self):
+		self.tableWidget.insertRow(self.tableWidget.rowCount())
+
+	@QtCore.pyqtSlot()
+	def clear(self):
+		self.tableWidget.clearContents()
+		self.tableWidget.setRowCount(0)
+
+	@QtCore.pyqtSlot(int, int, str)
+	def set_cell_color(self, x, y, color):
+		if color == 'red':
+			self.tableWidget.item(x, y).setBackground(QtGui.QColor(124, 10, 2))
+		elif color == 'green':
+			self.tableWidget.item(x, y).setBackground(QtGui.QColor(76, 187, 23))
+			self.tableWidget.item(x, y).setForeground(QtGui.QColor(0, 0, 0))
+
+
 class MainWindow(QMainWindow):
 	def __init__(self):
 		super().__init__()
@@ -500,6 +598,8 @@ class MainWindow(QMainWindow):
 
 		self.reportAction = self.helpMenu.addAction('Report an Issue')
 		self.reportAction.triggered.connect(self.open_url)
+		self.wikiAction = self.helpMenu.addAction('Wiki')
+		self.wikiAction.triggered.connect(self.open_wiki)
 
 		self.exitAction = self.fileMenu.addAction('Exit')
 		self.exitAction.triggered.connect(sys.exit)
@@ -612,6 +712,10 @@ class MainWindow(QMainWindow):
 		if not QtGui.QDesktopServices.openUrl(url):
 			QtGui.QMessageBox.warning(self, 'Open Url', 'Could not open url')
 
+	def open_wiki(self):
+		url = QtCore.QUrl('https://github.com/Revand/Revware/wiki')
+		if not QtGui.QDesktopServices.openUrl(url):
+			QtGui.QMessageBox.warning(self, 'Open Url', 'Could not open url')
 
 if __name__ == '__main__':
 	app = QApplication(sys.argv)

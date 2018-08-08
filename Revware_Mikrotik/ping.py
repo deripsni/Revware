@@ -41,7 +41,7 @@ class IPTest(QtCore.QObject):
 				x = "%s online \n" % self.ip
 				self.printToScreen.emit(x)
 				QtCore.QCoreApplication.processEvents()
-				break
+				return "online"
 
 			self.current_try += 1
 
@@ -49,13 +49,14 @@ class IPTest(QtCore.QObject):
 
 			if timeout_total > 0:
 
-				#print("%s is not responding to pings \n" % self.ip)
+				print("%s is not responding to pings \n" % self.ip)
 
-				return "online"
+				#return "online"
 
 			else:
 
 				print("{}{}{}".format("Radio didn't return after: ", self.max_tries, " tries."))
+		return "offline"
 
 	@QtCore.pyqtSlot(str, str, bool)
 	def mikrotik_checker(self, ip1, subnet1, option1):
