@@ -448,7 +448,7 @@ class ProgressWindow(QWidget):
 
 		self.setGeometry(90, 200, 300, 80)
 		self.setWindowTitle('Enable Protocol')
-		self.setWindowFlags(self.windowFlags() | QtCore.Qt.FramelessWindowHint)
+		# self.setWindowFlags(self.windowFlags() | QtCore.Qt.FramelessWindowHint)
 
 		self.setWindowModality(QtCore.Qt.ApplicationModal)
 
