@@ -43,16 +43,10 @@ class SSHConnection(QtCore.QObject):
 		print("made it into the ssh")
 		try:
 			self.client = paramiko.SSHClient()
-			print("1")
 			self.client.load_system_host_keys()
-			print("2")
 			self.client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-			print("3")
 			self.client.connect(ip, port=self.port, username=self.username, password=self.password)
-			print("4")
 			stdin, stdout, stderr = self.client.exec_command(mikrotik_command)
-			print("5")
-			print("6")
 			if mikrotik_command == "system reboot":
 				self.printToScreen.emit("Rebooting Radio...")
 				QtCore.QCoreApplication.processEvents()
@@ -125,3 +119,32 @@ class SSHConnection(QtCore.QObject):
 			else:
 				self.printToScreen.emit("Still unable to establish connection")
 				self.printToScreen.emit("please check your username and password")
+
+	def enable_api(self, ip, username, password, attempts=0):
+		self.ip = ip
+		self.username = username
+		self.password = password
+		self.port = 22
+		self.attempts = attempts
+
+		self.printToScreen.emit("Trying to enable the api thingi")
+
+		try:
+			self.client = paramiko.SSHClient()
+			self.client.load_system_host_keys()
+			self.client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+			self.client.connect(ip, port=self.port, username=self.username, password=self.password)
+			stdin, stdout, stderr = self.client.exec_command("ip service enable api")
+
+		except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.NoValidConnectionsError):
+			if self.attempts == 0:
+				self.printToScreen.emit("Could not establish an SSH connection")
+				self.printToScreen.emit("Attempting to enable SSH through Telnet")
+				self.parent().tel.telnet(self.ip, self.username, self.password, "ssh")
+				self.enable_api(self.ip, self.username, self.password, attempts=1)
+			else:
+				self.printToScreen.emit("Still unable to establish connection")
+				self.printToScreen.emit("please check your username and password")
+
+		except (UnicodeError, RecursionError):
+			self.printToScreen.emit("Please enter a valid IP")

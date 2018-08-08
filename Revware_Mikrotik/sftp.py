@@ -86,8 +86,9 @@ class SFTP(QtCore.QObject):
 				return None
 
 			self.printToScreen.emit("Could not establish API connection")
-			self.printToScreen.emit("Attempting to enable API through Telnet")
-			self.parent().tel.telnet(self.ips[i], self.uname, self.password, "api")
+			self.printToScreen.emit("Attempting to enable API through SSH")
+			self.parent().sshc.enable_api(self.ips[i], self.uname, self.password, attempts=0)
+			# self.parent().tel.telnet(self.ips[i], self.uname, self.password, "api")
 			self.tried = True
 			self.get_variables(i)
 		except routeros_api.exceptions.RouterOsApiCommunicationError:
