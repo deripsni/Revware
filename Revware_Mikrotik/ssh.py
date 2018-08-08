@@ -81,7 +81,6 @@ class SSHConnection(QtCore.QObject):
 		except (UnicodeError, RecursionError):
 			self.printToScreen.emit("Please enter a valid IP")
 
-
 	def transfer(self, transferred, to_transfer):
 		self.print_progress(transferred, to_transfer, pre='Progress:', suf='Complete', len=60)
 		self.pMaxSignal.emit(to_transfer)

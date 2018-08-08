@@ -42,7 +42,6 @@ class SFTP(QtCore.QObject):
 		with open(ifile, 'r') as infile:
 			self.ips = infile.read().splitlines()
 
-
 	def table_setup(self):
 
 		self.clearsignal.emit()
@@ -166,9 +165,6 @@ class SFTP(QtCore.QObject):
 				self.batch_ping_thread = PingMachines(self.indexesonline, self.ips, parent=self)
 				self.batch_ping_thread.start()
 
-
-
-
 	def batchfirmware2(self, username, password, ip, cfile, i):
 
 		self.uploading = i
@@ -194,6 +190,7 @@ class SFTP(QtCore.QObject):
 			self.parent().tel.telnet(ip, username, password, "ssh")
 			self.tried = True
 			self.batchfirmware2(username, password, ip, cfile, i)
+
 
 class PingMachines(QtCore.QThread):
 

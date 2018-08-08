@@ -21,7 +21,7 @@ class IPTest(QtCore.QObject):
 
 	@QtCore.pyqtSlot(str, int, bool)
 	def ping(self, ip1, tries, timeout_include):
-		print("pinging stuff")
+		print("pinging device")
 		self.ip = ip1
 		self.timeout_include = timeout_include
 		self.max_tries = tries
@@ -51,8 +51,6 @@ class IPTest(QtCore.QObject):
 
 				print("%s is not responding to pings \n" % self.ip)
 
-				#return "online"
-
 			else:
 
 				print("{}{}{}".format("Radio didn't return after: ", self.max_tries, " tries."))
@@ -61,29 +59,32 @@ class IPTest(QtCore.QObject):
 	@QtCore.pyqtSlot(str, str, bool)
 	def mikrotik_checker(self, ip1, subnet1, option1):
 		self.ip = ip1
-		self.subnet = subnet1
+		self.subnet = subnet1[-2:]
 		self.option = option1
 		print(self.ip + " is the IP")
 		print(self.subnet + "is the Subnet")
 		self.number = 2**(32-int(subnet1[-2:]))
 		self.count = 0
 		print(self.number)
-		self.network = ipaddress.IPv4Network(self.ip + self.subnet)
+		self.network = ipaddress.IPv4Network(self.ip + "/" + self.subnet)
+		self.gateway = self.network[1]
+		print("The gateway is")
+		print(self.gateway)
 		file = open("ipList.txt", "w")
 		self.pMaxSignal.emit(self.number)
 		for addr in self.network:
-			self.count = self.count + 1
-			QtCore.QCoreApplication.processEvents()
-			self.status = self.ping(str(addr), tries=2, timeout_include=self.option)
-			if self.status == "online":
-				self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-				self.result = self.sock.connect_ex((str(addr), 8291))
-				if self.result == 0:
-					file.write(str(addr) + "\n")
-				# print("Winbox is enabled! Mikrotik found!")  # Success Message
-				self.sock.close()
-			self.progressSignal.emit(self.count)
+			if addr == self.gateway:	  # Skips the gateway
+				pass
+			else:
+				self.count = self.count + 1
+				QtCore.QCoreApplication.processEvents()
+				self.status = self.ping(str(addr), tries=2, timeout_include=self.option)
+				if self.status == "online":
+					self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+					self.result = self.sock.connect_ex((str(addr), 8291))
+					if self.result == 0:
+						file.write(str(addr) + "\n")
+					self.sock.close()
+				self.progressSignal.emit(self.count)
 		self.pCloseSignal.emit()
 		file.close()
-
-    

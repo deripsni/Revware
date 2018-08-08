@@ -138,24 +138,24 @@ class Master(QtCore.QObject):
 	def create_firmware_thread(self):
 		self.fwindow.show()
 		self.firmware_thread = menu.Firmware(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
-											self.fwindow.ftxt.text(), parent=self)
+											 self.fwindow.ftxt.text(), parent=self)
 		self.firmware_thread.start()
 
 
 	def create_password_thread(self):
 		self.password_thread = menu.Password(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
-											self.pwindow.pbox.text(), self.pwindow.npbox.text(), parent=self)
+											 self.pwindow.pbox.text(), self.pwindow.npbox.text(), parent=self)
 		self.password_thread.start()
 
 	def create_firewall_thread(self):
 
 		self.firewall_thread = menu.Firewall(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
-											parent= self)
+											 parent= self)
 		self.firewall_thread.start()
 
 	def create_device_name_thread(self):
 		self.device_name_thread = menu.DeviceName(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
-													parent= self)
+												  parent= self)
 		self.device_name_thread.start()
 
 	def create_custom_command_thread(self):
@@ -167,22 +167,22 @@ class Master(QtCore.QObject):
 
 	def create_batch_setup_thread(self):
 		self.batch_setup_thread = menu.BatchSFTP(self.gui.ubox.text(), self.gui.pbox.text(), self.bwindow.ctxt.text(),
-											self.bwindow.iptxt.text(), parent=self)
+												 self.bwindow.iptxt.text(), parent=self)
 		self.batch_setup_thread.start()
 
 	def create_batch_execute_thread(self):
 		self.batch_setup_thread = menu.BatchExecute(self.gui.ubox.text(), self.gui.pbox.text(), self.bwindow.ctxt.text(),
-											self.bwindow.iptxt.text(), self.obj, parent=self)
+													self.bwindow.iptxt.text(), self.obj, parent=self)
 		self.batch_setup_thread.start()
 
 	def create_telnet_thread(self, method):
 		self.telnet_thread = menu.Telnet(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
-											method, parent=self)
+										 method, parent=self)
 		self.telnet_thread.start()
 
 	def create_mikro_thread(self):
 		self.mikro_thread = menu.Mikrotik(self.mwindow.b1.text(), self.mwindow.b2.text(),
-											self.mwindow.r1.isChecked(), parent=self)
+										  self.mwindow.r1.isChecked(), parent=self)
 		self.mikro_thread.start()
 
 	@QtCore.pyqtSlot(sftp.SFTP)
@@ -406,10 +406,11 @@ class MikroWindow(QWidget):
 		self.layout = QFormLayout()
 
 		self.l1 = QLabel("Base Ip:")
-		self.l2 = QLabel("Subnet Size:")
+		self.l2 = QLabel("Subnet Prefix:")
 
 		self.b1 = QLineEdit()
 		self.b2 = QLineEdit()
+		self.b2.setMaxLength(3)
 
 		self.r1 = QCheckBox("Include Timed out Devices")
 		self.r1.setCheckable(True)
