@@ -68,6 +68,7 @@ class SFTP(QtCore.QObject):
 
 	def get_variables(self, i):
 		try:
+			self.printToScreen.emit("Trying to get the variables")
 			connection = routeros_api.RouterOsApiPool(self.ips[i], username=self.uname, password=self.password)
 			api = connection.get_api()
 
@@ -79,18 +80,22 @@ class SFTP(QtCore.QObject):
 			self.filter = self.version.get()
 			self.setcelltextsignal.emit(i, 2, self.filter[0]['version'])
 
+			return None
+
 		except routeros_api.exceptions.RouterOsApiConnectionError:
 			if self.tried:
 				self.setcelltextsignal.emit(i, 4, 'Failed')
 				self.indexesonline.pop()
 				return None
-
-			self.printToScreen.emit("Could not establish API connection")
-			self.printToScreen.emit("Attempting to enable API through SSH")
-			self.parent().sshc.enable_api(self.ips[i], self.uname, self.password, attempts=0)
-			# self.parent().tel.telnet(self.ips[i], self.uname, self.password, "api")
-			self.tried = True
-			self.get_variables(i)
+			else:
+				self.printToScreen.emit("Could not establish API connection")
+				self.printToScreen.emit("Attempting to enable API through SSH")
+				self.parent().sshc.enable_api(self.ips[i], self.uname, self.password, attempts=0)
+				# self.parent().tel.telnet(self.ips[i], self.uname, self.password, "api")
+				self.printToScreen.emit("made it back to here")
+				self.tried = True
+				time.sleep(0.5)
+				self.get_variables(i)
 		except routeros_api.exceptions.RouterOsApiCommunicationError:
 			print("Communication Error")
 
@@ -162,9 +167,10 @@ class SFTP(QtCore.QObject):
 			self.setcelltextsignal.emit(i, 4, 'Rebooting...')
 			self.setcelltextsignal.emit(i, 3, 'No')
 			self.setcellcolorsignal.emit(i, 3, 'red')
-			if self.count == 3:
+			if self.count == 2:
 				self.batch_ping_thread = PingMachines(self.indexesonline, self.ips, parent=self)
 				self.batch_ping_thread.start()
+		self.uploading = None
 
 	def batchfirmware2(self, username, password, ip, cfile, i):
 
@@ -222,6 +228,7 @@ class PingMachines(QtCore.QThread):
 		for j in self.indexesonline:
 			time.sleep(1)
 
+			print("pinging this ip: " + self.ips[j] + "at index" + str(j))
 			while j == self.parent.uploading:
 				pass
 

@@ -135,6 +135,7 @@ class SSHConnection(QtCore.QObject):
 			self.client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 			self.client.connect(ip, port=self.port, username=self.username, password=self.password)
 			stdin, stdout, stderr = self.client.exec_command("ip service enable api")
+			self.printToScreen.emit("enabled it")
 
 		except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.NoValidConnectionsError):
 			if self.attempts == 0:
