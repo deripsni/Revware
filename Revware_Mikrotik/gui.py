@@ -2,7 +2,7 @@ import menu
 import sys
 from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication, QPlainTextEdit, QLabel, QLineEdit, QFileDialog, \
 							QRadioButton, QCheckBox, QProgressBar, QMessageBox, QFormLayout, QWidget,  QVBoxLayout, \
-							QTableWidget, QTableWidgetItem
+							QTableWidget, QTableWidgetItem, QStackedWidget
 
 from PyQt5 import QtGui, QtCore
 import ctypes
@@ -66,7 +66,11 @@ class Master(QtCore.QObject):
 		self.fwindow = FirmwareWindow()
 		self.pwindow = PasswordWindow()
 		self.cwindow = CommandWindow()
-		self.bwindow = BatchWindow()
+		self.batchpasswordwindow = BatchPasswordWindow()
+		self.batchfirmwarewindow = BatchFirmwareWindow()
+		self.batchmenuwindow = BatchMenu()
+		self.batchstackwindow = BatchStack(firmware=self.batchfirmwarewindow, menu=self.batchmenuwindow,
+										   password=self.batchpasswordwindow)
 		self.twindow = TelnetWindow()
 		self.mwindow = MikroWindow()
 		self.progresswindow = ProgressWindow()
@@ -95,7 +99,8 @@ class Master(QtCore.QObject):
 		self.gui.btn4.clicked.connect(self.create_device_name_thread)
 		self.gui.btn5.clicked.connect(self.cwindow.show)
 		self.gui.btn6.clicked.connect(self.twindow.show)
-		self.gui.btn7.clicked.connect(self.bwindow.show)
+		self.gui.btn7.clicked.connect(self.batchstackwindow.show)
+		self.gui.btn7.clicked.connect(lambda: self.batchstackwindow.setCurrentIndex(0))
 		self.gui.btn8.clicked.connect(self.mwindow.show)
 
 		self.gui.clearbtn.clicked.connect(self.gui.clear_info)
@@ -111,11 +116,18 @@ class Master(QtCore.QObject):
 		self.cwindow.btn.clicked.connect(self.create_custom_command_thread)
 		self.cwindow.btn.clicked.connect(self.cwindow.close)
 
-		self.bwindow.cbtn.clicked.connect(self.bwindow.c_set)
-		self.bwindow.ipbtn.clicked.connect(self.bwindow.i_set)
-		self.bwindow.btn.clicked.connect(self.create_batch_setup_thread)
-		self.bwindow.btn.clicked.connect(self.bwindow.close)
-		self.bwindow.btn.clicked.connect(self.swindow.show)
+		self.batchmenuwindow.fbtn.clicked.connect(lambda: self.batchstackwindow.setCurrentIndex(1))
+		self.batchmenuwindow.pbtn.clicked.connect(lambda: self.batchstackwindow.setCurrentIndex(2))
+
+		self.batchfirmwarewindow.cbtn.clicked.connect(self.batchfirmwarewindow.c_set)
+		self.batchfirmwarewindow.ipbtn.clicked.connect(self.batchfirmwarewindow.i_set)
+		self.batchfirmwarewindow.btn.clicked.connect(self.create_batch_firmware_setup_thread)
+		self.batchfirmwarewindow.btn.clicked.connect(self.batchstackwindow.close)
+		self.batchfirmwarewindow.btn.clicked.connect(self.swindow.show)
+
+		self.batchpasswordwindow.btn.clicked.connect(self.create_batch_password_setup_thread)
+		self.batchpasswordwindow.btn.clicked.connect(self.batchstackwindow.close)
+		self.batchpasswordwindow.btn.clicked.connect(self.swindow.show)
 
 		self.batchexecutewindow.btn.clicked.connect(self.create_batch_execute_thread)
 		self.batchexecutewindow.btn.clicked.connect(self.batchexecutewindow.close)
@@ -141,7 +153,6 @@ class Master(QtCore.QObject):
 											 self.fwindow.ftxt.text(), parent=self)
 		self.firmware_thread.start()
 
-
 	def create_password_thread(self):
 		self.password_thread = menu.Password(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
 											 self.pwindow.pbox.text(), self.pwindow.npbox.text(), parent=self)
@@ -165,14 +176,19 @@ class Master(QtCore.QObject):
 
 		self.command_thread.start()
 
-	def create_batch_setup_thread(self):
-		self.batch_setup_thread = menu.BatchSFTP(self.gui.ubox.text(), self.gui.pbox.text(), self.bwindow.ctxt.text(),
-												 self.bwindow.iptxt.text(), parent=self)
+	def create_batch_firmware_setup_thread(self):
+		self.batch_setup_thread = menu.BatchFirmwareSetup(self.gui.ubox.text(), self.gui.pbox.text(), self.batchfirmwarewindow.ctxt.text(),
+														  self.batchfirmwarewindow.iptxt.text(), parent=self)
+		self.batch_setup_thread.start()
+
+	def create_batch_password_setup_thread(self):
+		self.batch_setup_thread = menu.BatchPasswordSetup(self.gui.ubox.text(), self.gui.pbox.text(), self.batchpasswordwindow.pbox.text(),
+														  self.batchpasswordwindow.npbox.text(), parent=self)
 		self.batch_setup_thread.start()
 
 	def create_batch_execute_thread(self):
-		self.batch_setup_thread = menu.BatchExecute(self.gui.ubox.text(), self.gui.pbox.text(), self.bwindow.ctxt.text(),
-													self.bwindow.iptxt.text(), self.obj, parent=self)
+		self.batch_setup_thread = menu.BatchFirmwareExecute(self.gui.ubox.text(), self.gui.pbox.text(), self.bwindow.ctxt.text(),
+															self.bwindow.iptxt.text(), self.obj, parent=self)
 		self.batch_setup_thread.start()
 
 	def create_telnet_thread(self, method):
@@ -225,7 +241,7 @@ class FirmwareWindow(QMainWindow):
 		self.ftxt.setText(fname[0])
 
 
-class PasswordWindow(QMainWindow):
+class PasswordWindow(QWidget):
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
@@ -253,7 +269,7 @@ class PasswordWindow(QMainWindow):
 		self.btn.move(100, 65)
 		self.btn.setAutoDefault(True)
 
-		self.statusBar()
+		# self.statusBar()
 
 		self.setGeometry(90, 200, 220, 120)
 		self.setWindowTitle('Set New Password')
@@ -287,14 +303,51 @@ class CommandWindow(QMainWindow):
 
 		self.setWindowModality(QtCore.Qt.ApplicationModal)
 
+class BatchStack(QStackedWidget):
 
-class BatchWindow(QMainWindow):
+	def __init__(self, parent=None, firmware=None, menu=None, password=None):
+		super(self.__class__, self).__init__(parent)
+		self.addWidget(menu)
+		self.addWidget(firmware)
+		self.addWidget(password)
+		self.init_ui()
+
+	def init_ui(self):
+		# self.addWidget(parent().batchfirwmarewindow)
+		self.setGeometry(90, 200, 420, 120)
+		self.setWindowTitle('Batch SFTP')
+		pass
+
+class BatchMenu(QWidget):
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.init_ui()
+
+	def init_ui(self):
+		self.fbtn = QPushButton('Firmware', self)
+		self.fbtn.move(90, 35)
+		self.fbtn.resize(100, 50)
+		self.fbtn.setAutoDefault(True)
+
+		self.pbtn = QPushButton('Password', self)
+		self.pbtn.move(230, 35)
+		self.pbtn.resize(100, 50)
+		self.pbtn.setAutoDefault(True)
+
+		self.setGeometry(90, 200, 420, 120)
+		self.setWindowTitle('Batch SFTP')
+
+		self.setWindowModality(QtCore.Qt.ApplicationModal)
+
+
+class BatchFirmwareWindow(QWidget):
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
 		self.init_ui()
 
 	def init_ui(self):
+
 		self.cbtn = QPushButton('Browse', self)
 		self.cbtn.move(100, 10)
 		self.cbtn.resize(50, 20)
@@ -322,10 +375,21 @@ class BatchWindow(QMainWindow):
 		self.iptxt.resize(250, 20)
 
 		self.btn = QPushButton("Submit", self)
-		self.btn.move(310, 65)
+		self.btn.move(360, 65)
+		self.btn.resize(50, 20)
 		self.btn.setAutoDefault(True)
 
-		self.statusBar()
+		self.firmwarebtn = QPushButton('Firmware')
+		self.firmwarebtn.move(100, 60)
+		self.firmwarebtn.resize(50, 20)
+		self.firmwarebtn.setAutoDefault(True)
+
+		self.passwordbtn = QPushButton('Password')
+		self.passwordbtn.move(100, 85)
+		self.passwordbtn.resize(50, 20)
+		self.passwordbtn.setAutoDefault(True)
+
+# 		self.statusBar()
 
 		self.setGeometry(90, 200, 420, 120)
 		self.setWindowTitle('Batch SFTP')
@@ -339,6 +403,43 @@ class BatchWindow(QMainWindow):
 	def i_set(self,):
 		fname = QFileDialog.getOpenFileName(self, 'Open file', filter="Text files (*.txt)")
 		self.iptxt.setText(fname[0])
+
+
+class BatchPasswordWindow(QWidget):
+
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+
+		self.init_ui()
+
+	def init_ui(self):
+		self.npbox = QLineEdit(self)
+		self.npbox.move(100, 10)
+		self.npbox.resize(310, 20)
+
+		self.nplabel = QLabel('New Password: ', self)
+		self.nplabel.move(21, 5)
+		self.nplabel.resize(75, 30)
+
+		self.pbox = QLineEdit(self)
+		self.pbox.move(100, 35)
+		self.pbox.resize(310, 20)
+
+		self.plabel = QLabel('Retype Password:', self)
+		self.plabel.move(7, 30)
+		self.plabel.resize(90, 30)
+
+		self.btn = QPushButton("Submit", self)
+		self.btn.move(360, 65)
+		self.btn.resize(50, 20)
+		self.btn.setAutoDefault(True)
+
+		# self.statusBar()
+
+		self.setGeometry(90, 200, 220, 120)
+		self.setWindowTitle('Set New Password')
+
+		self.setWindowModality(QtCore.Qt.ApplicationModal)
 
 class BatchExecuteWindow(QWidget):
 
