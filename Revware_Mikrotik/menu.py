@@ -233,13 +233,14 @@ class BatchPasswordSetup(QtCore.QThread):
 	printToScreen = QtCore.pyqtSignal(str)
 	savesetup = QtCore.pyqtSignal(sftp.SFTP)
 
-	def __init__(self, username_input, password_input, cfile, ifile, parent=None):
+	def __init__(self, username_input, password_input, newpassword1, newpassword2, ifile=None, parent=None):
 		super(self.__class__, self).__init__(parent)
 		self.printToScreen.connect(self.parent().gui.update_status)
 		self.savesetup.connect(lambda: self.parent().save_batch_object(self.mysftp))
 		self.localu = username_input
 		self.localp = password_input
-		self.cmdFile = cfile
+		self.p1 = newpassword1
+		self.p2 = newpassword2
 		self.ipFile = ifile
 		self.create_ssh()
 
@@ -247,8 +248,11 @@ class BatchPasswordSetup(QtCore.QThread):
 	def run(self):
 		print("Batch SFTP")
 
-		self.mysftp.setup_batchpassword(username=self.localu, password=self.localp, cfile=self.cmdFile, ifile=self.ipFile,
-								 		reboot='yes')
+		if not self.p1 == self.p2:
+			self.printToScreen.emit("The passwords do not match")
+			self.quit()
+
+		self.mysftp.setup_batchpassword(username=self.localu, password=self.localp, ifile=self.ipFile)
 		self.savesetup.emit(self.mysftp)
 
 	def create_ssh(self):

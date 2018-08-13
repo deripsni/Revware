@@ -142,11 +142,11 @@ class SFTP(QtCore.QObject):
 	def filecallback(self):   # callback function that does nothing
 		pass
 
-	def setup_batchfirmware(self, username, password, cfile, ifile, reboot):
+	def setup_batchfirmware(self, username, password, cfile, ifile, reboot=False):
 		self.uname = username
 		self.password = password
 		print("yeet")
-		self.get_ips(ifile)
+		# self.get_ips(ifile)
 		self.table_setup()
 		self.openexecutewindow.emit()
 		print("Showed the Execute")
@@ -199,7 +199,7 @@ class SFTP(QtCore.QObject):
 			self.batchfirmware2(username, password, ip, cfile, i)
 
 
-	def setup_batchpassword(self, username, password, cfile, ifile, reboot):
+	def setup_batchpassword(self, username, password, ifile, reboot=False):
 		self.uname = username
 		self.password = password
 		print("yeet")

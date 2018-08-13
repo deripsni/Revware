@@ -183,7 +183,8 @@ class Master(QtCore.QObject):
 
 	def create_batch_password_setup_thread(self):
 		self.batch_setup_thread = menu.BatchPasswordSetup(self.gui.ubox.text(), self.gui.pbox.text(), self.batchpasswordwindow.pbox.text(),
-														  self.batchpasswordwindow.npbox.text(), parent=self)
+														  self.batchpasswordwindow.npbox.text(), ifile=self.batchpasswordwindow.iptxt.text(),
+														  parent=self)
 		self.batch_setup_thread.start()
 
 	def create_batch_execute_thread(self):
@@ -429,8 +430,21 @@ class BatchPasswordWindow(QWidget):
 		self.plabel.move(7, 30)
 		self.plabel.resize(90, 30)
 
+		self.ipbtn = QPushButton('Browse', self)
+		self.ipbtn.move(100, 60)
+		self.ipbtn.resize(50, 20)
+		self.ipbtn.setAutoDefault(True)
+
+		self.iplabel = QLabel('IP List:', self)
+		self.iplabel.move(59, 55)
+		self.iplabel.resize(40, 30)
+
+		self.iptxt = QLineEdit(self)
+		self.iptxt.move(160, 60)
+		self.iptxt.resize(250, 20)
+
 		self.btn = QPushButton("Submit", self)
-		self.btn.move(360, 65)
+		self.btn.move(360, 85)
 		self.btn.resize(50, 20)
 		self.btn.setAutoDefault(True)
 
