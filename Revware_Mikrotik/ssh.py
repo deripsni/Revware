@@ -6,7 +6,7 @@ from PyQt5 import QtCore
 class SSHConnection(QtCore.QObject):
 	progressSignal = QtCore.pyqtSignal(int)
 	pMaxSignal = QtCore.pyqtSignal(int)
-	pCloseSignal = QtCore.pyqtSignal()
+	pCloseSignal = QtCore.pyqtSignal(bool)
 	printToScreen = QtCore.pyqtSignal(str)
 
 	def __init__(self, parent=None):
@@ -20,9 +20,9 @@ class SSHConnection(QtCore.QObject):
 		self.localpath = None
 		self.client = None
 		self.printToScreen.connect(parent.parent().gui.update_status)
-		self.progressSignal.connect(parent.parent().progresswindow.update_progress)
-		self.pMaxSignal.connect(parent.parent().progresswindow.set_max)
-		self.pCloseSignal.connect(parent.parent().progresswindow.close)
+		self.progressSignal.connect(parent.parent().gui.update_progress)
+		self.pMaxSignal.connect(parent.parent().gui.set_max)
+		self.pCloseSignal.connect(parent.parent().gui.view_progress)
 
 	def print_progress(self, iteration, total, pre ='', suf ='', dec = 2, len = 100, fill ='█'):
 		percent = ("{0:." + str(dec) + "f}").format(100 * (iteration/float(total)))
@@ -100,7 +100,7 @@ class SSHConnection(QtCore.QObject):
 			self.printToScreen.emit("Uploading file...")
 			QtCore.QCoreApplication.processEvents()
 			self.sftp.put(self.localpath, self.filepath, callback=self.transfer)
-			self.pCloseSignal.emit()
+			self.pCloseSignal.emit(False)
 			self.printToScreen.emit("DONE: File Uploaded")
 			QtCore.QCoreApplication.processEvents()
 			print("made check 1")
@@ -149,3 +149,6 @@ class SSHConnection(QtCore.QObject):
 
 		except (UnicodeError, RecursionError):
 			self.printToScreen.emit("Please enter a valid IP")
+
+		except (TimeoutError):
+			self.printToScreen.emit("Connection timed out")

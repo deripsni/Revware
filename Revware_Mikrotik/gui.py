@@ -101,7 +101,7 @@ class Master(QtCore.QObject):
 		self.gui.clearbtn.clicked.connect(self.gui.clear_info)
 
 		self.fwindow.fbtn.clicked.connect(self.fwindow.f_set)
-		self.fwindow.btn.clicked.connect(self.progresswindow.show)
+		self.fwindow.btn.clicked.connect(lambda: self.gui.pbar.setVisible(True))
 		self.fwindow.btn.clicked.connect(self.create_firmware_thread)
 		self.fwindow.btn.clicked.connect(self.fwindow.close)
 
@@ -130,7 +130,7 @@ class Master(QtCore.QObject):
 		self.twindow.apibtn.clicked.connect(self.twindow.close)
 
 		self.mwindow.btn.clicked.connect(self.create_mikro_thread)
-		self.mwindow.btn.clicked.connect(self.progresswindow.show)
+		self.mwindow.btn.clicked.connect(lambda: self.gui.pbar.setVisible(True))
 		self.mwindow.btn.clicked.connect(self.mwindow.close)
 
 		self.gui.settingsAction.triggered.connect(self.settingswindow.show)
@@ -635,9 +635,15 @@ class MainWindow(QMainWindow):
 		self.plabel.move(27, 78)
 		self.plabel.resize(50, 20)
 
+		self.pbar = QProgressBar(self)
+		self.pbar.move(140, 107)
+		self.pbar.resize(260, 20)
+		self.pbar.setMinimum(0)
+		self.pbar.setVisible(False)
+
 		self.clearbtn = QPushButton("Clear", self)
 		self.clearbtn.resize(50, 20)
-		self.clearbtn.move(420, 105)
+		self.clearbtn.move(420, 107)
 		self.clearbtn.setAutoDefault(True)
 
 		self.btn1 = QPushButton("Firmware", self)
@@ -688,6 +694,18 @@ class MainWindow(QMainWindow):
 		self.statusBar()
 		self.setGeometry(0, 0, 500, 440)
 		self.setWindowTitle('Revware Mikrotik Control')
+
+	@QtCore.pyqtSlot(int)
+	def update_progress(self, value):
+		self.pbar.setValue(value)
+
+	@QtCore.pyqtSlot(int)
+	def set_max(self, value):
+		self.pbar.setMaximum(value)
+
+	@QtCore.pyqtSlot(bool)
+	def view_progress(self, x):
+		self.pbar.setVisible(x)
 
 	@QtCore.pyqtSlot()
 	def clear_info(self):

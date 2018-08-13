@@ -10,14 +10,14 @@ class IPTest(QtCore.QObject):
 	printToScreen = QtCore.pyqtSignal(str)
 	progressSignal = QtCore.pyqtSignal(int)
 	pMaxSignal = QtCore.pyqtSignal(int)
-	pCloseSignal = QtCore.pyqtSignal()
+	pCloseSignal = QtCore.pyqtSignal(bool)
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
 		self.printToScreen.connect(parent.parent().gui.update_status)
-		self.progressSignal.connect(parent.parent().progresswindow.update_progress)
-		self.pMaxSignal.connect(parent.parent().progresswindow.set_max)
-		self.pCloseSignal.connect(parent.parent().progresswindow.close)
+		self.progressSignal.connect(parent.parent().gui.update_progress)
+		self.pMaxSignal.connect(parent.parent().gui.set_max)
+		self.pCloseSignal.connect(parent.parent().gui.view_progress)
 
 	@QtCore.pyqtSlot(str, int, bool)
 	def ping(self, ip1, tries, timeout_include):
@@ -86,5 +86,5 @@ class IPTest(QtCore.QObject):
 						file.write(str(addr) + "\n")
 					self.sock.close()
 				self.progressSignal.emit(self.count)
-		self.pCloseSignal.emit()
+		self.pCloseSignal.emit(False)
 		file.close()

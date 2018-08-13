@@ -99,45 +99,45 @@ class SFTP(QtCore.QObject):
 		except routeros_api.exceptions.RouterOsApiCommunicationError:
 			print("Communication Error")
 
-	def batchsftp(self, username, password, cfile, ifile, reboot):
-
-		self.uname = username
-		self.password = password
-
-		self.get_ips(ifile)
-		self.table_setup()
-
-		print(self.indexesonline)
-		while 1:
-			pass
-
-		for i in range(len(self.ips)):
-
-			self.batchsftp2(username, password, self.ips[i], cfile)
-			if reboot == 'Y' or reboot == 'y':
-				ssh.ssh(self.ips[i], username, password, 'system reboot')
-
-		if reboot == 'Y' or reboot == 'y':
-			print('\n\n')
-			if len(self.ips) < 5:  # avoids an issue where the radios are pinged before they shut down for short ip lists
-				time.sleep(4)
-			print('Checking for rebooted machines')
-			for i in range(len(self.ips)):
-				print("Waiting.", end='')
-				ping.ping(self.ips[i])
-
-	def batchsftp2(self, username, password, ip, cfile):
-		transport = paramiko.Transport(ip, 22)
-		transport.connect(username=username, password=password)
-		sftp = paramiko.SFTPClient.from_transport(transport)
-		filepath = '/batch.bat'
-		print("Uploading file...")
-		sftp.put(cfile, filepath, callback=self.parent().sshc.transfer)
-		print("DONE: File Uploaded")
-		self.parent().sshc.ssh(ip, username, password, mikrotik_command='/import batch.bat')
-
-		sftp.close()
-		transport.close()
+	# def batchsftp(self, username, password, cfile, ifile, reboot):
+	#
+	# 	self.uname = username
+	# 	self.password = password
+	#
+	# 	self.get_ips(ifile)
+	# 	self.table_setup()
+	#
+	# 	print(self.indexesonline)
+	# 	while 1:
+	# 		pass
+	#
+	# 	for i in range(len(self.ips)):
+	#
+	# 		self.batchsftp2(username, password, self.ips[i], cfile)
+	# 		if reboot == 'Y' or reboot == 'y':
+	# 			ssh.ssh(self.ips[i], username, password, 'system reboot')
+	#
+	# 	if reboot == 'Y' or reboot == 'y':
+	# 		print('\n\n')
+	# 		if len(self.ips) < 5:  # avoids an issue where the radios are pinged before they shut down for short ip lists
+	# 			time.sleep(4)
+	# 		print('Checking for rebooted machines')
+	# 		for i in range(len(self.ips)):
+	# 			print("Waiting.", end='')
+	# 			ping.ping(self.ips[i])
+	#
+	# def batchsftp2(self, username, password, ip, cfile):
+	# 	transport = paramiko.Transport(ip, 22)
+	# 	transport.connect(username=username, password=password)
+	# 	sftp = paramiko.SFTPClient.from_transport(transport)
+	# 	filepath = '/batch.bat'
+	# 	print("Uploading file...")
+	# 	sftp.put(cfile, filepath, callback=self.parent().sshc.transfer)
+	# 	print("DONE: File Uploaded")
+	# 	self.parent().sshc.ssh(ip, username, password, mikrotik_command='/import batch.bat')
+	#
+	# 	sftp.close()
+	# 	transport.close()
 
 	def filecallback(self):   # callback function that does nothing
 		pass
@@ -150,8 +150,6 @@ class SFTP(QtCore.QObject):
 		self.table_setup()
 		self.openexecutewindow.emit()
 		print("Showed the Execute")
-
-		# self.batchfirmware(username, password, cfile, ifile, reboot)
 
 	def batchfirmware(self, username, password, cfile, ifile, reboot):
 
