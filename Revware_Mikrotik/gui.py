@@ -509,7 +509,7 @@ class StatusWindow(QWidget):
 		self.title = 'PyQt5 table - pythonspot.com'
 		self.left = 510
 		self.top = 30
-		self.width = 525
+		self.width = 526
 		self.height = 440
 		self.init_ui()
 
@@ -523,6 +523,12 @@ class StatusWindow(QWidget):
 		self.layout = QVBoxLayout()
 		self.layout.addWidget(self.tableWidget)
 		self.setLayout(self.layout)
+
+		# self.pbar = QProgressBar(self)
+		# self.pbar.move(416, 100)
+		# self.pbar.resize(91, 23)
+		# self.pbar.setMinimum(0)
+		# # self.pbar.setVisible(False)
 
 		# Show widget
 		print("hecks yeah")
@@ -575,6 +581,22 @@ class StatusWindow(QWidget):
 			self.tableWidget.item(x, y).setBackground(QtGui.QColor(76, 187, 23))
 			self.tableWidget.item(x, y).setForeground(QtGui.QColor(0, 0, 0))
 
+	# @QtCore.pyqtSlot(int)
+	# def set_progress_index(self, i):
+	# 	self.y = 40 + 30*i
+	# 	self.pbar.move(416, self.y)
+	#
+	# @QtCore.pyqtSlot(int)
+	# def update_progress(self, value):
+	# 	self.pbar.setValue(value)
+	#
+	# @QtCore.pyqtSlot(int)
+	# def set_max(self, value):
+	# 	self.pbar.setMaximum(value)
+	#
+	# @QtCore.pyqtSlot(bool)
+	# def view_progress(self, x):
+	# 	self.pbar.setVisible(x)
 
 class MainWindow(QMainWindow):
 	def __init__(self):

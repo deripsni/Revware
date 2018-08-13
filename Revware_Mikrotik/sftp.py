@@ -182,7 +182,9 @@ class SFTP(QtCore.QObject):
 			filepath = '/routeros-mipsbe-6.39.1.npk'
 			print("Uploading file...")
 			self.setcelltextsignal.emit(i, 4, 'Uploading...')
-			sftp.put(cfile, filepath, callback=self.parent().sshc.transfer)
+			self.currentindex = i
+			sftp.put(cfile, filepath, callback=self.transfer)
+			# self.batch_print_progress(self.transferred, self.to_transfer, i)
 			print("DONE: File Uploaded")
 			sftp.close()
 			transport.close()
@@ -196,6 +198,15 @@ class SFTP(QtCore.QObject):
 			self.tried = True
 			self.batchfirmware2(username, password, ip, cfile, i)
 
+	def transfer(self, transferred, to_transfer):
+		self.transferred = transferred
+		self.to_transfer = to_transfer
+		self.batch_print_progress(self.transferred, self.to_transfer, self.currentindex, dec=0)
+
+	def batch_print_progress(self, iteration, total, index, dec=2):
+		percent = ("{0:." + str(dec) + "f}").format(100 * (iteration / float(total)))
+		string = percent + "%"
+		self.setcelltextsignal.emit(index, 4, string)
 
 class PingMachines(QtCore.QThread):
 
@@ -238,3 +249,4 @@ class PingMachines(QtCore.QThread):
 				self.setcellcolorsignal.emit(j, 3, 'green')
 				time.sleep(2)
 				self.parent.get_variables(j)
+

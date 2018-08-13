@@ -24,6 +24,7 @@ class SSHConnection(QtCore.QObject):
 		self.pMaxSignal.connect(parent.parent().gui.set_max)
 		self.pCloseSignal.connect(parent.parent().gui.view_progress)
 
+
 	def print_progress(self, iteration, total, pre ='', suf ='', dec = 2, len = 100, fill ='█'):
 		percent = ("{0:." + str(dec) + "f}").format(100 * (iteration/float(total)))
 		filled_length = int(len * iteration // total)
