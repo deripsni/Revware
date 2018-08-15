@@ -700,7 +700,7 @@ class StatusWindow(QWidget):
 		self.title = 'PyQt5 table - pythonspot.com'
 		self.left = 510
 		self.top = 30
-		self.width = 526
+		self.width = 632
 		self.height = 440
 		self.init_ui()
 
@@ -729,10 +729,10 @@ class StatusWindow(QWidget):
 		# Create table
 		self.tableWidget = QTableWidget()
 		self.tableWidget.setRowCount(0)
-		self.tableWidget.setColumnCount(5)
+		self.tableWidget.setColumnCount(6)
 		self.tableWidget.verticalHeader().setVisible(False)
 
-		self.headers = ["IP", "Name", "Firmware", "Online", "Status"]
+		self.headers = ["IP", "Name", "Firmware", "Architecture", "Online", "Status"]
 
 		self.tableWidget.setHorizontalHeaderLabels(self.headers)
 

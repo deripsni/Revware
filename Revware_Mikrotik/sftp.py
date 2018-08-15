@@ -57,16 +57,16 @@ class SFTP(QtCore.QObject):
 		for i in range(len(self.ips)):
 
 			if self.parent().ping.ping(self.ips[i], 1, False) == 'online':
-				self.setcelltextsignal.emit(i, 3, 'Yes')
-				self.setcellcolorsignal.emit(i, 3, 'green')
+				self.setcelltextsignal.emit(i, 4, 'Yes')
+				self.setcellcolorsignal.emit(i, 4, 'green')
 				self.indexesonline.append(i)
 				self.tried = False
 				self.get_variables(i)
 
 			else:
-				self.setcelltextsignal.emit(i, 3, 'No')
-				self.setcellcolorsignal.emit(i, 3, 'red')
-				self.setcelltextsignal.emit(i, 4, 'Offline')
+				self.setcelltextsignal.emit(i, 4, 'No')
+				self.setcellcolorsignal.emit(i, 4, 'red')
+				self.setcelltextsignal.emit(i, 5, 'Offline')
 
 	def get_variables(self, i):
 		try:
@@ -82,11 +82,15 @@ class SFTP(QtCore.QObject):
 			self.filter = self.version.get()
 			self.setcelltextsignal.emit(i, 2, self.filter[0]['version'])
 
+			self.architecture = api.get_resource('/system/resource')
+			self.filter = self.version.get()
+			self.setcelltextsignal.emit(i, 3, self.filter[0]['architecture-name'])
+
 			return None
 
 		except routeros_api.exceptions.RouterOsApiConnectionError:
 			if self.tried:
-				self.setcelltextsignal.emit(i, 4, 'Failed')
+				self.setcelltextsignal.emit(i, 5, 'Failed')
 				self.indexesonline.pop()
 				return None
 			else:
@@ -124,9 +128,9 @@ class SFTP(QtCore.QObject):
 			self.count = self.count + 1
 			self.batchfirmware2(username, password, self.ips[i], cfile, i)
 			self.parent().sshc.ssh(self.ips[i], username, password, 'system reboot')
-			self.setcelltextsignal.emit(i, 4, 'Rebooting...')
-			self.setcelltextsignal.emit(i, 3, 'No')
-			self.setcellcolorsignal.emit(i, 3, 'red')
+			self.setcelltextsignal.emit(i, 5, 'Rebooting...')
+			self.setcelltextsignal.emit(i, 4, 'No')
+			self.setcellcolorsignal.emit(i, 4, 'red')
 			if self.count == 2:
 				self.batch_ping_thread = PingMachines(self.indexesonline, self.ips, parent=self)
 				self.batch_ping_thread.start()
@@ -143,7 +147,7 @@ class SFTP(QtCore.QObject):
 			sftp = paramiko.SFTPClient.from_transport(transport)
 			filepath = '/routeros-mipsbe-6.39.1.npk'
 			print("Uploading file...")
-			self.setcelltextsignal.emit(i, 4, 'Uploading...')
+			self.setcelltextsignal.emit(i, 5, 'Uploading...')
 			self.currentindex = i
 			sftp.put(cfile, filepath, callback=self.transfer)
 			# self.batch_print_progress(self.transferred, self.to_transfer, i)
@@ -180,7 +184,7 @@ class SFTP(QtCore.QObject):
 			self.count = self.count + 1
 
 			self.parent().sshc.ssh(self.ips[i], username, password, command)
-			self.setcelltextsignal.emit(i, 4, 'Command Sent')
+			self.setcelltextsignal.emit(i, 5, 'Command Sent')
 			# self.batchpassword2(username, password, self.ips[i], cfile, i)
 			# self.printToScreen.emit("Password changed")
 
@@ -189,9 +193,9 @@ class SFTP(QtCore.QObject):
 		for i in self.indexesonline:
 			try:
 				self.parent().sshc.ssh(self.ips[i], username, self.parent().p1, "")
-				self.setcelltextsignal.emit(i, 4, 'Verified')
+				self.setcelltextsignal.emit(i, 5, 'Verified')
 			except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.AuthenticationException):
-				self.setcelltextsignal.emit(i, 4, 'Failed')
+				self.setcelltextsignal.emit(i, 5, 'Failed')
 		self.uploading = None
 
 	def transfer(self, transferred, to_transfer):
@@ -202,7 +206,7 @@ class SFTP(QtCore.QObject):
 	def batch_print_progress(self, iteration, total, index, dec=2):
 		percent = ("{0:." + str(dec) + "f}").format(100 * (iteration / float(total)))
 		string = percent + "%"
-		self.setcelltextsignal.emit(index, 4, string)
+		self.setcelltextsignal.emit(index, 5, string)
 
 
 class PingMachines(QtCore.QThread):
@@ -243,8 +247,8 @@ class PingMachines(QtCore.QThread):
 			time.sleep(10)
 			print("Waiting.", end='')
 			if self.ping.ping(self.ips[j], 50, True) == "online":
-				self.setcelltextsignal.emit(j, 4, 'Done')
-				self.setcelltextsignal.emit(j, 3, 'Yes')
-				self.setcellcolorsignal.emit(j, 3, 'green')
+				self.setcelltextsignal.emit(j, 5, 'Done')
+				self.setcelltextsignal.emit(j, 4, 'Yes')
+				self.setcellcolorsignal.emit(j, 4, 'green')
 				time.sleep(2)
 				self.parent.get_variables(j)
