@@ -76,7 +76,8 @@ class Master(QtCore.QObject):
 		self.progresswindow = ProgressWindow()
 		self.settingswindow = SettingsWindow()
 		self.swindow = StatusWindow()
-		self.batchexecutewindow = BatchExecuteWindow()
+		self.batchfirmwareexecutewindow = BatchExecuteWindow()
+		self.batchpasswordexecutewindow = BatchExecuteWindow()
 		self.connect_signals()
 		self.gui.show()
 
@@ -128,9 +129,13 @@ class Master(QtCore.QObject):
 		self.batchpasswordwindow.btn.clicked.connect(self.create_batch_password_setup_thread)
 		self.batchpasswordwindow.btn.clicked.connect(self.batchstackwindow.close)
 		self.batchpasswordwindow.btn.clicked.connect(self.swindow.show)
+		self.batchpasswordwindow.ipbtn.clicked.connect(self.batchpasswordwindow.i_set)
 
-		self.batchexecutewindow.btn.clicked.connect(self.create_batch_execute_thread)
-		self.batchexecutewindow.btn.clicked.connect(self.batchexecutewindow.close)
+		self.batchfirmwareexecutewindow.btn.clicked.connect(self.create_batch_firmware_execute_thread)
+		self.batchfirmwareexecutewindow.btn.clicked.connect(self.batchfirmwareexecutewindow.close)
+
+		self.batchpasswordexecutewindow.btn.clicked.connect(self.create_batch_password_execute_thread)
+		self.batchpasswordexecutewindow.btn.clicked.connect(self.batchpasswordexecutewindow.close)
 
 		self.twindow.sshbtn.clicked.connect(lambda: self.create_telnet_thread("ssh"))
 		self.twindow.sshbtn.clicked.connect(self.twindow.close)
@@ -149,57 +154,73 @@ class Master(QtCore.QObject):
 
 	def create_firmware_thread(self):
 		self.fwindow.show()
-		self.firmware_thread = menu.Firmware(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
-											 self.fwindow.ftxt.text(), parent=self)
+		self.firmware_thread = menu.Firmware(
+											self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
+											self.fwindow.ftxt.text(), parent=self)
 		self.firmware_thread.start()
 
 	def create_password_thread(self):
-		self.password_thread = menu.Password(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
-											 self.pwindow.pbox.text(), self.pwindow.npbox.text(), parent=self)
+		self.password_thread = menu.Password(
+											self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
+											self.pwindow.pbox.text(), self.pwindow.npbox.text(), parent=self)
 		self.password_thread.start()
 
 	def create_firewall_thread(self):
 
-		self.firewall_thread = menu.Firewall(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
-											 parent= self)
+		self.firewall_thread = menu.Firewall(
+											self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
+											parent=self)
 		self.firewall_thread.start()
 
 	def create_device_name_thread(self):
-		self.device_name_thread = menu.DeviceName(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
-												  parent= self)
+		self.device_name_thread = menu.DeviceName(
+												self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
+												parent=self)
 		self.device_name_thread.start()
 
 	def create_custom_command_thread(self):
 
-		self.command_thread = menu.CustomCommand(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
-												 self.cwindow.cbox.text(), parent = self)
+		self.command_thread = menu.CustomCommand(
+												self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
+												self.cwindow.cbox.text(), parent=self)
 
 		self.command_thread.start()
 
 	def create_batch_firmware_setup_thread(self):
-		self.batch_setup_thread = menu.BatchFirmwareSetup(self.gui.ubox.text(), self.gui.pbox.text(), self.batchfirmwarewindow.ctxt.text(),
-														  self.batchfirmwarewindow.iptxt.text(), parent=self)
+		self.batch_setup_thread = menu.BatchFirmwareSetup(
+														self.gui.ubox.text(), self.gui.pbox.text(), self.batchfirmwarewindow.ctxt.text(),
+														self.batchfirmwarewindow.iptxt.text(), parent=self)
 		self.batch_setup_thread.start()
 
 	def create_batch_password_setup_thread(self):
-		self.batch_setup_thread = menu.BatchPasswordSetup(self.gui.ubox.text(), self.gui.pbox.text(), self.batchpasswordwindow.pbox.text(),
-														  self.batchpasswordwindow.npbox.text(), ifile=self.batchpasswordwindow.iptxt.text(),
-														  parent=self)
+		self.batch_setup_thread = menu.BatchPasswordSetup(
+														self.gui.ubox.text(), self.gui.pbox.text(), self.batchpasswordwindow.pbox.text(),
+														self.batchpasswordwindow.npbox.text(), ifile=self.batchpasswordwindow.iptxt.text(),
+														parent=self)
 		self.batch_setup_thread.start()
 
-	def create_batch_execute_thread(self):
-		self.batch_setup_thread = menu.BatchFirmwareExecute(self.gui.ubox.text(), self.gui.pbox.text(), self.bwindow.ctxt.text(),
-															self.bwindow.iptxt.text(), self.obj, parent=self)
+	def create_batch_firmware_execute_thread(self):
+		self.batch_setup_thread = menu.BatchFirmwareExecute(
+															self.gui.ubox.text(), self.gui.pbox.text(), self.batchfirmwarewindow.ctxt.text(),
+															self.batchfirmwarewindow.iptxt.text(), self.obj, parent=self)
+		self.batch_setup_thread.start()
+
+	def create_batch_password_execute_thread(self):
+		self.batch_setup_thread = menu.BatchPasswordExecute(
+															self.gui.ubox.text(), self.gui.pbox.text(),
+															self.batchpasswordwindow.npbox.text(), self.obj, parent=self)
 		self.batch_setup_thread.start()
 
 	def create_telnet_thread(self, method):
-		self.telnet_thread = menu.Telnet(self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
-										 method, parent=self)
+		self.telnet_thread = menu.Telnet(
+										self.gui.ipbox.text(), self.gui.ubox.text(), self.gui.pbox.text(),
+										method, parent=self)
 		self.telnet_thread.start()
 
 	def create_mikro_thread(self):
-		self.mikro_thread = menu.Mikrotik(self.mwindow.b1.text(), self.mwindow.b2.text(),
-										  self.mwindow.r1.isChecked(), parent=self)
+		self.mikro_thread = menu.Mikrotik(
+										self.mwindow.b1.text(), self.mwindow.b2.text(),
+										self.mwindow.r1.isChecked(), parent=self)
 		self.mikro_thread.start()
 
 	@QtCore.pyqtSlot(sftp.SFTP)
@@ -304,6 +325,7 @@ class CommandWindow(QMainWindow):
 
 		self.setWindowModality(QtCore.Qt.ApplicationModal)
 
+
 class BatchStack(QStackedWidget):
 
 	def __init__(self, parent=None, firmware=None, menu=None, password=None):
@@ -318,6 +340,7 @@ class BatchStack(QStackedWidget):
 		self.setGeometry(90, 200, 420, 120)
 		self.setWindowTitle('Batch SFTP')
 		pass
+
 
 class BatchMenu(QWidget):
 	def __init__(self, parent=None):
@@ -455,6 +478,11 @@ class BatchPasswordWindow(QWidget):
 
 		self.setWindowModality(QtCore.Qt.ApplicationModal)
 
+	def i_set(self, ):
+		fname = QFileDialog.getOpenFileName(self, 'Open file', filter="Text files (*.txt)")
+		self.iptxt.setText(fname[0])
+
+
 class BatchExecuteWindow(QWidget):
 
 	def __init__(self, parent=None):
@@ -470,6 +498,7 @@ class BatchExecuteWindow(QWidget):
 
 		self.setGeometry(90, 200, 120, 50)
 		self.setWindowTitle('Batch SFTP')
+
 
 class TelnetWindow(QMainWindow):
 

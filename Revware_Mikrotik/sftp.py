@@ -20,7 +20,8 @@ class SFTP(QtCore.QObject):
 	pMaxSignal = QtCore.pyqtSignal(int)
 	pCloseSignal = QtCore.pyqtSignal()
 
-	openexecutewindow = QtCore.pyqtSignal()
+	openfexecutewindow = QtCore.pyqtSignal()
+	openpexecutewindow = QtCore.pyqtSignal()
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
@@ -36,7 +37,8 @@ class SFTP(QtCore.QObject):
 		self.pMaxSignal.connect(parent.parent().progresswindow.set_max)
 		self.pCloseSignal.connect(parent.parent().progresswindow.close)
 
-		self.openexecutewindow.connect(parent.parent().batchexecutewindow.show)
+		self.openfexecutewindow.connect(parent.parent().batchfirmwareexecutewindow.show)
+		self.openpexecutewindow.connect(parent.parent().batchpasswordexecutewindow.show)
 
 	def get_ips(self, ifile):
 		with open(ifile, 'r') as infile:
@@ -148,7 +150,7 @@ class SFTP(QtCore.QObject):
 		print("yeet")
 		# self.get_ips(ifile)
 		self.table_setup()
-		self.openexecutewindow.emit()
+		self.openfexecutewindow.emit()
 		print("Showed the Execute")
 
 	def batchfirmware(self, username, password, cfile, ifile, reboot):
@@ -205,55 +207,34 @@ class SFTP(QtCore.QObject):
 		print("yeet")
 		self.get_ips(ifile)
 		self.table_setup()
-		self.openexecutewindow.emit()
+		self.openpexecutewindow.emit()
 		print("Showed the Execute")
 
-	def batchpassword(self, username, password, cfile, ifile, reboot):
+	def batchpassword(self, username, password, command, reboot=False):
 
 		print(self.indexesonline)
-
+		self.command = command
 		self.count = 0
 
 		for i in self.indexesonline:
 			self.tried = False
 			self.count = self.count + 1
-			self.batchpassword2(username, password, self.ips[i], cfile, i)
-			self.parent().sshc.ssh(self.ips[i], username, password, 'system reboot')
-			self.setcelltextsignal.emit(i, 4, 'Rebooting...')
-			self.setcelltextsignal.emit(i, 3, 'No')
-			self.setcellcolorsignal.emit(i, 3, 'red')
-			if self.count == 2:
-				self.batch_ping_thread = PingMachines(self.indexesonline, self.ips, parent=self)
-				self.batch_ping_thread.start()
+
+			self.parent().sshc.ssh(self.ips[i], username, password, command)
+			self.setcelltextsignal.emit(i, 4, 'Command Sent')
+			# self.batchpassword2(username, password, self.ips[i], cfile, i)
+			# self.printToScreen.emit("Password changed")
+
+		self.printToScreen.emit("Verifying Passwords")
+
+		for i in self.indexesonline:
+			try:
+				self.parent().sshc.ssh(self.ips[i], username, self.parent().p1, "")
+				self.setcelltextsignal.emit(i, 4, 'Verified')
+			except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.AuthenticationException):
+				self.setcelltextsignal.emit(i, 4, 'Failed')
 		self.uploading = None
 
-	def batchpassword2(self, username, password, ip, cfile, i):
-
-		self.uploading = i
-
-		try:
-
-			transport = paramiko.Transport(ip, 22)
-			transport.connect(username=username, password=password)
-			sftp = paramiko.SFTPClient.from_transport(transport)
-			filepath = '/routeros-mipsbe-6.39.1.npk'
-			print("Uploading file...")
-			self.setcelltextsignal.emit(i, 4, 'Uploading...')
-			self.currentindex = i
-			sftp.put(cfile, filepath, callback=self.transfer)
-			# self.batch_print_progress(self.transferred, self.to_transfer, i)
-			print("DONE: File Uploaded")
-			sftp.close()
-			transport.close()
-
-		except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.NoValidConnectionsError):
-			if self.tried:
-				return None
-			self.printToScreen.emit("Could not establish an SSH connection")
-			self.printToScreen.emit("Attempting to enable SSH through Telnet")
-			self.parent().tel.telnet(ip, username, password, "ssh")
-			self.tried = True
-			self.batchpassword2(username, password, ip, cfile, i)
 
 	def transfer(self, transferred, to_transfer):
 		self.transferred = transferred
@@ -295,8 +276,10 @@ class PingMachines(QtCore.QThread):
 			time.sleep(1)
 
 			print("pinging this ip: " + self.ips[j] + "at index" + str(j))
-			while j == self.parent.uploading:
-				pass
+
+			if hasattr(self.parent, 'uploading'):
+				while j == self.parent.uploading:
+					pass
 
 			time.sleep(10)
 			print("Waiting.", end='')

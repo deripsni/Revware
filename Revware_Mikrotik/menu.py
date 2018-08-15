@@ -266,22 +266,20 @@ class BatchPasswordExecute(QtCore.QThread):
 	printToScreen = QtCore.pyqtSignal(str)
 	savesetup = QtCore.pyqtSignal(sftp.SFTP)
 
-	def __init__(self, username_input, password_input, cfile, ifile, obj, parent=None):
+	def __init__(self, username_input, password_input, new_password, obj, parent=None):
 		super(self.__class__, self).__init__(parent)
 		self.printToScreen.connect(self.parent().gui.update_status)
 		self.obj = obj
+		self.n_password = new_password
 		self.localu = username_input
 		self.localp = password_input
-		self.cmdFile = cfile
-		self.ipFile = ifile
 		self.create_ssh()
 
 	@QtCore.pyqtSlot(str, str)
 	def run(self):
 		print("Batch SFTP")
-
-		self.mysftp.batchpassword(username=self.localu, password=self.localp, cfile=self.cmdFile, ifile=self.ipFile,
-								  reboot='yes')
+		self.command = "user set admin password=" + self.n_password
+		self.mysftp.batchpassword(username=self.localu, password=self.localp, command=self.command)
 
 	def create_ssh(self):
 		self.mysftp = self.obj
