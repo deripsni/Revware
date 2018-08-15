@@ -93,53 +93,13 @@ class SFTP(QtCore.QObject):
 				self.printToScreen.emit("Could not establish API connection")
 				self.printToScreen.emit("Attempting to enable API through SSH")
 				self.parent().sshc.enable_api(self.ips[i], self.uname, self.password, attempts=0)
-				# self.parent().tel.telnet(self.ips[i], self.uname, self.password, "api")
 				self.printToScreen.emit("made it back to here")
 				self.tried = True
 				time.sleep(0.5)
 				self.get_variables(i)
 		except routeros_api.exceptions.RouterOsApiCommunicationError:
-			print("Communication Error")
 
-	# def batchsftp(self, username, password, cfile, ifile, reboot):
-	#
-	# 	self.uname = username
-	# 	self.password = password
-	#
-	# 	self.get_ips(ifile)
-	# 	self.table_setup()
-	#
-	# 	print(self.indexesonline)
-	# 	while 1:
-	# 		pass
-	#
-	# 	for i in range(len(self.ips)):
-	#
-	# 		self.batchsftp2(username, password, self.ips[i], cfile)
-	# 		if reboot == 'Y' or reboot == 'y':
-	# 			ssh.ssh(self.ips[i], username, password, 'system reboot')
-	#
-	# 	if reboot == 'Y' or reboot == 'y':
-	# 		print('\n\n')
-	# 		if len(self.ips) < 5:  # avoids an issue where the radios are pinged before they shut down for short ip lists
-	# 			time.sleep(4)
-	# 		print('Checking for rebooted machines')
-	# 		for i in range(len(self.ips)):
-	# 			print("Waiting.", end='')
-	# 			ping.ping(self.ips[i])
-	#
-	# def batchsftp2(self, username, password, ip, cfile):
-	# 	transport = paramiko.Transport(ip, 22)
-	# 	transport.connect(username=username, password=password)
-	# 	sftp = paramiko.SFTPClient.from_transport(transport)
-	# 	filepath = '/batch.bat'
-	# 	print("Uploading file...")
-	# 	sftp.put(cfile, filepath, callback=self.parent().sshc.transfer)
-	# 	print("DONE: File Uploaded")
-	# 	self.parent().sshc.ssh(ip, username, password, mikrotik_command='/import batch.bat')
-	#
-	# 	sftp.close()
-	# 	transport.close()
+			print("Communication Error")
 
 	def filecallback(self):   # callback function that does nothing
 		pass
@@ -148,7 +108,7 @@ class SFTP(QtCore.QObject):
 		self.uname = username
 		self.password = password
 		print("yeet")
-		# self.get_ips(ifile)
+		self.get_ips(ifile)
 		self.table_setup()
 		self.openfexecutewindow.emit()
 		print("Showed the Execute")
@@ -200,8 +160,7 @@ class SFTP(QtCore.QObject):
 			self.tried = True
 			self.batchfirmware2(username, password, ip, cfile, i)
 
-
-	def setup_batchpassword(self, username, password, ifile, reboot=False):
+	def setup_batchpassword(self, username, password, ifile):
 		self.uname = username
 		self.password = password
 		print("yeet")
@@ -210,7 +169,7 @@ class SFTP(QtCore.QObject):
 		self.openpexecutewindow.emit()
 		print("Showed the Execute")
 
-	def batchpassword(self, username, password, command, reboot=False):
+	def batchpassword(self, username, password, command):
 
 		print(self.indexesonline)
 		self.command = command
@@ -235,7 +194,6 @@ class SFTP(QtCore.QObject):
 				self.setcelltextsignal.emit(i, 4, 'Failed')
 		self.uploading = None
 
-
 	def transfer(self, transferred, to_transfer):
 		self.transferred = transferred
 		self.to_transfer = to_transfer
@@ -245,6 +203,7 @@ class SFTP(QtCore.QObject):
 		percent = ("{0:." + str(dec) + "f}").format(100 * (iteration / float(total)))
 		string = percent + "%"
 		self.setcelltextsignal.emit(index, 4, string)
+
 
 class PingMachines(QtCore.QThread):
 
@@ -289,4 +248,3 @@ class PingMachines(QtCore.QThread):
 				self.setcellcolorsignal.emit(j, 3, 'green')
 				time.sleep(2)
 				self.parent.get_variables(j)
-

@@ -1,8 +1,8 @@
 import menu
 import sys
 from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication, QPlainTextEdit, QLabel, QLineEdit, QFileDialog, \
-							QRadioButton, QCheckBox, QProgressBar, QMessageBox, QFormLayout, QWidget,  QVBoxLayout, \
-							QTableWidget, QTableWidgetItem, QStackedWidget
+							QCheckBox, QProgressBar, QFormLayout, QWidget,  QVBoxLayout, \
+							QTableWidget, QTableWidgetItem, QStackedWidget, QToolBar, QHBoxLayout
 
 from PyQt5 import QtGui, QtCore
 import ctypes
@@ -88,10 +88,25 @@ class Master(QtCore.QObject):
 	def fill_settings(self):
 		# print(self.settings["defaultUsername"])
 		self.gui.ubox.setText(self.settings["defaultUsername"])
+
 		self.gui.pbox.setText(self.settings["defaultPassword"])
+
+		self.pwindow.pbox.setText(self.settings["defaultNewPassword"])
+		self.pwindow.npbox.setText(self.settings["defaultNewPassword"])
+		self.batchpasswordwindow.pbox.setText(self.settings["defaultNewPassword"])
+		self.batchpasswordwindow.npbox.setText(self.settings["defaultNewPassword"])
+
+		self.fwindow.ftxt.setText(self.settings["defaultFirmwareLocation"])
+		self.batchfirmwarewindow.ctxt.setText(self.settings["defaultFirmwareLocation"])
+
+		self.batchfirmwarewindow.iptxt.setText(self.settings["defaultIPListLocation"])
+		self.batchpasswordwindow.iptxt.setText(self.settings["defaultIPListLocation"])
 
 		self.settingswindow.b1.setText(self.settings["defaultUsername"])
 		self.settingswindow.b2.setText(self.settings["defaultPassword"])
+		self.settingswindow.b3.setText(self.settings["defaultNewPassword"])
+		self.settingswindow.b4_2.setText(self.settings["defaultFirmwareLocation"])
+		self.settingswindow.b5_2.setText(self.settings["defaultIPListLocation"])
 
 	def connect_signals(self):
 		self.gui.btn1.clicked.connect(self.fwindow.show)
@@ -612,24 +627,45 @@ class SettingsWindow(QWidget):
 		self.init_ui()
 
 	def init_ui(self):
-		self.h1 = QLabel('Settings')
+		self.h1 = QLabel('Defaults')
+		self.h1.setStyleSheet('font-size: 20px;')
+		self.h1.setAlignment(QtCore.Qt.AlignCenter)
 
 		self.layout = QFormLayout()
 
 		self.l1 = QLabel("Username")
 		self.l2 = QLabel("Password")
+		self.l3 = QLabel("New Password")
+		self.l4 = QLabel("Firmware Location")
+		self.l5 = QLabel("Batch IP List")
 
 		self.b1 = QLineEdit()
 		self.b2 = QLineEdit()
+		self.b3 = QLineEdit()
+		self.b4 = QHBoxLayout()
+		self.b4_1 = QPushButton("Browse")
+		self.b4_2 = QLineEdit()
+		self.b4.addWidget(self.b4_1)
+		self.b4.addWidget(self.b4_2)
+		self.b5 = QHBoxLayout()
+		self.b5_1 = QPushButton("Browse")
+		self.b5_2 = QLineEdit()
+		self.b5.addWidget(self.b5_1)
+		self.b5.addWidget(self.b5_2)
 
 		self.apply = QPushButton("Apply")
 		self.apply.clicked.connect(self.apply_settings)
+		self.b4_1.clicked.connect(self.f_set)
+		self.b5_1.clicked.connect(self.i_set)
 		self.apply.setAutoDefault(True)
 
 		self.layout.addRow(self.h1)
 
 		self.layout.addRow(self.l1, self.b1)
 		self.layout.addRow(self.l2, self.b2)
+		self.layout.addRow(self.l3, self.b3)
+		self.layout.addRow(self.l4, self.b4)
+		self.layout.addRow(self.l5, self.b5)
 		self.layout.addRow(self.apply)
 
 		self.setLayout(self.layout)
@@ -641,10 +677,21 @@ class SettingsWindow(QWidget):
 	def apply_settings(self):
 		master.settings['defaultUsername'] = self.b1.text()
 		master.settings['defaultPassword'] = self.b2.text()
+		master.settings['defaultNewPassword'] = self.b3.text()
+		master.settings['defaultFirmwareLocation'] = self.b4_2.text()
+		master.settings['defaultIPListLocation'] = self.b5_2.text()
 		with open('settings.yaml', 'w') as f:
 			dump(master.settings, f)
 		master.fill_settings()
 		self.close()
+
+	def f_set(self,):
+		fname = QFileDialog.getOpenFileName(self, 'Open file')
+		self.b4_2.setText(fname[0])
+
+	def i_set(self,):
+		fname = QFileDialog.getOpenFileName(self, 'Open file', filter="Text files (*.txt)")
+		self.b5_2.setText(fname[0])
 
 
 class StatusWindow(QWidget):
@@ -742,6 +789,19 @@ class StatusWindow(QWidget):
 	# def view_progress(self, x):
 	# 	self.pbar.setVisible(x)
 
+class ToolWidget(QWidget):
+
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+		self.init_ui()
+
+	def init_ui(self):
+
+		self.toolbar = QToolBar()
+		self.toolbar.addAction("Aww Yeah")
+		self.toolbar.setOrientation(QtCore.Qt.Vertical)
+
+
 class MainWindow(QMainWindow):
 	def __init__(self):
 		super().__init__()
@@ -811,6 +871,10 @@ class MainWindow(QMainWindow):
 		self.clearbtn.resize(50, 20)
 		self.clearbtn.move(420, 107)
 		self.clearbtn.setAutoDefault(True)
+
+		# self.toolwidget = ToolWidget()
+		# self.toolwidget.move(500, 500)
+		# self.toolwidget.setVisible(True)
 
 		self.btn1 = QPushButton("Firmware", self)
 		self.btn1.move(20, 135)
