@@ -6,14 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7315902-3ca4-45e6-a654-f5510cc2e68e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ipList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ipList.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ping.py" beforeDir="false" afterPath="$PROJECT_DIR$/ping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sftp.py" beforeDir="false" afterPath="$PROJECT_DIR$/sftp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ssh.py" beforeDir="false" afterPath="$PROJECT_DIR$/ssh.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/telnet.py" beforeDir="false" afterPath="$PROJECT_DIR$/telnet.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +42,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="37" />
-          <entry key="py" value="17159" />
+          <entry key="py" value="17542" />
           <entry key="qss" value="58" />
           <entry key="yaml" value="84" />
         </counts>
@@ -56,7 +50,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="95" />
-          <entry key="Python" value="17159" />
+          <entry key="Python" value="17542" />
           <entry key="YAML" value="84" />
         </counts>
       </usages-collector>
@@ -102,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="52" column="13" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="13" />
+            <state relative-caret-position="464">
+              <caret line="720" column="22" selection-start-line="720" selection-start-column="22" selection-end-line="720" selection-end-column="22" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#11325#12092#0" />
@@ -122,9 +116,9 @@
                 <element signature="e#21677#22380#0" />
                 <element signature="e#22416#24482#0" />
                 <element signature="e#24515#26736#0" />
-                <marker date="1534453098565" expanded="true" signature="14001:14004" ph="..." />
-                <marker date="1534453098565" expanded="true" signature="20610:20613" ph="..." />
-                <marker date="1534453098565" expanded="true" signature="27329:27568" ph="..." />
+                <marker date="1534454613301" expanded="true" signature="14002:14005" ph="..." />
+                <marker date="1534454613301" expanded="true" signature="20728:20731" ph="..." />
+                <marker date="1534454613301" expanded="true" signature="27805:28044" ph="..." />
               </folding>
             </state>
           </provider>
@@ -142,7 +136,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sftp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1105">
+            <state relative-caret-position="-2890">
               <caret line="73" column="12" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -164,11 +158,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ssh.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="44" column="46" lean-forward="true" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
+            <state relative-caret-position="527">
+              <caret line="64" column="101" lean-forward="true" selection-start-line="64" selection-start-column="101" selection-end-line="64" selection-end-column="101" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <marker date="1534453098639" expanded="true" signature="4672:4674" ph="..." />
@@ -226,11 +220,11 @@
         <option value="$PROJECT_DIR$/DarkOrange.qss" />
         <option value="$PROJECT_DIR$/settings.yaml" />
         <option value="$PROJECT_DIR$/menu.py" />
-        <option value="$PROJECT_DIR$/gui.py" />
         <option value="$PROJECT_DIR$/sftp.py" />
         <option value="$PROJECT_DIR$/telnet.py" />
         <option value="$PROJECT_DIR$/ping.py" />
         <option value="$PROJECT_DIR$/ssh.py" />
+        <option value="$PROJECT_DIR$/gui.py" />
       </list>
     </option>
   </component>
@@ -533,57 +527,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/menu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="372" column="13" selection-start-line="372" selection-start-column="8" selection-end-line="372" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="52" column="13" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#11325#12092#0" />
-            <element signature="e#12128#12885#0" />
-            <element signature="e#12924#13487#0" />
-            <element signature="e#13526#13933#0" />
-            <element signature="e#13963#14603#0" />
-            <element signature="e#14644#16227#0" />
-            <element signature="e#16268#17511#0" />
-            <element signature="e#17552#18409#0" />
-            <element signature="e#18449#18766#0" />
-            <element signature="e#18804#19743#0" />
-            <element signature="e#21677#22380#0" />
-            <element signature="e#22416#24482#0" />
-            <element signature="e#24515#26736#0" />
-            <marker date="1534453098565" expanded="true" signature="14001:14004" ph="..." />
-            <marker date="1534453098565" expanded="true" signature="20610:20613" ph="..." />
-            <marker date="1534453098565" expanded="true" signature="27329:27568" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/telnet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sftp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1105">
-          <caret line="73" column="12" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1534453098622" expanded="true" signature="6665:8060" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -606,12 +553,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ssh.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="44" column="46" lean-forward="true" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
+        <state relative-caret-position="527">
+          <caret line="64" column="101" lean-forward="true" selection-start-line="64" selection-start-column="101" selection-end-line="64" selection-end-column="101" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
             <marker date="1534453098639" expanded="true" signature="4672:4674" ph="..." />
             <marker date="1534453098639" expanded="true" signature="4672:4675" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sftp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2890">
+          <caret line="73" column="12" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1534453098622" expanded="true" signature="6665:8060" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="372" column="13" selection-start-line="372" selection-start-column="8" selection-end-line="372" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="720" column="22" selection-start-line="720" selection-start-column="22" selection-end-line="720" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#11325#12092#0" />
+            <element signature="e#12128#12885#0" />
+            <element signature="e#12924#13487#0" />
+            <element signature="e#13526#13933#0" />
+            <element signature="e#13963#14603#0" />
+            <element signature="e#14644#16227#0" />
+            <element signature="e#16268#17511#0" />
+            <element signature="e#17552#18409#0" />
+            <element signature="e#18449#18766#0" />
+            <element signature="e#18804#19743#0" />
+            <element signature="e#21677#22380#0" />
+            <element signature="e#22416#24482#0" />
+            <element signature="e#24515#26736#0" />
+            <marker date="1534454613301" expanded="true" signature="14002:14005" ph="..." />
+            <marker date="1534454613301" expanded="true" signature="20728:20731" ph="..." />
+            <marker date="1534454613301" expanded="true" signature="27805:28044" ph="..." />
           </folding>
         </state>
       </provider>

@@ -120,7 +120,7 @@ class Master(QtCore.QObject):
 		self.gui.btn6.clicked.connect(self.twindow.show)
 		self.gui.btn7.clicked.connect(self.batchstackwindow.show)
 		self.gui.btn7.clicked.connect(lambda: self.batchstackwindow.setCurrentIndex(0))
-		self.gui.btn8.clicked.connect(self.mwindow.show)
+		self.gui.btn8.clicked.connect(self.mwindow.reset)
 
 		self.gui.clearbtn.clicked.connect(self.gui.clear_info)
 
@@ -645,14 +645,18 @@ class SubnetRow(QWidget):
 		self.rowlayout = QHBoxLayout()
 
 		self.l1 = QLabel("Base Ip:")
+		self.l1.setFixedWidth(40)
 		self.b1 = QLineEdit()
 		self.b1.setFixedWidth(100)
 		self.l2 = QLabel("Subnet Prefix:")
+		self.l2.setFixedWidth(70)
 		self.b2 = QLineEdit()
 		self.b2.setFixedWidth(30)
 		self.b2.setMaxLength(3)
 		self.b3 = QPushButton("+")
+		# self.b3.setFixedWidth(30)
 		self.b3.clicked.connect(self.Main.add_widget)
+		self.b3.setAutoDefault(True)
 
 		self.rowlayout.addWidget(self.l1)
 		self.rowlayout.addWidget(self.b1)
@@ -683,6 +687,7 @@ class MikroWindow(QMainWindow):
 		self.main_label.setAlignment(QtCore.Qt.AlignCenter)
 
 		self.btn = QPushButton("Start")
+		self.btn.setAutoDefault(True)
 
 		# scroll area widget contents - layout
 		self.scrollLayout = QFormLayout()
@@ -711,10 +716,12 @@ class MikroWindow(QMainWindow):
 		# set central widget
 		self.setCentralWidget(self.centralWidget)
 
+		self.setWindowTitle('MikroTik Poller')
+
 		self.resize(400, self.height)
 		self.move(500, 0)
 
-		self.add_widget()
+		# self.add_widget()
 
 	def add_widget(self):
 		if self.height <= 400:
@@ -724,9 +731,19 @@ class MikroWindow(QMainWindow):
 		self.scrollLayout.addRow(self.rowlist[self.count])
 		self.baselist.append(self.rowlist[self.count].b1)
 		self.subnetlist.append(self.rowlist[self.count].b2)
+		if self.count > 0:
+			self.rowlist[self.count-1].b3 = QLabel("")
+
 		self.count = self.count + 1
 		# print(self.count)
 
+	def reset(self):
+		for i in reversed(range(self.scrollLayout.count())):
+			self.scrollLayout.itemAt(i).widget().setParent(None)
+		self.height = 80
+		self.resize(400, self.height)
+		self.add_widget()
+		self.show()
 
 class ProgressWindow(QWidget):
 
