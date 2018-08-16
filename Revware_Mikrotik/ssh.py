@@ -41,7 +41,6 @@ class SSHConnection(QtCore.QObject):
 		self.password = password
 		self.port = 22
 		self.attempts = attempts
-		print("made it into the ssh")
 		try:
 			self.client = paramiko.SSHClient()
 			self.client.load_system_host_keys()
@@ -104,11 +103,9 @@ class SSHConnection(QtCore.QObject):
 			self.pCloseSignal.emit(False)
 			self.printToScreen.emit("DONE: File Uploaded")
 			QtCore.QCoreApplication.processEvents()
-			print("made check 1")
+
 			self.sftp.close()
-			print("made check 2")
 			self.transport.close()
-			print("made check 3")
 
 		except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.NoValidConnectionsError):
 
@@ -128,15 +125,13 @@ class SSHConnection(QtCore.QObject):
 		self.port = 22
 		self.attempts = attempts
 
-		self.printToScreen.emit("Trying to enable the api thingi")
-
 		try:
 			self.client = paramiko.SSHClient()
 			self.client.load_system_host_keys()
 			self.client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 			self.client.connect(ip, port=self.port, username=self.username, password=self.password)
 			stdin, stdout, stderr = self.client.exec_command("ip service enable api")
-			self.printToScreen.emit("enabled it")
+			self.printToScreen.emit("Enabled")
 
 		except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.NoValidConnectionsError):
 			if self.attempts == 0:

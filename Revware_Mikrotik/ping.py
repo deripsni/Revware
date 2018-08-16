@@ -48,43 +48,50 @@ class IPTest(QtCore.QObject):
 		if timeout_include:
 
 			if timeout_total > 0:
-
 				print("%s is not responding to pings \n" % self.ip)
 
 			else:
-
 				print("{}{}{}".format("Radio didn't return after: ", self.max_tries, " tries."))
+
 		return "offline"
 
 	@QtCore.pyqtSlot(str, str, bool)
-	def mikrotik_checker(self, ip1, subnet1, option1):
-		self.ip = ip1
-		self.subnet = subnet1[-2:]
+	def mikrotik_checker(self, ips, subnets, option1):
+		self.ips = ips
+		self.subnets = subnets
 		self.option = option1
-		print(self.ip + " is the IP")
-		print(self.subnet + "is the Subnet")
-		self.number = 2**(32-int(subnet1[-2:]))
 		self.count = 0
-		print(self.number)
-		self.network = ipaddress.IPv4Network(self.ip + "/" + self.subnet)
-		self.gateway = self.network[1]
-		print("The gateway is")
-		print(self.gateway)
+
 		file = open("ipList.txt", "w")
-		self.pMaxSignal.emit(self.number)
-		for addr in self.network:
-			if addr == self.gateway:	  # Skips the gateway
-				pass
-			else:
-				self.count = self.count + 1
-				QtCore.QCoreApplication.processEvents()
-				self.status = self.ping(str(addr), tries=2, timeout_include=self.option)
-				if self.status == "online":
-					self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-					self.result = self.sock.connect_ex((str(addr), 8291))
-					if self.result == 0:
-						file.write(str(addr) + "\n")
-					self.sock.close()
-				self.progressSignal.emit(self.count)
+		self.i = 0
+		self.number = 0
+
+		for i in self.subnets:
+			self.number = self.number + 2 ** (32 - int(i[-2:]))
+
+
+		while self.i < len(ips):
+			# self.number = 2 ** (32 - int(self.subnets[self.i][-2:]))
+			self.network = ipaddress.IPv4Network(self.ips[self.i] + "/" + self.subnets[self.i][-2:])
+			self.gateway = self.network[1]
+			print("This subnets gateway is")
+			print(self.gateway)
+			self.pMaxSignal.emit(self.number)
+			for addr in self.network:
+				if addr == self.gateway:	  # Skips the gateway
+					pass
+				else:
+					self.count = self.count + 1
+					QtCore.QCoreApplication.processEvents()
+					self.status = self.ping(str(addr), tries=2, timeout_include=self.option)
+					if self.status == "online":
+						self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+						self.result = self.sock.connect_ex((str(addr), 8291))
+						if self.result == 0:
+							file.write(str(addr) + "\n")
+						self.sock.close()
+					self.progressSignal.emit(self.count)
+			self.i = self.i + 1
+		self.printToScreen.emit("Scan Complete")
 		self.pCloseSignal.emit(False)
 		file.close()

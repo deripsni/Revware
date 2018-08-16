@@ -24,7 +24,7 @@ class Firmware(QtCore.QThread):
 	def run(self):
 		print("Firmware")
 		self.sshc.firmwaresftp(self.localip, self.localu, self.localp, self.filepath)
-		print("made it to the reboot")
+		# print("made it to the reboot")
 		try:
 			connection = routeros_api.RouterOsApiPool(self.localip, username=self.localu, password=self.localp)
 			api = connection.get_api()
@@ -361,14 +361,14 @@ class Telnet(QtCore.QThread):
 class Mikrotik(QtCore.QThread):
 	printToScreen = QtCore.pyqtSignal(str)
 
-	def __init__(self, ip_input, subnet, to, parent=None):
+	def __init__(self, bases, subnets, to, parent=None):
 		super(self.__class__, self).__init__(parent)
-		self.localip = ip_input
-		self.subnet = subnet
+		self.bases = bases
+		self.subnets = subnets
 		self.to = to
 		self.printToScreen.connect(self.parent().gui.update_status)
 		self.ip = ping.IPTest(parent=self)
 
 	def run(self):
 		print("Password")
-		self.ip.mikrotik_checker(self.localip, self.subnet, self.to)
+		self.ip.mikrotik_checker(self.bases, self.subnets, self.to)

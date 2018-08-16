@@ -35,9 +35,7 @@ class Telnet(QtCore.QObject):
 			elif self.option == "api":
 				self.tn.write(b"/ip service enable api" + b"\r\n")
 				self.printToScreen.emit("API has been enabled")
-			print("right before the quit")
 			self.tn.write(b"quit" + b"\r\n")
-			print("right after the quit")
 		except ConnectionRefusedError:
 			self.printToScreen.emit("Could not establish Telnet Connection")
 		except TimeoutError:

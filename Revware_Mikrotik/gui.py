@@ -2,7 +2,7 @@ import menu
 import sys
 from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication, QPlainTextEdit, QLabel, QLineEdit, QFileDialog, \
 							QCheckBox, QProgressBar, QFormLayout, QWidget,  QVBoxLayout, \
-							QTableWidget, QTableWidgetItem, QStackedWidget, QToolBar, QHBoxLayout
+							QTableWidget, QTableWidgetItem, QStackedWidget, QToolBar, QHBoxLayout, QBoxLayout, QScrollArea
 
 from PyQt5 import QtGui, QtCore
 import ctypes
@@ -257,15 +257,28 @@ class Master(QtCore.QObject):
 		self.telnet_thread.start()
 
 	def create_mikro_thread(self):
+
+		self.baselist = []
+		self.subnetlist = []
+
+		for i in self.mwindow.baselist:
+			self.baselist.append(i.text())
+
+		for i in self.mwindow.subnetlist:
+			self.subnetlist.append(i.text())
+
+		print(self.baselist)
+		print(self.subnetlist)
 		self.mikro_thread = menu.Mikrotik(
-										self.mwindow.b1.text(), self.mwindow.b2.text(),
-										self.mwindow.r1.isChecked(), parent=self)
+										self.baselist, self.subnetlist,
+										True, parent=self)
 		self.mikro_thread.start()
 
 	@QtCore.pyqtSlot(sftp.SFTP)
 	def save_batch_object(self, obj):
-		print("saved")
+		print("Object Saved")
 		self.obj = obj
+
 
 class FirmwareWindow(QMainWindow):
 
@@ -621,40 +634,98 @@ class TelnetWindow(QMainWindow):
 
 		self.setWindowModality(QtCore.Qt.ApplicationModal)
 
+class SubnetRow(QWidget):
 
-class MikroWindow(QWidget):
+	def __init__(self, main):
+		super(SubnetRow, self).__init__()
+		self.Main = main
+		self.setup()
 
-	def __init__(self, parent=None):
-		super(self.__class__, self).__init__(parent)
-		self.init_ui()
-
-	def init_ui(self):
-
-		self.layout = QFormLayout()
+	def setup(self):
+		self.rowlayout = QHBoxLayout()
 
 		self.l1 = QLabel("Base Ip:")
-		self.l2 = QLabel("Subnet Prefix:")
-
 		self.b1 = QLineEdit()
+		self.b1.setFixedWidth(100)
+		self.l2 = QLabel("Subnet Prefix:")
 		self.b2 = QLineEdit()
+		self.b2.setFixedWidth(30)
 		self.b2.setMaxLength(3)
+		self.b3 = QPushButton("+")
+		self.b3.clicked.connect(self.Main.add_widget)
 
-		self.r1 = QCheckBox("Include Timed out Devices")
-		self.r1.setCheckable(True)
-		self.r1.setChecked(True)
-		self.r1.setVisible(False)
-		self.r1.setCheckable(False)
+		self.rowlayout.addWidget(self.l1)
+		self.rowlayout.addWidget(self.b1)
+		self.rowlayout.addWidget(self.l2)
+		self.rowlayout.addWidget(self.b2)
+		self.rowlayout.addWidget(self.b3)
+
+		self.setLayout(self.rowlayout)
+
+
+class MikroWindow(QMainWindow):
+	def __init__(self, parent=None):
+		super(MikroWindow, self).__init__()
+		self.GUI()
+
+	def GUI(self):
+		self.count = 0
+
+		self.height = 80
+
+		self.rowlist = []
+		self.baselist = []
+		self.subnetlist = []
+
+		# main button
+		self.main_label = QLabel('Subnets')
+		self.main_label.setStyleSheet('font-size: 20px;')
+		self.main_label.setAlignment(QtCore.Qt.AlignCenter)
 
 		self.btn = QPushButton("Start")
-		self.btn.setAutoDefault(True)
 
-		self.layout.addRow(self.l1, self.b1)
-		self.layout.addRow(self.l2, self.b2)
-		self.layout.addRow(self.r1, self.btn)
+		# scroll area widget contents - layout
+		self.scrollLayout = QFormLayout()
 
-		self.setLayout(self.layout)
-		self.setGeometry(90, 200, 300, 80)
-		self.setWindowTitle('Settings')
+		# scroll area widget contents
+		self.scrollWidget = QWidget()
+		self.scrollWidget.setLayout(self.scrollLayout)
+
+		# scroll area
+		self.scrollArea = QScrollArea()
+		self.scrollArea.setWidgetResizable(True)
+		self.scrollArea.setWidget(self.scrollWidget)
+
+		# main layout
+		self.mainLayout = QVBoxLayout()
+
+		# add all main to the main vLayout
+		self.mainLayout.addWidget(self.main_label)
+		self.mainLayout.addWidget(self.scrollArea)
+		self.mainLayout.addWidget(self.btn)
+
+		# central widget
+		self.centralWidget = QWidget()
+		self.centralWidget.setLayout(self.mainLayout)
+
+		# set central widget
+		self.setCentralWidget(self.centralWidget)
+
+		self.resize(400, self.height)
+		self.move(500, 0)
+
+		self.add_widget()
+
+	def add_widget(self):
+		if self.height <= 400:
+			self.height = self.height + 45
+			self.resize(400, self.height)
+		self.rowlist.append(SubnetRow(self))
+		self.scrollLayout.addRow(self.rowlist[self.count])
+		self.baselist.append(self.rowlist[self.count].b1)
+		self.subnetlist.append(self.rowlist[self.count].b2)
+		self.count = self.count + 1
+		# print(self.count)
 
 
 class ProgressWindow(QWidget):
@@ -790,7 +861,7 @@ class StatusWindow(QWidget):
 		# # self.pbar.setVisible(False)
 
 		# Show widget
-		print("hecks yeah")
+		# print("hecks yeah")
 		# self.show()
 
 	def createtable(self):

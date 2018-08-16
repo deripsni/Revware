@@ -72,7 +72,6 @@ class SFTP(QtCore.QObject):
 
 	def get_variables(self, i):
 		try:
-			# self.printToScreen.emit("Trying to get the variables")
 			connection = routeros_api.RouterOsApiPool(self.ips[i], username=self.uname, password=self.password)
 			api = connection.get_api()
 
@@ -99,7 +98,7 @@ class SFTP(QtCore.QObject):
 				self.printToScreen.emit("Could not establish API connection")
 				self.printToScreen.emit("Attempting to enable API through SSH")
 				self.parent().sshc.enable_api(self.ips[i], self.uname, self.password, attempts=0)
-				self.printToScreen.emit("made it back to here")
+
 				self.tried = True
 				time.sleep(0.5)
 				self.get_variables(i)
@@ -113,15 +112,11 @@ class SFTP(QtCore.QObject):
 	def setup_batchfirmware(self, username, password, ifile):
 		self.uname = username
 		self.password = password
-		print("yeet")
 		self.get_ips(ifile)
 		self.table_setup()
 		self.openfexecutewindow.emit()
-		print("Showed the Execute")
 
 	def batchfirmware(self, username, password, cfile):
-
-		print(self.indexesonline)
 
 		self.count = 0
 
@@ -152,7 +147,6 @@ class SFTP(QtCore.QObject):
 			self.setcelltextsignal.emit(i, 5, 'Uploading...')
 			self.currentindex = i
 			sftp.put(cfile, filepath, callback=self.transfer)
-			# self.batch_print_progress(self.transferred, self.to_transfer, i)
 			print("DONE: File Uploaded")
 			sftp.close()
 			transport.close()
@@ -169,11 +163,9 @@ class SFTP(QtCore.QObject):
 	def setup_batchpassword(self, username, password, ifile):
 		self.uname = username
 		self.password = password
-		print("yeet")
 		self.get_ips(ifile)
 		self.table_setup()
 		self.openpexecutewindow.emit()
-		print("Showed the Execute")
 
 	def batchpassword(self, username, password, command):
 
@@ -187,8 +179,6 @@ class SFTP(QtCore.QObject):
 
 			self.parent().sshc.ssh(self.ips[i], username, password, command)
 			self.setcelltextsignal.emit(i, 5, 'Command Sent')
-			# self.batchpassword2(username, password, self.ips[i], cfile, i)
-			# self.printToScreen.emit("Password changed")
 
 		self.printToScreen.emit("Verifying Passwords")
 
@@ -203,15 +193,12 @@ class SFTP(QtCore.QObject):
 	def setup_batchfirewall(self, username, password, ifile):
 		self.uname = username
 		self.password = password
-		print("yeet")
 		self.get_ips(ifile)
 		self.table_setup()
 		self.openaexecutewindow.emit()
-		print("Showed the Execute")
 
 	def batchfirewall(self, username, password):
 
-		print(self.indexesonline)
 		self.count = 0
 
 		for i in self.indexesonline:
@@ -228,7 +215,7 @@ class SFTP(QtCore.QObject):
 			api = connection.get_api()
 			self.list = api.get_resource('/ip/firewall/filter')
 			self.filter = self.list.get()
-			# print(self.filter[2])
+
 			self.index = -1
 			self.dropindex = None
 
@@ -278,30 +265,20 @@ class PingMachines(QtCore.QThread):
 		self.ping = parent.parent().ping
 		self.parent = parent
 
-		# self.printToScreen.connect(parent.parent.parent().gui.update_status)
 		self.setcelltextsignal.connect(parent.parent().parent().swindow.set_cell)
 		self.setcellcolorsignal.connect(parent.parent().parent().swindow.set_cell_color)
 		self.setcellwidgetsignal.connect(parent.parent().parent().swindow.set_cell_widget)
 
-		print("My parent is")
-		print(parent)
-		print("Their parent is")
-		print(parent.parent())
-		print("Their ping is")
-		print(parent.parent().ping)
-
 	def run(self):
 		for j in self.indexesonline:
 			time.sleep(1)
-
-			print("pinging this ip: " + self.ips[j] + "at index" + str(j))
 
 			if hasattr(self.parent, 'uploading'):
 				while j == self.parent.uploading:
 					pass
 
 			time.sleep(10)
-			print("Waiting.", end='')
+
 			if self.ping.ping(self.ips[j], 50, True) == "online":
 				self.setcelltextsignal.emit(j, 5, 'Done')
 				self.setcelltextsignal.emit(j, 4, 'Yes')
