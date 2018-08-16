@@ -22,6 +22,7 @@ class SFTP(QtCore.QObject):
 
 	openfexecutewindow = QtCore.pyqtSignal()
 	openpexecutewindow = QtCore.pyqtSignal()
+	openaexecutewindow = QtCore.pyqtSignal()
 
 	def __init__(self, parent=None):
 		super(self.__class__, self).__init__(parent)
@@ -39,6 +40,7 @@ class SFTP(QtCore.QObject):
 
 		self.openfexecutewindow.connect(parent.parent().batchfirmwareexecutewindow.show)
 		self.openpexecutewindow.connect(parent.parent().batchpasswordexecutewindow.show)
+		self.openaexecutewindow.connect(parent.parent().batchfirewallexecutewindow.show)
 
 	def get_ips(self, ifile):
 		with open(ifile, 'r') as infile:
@@ -70,7 +72,7 @@ class SFTP(QtCore.QObject):
 
 	def get_variables(self, i):
 		try:
-			self.printToScreen.emit("Trying to get the variables")
+			# self.printToScreen.emit("Trying to get the variables")
 			connection = routeros_api.RouterOsApiPool(self.ips[i], username=self.uname, password=self.password)
 			api = connection.get_api()
 
@@ -108,7 +110,7 @@ class SFTP(QtCore.QObject):
 	def filecallback(self):   # callback function that does nothing
 		pass
 
-	def setup_batchfirmware(self, username, password, cfile, ifile, reboot=False):
+	def setup_batchfirmware(self, username, password, ifile):
 		self.uname = username
 		self.password = password
 		print("yeet")
@@ -117,7 +119,7 @@ class SFTP(QtCore.QObject):
 		self.openfexecutewindow.emit()
 		print("Showed the Execute")
 
-	def batchfirmware(self, username, password, cfile, ifile, reboot):
+	def batchfirmware(self, username, password, cfile):
 
 		print(self.indexesonline)
 
@@ -197,6 +199,60 @@ class SFTP(QtCore.QObject):
 			except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.AuthenticationException):
 				self.setcelltextsignal.emit(i, 5, 'Failed')
 		self.uploading = None
+
+	def setup_batchfirewall(self, username, password, ifile):
+		self.uname = username
+		self.password = password
+		print("yeet")
+		self.get_ips(ifile)
+		self.table_setup()
+		self.openaexecutewindow.emit()
+		print("Showed the Execute")
+
+	def batchfirewall(self, username, password):
+
+		print(self.indexesonline)
+		self.count = 0
+
+		for i in self.indexesonline:
+			self.checkfirewall(username, password, i)
+
+	def checkfirewall(self, username, password, ip):
+		try:
+			connection = routeros_api.RouterOsApiPool(self.ips[ip], username=username, password=password)
+			self.errormessage = (
+								"U: " + username + " P: " + password + " IP: " + str(ip) + " Also IP: " +
+								str(self.indexesonline[ip]))
+
+			self.printToScreen.emit(self.errormessage)
+			api = connection.get_api()
+			self.list = api.get_resource('/ip/firewall/filter')
+			self.filter = self.list.get()
+			# print(self.filter[2])
+			self.index = -1
+			self.dropindex = None
+
+			for j in self.filter:
+				self.index = self.index + 1
+				if j['action'] == 'drop' and j['disabled'] == 'false':
+					self.dropindex = self.index
+
+			if self.index == self.dropindex:
+				self.printToScreen.emit("Drop rule is enabled")
+				self.setcelltextsignal.emit(ip, 5, 'Enabled')
+			else:
+				self.printToScreen.emit("Drop rule is not enabled")
+				self.setcelltextsignal.emit(ip, 5, 'Not Enabled')
+				self.printToScreen.emit("Adding drop rule...")
+				self.setcelltextsignal.emit(ip, 5, 'Enabling')
+				self.list.add(action="drop", chain='forward', disabled='false')
+				self.checkfirewall(username, password, ip)
+
+		except routeros_api.exceptions.RouterOsApiConnectionError:
+			self.printToScreen.emit("Could not establish API connection")
+			self.printToScreen.emit("Attempting to enable API through Telnet")
+			self.tel.telnet(self.localip, self.localu, self.localp, "api")
+			self.checkfirewall(username, password, ip)
 
 	def transfer(self, transferred, to_transfer):
 		self.transferred = transferred

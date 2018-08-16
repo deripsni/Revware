@@ -68,9 +68,11 @@ class Master(QtCore.QObject):
 		self.cwindow = CommandWindow()
 		self.batchpasswordwindow = BatchPasswordWindow()
 		self.batchfirmwarewindow = BatchFirmwareWindow()
+		self.batchfirewallwindow = BatchFirewallWindow()
 		self.batchmenuwindow = BatchMenu()
-		self.batchstackwindow = BatchStack(firmware=self.batchfirmwarewindow, menu=self.batchmenuwindow,
-										   password=self.batchpasswordwindow)
+		self.batchstackwindow = BatchStack(
+											firmware=self.batchfirmwarewindow, menu=self.batchmenuwindow,
+											password=self.batchpasswordwindow, firewall=self.batchfirewallwindow)
 		self.twindow = TelnetWindow()
 		self.mwindow = MikroWindow()
 		self.progresswindow = ProgressWindow()
@@ -78,6 +80,7 @@ class Master(QtCore.QObject):
 		self.swindow = StatusWindow()
 		self.batchfirmwareexecutewindow = BatchExecuteWindow()
 		self.batchpasswordexecutewindow = BatchExecuteWindow()
+		self.batchfirewallexecutewindow = BatchExecuteWindow()
 		self.connect_signals()
 		self.gui.show()
 
@@ -134,6 +137,7 @@ class Master(QtCore.QObject):
 
 		self.batchmenuwindow.fbtn.clicked.connect(lambda: self.batchstackwindow.setCurrentIndex(1))
 		self.batchmenuwindow.pbtn.clicked.connect(lambda: self.batchstackwindow.setCurrentIndex(2))
+		self.batchmenuwindow.abtn.clicked.connect(lambda: self.batchstackwindow.setCurrentIndex(3))
 
 		self.batchfirmwarewindow.cbtn.clicked.connect(self.batchfirmwarewindow.c_set)
 		self.batchfirmwarewindow.ipbtn.clicked.connect(self.batchfirmwarewindow.i_set)
@@ -146,11 +150,19 @@ class Master(QtCore.QObject):
 		self.batchpasswordwindow.btn.clicked.connect(self.swindow.show)
 		self.batchpasswordwindow.ipbtn.clicked.connect(self.batchpasswordwindow.i_set)
 
+		self.batchfirewallwindow.btn.clicked.connect(self.create_batch_firewall_setup_thread)
+		self.batchfirewallwindow.btn.clicked.connect(self.batchstackwindow.close)
+		self.batchfirewallwindow.btn.clicked.connect(self.swindow.show)
+		self.batchfirewallwindow.ipbtn.clicked.connect(self.batchfirewallwindow.i_set)
+
 		self.batchfirmwareexecutewindow.btn.clicked.connect(self.create_batch_firmware_execute_thread)
 		self.batchfirmwareexecutewindow.btn.clicked.connect(self.batchfirmwareexecutewindow.close)
 
 		self.batchpasswordexecutewindow.btn.clicked.connect(self.create_batch_password_execute_thread)
 		self.batchpasswordexecutewindow.btn.clicked.connect(self.batchpasswordexecutewindow.close)
+
+		self.batchfirewallexecutewindow.btn.clicked.connect(self.create_batch_firewall_execute_thread)
+		self.batchfirewallexecutewindow.btn.clicked.connect(self.batchfirewallexecutewindow.close)
 
 		self.twindow.sshbtn.clicked.connect(lambda: self.create_telnet_thread("ssh"))
 		self.twindow.sshbtn.clicked.connect(self.twindow.close)
@@ -214,6 +226,12 @@ class Master(QtCore.QObject):
 														parent=self)
 		self.batch_setup_thread.start()
 
+	def create_batch_firewall_setup_thread(self):
+		self.batch_setup_thread = menu.BatchFirewallSetup(
+														self.gui.ubox.text(), self.gui.pbox.text(), ifile=self.batchpasswordwindow.iptxt.text(),
+														parent=self)
+		self.batch_setup_thread.start()
+
 	def create_batch_firmware_execute_thread(self):
 		self.batch_setup_thread = menu.BatchFirmwareExecute(
 															self.gui.ubox.text(), self.gui.pbox.text(), self.batchfirmwarewindow.ctxt.text(),
@@ -224,6 +242,12 @@ class Master(QtCore.QObject):
 		self.batch_setup_thread = menu.BatchPasswordExecute(
 															self.gui.ubox.text(), self.gui.pbox.text(),
 															self.batchpasswordwindow.npbox.text(), self.obj, parent=self)
+		self.batch_setup_thread.start()
+
+	def create_batch_firewall_execute_thread(self):
+		self.batch_setup_thread = menu.BatchFirewallExecute(
+															self.gui.ubox.text(), self.gui.pbox.text(),
+															self.obj, parent=self)
 		self.batch_setup_thread.start()
 
 	def create_telnet_thread(self, method):
@@ -343,11 +367,12 @@ class CommandWindow(QMainWindow):
 
 class BatchStack(QStackedWidget):
 
-	def __init__(self, parent=None, firmware=None, menu=None, password=None):
+	def __init__(self, parent=None, firmware=None, menu=None, password=None, firewall=None):
 		super(self.__class__, self).__init__(parent)
 		self.addWidget(menu)
 		self.addWidget(firmware)
 		self.addWidget(password)
+		self.addWidget(firewall)
 		self.init_ui()
 
 	def init_ui(self):
@@ -364,14 +389,19 @@ class BatchMenu(QWidget):
 
 	def init_ui(self):
 		self.fbtn = QPushButton('Firmware', self)
-		self.fbtn.move(90, 35)
+		self.fbtn.move(55, 35)
 		self.fbtn.resize(100, 50)
 		self.fbtn.setAutoDefault(True)
 
 		self.pbtn = QPushButton('Password', self)
-		self.pbtn.move(230, 35)
+		self.pbtn.move(160, 35)
 		self.pbtn.resize(100, 50)
 		self.pbtn.setAutoDefault(True)
+
+		self.abtn = QPushButton('Firewall', self)
+		self.abtn.move(265, 35)
+		self.abtn.resize(100, 50)
+		self.abtn.setAutoDefault(True)
 
 		self.setGeometry(90, 200, 420, 120)
 		self.setWindowTitle('Batch SFTP')
@@ -490,6 +520,44 @@ class BatchPasswordWindow(QWidget):
 
 		self.setGeometry(90, 200, 220, 120)
 		self.setWindowTitle('Set New Password')
+
+		self.setWindowModality(QtCore.Qt.ApplicationModal)
+
+	def i_set(self, ):
+		fname = QFileDialog.getOpenFileName(self, 'Open file', filter="Text files (*.txt)")
+		self.iptxt.setText(fname[0])
+
+
+class BatchFirewallWindow(QWidget):
+
+	def __init__(self, parent=None):
+		super(self.__class__, self).__init__(parent)
+
+		self.init_ui()
+
+	def init_ui(self):
+		self.ipbtn = QPushButton('Browse', self)
+		self.ipbtn.move(100, 60)
+		self.ipbtn.resize(50, 20)
+		self.ipbtn.setAutoDefault(True)
+
+		self.iplabel = QLabel('IP List:', self)
+		self.iplabel.move(59, 55)
+		self.iplabel.resize(40, 30)
+
+		self.iptxt = QLineEdit(self)
+		self.iptxt.move(160, 60)
+		self.iptxt.resize(250, 20)
+
+		self.btn = QPushButton("Submit", self)
+		self.btn.move(360, 85)
+		self.btn.resize(50, 20)
+		self.btn.setAutoDefault(True)
+
+		# self.statusBar()
+
+		self.setGeometry(90, 200, 220, 120)
+		self.setWindowTitle('Firewall Check')
 
 		self.setWindowModality(QtCore.Qt.ApplicationModal)
 
@@ -772,22 +840,6 @@ class StatusWindow(QWidget):
 			self.tableWidget.item(x, y).setBackground(QtGui.QColor(76, 187, 23))
 			self.tableWidget.item(x, y).setForeground(QtGui.QColor(0, 0, 0))
 
-	# @QtCore.pyqtSlot(int)
-	# def set_progress_index(self, i):
-	# 	self.y = 40 + 30*i
-	# 	self.pbar.move(416, self.y)
-	#
-	# @QtCore.pyqtSlot(int)
-	# def update_progress(self, value):
-	# 	self.pbar.setValue(value)
-	#
-	# @QtCore.pyqtSlot(int)
-	# def set_max(self, value):
-	# 	self.pbar.setMaximum(value)
-	#
-	# @QtCore.pyqtSlot(bool)
-	# def view_progress(self, x):
-	# 	self.pbar.setVisible(x)
 
 class ToolWidget(QWidget):
 
