@@ -1,0 +1,2994 @@
+/* Generated code for Python source for module 'cryptography.x509.certificate_transparency'
+ * created by Nuitka version 0.5.32.5
+ *
+ * This code is in part copyright 2018 Kay Hayen.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#include "nuitka/prelude.h"
+
+#include "__helpers.h"
+
+/* The _module_cryptography$x509$certificate_transparency is a Python object pointer of module type. */
+
+/* Note: For full compatibility with CPython, every module variable access
+ * needs to go through it except for cases where the module cannot possibly
+ * have changed in the mean time.
+ */
+
+PyObject *module_cryptography$x509$certificate_transparency;
+PyDictObject *moduledict_cryptography$x509$certificate_transparency;
+
+/* The module constants used, if any. */
+static PyObject *const_str_digest_93c25efdad1d385589367f55d1eed526;
+extern PyObject *const_str_plain_log_id;
+extern PyObject *const_str_plain___module__;
+extern PyObject *const_str_plain_metaclass;
+extern PyObject *const_tuple_type_object_tuple;
+extern PyObject *const_str_plain_v1;
+static PyObject *const_str_digest_5662573cdd717091f4926c768aa161c1;
+extern PyObject *const_str_plain___class__;
+extern PyObject *const_tuple_str_plain___class___tuple;
+extern PyObject *const_str_plain___qualname__;
+extern PyObject *const_tuple_str_plain_Enum_tuple;
+extern PyObject *const_int_pos_1;
+extern PyObject *const_str_plain_object;
+extern PyObject *const_str_plain___file__;
+extern PyObject *const_str_plain_abc;
+extern PyObject *const_int_0;
+extern PyObject *const_str_plain_add_metaclass;
+static PyObject *const_str_digest_40bc1f59d618b145188018645bcb2b52;
+extern PyObject *const_str_plain_six;
+extern PyObject *const_tuple_str_plain_self_tuple;
+extern PyObject *const_str_plain___prepare__;
+extern PyObject *const_str_plain_ABCMeta;
+extern PyObject *const_str_plain_division;
+extern PyObject *const_str_plain_abstractproperty;
+extern PyObject *const_str_plain___doc__;
+extern PyObject *const_str_plain_enum;
+extern PyObject *const_str_plain_timestamp;
+static PyObject *const_str_digest_2d13d1326897fe3c4e33305d1e0182be;
+extern PyObject *const_str_plain_self;
+static PyObject *const_str_digest_616ad0fec345301881d8517989d60521;
+static PyObject *const_tuple_str_plain_SignedCertificateTimestamp_tuple_type_object_tuple_tuple;
+static PyObject *const_str_digest_9c11c204937b27eb5c7b4018d0b1d665;
+extern PyObject *const_str_plain_Version;
+extern PyObject *const_tuple_empty;
+static PyObject *const_str_plain_X509_CERTIFICATE;
+extern PyObject *const_str_plain_PRE_CERTIFICATE;
+extern PyObject *const_str_plain_version;
+extern PyObject *const_str_digest_9c4dcd45c628f51f60b0e74617698ea7;
+static PyObject *const_str_digest_f0baf65e2e641e67b238af9e2539997d;
+extern PyObject *const_str_plain_entry_type;
+static PyObject *const_str_digest_315bce3f57233a6b000ea3587b3cbb8d;
+extern PyObject *const_str_plain_type;
+extern PyObject *const_str_plain_Enum;
+extern PyObject *const_str_plain_SignedCertificateTimestamp;
+static PyObject *const_str_digest_76c9ef42049abf0477f56bced304b4aa;
+extern PyObject *const_str_plain_absolute_import;
+extern PyObject *const_str_plain___cached__;
+extern PyObject *const_str_plain_print_function;
+static PyObject *const_str_digest_42f09679c04964bc7bb8cc7f27f8cf08;
+extern PyObject *const_str_plain_LogEntryType;
+static PyObject *module_filename_obj;
+
+static bool constants_created = false;
+
+static void createModuleConstants( void )
+{
+    const_str_digest_93c25efdad1d385589367f55d1eed526 = UNSTREAM_STRING( &constant_bin[ 170692 ], 117, 0 );
+    const_str_digest_5662573cdd717091f4926c768aa161c1 = UNSTREAM_STRING( &constant_bin[ 170809 ], 86, 0 );
+    const_str_digest_40bc1f59d618b145188018645bcb2b52 = UNSTREAM_STRING( &constant_bin[ 133625 ], 34, 0 );
+    const_str_digest_2d13d1326897fe3c4e33305d1e0182be = UNSTREAM_STRING( &constant_bin[ 170895 ], 53, 0 );
+    const_str_digest_616ad0fec345301881d8517989d60521 = UNSTREAM_STRING( &constant_bin[ 136352 ], 33, 0 );
+    const_tuple_str_plain_SignedCertificateTimestamp_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
+    PyTuple_SET_ITEM( const_tuple_str_plain_SignedCertificateTimestamp_tuple_type_object_tuple_tuple, 0, const_str_plain_SignedCertificateTimestamp ); Py_INCREF( const_str_plain_SignedCertificateTimestamp );
+    PyTuple_SET_ITEM( const_tuple_str_plain_SignedCertificateTimestamp_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
+    const_str_digest_9c11c204937b27eb5c7b4018d0b1d665 = UNSTREAM_STRING( &constant_bin[ 134693 ], 36, 0 );
+    const_str_plain_X509_CERTIFICATE = UNSTREAM_STRING( &constant_bin[ 170948 ], 16, 1 );
+    const_str_digest_f0baf65e2e641e67b238af9e2539997d = UNSTREAM_STRING( &constant_bin[ 134090 ], 37, 0 );
+    const_str_digest_315bce3f57233a6b000ea3587b3cbb8d = UNSTREAM_STRING( &constant_bin[ 170964 ], 51, 0 );
+    const_str_digest_76c9ef42049abf0477f56bced304b4aa = UNSTREAM_STRING( &constant_bin[ 171015 ], 42, 0 );
+    const_str_digest_42f09679c04964bc7bb8cc7f27f8cf08 = UNSTREAM_STRING( &constant_bin[ 171057 ], 77, 0 );
+
+    constants_created = true;
+}
+
+#ifndef __NUITKA_NO_ASSERT__
+void checkModuleConstants_cryptography$x509$certificate_transparency( void )
+{
+    // The module may not have been used at all.
+    if (constants_created == false) return;
+
+
+}
+#endif
+
+// The module code objects.
+static PyCodeObject *codeobj_0d308e0a31e4655f0f182ee9faf33652;
+static PyCodeObject *codeobj_bed34cca5277ca9c9b6dbd0b97f92853;
+static PyCodeObject *codeobj_d958e2e24f3c86589a58b0973cad0e7a;
+static PyCodeObject *codeobj_67c57dd1595c178e6ef06ec0baf5c035;
+static PyCodeObject *codeobj_c9e00cedd5b421b60f055379a9f82f89;
+static PyCodeObject *codeobj_cbd332e7216b3770416c58423d39900d;
+static PyCodeObject *codeobj_aaf8f861dc6f94b8858c06fe2c169cdb;
+static PyCodeObject *codeobj_b8f88b73e3a0265f2c14b1e99004fbde;
+
+static void createModuleCodeObjects(void)
+{
+    module_filename_obj = const_str_digest_93c25efdad1d385589367f55d1eed526;
+    codeobj_0d308e0a31e4655f0f182ee9faf33652 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_315bce3f57233a6b000ea3587b3cbb8d, 1, const_tuple_empty, 0, 0, CO_NOFREE );
+    codeobj_bed34cca5277ca9c9b6dbd0b97f92853 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_LogEntryType, 13, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
+    codeobj_d958e2e24f3c86589a58b0973cad0e7a = MAKE_CODEOBJ( module_filename_obj, const_str_plain_SignedCertificateTimestamp, 23, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
+    codeobj_67c57dd1595c178e6ef06ec0baf5c035 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_Version, 18, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
+    codeobj_c9e00cedd5b421b60f055379a9f82f89 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_entry_type, 42, const_tuple_str_plain_self_tuple, 1, 0, CO_NOFREE );
+    codeobj_cbd332e7216b3770416c58423d39900d = MAKE_CODEOBJ( module_filename_obj, const_str_plain_log_id, 30, const_tuple_str_plain_self_tuple, 1, 0, CO_NOFREE );
+    codeobj_aaf8f861dc6f94b8858c06fe2c169cdb = MAKE_CODEOBJ( module_filename_obj, const_str_plain_timestamp, 36, const_tuple_str_plain_self_tuple, 1, 0, CO_NOFREE );
+    codeobj_b8f88b73e3a0265f2c14b1e99004fbde = MAKE_CODEOBJ( module_filename_obj, const_str_plain_version, 24, const_tuple_str_plain_self_tuple, 1, 0, CO_NOFREE );
+}
+
+// The module function declarations.
+static PyObject *MAKE_FUNCTION_cryptography$x509$certificate_transparency$$$function_1_version(  );
+
+
+static PyObject *MAKE_FUNCTION_cryptography$x509$certificate_transparency$$$function_2_log_id(  );
+
+
+static PyObject *MAKE_FUNCTION_cryptography$x509$certificate_transparency$$$function_3_timestamp(  );
+
+
+static PyObject *MAKE_FUNCTION_cryptography$x509$certificate_transparency$$$function_4_entry_type(  );
+
+
+// The module function definitions.
+static PyObject *impl_cryptography$x509$certificate_transparency$$$function_1_version( struct Nuitka_FunctionObject const *self, PyObject **python_pars )
+{
+    // Preserve error status for checks
+#ifndef __NUITKA_NO_ASSERT__
+    NUITKA_MAY_BE_UNUSED bool had_error = ERROR_OCCURRED();
+#endif
+
+    // Local variable declarations.
+    PyObject *par_self = python_pars[ 0 ];
+    PyObject *tmp_return_value;
+    tmp_return_value = NULL;
+
+    // Actual function code.
+    // Tried code:
+    tmp_return_value = Py_None;
+    Py_INCREF( tmp_return_value );
+    goto try_return_handler_1;
+    // tried codes exits in all cases
+    NUITKA_CANNOT_GET_HERE( cryptography$x509$certificate_transparency$$$function_1_version );
+    return NULL;
+    // Return handler code:
+    try_return_handler_1:;
+    CHECK_OBJECT( (PyObject *)par_self );
+    Py_DECREF( par_self );
+    par_self = NULL;
+
+    goto function_return_exit;
+    // End of try:
+    CHECK_OBJECT( (PyObject *)par_self );
+    Py_DECREF( par_self );
+    par_self = NULL;
+
+
+    // Return statement must have exited already.
+    NUITKA_CANNOT_GET_HERE( cryptography$x509$certificate_transparency$$$function_1_version );
+    return NULL;
+
+function_return_exit:
+
+CHECK_OBJECT( tmp_return_value );
+assert( had_error || !ERROR_OCCURRED() );
+return tmp_return_value;
+
+}
+
+
+static PyObject *impl_cryptography$x509$certificate_transparency$$$function_2_log_id( struct Nuitka_FunctionObject const *self, PyObject **python_pars )
+{
+    // Preserve error status for checks
+#ifndef __NUITKA_NO_ASSERT__
+    NUITKA_MAY_BE_UNUSED bool had_error = ERROR_OCCURRED();
+#endif
+
+    // Local variable declarations.
+    PyObject *par_self = python_pars[ 0 ];
+    PyObject *tmp_return_value;
+    tmp_return_value = NULL;
+
+    // Actual function code.
+    // Tried code:
+    tmp_return_value = Py_None;
+    Py_INCREF( tmp_return_value );
+    goto try_return_handler_1;
+    // tried codes exits in all cases
+    NUITKA_CANNOT_GET_HERE( cryptography$x509$certificate_transparency$$$function_2_log_id );
+    return NULL;
+    // Return handler code:
+    try_return_handler_1:;
+    CHECK_OBJECT( (PyObject *)par_self );
+    Py_DECREF( par_self );
+    par_self = NULL;
+
+    goto function_return_exit;
+    // End of try:
+    CHECK_OBJECT( (PyObject *)par_self );
+    Py_DECREF( par_self );
+    par_self = NULL;
+
+
+    // Return statement must have exited already.
+    NUITKA_CANNOT_GET_HERE( cryptography$x509$certificate_transparency$$$function_2_log_id );
+    return NULL;
+
+function_return_exit:
+
+CHECK_OBJECT( tmp_return_value );
+assert( had_error || !ERROR_OCCURRED() );
+return tmp_return_value;
+
+}
+
+
+static PyObject *impl_cryptography$x509$certificate_transparency$$$function_3_timestamp( struct Nuitka_FunctionObject const *self, PyObject **python_pars )
+{
+    // Preserve error status for checks
+#ifndef __NUITKA_NO_ASSERT__
+    NUITKA_MAY_BE_UNUSED bool had_error = ERROR_OCCURRED();
+#endif
+
+    // Local variable declarations.
+    PyObject *par_self = python_pars[ 0 ];
+    PyObject *tmp_return_value;
+    tmp_return_value = NULL;
+
+    // Actual function code.
+    // Tried code:
+    tmp_return_value = Py_None;
+    Py_INCREF( tmp_return_value );
+    goto try_return_handler_1;
+    // tried codes exits in all cases
+    NUITKA_CANNOT_GET_HERE( cryptography$x509$certificate_transparency$$$function_3_timestamp );
+    return NULL;
+    // Return handler code:
+    try_return_handler_1:;
+    CHECK_OBJECT( (PyObject *)par_self );
+    Py_DECREF( par_self );
+    par_self = NULL;
+
+    goto function_return_exit;
+    // End of try:
+    CHECK_OBJECT( (PyObject *)par_self );
+    Py_DECREF( par_self );
+    par_self = NULL;
+
+
+    // Return statement must have exited already.
+    NUITKA_CANNOT_GET_HERE( cryptography$x509$certificate_transparency$$$function_3_timestamp );
+    return NULL;
+
+function_return_exit:
+
+CHECK_OBJECT( tmp_return_value );
+assert( had_error || !ERROR_OCCURRED() );
+return tmp_return_value;
+
+}
+
+
+static PyObject *impl_cryptography$x509$certificate_transparency$$$function_4_entry_type( struct Nuitka_FunctionObject const *self, PyObject **python_pars )
+{
+    // Preserve error status for checks
+#ifndef __NUITKA_NO_ASSERT__
+    NUITKA_MAY_BE_UNUSED bool had_error = ERROR_OCCURRED();
+#endif
+
+    // Local variable declarations.
+    PyObject *par_self = python_pars[ 0 ];
+    PyObject *tmp_return_value;
+    tmp_return_value = NULL;
+
+    // Actual function code.
+    // Tried code:
+    tmp_return_value = Py_None;
+    Py_INCREF( tmp_return_value );
+    goto try_return_handler_1;
+    // tried codes exits in all cases
+    NUITKA_CANNOT_GET_HERE( cryptography$x509$certificate_transparency$$$function_4_entry_type );
+    return NULL;
+    // Return handler code:
+    try_return_handler_1:;
+    CHECK_OBJECT( (PyObject *)par_self );
+    Py_DECREF( par_self );
+    par_self = NULL;
+
+    goto function_return_exit;
+    // End of try:
+    CHECK_OBJECT( (PyObject *)par_self );
+    Py_DECREF( par_self );
+    par_self = NULL;
+
+
+    // Return statement must have exited already.
+    NUITKA_CANNOT_GET_HERE( cryptography$x509$certificate_transparency$$$function_4_entry_type );
+    return NULL;
+
+function_return_exit:
+
+CHECK_OBJECT( tmp_return_value );
+assert( had_error || !ERROR_OCCURRED() );
+return tmp_return_value;
+
+}
+
+
+
+static PyObject *MAKE_FUNCTION_cryptography$x509$certificate_transparency$$$function_1_version(  )
+{
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_cryptography$x509$certificate_transparency$$$function_1_version,
+        const_str_plain_version,
+#if PYTHON_VERSION >= 300
+        const_str_digest_40bc1f59d618b145188018645bcb2b52,
+#endif
+        codeobj_b8f88b73e3a0265f2c14b1e99004fbde,
+        NULL,
+#if PYTHON_VERSION >= 300
+        NULL,
+        NULL,
+#endif
+        module_cryptography$x509$certificate_transparency,
+        const_str_digest_76c9ef42049abf0477f56bced304b4aa,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_cryptography$x509$certificate_transparency$$$function_2_log_id(  )
+{
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_cryptography$x509$certificate_transparency$$$function_2_log_id,
+        const_str_plain_log_id,
+#if PYTHON_VERSION >= 300
+        const_str_digest_616ad0fec345301881d8517989d60521,
+#endif
+        codeobj_cbd332e7216b3770416c58423d39900d,
+        NULL,
+#if PYTHON_VERSION >= 300
+        NULL,
+        NULL,
+#endif
+        module_cryptography$x509$certificate_transparency,
+        const_str_digest_42f09679c04964bc7bb8cc7f27f8cf08,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_cryptography$x509$certificate_transparency$$$function_3_timestamp(  )
+{
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_cryptography$x509$certificate_transparency$$$function_3_timestamp,
+        const_str_plain_timestamp,
+#if PYTHON_VERSION >= 300
+        const_str_digest_9c11c204937b27eb5c7b4018d0b1d665,
+#endif
+        codeobj_aaf8f861dc6f94b8858c06fe2c169cdb,
+        NULL,
+#if PYTHON_VERSION >= 300
+        NULL,
+        NULL,
+#endif
+        module_cryptography$x509$certificate_transparency,
+        const_str_digest_2d13d1326897fe3c4e33305d1e0182be,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_cryptography$x509$certificate_transparency$$$function_4_entry_type(  )
+{
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_cryptography$x509$certificate_transparency$$$function_4_entry_type,
+        const_str_plain_entry_type,
+#if PYTHON_VERSION >= 300
+        const_str_digest_f0baf65e2e641e67b238af9e2539997d,
+#endif
+        codeobj_c9e00cedd5b421b60f055379a9f82f89,
+        NULL,
+#if PYTHON_VERSION >= 300
+        NULL,
+        NULL,
+#endif
+        module_cryptography$x509$certificate_transparency,
+        const_str_digest_5662573cdd717091f4926c768aa161c1,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+#if PYTHON_VERSION >= 300
+static struct PyModuleDef mdef_cryptography$x509$certificate_transparency =
+{
+    PyModuleDef_HEAD_INIT,
+    "cryptography.x509.certificate_transparency",   /* m_name */
+    NULL,                /* m_doc */
+    -1,                  /* m_size */
+    NULL,                /* m_methods */
+    NULL,                /* m_reload */
+    NULL,                /* m_traverse */
+    NULL,                /* m_clear */
+    NULL,                /* m_free */
+  };
+#endif
+
+extern PyObject *const_str_plain___package__;
+
+#if PYTHON_VERSION >= 300
+extern PyObject *const_str_dot;
+
+extern PyObject *const_str_plain___loader__;
+extern PyObject *metapath_based_loader;
+#endif
+
+#if PYTHON_VERSION >= 340
+extern PyObject *const_str_plain___spec__;
+#endif
+
+extern void _initCompiledCellType();
+extern void _initCompiledGeneratorType();
+extern void _initCompiledFunctionType();
+extern void _initCompiledMethodType();
+extern void _initCompiledFrameType();
+#if PYTHON_VERSION >= 350
+extern void _initCompiledCoroutineTypes();
+#endif
+#if PYTHON_VERSION >= 360
+extern void _initCompiledAsyncgenTypes();
+#endif
+
+// The exported interface to CPython. On import of the module, this function
+// gets called. It has to have an exact function name, in cases it's a shared
+// library export. This is hidden behind the MOD_INIT_DECL.
+
+MOD_INIT_DECL( cryptography$x509$certificate_transparency )
+{
+#if defined(_NUITKA_EXE) || PYTHON_VERSION >= 300
+    static bool _init_done = false;
+
+    // Modules might be imported repeatedly, which is to be ignored.
+    if ( _init_done )
+    {
+        return MOD_RETURN_VALUE( module_cryptography$x509$certificate_transparency );
+    }
+    else
+    {
+        _init_done = true;
+    }
+#endif
+
+#ifdef _NUITKA_MODULE
+    // In case of a stand alone extension module, need to call initialization
+    // the init here because that's the first and only time we are going to get
+    // called here.
+
+    // Initialize the constant values used.
+    _initBuiltinModule();
+    createGlobalConstants();
+
+    /* Initialize the compiled types of Nuitka. */
+    _initCompiledCellType();
+    _initCompiledGeneratorType();
+    _initCompiledFunctionType();
+    _initCompiledMethodType();
+    _initCompiledFrameType();
+#if PYTHON_VERSION >= 350
+    _initCompiledCoroutineTypes();
+#endif
+#if PYTHON_VERSION >= 360
+    _initCompiledAsyncgenTypes();
+#endif
+
+#if PYTHON_VERSION < 300
+    _initSlotCompare();
+#endif
+#if PYTHON_VERSION >= 270
+    _initSlotIternext();
+#endif
+
+    patchBuiltinModule();
+    patchTypeComparison();
+
+    // Enable meta path based loader if not already done.
+#ifdef _NUITKA_TRACE
+    puts("cryptography.x509.certificate_transparency: Calling setupMetaPathBasedLoader().");
+#endif
+    setupMetaPathBasedLoader();
+
+#if PYTHON_VERSION >= 300
+    patchInspectModule();
+#endif
+
+#endif
+
+    /* The constants only used by this module are created now. */
+#ifdef _NUITKA_TRACE
+    puts("cryptography.x509.certificate_transparency: Calling createModuleConstants().");
+#endif
+    createModuleConstants();
+
+    /* The code objects used by this module are created now. */
+#ifdef _NUITKA_TRACE
+    puts("cryptography.x509.certificate_transparency: Calling createModuleCodeObjects().");
+#endif
+    createModuleCodeObjects();
+
+    // puts( "in initcryptography$x509$certificate_transparency" );
+
+    // Create the module object first. There are no methods initially, all are
+    // added dynamically in actual code only.  Also no "__doc__" is initially
+    // set at this time, as it could not contain NUL characters this way, they
+    // are instead set in early module code.  No "self" for modules, we have no
+    // use for it.
+#if PYTHON_VERSION < 300
+    module_cryptography$x509$certificate_transparency = Py_InitModule4(
+        "cryptography.x509.certificate_transparency",       // Module Name
+        NULL,                    // No methods initially, all are added
+                                 // dynamically in actual module code only.
+        NULL,                    // No "__doc__" is initially set, as it could
+                                 // not contain NUL this way, added early in
+                                 // actual code.
+        NULL,                    // No self for modules, we don't use it.
+        PYTHON_API_VERSION
+    );
+#else
+
+    module_cryptography$x509$certificate_transparency = PyModule_Create( &mdef_cryptography$x509$certificate_transparency );
+#endif
+
+    moduledict_cryptography$x509$certificate_transparency = MODULE_DICT( module_cryptography$x509$certificate_transparency );
+
+    // Update "__package__" value to what it ought to be.
+    {
+#if 0
+        PyObject *module_name = GET_STRING_DICT_VALUE( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain___name__ );
+
+        UPDATE_STRING_DICT1(
+            moduledict_cryptography$x509$certificate_transparency,
+            (Nuitka_StringObject *)const_str_plain___package__,
+            module_name
+        );
+
+#else
+
+#if PYTHON_VERSION < 300
+        PyObject *module_name = GET_STRING_DICT_VALUE( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain___name__ );
+        char const *module_name_cstr = PyString_AS_STRING( module_name );
+
+        char const *last_dot = strrchr( module_name_cstr, '.' );
+
+        if ( last_dot != NULL )
+        {
+            UPDATE_STRING_DICT1(
+                moduledict_cryptography$x509$certificate_transparency,
+                (Nuitka_StringObject *)const_str_plain___package__,
+                PyString_FromStringAndSize( module_name_cstr, last_dot - module_name_cstr )
+            );
+        }
+#else
+        PyObject *module_name = GET_STRING_DICT_VALUE( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain___name__ );
+        Py_ssize_t dot_index = PyUnicode_Find( module_name, const_str_dot, 0, PyUnicode_GetLength( module_name ), -1 );
+
+        if ( dot_index != -1 )
+        {
+            UPDATE_STRING_DICT1(
+                moduledict_cryptography$x509$certificate_transparency,
+                (Nuitka_StringObject *)const_str_plain___package__,
+                PyUnicode_Substring( module_name, 0, dot_index )
+            );
+        }
+#endif
+#endif
+    }
+
+    CHECK_OBJECT( module_cryptography$x509$certificate_transparency );
+
+// Seems to work for Python2.7 out of the box, but for Python3, the module
+// doesn't automatically enter "sys.modules", so do it manually.
+#if PYTHON_VERSION >= 300
+    {
+        int r = PyObject_SetItem( PySys_GetObject( (char *)"modules" ), const_str_digest_9c4dcd45c628f51f60b0e74617698ea7, module_cryptography$x509$certificate_transparency );
+
+        assert( r != -1 );
+    }
+#endif
+
+    // For deep importing of a module we need to have "__builtins__", so we set
+    // it ourselves in the same way than CPython does. Note: This must be done
+    // before the frame object is allocated, or else it may fail.
+
+    if ( GET_STRING_DICT_VALUE( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain___builtins__ ) == NULL )
+    {
+        PyObject *value = (PyObject *)builtin_module;
+
+        // Check if main module, not a dict then but the module itself.
+#if !defined(_NUITKA_EXE) || !0
+        value = PyModule_GetDict( value );
+#endif
+
+        UPDATE_STRING_DICT0( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain___builtins__, value );
+    }
+
+#if PYTHON_VERSION >= 300
+    UPDATE_STRING_DICT0( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain___loader__, metapath_based_loader );
+#endif
+
+#if PYTHON_VERSION >= 340
+#if 0
+    UPDATE_STRING_DICT0( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain___spec__, Py_None );
+#else
+    {
+        PyObject *bootstrap_module = PyImport_ImportModule("importlib._bootstrap");
+        CHECK_OBJECT( bootstrap_module );
+        PyObject *module_spec_class = PyObject_GetAttrString( bootstrap_module, "ModuleSpec" );
+        Py_DECREF( bootstrap_module );
+
+        PyObject *args[] = {
+            GET_STRING_DICT_VALUE( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain___name__ ),
+            metapath_based_loader
+        };
+
+        PyObject *spec_value = CALL_FUNCTION_WITH_ARGS2(
+            module_spec_class,
+            args
+        );
+
+        UPDATE_STRING_DICT1( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain___spec__, spec_value );
+
+        Py_DECREF( module_spec_class );
+    }
+#endif
+#endif
+
+
+    // Temp variables if any
+    PyObject *outline_0_var___class__ = NULL;
+    PyObject *outline_1_var___class__ = NULL;
+    PyObject *outline_2_var___class__ = NULL;
+    PyObject *tmp_class_creation_1__bases = NULL;
+    PyObject *tmp_class_creation_1__class_decl_dict = NULL;
+    PyObject *tmp_class_creation_1__metaclass = NULL;
+    PyObject *tmp_class_creation_1__prepared = NULL;
+    PyObject *tmp_class_creation_2__bases = NULL;
+    PyObject *tmp_class_creation_2__class_decl_dict = NULL;
+    PyObject *tmp_class_creation_2__metaclass = NULL;
+    PyObject *tmp_class_creation_2__prepared = NULL;
+    PyObject *tmp_class_creation_3__class_decl_dict = NULL;
+    PyObject *tmp_class_creation_3__metaclass = NULL;
+    PyObject *tmp_class_creation_3__prepared = NULL;
+    PyObject *tmp_import_from_1__module = NULL;
+    PyObject *exception_type = NULL;
+    PyObject *exception_value = NULL;
+    PyTracebackObject *exception_tb = NULL;
+    NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
+    PyObject *exception_keeper_type_1;
+    PyObject *exception_keeper_value_1;
+    PyTracebackObject *exception_keeper_tb_1;
+    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
+    PyObject *exception_keeper_type_2;
+    PyObject *exception_keeper_value_2;
+    PyTracebackObject *exception_keeper_tb_2;
+    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_2;
+    PyObject *exception_keeper_type_3;
+    PyObject *exception_keeper_value_3;
+    PyTracebackObject *exception_keeper_tb_3;
+    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_3;
+    PyObject *exception_keeper_type_4;
+    PyObject *exception_keeper_value_4;
+    PyTracebackObject *exception_keeper_tb_4;
+    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_4;
+    PyObject *exception_keeper_type_5;
+    PyObject *exception_keeper_value_5;
+    PyTracebackObject *exception_keeper_tb_5;
+    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_5;
+    PyObject *exception_keeper_type_6;
+    PyObject *exception_keeper_value_6;
+    PyTracebackObject *exception_keeper_tb_6;
+    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_6;
+    PyObject *exception_keeper_type_7;
+    PyObject *exception_keeper_value_7;
+    PyTracebackObject *exception_keeper_tb_7;
+    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_7;
+    PyObject *exception_keeper_type_8;
+    PyObject *exception_keeper_value_8;
+    PyTracebackObject *exception_keeper_tb_8;
+    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_8;
+    PyObject *exception_keeper_type_9;
+    PyObject *exception_keeper_value_9;
+    PyTracebackObject *exception_keeper_tb_9;
+    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_9;
+    PyObject *exception_keeper_type_10;
+    PyObject *exception_keeper_value_10;
+    PyTracebackObject *exception_keeper_tb_10;
+    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_10;
+    PyObject *tmp_args_element_name_1;
+    PyObject *tmp_args_element_name_2;
+    PyObject *tmp_args_element_name_3;
+    PyObject *tmp_args_element_name_4;
+    PyObject *tmp_args_element_name_5;
+    PyObject *tmp_args_element_name_6;
+    PyObject *tmp_args_name_1;
+    PyObject *tmp_args_name_2;
+    PyObject *tmp_args_name_3;
+    PyObject *tmp_args_name_4;
+    PyObject *tmp_args_name_5;
+    PyObject *tmp_args_name_6;
+    PyObject *tmp_assign_source_1;
+    PyObject *tmp_assign_source_2;
+    PyObject *tmp_assign_source_3;
+    PyObject *tmp_assign_source_4;
+    PyObject *tmp_assign_source_5;
+    PyObject *tmp_assign_source_6;
+    PyObject *tmp_assign_source_7;
+    PyObject *tmp_assign_source_8;
+    PyObject *tmp_assign_source_9;
+    PyObject *tmp_assign_source_10;
+    PyObject *tmp_assign_source_11;
+    PyObject *tmp_assign_source_12;
+    PyObject *tmp_assign_source_13;
+    PyObject *tmp_assign_source_14;
+    PyObject *tmp_assign_source_15;
+    PyObject *tmp_assign_source_16;
+    PyObject *tmp_assign_source_17;
+    PyObject *tmp_assign_source_18;
+    PyObject *tmp_assign_source_19;
+    PyObject *tmp_assign_source_20;
+    PyObject *tmp_assign_source_21;
+    PyObject *tmp_assign_source_22;
+    PyObject *tmp_assign_source_23;
+    PyObject *tmp_assign_source_24;
+    PyObject *tmp_assign_source_25;
+    PyObject *tmp_assign_source_26;
+    PyObject *tmp_assign_source_27;
+    PyObject *tmp_bases_name_1;
+    PyObject *tmp_bases_name_2;
+    PyObject *tmp_bases_name_3;
+    PyObject *tmp_called_instance_1;
+    PyObject *tmp_called_instance_2;
+    PyObject *tmp_called_instance_3;
+    PyObject *tmp_called_instance_4;
+    PyObject *tmp_called_name_1;
+    PyObject *tmp_called_name_2;
+    PyObject *tmp_called_name_3;
+    PyObject *tmp_called_name_4;
+    PyObject *tmp_called_name_5;
+    PyObject *tmp_called_name_6;
+    PyObject *tmp_called_name_7;
+    PyObject *tmp_called_name_8;
+    int tmp_cond_truth_1;
+    int tmp_cond_truth_2;
+    int tmp_cond_truth_3;
+    int tmp_cond_truth_4;
+    int tmp_cond_truth_5;
+    int tmp_cond_truth_6;
+    PyObject *tmp_cond_value_1;
+    PyObject *tmp_cond_value_2;
+    PyObject *tmp_cond_value_3;
+    PyObject *tmp_cond_value_4;
+    PyObject *tmp_cond_value_5;
+    PyObject *tmp_cond_value_6;
+    PyObject *tmp_dict_name_1;
+    PyObject *tmp_dict_name_2;
+    PyObject *tmp_dict_name_3;
+    PyObject *tmp_dict_name_4;
+    PyObject *tmp_dict_name_5;
+    PyObject *tmp_dict_name_6;
+    PyObject *tmp_dict_name_7;
+    PyObject *tmp_dict_name_8;
+    PyObject *tmp_dict_name_9;
+    PyObject *tmp_dictdel_dict;
+    PyObject *tmp_dictdel_key;
+    PyObject *tmp_dictset_value;
+    PyObject *tmp_fromlist_name_1;
+    PyObject *tmp_fromlist_name_2;
+    PyObject *tmp_fromlist_name_3;
+    PyObject *tmp_globals_name_1;
+    PyObject *tmp_globals_name_2;
+    PyObject *tmp_globals_name_3;
+    PyObject *tmp_hasattr_attr_1;
+    PyObject *tmp_hasattr_attr_2;
+    PyObject *tmp_hasattr_attr_3;
+    PyObject *tmp_hasattr_source_1;
+    PyObject *tmp_hasattr_source_2;
+    PyObject *tmp_hasattr_source_3;
+    PyObject *tmp_import_name_from_1;
+    PyObject *tmp_import_name_from_2;
+    PyObject *tmp_import_name_from_3;
+    PyObject *tmp_import_name_from_4;
+    PyObject *tmp_key_name_1;
+    PyObject *tmp_key_name_2;
+    PyObject *tmp_key_name_3;
+    PyObject *tmp_key_name_4;
+    PyObject *tmp_key_name_5;
+    PyObject *tmp_key_name_6;
+    PyObject *tmp_key_name_7;
+    PyObject *tmp_key_name_8;
+    PyObject *tmp_key_name_9;
+    PyObject *tmp_kw_name_1;
+    PyObject *tmp_kw_name_2;
+    PyObject *tmp_kw_name_3;
+    PyObject *tmp_kw_name_4;
+    PyObject *tmp_kw_name_5;
+    PyObject *tmp_kw_name_6;
+    PyObject *tmp_level_name_1;
+    PyObject *tmp_level_name_2;
+    PyObject *tmp_level_name_3;
+    PyObject *tmp_locals_name_1;
+    PyObject *tmp_locals_name_2;
+    PyObject *tmp_locals_name_3;
+    PyObject *tmp_metaclass_name_1;
+    PyObject *tmp_metaclass_name_2;
+    PyObject *tmp_metaclass_name_3;
+    PyObject *tmp_name_name_1;
+    PyObject *tmp_name_name_2;
+    PyObject *tmp_name_name_3;
+    PyObject *tmp_outline_return_value_1;
+    PyObject *tmp_outline_return_value_2;
+    PyObject *tmp_outline_return_value_3;
+    int tmp_res;
+    bool tmp_result;
+    PyObject *tmp_set_locals;
+    PyObject *tmp_source_name_1;
+    PyObject *tmp_source_name_2;
+    PyObject *tmp_source_name_3;
+    PyObject *tmp_source_name_4;
+    PyObject *tmp_source_name_5;
+    PyObject *tmp_subscribed_name_1;
+    PyObject *tmp_subscribed_name_2;
+    PyObject *tmp_subscript_name_1;
+    PyObject *tmp_subscript_name_2;
+    PyObject *tmp_tuple_element_1;
+    PyObject *tmp_tuple_element_2;
+    PyObject *tmp_tuple_element_3;
+    PyObject *tmp_tuple_element_4;
+    PyObject *tmp_tuple_element_5;
+    PyObject *tmp_tuple_element_6;
+    PyObject *tmp_tuple_element_7;
+    PyObject *tmp_type_arg_1;
+    PyObject *tmp_type_arg_2;
+    static struct Nuitka_FrameObject *cache_frame_bed34cca5277ca9c9b6dbd0b97f92853_2 = NULL;
+
+    struct Nuitka_FrameObject *frame_bed34cca5277ca9c9b6dbd0b97f92853_2;
+
+    static struct Nuitka_FrameObject *cache_frame_67c57dd1595c178e6ef06ec0baf5c035_3 = NULL;
+
+    struct Nuitka_FrameObject *frame_67c57dd1595c178e6ef06ec0baf5c035_3;
+
+    static struct Nuitka_FrameObject *cache_frame_d958e2e24f3c86589a58b0973cad0e7a_4 = NULL;
+
+    struct Nuitka_FrameObject *frame_d958e2e24f3c86589a58b0973cad0e7a_4;
+
+    struct Nuitka_FrameObject *frame_0d308e0a31e4655f0f182ee9faf33652;
+
+    NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
+    NUITKA_MAY_BE_UNUSED char const *type_description_2 = NULL;
+    NUITKA_MAY_BE_UNUSED char const *type_description_3 = NULL;
+    NUITKA_MAY_BE_UNUSED char const *type_description_4 = NULL;
+    tmp_outline_return_value_1 = NULL;
+    tmp_outline_return_value_2 = NULL;
+    tmp_outline_return_value_3 = NULL;
+    PyObject *locals_cryptography$x509$certificate_transparency_18 = NULL;
+    PyObject *locals_cryptography$x509$certificate_transparency_13 = NULL;
+    PyObject *locals_cryptography$x509$certificate_transparency_23 = NULL;
+
+    // Module code.
+    tmp_assign_source_1 = Py_None;
+    UPDATE_STRING_DICT0( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain___doc__, tmp_assign_source_1 );
+    tmp_assign_source_2 = const_str_digest_93c25efdad1d385589367f55d1eed526;
+    UPDATE_STRING_DICT0( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain___file__, tmp_assign_source_2 );
+    tmp_assign_source_3 = Py_None;
+    UPDATE_STRING_DICT0( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain___cached__, tmp_assign_source_3 );
+    tmp_assign_source_4 = PyImport_ImportModule("__future__");
+    assert( !(tmp_assign_source_4 == NULL) );
+    assert( tmp_import_from_1__module == NULL );
+    Py_INCREF( tmp_assign_source_4 );
+    tmp_import_from_1__module = tmp_assign_source_4;
+
+    // Frame without reuse.
+    frame_0d308e0a31e4655f0f182ee9faf33652 = MAKE_MODULE_FRAME( codeobj_0d308e0a31e4655f0f182ee9faf33652, module_cryptography$x509$certificate_transparency );
+
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
+    pushFrameStack( frame_0d308e0a31e4655f0f182ee9faf33652 );
+    assert( Py_REFCNT( frame_0d308e0a31e4655f0f182ee9faf33652 ) == 2 );
+
+    // Framed code:
+    // Tried code:
+    tmp_import_name_from_1 = tmp_import_from_1__module;
+
+    CHECK_OBJECT( tmp_import_name_from_1 );
+    tmp_assign_source_5 = IMPORT_NAME( tmp_import_name_from_1, const_str_plain_absolute_import );
+    if ( tmp_assign_source_5 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 5;
+
+        goto try_except_handler_1;
+    }
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain_absolute_import, tmp_assign_source_5 );
+    tmp_import_name_from_2 = tmp_import_from_1__module;
+
+    CHECK_OBJECT( tmp_import_name_from_2 );
+    tmp_assign_source_6 = IMPORT_NAME( tmp_import_name_from_2, const_str_plain_division );
+    if ( tmp_assign_source_6 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 5;
+
+        goto try_except_handler_1;
+    }
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain_division, tmp_assign_source_6 );
+    tmp_import_name_from_3 = tmp_import_from_1__module;
+
+    CHECK_OBJECT( tmp_import_name_from_3 );
+    tmp_assign_source_7 = IMPORT_NAME( tmp_import_name_from_3, const_str_plain_print_function );
+    if ( tmp_assign_source_7 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 5;
+
+        goto try_except_handler_1;
+    }
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain_print_function, tmp_assign_source_7 );
+    goto try_end_1;
+    // Exception handler code:
+    try_except_handler_1:;
+    exception_keeper_type_1 = exception_type;
+    exception_keeper_value_1 = exception_value;
+    exception_keeper_tb_1 = exception_tb;
+    exception_keeper_lineno_1 = exception_lineno;
+    exception_type = NULL;
+    exception_value = NULL;
+    exception_tb = NULL;
+    exception_lineno = 0;
+
+    CHECK_OBJECT( (PyObject *)tmp_import_from_1__module );
+    Py_DECREF( tmp_import_from_1__module );
+    tmp_import_from_1__module = NULL;
+
+    // Re-raise.
+    exception_type = exception_keeper_type_1;
+    exception_value = exception_keeper_value_1;
+    exception_tb = exception_keeper_tb_1;
+    exception_lineno = exception_keeper_lineno_1;
+
+    goto frame_exception_exit_1;
+    // End of try:
+    try_end_1:;
+    CHECK_OBJECT( (PyObject *)tmp_import_from_1__module );
+    Py_DECREF( tmp_import_from_1__module );
+    tmp_import_from_1__module = NULL;
+
+    tmp_name_name_1 = const_str_plain_abc;
+    tmp_globals_name_1 = (PyObject *)moduledict_cryptography$x509$certificate_transparency;
+    tmp_locals_name_1 = Py_None;
+    tmp_fromlist_name_1 = Py_None;
+    tmp_level_name_1 = const_int_0;
+    frame_0d308e0a31e4655f0f182ee9faf33652->m_frame.f_lineno = 7;
+    tmp_assign_source_8 = IMPORT_MODULE5( tmp_name_name_1, tmp_globals_name_1, tmp_locals_name_1, tmp_fromlist_name_1, tmp_level_name_1 );
+    if ( tmp_assign_source_8 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 7;
+
+        goto frame_exception_exit_1;
+    }
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain_abc, tmp_assign_source_8 );
+    tmp_name_name_2 = const_str_plain_enum;
+    tmp_globals_name_2 = (PyObject *)moduledict_cryptography$x509$certificate_transparency;
+    tmp_locals_name_2 = Py_None;
+    tmp_fromlist_name_2 = const_tuple_str_plain_Enum_tuple;
+    tmp_level_name_2 = const_int_0;
+    frame_0d308e0a31e4655f0f182ee9faf33652->m_frame.f_lineno = 8;
+    tmp_import_name_from_4 = IMPORT_MODULE5( tmp_name_name_2, tmp_globals_name_2, tmp_locals_name_2, tmp_fromlist_name_2, tmp_level_name_2 );
+    if ( tmp_import_name_from_4 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 8;
+
+        goto frame_exception_exit_1;
+    }
+    tmp_assign_source_9 = IMPORT_NAME( tmp_import_name_from_4, const_str_plain_Enum );
+    Py_DECREF( tmp_import_name_from_4 );
+    if ( tmp_assign_source_9 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 8;
+
+        goto frame_exception_exit_1;
+    }
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain_Enum, tmp_assign_source_9 );
+    tmp_name_name_3 = const_str_plain_six;
+    tmp_globals_name_3 = (PyObject *)moduledict_cryptography$x509$certificate_transparency;
+    tmp_locals_name_3 = Py_None;
+    tmp_fromlist_name_3 = Py_None;
+    tmp_level_name_3 = const_int_0;
+    frame_0d308e0a31e4655f0f182ee9faf33652->m_frame.f_lineno = 10;
+    tmp_assign_source_10 = IMPORT_MODULE5( tmp_name_name_3, tmp_globals_name_3, tmp_locals_name_3, tmp_fromlist_name_3, tmp_level_name_3 );
+    if ( tmp_assign_source_10 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 10;
+
+        goto frame_exception_exit_1;
+    }
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain_six, tmp_assign_source_10 );
+    tmp_tuple_element_1 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain_Enum );
+
+    if (unlikely( tmp_tuple_element_1 == NULL ))
+    {
+        tmp_tuple_element_1 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_Enum );
+    }
+
+    CHECK_OBJECT( tmp_tuple_element_1 );
+    tmp_assign_source_11 = PyTuple_New( 1 );
+    Py_INCREF( tmp_tuple_element_1 );
+    PyTuple_SET_ITEM( tmp_assign_source_11, 0, tmp_tuple_element_1 );
+    assert( tmp_class_creation_1__bases == NULL );
+    tmp_class_creation_1__bases = tmp_assign_source_11;
+
+    tmp_assign_source_12 = PyDict_New();
+    assert( tmp_class_creation_1__class_decl_dict == NULL );
+    tmp_class_creation_1__class_decl_dict = tmp_assign_source_12;
+
+    // Tried code:
+    tmp_key_name_1 = const_str_plain_metaclass;
+    tmp_dict_name_1 = tmp_class_creation_1__class_decl_dict;
+
+    CHECK_OBJECT( tmp_dict_name_1 );
+    tmp_res = PyDict_Contains( tmp_dict_name_1, tmp_key_name_1 );
+    if ( tmp_res == -1 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 13;
+
+        goto try_except_handler_2;
+    }
+    tmp_cond_value_1 = BOOL_FROM( tmp_res == 1 );
+    tmp_cond_truth_1 = CHECK_IF_TRUE( tmp_cond_value_1 );
+    if ( tmp_cond_truth_1 == -1 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 13;
+
+        goto try_except_handler_2;
+    }
+    if ( tmp_cond_truth_1 == 1 )
+    {
+        goto condexpr_true_1;
+    }
+    else
+    {
+        goto condexpr_false_1;
+    }
+    condexpr_true_1:;
+    tmp_dict_name_2 = tmp_class_creation_1__class_decl_dict;
+
+    CHECK_OBJECT( tmp_dict_name_2 );
+    tmp_key_name_2 = const_str_plain_metaclass;
+    tmp_metaclass_name_1 = DICT_GET_ITEM( tmp_dict_name_2, tmp_key_name_2 );
+    if ( tmp_metaclass_name_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 13;
+
+        goto try_except_handler_2;
+    }
+    goto condexpr_end_1;
+    condexpr_false_1:;
+    tmp_subscribed_name_1 = tmp_class_creation_1__bases;
+
+    CHECK_OBJECT( tmp_subscribed_name_1 );
+    tmp_subscript_name_1 = const_int_0;
+    tmp_type_arg_1 = LOOKUP_SUBSCRIPT( tmp_subscribed_name_1, tmp_subscript_name_1 );
+    if ( tmp_type_arg_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 13;
+
+        goto try_except_handler_2;
+    }
+    tmp_metaclass_name_1 = BUILTIN_TYPE1( tmp_type_arg_1 );
+    Py_DECREF( tmp_type_arg_1 );
+    if ( tmp_metaclass_name_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 13;
+
+        goto try_except_handler_2;
+    }
+    condexpr_end_1:;
+    tmp_bases_name_1 = tmp_class_creation_1__bases;
+
+    CHECK_OBJECT( tmp_bases_name_1 );
+    tmp_assign_source_13 = SELECT_METACLASS( tmp_metaclass_name_1, tmp_bases_name_1 );
+    Py_DECREF( tmp_metaclass_name_1 );
+    if ( tmp_assign_source_13 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 13;
+
+        goto try_except_handler_2;
+    }
+    assert( tmp_class_creation_1__metaclass == NULL );
+    tmp_class_creation_1__metaclass = tmp_assign_source_13;
+
+    tmp_key_name_3 = const_str_plain_metaclass;
+    tmp_dict_name_3 = tmp_class_creation_1__class_decl_dict;
+
+    CHECK_OBJECT( tmp_dict_name_3 );
+    tmp_res = PyDict_Contains( tmp_dict_name_3, tmp_key_name_3 );
+    if ( tmp_res == -1 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 13;
+
+        goto try_except_handler_2;
+    }
+    tmp_cond_value_2 = BOOL_FROM( tmp_res == 1 );
+    tmp_cond_truth_2 = CHECK_IF_TRUE( tmp_cond_value_2 );
+    if ( tmp_cond_truth_2 == -1 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 13;
+
+        goto try_except_handler_2;
+    }
+    if ( tmp_cond_truth_2 == 1 )
+    {
+        goto branch_yes_1;
+    }
+    else
+    {
+        goto branch_no_1;
+    }
+    branch_yes_1:;
+    tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
+
+    CHECK_OBJECT( tmp_dictdel_dict );
+    tmp_dictdel_key = const_str_plain_metaclass;
+    tmp_result = DICT_REMOVE_ITEM( tmp_dictdel_dict, tmp_dictdel_key );
+    if ( tmp_result == false )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 13;
+
+        goto try_except_handler_2;
+    }
+    branch_no_1:;
+    tmp_hasattr_source_1 = tmp_class_creation_1__metaclass;
+
+    CHECK_OBJECT( tmp_hasattr_source_1 );
+    tmp_hasattr_attr_1 = const_str_plain___prepare__;
+    tmp_res = PyObject_HasAttr( tmp_hasattr_source_1, tmp_hasattr_attr_1 );
+    if ( tmp_res == -1 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 13;
+
+        goto try_except_handler_2;
+    }
+    if ( tmp_res == 1 )
+    {
+        goto condexpr_true_2;
+    }
+    else
+    {
+        goto condexpr_false_2;
+    }
+    condexpr_true_2:;
+    tmp_source_name_1 = tmp_class_creation_1__metaclass;
+
+    CHECK_OBJECT( tmp_source_name_1 );
+    tmp_called_name_1 = LOOKUP_ATTRIBUTE( tmp_source_name_1, const_str_plain___prepare__ );
+    if ( tmp_called_name_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 13;
+
+        goto try_except_handler_2;
+    }
+    tmp_tuple_element_2 = const_str_plain_LogEntryType;
+    tmp_args_name_1 = PyTuple_New( 2 );
+    Py_INCREF( tmp_tuple_element_2 );
+    PyTuple_SET_ITEM( tmp_args_name_1, 0, tmp_tuple_element_2 );
+    tmp_tuple_element_2 = tmp_class_creation_1__bases;
+
+    CHECK_OBJECT( tmp_tuple_element_2 );
+    Py_INCREF( tmp_tuple_element_2 );
+    PyTuple_SET_ITEM( tmp_args_name_1, 1, tmp_tuple_element_2 );
+    tmp_kw_name_1 = tmp_class_creation_1__class_decl_dict;
+
+    CHECK_OBJECT( tmp_kw_name_1 );
+    frame_0d308e0a31e4655f0f182ee9faf33652->m_frame.f_lineno = 13;
+    tmp_assign_source_14 = CALL_FUNCTION( tmp_called_name_1, tmp_args_name_1, tmp_kw_name_1 );
+    Py_DECREF( tmp_called_name_1 );
+    Py_DECREF( tmp_args_name_1 );
+    if ( tmp_assign_source_14 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 13;
+
+        goto try_except_handler_2;
+    }
+    goto condexpr_end_2;
+    condexpr_false_2:;
+    tmp_assign_source_14 = PyDict_New();
+    condexpr_end_2:;
+    assert( tmp_class_creation_1__prepared == NULL );
+    tmp_class_creation_1__prepared = tmp_assign_source_14;
+
+    tmp_set_locals = tmp_class_creation_1__prepared;
+
+    CHECK_OBJECT( tmp_set_locals );
+    locals_cryptography$x509$certificate_transparency_13 = tmp_set_locals;
+    Py_INCREF( tmp_set_locals );
+    // Tried code:
+    // Tried code:
+    tmp_dictset_value = const_str_digest_9c4dcd45c628f51f60b0e74617698ea7;
+    tmp_res = PyObject_SetItem( locals_cryptography$x509$certificate_transparency_13, const_str_plain___module__, tmp_dictset_value );
+    if ( tmp_res != 0 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 13;
+
+        goto try_except_handler_4;
+    }
+    tmp_dictset_value = const_str_plain_LogEntryType;
+    tmp_res = PyObject_SetItem( locals_cryptography$x509$certificate_transparency_13, const_str_plain___qualname__, tmp_dictset_value );
+    if ( tmp_res != 0 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 13;
+
+        goto try_except_handler_4;
+    }
+    MAKE_OR_REUSE_FRAME( cache_frame_bed34cca5277ca9c9b6dbd0b97f92853_2, codeobj_bed34cca5277ca9c9b6dbd0b97f92853, module_cryptography$x509$certificate_transparency, sizeof(void *) );
+    frame_bed34cca5277ca9c9b6dbd0b97f92853_2 = cache_frame_bed34cca5277ca9c9b6dbd0b97f92853_2;
+
+    // Push the new frame as the currently active one.
+    pushFrameStack( frame_bed34cca5277ca9c9b6dbd0b97f92853_2 );
+
+    // Mark the frame object as in use, ref count 1 will be up for reuse.
+    assert( Py_REFCNT( frame_bed34cca5277ca9c9b6dbd0b97f92853_2 ) == 2 ); // Frame stack
+
+    // Framed code:
+    tmp_dictset_value = const_int_0;
+    tmp_res = PyObject_SetItem( locals_cryptography$x509$certificate_transparency_13, const_str_plain_X509_CERTIFICATE, tmp_dictset_value );
+    if ( tmp_res != 0 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 14;
+        type_description_2 = "N";
+        goto frame_exception_exit_2;
+    }
+    tmp_dictset_value = const_int_pos_1;
+    tmp_res = PyObject_SetItem( locals_cryptography$x509$certificate_transparency_13, const_str_plain_PRE_CERTIFICATE, tmp_dictset_value );
+    if ( tmp_res != 0 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 15;
+        type_description_2 = "N";
+        goto frame_exception_exit_2;
+    }
+
+#if 0
+    RESTORE_FRAME_EXCEPTION( frame_bed34cca5277ca9c9b6dbd0b97f92853_2 );
+#endif
+
+    // Put the previous frame back on top.
+    popFrameStack();
+
+    goto frame_no_exception_1;
+
+    frame_exception_exit_2:;
+
+#if 0
+    RESTORE_FRAME_EXCEPTION( frame_bed34cca5277ca9c9b6dbd0b97f92853_2 );
+#endif
+
+    if ( exception_tb == NULL )
+    {
+        exception_tb = MAKE_TRACEBACK( frame_bed34cca5277ca9c9b6dbd0b97f92853_2, exception_lineno );
+    }
+    else if ( exception_tb->tb_frame != &frame_bed34cca5277ca9c9b6dbd0b97f92853_2->m_frame )
+    {
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_bed34cca5277ca9c9b6dbd0b97f92853_2, exception_lineno );
+    }
+
+    // Attachs locals to frame if any.
+    Nuitka_Frame_AttachLocals(
+        (struct Nuitka_FrameObject *)frame_bed34cca5277ca9c9b6dbd0b97f92853_2,
+        type_description_2,
+        NULL
+    );
+
+
+    // Release cached frame.
+    if ( frame_bed34cca5277ca9c9b6dbd0b97f92853_2 == cache_frame_bed34cca5277ca9c9b6dbd0b97f92853_2 )
+    {
+        Py_DECREF( frame_bed34cca5277ca9c9b6dbd0b97f92853_2 );
+    }
+    cache_frame_bed34cca5277ca9c9b6dbd0b97f92853_2 = NULL;
+
+    assertFrameObject( frame_bed34cca5277ca9c9b6dbd0b97f92853_2 );
+
+    // Put the previous frame back on top.
+    popFrameStack();
+
+    // Return the error.
+    goto nested_frame_exit_1;
+
+    frame_no_exception_1:;
+
+    goto skip_nested_handling_1;
+    nested_frame_exit_1:;
+
+    goto try_except_handler_4;
+    skip_nested_handling_1:;
+    tmp_called_name_2 = tmp_class_creation_1__metaclass;
+
+    CHECK_OBJECT( tmp_called_name_2 );
+    tmp_tuple_element_3 = const_str_plain_LogEntryType;
+    tmp_args_name_2 = PyTuple_New( 3 );
+    Py_INCREF( tmp_tuple_element_3 );
+    PyTuple_SET_ITEM( tmp_args_name_2, 0, tmp_tuple_element_3 );
+    tmp_tuple_element_3 = tmp_class_creation_1__bases;
+
+    CHECK_OBJECT( tmp_tuple_element_3 );
+    Py_INCREF( tmp_tuple_element_3 );
+    PyTuple_SET_ITEM( tmp_args_name_2, 1, tmp_tuple_element_3 );
+    tmp_tuple_element_3 = locals_cryptography$x509$certificate_transparency_13;
+    Py_INCREF( tmp_tuple_element_3 );
+    PyTuple_SET_ITEM( tmp_args_name_2, 2, tmp_tuple_element_3 );
+    tmp_kw_name_2 = tmp_class_creation_1__class_decl_dict;
+
+    CHECK_OBJECT( tmp_kw_name_2 );
+    frame_0d308e0a31e4655f0f182ee9faf33652->m_frame.f_lineno = 13;
+    tmp_assign_source_16 = CALL_FUNCTION( tmp_called_name_2, tmp_args_name_2, tmp_kw_name_2 );
+    Py_DECREF( tmp_args_name_2 );
+    if ( tmp_assign_source_16 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 13;
+
+        goto try_except_handler_4;
+    }
+    assert( outline_0_var___class__ == NULL );
+    outline_0_var___class__ = tmp_assign_source_16;
+
+    tmp_outline_return_value_1 = outline_0_var___class__;
+
+    CHECK_OBJECT( tmp_outline_return_value_1 );
+    Py_INCREF( tmp_outline_return_value_1 );
+    goto try_return_handler_4;
+    // tried codes exits in all cases
+    NUITKA_CANNOT_GET_HERE( cryptography$x509$certificate_transparency );
+    return MOD_RETURN_VALUE( NULL );
+    // Return handler code:
+    try_return_handler_4:;
+    Py_DECREF( locals_cryptography$x509$certificate_transparency_13 );
+    locals_cryptography$x509$certificate_transparency_13 = NULL;
+    goto try_return_handler_3;
+    // Exception handler code:
+    try_except_handler_4:;
+    exception_keeper_type_2 = exception_type;
+    exception_keeper_value_2 = exception_value;
+    exception_keeper_tb_2 = exception_tb;
+    exception_keeper_lineno_2 = exception_lineno;
+    exception_type = NULL;
+    exception_value = NULL;
+    exception_tb = NULL;
+    exception_lineno = 0;
+
+    Py_DECREF( locals_cryptography$x509$certificate_transparency_13 );
+    locals_cryptography$x509$certificate_transparency_13 = NULL;
+    // Re-raise.
+    exception_type = exception_keeper_type_2;
+    exception_value = exception_keeper_value_2;
+    exception_tb = exception_keeper_tb_2;
+    exception_lineno = exception_keeper_lineno_2;
+
+    goto try_except_handler_3;
+    // End of try:
+    // tried codes exits in all cases
+    NUITKA_CANNOT_GET_HERE( cryptography$x509$certificate_transparency );
+    return MOD_RETURN_VALUE( NULL );
+    // Return handler code:
+    try_return_handler_3:;
+    CHECK_OBJECT( (PyObject *)outline_0_var___class__ );
+    Py_DECREF( outline_0_var___class__ );
+    outline_0_var___class__ = NULL;
+
+    goto outline_result_1;
+    // Exception handler code:
+    try_except_handler_3:;
+    exception_keeper_type_3 = exception_type;
+    exception_keeper_value_3 = exception_value;
+    exception_keeper_tb_3 = exception_tb;
+    exception_keeper_lineno_3 = exception_lineno;
+    exception_type = NULL;
+    exception_value = NULL;
+    exception_tb = NULL;
+    exception_lineno = 0;
+
+    // Re-raise.
+    exception_type = exception_keeper_type_3;
+    exception_value = exception_keeper_value_3;
+    exception_tb = exception_keeper_tb_3;
+    exception_lineno = exception_keeper_lineno_3;
+
+    goto outline_exception_1;
+    // End of try:
+    // Return statement must have exited already.
+    NUITKA_CANNOT_GET_HERE( cryptography$x509$certificate_transparency );
+    return MOD_RETURN_VALUE( NULL );
+    outline_exception_1:;
+    exception_lineno = 13;
+    goto try_except_handler_2;
+    outline_result_1:;
+    tmp_assign_source_15 = tmp_outline_return_value_1;
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain_LogEntryType, tmp_assign_source_15 );
+    goto try_end_2;
+    // Exception handler code:
+    try_except_handler_2:;
+    exception_keeper_type_4 = exception_type;
+    exception_keeper_value_4 = exception_value;
+    exception_keeper_tb_4 = exception_tb;
+    exception_keeper_lineno_4 = exception_lineno;
+    exception_type = NULL;
+    exception_value = NULL;
+    exception_tb = NULL;
+    exception_lineno = 0;
+
+    CHECK_OBJECT( (PyObject *)tmp_class_creation_1__bases );
+    Py_DECREF( tmp_class_creation_1__bases );
+    tmp_class_creation_1__bases = NULL;
+
+    CHECK_OBJECT( (PyObject *)tmp_class_creation_1__class_decl_dict );
+    Py_DECREF( tmp_class_creation_1__class_decl_dict );
+    tmp_class_creation_1__class_decl_dict = NULL;
+
+    Py_XDECREF( tmp_class_creation_1__metaclass );
+    tmp_class_creation_1__metaclass = NULL;
+
+    Py_XDECREF( tmp_class_creation_1__prepared );
+    tmp_class_creation_1__prepared = NULL;
+
+    // Re-raise.
+    exception_type = exception_keeper_type_4;
+    exception_value = exception_keeper_value_4;
+    exception_tb = exception_keeper_tb_4;
+    exception_lineno = exception_keeper_lineno_4;
+
+    goto frame_exception_exit_1;
+    // End of try:
+    try_end_2:;
+    CHECK_OBJECT( (PyObject *)tmp_class_creation_1__bases );
+    Py_DECREF( tmp_class_creation_1__bases );
+    tmp_class_creation_1__bases = NULL;
+
+    CHECK_OBJECT( (PyObject *)tmp_class_creation_1__class_decl_dict );
+    Py_DECREF( tmp_class_creation_1__class_decl_dict );
+    tmp_class_creation_1__class_decl_dict = NULL;
+
+    CHECK_OBJECT( (PyObject *)tmp_class_creation_1__metaclass );
+    Py_DECREF( tmp_class_creation_1__metaclass );
+    tmp_class_creation_1__metaclass = NULL;
+
+    CHECK_OBJECT( (PyObject *)tmp_class_creation_1__prepared );
+    Py_DECREF( tmp_class_creation_1__prepared );
+    tmp_class_creation_1__prepared = NULL;
+
+    // Tried code:
+    tmp_tuple_element_4 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain_Enum );
+
+    if (unlikely( tmp_tuple_element_4 == NULL ))
+    {
+        tmp_tuple_element_4 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_Enum );
+    }
+
+    if ( tmp_tuple_element_4 == NULL )
+    {
+
+        exception_type = PyExc_NameError;
+        Py_INCREF( exception_type );
+        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "Enum" );
+        exception_tb = NULL;
+        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
+        CHAIN_EXCEPTION( exception_value );
+
+        exception_lineno = 18;
+
+        goto try_except_handler_5;
+    }
+
+    tmp_assign_source_17 = PyTuple_New( 1 );
+    Py_INCREF( tmp_tuple_element_4 );
+    PyTuple_SET_ITEM( tmp_assign_source_17, 0, tmp_tuple_element_4 );
+    assert( tmp_class_creation_2__bases == NULL );
+    tmp_class_creation_2__bases = tmp_assign_source_17;
+
+    tmp_assign_source_18 = PyDict_New();
+    assert( tmp_class_creation_2__class_decl_dict == NULL );
+    tmp_class_creation_2__class_decl_dict = tmp_assign_source_18;
+
+    tmp_key_name_4 = const_str_plain_metaclass;
+    tmp_dict_name_4 = tmp_class_creation_2__class_decl_dict;
+
+    CHECK_OBJECT( tmp_dict_name_4 );
+    tmp_res = PyDict_Contains( tmp_dict_name_4, tmp_key_name_4 );
+    if ( tmp_res == -1 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 18;
+
+        goto try_except_handler_5;
+    }
+    tmp_cond_value_3 = BOOL_FROM( tmp_res == 1 );
+    tmp_cond_truth_3 = CHECK_IF_TRUE( tmp_cond_value_3 );
+    if ( tmp_cond_truth_3 == -1 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 18;
+
+        goto try_except_handler_5;
+    }
+    if ( tmp_cond_truth_3 == 1 )
+    {
+        goto condexpr_true_3;
+    }
+    else
+    {
+        goto condexpr_false_3;
+    }
+    condexpr_true_3:;
+    tmp_dict_name_5 = tmp_class_creation_2__class_decl_dict;
+
+    CHECK_OBJECT( tmp_dict_name_5 );
+    tmp_key_name_5 = const_str_plain_metaclass;
+    tmp_metaclass_name_2 = DICT_GET_ITEM( tmp_dict_name_5, tmp_key_name_5 );
+    if ( tmp_metaclass_name_2 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 18;
+
+        goto try_except_handler_5;
+    }
+    goto condexpr_end_3;
+    condexpr_false_3:;
+    tmp_subscribed_name_2 = tmp_class_creation_2__bases;
+
+    CHECK_OBJECT( tmp_subscribed_name_2 );
+    tmp_subscript_name_2 = const_int_0;
+    tmp_type_arg_2 = LOOKUP_SUBSCRIPT( tmp_subscribed_name_2, tmp_subscript_name_2 );
+    if ( tmp_type_arg_2 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 18;
+
+        goto try_except_handler_5;
+    }
+    tmp_metaclass_name_2 = BUILTIN_TYPE1( tmp_type_arg_2 );
+    Py_DECREF( tmp_type_arg_2 );
+    if ( tmp_metaclass_name_2 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 18;
+
+        goto try_except_handler_5;
+    }
+    condexpr_end_3:;
+    tmp_bases_name_2 = tmp_class_creation_2__bases;
+
+    CHECK_OBJECT( tmp_bases_name_2 );
+    tmp_assign_source_19 = SELECT_METACLASS( tmp_metaclass_name_2, tmp_bases_name_2 );
+    Py_DECREF( tmp_metaclass_name_2 );
+    if ( tmp_assign_source_19 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 18;
+
+        goto try_except_handler_5;
+    }
+    assert( tmp_class_creation_2__metaclass == NULL );
+    tmp_class_creation_2__metaclass = tmp_assign_source_19;
+
+    tmp_key_name_6 = const_str_plain_metaclass;
+    tmp_dict_name_6 = tmp_class_creation_2__class_decl_dict;
+
+    CHECK_OBJECT( tmp_dict_name_6 );
+    tmp_res = PyDict_Contains( tmp_dict_name_6, tmp_key_name_6 );
+    if ( tmp_res == -1 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 18;
+
+        goto try_except_handler_5;
+    }
+    tmp_cond_value_4 = BOOL_FROM( tmp_res == 1 );
+    tmp_cond_truth_4 = CHECK_IF_TRUE( tmp_cond_value_4 );
+    if ( tmp_cond_truth_4 == -1 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 18;
+
+        goto try_except_handler_5;
+    }
+    if ( tmp_cond_truth_4 == 1 )
+    {
+        goto branch_yes_2;
+    }
+    else
+    {
+        goto branch_no_2;
+    }
+    branch_yes_2:;
+    tmp_dictdel_dict = tmp_class_creation_2__class_decl_dict;
+
+    CHECK_OBJECT( tmp_dictdel_dict );
+    tmp_dictdel_key = const_str_plain_metaclass;
+    tmp_result = DICT_REMOVE_ITEM( tmp_dictdel_dict, tmp_dictdel_key );
+    if ( tmp_result == false )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 18;
+
+        goto try_except_handler_5;
+    }
+    branch_no_2:;
+    tmp_hasattr_source_2 = tmp_class_creation_2__metaclass;
+
+    CHECK_OBJECT( tmp_hasattr_source_2 );
+    tmp_hasattr_attr_2 = const_str_plain___prepare__;
+    tmp_res = PyObject_HasAttr( tmp_hasattr_source_2, tmp_hasattr_attr_2 );
+    if ( tmp_res == -1 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 18;
+
+        goto try_except_handler_5;
+    }
+    if ( tmp_res == 1 )
+    {
+        goto condexpr_true_4;
+    }
+    else
+    {
+        goto condexpr_false_4;
+    }
+    condexpr_true_4:;
+    tmp_source_name_2 = tmp_class_creation_2__metaclass;
+
+    CHECK_OBJECT( tmp_source_name_2 );
+    tmp_called_name_3 = LOOKUP_ATTRIBUTE( tmp_source_name_2, const_str_plain___prepare__ );
+    if ( tmp_called_name_3 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 18;
+
+        goto try_except_handler_5;
+    }
+    tmp_tuple_element_5 = const_str_plain_Version;
+    tmp_args_name_3 = PyTuple_New( 2 );
+    Py_INCREF( tmp_tuple_element_5 );
+    PyTuple_SET_ITEM( tmp_args_name_3, 0, tmp_tuple_element_5 );
+    tmp_tuple_element_5 = tmp_class_creation_2__bases;
+
+    CHECK_OBJECT( tmp_tuple_element_5 );
+    Py_INCREF( tmp_tuple_element_5 );
+    PyTuple_SET_ITEM( tmp_args_name_3, 1, tmp_tuple_element_5 );
+    tmp_kw_name_3 = tmp_class_creation_2__class_decl_dict;
+
+    CHECK_OBJECT( tmp_kw_name_3 );
+    frame_0d308e0a31e4655f0f182ee9faf33652->m_frame.f_lineno = 18;
+    tmp_assign_source_20 = CALL_FUNCTION( tmp_called_name_3, tmp_args_name_3, tmp_kw_name_3 );
+    Py_DECREF( tmp_called_name_3 );
+    Py_DECREF( tmp_args_name_3 );
+    if ( tmp_assign_source_20 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 18;
+
+        goto try_except_handler_5;
+    }
+    goto condexpr_end_4;
+    condexpr_false_4:;
+    tmp_assign_source_20 = PyDict_New();
+    condexpr_end_4:;
+    assert( tmp_class_creation_2__prepared == NULL );
+    tmp_class_creation_2__prepared = tmp_assign_source_20;
+
+    tmp_set_locals = tmp_class_creation_2__prepared;
+
+    CHECK_OBJECT( tmp_set_locals );
+    locals_cryptography$x509$certificate_transparency_18 = tmp_set_locals;
+    Py_INCREF( tmp_set_locals );
+    // Tried code:
+    // Tried code:
+    tmp_dictset_value = const_str_digest_9c4dcd45c628f51f60b0e74617698ea7;
+    tmp_res = PyObject_SetItem( locals_cryptography$x509$certificate_transparency_18, const_str_plain___module__, tmp_dictset_value );
+    if ( tmp_res != 0 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 18;
+
+        goto try_except_handler_7;
+    }
+    tmp_dictset_value = const_str_plain_Version;
+    tmp_res = PyObject_SetItem( locals_cryptography$x509$certificate_transparency_18, const_str_plain___qualname__, tmp_dictset_value );
+    if ( tmp_res != 0 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 18;
+
+        goto try_except_handler_7;
+    }
+    MAKE_OR_REUSE_FRAME( cache_frame_67c57dd1595c178e6ef06ec0baf5c035_3, codeobj_67c57dd1595c178e6ef06ec0baf5c035, module_cryptography$x509$certificate_transparency, sizeof(void *) );
+    frame_67c57dd1595c178e6ef06ec0baf5c035_3 = cache_frame_67c57dd1595c178e6ef06ec0baf5c035_3;
+
+    // Push the new frame as the currently active one.
+    pushFrameStack( frame_67c57dd1595c178e6ef06ec0baf5c035_3 );
+
+    // Mark the frame object as in use, ref count 1 will be up for reuse.
+    assert( Py_REFCNT( frame_67c57dd1595c178e6ef06ec0baf5c035_3 ) == 2 ); // Frame stack
+
+    // Framed code:
+    tmp_dictset_value = const_int_0;
+    tmp_res = PyObject_SetItem( locals_cryptography$x509$certificate_transparency_18, const_str_plain_v1, tmp_dictset_value );
+    if ( tmp_res != 0 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 19;
+        type_description_2 = "N";
+        goto frame_exception_exit_3;
+    }
+
+#if 0
+    RESTORE_FRAME_EXCEPTION( frame_67c57dd1595c178e6ef06ec0baf5c035_3 );
+#endif
+
+    // Put the previous frame back on top.
+    popFrameStack();
+
+    goto frame_no_exception_2;
+
+    frame_exception_exit_3:;
+
+#if 0
+    RESTORE_FRAME_EXCEPTION( frame_67c57dd1595c178e6ef06ec0baf5c035_3 );
+#endif
+
+    if ( exception_tb == NULL )
+    {
+        exception_tb = MAKE_TRACEBACK( frame_67c57dd1595c178e6ef06ec0baf5c035_3, exception_lineno );
+    }
+    else if ( exception_tb->tb_frame != &frame_67c57dd1595c178e6ef06ec0baf5c035_3->m_frame )
+    {
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_67c57dd1595c178e6ef06ec0baf5c035_3, exception_lineno );
+    }
+
+    // Attachs locals to frame if any.
+    Nuitka_Frame_AttachLocals(
+        (struct Nuitka_FrameObject *)frame_67c57dd1595c178e6ef06ec0baf5c035_3,
+        type_description_2,
+        NULL
+    );
+
+
+    // Release cached frame.
+    if ( frame_67c57dd1595c178e6ef06ec0baf5c035_3 == cache_frame_67c57dd1595c178e6ef06ec0baf5c035_3 )
+    {
+        Py_DECREF( frame_67c57dd1595c178e6ef06ec0baf5c035_3 );
+    }
+    cache_frame_67c57dd1595c178e6ef06ec0baf5c035_3 = NULL;
+
+    assertFrameObject( frame_67c57dd1595c178e6ef06ec0baf5c035_3 );
+
+    // Put the previous frame back on top.
+    popFrameStack();
+
+    // Return the error.
+    goto nested_frame_exit_2;
+
+    frame_no_exception_2:;
+
+    goto skip_nested_handling_2;
+    nested_frame_exit_2:;
+
+    goto try_except_handler_7;
+    skip_nested_handling_2:;
+    tmp_called_name_4 = tmp_class_creation_2__metaclass;
+
+    CHECK_OBJECT( tmp_called_name_4 );
+    tmp_tuple_element_6 = const_str_plain_Version;
+    tmp_args_name_4 = PyTuple_New( 3 );
+    Py_INCREF( tmp_tuple_element_6 );
+    PyTuple_SET_ITEM( tmp_args_name_4, 0, tmp_tuple_element_6 );
+    tmp_tuple_element_6 = tmp_class_creation_2__bases;
+
+    CHECK_OBJECT( tmp_tuple_element_6 );
+    Py_INCREF( tmp_tuple_element_6 );
+    PyTuple_SET_ITEM( tmp_args_name_4, 1, tmp_tuple_element_6 );
+    tmp_tuple_element_6 = locals_cryptography$x509$certificate_transparency_18;
+    Py_INCREF( tmp_tuple_element_6 );
+    PyTuple_SET_ITEM( tmp_args_name_4, 2, tmp_tuple_element_6 );
+    tmp_kw_name_4 = tmp_class_creation_2__class_decl_dict;
+
+    CHECK_OBJECT( tmp_kw_name_4 );
+    frame_0d308e0a31e4655f0f182ee9faf33652->m_frame.f_lineno = 18;
+    tmp_assign_source_22 = CALL_FUNCTION( tmp_called_name_4, tmp_args_name_4, tmp_kw_name_4 );
+    Py_DECREF( tmp_args_name_4 );
+    if ( tmp_assign_source_22 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 18;
+
+        goto try_except_handler_7;
+    }
+    assert( outline_1_var___class__ == NULL );
+    outline_1_var___class__ = tmp_assign_source_22;
+
+    tmp_outline_return_value_2 = outline_1_var___class__;
+
+    CHECK_OBJECT( tmp_outline_return_value_2 );
+    Py_INCREF( tmp_outline_return_value_2 );
+    goto try_return_handler_7;
+    // tried codes exits in all cases
+    NUITKA_CANNOT_GET_HERE( cryptography$x509$certificate_transparency );
+    return MOD_RETURN_VALUE( NULL );
+    // Return handler code:
+    try_return_handler_7:;
+    Py_DECREF( locals_cryptography$x509$certificate_transparency_18 );
+    locals_cryptography$x509$certificate_transparency_18 = NULL;
+    goto try_return_handler_6;
+    // Exception handler code:
+    try_except_handler_7:;
+    exception_keeper_type_5 = exception_type;
+    exception_keeper_value_5 = exception_value;
+    exception_keeper_tb_5 = exception_tb;
+    exception_keeper_lineno_5 = exception_lineno;
+    exception_type = NULL;
+    exception_value = NULL;
+    exception_tb = NULL;
+    exception_lineno = 0;
+
+    Py_DECREF( locals_cryptography$x509$certificate_transparency_18 );
+    locals_cryptography$x509$certificate_transparency_18 = NULL;
+    // Re-raise.
+    exception_type = exception_keeper_type_5;
+    exception_value = exception_keeper_value_5;
+    exception_tb = exception_keeper_tb_5;
+    exception_lineno = exception_keeper_lineno_5;
+
+    goto try_except_handler_6;
+    // End of try:
+    // tried codes exits in all cases
+    NUITKA_CANNOT_GET_HERE( cryptography$x509$certificate_transparency );
+    return MOD_RETURN_VALUE( NULL );
+    // Return handler code:
+    try_return_handler_6:;
+    CHECK_OBJECT( (PyObject *)outline_1_var___class__ );
+    Py_DECREF( outline_1_var___class__ );
+    outline_1_var___class__ = NULL;
+
+    goto outline_result_2;
+    // Exception handler code:
+    try_except_handler_6:;
+    exception_keeper_type_6 = exception_type;
+    exception_keeper_value_6 = exception_value;
+    exception_keeper_tb_6 = exception_tb;
+    exception_keeper_lineno_6 = exception_lineno;
+    exception_type = NULL;
+    exception_value = NULL;
+    exception_tb = NULL;
+    exception_lineno = 0;
+
+    // Re-raise.
+    exception_type = exception_keeper_type_6;
+    exception_value = exception_keeper_value_6;
+    exception_tb = exception_keeper_tb_6;
+    exception_lineno = exception_keeper_lineno_6;
+
+    goto outline_exception_2;
+    // End of try:
+    // Return statement must have exited already.
+    NUITKA_CANNOT_GET_HERE( cryptography$x509$certificate_transparency );
+    return MOD_RETURN_VALUE( NULL );
+    outline_exception_2:;
+    exception_lineno = 18;
+    goto try_except_handler_5;
+    outline_result_2:;
+    tmp_assign_source_21 = tmp_outline_return_value_2;
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain_Version, tmp_assign_source_21 );
+    goto try_end_3;
+    // Exception handler code:
+    try_except_handler_5:;
+    exception_keeper_type_7 = exception_type;
+    exception_keeper_value_7 = exception_value;
+    exception_keeper_tb_7 = exception_tb;
+    exception_keeper_lineno_7 = exception_lineno;
+    exception_type = NULL;
+    exception_value = NULL;
+    exception_tb = NULL;
+    exception_lineno = 0;
+
+    Py_XDECREF( tmp_class_creation_2__bases );
+    tmp_class_creation_2__bases = NULL;
+
+    Py_XDECREF( tmp_class_creation_2__class_decl_dict );
+    tmp_class_creation_2__class_decl_dict = NULL;
+
+    Py_XDECREF( tmp_class_creation_2__metaclass );
+    tmp_class_creation_2__metaclass = NULL;
+
+    Py_XDECREF( tmp_class_creation_2__prepared );
+    tmp_class_creation_2__prepared = NULL;
+
+    // Re-raise.
+    exception_type = exception_keeper_type_7;
+    exception_value = exception_keeper_value_7;
+    exception_tb = exception_keeper_tb_7;
+    exception_lineno = exception_keeper_lineno_7;
+
+    goto frame_exception_exit_1;
+    // End of try:
+    try_end_3:;
+    CHECK_OBJECT( (PyObject *)tmp_class_creation_2__bases );
+    Py_DECREF( tmp_class_creation_2__bases );
+    tmp_class_creation_2__bases = NULL;
+
+    CHECK_OBJECT( (PyObject *)tmp_class_creation_2__class_decl_dict );
+    Py_DECREF( tmp_class_creation_2__class_decl_dict );
+    tmp_class_creation_2__class_decl_dict = NULL;
+
+    CHECK_OBJECT( (PyObject *)tmp_class_creation_2__metaclass );
+    Py_DECREF( tmp_class_creation_2__metaclass );
+    tmp_class_creation_2__metaclass = NULL;
+
+    CHECK_OBJECT( (PyObject *)tmp_class_creation_2__prepared );
+    Py_DECREF( tmp_class_creation_2__prepared );
+    tmp_class_creation_2__prepared = NULL;
+
+    tmp_assign_source_23 = PyDict_New();
+    assert( tmp_class_creation_3__class_decl_dict == NULL );
+    tmp_class_creation_3__class_decl_dict = tmp_assign_source_23;
+
+    // Tried code:
+    tmp_key_name_7 = const_str_plain_metaclass;
+    tmp_dict_name_7 = tmp_class_creation_3__class_decl_dict;
+
+    CHECK_OBJECT( tmp_dict_name_7 );
+    tmp_res = PyDict_Contains( tmp_dict_name_7, tmp_key_name_7 );
+    if ( tmp_res == -1 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 23;
+
+        goto try_except_handler_8;
+    }
+    tmp_cond_value_5 = BOOL_FROM( tmp_res == 1 );
+    tmp_cond_truth_5 = CHECK_IF_TRUE( tmp_cond_value_5 );
+    if ( tmp_cond_truth_5 == -1 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 23;
+
+        goto try_except_handler_8;
+    }
+    if ( tmp_cond_truth_5 == 1 )
+    {
+        goto condexpr_true_5;
+    }
+    else
+    {
+        goto condexpr_false_5;
+    }
+    condexpr_true_5:;
+    tmp_dict_name_8 = tmp_class_creation_3__class_decl_dict;
+
+    CHECK_OBJECT( tmp_dict_name_8 );
+    tmp_key_name_8 = const_str_plain_metaclass;
+    tmp_metaclass_name_3 = DICT_GET_ITEM( tmp_dict_name_8, tmp_key_name_8 );
+    if ( tmp_metaclass_name_3 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 23;
+
+        goto try_except_handler_8;
+    }
+    goto condexpr_end_5;
+    condexpr_false_5:;
+    tmp_metaclass_name_3 = LOOKUP_BUILTIN( const_str_plain_type );
+    assert( tmp_metaclass_name_3 != NULL );
+    Py_INCREF( tmp_metaclass_name_3 );
+    condexpr_end_5:;
+    tmp_bases_name_3 = const_tuple_type_object_tuple;
+    tmp_assign_source_24 = SELECT_METACLASS( tmp_metaclass_name_3, tmp_bases_name_3 );
+    Py_DECREF( tmp_metaclass_name_3 );
+    if ( tmp_assign_source_24 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 23;
+
+        goto try_except_handler_8;
+    }
+    assert( tmp_class_creation_3__metaclass == NULL );
+    tmp_class_creation_3__metaclass = tmp_assign_source_24;
+
+    tmp_key_name_9 = const_str_plain_metaclass;
+    tmp_dict_name_9 = tmp_class_creation_3__class_decl_dict;
+
+    CHECK_OBJECT( tmp_dict_name_9 );
+    tmp_res = PyDict_Contains( tmp_dict_name_9, tmp_key_name_9 );
+    if ( tmp_res == -1 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 23;
+
+        goto try_except_handler_8;
+    }
+    tmp_cond_value_6 = BOOL_FROM( tmp_res == 1 );
+    tmp_cond_truth_6 = CHECK_IF_TRUE( tmp_cond_value_6 );
+    if ( tmp_cond_truth_6 == -1 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 23;
+
+        goto try_except_handler_8;
+    }
+    if ( tmp_cond_truth_6 == 1 )
+    {
+        goto branch_yes_3;
+    }
+    else
+    {
+        goto branch_no_3;
+    }
+    branch_yes_3:;
+    tmp_dictdel_dict = tmp_class_creation_3__class_decl_dict;
+
+    CHECK_OBJECT( tmp_dictdel_dict );
+    tmp_dictdel_key = const_str_plain_metaclass;
+    tmp_result = DICT_REMOVE_ITEM( tmp_dictdel_dict, tmp_dictdel_key );
+    if ( tmp_result == false )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 23;
+
+        goto try_except_handler_8;
+    }
+    branch_no_3:;
+    tmp_hasattr_source_3 = tmp_class_creation_3__metaclass;
+
+    CHECK_OBJECT( tmp_hasattr_source_3 );
+    tmp_hasattr_attr_3 = const_str_plain___prepare__;
+    tmp_res = PyObject_HasAttr( tmp_hasattr_source_3, tmp_hasattr_attr_3 );
+    if ( tmp_res == -1 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 23;
+
+        goto try_except_handler_8;
+    }
+    if ( tmp_res == 1 )
+    {
+        goto condexpr_true_6;
+    }
+    else
+    {
+        goto condexpr_false_6;
+    }
+    condexpr_true_6:;
+    tmp_source_name_3 = tmp_class_creation_3__metaclass;
+
+    CHECK_OBJECT( tmp_source_name_3 );
+    tmp_called_name_5 = LOOKUP_ATTRIBUTE( tmp_source_name_3, const_str_plain___prepare__ );
+    if ( tmp_called_name_5 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 23;
+
+        goto try_except_handler_8;
+    }
+    tmp_args_name_5 = const_tuple_str_plain_SignedCertificateTimestamp_tuple_type_object_tuple_tuple;
+    tmp_kw_name_5 = tmp_class_creation_3__class_decl_dict;
+
+    CHECK_OBJECT( tmp_kw_name_5 );
+    frame_0d308e0a31e4655f0f182ee9faf33652->m_frame.f_lineno = 23;
+    tmp_assign_source_25 = CALL_FUNCTION( tmp_called_name_5, tmp_args_name_5, tmp_kw_name_5 );
+    Py_DECREF( tmp_called_name_5 );
+    if ( tmp_assign_source_25 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 23;
+
+        goto try_except_handler_8;
+    }
+    goto condexpr_end_6;
+    condexpr_false_6:;
+    tmp_assign_source_25 = PyDict_New();
+    condexpr_end_6:;
+    assert( tmp_class_creation_3__prepared == NULL );
+    tmp_class_creation_3__prepared = tmp_assign_source_25;
+
+    tmp_source_name_4 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain_six );
+
+    if (unlikely( tmp_source_name_4 == NULL ))
+    {
+        tmp_source_name_4 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_six );
+    }
+
+    if ( tmp_source_name_4 == NULL )
+    {
+
+        exception_type = PyExc_NameError;
+        Py_INCREF( exception_type );
+        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "six" );
+        exception_tb = NULL;
+        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
+        CHAIN_EXCEPTION( exception_value );
+
+        exception_lineno = 22;
+
+        goto try_except_handler_8;
+    }
+
+    tmp_called_name_7 = LOOKUP_ATTRIBUTE( tmp_source_name_4, const_str_plain_add_metaclass );
+    if ( tmp_called_name_7 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 22;
+
+        goto try_except_handler_8;
+    }
+    tmp_source_name_5 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain_abc );
+
+    if (unlikely( tmp_source_name_5 == NULL ))
+    {
+        tmp_source_name_5 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_abc );
+    }
+
+    if ( tmp_source_name_5 == NULL )
+    {
+        Py_DECREF( tmp_called_name_7 );
+        exception_type = PyExc_NameError;
+        Py_INCREF( exception_type );
+        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "abc" );
+        exception_tb = NULL;
+        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
+        CHAIN_EXCEPTION( exception_value );
+
+        exception_lineno = 22;
+
+        goto try_except_handler_8;
+    }
+
+    tmp_args_element_name_1 = LOOKUP_ATTRIBUTE( tmp_source_name_5, const_str_plain_ABCMeta );
+    if ( tmp_args_element_name_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+        Py_DECREF( tmp_called_name_7 );
+
+        exception_lineno = 22;
+
+        goto try_except_handler_8;
+    }
+    frame_0d308e0a31e4655f0f182ee9faf33652->m_frame.f_lineno = 22;
+    {
+        PyObject *call_args[] = { tmp_args_element_name_1 };
+        tmp_called_name_6 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_7, call_args );
+    }
+
+    Py_DECREF( tmp_called_name_7 );
+    Py_DECREF( tmp_args_element_name_1 );
+    if ( tmp_called_name_6 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 22;
+
+        goto try_except_handler_8;
+    }
+    tmp_set_locals = tmp_class_creation_3__prepared;
+
+    CHECK_OBJECT( tmp_set_locals );
+    locals_cryptography$x509$certificate_transparency_23 = tmp_set_locals;
+    Py_INCREF( tmp_set_locals );
+    // Tried code:
+    // Tried code:
+    tmp_dictset_value = const_str_digest_9c4dcd45c628f51f60b0e74617698ea7;
+    tmp_res = PyObject_SetItem( locals_cryptography$x509$certificate_transparency_23, const_str_plain___module__, tmp_dictset_value );
+    if ( tmp_res != 0 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 23;
+
+        goto try_except_handler_10;
+    }
+    tmp_dictset_value = const_str_plain_SignedCertificateTimestamp;
+    tmp_res = PyObject_SetItem( locals_cryptography$x509$certificate_transparency_23, const_str_plain___qualname__, tmp_dictset_value );
+    if ( tmp_res != 0 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 23;
+
+        goto try_except_handler_10;
+    }
+    MAKE_OR_REUSE_FRAME( cache_frame_d958e2e24f3c86589a58b0973cad0e7a_4, codeobj_d958e2e24f3c86589a58b0973cad0e7a, module_cryptography$x509$certificate_transparency, sizeof(void *) );
+    frame_d958e2e24f3c86589a58b0973cad0e7a_4 = cache_frame_d958e2e24f3c86589a58b0973cad0e7a_4;
+
+    // Push the new frame as the currently active one.
+    pushFrameStack( frame_d958e2e24f3c86589a58b0973cad0e7a_4 );
+
+    // Mark the frame object as in use, ref count 1 will be up for reuse.
+    assert( Py_REFCNT( frame_d958e2e24f3c86589a58b0973cad0e7a_4 ) == 2 ); // Frame stack
+
+    // Framed code:
+    tmp_called_instance_1 = PyObject_GetItem( locals_cryptography$x509$certificate_transparency_23, const_str_plain_abc );
+
+    if ( tmp_called_instance_1 == NULL )
+    {
+        if ( CHECK_AND_CLEAR_KEY_ERROR_OCCURRED() )
+        {
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain_abc );
+
+        if (unlikely( tmp_called_instance_1 == NULL ))
+        {
+            tmp_called_instance_1 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_abc );
+        }
+
+        if ( tmp_called_instance_1 == NULL )
+        {
+
+            exception_type = PyExc_NameError;
+            Py_INCREF( exception_type );
+            exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "abc" );
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
+            CHAIN_EXCEPTION( exception_value );
+
+            exception_lineno = 24;
+            type_description_2 = "N";
+            goto frame_exception_exit_4;
+        }
+
+        }
+    }
+
+    tmp_args_element_name_3 = MAKE_FUNCTION_cryptography$x509$certificate_transparency$$$function_1_version(  );
+    frame_d958e2e24f3c86589a58b0973cad0e7a_4->m_frame.f_lineno = 24;
+    {
+        PyObject *call_args[] = { tmp_args_element_name_3 };
+        tmp_dictset_value = CALL_METHOD_WITH_ARGS1( tmp_called_instance_1, const_str_plain_abstractproperty, call_args );
+    }
+
+    Py_DECREF( tmp_args_element_name_3 );
+    if ( tmp_dictset_value == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 24;
+        type_description_2 = "N";
+        goto frame_exception_exit_4;
+    }
+    tmp_res = PyObject_SetItem( locals_cryptography$x509$certificate_transparency_23, const_str_plain_version, tmp_dictset_value );
+    Py_DECREF( tmp_dictset_value );
+    if ( tmp_res != 0 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 24;
+        type_description_2 = "N";
+        goto frame_exception_exit_4;
+    }
+    tmp_called_instance_2 = PyObject_GetItem( locals_cryptography$x509$certificate_transparency_23, const_str_plain_abc );
+
+    if ( tmp_called_instance_2 == NULL )
+    {
+        if ( CHECK_AND_CLEAR_KEY_ERROR_OCCURRED() )
+        {
+        tmp_called_instance_2 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain_abc );
+
+        if (unlikely( tmp_called_instance_2 == NULL ))
+        {
+            tmp_called_instance_2 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_abc );
+        }
+
+        if ( tmp_called_instance_2 == NULL )
+        {
+
+            exception_type = PyExc_NameError;
+            Py_INCREF( exception_type );
+            exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "abc" );
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
+            CHAIN_EXCEPTION( exception_value );
+
+            exception_lineno = 30;
+            type_description_2 = "N";
+            goto frame_exception_exit_4;
+        }
+
+        }
+    }
+
+    tmp_args_element_name_4 = MAKE_FUNCTION_cryptography$x509$certificate_transparency$$$function_2_log_id(  );
+    frame_d958e2e24f3c86589a58b0973cad0e7a_4->m_frame.f_lineno = 30;
+    {
+        PyObject *call_args[] = { tmp_args_element_name_4 };
+        tmp_dictset_value = CALL_METHOD_WITH_ARGS1( tmp_called_instance_2, const_str_plain_abstractproperty, call_args );
+    }
+
+    Py_DECREF( tmp_args_element_name_4 );
+    if ( tmp_dictset_value == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 30;
+        type_description_2 = "N";
+        goto frame_exception_exit_4;
+    }
+    tmp_res = PyObject_SetItem( locals_cryptography$x509$certificate_transparency_23, const_str_plain_log_id, tmp_dictset_value );
+    Py_DECREF( tmp_dictset_value );
+    if ( tmp_res != 0 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 30;
+        type_description_2 = "N";
+        goto frame_exception_exit_4;
+    }
+    tmp_called_instance_3 = PyObject_GetItem( locals_cryptography$x509$certificate_transparency_23, const_str_plain_abc );
+
+    if ( tmp_called_instance_3 == NULL )
+    {
+        if ( CHECK_AND_CLEAR_KEY_ERROR_OCCURRED() )
+        {
+        tmp_called_instance_3 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain_abc );
+
+        if (unlikely( tmp_called_instance_3 == NULL ))
+        {
+            tmp_called_instance_3 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_abc );
+        }
+
+        if ( tmp_called_instance_3 == NULL )
+        {
+
+            exception_type = PyExc_NameError;
+            Py_INCREF( exception_type );
+            exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "abc" );
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
+            CHAIN_EXCEPTION( exception_value );
+
+            exception_lineno = 36;
+            type_description_2 = "N";
+            goto frame_exception_exit_4;
+        }
+
+        }
+    }
+
+    tmp_args_element_name_5 = MAKE_FUNCTION_cryptography$x509$certificate_transparency$$$function_3_timestamp(  );
+    frame_d958e2e24f3c86589a58b0973cad0e7a_4->m_frame.f_lineno = 36;
+    {
+        PyObject *call_args[] = { tmp_args_element_name_5 };
+        tmp_dictset_value = CALL_METHOD_WITH_ARGS1( tmp_called_instance_3, const_str_plain_abstractproperty, call_args );
+    }
+
+    Py_DECREF( tmp_args_element_name_5 );
+    if ( tmp_dictset_value == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 36;
+        type_description_2 = "N";
+        goto frame_exception_exit_4;
+    }
+    tmp_res = PyObject_SetItem( locals_cryptography$x509$certificate_transparency_23, const_str_plain_timestamp, tmp_dictset_value );
+    Py_DECREF( tmp_dictset_value );
+    if ( tmp_res != 0 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 36;
+        type_description_2 = "N";
+        goto frame_exception_exit_4;
+    }
+    tmp_called_instance_4 = PyObject_GetItem( locals_cryptography$x509$certificate_transparency_23, const_str_plain_abc );
+
+    if ( tmp_called_instance_4 == NULL )
+    {
+        if ( CHECK_AND_CLEAR_KEY_ERROR_OCCURRED() )
+        {
+        tmp_called_instance_4 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain_abc );
+
+        if (unlikely( tmp_called_instance_4 == NULL ))
+        {
+            tmp_called_instance_4 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_abc );
+        }
+
+        if ( tmp_called_instance_4 == NULL )
+        {
+
+            exception_type = PyExc_NameError;
+            Py_INCREF( exception_type );
+            exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "abc" );
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
+            CHAIN_EXCEPTION( exception_value );
+
+            exception_lineno = 42;
+            type_description_2 = "N";
+            goto frame_exception_exit_4;
+        }
+
+        }
+    }
+
+    tmp_args_element_name_6 = MAKE_FUNCTION_cryptography$x509$certificate_transparency$$$function_4_entry_type(  );
+    frame_d958e2e24f3c86589a58b0973cad0e7a_4->m_frame.f_lineno = 42;
+    {
+        PyObject *call_args[] = { tmp_args_element_name_6 };
+        tmp_dictset_value = CALL_METHOD_WITH_ARGS1( tmp_called_instance_4, const_str_plain_abstractproperty, call_args );
+    }
+
+    Py_DECREF( tmp_args_element_name_6 );
+    if ( tmp_dictset_value == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 42;
+        type_description_2 = "N";
+        goto frame_exception_exit_4;
+    }
+    tmp_res = PyObject_SetItem( locals_cryptography$x509$certificate_transparency_23, const_str_plain_entry_type, tmp_dictset_value );
+    Py_DECREF( tmp_dictset_value );
+    if ( tmp_res != 0 )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 42;
+        type_description_2 = "N";
+        goto frame_exception_exit_4;
+    }
+
+#if 0
+    RESTORE_FRAME_EXCEPTION( frame_d958e2e24f3c86589a58b0973cad0e7a_4 );
+#endif
+
+    // Put the previous frame back on top.
+    popFrameStack();
+
+    goto frame_no_exception_3;
+
+    frame_exception_exit_4:;
+
+#if 0
+    RESTORE_FRAME_EXCEPTION( frame_d958e2e24f3c86589a58b0973cad0e7a_4 );
+#endif
+
+    if ( exception_tb == NULL )
+    {
+        exception_tb = MAKE_TRACEBACK( frame_d958e2e24f3c86589a58b0973cad0e7a_4, exception_lineno );
+    }
+    else if ( exception_tb->tb_frame != &frame_d958e2e24f3c86589a58b0973cad0e7a_4->m_frame )
+    {
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_d958e2e24f3c86589a58b0973cad0e7a_4, exception_lineno );
+    }
+
+    // Attachs locals to frame if any.
+    Nuitka_Frame_AttachLocals(
+        (struct Nuitka_FrameObject *)frame_d958e2e24f3c86589a58b0973cad0e7a_4,
+        type_description_2,
+        NULL
+    );
+
+
+    // Release cached frame.
+    if ( frame_d958e2e24f3c86589a58b0973cad0e7a_4 == cache_frame_d958e2e24f3c86589a58b0973cad0e7a_4 )
+    {
+        Py_DECREF( frame_d958e2e24f3c86589a58b0973cad0e7a_4 );
+    }
+    cache_frame_d958e2e24f3c86589a58b0973cad0e7a_4 = NULL;
+
+    assertFrameObject( frame_d958e2e24f3c86589a58b0973cad0e7a_4 );
+
+    // Put the previous frame back on top.
+    popFrameStack();
+
+    // Return the error.
+    goto nested_frame_exit_3;
+
+    frame_no_exception_3:;
+
+    goto skip_nested_handling_3;
+    nested_frame_exit_3:;
+
+    goto try_except_handler_10;
+    skip_nested_handling_3:;
+    tmp_called_name_8 = tmp_class_creation_3__metaclass;
+
+    CHECK_OBJECT( tmp_called_name_8 );
+    tmp_tuple_element_7 = const_str_plain_SignedCertificateTimestamp;
+    tmp_args_name_6 = PyTuple_New( 3 );
+    Py_INCREF( tmp_tuple_element_7 );
+    PyTuple_SET_ITEM( tmp_args_name_6, 0, tmp_tuple_element_7 );
+    tmp_tuple_element_7 = const_tuple_type_object_tuple;
+    Py_INCREF( tmp_tuple_element_7 );
+    PyTuple_SET_ITEM( tmp_args_name_6, 1, tmp_tuple_element_7 );
+    tmp_tuple_element_7 = locals_cryptography$x509$certificate_transparency_23;
+    Py_INCREF( tmp_tuple_element_7 );
+    PyTuple_SET_ITEM( tmp_args_name_6, 2, tmp_tuple_element_7 );
+    tmp_kw_name_6 = tmp_class_creation_3__class_decl_dict;
+
+    CHECK_OBJECT( tmp_kw_name_6 );
+    frame_0d308e0a31e4655f0f182ee9faf33652->m_frame.f_lineno = 23;
+    tmp_assign_source_27 = CALL_FUNCTION( tmp_called_name_8, tmp_args_name_6, tmp_kw_name_6 );
+    Py_DECREF( tmp_args_name_6 );
+    if ( tmp_assign_source_27 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 23;
+
+        goto try_except_handler_10;
+    }
+    assert( outline_2_var___class__ == NULL );
+    outline_2_var___class__ = tmp_assign_source_27;
+
+    tmp_outline_return_value_3 = outline_2_var___class__;
+
+    CHECK_OBJECT( tmp_outline_return_value_3 );
+    Py_INCREF( tmp_outline_return_value_3 );
+    goto try_return_handler_10;
+    // tried codes exits in all cases
+    NUITKA_CANNOT_GET_HERE( cryptography$x509$certificate_transparency );
+    return MOD_RETURN_VALUE( NULL );
+    // Return handler code:
+    try_return_handler_10:;
+    Py_DECREF( locals_cryptography$x509$certificate_transparency_23 );
+    locals_cryptography$x509$certificate_transparency_23 = NULL;
+    goto try_return_handler_9;
+    // Exception handler code:
+    try_except_handler_10:;
+    exception_keeper_type_8 = exception_type;
+    exception_keeper_value_8 = exception_value;
+    exception_keeper_tb_8 = exception_tb;
+    exception_keeper_lineno_8 = exception_lineno;
+    exception_type = NULL;
+    exception_value = NULL;
+    exception_tb = NULL;
+    exception_lineno = 0;
+
+    Py_DECREF( locals_cryptography$x509$certificate_transparency_23 );
+    locals_cryptography$x509$certificate_transparency_23 = NULL;
+    // Re-raise.
+    exception_type = exception_keeper_type_8;
+    exception_value = exception_keeper_value_8;
+    exception_tb = exception_keeper_tb_8;
+    exception_lineno = exception_keeper_lineno_8;
+
+    goto try_except_handler_9;
+    // End of try:
+    // tried codes exits in all cases
+    NUITKA_CANNOT_GET_HERE( cryptography$x509$certificate_transparency );
+    return MOD_RETURN_VALUE( NULL );
+    // Return handler code:
+    try_return_handler_9:;
+    CHECK_OBJECT( (PyObject *)outline_2_var___class__ );
+    Py_DECREF( outline_2_var___class__ );
+    outline_2_var___class__ = NULL;
+
+    goto outline_result_3;
+    // Exception handler code:
+    try_except_handler_9:;
+    exception_keeper_type_9 = exception_type;
+    exception_keeper_value_9 = exception_value;
+    exception_keeper_tb_9 = exception_tb;
+    exception_keeper_lineno_9 = exception_lineno;
+    exception_type = NULL;
+    exception_value = NULL;
+    exception_tb = NULL;
+    exception_lineno = 0;
+
+    // Re-raise.
+    exception_type = exception_keeper_type_9;
+    exception_value = exception_keeper_value_9;
+    exception_tb = exception_keeper_tb_9;
+    exception_lineno = exception_keeper_lineno_9;
+
+    goto outline_exception_3;
+    // End of try:
+    // Return statement must have exited already.
+    NUITKA_CANNOT_GET_HERE( cryptography$x509$certificate_transparency );
+    return MOD_RETURN_VALUE( NULL );
+    outline_exception_3:;
+    exception_lineno = 23;
+    goto try_except_handler_8;
+    outline_result_3:;
+    tmp_args_element_name_2 = tmp_outline_return_value_3;
+    frame_0d308e0a31e4655f0f182ee9faf33652->m_frame.f_lineno = 22;
+    {
+        PyObject *call_args[] = { tmp_args_element_name_2 };
+        tmp_assign_source_26 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_6, call_args );
+    }
+
+    Py_DECREF( tmp_called_name_6 );
+    Py_DECREF( tmp_args_element_name_2 );
+    if ( tmp_assign_source_26 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 22;
+
+        goto try_except_handler_8;
+    }
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509$certificate_transparency, (Nuitka_StringObject *)const_str_plain_SignedCertificateTimestamp, tmp_assign_source_26 );
+    goto try_end_4;
+    // Exception handler code:
+    try_except_handler_8:;
+    exception_keeper_type_10 = exception_type;
+    exception_keeper_value_10 = exception_value;
+    exception_keeper_tb_10 = exception_tb;
+    exception_keeper_lineno_10 = exception_lineno;
+    exception_type = NULL;
+    exception_value = NULL;
+    exception_tb = NULL;
+    exception_lineno = 0;
+
+    CHECK_OBJECT( (PyObject *)tmp_class_creation_3__class_decl_dict );
+    Py_DECREF( tmp_class_creation_3__class_decl_dict );
+    tmp_class_creation_3__class_decl_dict = NULL;
+
+    Py_XDECREF( tmp_class_creation_3__metaclass );
+    tmp_class_creation_3__metaclass = NULL;
+
+    Py_XDECREF( tmp_class_creation_3__prepared );
+    tmp_class_creation_3__prepared = NULL;
+
+    // Re-raise.
+    exception_type = exception_keeper_type_10;
+    exception_value = exception_keeper_value_10;
+    exception_tb = exception_keeper_tb_10;
+    exception_lineno = exception_keeper_lineno_10;
+
+    goto frame_exception_exit_1;
+    // End of try:
+    try_end_4:;
+
+    // Restore frame exception if necessary.
+#if 0
+    RESTORE_FRAME_EXCEPTION( frame_0d308e0a31e4655f0f182ee9faf33652 );
+#endif
+    popFrameStack();
+
+    assertFrameObject( frame_0d308e0a31e4655f0f182ee9faf33652 );
+
+    goto frame_no_exception_4;
+    frame_exception_exit_1:;
+#if 0
+    RESTORE_FRAME_EXCEPTION( frame_0d308e0a31e4655f0f182ee9faf33652 );
+#endif
+
+    if ( exception_tb == NULL )
+    {
+        exception_tb = MAKE_TRACEBACK( frame_0d308e0a31e4655f0f182ee9faf33652, exception_lineno );
+    }
+    else if ( exception_tb->tb_frame != &frame_0d308e0a31e4655f0f182ee9faf33652->m_frame )
+    {
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_0d308e0a31e4655f0f182ee9faf33652, exception_lineno );
+    }
+
+    // Put the previous frame back on top.
+    popFrameStack();
+
+    // Return the error.
+    goto module_exception_exit;
+    frame_no_exception_4:;
+    CHECK_OBJECT( (PyObject *)tmp_class_creation_3__class_decl_dict );
+    Py_DECREF( tmp_class_creation_3__class_decl_dict );
+    tmp_class_creation_3__class_decl_dict = NULL;
+
+    CHECK_OBJECT( (PyObject *)tmp_class_creation_3__metaclass );
+    Py_DECREF( tmp_class_creation_3__metaclass );
+    tmp_class_creation_3__metaclass = NULL;
+
+    CHECK_OBJECT( (PyObject *)tmp_class_creation_3__prepared );
+    Py_DECREF( tmp_class_creation_3__prepared );
+    tmp_class_creation_3__prepared = NULL;
+
+
+    return MOD_RETURN_VALUE( module_cryptography$x509$certificate_transparency );
+    module_exception_exit:
+    RESTORE_ERROR_OCCURRED( exception_type, exception_value, exception_tb );
+    return MOD_RETURN_VALUE( NULL );
+}
