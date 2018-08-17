@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['gui.py'],
-             pathex=['c:\\users\\brich\\appdata\\local\\programs\\python\\python37-32\\', 'C:\\Users\\brich\\Documents\\GitHub\\Revware\\Revware_Mikrotik'],
+             pathex=['C:\\Users\\brich\\Documents\\GitHub\\Revware\\Revware_Mikrotik'],
              binaries=[],
              datas=[],
              hiddenimports=[],

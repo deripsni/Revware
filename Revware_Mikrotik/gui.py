@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication, QPlainTextEd
 							QTableWidget, QTableWidgetItem, QStackedWidget, QToolBar, QHBoxLayout, QBoxLayout, QScrollArea
 
 from PyQt5 import QtGui, QtCore
+
 import ctypes
 import sftp
 from yaml import load, dump
@@ -37,13 +38,13 @@ class Master(QtCore.QObject):
 	mikroSignal = QtCore.pyqtSignal(str, str, str)
 
 	# Makes the program display silent exceptions for debugging
-	sys._excepthook = sys.excepthook
-
-	def exception_hook(exctype, value, traceback):
-		print(exctype, value, traceback)
-		sys.excepthook(exctype, value, traceback)
-		sys.exit(1)
-	sys.excepthook = exception_hook
+	# sys._excepthook = sys.excepthook
+	#
+	# def exception_hook(exctype, value, traceback):
+	# 	print(exctype, value, traceback)
+	# 	sys.excepthook(exctype, value, traceback)
+	# 	sys.exit(1)
+	# sys.excepthook = exception_hook
 	#########################################################
 
 	def __init__(self, parent=None):
@@ -724,9 +725,11 @@ class MikroWindow(QMainWindow):
 		# self.add_widget()
 
 	def add_widget(self):
-		if self.height <= 400:
-			self.height = self.height + 45
-			self.resize(400, self.height)
+		print(str(self.height) + "     " + str(self.frameGeometry().height()))
+		if self.height == (self.frameGeometry().height()-39) or self.height == 80:
+			if self.height <= 400:
+				self.height = self.height + 45
+				self.resize(400, self.height)
 		self.rowlist.append(SubnetRow(self))
 		self.scrollLayout.addRow(self.rowlist[self.count])
 		self.baselist.append(self.rowlist[self.count].b1)
@@ -1065,6 +1068,8 @@ class MainWindow(QMainWindow):
 		self.setGeometry(0, 0, 500, 440)
 		self.setWindowTitle('Revware Mikrotik Control')
 
+		self.setWindowFlags(QtCore.Qt.Window)
+
 	@QtCore.pyqtSlot(int)
 	def update_progress(self, value):
 		self.pbar.setValue(value)
@@ -1105,6 +1110,7 @@ class MainWindow(QMainWindow):
 		url = QtCore.QUrl('https://github.com/Revand/Revware/wiki')
 		if not QtGui.QDesktopServices.openUrl(url):
 			QtGui.QMessageBox.warning(self, 'Open Url', 'Could not open url')
+
 
 if __name__ == '__main__':
 	app = QApplication(sys.argv)
