@@ -42,8 +42,9 @@ extern PyObject *const_str_plain_BN_bin2bn;
 extern PyObject *const_tuple_int_pos_3_tuple;
 extern PyObject *const_str_plain_BN_free;
 extern PyObject *const_str_plain___file__;
-static PyObject *const_str_digest_fb49df0c02ced9a1dbcd2cd40c6c89c9;
+static PyObject *const_str_digest_a1d05fcce524f5a60f301a5c5d129cfe;
 static PyObject *const_str_plain_c_char_p;
+static PyObject *const_str_digest_fb49df0c02ced9a1dbcd2cd40c6c89c9;
 extern PyObject *const_str_plain_ctypes;
 extern PyObject *const_str_plain_BN_bn2bin;
 extern PyObject *const_int_0;
@@ -52,7 +53,6 @@ extern PyObject *const_int_pos_3;
 static PyObject *const_tuple_d8bf61b3d5e115572beefa6af5918bed_tuple;
 extern PyObject *const_str_plain_division;
 extern PyObject *const_str_plain___doc__;
-static PyObject *const_str_digest_d99ce2766c5219c67b8b1e3cda480b20;
 static PyObject *const_bytes_digest_0faee10f5fa0420c852b0056a0b4f500;
 static PyObject *const_str_plain_libcrypto_path;
 extern PyObject *const_str_plain_BN_num_bits;
@@ -87,32 +87,32 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_021d3d872118af1439170f3c8b9d6d94 = UNSTREAM_STRING( &constant_bin[ 17524 ], 32, 0 );
+    const_str_digest_021d3d872118af1439170f3c8b9d6d94 = UNSTREAM_STRING( &constant_bin[ 16716 ], 32, 0 );
     const_tuple_str_digest_fb49df0c02ced9a1dbcd2cd40c6c89c9_tuple = PyTuple_New( 1 );
-    const_str_digest_fb49df0c02ced9a1dbcd2cd40c6c89c9 = UNSTREAM_STRING( &constant_bin[ 17556 ], 25, 0 );
+    const_str_digest_fb49df0c02ced9a1dbcd2cd40c6c89c9 = UNSTREAM_STRING( &constant_bin[ 16748 ], 25, 0 );
     PyTuple_SET_ITEM( const_tuple_str_digest_fb49df0c02ced9a1dbcd2cd40c6c89c9_tuple, 0, const_str_digest_fb49df0c02ced9a1dbcd2cd40c6c89c9 ); Py_INCREF( const_str_digest_fb49df0c02ced9a1dbcd2cd40c6c89c9 );
     const_tuple_str_digest_564cf553d1fc7d823b35858d52155be6_tuple = PyTuple_New( 1 );
-    const_str_digest_564cf553d1fc7d823b35858d52155be6 = UNSTREAM_STRING( &constant_bin[ 17581 ], 40, 0 );
+    const_str_digest_564cf553d1fc7d823b35858d52155be6 = UNSTREAM_STRING( &constant_bin[ 16773 ], 40, 0 );
     PyTuple_SET_ITEM( const_tuple_str_digest_564cf553d1fc7d823b35858d52155be6_tuple, 0, const_str_digest_564cf553d1fc7d823b35858d52155be6 ); Py_INCREF( const_str_digest_564cf553d1fc7d823b35858d52155be6 );
-    const_str_digest_37c4ae810a3f0b7e2c761fb60b38acdd = UNSTREAM_STRING( &constant_bin[ 17621 ], 41, 0 );
-    const_str_plain_c_char_p = UNSTREAM_STRING( &constant_bin[ 17662 ], 8, 1 );
+    const_str_digest_37c4ae810a3f0b7e2c761fb60b38acdd = UNSTREAM_STRING( &constant_bin[ 16813 ], 41, 0 );
+    const_str_digest_a1d05fcce524f5a60f301a5c5d129cfe = UNSTREAM_STRING( &constant_bin[ 16854 ], 35, 0 );
+    const_str_plain_c_char_p = UNSTREAM_STRING( &constant_bin[ 16889 ], 8, 1 );
     const_tuple_d8bf61b3d5e115572beefa6af5918bed_tuple = PyTuple_New( 4 );
-    const_str_plain_CDLL = UNSTREAM_STRING( &constant_bin[ 17670 ], 4, 1 );
+    const_str_plain_CDLL = UNSTREAM_STRING( &constant_bin[ 16897 ], 4, 1 );
     PyTuple_SET_ITEM( const_tuple_d8bf61b3d5e115572beefa6af5918bed_tuple, 0, const_str_plain_CDLL ); Py_INCREF( const_str_plain_CDLL );
-    const_str_plain_c_int = UNSTREAM_STRING( &constant_bin[ 17674 ], 5, 1 );
+    const_str_plain_c_int = UNSTREAM_STRING( &constant_bin[ 16901 ], 5, 1 );
     PyTuple_SET_ITEM( const_tuple_d8bf61b3d5e115572beefa6af5918bed_tuple, 1, const_str_plain_c_int ); Py_INCREF( const_str_plain_c_int );
     PyTuple_SET_ITEM( const_tuple_d8bf61b3d5e115572beefa6af5918bed_tuple, 2, const_str_plain_c_char_p ); Py_INCREF( const_str_plain_c_char_p );
     PyTuple_SET_ITEM( const_tuple_d8bf61b3d5e115572beefa6af5918bed_tuple, 3, const_str_plain_c_void_p ); Py_INCREF( const_str_plain_c_void_p );
-    const_str_digest_d99ce2766c5219c67b8b1e3cda480b20 = UNSTREAM_STRING( &constant_bin[ 17679 ], 107, 0 );
-    const_bytes_digest_0faee10f5fa0420c852b0056a0b4f500 = UNSTREAM_BYTES( &constant_bin[ 5160 ], 6 );
-    const_str_plain_libcrypto_path = UNSTREAM_STRING( &constant_bin[ 17786 ], 14, 1 );
-    const_str_plain_crypto = UNSTREAM_STRING( &constant_bin[ 5160 ], 6, 1 );
-    const_str_digest_581e9157f4cfd7a80dd5ba063afd246e = UNSTREAM_STRING( &constant_bin[ 17800 ], 11, 0 );
+    const_bytes_digest_0faee10f5fa0420c852b0056a0b4f500 = UNSTREAM_BYTES( &constant_bin[ 5054 ], 6 );
+    const_str_plain_libcrypto_path = UNSTREAM_STRING( &constant_bin[ 16906 ], 14, 1 );
+    const_str_plain_crypto = UNSTREAM_STRING( &constant_bin[ 5054 ], 6, 1 );
+    const_str_digest_581e9157f4cfd7a80dd5ba063afd246e = UNSTREAM_STRING( &constant_bin[ 16920 ], 11, 0 );
     const_tuple_str_plain_find_library_tuple = PyTuple_New( 1 );
-    const_str_plain_find_library = UNSTREAM_STRING( &constant_bin[ 17811 ], 12, 1 );
+    const_str_plain_find_library = UNSTREAM_STRING( &constant_bin[ 16931 ], 12, 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain_find_library_tuple, 0, const_str_plain_find_library ); Py_INCREF( const_str_plain_find_library );
-    const_str_plain_BN_new = UNSTREAM_STRING( &constant_bin[ 17823 ], 6, 1 );
-    const_str_digest_c9d3a5d3f01bf0def8b70d47345cff8c = UNSTREAM_STRING( &constant_bin[ 17829 ], 435, 0 );
+    const_str_plain_BN_new = UNSTREAM_STRING( &constant_bin[ 16943 ], 6, 1 );
+    const_str_digest_c9d3a5d3f01bf0def8b70d47345cff8c = UNSTREAM_STRING( &constant_bin[ 16949 ], 435, 0 );
     const_tuple_str_plain_LibraryNotFoundError_str_plain_FFIEngineError_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_LibraryNotFoundError_str_plain_FFIEngineError_tuple, 0, const_str_plain_LibraryNotFoundError ); Py_INCREF( const_str_plain_LibraryNotFoundError );
     PyTuple_SET_ITEM( const_tuple_str_plain_LibraryNotFoundError_str_plain_FFIEngineError_tuple, 1, const_str_plain_FFIEngineError ); Py_INCREF( const_str_plain_FFIEngineError );
@@ -131,12 +131,12 @@ void checkModuleConstants_asn1crypto$_perf$_big_num_ctypes( void )
 #endif
 
 // The module code objects.
-static PyCodeObject *codeobj_20e5ec0ea829753609d0dcbd911bddf2;
+static PyCodeObject *codeobj_648a3a930c94deb997075d09e454d913;
 
 static void createModuleCodeObjects(void)
 {
-    module_filename_obj = const_str_digest_d99ce2766c5219c67b8b1e3cda480b20;
-    codeobj_20e5ec0ea829753609d0dcbd911bddf2 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_37c4ae810a3f0b7e2c761fb60b38acdd, 1, const_tuple_empty, 0, 0, CO_NOFREE | CO_FUTURE_UNICODE_LITERALS );
+    module_filename_obj = MAKE_RELATIVE_PATH( const_str_digest_a1d05fcce524f5a60f301a5c5d129cfe );
+    codeobj_648a3a930c94deb997075d09e454d913 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_37c4ae810a3f0b7e2c761fb60b38acdd, 1, const_tuple_empty, 0, 0, CO_NOFREE | CO_FUTURE_UNICODE_LITERALS );
 }
 
 // The module function declarations.
@@ -551,14 +551,14 @@ MOD_INIT_DECL( asn1crypto$_perf$_big_num_ctypes )
     PyObject *tmp_source_name_17;
     PyObject *tmp_source_name_18;
     PyObject *tmp_source_name_19;
-    struct Nuitka_FrameObject *frame_20e5ec0ea829753609d0dcbd911bddf2;
+    struct Nuitka_FrameObject *frame_648a3a930c94deb997075d09e454d913;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
 
     // Module code.
     tmp_assign_source_1 = const_str_digest_c9d3a5d3f01bf0def8b70d47345cff8c;
     UPDATE_STRING_DICT0( moduledict_asn1crypto$_perf$_big_num_ctypes, (Nuitka_StringObject *)const_str_plain___doc__, tmp_assign_source_1 );
-    tmp_assign_source_2 = const_str_digest_d99ce2766c5219c67b8b1e3cda480b20;
+    tmp_assign_source_2 = module_filename_obj;
     UPDATE_STRING_DICT0( moduledict_asn1crypto$_perf$_big_num_ctypes, (Nuitka_StringObject *)const_str_plain___file__, tmp_assign_source_2 );
     tmp_assign_source_3 = Py_None;
     UPDATE_STRING_DICT0( moduledict_asn1crypto$_perf$_big_num_ctypes, (Nuitka_StringObject *)const_str_plain___cached__, tmp_assign_source_3 );
@@ -569,12 +569,12 @@ MOD_INIT_DECL( asn1crypto$_perf$_big_num_ctypes )
     tmp_import_from_1__module = tmp_assign_source_4;
 
     // Frame without reuse.
-    frame_20e5ec0ea829753609d0dcbd911bddf2 = MAKE_MODULE_FRAME( codeobj_20e5ec0ea829753609d0dcbd911bddf2, module_asn1crypto$_perf$_big_num_ctypes );
+    frame_648a3a930c94deb997075d09e454d913 = MAKE_MODULE_FRAME( codeobj_648a3a930c94deb997075d09e454d913, module_asn1crypto$_perf$_big_num_ctypes );
 
     // Push the new frame as the currently active one, and we should be exclusively
     // owning it.
-    pushFrameStack( frame_20e5ec0ea829753609d0dcbd911bddf2 );
-    assert( Py_REFCNT( frame_20e5ec0ea829753609d0dcbd911bddf2 ) == 2 );
+    pushFrameStack( frame_648a3a930c94deb997075d09e454d913 );
+    assert( Py_REFCNT( frame_648a3a930c94deb997075d09e454d913 ) == 2 );
 
     // Framed code:
     // Tried code:
@@ -676,7 +676,7 @@ MOD_INIT_DECL( asn1crypto$_perf$_big_num_ctypes )
     tmp_locals_name_1 = Py_None;
     tmp_fromlist_name_1 = Py_None;
     tmp_level_name_1 = const_int_0;
-    frame_20e5ec0ea829753609d0dcbd911bddf2->m_frame.f_lineno = 24;
+    frame_648a3a930c94deb997075d09e454d913->m_frame.f_lineno = 24;
     tmp_assign_source_9 = IMPORT_MODULE5( tmp_name_name_1, tmp_globals_name_1, tmp_locals_name_1, tmp_fromlist_name_1, tmp_level_name_1 );
     assert( !(tmp_assign_source_9 == NULL) );
     UPDATE_STRING_DICT1( moduledict_asn1crypto$_perf$_big_num_ctypes, (Nuitka_StringObject *)const_str_plain_sys, tmp_assign_source_9 );
@@ -685,7 +685,7 @@ MOD_INIT_DECL( asn1crypto$_perf$_big_num_ctypes )
     tmp_locals_name_2 = Py_None;
     tmp_fromlist_name_2 = const_tuple_d8bf61b3d5e115572beefa6af5918bed_tuple;
     tmp_level_name_2 = const_int_0;
-    frame_20e5ec0ea829753609d0dcbd911bddf2->m_frame.f_lineno = 26;
+    frame_648a3a930c94deb997075d09e454d913->m_frame.f_lineno = 26;
     tmp_assign_source_10 = IMPORT_MODULE5( tmp_name_name_2, tmp_globals_name_2, tmp_locals_name_2, tmp_fromlist_name_2, tmp_level_name_2 );
     if ( tmp_assign_source_10 == NULL )
     {
@@ -800,7 +800,7 @@ MOD_INIT_DECL( asn1crypto$_perf$_big_num_ctypes )
     tmp_locals_name_3 = Py_None;
     tmp_fromlist_name_3 = const_tuple_str_plain_find_library_tuple;
     tmp_level_name_3 = const_int_0;
-    frame_20e5ec0ea829753609d0dcbd911bddf2->m_frame.f_lineno = 27;
+    frame_648a3a930c94deb997075d09e454d913->m_frame.f_lineno = 27;
     tmp_import_name_from_9 = IMPORT_MODULE5( tmp_name_name_3, tmp_globals_name_3, tmp_locals_name_3, tmp_fromlist_name_3, tmp_level_name_3 );
     if ( tmp_import_name_from_9 == NULL )
     {
@@ -832,7 +832,7 @@ MOD_INIT_DECL( asn1crypto$_perf$_big_num_ctypes )
     tmp_locals_name_4 = Py_None;
     tmp_fromlist_name_4 = const_tuple_str_plain_LibraryNotFoundError_str_plain_FFIEngineError_tuple;
     tmp_level_name_4 = const_int_pos_2;
-    frame_20e5ec0ea829753609d0dcbd911bddf2->m_frame.f_lineno = 29;
+    frame_648a3a930c94deb997075d09e454d913->m_frame.f_lineno = 29;
     tmp_assign_source_16 = IMPORT_MODULE5( tmp_name_name_4, tmp_globals_name_4, tmp_locals_name_4, tmp_fromlist_name_4, tmp_level_name_4 );
     if ( tmp_assign_source_16 == NULL )
     {
@@ -1021,7 +1021,7 @@ MOD_INIT_DECL( asn1crypto$_perf$_big_num_ctypes )
     condexpr_false_1:;
     tmp_args_element_name_1 = const_str_plain_crypto;
     condexpr_end_1:;
-    frame_20e5ec0ea829753609d0dcbd911bddf2->m_frame.f_lineno = 35;
+    frame_648a3a930c94deb997075d09e454d913->m_frame.f_lineno = 35;
     {
         PyObject *call_args[] = { tmp_args_element_name_1 };
         tmp_assign_source_19 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_1, call_args );
@@ -1090,7 +1090,7 @@ MOD_INIT_DECL( asn1crypto$_perf$_big_num_ctypes )
         goto try_except_handler_4;
     }
 
-    frame_20e5ec0ea829753609d0dcbd911bddf2->m_frame.f_lineno = 37;
+    frame_648a3a930c94deb997075d09e454d913->m_frame.f_lineno = 37;
     tmp_raise_type_1 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_2, &PyTuple_GET_ITEM( const_tuple_str_digest_564cf553d1fc7d823b35858d52155be6_tuple, 0 ) );
 
     if ( tmp_raise_type_1 == NULL )
@@ -1154,7 +1154,7 @@ MOD_INIT_DECL( asn1crypto$_perf$_big_num_ctypes )
         goto try_except_handler_4;
     }
 
-    frame_20e5ec0ea829753609d0dcbd911bddf2->m_frame.f_lineno = 39;
+    frame_648a3a930c94deb997075d09e454d913->m_frame.f_lineno = 39;
     {
         PyObject *call_args[] = { tmp_args_element_name_2 };
         tmp_assign_source_20 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_3, call_args );
@@ -2515,11 +2515,11 @@ MOD_INIT_DECL( asn1crypto$_perf$_big_num_ctypes )
 
     if ( exception_keeper_tb_4 == NULL )
     {
-        exception_keeper_tb_4 = MAKE_TRACEBACK( frame_20e5ec0ea829753609d0dcbd911bddf2, exception_keeper_lineno_4 );
+        exception_keeper_tb_4 = MAKE_TRACEBACK( frame_648a3a930c94deb997075d09e454d913, exception_keeper_lineno_4 );
     }
     else if ( exception_keeper_lineno_4 != 0 )
     {
-        exception_keeper_tb_4 = ADD_TRACEBACK( exception_keeper_tb_4, frame_20e5ec0ea829753609d0dcbd911bddf2, exception_keeper_lineno_4 );
+        exception_keeper_tb_4 = ADD_TRACEBACK( exception_keeper_tb_4, frame_648a3a930c94deb997075d09e454d913, exception_keeper_lineno_4 );
     }
 
     NORMALIZE_EXCEPTION( &exception_keeper_type_4, &exception_keeper_value_4, &exception_keeper_tb_4 );
@@ -2571,7 +2571,7 @@ MOD_INIT_DECL( asn1crypto$_perf$_big_num_ctypes )
         goto try_except_handler_5;
     }
 
-    frame_20e5ec0ea829753609d0dcbd911bddf2->m_frame.f_lineno = 69;
+    frame_648a3a930c94deb997075d09e454d913->m_frame.f_lineno = 69;
     tmp_raise_type_2 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_4, &PyTuple_GET_ITEM( const_tuple_str_digest_fb49df0c02ced9a1dbcd2cd40c6c89c9_tuple, 0 ) );
 
     if ( tmp_raise_type_2 == NULL )
@@ -2598,7 +2598,7 @@ MOD_INIT_DECL( asn1crypto$_perf$_big_num_ctypes )
         exception_lineno = 32;
     }
 
-    if (exception_tb && exception_tb->tb_frame == &frame_20e5ec0ea829753609d0dcbd911bddf2->m_frame) frame_20e5ec0ea829753609d0dcbd911bddf2->m_frame.f_lineno = exception_tb->tb_lineno;
+    if (exception_tb && exception_tb->tb_frame == &frame_648a3a930c94deb997075d09e454d913->m_frame) frame_648a3a930c94deb997075d09e454d913->m_frame.f_lineno = exception_tb->tb_lineno;
 
     goto try_except_handler_5;
     branch_end_2:;
@@ -2631,25 +2631,25 @@ MOD_INIT_DECL( asn1crypto$_perf$_big_num_ctypes )
 
     // Restore frame exception if necessary.
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_20e5ec0ea829753609d0dcbd911bddf2 );
+    RESTORE_FRAME_EXCEPTION( frame_648a3a930c94deb997075d09e454d913 );
 #endif
     popFrameStack();
 
-    assertFrameObject( frame_20e5ec0ea829753609d0dcbd911bddf2 );
+    assertFrameObject( frame_648a3a930c94deb997075d09e454d913 );
 
     goto frame_no_exception_1;
     frame_exception_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_20e5ec0ea829753609d0dcbd911bddf2 );
+    RESTORE_FRAME_EXCEPTION( frame_648a3a930c94deb997075d09e454d913 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_20e5ec0ea829753609d0dcbd911bddf2, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_648a3a930c94deb997075d09e454d913, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_20e5ec0ea829753609d0dcbd911bddf2->m_frame )
+    else if ( exception_tb->tb_frame != &frame_648a3a930c94deb997075d09e454d913->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_20e5ec0ea829753609d0dcbd911bddf2, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_648a3a930c94deb997075d09e454d913, exception_lineno );
     }
 
     // Put the previous frame back on top.

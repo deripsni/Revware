@@ -43,7 +43,6 @@ extern PyObject *const_str_plain_division;
 extern PyObject *const_str_plain___doc__;
 extern PyObject *const_slice_none_none_none;
 extern PyObject *const_str_plain_size;
-static PyObject *const_str_digest_c66ca4ca6f08bcc3d23d279aeb1b0012;
 extern PyObject *const_str_digest_3b332499244183a6085b75574470c0da;
 extern PyObject *const_str_plain_None;
 extern PyObject *const_tuple_empty;
@@ -52,6 +51,7 @@ extern PyObject *const_str_plain_new;
 extern PyObject *const_str_digest_e86187ccc4d6f568b5323f8a2043c263;
 static PyObject *const_str_digest_36b5634be12980970bc72c4a22b6a03e;
 extern PyObject *const_tuple_str_plain_ffi_str_plain_lib_tuple;
+static PyObject *const_str_digest_715d06cf7b5cbe82eb2da60aad81043d;
 static PyObject *const_tuple_str_plain_size_str_plain_buf_tuple;
 extern PyObject *const_str_plain_absolute_import;
 extern PyObject *const_str_plain___cached__;
@@ -62,9 +62,9 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_1167602698840dad380e2377ad9da3ad = UNSTREAM_STRING( &constant_bin[ 371323 ], 140, 0 );
-    const_str_digest_c66ca4ca6f08bcc3d23d279aeb1b0012 = UNSTREAM_STRING( &constant_bin[ 371463 ], 100, 0 );
-    const_str_digest_36b5634be12980970bc72c4a22b6a03e = UNSTREAM_STRING( &constant_bin[ 371563 ], 34, 0 );
+    const_str_digest_1167602698840dad380e2377ad9da3ad = UNSTREAM_STRING( &constant_bin[ 364068 ], 140, 0 );
+    const_str_digest_36b5634be12980970bc72c4a22b6a03e = UNSTREAM_STRING( &constant_bin[ 364208 ], 34, 0 );
+    const_str_digest_715d06cf7b5cbe82eb2da60aad81043d = UNSTREAM_STRING( &constant_bin[ 364242 ], 28, 0 );
     const_tuple_str_plain_size_str_plain_buf_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_size_str_plain_buf_tuple, 0, const_str_plain_size ); Py_INCREF( const_str_plain_size );
     PyTuple_SET_ITEM( const_tuple_str_plain_size_str_plain_buf_tuple, 1, const_str_plain_buf ); Py_INCREF( const_str_plain_buf );
@@ -83,14 +83,14 @@ void checkModuleConstants_nacl$bindings$randombytes( void )
 #endif
 
 // The module code objects.
-static PyCodeObject *codeobj_ef383d5c73c2bbc915a6970ae9fb10c9;
-static PyCodeObject *codeobj_f977828f257bbc4caa6555b500e6bb8e;
+static PyCodeObject *codeobj_19b25ce7226a6f5435e3958dbce33f7e;
+static PyCodeObject *codeobj_7efa6b2ec0e414cde774b64100fd0dc0;
 
 static void createModuleCodeObjects(void)
 {
-    module_filename_obj = const_str_digest_c66ca4ca6f08bcc3d23d279aeb1b0012;
-    codeobj_ef383d5c73c2bbc915a6970ae9fb10c9 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_36b5634be12980970bc72c4a22b6a03e, 1, const_tuple_empty, 0, 0, CO_NOFREE );
-    codeobj_f977828f257bbc4caa6555b500e6bb8e = MAKE_CODEOBJ( module_filename_obj, const_str_plain_randombytes, 20, const_tuple_str_plain_size_str_plain_buf_tuple, 1, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    module_filename_obj = MAKE_RELATIVE_PATH( const_str_digest_715d06cf7b5cbe82eb2da60aad81043d );
+    codeobj_19b25ce7226a6f5435e3958dbce33f7e = MAKE_CODEOBJ( module_filename_obj, const_str_digest_36b5634be12980970bc72c4a22b6a03e, 1, const_tuple_empty, 0, 0, CO_NOFREE );
+    codeobj_7efa6b2ec0e414cde774b64100fd0dc0 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_randombytes, 20, const_tuple_str_plain_size_str_plain_buf_tuple, 1, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
 }
 
 // The module function declarations.
@@ -133,23 +133,23 @@ static PyObject *impl_nacl$bindings$randombytes$$$function_1_randombytes( struct
     PyObject *tmp_subscribed_name_1;
     PyObject *tmp_subscript_name_1;
     NUITKA_MAY_BE_UNUSED PyObject *tmp_unused;
-    static struct Nuitka_FrameObject *cache_frame_f977828f257bbc4caa6555b500e6bb8e = NULL;
+    static struct Nuitka_FrameObject *cache_frame_7efa6b2ec0e414cde774b64100fd0dc0 = NULL;
 
-    struct Nuitka_FrameObject *frame_f977828f257bbc4caa6555b500e6bb8e;
+    struct Nuitka_FrameObject *frame_7efa6b2ec0e414cde774b64100fd0dc0;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_f977828f257bbc4caa6555b500e6bb8e, codeobj_f977828f257bbc4caa6555b500e6bb8e, module_nacl$bindings$randombytes, sizeof(void *)+sizeof(void *) );
-    frame_f977828f257bbc4caa6555b500e6bb8e = cache_frame_f977828f257bbc4caa6555b500e6bb8e;
+    MAKE_OR_REUSE_FRAME( cache_frame_7efa6b2ec0e414cde774b64100fd0dc0, codeobj_7efa6b2ec0e414cde774b64100fd0dc0, module_nacl$bindings$randombytes, sizeof(void *)+sizeof(void *) );
+    frame_7efa6b2ec0e414cde774b64100fd0dc0 = cache_frame_7efa6b2ec0e414cde774b64100fd0dc0;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_f977828f257bbc4caa6555b500e6bb8e );
+    pushFrameStack( frame_7efa6b2ec0e414cde774b64100fd0dc0 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_f977828f257bbc4caa6555b500e6bb8e ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_7efa6b2ec0e414cde774b64100fd0dc0 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_source_name_1 = GET_STRING_DICT_VALUE( moduledict_nacl$bindings$randombytes, (Nuitka_StringObject *)const_str_plain_ffi );
@@ -204,7 +204,7 @@ static PyObject *impl_nacl$bindings$randombytes$$$function_1_randombytes( struct
         goto frame_exception_exit_1;
     }
 
-    frame_f977828f257bbc4caa6555b500e6bb8e->m_frame.f_lineno = 28;
+    frame_7efa6b2ec0e414cde774b64100fd0dc0->m_frame.f_lineno = 28;
     {
         PyObject *call_args[] = { tmp_args_element_name_1, tmp_args_element_name_2 };
         tmp_assign_source_1 = CALL_FUNCTION_WITH_ARGS2( tmp_called_name_1, call_args );
@@ -293,7 +293,7 @@ static PyObject *impl_nacl$bindings$randombytes$$$function_1_randombytes( struct
         goto frame_exception_exit_1;
     }
 
-    frame_f977828f257bbc4caa6555b500e6bb8e->m_frame.f_lineno = 29;
+    frame_7efa6b2ec0e414cde774b64100fd0dc0->m_frame.f_lineno = 29;
     {
         PyObject *call_args[] = { tmp_args_element_name_3, tmp_args_element_name_4 };
         tmp_unused = CALL_FUNCTION_WITH_ARGS2( tmp_called_name_2, call_args );
@@ -380,7 +380,7 @@ static PyObject *impl_nacl$bindings$randombytes$$$function_1_randombytes( struct
         goto frame_exception_exit_1;
     }
 
-    frame_f977828f257bbc4caa6555b500e6bb8e->m_frame.f_lineno = 30;
+    frame_7efa6b2ec0e414cde774b64100fd0dc0->m_frame.f_lineno = 30;
     {
         PyObject *call_args[] = { tmp_args_element_name_5, tmp_args_element_name_6 };
         tmp_subscribed_name_1 = CALL_FUNCTION_WITH_ARGS2( tmp_called_name_3, call_args );
@@ -415,7 +415,7 @@ static PyObject *impl_nacl$bindings$randombytes$$$function_1_randombytes( struct
     goto frame_return_exit_1;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_f977828f257bbc4caa6555b500e6bb8e );
+    RESTORE_FRAME_EXCEPTION( frame_7efa6b2ec0e414cde774b64100fd0dc0 );
 #endif
 
     // Put the previous frame back on top.
@@ -425,7 +425,7 @@ static PyObject *impl_nacl$bindings$randombytes$$$function_1_randombytes( struct
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_f977828f257bbc4caa6555b500e6bb8e );
+    RESTORE_FRAME_EXCEPTION( frame_7efa6b2ec0e414cde774b64100fd0dc0 );
 #endif
 
     // Put the previous frame back on top.
@@ -436,21 +436,21 @@ static PyObject *impl_nacl$bindings$randombytes$$$function_1_randombytes( struct
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_f977828f257bbc4caa6555b500e6bb8e );
+    RESTORE_FRAME_EXCEPTION( frame_7efa6b2ec0e414cde774b64100fd0dc0 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_f977828f257bbc4caa6555b500e6bb8e, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_7efa6b2ec0e414cde774b64100fd0dc0, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_f977828f257bbc4caa6555b500e6bb8e->m_frame )
+    else if ( exception_tb->tb_frame != &frame_7efa6b2ec0e414cde774b64100fd0dc0->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_f977828f257bbc4caa6555b500e6bb8e, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_7efa6b2ec0e414cde774b64100fd0dc0, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_f977828f257bbc4caa6555b500e6bb8e,
+        (struct Nuitka_FrameObject *)frame_7efa6b2ec0e414cde774b64100fd0dc0,
         type_description_1,
         par_size,
         var_buf
@@ -458,13 +458,13 @@ static PyObject *impl_nacl$bindings$randombytes$$$function_1_randombytes( struct
 
 
     // Release cached frame.
-    if ( frame_f977828f257bbc4caa6555b500e6bb8e == cache_frame_f977828f257bbc4caa6555b500e6bb8e )
+    if ( frame_7efa6b2ec0e414cde774b64100fd0dc0 == cache_frame_7efa6b2ec0e414cde774b64100fd0dc0 )
     {
-        Py_DECREF( frame_f977828f257bbc4caa6555b500e6bb8e );
+        Py_DECREF( frame_7efa6b2ec0e414cde774b64100fd0dc0 );
     }
-    cache_frame_f977828f257bbc4caa6555b500e6bb8e = NULL;
+    cache_frame_7efa6b2ec0e414cde774b64100fd0dc0 = NULL;
 
-    assertFrameObject( frame_f977828f257bbc4caa6555b500e6bb8e );
+    assertFrameObject( frame_7efa6b2ec0e414cde774b64100fd0dc0 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -539,7 +539,7 @@ static PyObject *MAKE_FUNCTION_nacl$bindings$randombytes$$$function_1_randombyte
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_f977828f257bbc4caa6555b500e6bb8e,
+        codeobj_7efa6b2ec0e414cde774b64100fd0dc0,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -836,14 +836,14 @@ MOD_INIT_DECL( nacl$bindings$randombytes )
     PyObject *tmp_level_name_1;
     PyObject *tmp_locals_name_1;
     PyObject *tmp_name_name_1;
-    struct Nuitka_FrameObject *frame_ef383d5c73c2bbc915a6970ae9fb10c9;
+    struct Nuitka_FrameObject *frame_19b25ce7226a6f5435e3958dbce33f7e;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
 
     // Module code.
     tmp_assign_source_1 = Py_None;
     UPDATE_STRING_DICT0( moduledict_nacl$bindings$randombytes, (Nuitka_StringObject *)const_str_plain___doc__, tmp_assign_source_1 );
-    tmp_assign_source_2 = const_str_digest_c66ca4ca6f08bcc3d23d279aeb1b0012;
+    tmp_assign_source_2 = module_filename_obj;
     UPDATE_STRING_DICT0( moduledict_nacl$bindings$randombytes, (Nuitka_StringObject *)const_str_plain___file__, tmp_assign_source_2 );
     tmp_assign_source_3 = Py_None;
     UPDATE_STRING_DICT0( moduledict_nacl$bindings$randombytes, (Nuitka_StringObject *)const_str_plain___cached__, tmp_assign_source_3 );
@@ -854,12 +854,12 @@ MOD_INIT_DECL( nacl$bindings$randombytes )
     tmp_import_from_1__module = tmp_assign_source_4;
 
     // Frame without reuse.
-    frame_ef383d5c73c2bbc915a6970ae9fb10c9 = MAKE_MODULE_FRAME( codeobj_ef383d5c73c2bbc915a6970ae9fb10c9, module_nacl$bindings$randombytes );
+    frame_19b25ce7226a6f5435e3958dbce33f7e = MAKE_MODULE_FRAME( codeobj_19b25ce7226a6f5435e3958dbce33f7e, module_nacl$bindings$randombytes );
 
     // Push the new frame as the currently active one, and we should be exclusively
     // owning it.
-    pushFrameStack( frame_ef383d5c73c2bbc915a6970ae9fb10c9 );
-    assert( Py_REFCNT( frame_ef383d5c73c2bbc915a6970ae9fb10c9 ) == 2 );
+    pushFrameStack( frame_19b25ce7226a6f5435e3958dbce33f7e );
+    assert( Py_REFCNT( frame_19b25ce7226a6f5435e3958dbce33f7e ) == 2 );
 
     // Framed code:
     // Tried code:
@@ -945,7 +945,7 @@ MOD_INIT_DECL( nacl$bindings$randombytes )
     tmp_locals_name_1 = Py_None;
     tmp_fromlist_name_1 = const_tuple_str_plain_ffi_str_plain_lib_tuple;
     tmp_level_name_1 = const_int_0;
-    frame_ef383d5c73c2bbc915a6970ae9fb10c9->m_frame.f_lineno = 17;
+    frame_19b25ce7226a6f5435e3958dbce33f7e->m_frame.f_lineno = 17;
     tmp_assign_source_8 = IMPORT_MODULE5( tmp_name_name_1, tmp_globals_name_1, tmp_locals_name_1, tmp_fromlist_name_1, tmp_level_name_1 );
     if ( tmp_assign_source_8 == NULL )
     {
@@ -1022,25 +1022,25 @@ MOD_INIT_DECL( nacl$bindings$randombytes )
 
     // Restore frame exception if necessary.
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_ef383d5c73c2bbc915a6970ae9fb10c9 );
+    RESTORE_FRAME_EXCEPTION( frame_19b25ce7226a6f5435e3958dbce33f7e );
 #endif
     popFrameStack();
 
-    assertFrameObject( frame_ef383d5c73c2bbc915a6970ae9fb10c9 );
+    assertFrameObject( frame_19b25ce7226a6f5435e3958dbce33f7e );
 
     goto frame_no_exception_1;
     frame_exception_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_ef383d5c73c2bbc915a6970ae9fb10c9 );
+    RESTORE_FRAME_EXCEPTION( frame_19b25ce7226a6f5435e3958dbce33f7e );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_ef383d5c73c2bbc915a6970ae9fb10c9, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_19b25ce7226a6f5435e3958dbce33f7e, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_ef383d5c73c2bbc915a6970ae9fb10c9->m_frame )
+    else if ( exception_tb->tb_frame != &frame_19b25ce7226a6f5435e3958dbce33f7e->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_ef383d5c73c2bbc915a6970ae9fb10c9, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_19b25ce7226a6f5435e3958dbce33f7e, exception_lineno );
     }
 
     // Put the previous frame back on top.

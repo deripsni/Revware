@@ -34,6 +34,7 @@ PyDictObject *moduledict_routeros_api$api_socket;
 static PyObject *const_tuple_str_plain_SocketWrapper_tuple_type_object_tuple_tuple;
 extern PyObject *const_str_plain_metaclass;
 static PyObject *const_dict_d09868993ad28cfa57a0057a7f954ff8;
+static PyObject *const_str_digest_3d447e1be5b1d4c70e97207580abcf8c;
 extern PyObject *const_tuple_str_plain___class___tuple;
 extern PyObject *const_str_plain_RouterOsApiConnectionClosedError;
 extern PyObject *const_str_plain_object;
@@ -108,7 +109,6 @@ static PyObject *const_tuple_str_plain_DummySocket_tuple_type_object_tuple_tuple
 static PyObject *const_str_digest_500d61df7a92689ad5670f5a7d9b1b27;
 extern PyObject *const_str_plain___prepare__;
 extern PyObject *const_str_plain___init__;
-static PyObject *const_str_digest_4fc35a017348a8f27aa43da30f29b28c;
 extern PyObject *const_int_pos_3;
 static PyObject *const_str_plain_SOL_SOCKET;
 static PyObject *const_str_digest_e27dc222deb29014235116fa15ea71ab;
@@ -128,31 +128,32 @@ static bool constants_created = false;
 static void createModuleConstants( void )
 {
     const_tuple_str_plain_SocketWrapper_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
-    const_str_plain_SocketWrapper = UNSTREAM_STRING( &constant_bin[ 712136 ], 13, 1 );
+    const_str_plain_SocketWrapper = UNSTREAM_STRING( &constant_bin[ 698011 ], 13, 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain_SocketWrapper_tuple_type_object_tuple_tuple, 0, const_str_plain_SocketWrapper ); Py_INCREF( const_str_plain_SocketWrapper );
     PyTuple_SET_ITEM( const_tuple_str_plain_SocketWrapper_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
     const_dict_d09868993ad28cfa57a0057a7f954ff8 = _PyDict_NewPresized( 1 );
-    const_str_plain_after_idle_sec = UNSTREAM_STRING( &constant_bin[ 712149 ], 14, 1 );
+    const_str_plain_after_idle_sec = UNSTREAM_STRING( &constant_bin[ 698024 ], 14, 1 );
     PyDict_SetItem( const_dict_d09868993ad28cfa57a0057a7f954ff8, const_str_plain_after_idle_sec, const_int_pos_10 );
     assert( PyDict_Size( const_dict_d09868993ad28cfa57a0057a7f954ff8 ) == 1 );
-    const_str_digest_def8d720b05a33166b65eafbb1e875c0 = UNSTREAM_STRING( &constant_bin[ 712163 ], 250, 0 );
+    const_str_digest_3d447e1be5b1d4c70e97207580abcf8c = UNSTREAM_STRING( &constant_bin[ 698038 ], 26, 0 );
+    const_str_digest_def8d720b05a33166b65eafbb1e875c0 = UNSTREAM_STRING( &constant_bin[ 698064 ], 250, 0 );
     const_tuple_int_pos_1_int_pos_3_int_pos_5_tuple = PyTuple_New( 3 );
     PyTuple_SET_ITEM( const_tuple_int_pos_1_int_pos_3_int_pos_5_tuple, 0, const_int_pos_1 ); Py_INCREF( const_int_pos_1 );
     PyTuple_SET_ITEM( const_tuple_int_pos_1_int_pos_3_int_pos_5_tuple, 1, const_int_pos_3 ); Py_INCREF( const_int_pos_3 );
     PyTuple_SET_ITEM( const_tuple_int_pos_1_int_pos_3_int_pos_5_tuple, 2, const_int_pos_5 ); Py_INCREF( const_int_pos_5 );
-    const_str_digest_13d2a8167c67618cdc6a7f2caced9371 = UNSTREAM_STRING( &constant_bin[ 712413 ], 18, 0 );
-    const_str_digest_97f757f2b1e2acff4d9f610abf7d36ab = UNSTREAM_STRING( &constant_bin[ 712431 ], 22, 0 );
-    const_str_digest_de537667d085cdaa176dc8102a492372 = UNSTREAM_STRING( &constant_bin[ 712453 ], 24, 0 );
+    const_str_digest_13d2a8167c67618cdc6a7f2caced9371 = UNSTREAM_STRING( &constant_bin[ 698314 ], 18, 0 );
+    const_str_digest_97f757f2b1e2acff4d9f610abf7d36ab = UNSTREAM_STRING( &constant_bin[ 698332 ], 22, 0 );
+    const_str_digest_de537667d085cdaa176dc8102a492372 = UNSTREAM_STRING( &constant_bin[ 698354 ], 24, 0 );
     const_tuple_ebccefe3d513f21f172155045612ced1_tuple = PyTuple_New( 4 );
     PyTuple_SET_ITEM( const_tuple_ebccefe3d513f21f172155045612ced1_tuple, 0, const_str_plain_sock ); Py_INCREF( const_str_plain_sock );
     PyTuple_SET_ITEM( const_tuple_ebccefe3d513f21f172155045612ced1_tuple, 1, const_str_plain_after_idle_sec ); Py_INCREF( const_str_plain_after_idle_sec );
-    const_str_plain_interval_sec = UNSTREAM_STRING( &constant_bin[ 712317 ], 12, 1 );
+    const_str_plain_interval_sec = UNSTREAM_STRING( &constant_bin[ 698218 ], 12, 1 );
     PyTuple_SET_ITEM( const_tuple_ebccefe3d513f21f172155045612ced1_tuple, 2, const_str_plain_interval_sec ); Py_INCREF( const_str_plain_interval_sec );
-    const_str_plain_max_fails = UNSTREAM_STRING( &constant_bin[ 712383 ], 9, 1 );
+    const_str_plain_max_fails = UNSTREAM_STRING( &constant_bin[ 698284 ], 9, 1 );
     PyTuple_SET_ITEM( const_tuple_ebccefe3d513f21f172155045612ced1_tuple, 3, const_str_plain_max_fails ); Py_INCREF( const_str_plain_max_fails );
-    const_str_plain_IPPROTO_TCP = UNSTREAM_STRING( &constant_bin[ 712477 ], 11, 1 );
-    const_str_digest_04266d6ad904761392c133298fb0f518 = UNSTREAM_STRING( &constant_bin[ 712488 ], 43, 0 );
-    const_str_plain__receive_and_check_connection = UNSTREAM_STRING( &constant_bin[ 712502 ], 29, 1 );
+    const_str_plain_IPPROTO_TCP = UNSTREAM_STRING( &constant_bin[ 698378 ], 11, 1 );
+    const_str_digest_04266d6ad904761392c133298fb0f518 = UNSTREAM_STRING( &constant_bin[ 698389 ], 43, 0 );
+    const_str_plain__receive_and_check_connection = UNSTREAM_STRING( &constant_bin[ 698403 ], 29, 1 );
     const_tuple_930801e3cd7ffcfb1d125ba082713187_tuple = PyTuple_New( 5 );
     PyTuple_SET_ITEM( const_tuple_930801e3cd7ffcfb1d125ba082713187_tuple, 0, const_str_plain_hostname ); Py_INCREF( const_str_plain_hostname );
     PyTuple_SET_ITEM( const_tuple_930801e3cd7ffcfb1d125ba082713187_tuple, 1, const_str_plain_port ); Py_INCREF( const_str_plain_port );
@@ -161,26 +162,25 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_930801e3cd7ffcfb1d125ba082713187_tuple, 4, const_str_plain_api_socket ); Py_INCREF( const_str_plain_api_socket );
     const_tuple_float_15_0_tuple = PyTuple_New( 1 );
     PyTuple_SET_ITEM( const_tuple_float_15_0_tuple, 0, const_float_15_0 ); Py_INCREF( const_float_15_0 );
-    const_str_plain_TCP_KEEPCNT = UNSTREAM_STRING( &constant_bin[ 712531 ], 11, 1 );
-    const_str_digest_9c67531db0ee1ba439c0203f99a88b84 = UNSTREAM_STRING( &constant_bin[ 712542 ], 32, 0 );
-    const_str_plain_setsockopt = UNSTREAM_STRING( &constant_bin[ 712574 ], 10, 1 );
+    const_str_plain_TCP_KEEPCNT = UNSTREAM_STRING( &constant_bin[ 698432 ], 11, 1 );
+    const_str_digest_9c67531db0ee1ba439c0203f99a88b84 = UNSTREAM_STRING( &constant_bin[ 698443 ], 32, 0 );
+    const_str_plain_setsockopt = UNSTREAM_STRING( &constant_bin[ 698475 ], 10, 1 );
     const_tuple_str_plain_self_str_plain_length_str_plain_e_tuple = PyTuple_New( 3 );
     PyTuple_SET_ITEM( const_tuple_str_plain_self_str_plain_length_str_plain_e_tuple, 0, const_str_plain_self ); Py_INCREF( const_str_plain_self );
     PyTuple_SET_ITEM( const_tuple_str_plain_self_str_plain_length_str_plain_e_tuple, 1, const_str_plain_length ); Py_INCREF( const_str_plain_length );
     PyTuple_SET_ITEM( const_tuple_str_plain_self_str_plain_length_str_plain_e_tuple, 2, const_str_plain_e ); Py_INCREF( const_str_plain_e );
-    const_str_digest_1488c48386711321362090ca4f1acf2e = UNSTREAM_STRING( &constant_bin[ 712550 ], 23, 0 );
-    const_str_plain_SO_KEEPALIVE = UNSTREAM_STRING( &constant_bin[ 712584 ], 12, 1 );
-    const_str_plain_TCP_KEEPINTVL = UNSTREAM_STRING( &constant_bin[ 712596 ], 13, 1 );
-    const_str_digest_dd04803c95abce21dd22daa3d3308ab7 = UNSTREAM_STRING( &constant_bin[ 712609 ], 22, 0 );
+    const_str_digest_1488c48386711321362090ca4f1acf2e = UNSTREAM_STRING( &constant_bin[ 698451 ], 23, 0 );
+    const_str_plain_SO_KEEPALIVE = UNSTREAM_STRING( &constant_bin[ 698485 ], 12, 1 );
+    const_str_plain_TCP_KEEPINTVL = UNSTREAM_STRING( &constant_bin[ 698497 ], 13, 1 );
+    const_str_digest_dd04803c95abce21dd22daa3d3308ab7 = UNSTREAM_STRING( &constant_bin[ 698510 ], 22, 0 );
     const_tuple_str_plain_DummySocket_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_DummySocket_tuple_type_object_tuple_tuple, 0, const_str_plain_DummySocket ); Py_INCREF( const_str_plain_DummySocket );
     PyTuple_SET_ITEM( const_tuple_str_plain_DummySocket_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
-    const_str_digest_500d61df7a92689ad5670f5a7d9b1b27 = UNSTREAM_STRING( &constant_bin[ 712631 ], 19, 0 );
-    const_str_digest_4fc35a017348a8f27aa43da30f29b28c = UNSTREAM_STRING( &constant_bin[ 712650 ], 98, 0 );
-    const_str_plain_SOL_SOCKET = UNSTREAM_STRING( &constant_bin[ 712748 ], 10, 1 );
-    const_str_digest_e27dc222deb29014235116fa15ea71ab = UNSTREAM_STRING( &constant_bin[ 712758 ], 21, 0 );
-    const_str_digest_0583b56ff0f4178f708ad26ca85169ac = UNSTREAM_STRING( &constant_bin[ 712779 ], 17, 0 );
-    const_str_plain_TCP_KEEPIDLE = UNSTREAM_STRING( &constant_bin[ 712796 ], 12, 1 );
+    const_str_digest_500d61df7a92689ad5670f5a7d9b1b27 = UNSTREAM_STRING( &constant_bin[ 698532 ], 19, 0 );
+    const_str_plain_SOL_SOCKET = UNSTREAM_STRING( &constant_bin[ 698551 ], 10, 1 );
+    const_str_digest_e27dc222deb29014235116fa15ea71ab = UNSTREAM_STRING( &constant_bin[ 698561 ], 21, 0 );
+    const_str_digest_0583b56ff0f4178f708ad26ca85169ac = UNSTREAM_STRING( &constant_bin[ 698582 ], 17, 0 );
+    const_str_plain_TCP_KEEPIDLE = UNSTREAM_STRING( &constant_bin[ 698599 ], 12, 1 );
     const_tuple_str_plain_self_str_plain_length_str_plain_bytes_tuple = PyTuple_New( 3 );
     PyTuple_SET_ITEM( const_tuple_str_plain_self_str_plain_length_str_plain_bytes_tuple, 0, const_str_plain_self ); Py_INCREF( const_str_plain_self );
     PyTuple_SET_ITEM( const_tuple_str_plain_self_str_plain_length_str_plain_bytes_tuple, 1, const_str_plain_length ); Py_INCREF( const_str_plain_length );
@@ -200,36 +200,36 @@ void checkModuleConstants_routeros_api$api_socket( void )
 #endif
 
 // The module code objects.
-static PyCodeObject *codeobj_0368eab73dded74de2df0e0a354d8ac7;
-static PyCodeObject *codeobj_d5bebfc41ecf9d47bd54c05dcc868431;
-static PyCodeObject *codeobj_d498ec2ba74217ac2f3dbd5a9bc6172c;
-static PyCodeObject *codeobj_50b3c85ffa114efc5ed7b203e77b4a9b;
-static PyCodeObject *codeobj_7d295040c2fadb59c5911db82b1964b7;
-static PyCodeObject *codeobj_ace89feeca2b49619bfc1509bf03b48b;
-static PyCodeObject *codeobj_bcc227191d6b797522d6e836f9190384;
-static PyCodeObject *codeobj_50d1a80be8f7e4652aff9d902575af82;
-static PyCodeObject *codeobj_de31f5acfe6e846b5d743853d284c07a;
-static PyCodeObject *codeobj_0d8a260deee45da2f534715855e42ed6;
-static PyCodeObject *codeobj_a33d12582e9294ab5579502a5eca70ec;
-static PyCodeObject *codeobj_64dd0d62a90da0000ac73d6d4b50fab3;
-static PyCodeObject *codeobj_e4d155ae1e5fcfcb9b906935475345b0;
+static PyCodeObject *codeobj_a85759ca15ea0b46cbefb240f27a8f85;
+static PyCodeObject *codeobj_8bafb843ac0c1b1b68bc795ce25b24d3;
+static PyCodeObject *codeobj_754dfdbc6ae347c435c8f35b52d0a038;
+static PyCodeObject *codeobj_26565c414abc04a24f0d4f0feec2cae1;
+static PyCodeObject *codeobj_4104159f485fbb920a5c15118a949349;
+static PyCodeObject *codeobj_3a21dbdc369abbd0c03d3eb83ada9fbc;
+static PyCodeObject *codeobj_3180bdae5e84ca9940262b06172be4eb;
+static PyCodeObject *codeobj_ad2b88ed0de1a3d0c62094cc7151b39d;
+static PyCodeObject *codeobj_f07399c4659a940ac550efc79797b25d;
+static PyCodeObject *codeobj_122c1a175c10b74ad03667cb5fa54da6;
+static PyCodeObject *codeobj_3e7b0ff02b78ee5dc494ae91de09b7e9;
+static PyCodeObject *codeobj_4e43707d2b231ffaff766960ad705a1a;
+static PyCodeObject *codeobj_20fb11d03baed2da7e5ab12bcb8cbb74;
 
 static void createModuleCodeObjects(void)
 {
-    module_filename_obj = const_str_digest_4fc35a017348a8f27aa43da30f29b28c;
-    codeobj_0368eab73dded74de2df0e0a354d8ac7 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_9c67531db0ee1ba439c0203f99a88b84, 1, const_tuple_empty, 0, 0, CO_NOFREE );
-    codeobj_d5bebfc41ecf9d47bd54c05dcc868431 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_DummySocket, 38, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
-    codeobj_d498ec2ba74217ac2f3dbd5a9bc6172c = MAKE_CODEOBJ( module_filename_obj, const_str_plain_SocketWrapper, 46, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
-    codeobj_50b3c85ffa114efc5ed7b203e77b4a9b = MAKE_CODEOBJ( module_filename_obj, const_str_plain___init__, 47, const_tuple_str_plain_self_str_plain_socket_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_7d295040c2fadb59c5911db82b1964b7 = MAKE_CODEOBJ( module_filename_obj, const_str_plain__receive_and_check_connection, 63, const_tuple_str_plain_self_str_plain_length_str_plain_bytes_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_ace89feeca2b49619bfc1509bf03b48b = MAKE_CODEOBJ( module_filename_obj, const_str_plain_close, 39, const_tuple_str_plain_self_tuple, 1, 0, CO_NOFREE );
-    codeobj_bcc227191d6b797522d6e836f9190384 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_close, 70, const_tuple_str_plain_self_tuple, 1, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_50d1a80be8f7e4652aff9d902575af82 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_get_socket, 10, const_tuple_930801e3cd7ffcfb1d125ba082713187_tuple, 3, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_de31f5acfe6e846b5d743853d284c07a = MAKE_CODEOBJ( module_filename_obj, const_str_plain_receive, 53, const_tuple_str_plain_self_str_plain_length_str_plain_e_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_0d8a260deee45da2f534715855e42ed6 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_send, 50, const_tuple_str_plain_self_str_plain_bytes_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_a33d12582e9294ab5579502a5eca70ec = MAKE_CODEOBJ( module_filename_obj, const_str_plain_set_keepalive, 25, const_tuple_ebccefe3d513f21f172155045612ced1_tuple, 4, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_64dd0d62a90da0000ac73d6d4b50fab3 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_settimeout, 42, const_tuple_str_plain_self_str_plain_timeout_tuple, 2, 0, CO_NOFREE );
-    codeobj_e4d155ae1e5fcfcb9b906935475345b0 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_settimeout, 73, const_tuple_str_plain_self_str_plain_timeout_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    module_filename_obj = MAKE_RELATIVE_PATH( const_str_digest_3d447e1be5b1d4c70e97207580abcf8c );
+    codeobj_a85759ca15ea0b46cbefb240f27a8f85 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_9c67531db0ee1ba439c0203f99a88b84, 1, const_tuple_empty, 0, 0, CO_NOFREE );
+    codeobj_8bafb843ac0c1b1b68bc795ce25b24d3 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_DummySocket, 38, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
+    codeobj_754dfdbc6ae347c435c8f35b52d0a038 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_SocketWrapper, 46, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
+    codeobj_26565c414abc04a24f0d4f0feec2cae1 = MAKE_CODEOBJ( module_filename_obj, const_str_plain___init__, 47, const_tuple_str_plain_self_str_plain_socket_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_4104159f485fbb920a5c15118a949349 = MAKE_CODEOBJ( module_filename_obj, const_str_plain__receive_and_check_connection, 63, const_tuple_str_plain_self_str_plain_length_str_plain_bytes_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_3a21dbdc369abbd0c03d3eb83ada9fbc = MAKE_CODEOBJ( module_filename_obj, const_str_plain_close, 39, const_tuple_str_plain_self_tuple, 1, 0, CO_NOFREE );
+    codeobj_3180bdae5e84ca9940262b06172be4eb = MAKE_CODEOBJ( module_filename_obj, const_str_plain_close, 70, const_tuple_str_plain_self_tuple, 1, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_ad2b88ed0de1a3d0c62094cc7151b39d = MAKE_CODEOBJ( module_filename_obj, const_str_plain_get_socket, 10, const_tuple_930801e3cd7ffcfb1d125ba082713187_tuple, 3, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_f07399c4659a940ac550efc79797b25d = MAKE_CODEOBJ( module_filename_obj, const_str_plain_receive, 53, const_tuple_str_plain_self_str_plain_length_str_plain_e_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_122c1a175c10b74ad03667cb5fa54da6 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_send, 50, const_tuple_str_plain_self_str_plain_bytes_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_3e7b0ff02b78ee5dc494ae91de09b7e9 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_set_keepalive, 25, const_tuple_ebccefe3d513f21f172155045612ced1_tuple, 4, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_4e43707d2b231ffaff766960ad705a1a = MAKE_CODEOBJ( module_filename_obj, const_str_plain_settimeout, 42, const_tuple_str_plain_self_str_plain_timeout_tuple, 2, 0, CO_NOFREE );
+    codeobj_20fb11d03baed2da7e5ab12bcb8cbb74 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_settimeout, 73, const_tuple_str_plain_self_str_plain_timeout_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
 }
 
 // The module function declarations.
@@ -348,23 +348,23 @@ static PyObject *impl_routeros_api$api_socket$$$function_1_get_socket( struct Nu
     PyObject *tmp_tuple_element_1;
     PyObject *tmp_tuple_element_2;
     NUITKA_MAY_BE_UNUSED PyObject *tmp_unused;
-    static struct Nuitka_FrameObject *cache_frame_50d1a80be8f7e4652aff9d902575af82 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_ad2b88ed0de1a3d0c62094cc7151b39d = NULL;
 
-    struct Nuitka_FrameObject *frame_50d1a80be8f7e4652aff9d902575af82;
+    struct Nuitka_FrameObject *frame_ad2b88ed0de1a3d0c62094cc7151b39d;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_50d1a80be8f7e4652aff9d902575af82, codeobj_50d1a80be8f7e4652aff9d902575af82, module_routeros_api$api_socket, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *) );
-    frame_50d1a80be8f7e4652aff9d902575af82 = cache_frame_50d1a80be8f7e4652aff9d902575af82;
+    MAKE_OR_REUSE_FRAME( cache_frame_ad2b88ed0de1a3d0c62094cc7151b39d, codeobj_ad2b88ed0de1a3d0c62094cc7151b39d, module_routeros_api$api_socket, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *) );
+    frame_ad2b88ed0de1a3d0c62094cc7151b39d = cache_frame_ad2b88ed0de1a3d0c62094cc7151b39d;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_50d1a80be8f7e4652aff9d902575af82 );
+    pushFrameStack( frame_ad2b88ed0de1a3d0c62094cc7151b39d );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_50d1a80be8f7e4652aff9d902575af82 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_ad2b88ed0de1a3d0c62094cc7151b39d ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_source_name_1 = GET_STRING_DICT_VALUE( moduledict_routeros_api$api_socket, (Nuitka_StringObject *)const_str_plain_socket );
@@ -471,7 +471,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_1_get_socket( struct Nu
         type_description_1 = "ooooo";
         goto frame_exception_exit_1;
     }
-    frame_50d1a80be8f7e4652aff9d902575af82->m_frame.f_lineno = 11;
+    frame_ad2b88ed0de1a3d0c62094cc7151b39d->m_frame.f_lineno = 11;
     {
         PyObject *call_args[] = { tmp_args_element_name_1, tmp_args_element_name_2 };
         tmp_assign_source_1 = CALL_FUNCTION_WITH_ARGS2( tmp_called_name_1, call_args );
@@ -526,7 +526,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_1_get_socket( struct Nu
         goto frame_exception_exit_1;
     }
 
-    frame_50d1a80be8f7e4652aff9d902575af82->m_frame.f_lineno = 12;
+    frame_ad2b88ed0de1a3d0c62094cc7151b39d->m_frame.f_lineno = 12;
     {
         PyObject *call_args[] = { tmp_args_element_name_3 };
         tmp_unused = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_2, call_args );
@@ -625,7 +625,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_1_get_socket( struct Nu
 
     Py_INCREF( tmp_tuple_element_1 );
     PyTuple_SET_ITEM( tmp_args_element_name_4, 1, tmp_tuple_element_1 );
-    frame_50d1a80be8f7e4652aff9d902575af82->m_frame.f_lineno = 15;
+    frame_ad2b88ed0de1a3d0c62094cc7151b39d->m_frame.f_lineno = 15;
     {
         PyObject *call_args[] = { tmp_args_element_name_4 };
         tmp_unused = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_3, call_args );
@@ -676,11 +676,11 @@ static PyObject *impl_routeros_api$api_socket$$$function_1_get_socket( struct Nu
 
     if ( exception_keeper_tb_1 == NULL )
     {
-        exception_keeper_tb_1 = MAKE_TRACEBACK( frame_50d1a80be8f7e4652aff9d902575af82, exception_keeper_lineno_1 );
+        exception_keeper_tb_1 = MAKE_TRACEBACK( frame_ad2b88ed0de1a3d0c62094cc7151b39d, exception_keeper_lineno_1 );
     }
     else if ( exception_keeper_lineno_1 != 0 )
     {
-        exception_keeper_tb_1 = ADD_TRACEBACK( exception_keeper_tb_1, frame_50d1a80be8f7e4652aff9d902575af82, exception_keeper_lineno_1 );
+        exception_keeper_tb_1 = ADD_TRACEBACK( exception_keeper_tb_1, frame_ad2b88ed0de1a3d0c62094cc7151b39d, exception_keeper_lineno_1 );
     }
 
     NORMALIZE_EXCEPTION( &exception_keeper_type_1, &exception_keeper_value_1, &exception_keeper_tb_1 );
@@ -877,7 +877,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_1_get_socket( struct Nu
         goto try_except_handler_5;
     }
 
-    frame_50d1a80be8f7e4652aff9d902575af82->m_frame.f_lineno = 18;
+    frame_ad2b88ed0de1a3d0c62094cc7151b39d->m_frame.f_lineno = 18;
     {
         PyObject *call_args[] = { tmp_args_element_name_5 };
         tmp_raise_type_1 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_4, call_args );
@@ -936,7 +936,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_1_get_socket( struct Nu
         exception_lineno = 14;
     }
 
-    if (exception_tb && exception_tb->tb_frame == &frame_50d1a80be8f7e4652aff9d902575af82->m_frame) frame_50d1a80be8f7e4652aff9d902575af82->m_frame.f_lineno = exception_tb->tb_lineno;
+    if (exception_tb && exception_tb->tb_frame == &frame_ad2b88ed0de1a3d0c62094cc7151b39d->m_frame) frame_ad2b88ed0de1a3d0c62094cc7151b39d->m_frame.f_lineno = exception_tb->tb_lineno;
     type_description_1 = "ooooo";
     goto try_except_handler_4;
     branch_end_1:;
@@ -1078,7 +1078,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_1_get_socket( struct Nu
     Py_INCREF( tmp_tuple_element_2 );
     PyTuple_SET_ITEM( tmp_args_name_1, 0, tmp_tuple_element_2 );
     tmp_kw_name_1 = PyDict_Copy( const_dict_d09868993ad28cfa57a0057a7f954ff8 );
-    frame_50d1a80be8f7e4652aff9d902575af82->m_frame.f_lineno = 21;
+    frame_ad2b88ed0de1a3d0c62094cc7151b39d->m_frame.f_lineno = 21;
     tmp_unused = CALL_FUNCTION( tmp_called_name_5, tmp_args_name_1, tmp_kw_name_1 );
     Py_DECREF( tmp_args_name_1 );
     Py_DECREF( tmp_kw_name_1 );
@@ -1133,7 +1133,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_1_get_socket( struct Nu
         goto frame_exception_exit_1;
     }
 
-    frame_50d1a80be8f7e4652aff9d902575af82->m_frame.f_lineno = 22;
+    frame_ad2b88ed0de1a3d0c62094cc7151b39d->m_frame.f_lineno = 22;
     {
         PyObject *call_args[] = { tmp_args_element_name_6 };
         tmp_return_value = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_6, call_args );
@@ -1153,7 +1153,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_1_get_socket( struct Nu
     goto frame_return_exit_1;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_50d1a80be8f7e4652aff9d902575af82 );
+    RESTORE_FRAME_EXCEPTION( frame_ad2b88ed0de1a3d0c62094cc7151b39d );
 #endif
 
     // Put the previous frame back on top.
@@ -1163,7 +1163,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_1_get_socket( struct Nu
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_50d1a80be8f7e4652aff9d902575af82 );
+    RESTORE_FRAME_EXCEPTION( frame_ad2b88ed0de1a3d0c62094cc7151b39d );
 #endif
 
     // Put the previous frame back on top.
@@ -1174,21 +1174,21 @@ static PyObject *impl_routeros_api$api_socket$$$function_1_get_socket( struct Nu
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_50d1a80be8f7e4652aff9d902575af82 );
+    RESTORE_FRAME_EXCEPTION( frame_ad2b88ed0de1a3d0c62094cc7151b39d );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_50d1a80be8f7e4652aff9d902575af82, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_ad2b88ed0de1a3d0c62094cc7151b39d, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_50d1a80be8f7e4652aff9d902575af82->m_frame )
+    else if ( exception_tb->tb_frame != &frame_ad2b88ed0de1a3d0c62094cc7151b39d->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_50d1a80be8f7e4652aff9d902575af82, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_ad2b88ed0de1a3d0c62094cc7151b39d, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_50d1a80be8f7e4652aff9d902575af82,
+        (struct Nuitka_FrameObject *)frame_ad2b88ed0de1a3d0c62094cc7151b39d,
         type_description_1,
         par_hostname,
         par_port,
@@ -1199,13 +1199,13 @@ static PyObject *impl_routeros_api$api_socket$$$function_1_get_socket( struct Nu
 
 
     // Release cached frame.
-    if ( frame_50d1a80be8f7e4652aff9d902575af82 == cache_frame_50d1a80be8f7e4652aff9d902575af82 )
+    if ( frame_ad2b88ed0de1a3d0c62094cc7151b39d == cache_frame_ad2b88ed0de1a3d0c62094cc7151b39d )
     {
-        Py_DECREF( frame_50d1a80be8f7e4652aff9d902575af82 );
+        Py_DECREF( frame_ad2b88ed0de1a3d0c62094cc7151b39d );
     }
-    cache_frame_50d1a80be8f7e4652aff9d902575af82 = NULL;
+    cache_frame_ad2b88ed0de1a3d0c62094cc7151b39d = NULL;
 
-    assertFrameObject( frame_50d1a80be8f7e4652aff9d902575af82 );
+    assertFrameObject( frame_ad2b88ed0de1a3d0c62094cc7151b39d );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -1339,23 +1339,23 @@ static PyObject *impl_routeros_api$api_socket$$$function_2_set_keepalive( struct
     PyObject *tmp_source_name_11;
     PyObject *tmp_source_name_12;
     NUITKA_MAY_BE_UNUSED PyObject *tmp_unused;
-    static struct Nuitka_FrameObject *cache_frame_a33d12582e9294ab5579502a5eca70ec = NULL;
+    static struct Nuitka_FrameObject *cache_frame_3e7b0ff02b78ee5dc494ae91de09b7e9 = NULL;
 
-    struct Nuitka_FrameObject *frame_a33d12582e9294ab5579502a5eca70ec;
+    struct Nuitka_FrameObject *frame_3e7b0ff02b78ee5dc494ae91de09b7e9;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_a33d12582e9294ab5579502a5eca70ec, codeobj_a33d12582e9294ab5579502a5eca70ec, module_routeros_api$api_socket, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *) );
-    frame_a33d12582e9294ab5579502a5eca70ec = cache_frame_a33d12582e9294ab5579502a5eca70ec;
+    MAKE_OR_REUSE_FRAME( cache_frame_3e7b0ff02b78ee5dc494ae91de09b7e9, codeobj_3e7b0ff02b78ee5dc494ae91de09b7e9, module_routeros_api$api_socket, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *) );
+    frame_3e7b0ff02b78ee5dc494ae91de09b7e9 = cache_frame_3e7b0ff02b78ee5dc494ae91de09b7e9;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_a33d12582e9294ab5579502a5eca70ec );
+    pushFrameStack( frame_3e7b0ff02b78ee5dc494ae91de09b7e9 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_a33d12582e9294ab5579502a5eca70ec ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_3e7b0ff02b78ee5dc494ae91de09b7e9 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_source_name_1 = par_sock;
@@ -1444,7 +1444,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_2_set_keepalive( struct
         goto frame_exception_exit_1;
     }
     tmp_args_element_name_3 = const_int_pos_1;
-    frame_a33d12582e9294ab5579502a5eca70ec->m_frame.f_lineno = 32;
+    frame_3e7b0ff02b78ee5dc494ae91de09b7e9->m_frame.f_lineno = 32;
     {
         PyObject *call_args[] = { tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3 };
         tmp_unused = CALL_FUNCTION_WITH_ARGS3( tmp_called_name_1, call_args );
@@ -1583,7 +1583,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_2_set_keepalive( struct
         goto frame_exception_exit_1;
     }
 
-    frame_a33d12582e9294ab5579502a5eca70ec->m_frame.f_lineno = 33;
+    frame_3e7b0ff02b78ee5dc494ae91de09b7e9->m_frame.f_lineno = 33;
     {
         PyObject *call_args[] = { tmp_args_element_name_4, tmp_args_element_name_5, tmp_args_element_name_6 };
         tmp_unused = CALL_FUNCTION_WITH_ARGS3( tmp_called_name_2, call_args );
@@ -1722,7 +1722,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_2_set_keepalive( struct
         goto frame_exception_exit_1;
     }
 
-    frame_a33d12582e9294ab5579502a5eca70ec->m_frame.f_lineno = 34;
+    frame_3e7b0ff02b78ee5dc494ae91de09b7e9->m_frame.f_lineno = 34;
     {
         PyObject *call_args[] = { tmp_args_element_name_7, tmp_args_element_name_8, tmp_args_element_name_9 };
         tmp_unused = CALL_FUNCTION_WITH_ARGS3( tmp_called_name_3, call_args );
@@ -1861,7 +1861,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_2_set_keepalive( struct
         goto frame_exception_exit_1;
     }
 
-    frame_a33d12582e9294ab5579502a5eca70ec->m_frame.f_lineno = 35;
+    frame_3e7b0ff02b78ee5dc494ae91de09b7e9->m_frame.f_lineno = 35;
     {
         PyObject *call_args[] = { tmp_args_element_name_10, tmp_args_element_name_11, tmp_args_element_name_12 };
         tmp_unused = CALL_FUNCTION_WITH_ARGS3( tmp_called_name_4, call_args );
@@ -1884,7 +1884,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_2_set_keepalive( struct
     Py_DECREF( tmp_unused );
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_a33d12582e9294ab5579502a5eca70ec );
+    RESTORE_FRAME_EXCEPTION( frame_3e7b0ff02b78ee5dc494ae91de09b7e9 );
 #endif
 
     // Put the previous frame back on top.
@@ -1895,21 +1895,21 @@ static PyObject *impl_routeros_api$api_socket$$$function_2_set_keepalive( struct
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_a33d12582e9294ab5579502a5eca70ec );
+    RESTORE_FRAME_EXCEPTION( frame_3e7b0ff02b78ee5dc494ae91de09b7e9 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_a33d12582e9294ab5579502a5eca70ec, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_3e7b0ff02b78ee5dc494ae91de09b7e9, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_a33d12582e9294ab5579502a5eca70ec->m_frame )
+    else if ( exception_tb->tb_frame != &frame_3e7b0ff02b78ee5dc494ae91de09b7e9->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_a33d12582e9294ab5579502a5eca70ec, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_3e7b0ff02b78ee5dc494ae91de09b7e9, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_a33d12582e9294ab5579502a5eca70ec,
+        (struct Nuitka_FrameObject *)frame_3e7b0ff02b78ee5dc494ae91de09b7e9,
         type_description_1,
         par_sock,
         par_after_idle_sec,
@@ -1919,13 +1919,13 @@ static PyObject *impl_routeros_api$api_socket$$$function_2_set_keepalive( struct
 
 
     // Release cached frame.
-    if ( frame_a33d12582e9294ab5579502a5eca70ec == cache_frame_a33d12582e9294ab5579502a5eca70ec )
+    if ( frame_3e7b0ff02b78ee5dc494ae91de09b7e9 == cache_frame_3e7b0ff02b78ee5dc494ae91de09b7e9 )
     {
-        Py_DECREF( frame_a33d12582e9294ab5579502a5eca70ec );
+        Py_DECREF( frame_3e7b0ff02b78ee5dc494ae91de09b7e9 );
     }
-    cache_frame_a33d12582e9294ab5579502a5eca70ec = NULL;
+    cache_frame_3e7b0ff02b78ee5dc494ae91de09b7e9 = NULL;
 
-    assertFrameObject( frame_a33d12582e9294ab5579502a5eca70ec );
+    assertFrameObject( frame_3e7b0ff02b78ee5dc494ae91de09b7e9 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -2127,23 +2127,23 @@ static PyObject *impl_routeros_api$api_socket$$$function_5___init__( struct Nuit
     PyObject *tmp_assattr_target_1;
     bool tmp_result;
     PyObject *tmp_return_value;
-    static struct Nuitka_FrameObject *cache_frame_50b3c85ffa114efc5ed7b203e77b4a9b = NULL;
+    static struct Nuitka_FrameObject *cache_frame_26565c414abc04a24f0d4f0feec2cae1 = NULL;
 
-    struct Nuitka_FrameObject *frame_50b3c85ffa114efc5ed7b203e77b4a9b;
+    struct Nuitka_FrameObject *frame_26565c414abc04a24f0d4f0feec2cae1;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_50b3c85ffa114efc5ed7b203e77b4a9b, codeobj_50b3c85ffa114efc5ed7b203e77b4a9b, module_routeros_api$api_socket, sizeof(void *)+sizeof(void *) );
-    frame_50b3c85ffa114efc5ed7b203e77b4a9b = cache_frame_50b3c85ffa114efc5ed7b203e77b4a9b;
+    MAKE_OR_REUSE_FRAME( cache_frame_26565c414abc04a24f0d4f0feec2cae1, codeobj_26565c414abc04a24f0d4f0feec2cae1, module_routeros_api$api_socket, sizeof(void *)+sizeof(void *) );
+    frame_26565c414abc04a24f0d4f0feec2cae1 = cache_frame_26565c414abc04a24f0d4f0feec2cae1;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_50b3c85ffa114efc5ed7b203e77b4a9b );
+    pushFrameStack( frame_26565c414abc04a24f0d4f0feec2cae1 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_50b3c85ffa114efc5ed7b203e77b4a9b ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_26565c414abc04a24f0d4f0feec2cae1 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_assattr_name_1 = par_socket;
@@ -2166,7 +2166,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_5___init__( struct Nuit
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_50b3c85ffa114efc5ed7b203e77b4a9b );
+    RESTORE_FRAME_EXCEPTION( frame_26565c414abc04a24f0d4f0feec2cae1 );
 #endif
 
     // Put the previous frame back on top.
@@ -2177,21 +2177,21 @@ static PyObject *impl_routeros_api$api_socket$$$function_5___init__( struct Nuit
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_50b3c85ffa114efc5ed7b203e77b4a9b );
+    RESTORE_FRAME_EXCEPTION( frame_26565c414abc04a24f0d4f0feec2cae1 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_50b3c85ffa114efc5ed7b203e77b4a9b, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_26565c414abc04a24f0d4f0feec2cae1, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_50b3c85ffa114efc5ed7b203e77b4a9b->m_frame )
+    else if ( exception_tb->tb_frame != &frame_26565c414abc04a24f0d4f0feec2cae1->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_50b3c85ffa114efc5ed7b203e77b4a9b, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_26565c414abc04a24f0d4f0feec2cae1, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_50b3c85ffa114efc5ed7b203e77b4a9b,
+        (struct Nuitka_FrameObject *)frame_26565c414abc04a24f0d4f0feec2cae1,
         type_description_1,
         par_self,
         par_socket
@@ -2199,13 +2199,13 @@ static PyObject *impl_routeros_api$api_socket$$$function_5___init__( struct Nuit
 
 
     // Release cached frame.
-    if ( frame_50b3c85ffa114efc5ed7b203e77b4a9b == cache_frame_50b3c85ffa114efc5ed7b203e77b4a9b )
+    if ( frame_26565c414abc04a24f0d4f0feec2cae1 == cache_frame_26565c414abc04a24f0d4f0feec2cae1 )
     {
-        Py_DECREF( frame_50b3c85ffa114efc5ed7b203e77b4a9b );
+        Py_DECREF( frame_26565c414abc04a24f0d4f0feec2cae1 );
     }
-    cache_frame_50b3c85ffa114efc5ed7b203e77b4a9b = NULL;
+    cache_frame_26565c414abc04a24f0d4f0feec2cae1 = NULL;
 
-    assertFrameObject( frame_50b3c85ffa114efc5ed7b203e77b4a9b );
+    assertFrameObject( frame_26565c414abc04a24f0d4f0feec2cae1 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -2297,23 +2297,23 @@ static PyObject *impl_routeros_api$api_socket$$$function_6_send( struct Nuitka_F
     PyObject *tmp_return_value;
     PyObject *tmp_source_name_1;
     PyObject *tmp_source_name_2;
-    static struct Nuitka_FrameObject *cache_frame_0d8a260deee45da2f534715855e42ed6 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_122c1a175c10b74ad03667cb5fa54da6 = NULL;
 
-    struct Nuitka_FrameObject *frame_0d8a260deee45da2f534715855e42ed6;
+    struct Nuitka_FrameObject *frame_122c1a175c10b74ad03667cb5fa54da6;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_0d8a260deee45da2f534715855e42ed6, codeobj_0d8a260deee45da2f534715855e42ed6, module_routeros_api$api_socket, sizeof(void *)+sizeof(void *) );
-    frame_0d8a260deee45da2f534715855e42ed6 = cache_frame_0d8a260deee45da2f534715855e42ed6;
+    MAKE_OR_REUSE_FRAME( cache_frame_122c1a175c10b74ad03667cb5fa54da6, codeobj_122c1a175c10b74ad03667cb5fa54da6, module_routeros_api$api_socket, sizeof(void *)+sizeof(void *) );
+    frame_122c1a175c10b74ad03667cb5fa54da6 = cache_frame_122c1a175c10b74ad03667cb5fa54da6;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_0d8a260deee45da2f534715855e42ed6 );
+    pushFrameStack( frame_122c1a175c10b74ad03667cb5fa54da6 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_0d8a260deee45da2f534715855e42ed6 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_122c1a175c10b74ad03667cb5fa54da6 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_source_name_2 = par_self;
@@ -2361,7 +2361,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_6_send( struct Nuitka_F
         goto frame_exception_exit_1;
     }
 
-    frame_0d8a260deee45da2f534715855e42ed6->m_frame.f_lineno = 51;
+    frame_122c1a175c10b74ad03667cb5fa54da6->m_frame.f_lineno = 51;
     {
         PyObject *call_args[] = { tmp_args_element_name_1 };
         tmp_return_value = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_1, call_args );
@@ -2382,7 +2382,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_6_send( struct Nuitka_F
     goto frame_return_exit_1;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_0d8a260deee45da2f534715855e42ed6 );
+    RESTORE_FRAME_EXCEPTION( frame_122c1a175c10b74ad03667cb5fa54da6 );
 #endif
 
     // Put the previous frame back on top.
@@ -2392,7 +2392,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_6_send( struct Nuitka_F
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_0d8a260deee45da2f534715855e42ed6 );
+    RESTORE_FRAME_EXCEPTION( frame_122c1a175c10b74ad03667cb5fa54da6 );
 #endif
 
     // Put the previous frame back on top.
@@ -2403,21 +2403,21 @@ static PyObject *impl_routeros_api$api_socket$$$function_6_send( struct Nuitka_F
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_0d8a260deee45da2f534715855e42ed6 );
+    RESTORE_FRAME_EXCEPTION( frame_122c1a175c10b74ad03667cb5fa54da6 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_0d8a260deee45da2f534715855e42ed6, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_122c1a175c10b74ad03667cb5fa54da6, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_0d8a260deee45da2f534715855e42ed6->m_frame )
+    else if ( exception_tb->tb_frame != &frame_122c1a175c10b74ad03667cb5fa54da6->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_0d8a260deee45da2f534715855e42ed6, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_122c1a175c10b74ad03667cb5fa54da6, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_0d8a260deee45da2f534715855e42ed6,
+        (struct Nuitka_FrameObject *)frame_122c1a175c10b74ad03667cb5fa54da6,
         type_description_1,
         par_self,
         par_bytes
@@ -2425,13 +2425,13 @@ static PyObject *impl_routeros_api$api_socket$$$function_6_send( struct Nuitka_F
 
 
     // Release cached frame.
-    if ( frame_0d8a260deee45da2f534715855e42ed6 == cache_frame_0d8a260deee45da2f534715855e42ed6 )
+    if ( frame_122c1a175c10b74ad03667cb5fa54da6 == cache_frame_122c1a175c10b74ad03667cb5fa54da6 )
     {
-        Py_DECREF( frame_0d8a260deee45da2f534715855e42ed6 );
+        Py_DECREF( frame_122c1a175c10b74ad03667cb5fa54da6 );
     }
-    cache_frame_0d8a260deee45da2f534715855e42ed6 = NULL;
+    cache_frame_122c1a175c10b74ad03667cb5fa54da6 = NULL;
 
-    assertFrameObject( frame_0d8a260deee45da2f534715855e42ed6 );
+    assertFrameObject( frame_122c1a175c10b74ad03667cb5fa54da6 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -2547,23 +2547,23 @@ static PyObject *impl_routeros_api$api_socket$$$function_7_receive( struct Nuitk
     PyObject *tmp_source_name_3;
     PyObject *tmp_subscribed_name_1;
     PyObject *tmp_subscript_name_1;
-    static struct Nuitka_FrameObject *cache_frame_de31f5acfe6e846b5d743853d284c07a = NULL;
+    static struct Nuitka_FrameObject *cache_frame_f07399c4659a940ac550efc79797b25d = NULL;
 
-    struct Nuitka_FrameObject *frame_de31f5acfe6e846b5d743853d284c07a;
+    struct Nuitka_FrameObject *frame_f07399c4659a940ac550efc79797b25d;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_de31f5acfe6e846b5d743853d284c07a, codeobj_de31f5acfe6e846b5d743853d284c07a, module_routeros_api$api_socket, sizeof(void *)+sizeof(void *)+sizeof(void *) );
-    frame_de31f5acfe6e846b5d743853d284c07a = cache_frame_de31f5acfe6e846b5d743853d284c07a;
+    MAKE_OR_REUSE_FRAME( cache_frame_f07399c4659a940ac550efc79797b25d, codeobj_f07399c4659a940ac550efc79797b25d, module_routeros_api$api_socket, sizeof(void *)+sizeof(void *)+sizeof(void *) );
+    frame_f07399c4659a940ac550efc79797b25d = cache_frame_f07399c4659a940ac550efc79797b25d;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_de31f5acfe6e846b5d743853d284c07a );
+    pushFrameStack( frame_f07399c4659a940ac550efc79797b25d );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_de31f5acfe6e846b5d743853d284c07a ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_f07399c4659a940ac550efc79797b25d ) == 2 ); // Frame stack
 
     // Framed code:
     loop_start_1:;
@@ -2600,7 +2600,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_7_receive( struct Nuitk
         goto try_except_handler_2;
     }
 
-    frame_de31f5acfe6e846b5d743853d284c07a->m_frame.f_lineno = 56;
+    frame_f07399c4659a940ac550efc79797b25d->m_frame.f_lineno = 56;
     {
         PyObject *call_args[] = { tmp_args_element_name_1 };
         tmp_return_value = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_1, call_args );
@@ -2643,11 +2643,11 @@ static PyObject *impl_routeros_api$api_socket$$$function_7_receive( struct Nuitk
 
     if ( exception_keeper_tb_1 == NULL )
     {
-        exception_keeper_tb_1 = MAKE_TRACEBACK( frame_de31f5acfe6e846b5d743853d284c07a, exception_keeper_lineno_1 );
+        exception_keeper_tb_1 = MAKE_TRACEBACK( frame_f07399c4659a940ac550efc79797b25d, exception_keeper_lineno_1 );
     }
     else if ( exception_keeper_lineno_1 != 0 )
     {
-        exception_keeper_tb_1 = ADD_TRACEBACK( exception_keeper_tb_1, frame_de31f5acfe6e846b5d743853d284c07a, exception_keeper_lineno_1 );
+        exception_keeper_tb_1 = ADD_TRACEBACK( exception_keeper_tb_1, frame_f07399c4659a940ac550efc79797b25d, exception_keeper_lineno_1 );
     }
 
     NORMALIZE_EXCEPTION( &exception_keeper_type_1, &exception_keeper_value_1, &exception_keeper_tb_1 );
@@ -2802,7 +2802,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_7_receive( struct Nuitk
         exception_lineno = 61;
     }
 
-    if (exception_tb && exception_tb->tb_frame == &frame_de31f5acfe6e846b5d743853d284c07a->m_frame) frame_de31f5acfe6e846b5d743853d284c07a->m_frame.f_lineno = exception_tb->tb_lineno;
+    if (exception_tb && exception_tb->tb_frame == &frame_f07399c4659a940ac550efc79797b25d->m_frame) frame_f07399c4659a940ac550efc79797b25d->m_frame.f_lineno = exception_tb->tb_lineno;
     type_description_1 = "ooo";
     goto try_except_handler_4;
     branch_end_2:;
@@ -2845,7 +2845,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_7_receive( struct Nuitk
         exception_lineno = 55;
     }
 
-    if (exception_tb && exception_tb->tb_frame == &frame_de31f5acfe6e846b5d743853d284c07a->m_frame) frame_de31f5acfe6e846b5d743853d284c07a->m_frame.f_lineno = exception_tb->tb_lineno;
+    if (exception_tb && exception_tb->tb_frame == &frame_f07399c4659a940ac550efc79797b25d->m_frame) frame_f07399c4659a940ac550efc79797b25d->m_frame.f_lineno = exception_tb->tb_lineno;
     type_description_1 = "ooo";
     goto try_except_handler_3;
     branch_end_1:;
@@ -2893,7 +2893,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_7_receive( struct Nuitk
     goto loop_start_1;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_de31f5acfe6e846b5d743853d284c07a );
+    RESTORE_FRAME_EXCEPTION( frame_f07399c4659a940ac550efc79797b25d );
 #endif
 
     // Put the previous frame back on top.
@@ -2903,7 +2903,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_7_receive( struct Nuitk
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_de31f5acfe6e846b5d743853d284c07a );
+    RESTORE_FRAME_EXCEPTION( frame_f07399c4659a940ac550efc79797b25d );
 #endif
 
     // Put the previous frame back on top.
@@ -2914,21 +2914,21 @@ static PyObject *impl_routeros_api$api_socket$$$function_7_receive( struct Nuitk
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_de31f5acfe6e846b5d743853d284c07a );
+    RESTORE_FRAME_EXCEPTION( frame_f07399c4659a940ac550efc79797b25d );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_de31f5acfe6e846b5d743853d284c07a, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_f07399c4659a940ac550efc79797b25d, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_de31f5acfe6e846b5d743853d284c07a->m_frame )
+    else if ( exception_tb->tb_frame != &frame_f07399c4659a940ac550efc79797b25d->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_de31f5acfe6e846b5d743853d284c07a, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_f07399c4659a940ac550efc79797b25d, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_de31f5acfe6e846b5d743853d284c07a,
+        (struct Nuitka_FrameObject *)frame_f07399c4659a940ac550efc79797b25d,
         type_description_1,
         par_self,
         par_length,
@@ -2937,13 +2937,13 @@ static PyObject *impl_routeros_api$api_socket$$$function_7_receive( struct Nuitk
 
 
     // Release cached frame.
-    if ( frame_de31f5acfe6e846b5d743853d284c07a == cache_frame_de31f5acfe6e846b5d743853d284c07a )
+    if ( frame_f07399c4659a940ac550efc79797b25d == cache_frame_f07399c4659a940ac550efc79797b25d )
     {
-        Py_DECREF( frame_de31f5acfe6e846b5d743853d284c07a );
+        Py_DECREF( frame_f07399c4659a940ac550efc79797b25d );
     }
-    cache_frame_de31f5acfe6e846b5d743853d284c07a = NULL;
+    cache_frame_f07399c4659a940ac550efc79797b25d = NULL;
 
-    assertFrameObject( frame_de31f5acfe6e846b5d743853d284c07a );
+    assertFrameObject( frame_f07399c4659a940ac550efc79797b25d );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -3044,23 +3044,23 @@ static PyObject *impl_routeros_api$api_socket$$$function_8__receive_and_check_co
     PyObject *tmp_source_name_1;
     PyObject *tmp_source_name_2;
     PyObject *tmp_source_name_3;
-    static struct Nuitka_FrameObject *cache_frame_7d295040c2fadb59c5911db82b1964b7 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_4104159f485fbb920a5c15118a949349 = NULL;
 
-    struct Nuitka_FrameObject *frame_7d295040c2fadb59c5911db82b1964b7;
+    struct Nuitka_FrameObject *frame_4104159f485fbb920a5c15118a949349;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_7d295040c2fadb59c5911db82b1964b7, codeobj_7d295040c2fadb59c5911db82b1964b7, module_routeros_api$api_socket, sizeof(void *)+sizeof(void *)+sizeof(void *) );
-    frame_7d295040c2fadb59c5911db82b1964b7 = cache_frame_7d295040c2fadb59c5911db82b1964b7;
+    MAKE_OR_REUSE_FRAME( cache_frame_4104159f485fbb920a5c15118a949349, codeobj_4104159f485fbb920a5c15118a949349, module_routeros_api$api_socket, sizeof(void *)+sizeof(void *)+sizeof(void *) );
+    frame_4104159f485fbb920a5c15118a949349 = cache_frame_4104159f485fbb920a5c15118a949349;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_7d295040c2fadb59c5911db82b1964b7 );
+    pushFrameStack( frame_4104159f485fbb920a5c15118a949349 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_7d295040c2fadb59c5911db82b1964b7 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_4104159f485fbb920a5c15118a949349 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_source_name_2 = par_self;
@@ -3108,7 +3108,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_8__receive_and_check_co
         goto frame_exception_exit_1;
     }
 
-    frame_7d295040c2fadb59c5911db82b1964b7->m_frame.f_lineno = 64;
+    frame_4104159f485fbb920a5c15118a949349->m_frame.f_lineno = 64;
     {
         PyObject *call_args[] = { tmp_args_element_name_1 };
         tmp_assign_source_1 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_1, call_args );
@@ -3202,7 +3202,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_8__receive_and_check_co
     branch_end_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_7d295040c2fadb59c5911db82b1964b7 );
+    RESTORE_FRAME_EXCEPTION( frame_4104159f485fbb920a5c15118a949349 );
 #endif
 
     // Put the previous frame back on top.
@@ -3212,7 +3212,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_8__receive_and_check_co
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_7d295040c2fadb59c5911db82b1964b7 );
+    RESTORE_FRAME_EXCEPTION( frame_4104159f485fbb920a5c15118a949349 );
 #endif
 
     // Put the previous frame back on top.
@@ -3223,21 +3223,21 @@ static PyObject *impl_routeros_api$api_socket$$$function_8__receive_and_check_co
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_7d295040c2fadb59c5911db82b1964b7 );
+    RESTORE_FRAME_EXCEPTION( frame_4104159f485fbb920a5c15118a949349 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_7d295040c2fadb59c5911db82b1964b7, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_4104159f485fbb920a5c15118a949349, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_7d295040c2fadb59c5911db82b1964b7->m_frame )
+    else if ( exception_tb->tb_frame != &frame_4104159f485fbb920a5c15118a949349->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_7d295040c2fadb59c5911db82b1964b7, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_4104159f485fbb920a5c15118a949349, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_7d295040c2fadb59c5911db82b1964b7,
+        (struct Nuitka_FrameObject *)frame_4104159f485fbb920a5c15118a949349,
         type_description_1,
         par_self,
         par_length,
@@ -3246,13 +3246,13 @@ static PyObject *impl_routeros_api$api_socket$$$function_8__receive_and_check_co
 
 
     // Release cached frame.
-    if ( frame_7d295040c2fadb59c5911db82b1964b7 == cache_frame_7d295040c2fadb59c5911db82b1964b7 )
+    if ( frame_4104159f485fbb920a5c15118a949349 == cache_frame_4104159f485fbb920a5c15118a949349 )
     {
-        Py_DECREF( frame_7d295040c2fadb59c5911db82b1964b7 );
+        Py_DECREF( frame_4104159f485fbb920a5c15118a949349 );
     }
-    cache_frame_7d295040c2fadb59c5911db82b1964b7 = NULL;
+    cache_frame_4104159f485fbb920a5c15118a949349 = NULL;
 
-    assertFrameObject( frame_7d295040c2fadb59c5911db82b1964b7 );
+    assertFrameObject( frame_4104159f485fbb920a5c15118a949349 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -3344,23 +3344,23 @@ static PyObject *impl_routeros_api$api_socket$$$function_9_close( struct Nuitka_
     PyObject *tmp_called_instance_1;
     PyObject *tmp_return_value;
     PyObject *tmp_source_name_1;
-    static struct Nuitka_FrameObject *cache_frame_bcc227191d6b797522d6e836f9190384 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_3180bdae5e84ca9940262b06172be4eb = NULL;
 
-    struct Nuitka_FrameObject *frame_bcc227191d6b797522d6e836f9190384;
+    struct Nuitka_FrameObject *frame_3180bdae5e84ca9940262b06172be4eb;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_bcc227191d6b797522d6e836f9190384, codeobj_bcc227191d6b797522d6e836f9190384, module_routeros_api$api_socket, sizeof(void *) );
-    frame_bcc227191d6b797522d6e836f9190384 = cache_frame_bcc227191d6b797522d6e836f9190384;
+    MAKE_OR_REUSE_FRAME( cache_frame_3180bdae5e84ca9940262b06172be4eb, codeobj_3180bdae5e84ca9940262b06172be4eb, module_routeros_api$api_socket, sizeof(void *) );
+    frame_3180bdae5e84ca9940262b06172be4eb = cache_frame_3180bdae5e84ca9940262b06172be4eb;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_bcc227191d6b797522d6e836f9190384 );
+    pushFrameStack( frame_3180bdae5e84ca9940262b06172be4eb );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_bcc227191d6b797522d6e836f9190384 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_3180bdae5e84ca9940262b06172be4eb ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_source_name_1 = par_self;
@@ -3378,7 +3378,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_9_close( struct Nuitka_
         type_description_1 = "o";
         goto frame_exception_exit_1;
     }
-    frame_bcc227191d6b797522d6e836f9190384->m_frame.f_lineno = 71;
+    frame_3180bdae5e84ca9940262b06172be4eb->m_frame.f_lineno = 71;
     tmp_return_value = CALL_METHOD_NO_ARGS( tmp_called_instance_1, const_str_plain_close );
     Py_DECREF( tmp_called_instance_1 );
     if ( tmp_return_value == NULL )
@@ -3395,7 +3395,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_9_close( struct Nuitka_
     goto frame_return_exit_1;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_bcc227191d6b797522d6e836f9190384 );
+    RESTORE_FRAME_EXCEPTION( frame_3180bdae5e84ca9940262b06172be4eb );
 #endif
 
     // Put the previous frame back on top.
@@ -3405,7 +3405,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_9_close( struct Nuitka_
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_bcc227191d6b797522d6e836f9190384 );
+    RESTORE_FRAME_EXCEPTION( frame_3180bdae5e84ca9940262b06172be4eb );
 #endif
 
     // Put the previous frame back on top.
@@ -3416,34 +3416,34 @@ static PyObject *impl_routeros_api$api_socket$$$function_9_close( struct Nuitka_
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_bcc227191d6b797522d6e836f9190384 );
+    RESTORE_FRAME_EXCEPTION( frame_3180bdae5e84ca9940262b06172be4eb );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_bcc227191d6b797522d6e836f9190384, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_3180bdae5e84ca9940262b06172be4eb, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_bcc227191d6b797522d6e836f9190384->m_frame )
+    else if ( exception_tb->tb_frame != &frame_3180bdae5e84ca9940262b06172be4eb->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_bcc227191d6b797522d6e836f9190384, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_3180bdae5e84ca9940262b06172be4eb, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_bcc227191d6b797522d6e836f9190384,
+        (struct Nuitka_FrameObject *)frame_3180bdae5e84ca9940262b06172be4eb,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame.
-    if ( frame_bcc227191d6b797522d6e836f9190384 == cache_frame_bcc227191d6b797522d6e836f9190384 )
+    if ( frame_3180bdae5e84ca9940262b06172be4eb == cache_frame_3180bdae5e84ca9940262b06172be4eb )
     {
-        Py_DECREF( frame_bcc227191d6b797522d6e836f9190384 );
+        Py_DECREF( frame_3180bdae5e84ca9940262b06172be4eb );
     }
-    cache_frame_bcc227191d6b797522d6e836f9190384 = NULL;
+    cache_frame_3180bdae5e84ca9940262b06172be4eb = NULL;
 
-    assertFrameObject( frame_bcc227191d6b797522d6e836f9190384 );
+    assertFrameObject( frame_3180bdae5e84ca9940262b06172be4eb );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -3527,23 +3527,23 @@ static PyObject *impl_routeros_api$api_socket$$$function_10_settimeout( struct N
     PyObject *tmp_source_name_1;
     PyObject *tmp_source_name_2;
     NUITKA_MAY_BE_UNUSED PyObject *tmp_unused;
-    static struct Nuitka_FrameObject *cache_frame_e4d155ae1e5fcfcb9b906935475345b0 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_20fb11d03baed2da7e5ab12bcb8cbb74 = NULL;
 
-    struct Nuitka_FrameObject *frame_e4d155ae1e5fcfcb9b906935475345b0;
+    struct Nuitka_FrameObject *frame_20fb11d03baed2da7e5ab12bcb8cbb74;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_e4d155ae1e5fcfcb9b906935475345b0, codeobj_e4d155ae1e5fcfcb9b906935475345b0, module_routeros_api$api_socket, sizeof(void *)+sizeof(void *) );
-    frame_e4d155ae1e5fcfcb9b906935475345b0 = cache_frame_e4d155ae1e5fcfcb9b906935475345b0;
+    MAKE_OR_REUSE_FRAME( cache_frame_20fb11d03baed2da7e5ab12bcb8cbb74, codeobj_20fb11d03baed2da7e5ab12bcb8cbb74, module_routeros_api$api_socket, sizeof(void *)+sizeof(void *) );
+    frame_20fb11d03baed2da7e5ab12bcb8cbb74 = cache_frame_20fb11d03baed2da7e5ab12bcb8cbb74;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_e4d155ae1e5fcfcb9b906935475345b0 );
+    pushFrameStack( frame_20fb11d03baed2da7e5ab12bcb8cbb74 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_e4d155ae1e5fcfcb9b906935475345b0 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_20fb11d03baed2da7e5ab12bcb8cbb74 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_source_name_2 = par_self;
@@ -3591,7 +3591,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_10_settimeout( struct N
         goto frame_exception_exit_1;
     }
 
-    frame_e4d155ae1e5fcfcb9b906935475345b0->m_frame.f_lineno = 74;
+    frame_20fb11d03baed2da7e5ab12bcb8cbb74->m_frame.f_lineno = 74;
     {
         PyObject *call_args[] = { tmp_args_element_name_1 };
         tmp_unused = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_1, call_args );
@@ -3612,7 +3612,7 @@ static PyObject *impl_routeros_api$api_socket$$$function_10_settimeout( struct N
     Py_DECREF( tmp_unused );
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_e4d155ae1e5fcfcb9b906935475345b0 );
+    RESTORE_FRAME_EXCEPTION( frame_20fb11d03baed2da7e5ab12bcb8cbb74 );
 #endif
 
     // Put the previous frame back on top.
@@ -3623,21 +3623,21 @@ static PyObject *impl_routeros_api$api_socket$$$function_10_settimeout( struct N
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_e4d155ae1e5fcfcb9b906935475345b0 );
+    RESTORE_FRAME_EXCEPTION( frame_20fb11d03baed2da7e5ab12bcb8cbb74 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_e4d155ae1e5fcfcb9b906935475345b0, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_20fb11d03baed2da7e5ab12bcb8cbb74, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_e4d155ae1e5fcfcb9b906935475345b0->m_frame )
+    else if ( exception_tb->tb_frame != &frame_20fb11d03baed2da7e5ab12bcb8cbb74->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_e4d155ae1e5fcfcb9b906935475345b0, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_20fb11d03baed2da7e5ab12bcb8cbb74, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_e4d155ae1e5fcfcb9b906935475345b0,
+        (struct Nuitka_FrameObject *)frame_20fb11d03baed2da7e5ab12bcb8cbb74,
         type_description_1,
         par_self,
         par_timeout
@@ -3645,13 +3645,13 @@ static PyObject *impl_routeros_api$api_socket$$$function_10_settimeout( struct N
 
 
     // Release cached frame.
-    if ( frame_e4d155ae1e5fcfcb9b906935475345b0 == cache_frame_e4d155ae1e5fcfcb9b906935475345b0 )
+    if ( frame_20fb11d03baed2da7e5ab12bcb8cbb74 == cache_frame_20fb11d03baed2da7e5ab12bcb8cbb74 )
     {
-        Py_DECREF( frame_e4d155ae1e5fcfcb9b906935475345b0 );
+        Py_DECREF( frame_20fb11d03baed2da7e5ab12bcb8cbb74 );
     }
-    cache_frame_e4d155ae1e5fcfcb9b906935475345b0 = NULL;
+    cache_frame_20fb11d03baed2da7e5ab12bcb8cbb74 = NULL;
 
-    assertFrameObject( frame_e4d155ae1e5fcfcb9b906935475345b0 );
+    assertFrameObject( frame_20fb11d03baed2da7e5ab12bcb8cbb74 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -3729,7 +3729,7 @@ static PyObject *MAKE_FUNCTION_routeros_api$api_socket$$$function_10_settimeout(
 #if PYTHON_VERSION >= 300
         const_str_digest_de537667d085cdaa176dc8102a492372,
 #endif
-        codeobj_e4d155ae1e5fcfcb9b906935475345b0,
+        codeobj_20fb11d03baed2da7e5ab12bcb8cbb74,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -3754,7 +3754,7 @@ static PyObject *MAKE_FUNCTION_routeros_api$api_socket$$$function_1_get_socket( 
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_50d1a80be8f7e4652aff9d902575af82,
+        codeobj_ad2b88ed0de1a3d0c62094cc7151b39d,
         defaults,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -3779,7 +3779,7 @@ static PyObject *MAKE_FUNCTION_routeros_api$api_socket$$$function_2_set_keepaliv
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_a33d12582e9294ab5579502a5eca70ec,
+        codeobj_3e7b0ff02b78ee5dc494ae91de09b7e9,
         defaults,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -3804,7 +3804,7 @@ static PyObject *MAKE_FUNCTION_routeros_api$api_socket$$$function_3_close(  )
 #if PYTHON_VERSION >= 300
         const_str_digest_0583b56ff0f4178f708ad26ca85169ac,
 #endif
-        codeobj_ace89feeca2b49619bfc1509bf03b48b,
+        codeobj_3a21dbdc369abbd0c03d3eb83ada9fbc,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -3829,7 +3829,7 @@ static PyObject *MAKE_FUNCTION_routeros_api$api_socket$$$function_4_settimeout( 
 #if PYTHON_VERSION >= 300
         const_str_digest_97f757f2b1e2acff4d9f610abf7d36ab,
 #endif
-        codeobj_64dd0d62a90da0000ac73d6d4b50fab3,
+        codeobj_4e43707d2b231ffaff766960ad705a1a,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -3854,7 +3854,7 @@ static PyObject *MAKE_FUNCTION_routeros_api$api_socket$$$function_5___init__(  )
 #if PYTHON_VERSION >= 300
         const_str_digest_dd04803c95abce21dd22daa3d3308ab7,
 #endif
-        codeobj_50b3c85ffa114efc5ed7b203e77b4a9b,
+        codeobj_26565c414abc04a24f0d4f0feec2cae1,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -3879,7 +3879,7 @@ static PyObject *MAKE_FUNCTION_routeros_api$api_socket$$$function_6_send(  )
 #if PYTHON_VERSION >= 300
         const_str_digest_13d2a8167c67618cdc6a7f2caced9371,
 #endif
-        codeobj_0d8a260deee45da2f534715855e42ed6,
+        codeobj_122c1a175c10b74ad03667cb5fa54da6,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -3904,7 +3904,7 @@ static PyObject *MAKE_FUNCTION_routeros_api$api_socket$$$function_7_receive(  )
 #if PYTHON_VERSION >= 300
         const_str_digest_e27dc222deb29014235116fa15ea71ab,
 #endif
-        codeobj_de31f5acfe6e846b5d743853d284c07a,
+        codeobj_f07399c4659a940ac550efc79797b25d,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -3929,7 +3929,7 @@ static PyObject *MAKE_FUNCTION_routeros_api$api_socket$$$function_8__receive_and
 #if PYTHON_VERSION >= 300
         const_str_digest_04266d6ad904761392c133298fb0f518,
 #endif
-        codeobj_7d295040c2fadb59c5911db82b1964b7,
+        codeobj_4104159f485fbb920a5c15118a949349,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -3954,7 +3954,7 @@ static PyObject *MAKE_FUNCTION_routeros_api$api_socket$$$function_9_close(  )
 #if PYTHON_VERSION >= 300
         const_str_digest_500d61df7a92689ad5670f5a7d9b1b27,
 #endif
-        codeobj_bcc227191d6b797522d6e836f9190384,
+        codeobj_3180bdae5e84ca9940262b06172be4eb,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -4344,15 +4344,15 @@ MOD_INIT_DECL( routeros_api$api_socket )
     PyObject *tmp_source_name_2;
     PyObject *tmp_tuple_element_1;
     PyObject *tmp_tuple_element_2;
-    static struct Nuitka_FrameObject *cache_frame_d5bebfc41ecf9d47bd54c05dcc868431_2 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_8bafb843ac0c1b1b68bc795ce25b24d3_2 = NULL;
 
-    struct Nuitka_FrameObject *frame_d5bebfc41ecf9d47bd54c05dcc868431_2;
+    struct Nuitka_FrameObject *frame_8bafb843ac0c1b1b68bc795ce25b24d3_2;
 
-    static struct Nuitka_FrameObject *cache_frame_d498ec2ba74217ac2f3dbd5a9bc6172c_3 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_754dfdbc6ae347c435c8f35b52d0a038_3 = NULL;
 
-    struct Nuitka_FrameObject *frame_d498ec2ba74217ac2f3dbd5a9bc6172c_3;
+    struct Nuitka_FrameObject *frame_754dfdbc6ae347c435c8f35b52d0a038_3;
 
-    struct Nuitka_FrameObject *frame_0368eab73dded74de2df0e0a354d8ac7;
+    struct Nuitka_FrameObject *frame_a85759ca15ea0b46cbefb240f27a8f85;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED char const *type_description_2 = NULL;
@@ -4365,17 +4365,17 @@ MOD_INIT_DECL( routeros_api$api_socket )
     // Module code.
     tmp_assign_source_1 = Py_None;
     UPDATE_STRING_DICT0( moduledict_routeros_api$api_socket, (Nuitka_StringObject *)const_str_plain___doc__, tmp_assign_source_1 );
-    tmp_assign_source_2 = const_str_digest_4fc35a017348a8f27aa43da30f29b28c;
+    tmp_assign_source_2 = module_filename_obj;
     UPDATE_STRING_DICT0( moduledict_routeros_api$api_socket, (Nuitka_StringObject *)const_str_plain___file__, tmp_assign_source_2 );
     tmp_assign_source_3 = Py_None;
     UPDATE_STRING_DICT0( moduledict_routeros_api$api_socket, (Nuitka_StringObject *)const_str_plain___cached__, tmp_assign_source_3 );
     // Frame without reuse.
-    frame_0368eab73dded74de2df0e0a354d8ac7 = MAKE_MODULE_FRAME( codeobj_0368eab73dded74de2df0e0a354d8ac7, module_routeros_api$api_socket );
+    frame_a85759ca15ea0b46cbefb240f27a8f85 = MAKE_MODULE_FRAME( codeobj_a85759ca15ea0b46cbefb240f27a8f85, module_routeros_api$api_socket );
 
     // Push the new frame as the currently active one, and we should be exclusively
     // owning it.
-    pushFrameStack( frame_0368eab73dded74de2df0e0a354d8ac7 );
-    assert( Py_REFCNT( frame_0368eab73dded74de2df0e0a354d8ac7 ) == 2 );
+    pushFrameStack( frame_a85759ca15ea0b46cbefb240f27a8f85 );
+    assert( Py_REFCNT( frame_a85759ca15ea0b46cbefb240f27a8f85 ) == 2 );
 
     // Framed code:
     tmp_name_name_1 = const_str_plain_socket;
@@ -4383,7 +4383,7 @@ MOD_INIT_DECL( routeros_api$api_socket )
     tmp_locals_name_1 = Py_None;
     tmp_fromlist_name_1 = Py_None;
     tmp_level_name_1 = const_int_0;
-    frame_0368eab73dded74de2df0e0a354d8ac7->m_frame.f_lineno = 1;
+    frame_a85759ca15ea0b46cbefb240f27a8f85->m_frame.f_lineno = 1;
     tmp_assign_source_4 = IMPORT_MODULE5( tmp_name_name_1, tmp_globals_name_1, tmp_locals_name_1, tmp_fromlist_name_1, tmp_level_name_1 );
     if ( tmp_assign_source_4 == NULL )
     {
@@ -4402,7 +4402,7 @@ MOD_INIT_DECL( routeros_api$api_socket )
     tmp_locals_name_2 = Py_None;
     tmp_fromlist_name_2 = const_tuple_str_plain_exceptions_tuple;
     tmp_level_name_2 = const_int_0;
-    frame_0368eab73dded74de2df0e0a354d8ac7->m_frame.f_lineno = 2;
+    frame_a85759ca15ea0b46cbefb240f27a8f85->m_frame.f_lineno = 2;
     tmp_import_name_from_1 = IMPORT_MODULE5( tmp_name_name_2, tmp_globals_name_2, tmp_locals_name_2, tmp_fromlist_name_2, tmp_level_name_2 );
     if ( tmp_import_name_from_1 == NULL )
     {
@@ -4434,7 +4434,7 @@ MOD_INIT_DECL( routeros_api$api_socket )
     tmp_locals_name_3 = Py_None;
     tmp_fromlist_name_3 = Py_None;
     tmp_level_name_3 = const_int_0;
-    frame_0368eab73dded74de2df0e0a354d8ac7->m_frame.f_lineno = 4;
+    frame_a85759ca15ea0b46cbefb240f27a8f85->m_frame.f_lineno = 4;
     tmp_assign_source_6 = IMPORT_MODULE5( tmp_name_name_3, tmp_globals_name_3, tmp_locals_name_3, tmp_fromlist_name_3, tmp_level_name_3 );
     assert( !(tmp_assign_source_6 == NULL) );
     UPDATE_STRING_DICT1( moduledict_routeros_api$api_socket, (Nuitka_StringObject *)const_str_plain_errno, tmp_assign_source_6 );
@@ -4650,7 +4650,7 @@ MOD_INIT_DECL( routeros_api$api_socket )
     tmp_kw_name_1 = tmp_class_creation_1__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_1 );
-    frame_0368eab73dded74de2df0e0a354d8ac7->m_frame.f_lineno = 38;
+    frame_a85759ca15ea0b46cbefb240f27a8f85->m_frame.f_lineno = 38;
     tmp_assign_source_12 = CALL_FUNCTION( tmp_called_name_1, tmp_args_name_1, tmp_kw_name_1 );
     Py_DECREF( tmp_called_name_1 );
     if ( tmp_assign_source_12 == NULL )
@@ -4704,14 +4704,14 @@ MOD_INIT_DECL( routeros_api$api_socket )
 
         goto try_except_handler_3;
     }
-    MAKE_OR_REUSE_FRAME( cache_frame_d5bebfc41ecf9d47bd54c05dcc868431_2, codeobj_d5bebfc41ecf9d47bd54c05dcc868431, module_routeros_api$api_socket, sizeof(void *) );
-    frame_d5bebfc41ecf9d47bd54c05dcc868431_2 = cache_frame_d5bebfc41ecf9d47bd54c05dcc868431_2;
+    MAKE_OR_REUSE_FRAME( cache_frame_8bafb843ac0c1b1b68bc795ce25b24d3_2, codeobj_8bafb843ac0c1b1b68bc795ce25b24d3, module_routeros_api$api_socket, sizeof(void *) );
+    frame_8bafb843ac0c1b1b68bc795ce25b24d3_2 = cache_frame_8bafb843ac0c1b1b68bc795ce25b24d3_2;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_d5bebfc41ecf9d47bd54c05dcc868431_2 );
+    pushFrameStack( frame_8bafb843ac0c1b1b68bc795ce25b24d3_2 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_d5bebfc41ecf9d47bd54c05dcc868431_2 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_8bafb843ac0c1b1b68bc795ce25b24d3_2 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_dictset_value = MAKE_FUNCTION_routeros_api$api_socket$$$function_3_close(  );
@@ -4744,7 +4744,7 @@ MOD_INIT_DECL( routeros_api$api_socket )
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_d5bebfc41ecf9d47bd54c05dcc868431_2 );
+    RESTORE_FRAME_EXCEPTION( frame_8bafb843ac0c1b1b68bc795ce25b24d3_2 );
 #endif
 
     // Put the previous frame back on top.
@@ -4755,34 +4755,34 @@ MOD_INIT_DECL( routeros_api$api_socket )
     frame_exception_exit_2:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_d5bebfc41ecf9d47bd54c05dcc868431_2 );
+    RESTORE_FRAME_EXCEPTION( frame_8bafb843ac0c1b1b68bc795ce25b24d3_2 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_d5bebfc41ecf9d47bd54c05dcc868431_2, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_8bafb843ac0c1b1b68bc795ce25b24d3_2, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_d5bebfc41ecf9d47bd54c05dcc868431_2->m_frame )
+    else if ( exception_tb->tb_frame != &frame_8bafb843ac0c1b1b68bc795ce25b24d3_2->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_d5bebfc41ecf9d47bd54c05dcc868431_2, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_8bafb843ac0c1b1b68bc795ce25b24d3_2, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_d5bebfc41ecf9d47bd54c05dcc868431_2,
+        (struct Nuitka_FrameObject *)frame_8bafb843ac0c1b1b68bc795ce25b24d3_2,
         type_description_2,
         NULL
     );
 
 
     // Release cached frame.
-    if ( frame_d5bebfc41ecf9d47bd54c05dcc868431_2 == cache_frame_d5bebfc41ecf9d47bd54c05dcc868431_2 )
+    if ( frame_8bafb843ac0c1b1b68bc795ce25b24d3_2 == cache_frame_8bafb843ac0c1b1b68bc795ce25b24d3_2 )
     {
-        Py_DECREF( frame_d5bebfc41ecf9d47bd54c05dcc868431_2 );
+        Py_DECREF( frame_8bafb843ac0c1b1b68bc795ce25b24d3_2 );
     }
-    cache_frame_d5bebfc41ecf9d47bd54c05dcc868431_2 = NULL;
+    cache_frame_8bafb843ac0c1b1b68bc795ce25b24d3_2 = NULL;
 
-    assertFrameObject( frame_d5bebfc41ecf9d47bd54c05dcc868431_2 );
+    assertFrameObject( frame_8bafb843ac0c1b1b68bc795ce25b24d3_2 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -4813,7 +4813,7 @@ MOD_INIT_DECL( routeros_api$api_socket )
     tmp_kw_name_2 = tmp_class_creation_1__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_2 );
-    frame_0368eab73dded74de2df0e0a354d8ac7->m_frame.f_lineno = 38;
+    frame_a85759ca15ea0b46cbefb240f27a8f85->m_frame.f_lineno = 38;
     tmp_assign_source_14 = CALL_FUNCTION( tmp_called_name_2, tmp_args_name_2, tmp_kw_name_2 );
     Py_DECREF( tmp_args_name_2 );
     if ( tmp_assign_source_14 == NULL )
@@ -5126,7 +5126,7 @@ MOD_INIT_DECL( routeros_api$api_socket )
     tmp_kw_name_3 = tmp_class_creation_2__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_3 );
-    frame_0368eab73dded74de2df0e0a354d8ac7->m_frame.f_lineno = 46;
+    frame_a85759ca15ea0b46cbefb240f27a8f85->m_frame.f_lineno = 46;
     tmp_assign_source_17 = CALL_FUNCTION( tmp_called_name_3, tmp_args_name_3, tmp_kw_name_3 );
     Py_DECREF( tmp_called_name_3 );
     if ( tmp_assign_source_17 == NULL )
@@ -5180,14 +5180,14 @@ MOD_INIT_DECL( routeros_api$api_socket )
 
         goto try_except_handler_6;
     }
-    MAKE_OR_REUSE_FRAME( cache_frame_d498ec2ba74217ac2f3dbd5a9bc6172c_3, codeobj_d498ec2ba74217ac2f3dbd5a9bc6172c, module_routeros_api$api_socket, sizeof(void *) );
-    frame_d498ec2ba74217ac2f3dbd5a9bc6172c_3 = cache_frame_d498ec2ba74217ac2f3dbd5a9bc6172c_3;
+    MAKE_OR_REUSE_FRAME( cache_frame_754dfdbc6ae347c435c8f35b52d0a038_3, codeobj_754dfdbc6ae347c435c8f35b52d0a038, module_routeros_api$api_socket, sizeof(void *) );
+    frame_754dfdbc6ae347c435c8f35b52d0a038_3 = cache_frame_754dfdbc6ae347c435c8f35b52d0a038_3;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_d498ec2ba74217ac2f3dbd5a9bc6172c_3 );
+    pushFrameStack( frame_754dfdbc6ae347c435c8f35b52d0a038_3 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_d498ec2ba74217ac2f3dbd5a9bc6172c_3 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_754dfdbc6ae347c435c8f35b52d0a038_3 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_dictset_value = MAKE_FUNCTION_routeros_api$api_socket$$$function_5___init__(  );
@@ -5276,7 +5276,7 @@ MOD_INIT_DECL( routeros_api$api_socket )
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_d498ec2ba74217ac2f3dbd5a9bc6172c_3 );
+    RESTORE_FRAME_EXCEPTION( frame_754dfdbc6ae347c435c8f35b52d0a038_3 );
 #endif
 
     // Put the previous frame back on top.
@@ -5287,34 +5287,34 @@ MOD_INIT_DECL( routeros_api$api_socket )
     frame_exception_exit_3:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_d498ec2ba74217ac2f3dbd5a9bc6172c_3 );
+    RESTORE_FRAME_EXCEPTION( frame_754dfdbc6ae347c435c8f35b52d0a038_3 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_d498ec2ba74217ac2f3dbd5a9bc6172c_3, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_754dfdbc6ae347c435c8f35b52d0a038_3, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_d498ec2ba74217ac2f3dbd5a9bc6172c_3->m_frame )
+    else if ( exception_tb->tb_frame != &frame_754dfdbc6ae347c435c8f35b52d0a038_3->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_d498ec2ba74217ac2f3dbd5a9bc6172c_3, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_754dfdbc6ae347c435c8f35b52d0a038_3, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_d498ec2ba74217ac2f3dbd5a9bc6172c_3,
+        (struct Nuitka_FrameObject *)frame_754dfdbc6ae347c435c8f35b52d0a038_3,
         type_description_2,
         NULL
     );
 
 
     // Release cached frame.
-    if ( frame_d498ec2ba74217ac2f3dbd5a9bc6172c_3 == cache_frame_d498ec2ba74217ac2f3dbd5a9bc6172c_3 )
+    if ( frame_754dfdbc6ae347c435c8f35b52d0a038_3 == cache_frame_754dfdbc6ae347c435c8f35b52d0a038_3 )
     {
-        Py_DECREF( frame_d498ec2ba74217ac2f3dbd5a9bc6172c_3 );
+        Py_DECREF( frame_754dfdbc6ae347c435c8f35b52d0a038_3 );
     }
-    cache_frame_d498ec2ba74217ac2f3dbd5a9bc6172c_3 = NULL;
+    cache_frame_754dfdbc6ae347c435c8f35b52d0a038_3 = NULL;
 
-    assertFrameObject( frame_d498ec2ba74217ac2f3dbd5a9bc6172c_3 );
+    assertFrameObject( frame_754dfdbc6ae347c435c8f35b52d0a038_3 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -5345,7 +5345,7 @@ MOD_INIT_DECL( routeros_api$api_socket )
     tmp_kw_name_4 = tmp_class_creation_2__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_4 );
-    frame_0368eab73dded74de2df0e0a354d8ac7->m_frame.f_lineno = 46;
+    frame_a85759ca15ea0b46cbefb240f27a8f85->m_frame.f_lineno = 46;
     tmp_assign_source_19 = CALL_FUNCTION( tmp_called_name_4, tmp_args_name_4, tmp_kw_name_4 );
     Py_DECREF( tmp_args_name_4 );
     if ( tmp_assign_source_19 == NULL )
@@ -5468,25 +5468,25 @@ MOD_INIT_DECL( routeros_api$api_socket )
 
     // Restore frame exception if necessary.
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_0368eab73dded74de2df0e0a354d8ac7 );
+    RESTORE_FRAME_EXCEPTION( frame_a85759ca15ea0b46cbefb240f27a8f85 );
 #endif
     popFrameStack();
 
-    assertFrameObject( frame_0368eab73dded74de2df0e0a354d8ac7 );
+    assertFrameObject( frame_a85759ca15ea0b46cbefb240f27a8f85 );
 
     goto frame_no_exception_3;
     frame_exception_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_0368eab73dded74de2df0e0a354d8ac7 );
+    RESTORE_FRAME_EXCEPTION( frame_a85759ca15ea0b46cbefb240f27a8f85 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_0368eab73dded74de2df0e0a354d8ac7, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_a85759ca15ea0b46cbefb240f27a8f85, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_0368eab73dded74de2df0e0a354d8ac7->m_frame )
+    else if ( exception_tb->tb_frame != &frame_a85759ca15ea0b46cbefb240f27a8f85->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_0368eab73dded74de2df0e0a354d8ac7, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_a85759ca15ea0b46cbefb240f27a8f85, exception_lineno );
     }
 
     // Put the previous frame back on top.

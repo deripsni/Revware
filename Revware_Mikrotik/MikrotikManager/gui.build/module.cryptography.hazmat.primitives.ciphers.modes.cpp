@@ -90,6 +90,7 @@ static PyObject *const_str_plain__check_iv_and_key_length;
 extern PyObject *const_str_plain_six;
 extern PyObject *const_tuple_str_plain_self_tuple;
 extern PyObject *const_str_plain_block_size;
+static PyObject *const_str_digest_bbb9ebe699e48d978dc1204a71e0d7b7;
 static PyObject *const_str_digest_660e0d4b5fcaff641982725568eda7c4;
 static PyObject *const_tuple_str_plain_CTR_tuple_type_object_tuple_tuple;
 static PyObject *const_tuple_int_pos_256_int_pos_512_tuple;
@@ -114,7 +115,6 @@ extern PyObject *const_int_0;
 static PyObject *const_str_digest_8d88271f851b302545477c36f4b258ba;
 static PyObject *const_str_digest_bb178a951985691561eabeee8701b224;
 extern PyObject *const_str_plain_ABCMeta;
-static PyObject *const_str_digest_5c917c925dd63941bd5b179f526a2c8b;
 static PyObject *const_str_digest_1c038025724e2955ffc6e208d42b3307;
 static PyObject *const_str_digest_ccd57a9d7f210bf9a1ab488d981ae4a2;
 extern PyObject *const_str_plain_XTS;
@@ -173,72 +173,72 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_fb140b39ebe884fa656bf93258c41911 = UNSTREAM_STRING( &constant_bin[ 155283 ], 30, 0 );
-    const_str_digest_f940c5503f4046e30aa00140e137e9cc = UNSTREAM_STRING( &constant_bin[ 155313 ], 35, 0 );
-    const_str_digest_cd69e318ffbc825cdfdec262cc900a88 = UNSTREAM_STRING( &constant_bin[ 155348 ], 61, 0 );
+    const_str_digest_fb140b39ebe884fa656bf93258c41911 = UNSTREAM_STRING( &constant_bin[ 150494 ], 30, 0 );
+    const_str_digest_f940c5503f4046e30aa00140e137e9cc = UNSTREAM_STRING( &constant_bin[ 150524 ], 35, 0 );
+    const_str_digest_cd69e318ffbc825cdfdec262cc900a88 = UNSTREAM_STRING( &constant_bin[ 150559 ], 61, 0 );
     const_tuple_str_plain_ModeWithTweak_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_ModeWithTweak_tuple_type_object_tuple_tuple, 0, const_str_plain_ModeWithTweak ); Py_INCREF( const_str_plain_ModeWithTweak );
     PyTuple_SET_ITEM( const_tuple_str_plain_ModeWithTweak_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
     const_tuple_str_plain__initialization_vector_tuple = PyTuple_New( 1 );
-    const_str_plain__initialization_vector = UNSTREAM_STRING( &constant_bin[ 155409 ], 22, 1 );
+    const_str_plain__initialization_vector = UNSTREAM_STRING( &constant_bin[ 150620 ], 22, 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain__initialization_vector_tuple, 0, const_str_plain__initialization_vector ); Py_INCREF( const_str_plain__initialization_vector );
     const_tuple_str_plain_GCM_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_GCM_tuple_type_object_tuple_tuple, 0, const_str_plain_GCM ); Py_INCREF( const_str_plain_GCM );
     PyTuple_SET_ITEM( const_tuple_str_plain_GCM_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
-    const_str_digest_0ffe80b254e46829960417693b2982bc = UNSTREAM_STRING( &constant_bin[ 155431 ], 12, 0 );
-    const_str_digest_7ed9df7c8177d7289752a5dc61130309 = UNSTREAM_STRING( &constant_bin[ 155443 ], 25, 0 );
-    const_str_plain__check_iv_length = UNSTREAM_STRING( &constant_bin[ 155468 ], 16, 1 );
-    const_str_digest_8841c86c66f42811f396044407fdea00 = UNSTREAM_STRING( &constant_bin[ 155484 ], 64, 0 );
+    const_str_digest_0ffe80b254e46829960417693b2982bc = UNSTREAM_STRING( &constant_bin[ 150642 ], 12, 0 );
+    const_str_digest_7ed9df7c8177d7289752a5dc61130309 = UNSTREAM_STRING( &constant_bin[ 150654 ], 25, 0 );
+    const_str_plain__check_iv_length = UNSTREAM_STRING( &constant_bin[ 150679 ], 16, 1 );
+    const_str_digest_8841c86c66f42811f396044407fdea00 = UNSTREAM_STRING( &constant_bin[ 150695 ], 64, 0 );
     const_tuple_str_plain_ModeWithAuthenticationTag_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_ModeWithAuthenticationTag_tuple_type_object_tuple_tuple, 0, const_str_plain_ModeWithAuthenticationTag ); Py_INCREF( const_str_plain_ModeWithAuthenticationTag );
     PyTuple_SET_ITEM( const_tuple_str_plain_ModeWithAuthenticationTag_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
-    const_str_digest_1fb896656a556642058d3d0f2aef8429 = UNSTREAM_STRING( &constant_bin[ 155548 ], 33, 0 );
-    const_str_digest_a0ffa16d6d1759a7dd0b89b28d4d2370 = UNSTREAM_STRING( &constant_bin[ 155581 ], 19, 0 );
-    const_int_pos_2305843009213693952 = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 155600 ], 15 );
+    const_str_digest_1fb896656a556642058d3d0f2aef8429 = UNSTREAM_STRING( &constant_bin[ 150759 ], 33, 0 );
+    const_str_digest_a0ffa16d6d1759a7dd0b89b28d4d2370 = UNSTREAM_STRING( &constant_bin[ 150792 ], 19, 0 );
+    const_int_pos_2305843009213693952 = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 150811 ], 15 );
     const_tuple_str_plain_self_str_plain_nonce_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_self_str_plain_nonce_tuple, 0, const_str_plain_self ); Py_INCREF( const_str_plain_self );
     PyTuple_SET_ITEM( const_tuple_str_plain_self_str_plain_nonce_tuple, 1, const_str_plain_nonce ); Py_INCREF( const_str_plain_nonce );
-    const_str_digest_c0051f1c84f03c63870fb6df14eab57a = UNSTREAM_STRING( &constant_bin[ 155615 ], 26, 0 );
-    const_str_digest_1e4e817262ac1657ad2803719e3d1d92 = UNSTREAM_STRING( &constant_bin[ 155641 ], 26, 0 );
-    const_str_digest_59ed1887c111f4de1576b64b74629e2f = UNSTREAM_STRING( &constant_bin[ 155667 ], 27, 0 );
-    const_str_digest_97b95ca94ff448f2fdcf07d90894988a = UNSTREAM_STRING( &constant_bin[ 155694 ], 53, 0 );
+    const_str_digest_c0051f1c84f03c63870fb6df14eab57a = UNSTREAM_STRING( &constant_bin[ 150826 ], 26, 0 );
+    const_str_digest_1e4e817262ac1657ad2803719e3d1d92 = UNSTREAM_STRING( &constant_bin[ 150852 ], 26, 0 );
+    const_str_digest_59ed1887c111f4de1576b64b74629e2f = UNSTREAM_STRING( &constant_bin[ 150878 ], 27, 0 );
+    const_str_digest_97b95ca94ff448f2fdcf07d90894988a = UNSTREAM_STRING( &constant_bin[ 150905 ], 53, 0 );
     const_tuple_0fcf11142599b1b17a2deb36b9487ecc_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_0fcf11142599b1b17a2deb36b9487ecc_tuple, 0, const_str_plain_ModeWithInitializationVector ); Py_INCREF( const_str_plain_ModeWithInitializationVector );
     PyTuple_SET_ITEM( const_tuple_0fcf11142599b1b17a2deb36b9487ecc_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
-    const_str_digest_5b8e8cd5cac009365b3640e73a17e51b = UNSTREAM_STRING( &constant_bin[ 155747 ], 27, 0 );
+    const_str_digest_5b8e8cd5cac009365b3640e73a17e51b = UNSTREAM_STRING( &constant_bin[ 150958 ], 27, 0 );
     const_tuple_str_plain__tweak_tuple = PyTuple_New( 1 );
-    const_str_plain__tweak = UNSTREAM_STRING( &constant_bin[ 155774 ], 6, 1 );
+    const_str_plain__tweak = UNSTREAM_STRING( &constant_bin[ 150985 ], 6, 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain__tweak_tuple, 0, const_str_plain__tweak ); Py_INCREF( const_str_plain__tweak );
-    const_str_digest_cb3a861bd2e574b09697bda6ccb42a1d = UNSTREAM_STRING( &constant_bin[ 155780 ], 9, 0 );
-    const_str_digest_294cd97bbac358075d4b7bb1ef71ed25 = UNSTREAM_STRING( &constant_bin[ 155789 ], 80, 0 );
-    const_str_plain__check_iv_and_key_length = UNSTREAM_STRING( &constant_bin[ 155869 ], 24, 1 );
-    const_str_digest_660e0d4b5fcaff641982725568eda7c4 = UNSTREAM_STRING( &constant_bin[ 155893 ], 64, 0 );
+    const_str_digest_cb3a861bd2e574b09697bda6ccb42a1d = UNSTREAM_STRING( &constant_bin[ 150991 ], 9, 0 );
+    const_str_digest_294cd97bbac358075d4b7bb1ef71ed25 = UNSTREAM_STRING( &constant_bin[ 151000 ], 80, 0 );
+    const_str_plain__check_iv_and_key_length = UNSTREAM_STRING( &constant_bin[ 151080 ], 24, 1 );
+    const_str_digest_bbb9ebe699e48d978dc1204a71e0d7b7 = UNSTREAM_STRING( &constant_bin[ 151104 ], 47, 0 );
+    const_str_digest_660e0d4b5fcaff641982725568eda7c4 = UNSTREAM_STRING( &constant_bin[ 151151 ], 64, 0 );
     const_tuple_str_plain_CTR_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_CTR_tuple_type_object_tuple_tuple, 0, const_str_plain_CTR ); Py_INCREF( const_str_plain_CTR );
     PyTuple_SET_ITEM( const_tuple_str_plain_CTR_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
     const_tuple_int_pos_256_int_pos_512_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_int_pos_256_int_pos_512_tuple, 0, const_int_pos_256 ); Py_INCREF( const_int_pos_256 );
     PyTuple_SET_ITEM( const_tuple_int_pos_256_int_pos_512_tuple, 1, const_int_pos_512 ); Py_INCREF( const_int_pos_512 );
-    const_str_digest_3fad997f68f5a17b4406de93bb15d6ae = UNSTREAM_STRING( &constant_bin[ 155957 ], 29, 0 );
-    const_str_digest_5020d9a5b89e034fd58f0961dca03421 = UNSTREAM_STRING( &constant_bin[ 155986 ], 113, 0 );
+    const_str_digest_3fad997f68f5a17b4406de93bb15d6ae = UNSTREAM_STRING( &constant_bin[ 151215 ], 29, 0 );
+    const_str_digest_5020d9a5b89e034fd58f0961dca03421 = UNSTREAM_STRING( &constant_bin[ 151244 ], 113, 0 );
     const_tuple_str_plain_CFB8_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_CFB8_tuple_type_object_tuple_tuple, 0, const_str_plain_CFB8 ); Py_INCREF( const_str_plain_CFB8 );
     PyTuple_SET_ITEM( const_tuple_str_plain_CFB8_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
-    const_str_digest_8d88271f851b302545477c36f4b258ba = UNSTREAM_STRING( &constant_bin[ 156099 ], 26, 0 );
-    const_str_digest_bb178a951985691561eabeee8701b224 = UNSTREAM_STRING( &constant_bin[ 156125 ], 33, 0 );
-    const_str_digest_5c917c925dd63941bd5b179f526a2c8b = UNSTREAM_STRING( &constant_bin[ 156158 ], 119, 0 );
-    const_str_digest_1c038025724e2955ffc6e208d42b3307 = UNSTREAM_STRING( &constant_bin[ 156277 ], 19, 0 );
-    const_str_digest_ccd57a9d7f210bf9a1ab488d981ae4a2 = UNSTREAM_STRING( &constant_bin[ 156296 ], 50, 0 );
+    const_str_digest_8d88271f851b302545477c36f4b258ba = UNSTREAM_STRING( &constant_bin[ 151357 ], 26, 0 );
+    const_str_digest_bb178a951985691561eabeee8701b224 = UNSTREAM_STRING( &constant_bin[ 151383 ], 33, 0 );
+    const_str_digest_1c038025724e2955ffc6e208d42b3307 = UNSTREAM_STRING( &constant_bin[ 151416 ], 19, 0 );
+    const_str_digest_ccd57a9d7f210bf9a1ab488d981ae4a2 = UNSTREAM_STRING( &constant_bin[ 151435 ], 50, 0 );
     const_tuple_6bd622b091616a1011697b4fa576725b_tuple = PyTuple_New( 4 );
     PyTuple_SET_ITEM( const_tuple_6bd622b091616a1011697b4fa576725b_tuple, 0, const_str_plain_self ); Py_INCREF( const_str_plain_self );
     PyTuple_SET_ITEM( const_tuple_6bd622b091616a1011697b4fa576725b_tuple, 1, const_str_plain_initialization_vector ); Py_INCREF( const_str_plain_initialization_vector );
     PyTuple_SET_ITEM( const_tuple_6bd622b091616a1011697b4fa576725b_tuple, 2, const_str_plain_tag ); Py_INCREF( const_str_plain_tag );
-    const_str_plain_min_tag_length = UNSTREAM_STRING( &constant_bin[ 155747 ], 14, 1 );
+    const_str_plain_min_tag_length = UNSTREAM_STRING( &constant_bin[ 150958 ], 14, 1 );
     PyTuple_SET_ITEM( const_tuple_6bd622b091616a1011697b4fa576725b_tuple, 3, const_str_plain_min_tag_length ); Py_INCREF( const_str_plain_min_tag_length );
-    const_str_digest_8ed5cda0f4d28df12a981196f62a1b42 = UNSTREAM_STRING( &constant_bin[ 156346 ], 64, 0 );
-    const_str_digest_1e04256fecf0917c14256fcdcf70e725 = UNSTREAM_STRING( &constant_bin[ 156410 ], 19, 0 );
-    const_str_digest_ca7e0f37eefb63f559dcf13aed7fe908 = UNSTREAM_STRING( &constant_bin[ 156429 ], 92, 0 );
-    const_str_digest_38fc79dfa6223032de52ab115724f2e4 = UNSTREAM_STRING( &constant_bin[ 156521 ], 80, 0 );
+    const_str_digest_8ed5cda0f4d28df12a981196f62a1b42 = UNSTREAM_STRING( &constant_bin[ 151485 ], 64, 0 );
+    const_str_digest_1e04256fecf0917c14256fcdcf70e725 = UNSTREAM_STRING( &constant_bin[ 151549 ], 19, 0 );
+    const_str_digest_ca7e0f37eefb63f559dcf13aed7fe908 = UNSTREAM_STRING( &constant_bin[ 151568 ], 92, 0 );
+    const_str_digest_38fc79dfa6223032de52ab115724f2e4 = UNSTREAM_STRING( &constant_bin[ 151660 ], 80, 0 );
     const_tuple_none_int_pos_16_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_none_int_pos_16_tuple, 0, Py_None ); Py_INCREF( Py_None );
     PyTuple_SET_ITEM( const_tuple_none_int_pos_16_tuple, 1, const_int_pos_16 ); Py_INCREF( const_int_pos_16 );
@@ -246,33 +246,33 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_str_plain_self_str_plain_initialization_vector_tuple, 0, const_str_plain_self ); Py_INCREF( const_str_plain_self );
     PyTuple_SET_ITEM( const_tuple_str_plain_self_str_plain_initialization_vector_tuple, 1, const_str_plain_initialization_vector ); Py_INCREF( const_str_plain_initialization_vector );
     const_tuple_str_plain_Mode_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
-    const_str_plain_Mode = UNSTREAM_STRING( &constant_bin[ 814 ], 4, 1 );
+    const_str_plain_Mode = UNSTREAM_STRING( &constant_bin[ 765 ], 4, 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain_Mode_tuple_type_object_tuple_tuple, 0, const_str_plain_Mode ); Py_INCREF( const_str_plain_Mode );
     PyTuple_SET_ITEM( const_tuple_str_plain_Mode_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
     const_tuple_str_plain_OFB_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_OFB_tuple_type_object_tuple_tuple, 0, const_str_plain_OFB ); Py_INCREF( const_str_plain_OFB );
     PyTuple_SET_ITEM( const_tuple_str_plain_OFB_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
-    const_int_pos_68719476704 = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 156601 ], 11 );
-    const_str_digest_4fd4de26e457e1f3606cdd6918745cf8 = UNSTREAM_STRING( &constant_bin[ 156612 ], 13, 0 );
-    const_str_digest_eaaef4929e558f8f2d9150675f4b135d = UNSTREAM_STRING( &constant_bin[ 156625 ], 45, 0 );
-    const_str_digest_d177ba8da2b422eebcc9b589e37b1116 = UNSTREAM_STRING( &constant_bin[ 152688 ], 12, 0 );
+    const_int_pos_68719476704 = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 151740 ], 11 );
+    const_str_digest_4fd4de26e457e1f3606cdd6918745cf8 = UNSTREAM_STRING( &constant_bin[ 151751 ], 13, 0 );
+    const_str_digest_eaaef4929e558f8f2d9150675f4b135d = UNSTREAM_STRING( &constant_bin[ 151764 ], 45, 0 );
+    const_str_digest_d177ba8da2b422eebcc9b589e37b1116 = UNSTREAM_STRING( &constant_bin[ 147997 ], 12, 0 );
     const_tuple_str_plain_self_str_plain_tweak_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_self_str_plain_tweak_tuple, 0, const_str_plain_self ); Py_INCREF( const_str_plain_self );
     PyTuple_SET_ITEM( const_tuple_str_plain_self_str_plain_tweak_tuple, 1, const_str_plain_tweak ); Py_INCREF( const_str_plain_tweak );
     const_tuple_str_plain_CBC_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_CBC_tuple_type_object_tuple_tuple, 0, const_str_plain_CBC ); Py_INCREF( const_str_plain_CBC );
     PyTuple_SET_ITEM( const_tuple_str_plain_CBC_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
-    const_str_digest_0ec97fd2b4ce8856215f2cc60777f7c3 = UNSTREAM_STRING( &constant_bin[ 156670 ], 12, 0 );
-    const_str_digest_05dad013241a53e01fef61673f847b5f = UNSTREAM_STRING( &constant_bin[ 156682 ], 12, 0 );
+    const_str_digest_0ec97fd2b4ce8856215f2cc60777f7c3 = UNSTREAM_STRING( &constant_bin[ 151809 ], 12, 0 );
+    const_str_digest_05dad013241a53e01fef61673f847b5f = UNSTREAM_STRING( &constant_bin[ 151821 ], 12, 0 );
     const_tuple_str_plain_ECB_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_ECB_tuple_type_object_tuple_tuple, 0, const_str_plain_ECB ); Py_INCREF( const_str_plain_ECB );
     PyTuple_SET_ITEM( const_tuple_str_plain_ECB_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
-    const_str_digest_eed5b8fd57efd6c0d3c87069fdb50b33 = UNSTREAM_STRING( &constant_bin[ 156694 ], 12, 0 );
+    const_str_digest_eed5b8fd57efd6c0d3c87069fdb50b33 = UNSTREAM_STRING( &constant_bin[ 151833 ], 12, 0 );
     const_tuple_str_plain_XTS_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_XTS_tuple_type_object_tuple_tuple, 0, const_str_plain_XTS ); Py_INCREF( const_str_plain_XTS );
     PyTuple_SET_ITEM( const_tuple_str_plain_XTS_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
-    const_str_plain__check_aes_key_length = UNSTREAM_STRING( &constant_bin[ 156706 ], 21, 1 );
-    const_str_digest_b8a4dfc5aca449b7019ec255a76dc967 = UNSTREAM_STRING( &constant_bin[ 156727 ], 12, 0 );
+    const_str_plain__check_aes_key_length = UNSTREAM_STRING( &constant_bin[ 151845 ], 21, 1 );
+    const_str_digest_b8a4dfc5aca449b7019ec255a76dc967 = UNSTREAM_STRING( &constant_bin[ 151866 ], 12, 0 );
     const_tuple_str_plain_ModeWithNonce_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_ModeWithNonce_tuple_type_object_tuple_tuple, 0, const_str_plain_ModeWithNonce ); Py_INCREF( const_str_plain_ModeWithNonce );
     PyTuple_SET_ITEM( const_tuple_str_plain_ModeWithNonce_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
@@ -294,76 +294,76 @@ void checkModuleConstants_cryptography$hazmat$primitives$ciphers$modes( void )
 #endif
 
 // The module code objects.
-static PyCodeObject *codeobj_146e507e6aedec759ceb49b390d0963e;
-static PyCodeObject *codeobj_fbca39c11864789c9b769698204a1690;
-static PyCodeObject *codeobj_b0ae00c808a9c3cf588f732539844b6c;
-static PyCodeObject *codeobj_0881da6341248daf8debda1261927749;
-static PyCodeObject *codeobj_8f96488898131ec8e9701a2fa0f808a7;
-static PyCodeObject *codeobj_2e9e9d5a4f1b2c3a3346e782555805fa;
-static PyCodeObject *codeobj_5b23aa3c9acb1459d56450d441ed5069;
-static PyCodeObject *codeobj_e31910404fe756736dad091eb1c9ca9e;
-static PyCodeObject *codeobj_23da3a35bcd77f7e68b28ca793631f21;
-static PyCodeObject *codeobj_076b71f8df14fa9582bb3cab4c4692cc;
-static PyCodeObject *codeobj_86b92aba49ec132fe460c805eadf6cd9;
-static PyCodeObject *codeobj_c7fec190a8c692e608cb00b407ec8785;
-static PyCodeObject *codeobj_e7a0d44dbec4f913eb5594acb1f42238;
-static PyCodeObject *codeobj_4b9bfec35ea3193c3c0cbf0291b29ccc;
-static PyCodeObject *codeobj_f2f0fdf3e82e8fdf351f1ee5991eada7;
-static PyCodeObject *codeobj_dc37898ae7e46381f6cc4c9564f9db62;
-static PyCodeObject *codeobj_b554cabce41da7c77e1e909dce176743;
-static PyCodeObject *codeobj_004bc8539c1cc9c29de085917ac05e4a;
-static PyCodeObject *codeobj_b3ec9860aaa25326a32d4587451521ba;
-static PyCodeObject *codeobj_6bede5b1003ee9296bd234abd19d7ce5;
-static PyCodeObject *codeobj_19ba22d56c24cc993e75d70ca91367ab;
-static PyCodeObject *codeobj_9bf418b0d1e64ce4166457b4984523b8;
-static PyCodeObject *codeobj_f04552c32d2e37e712956bff43332179;
-static PyCodeObject *codeobj_b612df059293fbf897a060610988e12f;
-static PyCodeObject *codeobj_67f04681718fd2b66eeb4940a166dd6a;
-static PyCodeObject *codeobj_fe2a5eed954b81e91ddde1a0517e2afa;
-static PyCodeObject *codeobj_4de799d0f022eca375bd5f6e4de1ded4;
-static PyCodeObject *codeobj_a54fe2a3e8448fd4cdd28ed170769a14;
-static PyCodeObject *codeobj_3ad887fc4ae9c2f55ca0fffb059c4b19;
-static PyCodeObject *codeobj_ba0fc0e5bc1bc57a725afb19e72e37cb;
-static PyCodeObject *codeobj_1867d5735c4dbf407c8c0c673ee906a7;
-static PyCodeObject *codeobj_761754bebcd5b127a73b0e11568b0246;
-static PyCodeObject *codeobj_4bc730f29f5a3b5d199591f08e569497;
+static PyCodeObject *codeobj_2104462709df03f06f426142bf59e6d6;
+static PyCodeObject *codeobj_aa7d8f7be119d381d591ead183b12952;
+static PyCodeObject *codeobj_ad9483fad53da6df67162fb1d9888574;
+static PyCodeObject *codeobj_194739e37fd03d85fc0e4d41f8282466;
+static PyCodeObject *codeobj_1b8cd968dd3f0c4a50481f98b9dc64a4;
+static PyCodeObject *codeobj_c24673f015ba85de211b38e82925360f;
+static PyCodeObject *codeobj_52244e10fce444b9594123e7db555138;
+static PyCodeObject *codeobj_8b74cfe2e3fbef7729e1f4d5ee0cf62b;
+static PyCodeObject *codeobj_ca2807f206b36b38cb1f1f7d6075eebd;
+static PyCodeObject *codeobj_efdaa0fbc9c9327b9ccf260be4338ac4;
+static PyCodeObject *codeobj_1bf73b9c9ee0f51ed6f3947a2af78d5b;
+static PyCodeObject *codeobj_e5f8d7b4692502733dff5c62f5b94a72;
+static PyCodeObject *codeobj_bd8f2ac531edbb5148020d58b36a75f2;
+static PyCodeObject *codeobj_a2303afd8d4ee0842153ff9386dabe6c;
+static PyCodeObject *codeobj_b9823f35a3abfe5d69e95d8dd0872868;
+static PyCodeObject *codeobj_e3e3c742c5ee123a80b002f807976ee4;
+static PyCodeObject *codeobj_8043cfdef9adcd5627fc8e881b3708d6;
+static PyCodeObject *codeobj_a3153edd1d5e92db2d131d6688a7f3e1;
+static PyCodeObject *codeobj_2b4a5d2bdd4a806596f5091253b6e719;
+static PyCodeObject *codeobj_a24cffe66b9df786db45709cbaaef91c;
+static PyCodeObject *codeobj_67713e55ec1e3e95274ec3c1dddffbb7;
+static PyCodeObject *codeobj_0fdda9669c9cf93bd6c647668050821b;
+static PyCodeObject *codeobj_d113e788f0ea33bb2e72befe81342d53;
+static PyCodeObject *codeobj_492a0133f07032f93246cc663c92f4f6;
+static PyCodeObject *codeobj_0ed2bdf3decafcba78ce0ce80264c0df;
+static PyCodeObject *codeobj_3f12d525d36c3eb2ccbdf21a82d0fa59;
+static PyCodeObject *codeobj_055d80db43ac8f2addb2e4b05fa4fc61;
+static PyCodeObject *codeobj_2bfae93c2119f3b75bd528ba7663b3f0;
+static PyCodeObject *codeobj_e216e3d0d5ca01482974694ddc4fad86;
+static PyCodeObject *codeobj_c3ae4caf8692866ce7fed4f7fedcd999;
+static PyCodeObject *codeobj_59ebb3fec16a6c5421a952b0d1b5bb3d;
+static PyCodeObject *codeobj_528a17cd64705208bb97cdb104dd905e;
+static PyCodeObject *codeobj_02f2bdb5171acf3fcf31035302a12966;
 
 static void createModuleCodeObjects(void)
 {
-    module_filename_obj = const_str_digest_5c917c925dd63941bd5b179f526a2c8b;
-    codeobj_146e507e6aedec759ceb49b390d0963e = MAKE_CODEOBJ( module_filename_obj, const_str_digest_97b95ca94ff448f2fdcf07d90894988a, 1, const_tuple_empty, 0, 0, CO_NOFREE );
-    codeobj_fbca39c11864789c9b769698204a1690 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_CBC, 87, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
-    codeobj_b0ae00c808a9c3cf588f732539844b6c = MAKE_CODEOBJ( module_filename_obj, const_str_plain_CFB, 148, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
-    codeobj_0881da6341248daf8debda1261927749 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_CFB8, 163, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
-    codeobj_8f96488898131ec8e9701a2fa0f808a7 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_CTR, 178, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
-    codeobj_2e9e9d5a4f1b2c3a3346e782555805fa = MAKE_CODEOBJ( module_filename_obj, const_str_plain_ECB, 125, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
-    codeobj_5b23aa3c9acb1459d56450d441ed5069 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_GCM, 200, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
-    codeobj_e31910404fe756736dad091eb1c9ca9e = MAKE_CODEOBJ( module_filename_obj, const_str_plain_Mode, 15, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
-    codeobj_23da3a35bcd77f7e68b28ca793631f21 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_ModeWithAuthenticationTag, 58, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
-    codeobj_076b71f8df14fa9582bb3cab4c4692cc = MAKE_CODEOBJ( module_filename_obj, const_str_plain_ModeWithInitializationVector, 31, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
-    codeobj_86b92aba49ec132fe460c805eadf6cd9 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_ModeWithNonce, 49, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
-    codeobj_c7fec190a8c692e608cb00b407ec8785 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_ModeWithTweak, 40, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
-    codeobj_e7a0d44dbec4f913eb5594acb1f42238 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_OFB, 133, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
-    codeobj_4b9bfec35ea3193c3c0cbf0291b29ccc = MAKE_CODEOBJ( module_filename_obj, const_str_plain_XTS, 102, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
-    codeobj_f2f0fdf3e82e8fdf351f1ee5991eada7 = MAKE_CODEOBJ( module_filename_obj, const_str_plain___init__, 90, const_tuple_str_plain_self_str_plain_initialization_vector_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_dc37898ae7e46381f6cc4c9564f9db62 = MAKE_CODEOBJ( module_filename_obj, const_str_plain___init__, 105, const_tuple_str_plain_self_str_plain_tweak_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_b554cabce41da7c77e1e909dce176743 = MAKE_CODEOBJ( module_filename_obj, const_str_plain___init__, 136, const_tuple_str_plain_self_str_plain_initialization_vector_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_004bc8539c1cc9c29de085917ac05e4a = MAKE_CODEOBJ( module_filename_obj, const_str_plain___init__, 151, const_tuple_str_plain_self_str_plain_initialization_vector_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_b3ec9860aaa25326a32d4587451521ba = MAKE_CODEOBJ( module_filename_obj, const_str_plain___init__, 166, const_tuple_str_plain_self_str_plain_initialization_vector_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_6bede5b1003ee9296bd234abd19d7ce5 = MAKE_CODEOBJ( module_filename_obj, const_str_plain___init__, 181, const_tuple_str_plain_self_str_plain_nonce_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_19ba22d56c24cc993e75d70ca91367ab = MAKE_CODEOBJ( module_filename_obj, const_str_plain___init__, 205, const_tuple_6bd622b091616a1011697b4fa576725b_tuple, 4, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_9bf418b0d1e64ce4166457b4984523b8 = MAKE_CODEOBJ( module_filename_obj, const_str_plain__check_aes_key_length, 66, const_tuple_str_plain_self_str_plain_algorithm_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_f04552c32d2e37e712956bff43332179 = MAKE_CODEOBJ( module_filename_obj, const_str_plain__check_iv_and_key_length, 80, const_tuple_str_plain_self_str_plain_algorithm_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_b612df059293fbf897a060610988e12f = MAKE_CODEOBJ( module_filename_obj, const_str_plain__check_iv_length, 73, const_tuple_str_plain_self_str_plain_algorithm_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_67f04681718fd2b66eeb4940a166dd6a = MAKE_CODEOBJ( module_filename_obj, const_str_plain_initialization_vector, 32, const_tuple_str_plain_self_tuple, 1, 0, CO_NOFREE );
-    codeobj_fe2a5eed954b81e91ddde1a0517e2afa = MAKE_CODEOBJ( module_filename_obj, const_str_plain_name, 16, const_tuple_str_plain_self_tuple, 1, 0, CO_NOFREE );
-    codeobj_4de799d0f022eca375bd5f6e4de1ded4 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_nonce, 50, const_tuple_str_plain_self_tuple, 1, 0, CO_NOFREE );
-    codeobj_a54fe2a3e8448fd4cdd28ed170769a14 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_tag, 59, const_tuple_str_plain_self_tuple, 1, 0, CO_NOFREE );
-    codeobj_3ad887fc4ae9c2f55ca0fffb059c4b19 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_tweak, 41, const_tuple_str_plain_self_tuple, 1, 0, CO_NOFREE );
-    codeobj_ba0fc0e5bc1bc57a725afb19e72e37cb = MAKE_CODEOBJ( module_filename_obj, const_str_plain_validate_for_algorithm, 22, const_tuple_str_plain_self_str_plain_algorithm_tuple, 2, 0, CO_NOFREE );
-    codeobj_1867d5735c4dbf407c8c0c673ee906a7 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_validate_for_algorithm, 116, const_tuple_str_plain_self_str_plain_algorithm_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_761754bebcd5b127a73b0e11568b0246 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_validate_for_algorithm, 189, const_tuple_str_plain_self_str_plain_algorithm_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_4bc730f29f5a3b5d199591f08e569497 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_validate_for_algorithm, 230, const_tuple_str_plain_self_str_plain_algorithm_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    module_filename_obj = MAKE_RELATIVE_PATH( const_str_digest_bbb9ebe699e48d978dc1204a71e0d7b7 );
+    codeobj_2104462709df03f06f426142bf59e6d6 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_97b95ca94ff448f2fdcf07d90894988a, 1, const_tuple_empty, 0, 0, CO_NOFREE );
+    codeobj_aa7d8f7be119d381d591ead183b12952 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_CBC, 87, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
+    codeobj_ad9483fad53da6df67162fb1d9888574 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_CFB, 148, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
+    codeobj_194739e37fd03d85fc0e4d41f8282466 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_CFB8, 163, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
+    codeobj_1b8cd968dd3f0c4a50481f98b9dc64a4 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_CTR, 178, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
+    codeobj_c24673f015ba85de211b38e82925360f = MAKE_CODEOBJ( module_filename_obj, const_str_plain_ECB, 125, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
+    codeobj_52244e10fce444b9594123e7db555138 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_GCM, 200, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
+    codeobj_8b74cfe2e3fbef7729e1f4d5ee0cf62b = MAKE_CODEOBJ( module_filename_obj, const_str_plain_Mode, 15, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
+    codeobj_ca2807f206b36b38cb1f1f7d6075eebd = MAKE_CODEOBJ( module_filename_obj, const_str_plain_ModeWithAuthenticationTag, 58, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
+    codeobj_efdaa0fbc9c9327b9ccf260be4338ac4 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_ModeWithInitializationVector, 31, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
+    codeobj_1bf73b9c9ee0f51ed6f3947a2af78d5b = MAKE_CODEOBJ( module_filename_obj, const_str_plain_ModeWithNonce, 49, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
+    codeobj_e5f8d7b4692502733dff5c62f5b94a72 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_ModeWithTweak, 40, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
+    codeobj_bd8f2ac531edbb5148020d58b36a75f2 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_OFB, 133, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
+    codeobj_a2303afd8d4ee0842153ff9386dabe6c = MAKE_CODEOBJ( module_filename_obj, const_str_plain_XTS, 102, const_tuple_str_plain___class___tuple, 0, 0, CO_NOFREE );
+    codeobj_b9823f35a3abfe5d69e95d8dd0872868 = MAKE_CODEOBJ( module_filename_obj, const_str_plain___init__, 90, const_tuple_str_plain_self_str_plain_initialization_vector_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_e3e3c742c5ee123a80b002f807976ee4 = MAKE_CODEOBJ( module_filename_obj, const_str_plain___init__, 105, const_tuple_str_plain_self_str_plain_tweak_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_8043cfdef9adcd5627fc8e881b3708d6 = MAKE_CODEOBJ( module_filename_obj, const_str_plain___init__, 136, const_tuple_str_plain_self_str_plain_initialization_vector_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_a3153edd1d5e92db2d131d6688a7f3e1 = MAKE_CODEOBJ( module_filename_obj, const_str_plain___init__, 151, const_tuple_str_plain_self_str_plain_initialization_vector_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_2b4a5d2bdd4a806596f5091253b6e719 = MAKE_CODEOBJ( module_filename_obj, const_str_plain___init__, 166, const_tuple_str_plain_self_str_plain_initialization_vector_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_a24cffe66b9df786db45709cbaaef91c = MAKE_CODEOBJ( module_filename_obj, const_str_plain___init__, 181, const_tuple_str_plain_self_str_plain_nonce_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_67713e55ec1e3e95274ec3c1dddffbb7 = MAKE_CODEOBJ( module_filename_obj, const_str_plain___init__, 205, const_tuple_6bd622b091616a1011697b4fa576725b_tuple, 4, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_0fdda9669c9cf93bd6c647668050821b = MAKE_CODEOBJ( module_filename_obj, const_str_plain__check_aes_key_length, 66, const_tuple_str_plain_self_str_plain_algorithm_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_d113e788f0ea33bb2e72befe81342d53 = MAKE_CODEOBJ( module_filename_obj, const_str_plain__check_iv_and_key_length, 80, const_tuple_str_plain_self_str_plain_algorithm_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_492a0133f07032f93246cc663c92f4f6 = MAKE_CODEOBJ( module_filename_obj, const_str_plain__check_iv_length, 73, const_tuple_str_plain_self_str_plain_algorithm_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_0ed2bdf3decafcba78ce0ce80264c0df = MAKE_CODEOBJ( module_filename_obj, const_str_plain_initialization_vector, 32, const_tuple_str_plain_self_tuple, 1, 0, CO_NOFREE );
+    codeobj_3f12d525d36c3eb2ccbdf21a82d0fa59 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_name, 16, const_tuple_str_plain_self_tuple, 1, 0, CO_NOFREE );
+    codeobj_055d80db43ac8f2addb2e4b05fa4fc61 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_nonce, 50, const_tuple_str_plain_self_tuple, 1, 0, CO_NOFREE );
+    codeobj_2bfae93c2119f3b75bd528ba7663b3f0 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_tag, 59, const_tuple_str_plain_self_tuple, 1, 0, CO_NOFREE );
+    codeobj_e216e3d0d5ca01482974694ddc4fad86 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_tweak, 41, const_tuple_str_plain_self_tuple, 1, 0, CO_NOFREE );
+    codeobj_c3ae4caf8692866ce7fed4f7fedcd999 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_validate_for_algorithm, 22, const_tuple_str_plain_self_str_plain_algorithm_tuple, 2, 0, CO_NOFREE );
+    codeobj_59ebb3fec16a6c5421a952b0d1b5bb3d = MAKE_CODEOBJ( module_filename_obj, const_str_plain_validate_for_algorithm, 116, const_tuple_str_plain_self_str_plain_algorithm_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_528a17cd64705208bb97cdb104dd905e = MAKE_CODEOBJ( module_filename_obj, const_str_plain_validate_for_algorithm, 189, const_tuple_str_plain_self_str_plain_algorithm_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_02f2bdb5171acf3fcf31035302a12966 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_validate_for_algorithm, 230, const_tuple_str_plain_self_str_plain_algorithm_tuple, 2, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
 }
 
 // The module function declarations.
@@ -740,23 +740,23 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_7_
     PyObject *tmp_return_value;
     PyObject *tmp_source_name_1;
     PyObject *tmp_source_name_2;
-    static struct Nuitka_FrameObject *cache_frame_9bf418b0d1e64ce4166457b4984523b8 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_0fdda9669c9cf93bd6c647668050821b = NULL;
 
-    struct Nuitka_FrameObject *frame_9bf418b0d1e64ce4166457b4984523b8;
+    struct Nuitka_FrameObject *frame_0fdda9669c9cf93bd6c647668050821b;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_9bf418b0d1e64ce4166457b4984523b8, codeobj_9bf418b0d1e64ce4166457b4984523b8, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
-    frame_9bf418b0d1e64ce4166457b4984523b8 = cache_frame_9bf418b0d1e64ce4166457b4984523b8;
+    MAKE_OR_REUSE_FRAME( cache_frame_0fdda9669c9cf93bd6c647668050821b, codeobj_0fdda9669c9cf93bd6c647668050821b, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
+    frame_0fdda9669c9cf93bd6c647668050821b = cache_frame_0fdda9669c9cf93bd6c647668050821b;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_9bf418b0d1e64ce4166457b4984523b8 );
+    pushFrameStack( frame_0fdda9669c9cf93bd6c647668050821b );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_9bf418b0d1e64ce4166457b4984523b8 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_0fdda9669c9cf93bd6c647668050821b ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_source_name_1 = par_algorithm;
@@ -881,7 +881,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_7_
     }
     branch_yes_1:;
     tmp_make_exception_arg_1 = const_str_digest_cd69e318ffbc825cdfdec262cc900a88;
-    frame_9bf418b0d1e64ce4166457b4984523b8->m_frame.f_lineno = 68;
+    frame_0fdda9669c9cf93bd6c647668050821b->m_frame.f_lineno = 68;
     {
         PyObject *call_args[] = { tmp_make_exception_arg_1 };
         tmp_raise_type_1 = CALL_FUNCTION_WITH_ARGS1( PyExc_ValueError, call_args );
@@ -896,7 +896,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_7_
     branch_no_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_9bf418b0d1e64ce4166457b4984523b8 );
+    RESTORE_FRAME_EXCEPTION( frame_0fdda9669c9cf93bd6c647668050821b );
 #endif
 
     // Put the previous frame back on top.
@@ -907,21 +907,21 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_7_
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_9bf418b0d1e64ce4166457b4984523b8 );
+    RESTORE_FRAME_EXCEPTION( frame_0fdda9669c9cf93bd6c647668050821b );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_9bf418b0d1e64ce4166457b4984523b8, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_0fdda9669c9cf93bd6c647668050821b, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_9bf418b0d1e64ce4166457b4984523b8->m_frame )
+    else if ( exception_tb->tb_frame != &frame_0fdda9669c9cf93bd6c647668050821b->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_9bf418b0d1e64ce4166457b4984523b8, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_0fdda9669c9cf93bd6c647668050821b, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_9bf418b0d1e64ce4166457b4984523b8,
+        (struct Nuitka_FrameObject *)frame_0fdda9669c9cf93bd6c647668050821b,
         type_description_1,
         par_self,
         par_algorithm
@@ -929,13 +929,13 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_7_
 
 
     // Release cached frame.
-    if ( frame_9bf418b0d1e64ce4166457b4984523b8 == cache_frame_9bf418b0d1e64ce4166457b4984523b8 )
+    if ( frame_0fdda9669c9cf93bd6c647668050821b == cache_frame_0fdda9669c9cf93bd6c647668050821b )
     {
-        Py_DECREF( frame_9bf418b0d1e64ce4166457b4984523b8 );
+        Py_DECREF( frame_0fdda9669c9cf93bd6c647668050821b );
     }
-    cache_frame_9bf418b0d1e64ce4166457b4984523b8 = NULL;
+    cache_frame_0fdda9669c9cf93bd6c647668050821b = NULL;
 
-    assertFrameObject( frame_9bf418b0d1e64ce4166457b4984523b8 );
+    assertFrameObject( frame_0fdda9669c9cf93bd6c647668050821b );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -1040,23 +1040,23 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_8_
     PyObject *tmp_source_name_3;
     PyObject *tmp_source_name_4;
     PyObject *tmp_source_name_5;
-    static struct Nuitka_FrameObject *cache_frame_b612df059293fbf897a060610988e12f = NULL;
+    static struct Nuitka_FrameObject *cache_frame_492a0133f07032f93246cc663c92f4f6 = NULL;
 
-    struct Nuitka_FrameObject *frame_b612df059293fbf897a060610988e12f;
+    struct Nuitka_FrameObject *frame_492a0133f07032f93246cc663c92f4f6;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_b612df059293fbf897a060610988e12f, codeobj_b612df059293fbf897a060610988e12f, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
-    frame_b612df059293fbf897a060610988e12f = cache_frame_b612df059293fbf897a060610988e12f;
+    MAKE_OR_REUSE_FRAME( cache_frame_492a0133f07032f93246cc663c92f4f6, codeobj_492a0133f07032f93246cc663c92f4f6, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
+    frame_492a0133f07032f93246cc663c92f4f6 = cache_frame_492a0133f07032f93246cc663c92f4f6;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_b612df059293fbf897a060610988e12f );
+    pushFrameStack( frame_492a0133f07032f93246cc663c92f4f6 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_b612df059293fbf897a060610988e12f ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_492a0133f07032f93246cc663c92f4f6 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_source_name_1 = par_self;
@@ -1229,7 +1229,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_8_
         type_description_1 = "oo";
         goto frame_exception_exit_1;
     }
-    frame_b612df059293fbf897a060610988e12f->m_frame.f_lineno = 75;
+    frame_492a0133f07032f93246cc663c92f4f6->m_frame.f_lineno = 75;
     {
         PyObject *call_args[] = { tmp_args_element_name_1, tmp_args_element_name_2 };
         tmp_make_exception_arg_1 = CALL_FUNCTION_WITH_ARGS2( tmp_called_name_1, call_args );
@@ -1249,7 +1249,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_8_
         type_description_1 = "oo";
         goto frame_exception_exit_1;
     }
-    frame_b612df059293fbf897a060610988e12f->m_frame.f_lineno = 75;
+    frame_492a0133f07032f93246cc663c92f4f6->m_frame.f_lineno = 75;
     {
         PyObject *call_args[] = { tmp_make_exception_arg_1 };
         tmp_raise_type_1 = CALL_FUNCTION_WITH_ARGS1( PyExc_ValueError, call_args );
@@ -1265,7 +1265,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_8_
     branch_no_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_b612df059293fbf897a060610988e12f );
+    RESTORE_FRAME_EXCEPTION( frame_492a0133f07032f93246cc663c92f4f6 );
 #endif
 
     // Put the previous frame back on top.
@@ -1276,21 +1276,21 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_8_
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_b612df059293fbf897a060610988e12f );
+    RESTORE_FRAME_EXCEPTION( frame_492a0133f07032f93246cc663c92f4f6 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_b612df059293fbf897a060610988e12f, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_492a0133f07032f93246cc663c92f4f6, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_b612df059293fbf897a060610988e12f->m_frame )
+    else if ( exception_tb->tb_frame != &frame_492a0133f07032f93246cc663c92f4f6->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_b612df059293fbf897a060610988e12f, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_492a0133f07032f93246cc663c92f4f6, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_b612df059293fbf897a060610988e12f,
+        (struct Nuitka_FrameObject *)frame_492a0133f07032f93246cc663c92f4f6,
         type_description_1,
         par_self,
         par_algorithm
@@ -1298,13 +1298,13 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_8_
 
 
     // Release cached frame.
-    if ( frame_b612df059293fbf897a060610988e12f == cache_frame_b612df059293fbf897a060610988e12f )
+    if ( frame_492a0133f07032f93246cc663c92f4f6 == cache_frame_492a0133f07032f93246cc663c92f4f6 )
     {
-        Py_DECREF( frame_b612df059293fbf897a060610988e12f );
+        Py_DECREF( frame_492a0133f07032f93246cc663c92f4f6 );
     }
-    cache_frame_b612df059293fbf897a060610988e12f = NULL;
+    cache_frame_492a0133f07032f93246cc663c92f4f6 = NULL;
 
-    assertFrameObject( frame_b612df059293fbf897a060610988e12f );
+    assertFrameObject( frame_492a0133f07032f93246cc663c92f4f6 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -1399,23 +1399,23 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_9_
     PyObject *tmp_called_name_2;
     PyObject *tmp_return_value;
     NUITKA_MAY_BE_UNUSED PyObject *tmp_unused;
-    static struct Nuitka_FrameObject *cache_frame_f04552c32d2e37e712956bff43332179 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_d113e788f0ea33bb2e72befe81342d53 = NULL;
 
-    struct Nuitka_FrameObject *frame_f04552c32d2e37e712956bff43332179;
+    struct Nuitka_FrameObject *frame_d113e788f0ea33bb2e72befe81342d53;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_f04552c32d2e37e712956bff43332179, codeobj_f04552c32d2e37e712956bff43332179, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
-    frame_f04552c32d2e37e712956bff43332179 = cache_frame_f04552c32d2e37e712956bff43332179;
+    MAKE_OR_REUSE_FRAME( cache_frame_d113e788f0ea33bb2e72befe81342d53, codeobj_d113e788f0ea33bb2e72befe81342d53, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
+    frame_d113e788f0ea33bb2e72befe81342d53 = cache_frame_d113e788f0ea33bb2e72befe81342d53;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_f04552c32d2e37e712956bff43332179 );
+    pushFrameStack( frame_d113e788f0ea33bb2e72befe81342d53 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_f04552c32d2e37e712956bff43332179 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_d113e788f0ea33bb2e72befe81342d53 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_called_name_1 = GET_STRING_DICT_VALUE( moduledict_cryptography$hazmat$primitives$ciphers$modes, (Nuitka_StringObject *)const_str_plain__check_aes_key_length );
@@ -1446,7 +1446,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_9_
     tmp_args_element_name_2 = par_algorithm;
 
     CHECK_OBJECT( tmp_args_element_name_2 );
-    frame_f04552c32d2e37e712956bff43332179->m_frame.f_lineno = 81;
+    frame_d113e788f0ea33bb2e72befe81342d53->m_frame.f_lineno = 81;
     {
         PyObject *call_args[] = { tmp_args_element_name_1, tmp_args_element_name_2 };
         tmp_unused = CALL_FUNCTION_WITH_ARGS2( tmp_called_name_1, call_args );
@@ -1520,7 +1520,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_9_
         goto frame_exception_exit_1;
     }
 
-    frame_f04552c32d2e37e712956bff43332179->m_frame.f_lineno = 82;
+    frame_d113e788f0ea33bb2e72befe81342d53->m_frame.f_lineno = 82;
     {
         PyObject *call_args[] = { tmp_args_element_name_3, tmp_args_element_name_4 };
         tmp_unused = CALL_FUNCTION_WITH_ARGS2( tmp_called_name_2, call_args );
@@ -1540,7 +1540,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_9_
     Py_DECREF( tmp_unused );
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_f04552c32d2e37e712956bff43332179 );
+    RESTORE_FRAME_EXCEPTION( frame_d113e788f0ea33bb2e72befe81342d53 );
 #endif
 
     // Put the previous frame back on top.
@@ -1551,21 +1551,21 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_9_
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_f04552c32d2e37e712956bff43332179 );
+    RESTORE_FRAME_EXCEPTION( frame_d113e788f0ea33bb2e72befe81342d53 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_f04552c32d2e37e712956bff43332179, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_d113e788f0ea33bb2e72befe81342d53, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_f04552c32d2e37e712956bff43332179->m_frame )
+    else if ( exception_tb->tb_frame != &frame_d113e788f0ea33bb2e72befe81342d53->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_f04552c32d2e37e712956bff43332179, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_d113e788f0ea33bb2e72befe81342d53, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_f04552c32d2e37e712956bff43332179,
+        (struct Nuitka_FrameObject *)frame_d113e788f0ea33bb2e72befe81342d53,
         type_description_1,
         par_self,
         par_algorithm
@@ -1573,13 +1573,13 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_9_
 
 
     // Release cached frame.
-    if ( frame_f04552c32d2e37e712956bff43332179 == cache_frame_f04552c32d2e37e712956bff43332179 )
+    if ( frame_d113e788f0ea33bb2e72befe81342d53 == cache_frame_d113e788f0ea33bb2e72befe81342d53 )
     {
-        Py_DECREF( frame_f04552c32d2e37e712956bff43332179 );
+        Py_DECREF( frame_d113e788f0ea33bb2e72befe81342d53 );
     }
-    cache_frame_f04552c32d2e37e712956bff43332179 = NULL;
+    cache_frame_d113e788f0ea33bb2e72befe81342d53 = NULL;
 
-    assertFrameObject( frame_f04552c32d2e37e712956bff43332179 );
+    assertFrameObject( frame_d113e788f0ea33bb2e72befe81342d53 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -1675,23 +1675,23 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_10
     int tmp_res;
     bool tmp_result;
     PyObject *tmp_return_value;
-    static struct Nuitka_FrameObject *cache_frame_f2f0fdf3e82e8fdf351f1ee5991eada7 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_b9823f35a3abfe5d69e95d8dd0872868 = NULL;
 
-    struct Nuitka_FrameObject *frame_f2f0fdf3e82e8fdf351f1ee5991eada7;
+    struct Nuitka_FrameObject *frame_b9823f35a3abfe5d69e95d8dd0872868;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_f2f0fdf3e82e8fdf351f1ee5991eada7, codeobj_f2f0fdf3e82e8fdf351f1ee5991eada7, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
-    frame_f2f0fdf3e82e8fdf351f1ee5991eada7 = cache_frame_f2f0fdf3e82e8fdf351f1ee5991eada7;
+    MAKE_OR_REUSE_FRAME( cache_frame_b9823f35a3abfe5d69e95d8dd0872868, codeobj_b9823f35a3abfe5d69e95d8dd0872868, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
+    frame_b9823f35a3abfe5d69e95d8dd0872868 = cache_frame_b9823f35a3abfe5d69e95d8dd0872868;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_f2f0fdf3e82e8fdf351f1ee5991eada7 );
+    pushFrameStack( frame_b9823f35a3abfe5d69e95d8dd0872868 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_f2f0fdf3e82e8fdf351f1ee5991eada7 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_b9823f35a3abfe5d69e95d8dd0872868 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_isinstance_inst_1 = par_initialization_vector;
@@ -1720,7 +1720,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_10
     }
     branch_yes_1:;
     tmp_make_exception_arg_1 = const_str_digest_f940c5503f4046e30aa00140e137e9cc;
-    frame_f2f0fdf3e82e8fdf351f1ee5991eada7->m_frame.f_lineno = 92;
+    frame_b9823f35a3abfe5d69e95d8dd0872868->m_frame.f_lineno = 92;
     {
         PyObject *call_args[] = { tmp_make_exception_arg_1 };
         tmp_raise_type_1 = CALL_FUNCTION_WITH_ARGS1( PyExc_TypeError, call_args );
@@ -1781,7 +1781,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_10
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_f2f0fdf3e82e8fdf351f1ee5991eada7 );
+    RESTORE_FRAME_EXCEPTION( frame_b9823f35a3abfe5d69e95d8dd0872868 );
 #endif
 
     // Put the previous frame back on top.
@@ -1792,21 +1792,21 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_10
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_f2f0fdf3e82e8fdf351f1ee5991eada7 );
+    RESTORE_FRAME_EXCEPTION( frame_b9823f35a3abfe5d69e95d8dd0872868 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_f2f0fdf3e82e8fdf351f1ee5991eada7, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_b9823f35a3abfe5d69e95d8dd0872868, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_f2f0fdf3e82e8fdf351f1ee5991eada7->m_frame )
+    else if ( exception_tb->tb_frame != &frame_b9823f35a3abfe5d69e95d8dd0872868->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_f2f0fdf3e82e8fdf351f1ee5991eada7, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_b9823f35a3abfe5d69e95d8dd0872868, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_f2f0fdf3e82e8fdf351f1ee5991eada7,
+        (struct Nuitka_FrameObject *)frame_b9823f35a3abfe5d69e95d8dd0872868,
         type_description_1,
         par_self,
         par_initialization_vector
@@ -1814,13 +1814,13 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_10
 
 
     // Release cached frame.
-    if ( frame_f2f0fdf3e82e8fdf351f1ee5991eada7 == cache_frame_f2f0fdf3e82e8fdf351f1ee5991eada7 )
+    if ( frame_b9823f35a3abfe5d69e95d8dd0872868 == cache_frame_b9823f35a3abfe5d69e95d8dd0872868 )
     {
-        Py_DECREF( frame_f2f0fdf3e82e8fdf351f1ee5991eada7 );
+        Py_DECREF( frame_b9823f35a3abfe5d69e95d8dd0872868 );
     }
-    cache_frame_f2f0fdf3e82e8fdf351f1ee5991eada7 = NULL;
+    cache_frame_b9823f35a3abfe5d69e95d8dd0872868 = NULL;
 
-    assertFrameObject( frame_f2f0fdf3e82e8fdf351f1ee5991eada7 );
+    assertFrameObject( frame_b9823f35a3abfe5d69e95d8dd0872868 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -1922,23 +1922,23 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_11
     int tmp_res;
     bool tmp_result;
     PyObject *tmp_return_value;
-    static struct Nuitka_FrameObject *cache_frame_dc37898ae7e46381f6cc4c9564f9db62 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_e3e3c742c5ee123a80b002f807976ee4 = NULL;
 
-    struct Nuitka_FrameObject *frame_dc37898ae7e46381f6cc4c9564f9db62;
+    struct Nuitka_FrameObject *frame_e3e3c742c5ee123a80b002f807976ee4;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_dc37898ae7e46381f6cc4c9564f9db62, codeobj_dc37898ae7e46381f6cc4c9564f9db62, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
-    frame_dc37898ae7e46381f6cc4c9564f9db62 = cache_frame_dc37898ae7e46381f6cc4c9564f9db62;
+    MAKE_OR_REUSE_FRAME( cache_frame_e3e3c742c5ee123a80b002f807976ee4, codeobj_e3e3c742c5ee123a80b002f807976ee4, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
+    frame_e3e3c742c5ee123a80b002f807976ee4 = cache_frame_e3e3c742c5ee123a80b002f807976ee4;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_dc37898ae7e46381f6cc4c9564f9db62 );
+    pushFrameStack( frame_e3e3c742c5ee123a80b002f807976ee4 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_dc37898ae7e46381f6cc4c9564f9db62 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_e3e3c742c5ee123a80b002f807976ee4 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_isinstance_inst_1 = par_tweak;
@@ -1967,7 +1967,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_11
     }
     branch_yes_1:;
     tmp_make_exception_arg_1 = const_str_digest_1c038025724e2955ffc6e208d42b3307;
-    frame_dc37898ae7e46381f6cc4c9564f9db62->m_frame.f_lineno = 107;
+    frame_e3e3c742c5ee123a80b002f807976ee4->m_frame.f_lineno = 107;
     {
         PyObject *call_args[] = { tmp_make_exception_arg_1 };
         tmp_raise_type_1 = CALL_FUNCTION_WITH_ARGS1( PyExc_TypeError, call_args );
@@ -2033,7 +2033,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_11
     }
     branch_yes_2:;
     tmp_make_exception_arg_2 = const_str_digest_1fb896656a556642058d3d0f2aef8429;
-    frame_dc37898ae7e46381f6cc4c9564f9db62->m_frame.f_lineno = 110;
+    frame_e3e3c742c5ee123a80b002f807976ee4->m_frame.f_lineno = 110;
     {
         PyObject *call_args[] = { tmp_make_exception_arg_2 };
         tmp_raise_type_2 = CALL_FUNCTION_WITH_ARGS1( PyExc_ValueError, call_args );
@@ -2094,7 +2094,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_11
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_dc37898ae7e46381f6cc4c9564f9db62 );
+    RESTORE_FRAME_EXCEPTION( frame_e3e3c742c5ee123a80b002f807976ee4 );
 #endif
 
     // Put the previous frame back on top.
@@ -2105,21 +2105,21 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_11
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_dc37898ae7e46381f6cc4c9564f9db62 );
+    RESTORE_FRAME_EXCEPTION( frame_e3e3c742c5ee123a80b002f807976ee4 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_dc37898ae7e46381f6cc4c9564f9db62, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_e3e3c742c5ee123a80b002f807976ee4, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_dc37898ae7e46381f6cc4c9564f9db62->m_frame )
+    else if ( exception_tb->tb_frame != &frame_e3e3c742c5ee123a80b002f807976ee4->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_dc37898ae7e46381f6cc4c9564f9db62, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_e3e3c742c5ee123a80b002f807976ee4, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_dc37898ae7e46381f6cc4c9564f9db62,
+        (struct Nuitka_FrameObject *)frame_e3e3c742c5ee123a80b002f807976ee4,
         type_description_1,
         par_self,
         par_tweak
@@ -2127,13 +2127,13 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_11
 
 
     // Release cached frame.
-    if ( frame_dc37898ae7e46381f6cc4c9564f9db62 == cache_frame_dc37898ae7e46381f6cc4c9564f9db62 )
+    if ( frame_e3e3c742c5ee123a80b002f807976ee4 == cache_frame_e3e3c742c5ee123a80b002f807976ee4 )
     {
-        Py_DECREF( frame_dc37898ae7e46381f6cc4c9564f9db62 );
+        Py_DECREF( frame_e3e3c742c5ee123a80b002f807976ee4 );
     }
-    cache_frame_dc37898ae7e46381f6cc4c9564f9db62 = NULL;
+    cache_frame_e3e3c742c5ee123a80b002f807976ee4 = NULL;
 
-    assertFrameObject( frame_dc37898ae7e46381f6cc4c9564f9db62 );
+    assertFrameObject( frame_e3e3c742c5ee123a80b002f807976ee4 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -2227,23 +2227,23 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_12
     PyObject *tmp_raise_type_1;
     PyObject *tmp_return_value;
     PyObject *tmp_source_name_1;
-    static struct Nuitka_FrameObject *cache_frame_1867d5735c4dbf407c8c0c673ee906a7 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_59ebb3fec16a6c5421a952b0d1b5bb3d = NULL;
 
-    struct Nuitka_FrameObject *frame_1867d5735c4dbf407c8c0c673ee906a7;
+    struct Nuitka_FrameObject *frame_59ebb3fec16a6c5421a952b0d1b5bb3d;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_1867d5735c4dbf407c8c0c673ee906a7, codeobj_1867d5735c4dbf407c8c0c673ee906a7, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
-    frame_1867d5735c4dbf407c8c0c673ee906a7 = cache_frame_1867d5735c4dbf407c8c0c673ee906a7;
+    MAKE_OR_REUSE_FRAME( cache_frame_59ebb3fec16a6c5421a952b0d1b5bb3d, codeobj_59ebb3fec16a6c5421a952b0d1b5bb3d, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
+    frame_59ebb3fec16a6c5421a952b0d1b5bb3d = cache_frame_59ebb3fec16a6c5421a952b0d1b5bb3d;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_1867d5735c4dbf407c8c0c673ee906a7 );
+    pushFrameStack( frame_59ebb3fec16a6c5421a952b0d1b5bb3d );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_1867d5735c4dbf407c8c0c673ee906a7 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_59ebb3fec16a6c5421a952b0d1b5bb3d ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_source_name_1 = par_algorithm;
@@ -2275,7 +2275,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_12
     }
     branch_yes_1:;
     tmp_make_exception_arg_1 = const_str_digest_ca7e0f37eefb63f559dcf13aed7fe908;
-    frame_1867d5735c4dbf407c8c0c673ee906a7->m_frame.f_lineno = 118;
+    frame_59ebb3fec16a6c5421a952b0d1b5bb3d->m_frame.f_lineno = 118;
     {
         PyObject *call_args[] = { tmp_make_exception_arg_1 };
         tmp_raise_type_1 = CALL_FUNCTION_WITH_ARGS1( PyExc_ValueError, call_args );
@@ -2290,7 +2290,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_12
     branch_no_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_1867d5735c4dbf407c8c0c673ee906a7 );
+    RESTORE_FRAME_EXCEPTION( frame_59ebb3fec16a6c5421a952b0d1b5bb3d );
 #endif
 
     // Put the previous frame back on top.
@@ -2301,21 +2301,21 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_12
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_1867d5735c4dbf407c8c0c673ee906a7 );
+    RESTORE_FRAME_EXCEPTION( frame_59ebb3fec16a6c5421a952b0d1b5bb3d );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_1867d5735c4dbf407c8c0c673ee906a7, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_59ebb3fec16a6c5421a952b0d1b5bb3d, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_1867d5735c4dbf407c8c0c673ee906a7->m_frame )
+    else if ( exception_tb->tb_frame != &frame_59ebb3fec16a6c5421a952b0d1b5bb3d->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_1867d5735c4dbf407c8c0c673ee906a7, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_59ebb3fec16a6c5421a952b0d1b5bb3d, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_1867d5735c4dbf407c8c0c673ee906a7,
+        (struct Nuitka_FrameObject *)frame_59ebb3fec16a6c5421a952b0d1b5bb3d,
         type_description_1,
         par_self,
         par_algorithm
@@ -2323,13 +2323,13 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_12
 
 
     // Release cached frame.
-    if ( frame_1867d5735c4dbf407c8c0c673ee906a7 == cache_frame_1867d5735c4dbf407c8c0c673ee906a7 )
+    if ( frame_59ebb3fec16a6c5421a952b0d1b5bb3d == cache_frame_59ebb3fec16a6c5421a952b0d1b5bb3d )
     {
-        Py_DECREF( frame_1867d5735c4dbf407c8c0c673ee906a7 );
+        Py_DECREF( frame_59ebb3fec16a6c5421a952b0d1b5bb3d );
     }
-    cache_frame_1867d5735c4dbf407c8c0c673ee906a7 = NULL;
+    cache_frame_59ebb3fec16a6c5421a952b0d1b5bb3d = NULL;
 
-    assertFrameObject( frame_1867d5735c4dbf407c8c0c673ee906a7 );
+    assertFrameObject( frame_59ebb3fec16a6c5421a952b0d1b5bb3d );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -2425,23 +2425,23 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_13
     int tmp_res;
     bool tmp_result;
     PyObject *tmp_return_value;
-    static struct Nuitka_FrameObject *cache_frame_b554cabce41da7c77e1e909dce176743 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_8043cfdef9adcd5627fc8e881b3708d6 = NULL;
 
-    struct Nuitka_FrameObject *frame_b554cabce41da7c77e1e909dce176743;
+    struct Nuitka_FrameObject *frame_8043cfdef9adcd5627fc8e881b3708d6;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_b554cabce41da7c77e1e909dce176743, codeobj_b554cabce41da7c77e1e909dce176743, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
-    frame_b554cabce41da7c77e1e909dce176743 = cache_frame_b554cabce41da7c77e1e909dce176743;
+    MAKE_OR_REUSE_FRAME( cache_frame_8043cfdef9adcd5627fc8e881b3708d6, codeobj_8043cfdef9adcd5627fc8e881b3708d6, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
+    frame_8043cfdef9adcd5627fc8e881b3708d6 = cache_frame_8043cfdef9adcd5627fc8e881b3708d6;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_b554cabce41da7c77e1e909dce176743 );
+    pushFrameStack( frame_8043cfdef9adcd5627fc8e881b3708d6 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_b554cabce41da7c77e1e909dce176743 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_8043cfdef9adcd5627fc8e881b3708d6 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_isinstance_inst_1 = par_initialization_vector;
@@ -2470,7 +2470,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_13
     }
     branch_yes_1:;
     tmp_make_exception_arg_1 = const_str_digest_f940c5503f4046e30aa00140e137e9cc;
-    frame_b554cabce41da7c77e1e909dce176743->m_frame.f_lineno = 138;
+    frame_8043cfdef9adcd5627fc8e881b3708d6->m_frame.f_lineno = 138;
     {
         PyObject *call_args[] = { tmp_make_exception_arg_1 };
         tmp_raise_type_1 = CALL_FUNCTION_WITH_ARGS1( PyExc_TypeError, call_args );
@@ -2531,7 +2531,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_13
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_b554cabce41da7c77e1e909dce176743 );
+    RESTORE_FRAME_EXCEPTION( frame_8043cfdef9adcd5627fc8e881b3708d6 );
 #endif
 
     // Put the previous frame back on top.
@@ -2542,21 +2542,21 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_13
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_b554cabce41da7c77e1e909dce176743 );
+    RESTORE_FRAME_EXCEPTION( frame_8043cfdef9adcd5627fc8e881b3708d6 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_b554cabce41da7c77e1e909dce176743, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_8043cfdef9adcd5627fc8e881b3708d6, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_b554cabce41da7c77e1e909dce176743->m_frame )
+    else if ( exception_tb->tb_frame != &frame_8043cfdef9adcd5627fc8e881b3708d6->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_b554cabce41da7c77e1e909dce176743, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_8043cfdef9adcd5627fc8e881b3708d6, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_b554cabce41da7c77e1e909dce176743,
+        (struct Nuitka_FrameObject *)frame_8043cfdef9adcd5627fc8e881b3708d6,
         type_description_1,
         par_self,
         par_initialization_vector
@@ -2564,13 +2564,13 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_13
 
 
     // Release cached frame.
-    if ( frame_b554cabce41da7c77e1e909dce176743 == cache_frame_b554cabce41da7c77e1e909dce176743 )
+    if ( frame_8043cfdef9adcd5627fc8e881b3708d6 == cache_frame_8043cfdef9adcd5627fc8e881b3708d6 )
     {
-        Py_DECREF( frame_b554cabce41da7c77e1e909dce176743 );
+        Py_DECREF( frame_8043cfdef9adcd5627fc8e881b3708d6 );
     }
-    cache_frame_b554cabce41da7c77e1e909dce176743 = NULL;
+    cache_frame_8043cfdef9adcd5627fc8e881b3708d6 = NULL;
 
-    assertFrameObject( frame_b554cabce41da7c77e1e909dce176743 );
+    assertFrameObject( frame_8043cfdef9adcd5627fc8e881b3708d6 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -2666,23 +2666,23 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_14
     int tmp_res;
     bool tmp_result;
     PyObject *tmp_return_value;
-    static struct Nuitka_FrameObject *cache_frame_004bc8539c1cc9c29de085917ac05e4a = NULL;
+    static struct Nuitka_FrameObject *cache_frame_a3153edd1d5e92db2d131d6688a7f3e1 = NULL;
 
-    struct Nuitka_FrameObject *frame_004bc8539c1cc9c29de085917ac05e4a;
+    struct Nuitka_FrameObject *frame_a3153edd1d5e92db2d131d6688a7f3e1;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_004bc8539c1cc9c29de085917ac05e4a, codeobj_004bc8539c1cc9c29de085917ac05e4a, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
-    frame_004bc8539c1cc9c29de085917ac05e4a = cache_frame_004bc8539c1cc9c29de085917ac05e4a;
+    MAKE_OR_REUSE_FRAME( cache_frame_a3153edd1d5e92db2d131d6688a7f3e1, codeobj_a3153edd1d5e92db2d131d6688a7f3e1, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
+    frame_a3153edd1d5e92db2d131d6688a7f3e1 = cache_frame_a3153edd1d5e92db2d131d6688a7f3e1;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_004bc8539c1cc9c29de085917ac05e4a );
+    pushFrameStack( frame_a3153edd1d5e92db2d131d6688a7f3e1 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_004bc8539c1cc9c29de085917ac05e4a ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_a3153edd1d5e92db2d131d6688a7f3e1 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_isinstance_inst_1 = par_initialization_vector;
@@ -2711,7 +2711,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_14
     }
     branch_yes_1:;
     tmp_make_exception_arg_1 = const_str_digest_f940c5503f4046e30aa00140e137e9cc;
-    frame_004bc8539c1cc9c29de085917ac05e4a->m_frame.f_lineno = 153;
+    frame_a3153edd1d5e92db2d131d6688a7f3e1->m_frame.f_lineno = 153;
     {
         PyObject *call_args[] = { tmp_make_exception_arg_1 };
         tmp_raise_type_1 = CALL_FUNCTION_WITH_ARGS1( PyExc_TypeError, call_args );
@@ -2772,7 +2772,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_14
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_004bc8539c1cc9c29de085917ac05e4a );
+    RESTORE_FRAME_EXCEPTION( frame_a3153edd1d5e92db2d131d6688a7f3e1 );
 #endif
 
     // Put the previous frame back on top.
@@ -2783,21 +2783,21 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_14
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_004bc8539c1cc9c29de085917ac05e4a );
+    RESTORE_FRAME_EXCEPTION( frame_a3153edd1d5e92db2d131d6688a7f3e1 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_004bc8539c1cc9c29de085917ac05e4a, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_a3153edd1d5e92db2d131d6688a7f3e1, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_004bc8539c1cc9c29de085917ac05e4a->m_frame )
+    else if ( exception_tb->tb_frame != &frame_a3153edd1d5e92db2d131d6688a7f3e1->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_004bc8539c1cc9c29de085917ac05e4a, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_a3153edd1d5e92db2d131d6688a7f3e1, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_004bc8539c1cc9c29de085917ac05e4a,
+        (struct Nuitka_FrameObject *)frame_a3153edd1d5e92db2d131d6688a7f3e1,
         type_description_1,
         par_self,
         par_initialization_vector
@@ -2805,13 +2805,13 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_14
 
 
     // Release cached frame.
-    if ( frame_004bc8539c1cc9c29de085917ac05e4a == cache_frame_004bc8539c1cc9c29de085917ac05e4a )
+    if ( frame_a3153edd1d5e92db2d131d6688a7f3e1 == cache_frame_a3153edd1d5e92db2d131d6688a7f3e1 )
     {
-        Py_DECREF( frame_004bc8539c1cc9c29de085917ac05e4a );
+        Py_DECREF( frame_a3153edd1d5e92db2d131d6688a7f3e1 );
     }
-    cache_frame_004bc8539c1cc9c29de085917ac05e4a = NULL;
+    cache_frame_a3153edd1d5e92db2d131d6688a7f3e1 = NULL;
 
-    assertFrameObject( frame_004bc8539c1cc9c29de085917ac05e4a );
+    assertFrameObject( frame_a3153edd1d5e92db2d131d6688a7f3e1 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -2907,23 +2907,23 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_15
     int tmp_res;
     bool tmp_result;
     PyObject *tmp_return_value;
-    static struct Nuitka_FrameObject *cache_frame_b3ec9860aaa25326a32d4587451521ba = NULL;
+    static struct Nuitka_FrameObject *cache_frame_2b4a5d2bdd4a806596f5091253b6e719 = NULL;
 
-    struct Nuitka_FrameObject *frame_b3ec9860aaa25326a32d4587451521ba;
+    struct Nuitka_FrameObject *frame_2b4a5d2bdd4a806596f5091253b6e719;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_b3ec9860aaa25326a32d4587451521ba, codeobj_b3ec9860aaa25326a32d4587451521ba, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
-    frame_b3ec9860aaa25326a32d4587451521ba = cache_frame_b3ec9860aaa25326a32d4587451521ba;
+    MAKE_OR_REUSE_FRAME( cache_frame_2b4a5d2bdd4a806596f5091253b6e719, codeobj_2b4a5d2bdd4a806596f5091253b6e719, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
+    frame_2b4a5d2bdd4a806596f5091253b6e719 = cache_frame_2b4a5d2bdd4a806596f5091253b6e719;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_b3ec9860aaa25326a32d4587451521ba );
+    pushFrameStack( frame_2b4a5d2bdd4a806596f5091253b6e719 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_b3ec9860aaa25326a32d4587451521ba ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_2b4a5d2bdd4a806596f5091253b6e719 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_isinstance_inst_1 = par_initialization_vector;
@@ -2952,7 +2952,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_15
     }
     branch_yes_1:;
     tmp_make_exception_arg_1 = const_str_digest_f940c5503f4046e30aa00140e137e9cc;
-    frame_b3ec9860aaa25326a32d4587451521ba->m_frame.f_lineno = 168;
+    frame_2b4a5d2bdd4a806596f5091253b6e719->m_frame.f_lineno = 168;
     {
         PyObject *call_args[] = { tmp_make_exception_arg_1 };
         tmp_raise_type_1 = CALL_FUNCTION_WITH_ARGS1( PyExc_TypeError, call_args );
@@ -3013,7 +3013,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_15
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_b3ec9860aaa25326a32d4587451521ba );
+    RESTORE_FRAME_EXCEPTION( frame_2b4a5d2bdd4a806596f5091253b6e719 );
 #endif
 
     // Put the previous frame back on top.
@@ -3024,21 +3024,21 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_15
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_b3ec9860aaa25326a32d4587451521ba );
+    RESTORE_FRAME_EXCEPTION( frame_2b4a5d2bdd4a806596f5091253b6e719 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_b3ec9860aaa25326a32d4587451521ba, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_2b4a5d2bdd4a806596f5091253b6e719, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_b3ec9860aaa25326a32d4587451521ba->m_frame )
+    else if ( exception_tb->tb_frame != &frame_2b4a5d2bdd4a806596f5091253b6e719->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_b3ec9860aaa25326a32d4587451521ba, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_2b4a5d2bdd4a806596f5091253b6e719, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_b3ec9860aaa25326a32d4587451521ba,
+        (struct Nuitka_FrameObject *)frame_2b4a5d2bdd4a806596f5091253b6e719,
         type_description_1,
         par_self,
         par_initialization_vector
@@ -3046,13 +3046,13 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_15
 
 
     // Release cached frame.
-    if ( frame_b3ec9860aaa25326a32d4587451521ba == cache_frame_b3ec9860aaa25326a32d4587451521ba )
+    if ( frame_2b4a5d2bdd4a806596f5091253b6e719 == cache_frame_2b4a5d2bdd4a806596f5091253b6e719 )
     {
-        Py_DECREF( frame_b3ec9860aaa25326a32d4587451521ba );
+        Py_DECREF( frame_2b4a5d2bdd4a806596f5091253b6e719 );
     }
-    cache_frame_b3ec9860aaa25326a32d4587451521ba = NULL;
+    cache_frame_2b4a5d2bdd4a806596f5091253b6e719 = NULL;
 
-    assertFrameObject( frame_b3ec9860aaa25326a32d4587451521ba );
+    assertFrameObject( frame_2b4a5d2bdd4a806596f5091253b6e719 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -3148,23 +3148,23 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_16
     int tmp_res;
     bool tmp_result;
     PyObject *tmp_return_value;
-    static struct Nuitka_FrameObject *cache_frame_6bede5b1003ee9296bd234abd19d7ce5 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_a24cffe66b9df786db45709cbaaef91c = NULL;
 
-    struct Nuitka_FrameObject *frame_6bede5b1003ee9296bd234abd19d7ce5;
+    struct Nuitka_FrameObject *frame_a24cffe66b9df786db45709cbaaef91c;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_6bede5b1003ee9296bd234abd19d7ce5, codeobj_6bede5b1003ee9296bd234abd19d7ce5, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
-    frame_6bede5b1003ee9296bd234abd19d7ce5 = cache_frame_6bede5b1003ee9296bd234abd19d7ce5;
+    MAKE_OR_REUSE_FRAME( cache_frame_a24cffe66b9df786db45709cbaaef91c, codeobj_a24cffe66b9df786db45709cbaaef91c, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
+    frame_a24cffe66b9df786db45709cbaaef91c = cache_frame_a24cffe66b9df786db45709cbaaef91c;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_6bede5b1003ee9296bd234abd19d7ce5 );
+    pushFrameStack( frame_a24cffe66b9df786db45709cbaaef91c );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_6bede5b1003ee9296bd234abd19d7ce5 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_a24cffe66b9df786db45709cbaaef91c ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_isinstance_inst_1 = par_nonce;
@@ -3193,7 +3193,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_16
     }
     branch_yes_1:;
     tmp_make_exception_arg_1 = const_str_digest_f37468dd5629ccacfbc304506e5ed113;
-    frame_6bede5b1003ee9296bd234abd19d7ce5->m_frame.f_lineno = 183;
+    frame_a24cffe66b9df786db45709cbaaef91c->m_frame.f_lineno = 183;
     {
         PyObject *call_args[] = { tmp_make_exception_arg_1 };
         tmp_raise_type_1 = CALL_FUNCTION_WITH_ARGS1( PyExc_TypeError, call_args );
@@ -3254,7 +3254,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_16
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_6bede5b1003ee9296bd234abd19d7ce5 );
+    RESTORE_FRAME_EXCEPTION( frame_a24cffe66b9df786db45709cbaaef91c );
 #endif
 
     // Put the previous frame back on top.
@@ -3265,21 +3265,21 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_16
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_6bede5b1003ee9296bd234abd19d7ce5 );
+    RESTORE_FRAME_EXCEPTION( frame_a24cffe66b9df786db45709cbaaef91c );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_6bede5b1003ee9296bd234abd19d7ce5, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_a24cffe66b9df786db45709cbaaef91c, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_6bede5b1003ee9296bd234abd19d7ce5->m_frame )
+    else if ( exception_tb->tb_frame != &frame_a24cffe66b9df786db45709cbaaef91c->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_6bede5b1003ee9296bd234abd19d7ce5, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_a24cffe66b9df786db45709cbaaef91c, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_6bede5b1003ee9296bd234abd19d7ce5,
+        (struct Nuitka_FrameObject *)frame_a24cffe66b9df786db45709cbaaef91c,
         type_description_1,
         par_self,
         par_nonce
@@ -3287,13 +3287,13 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_16
 
 
     // Release cached frame.
-    if ( frame_6bede5b1003ee9296bd234abd19d7ce5 == cache_frame_6bede5b1003ee9296bd234abd19d7ce5 )
+    if ( frame_a24cffe66b9df786db45709cbaaef91c == cache_frame_a24cffe66b9df786db45709cbaaef91c )
     {
-        Py_DECREF( frame_6bede5b1003ee9296bd234abd19d7ce5 );
+        Py_DECREF( frame_a24cffe66b9df786db45709cbaaef91c );
     }
-    cache_frame_6bede5b1003ee9296bd234abd19d7ce5 = NULL;
+    cache_frame_a24cffe66b9df786db45709cbaaef91c = NULL;
 
-    assertFrameObject( frame_6bede5b1003ee9296bd234abd19d7ce5 );
+    assertFrameObject( frame_a24cffe66b9df786db45709cbaaef91c );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -3402,23 +3402,23 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_17
     PyObject *tmp_source_name_4;
     PyObject *tmp_source_name_5;
     NUITKA_MAY_BE_UNUSED PyObject *tmp_unused;
-    static struct Nuitka_FrameObject *cache_frame_761754bebcd5b127a73b0e11568b0246 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_528a17cd64705208bb97cdb104dd905e = NULL;
 
-    struct Nuitka_FrameObject *frame_761754bebcd5b127a73b0e11568b0246;
+    struct Nuitka_FrameObject *frame_528a17cd64705208bb97cdb104dd905e;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_761754bebcd5b127a73b0e11568b0246, codeobj_761754bebcd5b127a73b0e11568b0246, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
-    frame_761754bebcd5b127a73b0e11568b0246 = cache_frame_761754bebcd5b127a73b0e11568b0246;
+    MAKE_OR_REUSE_FRAME( cache_frame_528a17cd64705208bb97cdb104dd905e, codeobj_528a17cd64705208bb97cdb104dd905e, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
+    frame_528a17cd64705208bb97cdb104dd905e = cache_frame_528a17cd64705208bb97cdb104dd905e;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_761754bebcd5b127a73b0e11568b0246 );
+    pushFrameStack( frame_528a17cd64705208bb97cdb104dd905e );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_761754bebcd5b127a73b0e11568b0246 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_528a17cd64705208bb97cdb104dd905e ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_called_name_1 = GET_STRING_DICT_VALUE( moduledict_cryptography$hazmat$primitives$ciphers$modes, (Nuitka_StringObject *)const_str_plain__check_aes_key_length );
@@ -3449,7 +3449,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_17
     tmp_args_element_name_2 = par_algorithm;
 
     CHECK_OBJECT( tmp_args_element_name_2 );
-    frame_761754bebcd5b127a73b0e11568b0246->m_frame.f_lineno = 190;
+    frame_528a17cd64705208bb97cdb104dd905e->m_frame.f_lineno = 190;
     {
         PyObject *call_args[] = { tmp_args_element_name_1, tmp_args_element_name_2 };
         tmp_unused = CALL_FUNCTION_WITH_ARGS2( tmp_called_name_1, call_args );
@@ -3651,7 +3651,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_17
         type_description_1 = "oo";
         goto frame_exception_exit_1;
     }
-    frame_761754bebcd5b127a73b0e11568b0246->m_frame.f_lineno = 192;
+    frame_528a17cd64705208bb97cdb104dd905e->m_frame.f_lineno = 192;
     {
         PyObject *call_args[] = { tmp_args_element_name_3, tmp_args_element_name_4 };
         tmp_make_exception_arg_1 = CALL_FUNCTION_WITH_ARGS2( tmp_called_name_2, call_args );
@@ -3671,7 +3671,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_17
         type_description_1 = "oo";
         goto frame_exception_exit_1;
     }
-    frame_761754bebcd5b127a73b0e11568b0246->m_frame.f_lineno = 192;
+    frame_528a17cd64705208bb97cdb104dd905e->m_frame.f_lineno = 192;
     {
         PyObject *call_args[] = { tmp_make_exception_arg_1 };
         tmp_raise_type_1 = CALL_FUNCTION_WITH_ARGS1( PyExc_ValueError, call_args );
@@ -3687,7 +3687,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_17
     branch_no_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_761754bebcd5b127a73b0e11568b0246 );
+    RESTORE_FRAME_EXCEPTION( frame_528a17cd64705208bb97cdb104dd905e );
 #endif
 
     // Put the previous frame back on top.
@@ -3698,21 +3698,21 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_17
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_761754bebcd5b127a73b0e11568b0246 );
+    RESTORE_FRAME_EXCEPTION( frame_528a17cd64705208bb97cdb104dd905e );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_761754bebcd5b127a73b0e11568b0246, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_528a17cd64705208bb97cdb104dd905e, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_761754bebcd5b127a73b0e11568b0246->m_frame )
+    else if ( exception_tb->tb_frame != &frame_528a17cd64705208bb97cdb104dd905e->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_761754bebcd5b127a73b0e11568b0246, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_528a17cd64705208bb97cdb104dd905e, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_761754bebcd5b127a73b0e11568b0246,
+        (struct Nuitka_FrameObject *)frame_528a17cd64705208bb97cdb104dd905e,
         type_description_1,
         par_self,
         par_algorithm
@@ -3720,13 +3720,13 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_17
 
 
     // Release cached frame.
-    if ( frame_761754bebcd5b127a73b0e11568b0246 == cache_frame_761754bebcd5b127a73b0e11568b0246 )
+    if ( frame_528a17cd64705208bb97cdb104dd905e == cache_frame_528a17cd64705208bb97cdb104dd905e )
     {
-        Py_DECREF( frame_761754bebcd5b127a73b0e11568b0246 );
+        Py_DECREF( frame_528a17cd64705208bb97cdb104dd905e );
     }
-    cache_frame_761754bebcd5b127a73b0e11568b0246 = NULL;
+    cache_frame_528a17cd64705208bb97cdb104dd905e = NULL;
 
-    assertFrameObject( frame_761754bebcd5b127a73b0e11568b0246 );
+    assertFrameObject( frame_528a17cd64705208bb97cdb104dd905e );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -3855,23 +3855,23 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_18
     bool tmp_result;
     PyObject *tmp_return_value;
     PyObject *tmp_source_name_1;
-    static struct Nuitka_FrameObject *cache_frame_19ba22d56c24cc993e75d70ca91367ab = NULL;
+    static struct Nuitka_FrameObject *cache_frame_67713e55ec1e3e95274ec3c1dddffbb7 = NULL;
 
-    struct Nuitka_FrameObject *frame_19ba22d56c24cc993e75d70ca91367ab;
+    struct Nuitka_FrameObject *frame_67713e55ec1e3e95274ec3c1dddffbb7;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_19ba22d56c24cc993e75d70ca91367ab, codeobj_19ba22d56c24cc993e75d70ca91367ab, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *) );
-    frame_19ba22d56c24cc993e75d70ca91367ab = cache_frame_19ba22d56c24cc993e75d70ca91367ab;
+    MAKE_OR_REUSE_FRAME( cache_frame_67713e55ec1e3e95274ec3c1dddffbb7, codeobj_67713e55ec1e3e95274ec3c1dddffbb7, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *) );
+    frame_67713e55ec1e3e95274ec3c1dddffbb7 = cache_frame_67713e55ec1e3e95274ec3c1dddffbb7;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_19ba22d56c24cc993e75d70ca91367ab );
+    pushFrameStack( frame_67713e55ec1e3e95274ec3c1dddffbb7 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_19ba22d56c24cc993e75d70ca91367ab ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_67713e55ec1e3e95274ec3c1dddffbb7 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_isinstance_inst_1 = par_initialization_vector;
@@ -3900,7 +3900,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_18
     }
     branch_yes_1:;
     tmp_make_exception_arg_1 = const_str_digest_f940c5503f4046e30aa00140e137e9cc;
-    frame_19ba22d56c24cc993e75d70ca91367ab->m_frame.f_lineno = 210;
+    frame_67713e55ec1e3e95274ec3c1dddffbb7->m_frame.f_lineno = 210;
     {
         PyObject *call_args[] = { tmp_make_exception_arg_1 };
         tmp_raise_type_1 = CALL_FUNCTION_WITH_ARGS1( PyExc_TypeError, call_args );
@@ -3966,7 +3966,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_18
     }
     branch_yes_2:;
     tmp_make_exception_arg_2 = const_str_digest_eaaef4929e558f8f2d9150675f4b135d;
-    frame_19ba22d56c24cc993e75d70ca91367ab->m_frame.f_lineno = 212;
+    frame_67713e55ec1e3e95274ec3c1dddffbb7->m_frame.f_lineno = 212;
     {
         PyObject *call_args[] = { tmp_make_exception_arg_2 };
         tmp_raise_type_2 = CALL_FUNCTION_WITH_ARGS1( PyExc_ValueError, call_args );
@@ -4093,7 +4093,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_18
     }
     branch_yes_4:;
     tmp_make_exception_arg_3 = const_str_digest_7ed9df7c8177d7289752a5dc61130309;
-    frame_19ba22d56c24cc993e75d70ca91367ab->m_frame.f_lineno = 216;
+    frame_67713e55ec1e3e95274ec3c1dddffbb7->m_frame.f_lineno = 216;
     {
         PyObject *call_args[] = { tmp_make_exception_arg_3 };
         tmp_raise_type_3 = CALL_FUNCTION_WITH_ARGS1( PyExc_TypeError, call_args );
@@ -4146,7 +4146,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_18
     }
     branch_yes_5:;
     tmp_make_exception_arg_4 = const_str_digest_5b8e8cd5cac009365b3640e73a17e51b;
-    frame_19ba22d56c24cc993e75d70ca91367ab->m_frame.f_lineno = 218;
+    frame_67713e55ec1e3e95274ec3c1dddffbb7->m_frame.f_lineno = 218;
     {
         PyObject *call_args[] = { tmp_make_exception_arg_4 };
         tmp_raise_type_4 = CALL_FUNCTION_WITH_ARGS1( PyExc_ValueError, call_args );
@@ -4247,7 +4247,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_18
         goto frame_exception_exit_1;
     }
 
-    frame_19ba22d56c24cc993e75d70ca91367ab->m_frame.f_lineno = 221;
+    frame_67713e55ec1e3e95274ec3c1dddffbb7->m_frame.f_lineno = 221;
     {
         PyObject *call_args[] = { tmp_args_element_name_1 };
         tmp_make_exception_arg_5 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_1, call_args );
@@ -4265,7 +4265,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_18
         type_description_1 = "oooo";
         goto frame_exception_exit_1;
     }
-    frame_19ba22d56c24cc993e75d70ca91367ab->m_frame.f_lineno = 220;
+    frame_67713e55ec1e3e95274ec3c1dddffbb7->m_frame.f_lineno = 220;
     {
         PyObject *call_args[] = { tmp_make_exception_arg_5 };
         tmp_raise_type_5 = CALL_FUNCTION_WITH_ARGS1( PyExc_ValueError, call_args );
@@ -4374,7 +4374,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_18
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_19ba22d56c24cc993e75d70ca91367ab );
+    RESTORE_FRAME_EXCEPTION( frame_67713e55ec1e3e95274ec3c1dddffbb7 );
 #endif
 
     // Put the previous frame back on top.
@@ -4385,21 +4385,21 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_18
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_19ba22d56c24cc993e75d70ca91367ab );
+    RESTORE_FRAME_EXCEPTION( frame_67713e55ec1e3e95274ec3c1dddffbb7 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_19ba22d56c24cc993e75d70ca91367ab, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_67713e55ec1e3e95274ec3c1dddffbb7, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_19ba22d56c24cc993e75d70ca91367ab->m_frame )
+    else if ( exception_tb->tb_frame != &frame_67713e55ec1e3e95274ec3c1dddffbb7->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_19ba22d56c24cc993e75d70ca91367ab, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_67713e55ec1e3e95274ec3c1dddffbb7, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_19ba22d56c24cc993e75d70ca91367ab,
+        (struct Nuitka_FrameObject *)frame_67713e55ec1e3e95274ec3c1dddffbb7,
         type_description_1,
         par_self,
         par_initialization_vector,
@@ -4409,13 +4409,13 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_18
 
 
     // Release cached frame.
-    if ( frame_19ba22d56c24cc993e75d70ca91367ab == cache_frame_19ba22d56c24cc993e75d70ca91367ab )
+    if ( frame_67713e55ec1e3e95274ec3c1dddffbb7 == cache_frame_67713e55ec1e3e95274ec3c1dddffbb7 )
     {
-        Py_DECREF( frame_19ba22d56c24cc993e75d70ca91367ab );
+        Py_DECREF( frame_67713e55ec1e3e95274ec3c1dddffbb7 );
     }
-    cache_frame_19ba22d56c24cc993e75d70ca91367ab = NULL;
+    cache_frame_67713e55ec1e3e95274ec3c1dddffbb7 = NULL;
 
-    assertFrameObject( frame_19ba22d56c24cc993e75d70ca91367ab );
+    assertFrameObject( frame_67713e55ec1e3e95274ec3c1dddffbb7 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -4519,23 +4519,23 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_19
     PyObject *tmp_called_name_1;
     PyObject *tmp_return_value;
     NUITKA_MAY_BE_UNUSED PyObject *tmp_unused;
-    static struct Nuitka_FrameObject *cache_frame_4bc730f29f5a3b5d199591f08e569497 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_02f2bdb5171acf3fcf31035302a12966 = NULL;
 
-    struct Nuitka_FrameObject *frame_4bc730f29f5a3b5d199591f08e569497;
+    struct Nuitka_FrameObject *frame_02f2bdb5171acf3fcf31035302a12966;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_4bc730f29f5a3b5d199591f08e569497, codeobj_4bc730f29f5a3b5d199591f08e569497, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
-    frame_4bc730f29f5a3b5d199591f08e569497 = cache_frame_4bc730f29f5a3b5d199591f08e569497;
+    MAKE_OR_REUSE_FRAME( cache_frame_02f2bdb5171acf3fcf31035302a12966, codeobj_02f2bdb5171acf3fcf31035302a12966, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *)+sizeof(void *) );
+    frame_02f2bdb5171acf3fcf31035302a12966 = cache_frame_02f2bdb5171acf3fcf31035302a12966;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_4bc730f29f5a3b5d199591f08e569497 );
+    pushFrameStack( frame_02f2bdb5171acf3fcf31035302a12966 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_4bc730f29f5a3b5d199591f08e569497 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_02f2bdb5171acf3fcf31035302a12966 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_called_name_1 = GET_STRING_DICT_VALUE( moduledict_cryptography$hazmat$primitives$ciphers$modes, (Nuitka_StringObject *)const_str_plain__check_aes_key_length );
@@ -4566,7 +4566,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_19
     tmp_args_element_name_2 = par_algorithm;
 
     CHECK_OBJECT( tmp_args_element_name_2 );
-    frame_4bc730f29f5a3b5d199591f08e569497->m_frame.f_lineno = 231;
+    frame_02f2bdb5171acf3fcf31035302a12966->m_frame.f_lineno = 231;
     {
         PyObject *call_args[] = { tmp_args_element_name_1, tmp_args_element_name_2 };
         tmp_unused = CALL_FUNCTION_WITH_ARGS2( tmp_called_name_1, call_args );
@@ -4586,7 +4586,7 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_19
     Py_DECREF( tmp_unused );
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_4bc730f29f5a3b5d199591f08e569497 );
+    RESTORE_FRAME_EXCEPTION( frame_02f2bdb5171acf3fcf31035302a12966 );
 #endif
 
     // Put the previous frame back on top.
@@ -4597,21 +4597,21 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_19
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_4bc730f29f5a3b5d199591f08e569497 );
+    RESTORE_FRAME_EXCEPTION( frame_02f2bdb5171acf3fcf31035302a12966 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_4bc730f29f5a3b5d199591f08e569497, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_02f2bdb5171acf3fcf31035302a12966, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_4bc730f29f5a3b5d199591f08e569497->m_frame )
+    else if ( exception_tb->tb_frame != &frame_02f2bdb5171acf3fcf31035302a12966->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_4bc730f29f5a3b5d199591f08e569497, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_02f2bdb5171acf3fcf31035302a12966, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_4bc730f29f5a3b5d199591f08e569497,
+        (struct Nuitka_FrameObject *)frame_02f2bdb5171acf3fcf31035302a12966,
         type_description_1,
         par_self,
         par_algorithm
@@ -4619,13 +4619,13 @@ static PyObject *impl_cryptography$hazmat$primitives$ciphers$modes$$$function_19
 
 
     // Release cached frame.
-    if ( frame_4bc730f29f5a3b5d199591f08e569497 == cache_frame_4bc730f29f5a3b5d199591f08e569497 )
+    if ( frame_02f2bdb5171acf3fcf31035302a12966 == cache_frame_02f2bdb5171acf3fcf31035302a12966 )
     {
-        Py_DECREF( frame_4bc730f29f5a3b5d199591f08e569497 );
+        Py_DECREF( frame_02f2bdb5171acf3fcf31035302a12966 );
     }
-    cache_frame_4bc730f29f5a3b5d199591f08e569497 = NULL;
+    cache_frame_02f2bdb5171acf3fcf31035302a12966 = NULL;
 
-    assertFrameObject( frame_4bc730f29f5a3b5d199591f08e569497 );
+    assertFrameObject( frame_02f2bdb5171acf3fcf31035302a12966 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -4703,7 +4703,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$fu
 #if PYTHON_VERSION >= 300
         const_str_digest_b8a4dfc5aca449b7019ec255a76dc967,
 #endif
-        codeobj_f2f0fdf3e82e8fdf351f1ee5991eada7,
+        codeobj_b9823f35a3abfe5d69e95d8dd0872868,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -4728,7 +4728,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$fu
 #if PYTHON_VERSION >= 300
         const_str_digest_05dad013241a53e01fef61673f847b5f,
 #endif
-        codeobj_dc37898ae7e46381f6cc4c9564f9db62,
+        codeobj_e3e3c742c5ee123a80b002f807976ee4,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -4753,7 +4753,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$fu
 #if PYTHON_VERSION >= 300
         const_str_digest_1e4e817262ac1657ad2803719e3d1d92,
 #endif
-        codeobj_1867d5735c4dbf407c8c0c673ee906a7,
+        codeobj_59ebb3fec16a6c5421a952b0d1b5bb3d,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -4778,7 +4778,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$fu
 #if PYTHON_VERSION >= 300
         const_str_digest_0ec97fd2b4ce8856215f2cc60777f7c3,
 #endif
-        codeobj_b554cabce41da7c77e1e909dce176743,
+        codeobj_8043cfdef9adcd5627fc8e881b3708d6,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -4803,7 +4803,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$fu
 #if PYTHON_VERSION >= 300
         const_str_digest_0ffe80b254e46829960417693b2982bc,
 #endif
-        codeobj_004bc8539c1cc9c29de085917ac05e4a,
+        codeobj_a3153edd1d5e92db2d131d6688a7f3e1,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -4828,7 +4828,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$fu
 #if PYTHON_VERSION >= 300
         const_str_digest_4fd4de26e457e1f3606cdd6918745cf8,
 #endif
-        codeobj_b3ec9860aaa25326a32d4587451521ba,
+        codeobj_2b4a5d2bdd4a806596f5091253b6e719,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -4853,7 +4853,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$fu
 #if PYTHON_VERSION >= 300
         const_str_digest_eed5b8fd57efd6c0d3c87069fdb50b33,
 #endif
-        codeobj_6bede5b1003ee9296bd234abd19d7ce5,
+        codeobj_a24cffe66b9df786db45709cbaaef91c,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -4878,7 +4878,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$fu
 #if PYTHON_VERSION >= 300
         const_str_digest_c0051f1c84f03c63870fb6df14eab57a,
 #endif
-        codeobj_761754bebcd5b127a73b0e11568b0246,
+        codeobj_528a17cd64705208bb97cdb104dd905e,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -4903,7 +4903,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$fu
 #if PYTHON_VERSION >= 300
         const_str_digest_d177ba8da2b422eebcc9b589e37b1116,
 #endif
-        codeobj_19ba22d56c24cc993e75d70ca91367ab,
+        codeobj_67713e55ec1e3e95274ec3c1dddffbb7,
         defaults,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -4928,7 +4928,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$fu
 #if PYTHON_VERSION >= 300
         const_str_digest_8d88271f851b302545477c36f4b258ba,
 #endif
-        codeobj_4bc730f29f5a3b5d199591f08e569497,
+        codeobj_02f2bdb5171acf3fcf31035302a12966,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -4953,7 +4953,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$fu
 #if PYTHON_VERSION >= 300
         const_str_digest_cb3a861bd2e574b09697bda6ccb42a1d,
 #endif
-        codeobj_fe2a5eed954b81e91ddde1a0517e2afa,
+        codeobj_3f12d525d36c3eb2ccbdf21a82d0fa59,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -4978,7 +4978,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$fu
 #if PYTHON_VERSION >= 300
         const_str_digest_59ed1887c111f4de1576b64b74629e2f,
 #endif
-        codeobj_ba0fc0e5bc1bc57a725afb19e72e37cb,
+        codeobj_c3ae4caf8692866ce7fed4f7fedcd999,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -5003,7 +5003,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$fu
 #if PYTHON_VERSION >= 300
         const_str_digest_ccd57a9d7f210bf9a1ab488d981ae4a2,
 #endif
-        codeobj_67f04681718fd2b66eeb4940a166dd6a,
+        codeobj_0ed2bdf3decafcba78ce0ce80264c0df,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -5028,7 +5028,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$fu
 #if PYTHON_VERSION >= 300
         const_str_digest_1e04256fecf0917c14256fcdcf70e725,
 #endif
-        codeobj_3ad887fc4ae9c2f55ca0fffb059c4b19,
+        codeobj_e216e3d0d5ca01482974694ddc4fad86,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -5053,7 +5053,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$fu
 #if PYTHON_VERSION >= 300
         const_str_digest_a0ffa16d6d1759a7dd0b89b28d4d2370,
 #endif
-        codeobj_4de799d0f022eca375bd5f6e4de1ded4,
+        codeobj_055d80db43ac8f2addb2e4b05fa4fc61,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -5078,7 +5078,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$fu
 #if PYTHON_VERSION >= 300
         const_str_digest_3fad997f68f5a17b4406de93bb15d6ae,
 #endif
-        codeobj_a54fe2a3e8448fd4cdd28ed170769a14,
+        codeobj_2bfae93c2119f3b75bd528ba7663b3f0,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -5103,7 +5103,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$fu
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_9bf418b0d1e64ce4166457b4984523b8,
+        codeobj_0fdda9669c9cf93bd6c647668050821b,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -5128,7 +5128,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$fu
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_b612df059293fbf897a060610988e12f,
+        codeobj_492a0133f07032f93246cc663c92f4f6,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -5153,7 +5153,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$fu
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_f04552c32d2e37e712956bff43332179,
+        codeobj_d113e788f0ea33bb2e72befe81342d53,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -6165,59 +6165,59 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     PyObject *tmp_tuple_element_11;
     PyObject *tmp_tuple_element_12;
     PyObject *tmp_tuple_element_13;
-    static struct Nuitka_FrameObject *cache_frame_e31910404fe756736dad091eb1c9ca9e_2 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_8b74cfe2e3fbef7729e1f4d5ee0cf62b_2 = NULL;
 
-    struct Nuitka_FrameObject *frame_e31910404fe756736dad091eb1c9ca9e_2;
+    struct Nuitka_FrameObject *frame_8b74cfe2e3fbef7729e1f4d5ee0cf62b_2;
 
-    static struct Nuitka_FrameObject *cache_frame_076b71f8df14fa9582bb3cab4c4692cc_3 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_efdaa0fbc9c9327b9ccf260be4338ac4_3 = NULL;
 
-    struct Nuitka_FrameObject *frame_076b71f8df14fa9582bb3cab4c4692cc_3;
+    struct Nuitka_FrameObject *frame_efdaa0fbc9c9327b9ccf260be4338ac4_3;
 
-    static struct Nuitka_FrameObject *cache_frame_c7fec190a8c692e608cb00b407ec8785_4 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_e5f8d7b4692502733dff5c62f5b94a72_4 = NULL;
 
-    struct Nuitka_FrameObject *frame_c7fec190a8c692e608cb00b407ec8785_4;
+    struct Nuitka_FrameObject *frame_e5f8d7b4692502733dff5c62f5b94a72_4;
 
-    static struct Nuitka_FrameObject *cache_frame_86b92aba49ec132fe460c805eadf6cd9_5 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_1bf73b9c9ee0f51ed6f3947a2af78d5b_5 = NULL;
 
-    struct Nuitka_FrameObject *frame_86b92aba49ec132fe460c805eadf6cd9_5;
+    struct Nuitka_FrameObject *frame_1bf73b9c9ee0f51ed6f3947a2af78d5b_5;
 
-    static struct Nuitka_FrameObject *cache_frame_23da3a35bcd77f7e68b28ca793631f21_6 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_ca2807f206b36b38cb1f1f7d6075eebd_6 = NULL;
 
-    struct Nuitka_FrameObject *frame_23da3a35bcd77f7e68b28ca793631f21_6;
+    struct Nuitka_FrameObject *frame_ca2807f206b36b38cb1f1f7d6075eebd_6;
 
-    static struct Nuitka_FrameObject *cache_frame_fbca39c11864789c9b769698204a1690_7 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_aa7d8f7be119d381d591ead183b12952_7 = NULL;
 
-    struct Nuitka_FrameObject *frame_fbca39c11864789c9b769698204a1690_7;
+    struct Nuitka_FrameObject *frame_aa7d8f7be119d381d591ead183b12952_7;
 
-    static struct Nuitka_FrameObject *cache_frame_4b9bfec35ea3193c3c0cbf0291b29ccc_8 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_a2303afd8d4ee0842153ff9386dabe6c_8 = NULL;
 
-    struct Nuitka_FrameObject *frame_4b9bfec35ea3193c3c0cbf0291b29ccc_8;
+    struct Nuitka_FrameObject *frame_a2303afd8d4ee0842153ff9386dabe6c_8;
 
-    static struct Nuitka_FrameObject *cache_frame_2e9e9d5a4f1b2c3a3346e782555805fa_9 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_c24673f015ba85de211b38e82925360f_9 = NULL;
 
-    struct Nuitka_FrameObject *frame_2e9e9d5a4f1b2c3a3346e782555805fa_9;
+    struct Nuitka_FrameObject *frame_c24673f015ba85de211b38e82925360f_9;
 
-    static struct Nuitka_FrameObject *cache_frame_e7a0d44dbec4f913eb5594acb1f42238_10 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_bd8f2ac531edbb5148020d58b36a75f2_10 = NULL;
 
-    struct Nuitka_FrameObject *frame_e7a0d44dbec4f913eb5594acb1f42238_10;
+    struct Nuitka_FrameObject *frame_bd8f2ac531edbb5148020d58b36a75f2_10;
 
-    static struct Nuitka_FrameObject *cache_frame_b0ae00c808a9c3cf588f732539844b6c_11 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_ad9483fad53da6df67162fb1d9888574_11 = NULL;
 
-    struct Nuitka_FrameObject *frame_b0ae00c808a9c3cf588f732539844b6c_11;
+    struct Nuitka_FrameObject *frame_ad9483fad53da6df67162fb1d9888574_11;
 
-    static struct Nuitka_FrameObject *cache_frame_0881da6341248daf8debda1261927749_12 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_194739e37fd03d85fc0e4d41f8282466_12 = NULL;
 
-    struct Nuitka_FrameObject *frame_0881da6341248daf8debda1261927749_12;
+    struct Nuitka_FrameObject *frame_194739e37fd03d85fc0e4d41f8282466_12;
 
-    static struct Nuitka_FrameObject *cache_frame_8f96488898131ec8e9701a2fa0f808a7_13 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_1b8cd968dd3f0c4a50481f98b9dc64a4_13 = NULL;
 
-    struct Nuitka_FrameObject *frame_8f96488898131ec8e9701a2fa0f808a7_13;
+    struct Nuitka_FrameObject *frame_1b8cd968dd3f0c4a50481f98b9dc64a4_13;
 
-    static struct Nuitka_FrameObject *cache_frame_5b23aa3c9acb1459d56450d441ed5069_14 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_52244e10fce444b9594123e7db555138_14 = NULL;
 
-    struct Nuitka_FrameObject *frame_5b23aa3c9acb1459d56450d441ed5069_14;
+    struct Nuitka_FrameObject *frame_52244e10fce444b9594123e7db555138_14;
 
-    struct Nuitka_FrameObject *frame_146e507e6aedec759ceb49b390d0963e;
+    struct Nuitka_FrameObject *frame_2104462709df03f06f426142bf59e6d6;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED char const *type_description_2 = NULL;
@@ -6263,7 +6263,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     // Module code.
     tmp_assign_source_1 = Py_None;
     UPDATE_STRING_DICT0( moduledict_cryptography$hazmat$primitives$ciphers$modes, (Nuitka_StringObject *)const_str_plain___doc__, tmp_assign_source_1 );
-    tmp_assign_source_2 = const_str_digest_5c917c925dd63941bd5b179f526a2c8b;
+    tmp_assign_source_2 = module_filename_obj;
     UPDATE_STRING_DICT0( moduledict_cryptography$hazmat$primitives$ciphers$modes, (Nuitka_StringObject *)const_str_plain___file__, tmp_assign_source_2 );
     tmp_assign_source_3 = Py_None;
     UPDATE_STRING_DICT0( moduledict_cryptography$hazmat$primitives$ciphers$modes, (Nuitka_StringObject *)const_str_plain___cached__, tmp_assign_source_3 );
@@ -6274,12 +6274,12 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_import_from_1__module = tmp_assign_source_4;
 
     // Frame without reuse.
-    frame_146e507e6aedec759ceb49b390d0963e = MAKE_MODULE_FRAME( codeobj_146e507e6aedec759ceb49b390d0963e, module_cryptography$hazmat$primitives$ciphers$modes );
+    frame_2104462709df03f06f426142bf59e6d6 = MAKE_MODULE_FRAME( codeobj_2104462709df03f06f426142bf59e6d6, module_cryptography$hazmat$primitives$ciphers$modes );
 
     // Push the new frame as the currently active one, and we should be exclusively
     // owning it.
-    pushFrameStack( frame_146e507e6aedec759ceb49b390d0963e );
-    assert( Py_REFCNT( frame_146e507e6aedec759ceb49b390d0963e ) == 2 );
+    pushFrameStack( frame_2104462709df03f06f426142bf59e6d6 );
+    assert( Py_REFCNT( frame_2104462709df03f06f426142bf59e6d6 ) == 2 );
 
     // Framed code:
     // Tried code:
@@ -6365,7 +6365,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_locals_name_1 = Py_None;
     tmp_fromlist_name_1 = Py_None;
     tmp_level_name_1 = const_int_0;
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 7;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 7;
     tmp_assign_source_8 = IMPORT_MODULE5( tmp_name_name_1, tmp_globals_name_1, tmp_locals_name_1, tmp_fromlist_name_1, tmp_level_name_1 );
     if ( tmp_assign_source_8 == NULL )
     {
@@ -6384,7 +6384,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_locals_name_2 = Py_None;
     tmp_fromlist_name_2 = Py_None;
     tmp_level_name_2 = const_int_0;
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 9;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 9;
     tmp_assign_source_9 = IMPORT_MODULE5( tmp_name_name_2, tmp_globals_name_2, tmp_locals_name_2, tmp_fromlist_name_2, tmp_level_name_2 );
     if ( tmp_assign_source_9 == NULL )
     {
@@ -6403,7 +6403,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_locals_name_3 = Py_None;
     tmp_fromlist_name_3 = const_tuple_str_plain_utils_tuple;
     tmp_level_name_3 = const_int_0;
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 11;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 11;
     tmp_import_name_from_4 = IMPORT_MODULE5( tmp_name_name_3, tmp_globals_name_3, tmp_locals_name_3, tmp_fromlist_name_3, tmp_level_name_3 );
     if ( tmp_import_name_from_4 == NULL )
     {
@@ -6611,7 +6611,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_1 = tmp_class_creation_1__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_1 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 15;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 15;
     tmp_assign_source_13 = CALL_FUNCTION( tmp_called_name_1, tmp_args_name_1, tmp_kw_name_1 );
     Py_DECREF( tmp_called_name_1 );
     if ( tmp_assign_source_13 == NULL )
@@ -6700,7 +6700,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_2;
     }
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 14;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 14;
     {
         PyObject *call_args[] = { tmp_args_element_name_1 };
         tmp_called_name_2 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_3, call_args );
@@ -6752,14 +6752,14 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_4;
     }
-    MAKE_OR_REUSE_FRAME( cache_frame_e31910404fe756736dad091eb1c9ca9e_2, codeobj_e31910404fe756736dad091eb1c9ca9e, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
-    frame_e31910404fe756736dad091eb1c9ca9e_2 = cache_frame_e31910404fe756736dad091eb1c9ca9e_2;
+    MAKE_OR_REUSE_FRAME( cache_frame_8b74cfe2e3fbef7729e1f4d5ee0cf62b_2, codeobj_8b74cfe2e3fbef7729e1f4d5ee0cf62b, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
+    frame_8b74cfe2e3fbef7729e1f4d5ee0cf62b_2 = cache_frame_8b74cfe2e3fbef7729e1f4d5ee0cf62b_2;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_e31910404fe756736dad091eb1c9ca9e_2 );
+    pushFrameStack( frame_8b74cfe2e3fbef7729e1f4d5ee0cf62b_2 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_e31910404fe756736dad091eb1c9ca9e_2 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_8b74cfe2e3fbef7729e1f4d5ee0cf62b_2 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_called_instance_1 = PyObject_GetItem( locals_cryptography$hazmat$primitives$ciphers$modes_15, const_str_plain_abc );
@@ -6794,7 +6794,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     }
 
     tmp_args_element_name_3 = MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$function_1_name(  );
-    frame_e31910404fe756736dad091eb1c9ca9e_2->m_frame.f_lineno = 16;
+    frame_8b74cfe2e3fbef7729e1f4d5ee0cf62b_2->m_frame.f_lineno = 16;
     {
         PyObject *call_args[] = { tmp_args_element_name_3 };
         tmp_dictset_value = CALL_METHOD_WITH_ARGS1( tmp_called_instance_1, const_str_plain_abstractproperty, call_args );
@@ -6857,7 +6857,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     }
 
     tmp_args_element_name_4 = MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$function_2_validate_for_algorithm(  );
-    frame_e31910404fe756736dad091eb1c9ca9e_2->m_frame.f_lineno = 22;
+    frame_8b74cfe2e3fbef7729e1f4d5ee0cf62b_2->m_frame.f_lineno = 22;
     {
         PyObject *call_args[] = { tmp_args_element_name_4 };
         tmp_dictset_value = CALL_METHOD_WITH_ARGS1( tmp_called_instance_2, const_str_plain_abstractmethod, call_args );
@@ -6890,7 +6890,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_e31910404fe756736dad091eb1c9ca9e_2 );
+    RESTORE_FRAME_EXCEPTION( frame_8b74cfe2e3fbef7729e1f4d5ee0cf62b_2 );
 #endif
 
     // Put the previous frame back on top.
@@ -6901,34 +6901,34 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     frame_exception_exit_2:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_e31910404fe756736dad091eb1c9ca9e_2 );
+    RESTORE_FRAME_EXCEPTION( frame_8b74cfe2e3fbef7729e1f4d5ee0cf62b_2 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_e31910404fe756736dad091eb1c9ca9e_2, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_8b74cfe2e3fbef7729e1f4d5ee0cf62b_2, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_e31910404fe756736dad091eb1c9ca9e_2->m_frame )
+    else if ( exception_tb->tb_frame != &frame_8b74cfe2e3fbef7729e1f4d5ee0cf62b_2->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_e31910404fe756736dad091eb1c9ca9e_2, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_8b74cfe2e3fbef7729e1f4d5ee0cf62b_2, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_e31910404fe756736dad091eb1c9ca9e_2,
+        (struct Nuitka_FrameObject *)frame_8b74cfe2e3fbef7729e1f4d5ee0cf62b_2,
         type_description_2,
         NULL
     );
 
 
     // Release cached frame.
-    if ( frame_e31910404fe756736dad091eb1c9ca9e_2 == cache_frame_e31910404fe756736dad091eb1c9ca9e_2 )
+    if ( frame_8b74cfe2e3fbef7729e1f4d5ee0cf62b_2 == cache_frame_8b74cfe2e3fbef7729e1f4d5ee0cf62b_2 )
     {
-        Py_DECREF( frame_e31910404fe756736dad091eb1c9ca9e_2 );
+        Py_DECREF( frame_8b74cfe2e3fbef7729e1f4d5ee0cf62b_2 );
     }
-    cache_frame_e31910404fe756736dad091eb1c9ca9e_2 = NULL;
+    cache_frame_8b74cfe2e3fbef7729e1f4d5ee0cf62b_2 = NULL;
 
-    assertFrameObject( frame_e31910404fe756736dad091eb1c9ca9e_2 );
+    assertFrameObject( frame_8b74cfe2e3fbef7729e1f4d5ee0cf62b_2 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -6959,7 +6959,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_2 = tmp_class_creation_1__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_2 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 15;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 15;
     tmp_assign_source_15 = CALL_FUNCTION( tmp_called_name_4, tmp_args_name_2, tmp_kw_name_2 );
     Py_DECREF( tmp_args_name_2 );
     if ( tmp_assign_source_15 == NULL )
@@ -7047,7 +7047,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     goto try_except_handler_2;
     outline_result_1:;
     tmp_args_element_name_2 = tmp_outline_return_value_1;
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 14;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 14;
     {
         PyObject *call_args[] = { tmp_args_element_name_2 };
         tmp_assign_source_14 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_2, call_args );
@@ -7291,7 +7291,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_3 = tmp_class_creation_2__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_3 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 31;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 31;
     tmp_assign_source_18 = CALL_FUNCTION( tmp_called_name_5, tmp_args_name_3, tmp_kw_name_3 );
     Py_DECREF( tmp_called_name_5 );
     if ( tmp_assign_source_18 == NULL )
@@ -7380,7 +7380,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_5;
     }
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 30;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 30;
     {
         PyObject *call_args[] = { tmp_args_element_name_5 };
         tmp_called_name_6 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_7, call_args );
@@ -7432,14 +7432,14 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_7;
     }
-    MAKE_OR_REUSE_FRAME( cache_frame_076b71f8df14fa9582bb3cab4c4692cc_3, codeobj_076b71f8df14fa9582bb3cab4c4692cc, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
-    frame_076b71f8df14fa9582bb3cab4c4692cc_3 = cache_frame_076b71f8df14fa9582bb3cab4c4692cc_3;
+    MAKE_OR_REUSE_FRAME( cache_frame_efdaa0fbc9c9327b9ccf260be4338ac4_3, codeobj_efdaa0fbc9c9327b9ccf260be4338ac4, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
+    frame_efdaa0fbc9c9327b9ccf260be4338ac4_3 = cache_frame_efdaa0fbc9c9327b9ccf260be4338ac4_3;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_076b71f8df14fa9582bb3cab4c4692cc_3 );
+    pushFrameStack( frame_efdaa0fbc9c9327b9ccf260be4338ac4_3 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_076b71f8df14fa9582bb3cab4c4692cc_3 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_efdaa0fbc9c9327b9ccf260be4338ac4_3 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_called_instance_3 = PyObject_GetItem( locals_cryptography$hazmat$primitives$ciphers$modes_31, const_str_plain_abc );
@@ -7474,7 +7474,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     }
 
     tmp_args_element_name_7 = MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$function_3_initialization_vector(  );
-    frame_076b71f8df14fa9582bb3cab4c4692cc_3->m_frame.f_lineno = 32;
+    frame_efdaa0fbc9c9327b9ccf260be4338ac4_3->m_frame.f_lineno = 32;
     {
         PyObject *call_args[] = { tmp_args_element_name_7 };
         tmp_dictset_value = CALL_METHOD_WITH_ARGS1( tmp_called_instance_3, const_str_plain_abstractproperty, call_args );
@@ -7507,7 +7507,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_076b71f8df14fa9582bb3cab4c4692cc_3 );
+    RESTORE_FRAME_EXCEPTION( frame_efdaa0fbc9c9327b9ccf260be4338ac4_3 );
 #endif
 
     // Put the previous frame back on top.
@@ -7518,34 +7518,34 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     frame_exception_exit_3:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_076b71f8df14fa9582bb3cab4c4692cc_3 );
+    RESTORE_FRAME_EXCEPTION( frame_efdaa0fbc9c9327b9ccf260be4338ac4_3 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_076b71f8df14fa9582bb3cab4c4692cc_3, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_efdaa0fbc9c9327b9ccf260be4338ac4_3, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_076b71f8df14fa9582bb3cab4c4692cc_3->m_frame )
+    else if ( exception_tb->tb_frame != &frame_efdaa0fbc9c9327b9ccf260be4338ac4_3->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_076b71f8df14fa9582bb3cab4c4692cc_3, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_efdaa0fbc9c9327b9ccf260be4338ac4_3, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_076b71f8df14fa9582bb3cab4c4692cc_3,
+        (struct Nuitka_FrameObject *)frame_efdaa0fbc9c9327b9ccf260be4338ac4_3,
         type_description_2,
         NULL
     );
 
 
     // Release cached frame.
-    if ( frame_076b71f8df14fa9582bb3cab4c4692cc_3 == cache_frame_076b71f8df14fa9582bb3cab4c4692cc_3 )
+    if ( frame_efdaa0fbc9c9327b9ccf260be4338ac4_3 == cache_frame_efdaa0fbc9c9327b9ccf260be4338ac4_3 )
     {
-        Py_DECREF( frame_076b71f8df14fa9582bb3cab4c4692cc_3 );
+        Py_DECREF( frame_efdaa0fbc9c9327b9ccf260be4338ac4_3 );
     }
-    cache_frame_076b71f8df14fa9582bb3cab4c4692cc_3 = NULL;
+    cache_frame_efdaa0fbc9c9327b9ccf260be4338ac4_3 = NULL;
 
-    assertFrameObject( frame_076b71f8df14fa9582bb3cab4c4692cc_3 );
+    assertFrameObject( frame_efdaa0fbc9c9327b9ccf260be4338ac4_3 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -7576,7 +7576,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_4 = tmp_class_creation_2__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_4 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 31;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 31;
     tmp_assign_source_20 = CALL_FUNCTION( tmp_called_name_8, tmp_args_name_4, tmp_kw_name_4 );
     Py_DECREF( tmp_args_name_4 );
     if ( tmp_assign_source_20 == NULL )
@@ -7664,7 +7664,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     goto try_except_handler_5;
     outline_result_2:;
     tmp_args_element_name_6 = tmp_outline_return_value_2;
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 30;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 30;
     {
         PyObject *call_args[] = { tmp_args_element_name_6 };
         tmp_assign_source_19 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_6, call_args );
@@ -7908,7 +7908,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_5 = tmp_class_creation_3__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_5 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 40;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 40;
     tmp_assign_source_23 = CALL_FUNCTION( tmp_called_name_9, tmp_args_name_5, tmp_kw_name_5 );
     Py_DECREF( tmp_called_name_9 );
     if ( tmp_assign_source_23 == NULL )
@@ -7997,7 +7997,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_8;
     }
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 39;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 39;
     {
         PyObject *call_args[] = { tmp_args_element_name_8 };
         tmp_called_name_10 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_11, call_args );
@@ -8049,14 +8049,14 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_10;
     }
-    MAKE_OR_REUSE_FRAME( cache_frame_c7fec190a8c692e608cb00b407ec8785_4, codeobj_c7fec190a8c692e608cb00b407ec8785, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
-    frame_c7fec190a8c692e608cb00b407ec8785_4 = cache_frame_c7fec190a8c692e608cb00b407ec8785_4;
+    MAKE_OR_REUSE_FRAME( cache_frame_e5f8d7b4692502733dff5c62f5b94a72_4, codeobj_e5f8d7b4692502733dff5c62f5b94a72, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
+    frame_e5f8d7b4692502733dff5c62f5b94a72_4 = cache_frame_e5f8d7b4692502733dff5c62f5b94a72_4;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_c7fec190a8c692e608cb00b407ec8785_4 );
+    pushFrameStack( frame_e5f8d7b4692502733dff5c62f5b94a72_4 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_c7fec190a8c692e608cb00b407ec8785_4 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_e5f8d7b4692502733dff5c62f5b94a72_4 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_called_instance_4 = PyObject_GetItem( locals_cryptography$hazmat$primitives$ciphers$modes_40, const_str_plain_abc );
@@ -8091,7 +8091,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     }
 
     tmp_args_element_name_10 = MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$function_4_tweak(  );
-    frame_c7fec190a8c692e608cb00b407ec8785_4->m_frame.f_lineno = 41;
+    frame_e5f8d7b4692502733dff5c62f5b94a72_4->m_frame.f_lineno = 41;
     {
         PyObject *call_args[] = { tmp_args_element_name_10 };
         tmp_dictset_value = CALL_METHOD_WITH_ARGS1( tmp_called_instance_4, const_str_plain_abstractproperty, call_args );
@@ -8124,7 +8124,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_c7fec190a8c692e608cb00b407ec8785_4 );
+    RESTORE_FRAME_EXCEPTION( frame_e5f8d7b4692502733dff5c62f5b94a72_4 );
 #endif
 
     // Put the previous frame back on top.
@@ -8135,34 +8135,34 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     frame_exception_exit_4:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_c7fec190a8c692e608cb00b407ec8785_4 );
+    RESTORE_FRAME_EXCEPTION( frame_e5f8d7b4692502733dff5c62f5b94a72_4 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_c7fec190a8c692e608cb00b407ec8785_4, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_e5f8d7b4692502733dff5c62f5b94a72_4, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_c7fec190a8c692e608cb00b407ec8785_4->m_frame )
+    else if ( exception_tb->tb_frame != &frame_e5f8d7b4692502733dff5c62f5b94a72_4->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_c7fec190a8c692e608cb00b407ec8785_4, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_e5f8d7b4692502733dff5c62f5b94a72_4, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_c7fec190a8c692e608cb00b407ec8785_4,
+        (struct Nuitka_FrameObject *)frame_e5f8d7b4692502733dff5c62f5b94a72_4,
         type_description_2,
         NULL
     );
 
 
     // Release cached frame.
-    if ( frame_c7fec190a8c692e608cb00b407ec8785_4 == cache_frame_c7fec190a8c692e608cb00b407ec8785_4 )
+    if ( frame_e5f8d7b4692502733dff5c62f5b94a72_4 == cache_frame_e5f8d7b4692502733dff5c62f5b94a72_4 )
     {
-        Py_DECREF( frame_c7fec190a8c692e608cb00b407ec8785_4 );
+        Py_DECREF( frame_e5f8d7b4692502733dff5c62f5b94a72_4 );
     }
-    cache_frame_c7fec190a8c692e608cb00b407ec8785_4 = NULL;
+    cache_frame_e5f8d7b4692502733dff5c62f5b94a72_4 = NULL;
 
-    assertFrameObject( frame_c7fec190a8c692e608cb00b407ec8785_4 );
+    assertFrameObject( frame_e5f8d7b4692502733dff5c62f5b94a72_4 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -8193,7 +8193,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_6 = tmp_class_creation_3__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_6 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 40;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 40;
     tmp_assign_source_25 = CALL_FUNCTION( tmp_called_name_12, tmp_args_name_6, tmp_kw_name_6 );
     Py_DECREF( tmp_args_name_6 );
     if ( tmp_assign_source_25 == NULL )
@@ -8281,7 +8281,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     goto try_except_handler_8;
     outline_result_3:;
     tmp_args_element_name_9 = tmp_outline_return_value_3;
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 39;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 39;
     {
         PyObject *call_args[] = { tmp_args_element_name_9 };
         tmp_assign_source_24 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_10, call_args );
@@ -8525,7 +8525,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_7 = tmp_class_creation_4__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_7 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 49;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 49;
     tmp_assign_source_28 = CALL_FUNCTION( tmp_called_name_13, tmp_args_name_7, tmp_kw_name_7 );
     Py_DECREF( tmp_called_name_13 );
     if ( tmp_assign_source_28 == NULL )
@@ -8614,7 +8614,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_11;
     }
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 48;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 48;
     {
         PyObject *call_args[] = { tmp_args_element_name_11 };
         tmp_called_name_14 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_15, call_args );
@@ -8666,14 +8666,14 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_13;
     }
-    MAKE_OR_REUSE_FRAME( cache_frame_86b92aba49ec132fe460c805eadf6cd9_5, codeobj_86b92aba49ec132fe460c805eadf6cd9, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
-    frame_86b92aba49ec132fe460c805eadf6cd9_5 = cache_frame_86b92aba49ec132fe460c805eadf6cd9_5;
+    MAKE_OR_REUSE_FRAME( cache_frame_1bf73b9c9ee0f51ed6f3947a2af78d5b_5, codeobj_1bf73b9c9ee0f51ed6f3947a2af78d5b, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
+    frame_1bf73b9c9ee0f51ed6f3947a2af78d5b_5 = cache_frame_1bf73b9c9ee0f51ed6f3947a2af78d5b_5;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_86b92aba49ec132fe460c805eadf6cd9_5 );
+    pushFrameStack( frame_1bf73b9c9ee0f51ed6f3947a2af78d5b_5 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_86b92aba49ec132fe460c805eadf6cd9_5 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_1bf73b9c9ee0f51ed6f3947a2af78d5b_5 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_called_instance_5 = PyObject_GetItem( locals_cryptography$hazmat$primitives$ciphers$modes_49, const_str_plain_abc );
@@ -8708,7 +8708,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     }
 
     tmp_args_element_name_13 = MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$function_5_nonce(  );
-    frame_86b92aba49ec132fe460c805eadf6cd9_5->m_frame.f_lineno = 50;
+    frame_1bf73b9c9ee0f51ed6f3947a2af78d5b_5->m_frame.f_lineno = 50;
     {
         PyObject *call_args[] = { tmp_args_element_name_13 };
         tmp_dictset_value = CALL_METHOD_WITH_ARGS1( tmp_called_instance_5, const_str_plain_abstractproperty, call_args );
@@ -8741,7 +8741,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_86b92aba49ec132fe460c805eadf6cd9_5 );
+    RESTORE_FRAME_EXCEPTION( frame_1bf73b9c9ee0f51ed6f3947a2af78d5b_5 );
 #endif
 
     // Put the previous frame back on top.
@@ -8752,34 +8752,34 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     frame_exception_exit_5:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_86b92aba49ec132fe460c805eadf6cd9_5 );
+    RESTORE_FRAME_EXCEPTION( frame_1bf73b9c9ee0f51ed6f3947a2af78d5b_5 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_86b92aba49ec132fe460c805eadf6cd9_5, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_1bf73b9c9ee0f51ed6f3947a2af78d5b_5, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_86b92aba49ec132fe460c805eadf6cd9_5->m_frame )
+    else if ( exception_tb->tb_frame != &frame_1bf73b9c9ee0f51ed6f3947a2af78d5b_5->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_86b92aba49ec132fe460c805eadf6cd9_5, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_1bf73b9c9ee0f51ed6f3947a2af78d5b_5, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_86b92aba49ec132fe460c805eadf6cd9_5,
+        (struct Nuitka_FrameObject *)frame_1bf73b9c9ee0f51ed6f3947a2af78d5b_5,
         type_description_2,
         NULL
     );
 
 
     // Release cached frame.
-    if ( frame_86b92aba49ec132fe460c805eadf6cd9_5 == cache_frame_86b92aba49ec132fe460c805eadf6cd9_5 )
+    if ( frame_1bf73b9c9ee0f51ed6f3947a2af78d5b_5 == cache_frame_1bf73b9c9ee0f51ed6f3947a2af78d5b_5 )
     {
-        Py_DECREF( frame_86b92aba49ec132fe460c805eadf6cd9_5 );
+        Py_DECREF( frame_1bf73b9c9ee0f51ed6f3947a2af78d5b_5 );
     }
-    cache_frame_86b92aba49ec132fe460c805eadf6cd9_5 = NULL;
+    cache_frame_1bf73b9c9ee0f51ed6f3947a2af78d5b_5 = NULL;
 
-    assertFrameObject( frame_86b92aba49ec132fe460c805eadf6cd9_5 );
+    assertFrameObject( frame_1bf73b9c9ee0f51ed6f3947a2af78d5b_5 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -8810,7 +8810,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_8 = tmp_class_creation_4__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_8 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 49;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 49;
     tmp_assign_source_30 = CALL_FUNCTION( tmp_called_name_16, tmp_args_name_8, tmp_kw_name_8 );
     Py_DECREF( tmp_args_name_8 );
     if ( tmp_assign_source_30 == NULL )
@@ -8898,7 +8898,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     goto try_except_handler_11;
     outline_result_4:;
     tmp_args_element_name_12 = tmp_outline_return_value_4;
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 48;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 48;
     {
         PyObject *call_args[] = { tmp_args_element_name_12 };
         tmp_assign_source_29 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_14, call_args );
@@ -9142,7 +9142,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_9 = tmp_class_creation_5__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_9 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 58;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 58;
     tmp_assign_source_33 = CALL_FUNCTION( tmp_called_name_17, tmp_args_name_9, tmp_kw_name_9 );
     Py_DECREF( tmp_called_name_17 );
     if ( tmp_assign_source_33 == NULL )
@@ -9231,7 +9231,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_14;
     }
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 57;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 57;
     {
         PyObject *call_args[] = { tmp_args_element_name_14 };
         tmp_called_name_18 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_19, call_args );
@@ -9283,14 +9283,14 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_16;
     }
-    MAKE_OR_REUSE_FRAME( cache_frame_23da3a35bcd77f7e68b28ca793631f21_6, codeobj_23da3a35bcd77f7e68b28ca793631f21, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
-    frame_23da3a35bcd77f7e68b28ca793631f21_6 = cache_frame_23da3a35bcd77f7e68b28ca793631f21_6;
+    MAKE_OR_REUSE_FRAME( cache_frame_ca2807f206b36b38cb1f1f7d6075eebd_6, codeobj_ca2807f206b36b38cb1f1f7d6075eebd, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
+    frame_ca2807f206b36b38cb1f1f7d6075eebd_6 = cache_frame_ca2807f206b36b38cb1f1f7d6075eebd_6;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_23da3a35bcd77f7e68b28ca793631f21_6 );
+    pushFrameStack( frame_ca2807f206b36b38cb1f1f7d6075eebd_6 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_23da3a35bcd77f7e68b28ca793631f21_6 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_ca2807f206b36b38cb1f1f7d6075eebd_6 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_called_instance_6 = PyObject_GetItem( locals_cryptography$hazmat$primitives$ciphers$modes_58, const_str_plain_abc );
@@ -9325,7 +9325,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     }
 
     tmp_args_element_name_16 = MAKE_FUNCTION_cryptography$hazmat$primitives$ciphers$modes$$$function_6_tag(  );
-    frame_23da3a35bcd77f7e68b28ca793631f21_6->m_frame.f_lineno = 59;
+    frame_ca2807f206b36b38cb1f1f7d6075eebd_6->m_frame.f_lineno = 59;
     {
         PyObject *call_args[] = { tmp_args_element_name_16 };
         tmp_dictset_value = CALL_METHOD_WITH_ARGS1( tmp_called_instance_6, const_str_plain_abstractproperty, call_args );
@@ -9358,7 +9358,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_23da3a35bcd77f7e68b28ca793631f21_6 );
+    RESTORE_FRAME_EXCEPTION( frame_ca2807f206b36b38cb1f1f7d6075eebd_6 );
 #endif
 
     // Put the previous frame back on top.
@@ -9369,34 +9369,34 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     frame_exception_exit_6:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_23da3a35bcd77f7e68b28ca793631f21_6 );
+    RESTORE_FRAME_EXCEPTION( frame_ca2807f206b36b38cb1f1f7d6075eebd_6 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_23da3a35bcd77f7e68b28ca793631f21_6, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_ca2807f206b36b38cb1f1f7d6075eebd_6, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_23da3a35bcd77f7e68b28ca793631f21_6->m_frame )
+    else if ( exception_tb->tb_frame != &frame_ca2807f206b36b38cb1f1f7d6075eebd_6->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_23da3a35bcd77f7e68b28ca793631f21_6, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_ca2807f206b36b38cb1f1f7d6075eebd_6, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_23da3a35bcd77f7e68b28ca793631f21_6,
+        (struct Nuitka_FrameObject *)frame_ca2807f206b36b38cb1f1f7d6075eebd_6,
         type_description_2,
         NULL
     );
 
 
     // Release cached frame.
-    if ( frame_23da3a35bcd77f7e68b28ca793631f21_6 == cache_frame_23da3a35bcd77f7e68b28ca793631f21_6 )
+    if ( frame_ca2807f206b36b38cb1f1f7d6075eebd_6 == cache_frame_ca2807f206b36b38cb1f1f7d6075eebd_6 )
     {
-        Py_DECREF( frame_23da3a35bcd77f7e68b28ca793631f21_6 );
+        Py_DECREF( frame_ca2807f206b36b38cb1f1f7d6075eebd_6 );
     }
-    cache_frame_23da3a35bcd77f7e68b28ca793631f21_6 = NULL;
+    cache_frame_ca2807f206b36b38cb1f1f7d6075eebd_6 = NULL;
 
-    assertFrameObject( frame_23da3a35bcd77f7e68b28ca793631f21_6 );
+    assertFrameObject( frame_ca2807f206b36b38cb1f1f7d6075eebd_6 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -9427,7 +9427,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_10 = tmp_class_creation_5__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_10 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 58;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 58;
     tmp_assign_source_35 = CALL_FUNCTION( tmp_called_name_20, tmp_args_name_10, tmp_kw_name_10 );
     Py_DECREF( tmp_args_name_10 );
     if ( tmp_assign_source_35 == NULL )
@@ -9515,7 +9515,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     goto try_except_handler_14;
     outline_result_5:;
     tmp_args_element_name_15 = tmp_outline_return_value_5;
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 57;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 57;
     {
         PyObject *call_args[] = { tmp_args_element_name_15 };
         tmp_assign_source_34 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_18, call_args );
@@ -9765,7 +9765,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_11 = tmp_class_creation_6__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_11 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 87;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 87;
     tmp_assign_source_41 = CALL_FUNCTION( tmp_called_name_21, tmp_args_name_11, tmp_kw_name_11 );
     Py_DECREF( tmp_called_name_21 );
     if ( tmp_assign_source_41 == NULL )
@@ -9842,7 +9842,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         goto try_except_handler_17;
     }
 
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 85;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 85;
     {
         PyObject *call_args[] = { tmp_args_element_name_17 };
         tmp_called_name_22 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_23, call_args );
@@ -9917,7 +9917,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         goto try_except_handler_17;
     }
 
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 86;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 86;
     {
         PyObject *call_args[] = { tmp_args_element_name_19 };
         tmp_called_name_24 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_25, call_args );
@@ -9968,14 +9968,14 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_19;
     }
-    MAKE_OR_REUSE_FRAME( cache_frame_fbca39c11864789c9b769698204a1690_7, codeobj_fbca39c11864789c9b769698204a1690, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
-    frame_fbca39c11864789c9b769698204a1690_7 = cache_frame_fbca39c11864789c9b769698204a1690_7;
+    MAKE_OR_REUSE_FRAME( cache_frame_aa7d8f7be119d381d591ead183b12952_7, codeobj_aa7d8f7be119d381d591ead183b12952, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
+    frame_aa7d8f7be119d381d591ead183b12952_7 = cache_frame_aa7d8f7be119d381d591ead183b12952_7;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_fbca39c11864789c9b769698204a1690_7 );
+    pushFrameStack( frame_aa7d8f7be119d381d591ead183b12952_7 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_fbca39c11864789c9b769698204a1690_7 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_aa7d8f7be119d381d591ead183b12952_7 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_dictset_value = const_str_plain_CBC;
@@ -10036,7 +10036,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         }
     }
 
-    frame_fbca39c11864789c9b769698204a1690_7->m_frame.f_lineno = 96;
+    frame_aa7d8f7be119d381d591ead183b12952_7->m_frame.f_lineno = 96;
     tmp_dictset_value = CALL_METHOD_WITH_ARGS1( tmp_called_instance_7, const_str_plain_read_only_property, &PyTuple_GET_ITEM( const_tuple_str_plain__initialization_vector_tuple, 0 ) );
 
     if ( tmp_dictset_value == NULL )
@@ -10108,7 +10108,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_fbca39c11864789c9b769698204a1690_7 );
+    RESTORE_FRAME_EXCEPTION( frame_aa7d8f7be119d381d591ead183b12952_7 );
 #endif
 
     // Put the previous frame back on top.
@@ -10119,34 +10119,34 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     frame_exception_exit_7:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_fbca39c11864789c9b769698204a1690_7 );
+    RESTORE_FRAME_EXCEPTION( frame_aa7d8f7be119d381d591ead183b12952_7 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_fbca39c11864789c9b769698204a1690_7, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_aa7d8f7be119d381d591ead183b12952_7, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_fbca39c11864789c9b769698204a1690_7->m_frame )
+    else if ( exception_tb->tb_frame != &frame_aa7d8f7be119d381d591ead183b12952_7->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_fbca39c11864789c9b769698204a1690_7, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_aa7d8f7be119d381d591ead183b12952_7, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_fbca39c11864789c9b769698204a1690_7,
+        (struct Nuitka_FrameObject *)frame_aa7d8f7be119d381d591ead183b12952_7,
         type_description_2,
         NULL
     );
 
 
     // Release cached frame.
-    if ( frame_fbca39c11864789c9b769698204a1690_7 == cache_frame_fbca39c11864789c9b769698204a1690_7 )
+    if ( frame_aa7d8f7be119d381d591ead183b12952_7 == cache_frame_aa7d8f7be119d381d591ead183b12952_7 )
     {
-        Py_DECREF( frame_fbca39c11864789c9b769698204a1690_7 );
+        Py_DECREF( frame_aa7d8f7be119d381d591ead183b12952_7 );
     }
-    cache_frame_fbca39c11864789c9b769698204a1690_7 = NULL;
+    cache_frame_aa7d8f7be119d381d591ead183b12952_7 = NULL;
 
-    assertFrameObject( frame_fbca39c11864789c9b769698204a1690_7 );
+    assertFrameObject( frame_aa7d8f7be119d381d591ead183b12952_7 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -10177,7 +10177,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_12 = tmp_class_creation_6__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_12 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 87;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 87;
     tmp_assign_source_43 = CALL_FUNCTION( tmp_called_name_26, tmp_args_name_12, tmp_kw_name_12 );
     Py_DECREF( tmp_args_name_12 );
     if ( tmp_assign_source_43 == NULL )
@@ -10265,7 +10265,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     goto try_except_handler_17;
     outline_result_6:;
     tmp_args_element_name_20 = tmp_outline_return_value_6;
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 86;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 86;
     {
         PyObject *call_args[] = { tmp_args_element_name_20 };
         tmp_args_element_name_18 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_24, call_args );
@@ -10284,7 +10284,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_17;
     }
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 85;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 85;
     {
         PyObject *call_args[] = { tmp_args_element_name_18 };
         tmp_assign_source_42 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_22, call_args );
@@ -10528,7 +10528,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_13 = tmp_class_creation_7__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_13 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 102;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 102;
     tmp_assign_source_46 = CALL_FUNCTION( tmp_called_name_27, tmp_args_name_13, tmp_kw_name_13 );
     Py_DECREF( tmp_called_name_27 );
     if ( tmp_assign_source_46 == NULL )
@@ -10605,7 +10605,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         goto try_except_handler_20;
     }
 
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 100;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 100;
     {
         PyObject *call_args[] = { tmp_args_element_name_21 };
         tmp_called_name_28 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_29, call_args );
@@ -10680,7 +10680,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         goto try_except_handler_20;
     }
 
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 101;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 101;
     {
         PyObject *call_args[] = { tmp_args_element_name_23 };
         tmp_called_name_30 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_31, call_args );
@@ -10731,14 +10731,14 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_22;
     }
-    MAKE_OR_REUSE_FRAME( cache_frame_4b9bfec35ea3193c3c0cbf0291b29ccc_8, codeobj_4b9bfec35ea3193c3c0cbf0291b29ccc, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
-    frame_4b9bfec35ea3193c3c0cbf0291b29ccc_8 = cache_frame_4b9bfec35ea3193c3c0cbf0291b29ccc_8;
+    MAKE_OR_REUSE_FRAME( cache_frame_a2303afd8d4ee0842153ff9386dabe6c_8, codeobj_a2303afd8d4ee0842153ff9386dabe6c, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
+    frame_a2303afd8d4ee0842153ff9386dabe6c_8 = cache_frame_a2303afd8d4ee0842153ff9386dabe6c_8;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_4b9bfec35ea3193c3c0cbf0291b29ccc_8 );
+    pushFrameStack( frame_a2303afd8d4ee0842153ff9386dabe6c_8 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_4b9bfec35ea3193c3c0cbf0291b29ccc_8 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_a2303afd8d4ee0842153ff9386dabe6c_8 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_dictset_value = const_str_plain_XTS;
@@ -10799,7 +10799,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         }
     }
 
-    frame_4b9bfec35ea3193c3c0cbf0291b29ccc_8->m_frame.f_lineno = 114;
+    frame_a2303afd8d4ee0842153ff9386dabe6c_8->m_frame.f_lineno = 114;
     tmp_dictset_value = CALL_METHOD_WITH_ARGS1( tmp_called_instance_8, const_str_plain_read_only_property, &PyTuple_GET_ITEM( const_tuple_str_plain__tweak_tuple, 0 ) );
 
     if ( tmp_dictset_value == NULL )
@@ -10842,7 +10842,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_4b9bfec35ea3193c3c0cbf0291b29ccc_8 );
+    RESTORE_FRAME_EXCEPTION( frame_a2303afd8d4ee0842153ff9386dabe6c_8 );
 #endif
 
     // Put the previous frame back on top.
@@ -10853,34 +10853,34 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     frame_exception_exit_8:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_4b9bfec35ea3193c3c0cbf0291b29ccc_8 );
+    RESTORE_FRAME_EXCEPTION( frame_a2303afd8d4ee0842153ff9386dabe6c_8 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_4b9bfec35ea3193c3c0cbf0291b29ccc_8, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_a2303afd8d4ee0842153ff9386dabe6c_8, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_4b9bfec35ea3193c3c0cbf0291b29ccc_8->m_frame )
+    else if ( exception_tb->tb_frame != &frame_a2303afd8d4ee0842153ff9386dabe6c_8->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_4b9bfec35ea3193c3c0cbf0291b29ccc_8, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_a2303afd8d4ee0842153ff9386dabe6c_8, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_4b9bfec35ea3193c3c0cbf0291b29ccc_8,
+        (struct Nuitka_FrameObject *)frame_a2303afd8d4ee0842153ff9386dabe6c_8,
         type_description_2,
         NULL
     );
 
 
     // Release cached frame.
-    if ( frame_4b9bfec35ea3193c3c0cbf0291b29ccc_8 == cache_frame_4b9bfec35ea3193c3c0cbf0291b29ccc_8 )
+    if ( frame_a2303afd8d4ee0842153ff9386dabe6c_8 == cache_frame_a2303afd8d4ee0842153ff9386dabe6c_8 )
     {
-        Py_DECREF( frame_4b9bfec35ea3193c3c0cbf0291b29ccc_8 );
+        Py_DECREF( frame_a2303afd8d4ee0842153ff9386dabe6c_8 );
     }
-    cache_frame_4b9bfec35ea3193c3c0cbf0291b29ccc_8 = NULL;
+    cache_frame_a2303afd8d4ee0842153ff9386dabe6c_8 = NULL;
 
-    assertFrameObject( frame_4b9bfec35ea3193c3c0cbf0291b29ccc_8 );
+    assertFrameObject( frame_a2303afd8d4ee0842153ff9386dabe6c_8 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -10911,7 +10911,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_14 = tmp_class_creation_7__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_14 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 102;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 102;
     tmp_assign_source_48 = CALL_FUNCTION( tmp_called_name_32, tmp_args_name_14, tmp_kw_name_14 );
     Py_DECREF( tmp_args_name_14 );
     if ( tmp_assign_source_48 == NULL )
@@ -10999,7 +10999,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     goto try_except_handler_20;
     outline_result_7:;
     tmp_args_element_name_24 = tmp_outline_return_value_7;
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 101;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 101;
     {
         PyObject *call_args[] = { tmp_args_element_name_24 };
         tmp_args_element_name_22 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_30, call_args );
@@ -11018,7 +11018,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_20;
     }
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 100;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 100;
     {
         PyObject *call_args[] = { tmp_args_element_name_22 };
         tmp_assign_source_47 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_28, call_args );
@@ -11262,7 +11262,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_15 = tmp_class_creation_8__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_15 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 125;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 125;
     tmp_assign_source_51 = CALL_FUNCTION( tmp_called_name_33, tmp_args_name_15, tmp_kw_name_15 );
     Py_DECREF( tmp_called_name_33 );
     if ( tmp_assign_source_51 == NULL )
@@ -11339,7 +11339,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         goto try_except_handler_23;
     }
 
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 124;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 124;
     {
         PyObject *call_args[] = { tmp_args_element_name_25 };
         tmp_called_name_34 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_35, call_args );
@@ -11390,14 +11390,14 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_25;
     }
-    MAKE_OR_REUSE_FRAME( cache_frame_2e9e9d5a4f1b2c3a3346e782555805fa_9, codeobj_2e9e9d5a4f1b2c3a3346e782555805fa, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
-    frame_2e9e9d5a4f1b2c3a3346e782555805fa_9 = cache_frame_2e9e9d5a4f1b2c3a3346e782555805fa_9;
+    MAKE_OR_REUSE_FRAME( cache_frame_c24673f015ba85de211b38e82925360f_9, codeobj_c24673f015ba85de211b38e82925360f, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
+    frame_c24673f015ba85de211b38e82925360f_9 = cache_frame_c24673f015ba85de211b38e82925360f_9;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_2e9e9d5a4f1b2c3a3346e782555805fa_9 );
+    pushFrameStack( frame_c24673f015ba85de211b38e82925360f_9 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_2e9e9d5a4f1b2c3a3346e782555805fa_9 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_c24673f015ba85de211b38e82925360f_9 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_dictset_value = const_str_plain_ECB;
@@ -11458,7 +11458,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_2e9e9d5a4f1b2c3a3346e782555805fa_9 );
+    RESTORE_FRAME_EXCEPTION( frame_c24673f015ba85de211b38e82925360f_9 );
 #endif
 
     // Put the previous frame back on top.
@@ -11469,34 +11469,34 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     frame_exception_exit_9:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_2e9e9d5a4f1b2c3a3346e782555805fa_9 );
+    RESTORE_FRAME_EXCEPTION( frame_c24673f015ba85de211b38e82925360f_9 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_2e9e9d5a4f1b2c3a3346e782555805fa_9, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_c24673f015ba85de211b38e82925360f_9, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_2e9e9d5a4f1b2c3a3346e782555805fa_9->m_frame )
+    else if ( exception_tb->tb_frame != &frame_c24673f015ba85de211b38e82925360f_9->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_2e9e9d5a4f1b2c3a3346e782555805fa_9, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_c24673f015ba85de211b38e82925360f_9, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_2e9e9d5a4f1b2c3a3346e782555805fa_9,
+        (struct Nuitka_FrameObject *)frame_c24673f015ba85de211b38e82925360f_9,
         type_description_2,
         NULL
     );
 
 
     // Release cached frame.
-    if ( frame_2e9e9d5a4f1b2c3a3346e782555805fa_9 == cache_frame_2e9e9d5a4f1b2c3a3346e782555805fa_9 )
+    if ( frame_c24673f015ba85de211b38e82925360f_9 == cache_frame_c24673f015ba85de211b38e82925360f_9 )
     {
-        Py_DECREF( frame_2e9e9d5a4f1b2c3a3346e782555805fa_9 );
+        Py_DECREF( frame_c24673f015ba85de211b38e82925360f_9 );
     }
-    cache_frame_2e9e9d5a4f1b2c3a3346e782555805fa_9 = NULL;
+    cache_frame_c24673f015ba85de211b38e82925360f_9 = NULL;
 
-    assertFrameObject( frame_2e9e9d5a4f1b2c3a3346e782555805fa_9 );
+    assertFrameObject( frame_c24673f015ba85de211b38e82925360f_9 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -11527,7 +11527,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_16 = tmp_class_creation_8__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_16 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 125;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 125;
     tmp_assign_source_53 = CALL_FUNCTION( tmp_called_name_36, tmp_args_name_16, tmp_kw_name_16 );
     Py_DECREF( tmp_args_name_16 );
     if ( tmp_assign_source_53 == NULL )
@@ -11615,7 +11615,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     goto try_except_handler_23;
     outline_result_8:;
     tmp_args_element_name_26 = tmp_outline_return_value_8;
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 124;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 124;
     {
         PyObject *call_args[] = { tmp_args_element_name_26 };
         tmp_assign_source_52 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_34, call_args );
@@ -11859,7 +11859,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_17 = tmp_class_creation_9__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_17 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 133;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 133;
     tmp_assign_source_56 = CALL_FUNCTION( tmp_called_name_37, tmp_args_name_17, tmp_kw_name_17 );
     Py_DECREF( tmp_called_name_37 );
     if ( tmp_assign_source_56 == NULL )
@@ -11936,7 +11936,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         goto try_except_handler_26;
     }
 
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 131;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 131;
     {
         PyObject *call_args[] = { tmp_args_element_name_27 };
         tmp_called_name_38 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_39, call_args );
@@ -12011,7 +12011,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         goto try_except_handler_26;
     }
 
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 132;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 132;
     {
         PyObject *call_args[] = { tmp_args_element_name_29 };
         tmp_called_name_40 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_41, call_args );
@@ -12062,14 +12062,14 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_28;
     }
-    MAKE_OR_REUSE_FRAME( cache_frame_e7a0d44dbec4f913eb5594acb1f42238_10, codeobj_e7a0d44dbec4f913eb5594acb1f42238, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
-    frame_e7a0d44dbec4f913eb5594acb1f42238_10 = cache_frame_e7a0d44dbec4f913eb5594acb1f42238_10;
+    MAKE_OR_REUSE_FRAME( cache_frame_bd8f2ac531edbb5148020d58b36a75f2_10, codeobj_bd8f2ac531edbb5148020d58b36a75f2, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
+    frame_bd8f2ac531edbb5148020d58b36a75f2_10 = cache_frame_bd8f2ac531edbb5148020d58b36a75f2_10;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_e7a0d44dbec4f913eb5594acb1f42238_10 );
+    pushFrameStack( frame_bd8f2ac531edbb5148020d58b36a75f2_10 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_e7a0d44dbec4f913eb5594acb1f42238_10 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_bd8f2ac531edbb5148020d58b36a75f2_10 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_dictset_value = const_str_plain_OFB;
@@ -12130,7 +12130,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         }
     }
 
-    frame_e7a0d44dbec4f913eb5594acb1f42238_10->m_frame.f_lineno = 142;
+    frame_bd8f2ac531edbb5148020d58b36a75f2_10->m_frame.f_lineno = 142;
     tmp_dictset_value = CALL_METHOD_WITH_ARGS1( tmp_called_instance_9, const_str_plain_read_only_property, &PyTuple_GET_ITEM( const_tuple_str_plain__initialization_vector_tuple, 0 ) );
 
     if ( tmp_dictset_value == NULL )
@@ -12202,7 +12202,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_e7a0d44dbec4f913eb5594acb1f42238_10 );
+    RESTORE_FRAME_EXCEPTION( frame_bd8f2ac531edbb5148020d58b36a75f2_10 );
 #endif
 
     // Put the previous frame back on top.
@@ -12213,34 +12213,34 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     frame_exception_exit_10:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_e7a0d44dbec4f913eb5594acb1f42238_10 );
+    RESTORE_FRAME_EXCEPTION( frame_bd8f2ac531edbb5148020d58b36a75f2_10 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_e7a0d44dbec4f913eb5594acb1f42238_10, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_bd8f2ac531edbb5148020d58b36a75f2_10, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_e7a0d44dbec4f913eb5594acb1f42238_10->m_frame )
+    else if ( exception_tb->tb_frame != &frame_bd8f2ac531edbb5148020d58b36a75f2_10->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_e7a0d44dbec4f913eb5594acb1f42238_10, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_bd8f2ac531edbb5148020d58b36a75f2_10, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_e7a0d44dbec4f913eb5594acb1f42238_10,
+        (struct Nuitka_FrameObject *)frame_bd8f2ac531edbb5148020d58b36a75f2_10,
         type_description_2,
         NULL
     );
 
 
     // Release cached frame.
-    if ( frame_e7a0d44dbec4f913eb5594acb1f42238_10 == cache_frame_e7a0d44dbec4f913eb5594acb1f42238_10 )
+    if ( frame_bd8f2ac531edbb5148020d58b36a75f2_10 == cache_frame_bd8f2ac531edbb5148020d58b36a75f2_10 )
     {
-        Py_DECREF( frame_e7a0d44dbec4f913eb5594acb1f42238_10 );
+        Py_DECREF( frame_bd8f2ac531edbb5148020d58b36a75f2_10 );
     }
-    cache_frame_e7a0d44dbec4f913eb5594acb1f42238_10 = NULL;
+    cache_frame_bd8f2ac531edbb5148020d58b36a75f2_10 = NULL;
 
-    assertFrameObject( frame_e7a0d44dbec4f913eb5594acb1f42238_10 );
+    assertFrameObject( frame_bd8f2ac531edbb5148020d58b36a75f2_10 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -12271,7 +12271,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_18 = tmp_class_creation_9__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_18 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 133;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 133;
     tmp_assign_source_58 = CALL_FUNCTION( tmp_called_name_42, tmp_args_name_18, tmp_kw_name_18 );
     Py_DECREF( tmp_args_name_18 );
     if ( tmp_assign_source_58 == NULL )
@@ -12359,7 +12359,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     goto try_except_handler_26;
     outline_result_9:;
     tmp_args_element_name_30 = tmp_outline_return_value_9;
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 132;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 132;
     {
         PyObject *call_args[] = { tmp_args_element_name_30 };
         tmp_args_element_name_28 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_40, call_args );
@@ -12378,7 +12378,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_26;
     }
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 131;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 131;
     {
         PyObject *call_args[] = { tmp_args_element_name_28 };
         tmp_assign_source_57 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_38, call_args );
@@ -12622,7 +12622,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_19 = tmp_class_creation_10__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_19 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 148;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 148;
     tmp_assign_source_61 = CALL_FUNCTION( tmp_called_name_43, tmp_args_name_19, tmp_kw_name_19 );
     Py_DECREF( tmp_called_name_43 );
     if ( tmp_assign_source_61 == NULL )
@@ -12699,7 +12699,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         goto try_except_handler_29;
     }
 
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 146;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 146;
     {
         PyObject *call_args[] = { tmp_args_element_name_31 };
         tmp_called_name_44 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_45, call_args );
@@ -12774,7 +12774,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         goto try_except_handler_29;
     }
 
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 147;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 147;
     {
         PyObject *call_args[] = { tmp_args_element_name_33 };
         tmp_called_name_46 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_47, call_args );
@@ -12825,14 +12825,14 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_31;
     }
-    MAKE_OR_REUSE_FRAME( cache_frame_b0ae00c808a9c3cf588f732539844b6c_11, codeobj_b0ae00c808a9c3cf588f732539844b6c, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
-    frame_b0ae00c808a9c3cf588f732539844b6c_11 = cache_frame_b0ae00c808a9c3cf588f732539844b6c_11;
+    MAKE_OR_REUSE_FRAME( cache_frame_ad9483fad53da6df67162fb1d9888574_11, codeobj_ad9483fad53da6df67162fb1d9888574, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
+    frame_ad9483fad53da6df67162fb1d9888574_11 = cache_frame_ad9483fad53da6df67162fb1d9888574_11;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_b0ae00c808a9c3cf588f732539844b6c_11 );
+    pushFrameStack( frame_ad9483fad53da6df67162fb1d9888574_11 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_b0ae00c808a9c3cf588f732539844b6c_11 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_ad9483fad53da6df67162fb1d9888574_11 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_dictset_value = const_str_plain_CFB;
@@ -12893,7 +12893,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         }
     }
 
-    frame_b0ae00c808a9c3cf588f732539844b6c_11->m_frame.f_lineno = 157;
+    frame_ad9483fad53da6df67162fb1d9888574_11->m_frame.f_lineno = 157;
     tmp_dictset_value = CALL_METHOD_WITH_ARGS1( tmp_called_instance_10, const_str_plain_read_only_property, &PyTuple_GET_ITEM( const_tuple_str_plain__initialization_vector_tuple, 0 ) );
 
     if ( tmp_dictset_value == NULL )
@@ -12965,7 +12965,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_b0ae00c808a9c3cf588f732539844b6c_11 );
+    RESTORE_FRAME_EXCEPTION( frame_ad9483fad53da6df67162fb1d9888574_11 );
 #endif
 
     // Put the previous frame back on top.
@@ -12976,34 +12976,34 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     frame_exception_exit_11:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_b0ae00c808a9c3cf588f732539844b6c_11 );
+    RESTORE_FRAME_EXCEPTION( frame_ad9483fad53da6df67162fb1d9888574_11 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_b0ae00c808a9c3cf588f732539844b6c_11, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_ad9483fad53da6df67162fb1d9888574_11, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_b0ae00c808a9c3cf588f732539844b6c_11->m_frame )
+    else if ( exception_tb->tb_frame != &frame_ad9483fad53da6df67162fb1d9888574_11->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_b0ae00c808a9c3cf588f732539844b6c_11, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_ad9483fad53da6df67162fb1d9888574_11, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_b0ae00c808a9c3cf588f732539844b6c_11,
+        (struct Nuitka_FrameObject *)frame_ad9483fad53da6df67162fb1d9888574_11,
         type_description_2,
         NULL
     );
 
 
     // Release cached frame.
-    if ( frame_b0ae00c808a9c3cf588f732539844b6c_11 == cache_frame_b0ae00c808a9c3cf588f732539844b6c_11 )
+    if ( frame_ad9483fad53da6df67162fb1d9888574_11 == cache_frame_ad9483fad53da6df67162fb1d9888574_11 )
     {
-        Py_DECREF( frame_b0ae00c808a9c3cf588f732539844b6c_11 );
+        Py_DECREF( frame_ad9483fad53da6df67162fb1d9888574_11 );
     }
-    cache_frame_b0ae00c808a9c3cf588f732539844b6c_11 = NULL;
+    cache_frame_ad9483fad53da6df67162fb1d9888574_11 = NULL;
 
-    assertFrameObject( frame_b0ae00c808a9c3cf588f732539844b6c_11 );
+    assertFrameObject( frame_ad9483fad53da6df67162fb1d9888574_11 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -13034,7 +13034,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_20 = tmp_class_creation_10__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_20 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 148;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 148;
     tmp_assign_source_63 = CALL_FUNCTION( tmp_called_name_48, tmp_args_name_20, tmp_kw_name_20 );
     Py_DECREF( tmp_args_name_20 );
     if ( tmp_assign_source_63 == NULL )
@@ -13122,7 +13122,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     goto try_except_handler_29;
     outline_result_10:;
     tmp_args_element_name_34 = tmp_outline_return_value_10;
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 147;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 147;
     {
         PyObject *call_args[] = { tmp_args_element_name_34 };
         tmp_args_element_name_32 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_46, call_args );
@@ -13141,7 +13141,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_29;
     }
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 146;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 146;
     {
         PyObject *call_args[] = { tmp_args_element_name_32 };
         tmp_assign_source_62 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_44, call_args );
@@ -13385,7 +13385,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_21 = tmp_class_creation_11__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_21 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 163;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 163;
     tmp_assign_source_66 = CALL_FUNCTION( tmp_called_name_49, tmp_args_name_21, tmp_kw_name_21 );
     Py_DECREF( tmp_called_name_49 );
     if ( tmp_assign_source_66 == NULL )
@@ -13462,7 +13462,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         goto try_except_handler_32;
     }
 
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 161;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 161;
     {
         PyObject *call_args[] = { tmp_args_element_name_35 };
         tmp_called_name_50 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_51, call_args );
@@ -13537,7 +13537,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         goto try_except_handler_32;
     }
 
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 162;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 162;
     {
         PyObject *call_args[] = { tmp_args_element_name_37 };
         tmp_called_name_52 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_53, call_args );
@@ -13588,14 +13588,14 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_34;
     }
-    MAKE_OR_REUSE_FRAME( cache_frame_0881da6341248daf8debda1261927749_12, codeobj_0881da6341248daf8debda1261927749, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
-    frame_0881da6341248daf8debda1261927749_12 = cache_frame_0881da6341248daf8debda1261927749_12;
+    MAKE_OR_REUSE_FRAME( cache_frame_194739e37fd03d85fc0e4d41f8282466_12, codeobj_194739e37fd03d85fc0e4d41f8282466, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
+    frame_194739e37fd03d85fc0e4d41f8282466_12 = cache_frame_194739e37fd03d85fc0e4d41f8282466_12;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_0881da6341248daf8debda1261927749_12 );
+    pushFrameStack( frame_194739e37fd03d85fc0e4d41f8282466_12 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_0881da6341248daf8debda1261927749_12 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_194739e37fd03d85fc0e4d41f8282466_12 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_dictset_value = const_str_plain_CFB8;
@@ -13656,7 +13656,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         }
     }
 
-    frame_0881da6341248daf8debda1261927749_12->m_frame.f_lineno = 172;
+    frame_194739e37fd03d85fc0e4d41f8282466_12->m_frame.f_lineno = 172;
     tmp_dictset_value = CALL_METHOD_WITH_ARGS1( tmp_called_instance_11, const_str_plain_read_only_property, &PyTuple_GET_ITEM( const_tuple_str_plain__initialization_vector_tuple, 0 ) );
 
     if ( tmp_dictset_value == NULL )
@@ -13728,7 +13728,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_0881da6341248daf8debda1261927749_12 );
+    RESTORE_FRAME_EXCEPTION( frame_194739e37fd03d85fc0e4d41f8282466_12 );
 #endif
 
     // Put the previous frame back on top.
@@ -13739,34 +13739,34 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     frame_exception_exit_12:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_0881da6341248daf8debda1261927749_12 );
+    RESTORE_FRAME_EXCEPTION( frame_194739e37fd03d85fc0e4d41f8282466_12 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_0881da6341248daf8debda1261927749_12, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_194739e37fd03d85fc0e4d41f8282466_12, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_0881da6341248daf8debda1261927749_12->m_frame )
+    else if ( exception_tb->tb_frame != &frame_194739e37fd03d85fc0e4d41f8282466_12->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_0881da6341248daf8debda1261927749_12, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_194739e37fd03d85fc0e4d41f8282466_12, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_0881da6341248daf8debda1261927749_12,
+        (struct Nuitka_FrameObject *)frame_194739e37fd03d85fc0e4d41f8282466_12,
         type_description_2,
         NULL
     );
 
 
     // Release cached frame.
-    if ( frame_0881da6341248daf8debda1261927749_12 == cache_frame_0881da6341248daf8debda1261927749_12 )
+    if ( frame_194739e37fd03d85fc0e4d41f8282466_12 == cache_frame_194739e37fd03d85fc0e4d41f8282466_12 )
     {
-        Py_DECREF( frame_0881da6341248daf8debda1261927749_12 );
+        Py_DECREF( frame_194739e37fd03d85fc0e4d41f8282466_12 );
     }
-    cache_frame_0881da6341248daf8debda1261927749_12 = NULL;
+    cache_frame_194739e37fd03d85fc0e4d41f8282466_12 = NULL;
 
-    assertFrameObject( frame_0881da6341248daf8debda1261927749_12 );
+    assertFrameObject( frame_194739e37fd03d85fc0e4d41f8282466_12 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -13797,7 +13797,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_22 = tmp_class_creation_11__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_22 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 163;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 163;
     tmp_assign_source_68 = CALL_FUNCTION( tmp_called_name_54, tmp_args_name_22, tmp_kw_name_22 );
     Py_DECREF( tmp_args_name_22 );
     if ( tmp_assign_source_68 == NULL )
@@ -13885,7 +13885,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     goto try_except_handler_32;
     outline_result_11:;
     tmp_args_element_name_38 = tmp_outline_return_value_11;
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 162;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 162;
     {
         PyObject *call_args[] = { tmp_args_element_name_38 };
         tmp_args_element_name_36 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_52, call_args );
@@ -13904,7 +13904,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_32;
     }
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 161;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 161;
     {
         PyObject *call_args[] = { tmp_args_element_name_36 };
         tmp_assign_source_67 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_50, call_args );
@@ -14148,7 +14148,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_23 = tmp_class_creation_12__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_23 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 178;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 178;
     tmp_assign_source_71 = CALL_FUNCTION( tmp_called_name_55, tmp_args_name_23, tmp_kw_name_23 );
     Py_DECREF( tmp_called_name_55 );
     if ( tmp_assign_source_71 == NULL )
@@ -14225,7 +14225,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         goto try_except_handler_35;
     }
 
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 176;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 176;
     {
         PyObject *call_args[] = { tmp_args_element_name_39 };
         tmp_called_name_56 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_57, call_args );
@@ -14300,7 +14300,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         goto try_except_handler_35;
     }
 
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 177;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 177;
     {
         PyObject *call_args[] = { tmp_args_element_name_41 };
         tmp_called_name_58 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_59, call_args );
@@ -14351,14 +14351,14 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_37;
     }
-    MAKE_OR_REUSE_FRAME( cache_frame_8f96488898131ec8e9701a2fa0f808a7_13, codeobj_8f96488898131ec8e9701a2fa0f808a7, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
-    frame_8f96488898131ec8e9701a2fa0f808a7_13 = cache_frame_8f96488898131ec8e9701a2fa0f808a7_13;
+    MAKE_OR_REUSE_FRAME( cache_frame_1b8cd968dd3f0c4a50481f98b9dc64a4_13, codeobj_1b8cd968dd3f0c4a50481f98b9dc64a4, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
+    frame_1b8cd968dd3f0c4a50481f98b9dc64a4_13 = cache_frame_1b8cd968dd3f0c4a50481f98b9dc64a4_13;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_8f96488898131ec8e9701a2fa0f808a7_13 );
+    pushFrameStack( frame_1b8cd968dd3f0c4a50481f98b9dc64a4_13 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_8f96488898131ec8e9701a2fa0f808a7_13 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_1b8cd968dd3f0c4a50481f98b9dc64a4_13 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_dictset_value = const_str_plain_CTR;
@@ -14419,7 +14419,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         }
     }
 
-    frame_8f96488898131ec8e9701a2fa0f808a7_13->m_frame.f_lineno = 187;
+    frame_1b8cd968dd3f0c4a50481f98b9dc64a4_13->m_frame.f_lineno = 187;
     tmp_dictset_value = CALL_METHOD_WITH_ARGS1( tmp_called_instance_12, const_str_plain_read_only_property, &PyTuple_GET_ITEM( const_tuple_str_plain__nonce_tuple, 0 ) );
 
     if ( tmp_dictset_value == NULL )
@@ -14462,7 +14462,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_8f96488898131ec8e9701a2fa0f808a7_13 );
+    RESTORE_FRAME_EXCEPTION( frame_1b8cd968dd3f0c4a50481f98b9dc64a4_13 );
 #endif
 
     // Put the previous frame back on top.
@@ -14473,34 +14473,34 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     frame_exception_exit_13:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_8f96488898131ec8e9701a2fa0f808a7_13 );
+    RESTORE_FRAME_EXCEPTION( frame_1b8cd968dd3f0c4a50481f98b9dc64a4_13 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_8f96488898131ec8e9701a2fa0f808a7_13, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_1b8cd968dd3f0c4a50481f98b9dc64a4_13, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_8f96488898131ec8e9701a2fa0f808a7_13->m_frame )
+    else if ( exception_tb->tb_frame != &frame_1b8cd968dd3f0c4a50481f98b9dc64a4_13->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_8f96488898131ec8e9701a2fa0f808a7_13, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_1b8cd968dd3f0c4a50481f98b9dc64a4_13, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_8f96488898131ec8e9701a2fa0f808a7_13,
+        (struct Nuitka_FrameObject *)frame_1b8cd968dd3f0c4a50481f98b9dc64a4_13,
         type_description_2,
         NULL
     );
 
 
     // Release cached frame.
-    if ( frame_8f96488898131ec8e9701a2fa0f808a7_13 == cache_frame_8f96488898131ec8e9701a2fa0f808a7_13 )
+    if ( frame_1b8cd968dd3f0c4a50481f98b9dc64a4_13 == cache_frame_1b8cd968dd3f0c4a50481f98b9dc64a4_13 )
     {
-        Py_DECREF( frame_8f96488898131ec8e9701a2fa0f808a7_13 );
+        Py_DECREF( frame_1b8cd968dd3f0c4a50481f98b9dc64a4_13 );
     }
-    cache_frame_8f96488898131ec8e9701a2fa0f808a7_13 = NULL;
+    cache_frame_1b8cd968dd3f0c4a50481f98b9dc64a4_13 = NULL;
 
-    assertFrameObject( frame_8f96488898131ec8e9701a2fa0f808a7_13 );
+    assertFrameObject( frame_1b8cd968dd3f0c4a50481f98b9dc64a4_13 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -14531,7 +14531,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_24 = tmp_class_creation_12__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_24 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 178;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 178;
     tmp_assign_source_73 = CALL_FUNCTION( tmp_called_name_60, tmp_args_name_24, tmp_kw_name_24 );
     Py_DECREF( tmp_args_name_24 );
     if ( tmp_assign_source_73 == NULL )
@@ -14619,7 +14619,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     goto try_except_handler_35;
     outline_result_12:;
     tmp_args_element_name_42 = tmp_outline_return_value_12;
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 177;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 177;
     {
         PyObject *call_args[] = { tmp_args_element_name_42 };
         tmp_args_element_name_40 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_58, call_args );
@@ -14638,7 +14638,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_35;
     }
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 176;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 176;
     {
         PyObject *call_args[] = { tmp_args_element_name_40 };
         tmp_assign_source_72 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_56, call_args );
@@ -14882,7 +14882,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_25 = tmp_class_creation_13__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_25 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 200;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 200;
     tmp_assign_source_76 = CALL_FUNCTION( tmp_called_name_61, tmp_args_name_25, tmp_kw_name_25 );
     Py_DECREF( tmp_called_name_61 );
     if ( tmp_assign_source_76 == NULL )
@@ -14959,7 +14959,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         goto try_except_handler_38;
     }
 
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 197;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 197;
     {
         PyObject *call_args[] = { tmp_args_element_name_43 };
         tmp_called_name_62 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_63, call_args );
@@ -15034,7 +15034,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         goto try_except_handler_38;
     }
 
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 198;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 198;
     {
         PyObject *call_args[] = { tmp_args_element_name_45 };
         tmp_called_name_64 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_65, call_args );
@@ -15112,7 +15112,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         goto try_except_handler_38;
     }
 
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 199;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 199;
     {
         PyObject *call_args[] = { tmp_args_element_name_47 };
         tmp_called_name_66 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_67, call_args );
@@ -15164,14 +15164,14 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_40;
     }
-    MAKE_OR_REUSE_FRAME( cache_frame_5b23aa3c9acb1459d56450d441ed5069_14, codeobj_5b23aa3c9acb1459d56450d441ed5069, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
-    frame_5b23aa3c9acb1459d56450d441ed5069_14 = cache_frame_5b23aa3c9acb1459d56450d441ed5069_14;
+    MAKE_OR_REUSE_FRAME( cache_frame_52244e10fce444b9594123e7db555138_14, codeobj_52244e10fce444b9594123e7db555138, module_cryptography$hazmat$primitives$ciphers$modes, sizeof(void *) );
+    frame_52244e10fce444b9594123e7db555138_14 = cache_frame_52244e10fce444b9594123e7db555138_14;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_5b23aa3c9acb1459d56450d441ed5069_14 );
+    pushFrameStack( frame_52244e10fce444b9594123e7db555138_14 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_5b23aa3c9acb1459d56450d441ed5069_14 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_52244e10fce444b9594123e7db555138_14 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_dictset_value = const_str_plain_GCM;
@@ -15260,7 +15260,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         }
     }
 
-    frame_5b23aa3c9acb1459d56450d441ed5069_14->m_frame.f_lineno = 227;
+    frame_52244e10fce444b9594123e7db555138_14->m_frame.f_lineno = 227;
     tmp_dictset_value = CALL_METHOD_WITH_ARGS1( tmp_called_instance_13, const_str_plain_read_only_property, &PyTuple_GET_ITEM( const_tuple_str_plain__tag_tuple, 0 ) );
 
     if ( tmp_dictset_value == NULL )
@@ -15318,7 +15318,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
         }
     }
 
-    frame_5b23aa3c9acb1459d56450d441ed5069_14->m_frame.f_lineno = 228;
+    frame_52244e10fce444b9594123e7db555138_14->m_frame.f_lineno = 228;
     tmp_dictset_value = CALL_METHOD_WITH_ARGS1( tmp_called_instance_14, const_str_plain_read_only_property, &PyTuple_GET_ITEM( const_tuple_str_plain__initialization_vector_tuple, 0 ) );
 
     if ( tmp_dictset_value == NULL )
@@ -15361,7 +15361,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_5b23aa3c9acb1459d56450d441ed5069_14 );
+    RESTORE_FRAME_EXCEPTION( frame_52244e10fce444b9594123e7db555138_14 );
 #endif
 
     // Put the previous frame back on top.
@@ -15372,34 +15372,34 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     frame_exception_exit_14:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_5b23aa3c9acb1459d56450d441ed5069_14 );
+    RESTORE_FRAME_EXCEPTION( frame_52244e10fce444b9594123e7db555138_14 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_5b23aa3c9acb1459d56450d441ed5069_14, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_52244e10fce444b9594123e7db555138_14, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_5b23aa3c9acb1459d56450d441ed5069_14->m_frame )
+    else if ( exception_tb->tb_frame != &frame_52244e10fce444b9594123e7db555138_14->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_5b23aa3c9acb1459d56450d441ed5069_14, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_52244e10fce444b9594123e7db555138_14, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_5b23aa3c9acb1459d56450d441ed5069_14,
+        (struct Nuitka_FrameObject *)frame_52244e10fce444b9594123e7db555138_14,
         type_description_2,
         NULL
     );
 
 
     // Release cached frame.
-    if ( frame_5b23aa3c9acb1459d56450d441ed5069_14 == cache_frame_5b23aa3c9acb1459d56450d441ed5069_14 )
+    if ( frame_52244e10fce444b9594123e7db555138_14 == cache_frame_52244e10fce444b9594123e7db555138_14 )
     {
-        Py_DECREF( frame_5b23aa3c9acb1459d56450d441ed5069_14 );
+        Py_DECREF( frame_52244e10fce444b9594123e7db555138_14 );
     }
-    cache_frame_5b23aa3c9acb1459d56450d441ed5069_14 = NULL;
+    cache_frame_52244e10fce444b9594123e7db555138_14 = NULL;
 
-    assertFrameObject( frame_5b23aa3c9acb1459d56450d441ed5069_14 );
+    assertFrameObject( frame_52244e10fce444b9594123e7db555138_14 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -15430,7 +15430,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     tmp_kw_name_26 = tmp_class_creation_13__class_decl_dict;
 
     CHECK_OBJECT( tmp_kw_name_26 );
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 200;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 200;
     tmp_assign_source_78 = CALL_FUNCTION( tmp_called_name_68, tmp_args_name_26, tmp_kw_name_26 );
     Py_DECREF( tmp_args_name_26 );
     if ( tmp_assign_source_78 == NULL )
@@ -15518,7 +15518,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
     goto try_except_handler_38;
     outline_result_13:;
     tmp_args_element_name_48 = tmp_outline_return_value_13;
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 199;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 199;
     {
         PyObject *call_args[] = { tmp_args_element_name_48 };
         tmp_args_element_name_46 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_66, call_args );
@@ -15538,7 +15538,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_38;
     }
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 198;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 198;
     {
         PyObject *call_args[] = { tmp_args_element_name_46 };
         tmp_args_element_name_44 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_64, call_args );
@@ -15557,7 +15557,7 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
         goto try_except_handler_38;
     }
-    frame_146e507e6aedec759ceb49b390d0963e->m_frame.f_lineno = 197;
+    frame_2104462709df03f06f426142bf59e6d6->m_frame.f_lineno = 197;
     {
         PyObject *call_args[] = { tmp_args_element_name_44 };
         tmp_assign_source_77 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_62, call_args );
@@ -15611,25 +15611,25 @@ MOD_INIT_DECL( cryptography$hazmat$primitives$ciphers$modes )
 
     // Restore frame exception if necessary.
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_146e507e6aedec759ceb49b390d0963e );
+    RESTORE_FRAME_EXCEPTION( frame_2104462709df03f06f426142bf59e6d6 );
 #endif
     popFrameStack();
 
-    assertFrameObject( frame_146e507e6aedec759ceb49b390d0963e );
+    assertFrameObject( frame_2104462709df03f06f426142bf59e6d6 );
 
     goto frame_no_exception_14;
     frame_exception_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_146e507e6aedec759ceb49b390d0963e );
+    RESTORE_FRAME_EXCEPTION( frame_2104462709df03f06f426142bf59e6d6 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_146e507e6aedec759ceb49b390d0963e, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_2104462709df03f06f426142bf59e6d6, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_146e507e6aedec759ceb49b390d0963e->m_frame )
+    else if ( exception_tb->tb_frame != &frame_2104462709df03f06f426142bf59e6d6->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_146e507e6aedec759ceb49b390d0963e, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_2104462709df03f06f426142bf59e6d6, exception_lineno );
     }
 
     // Put the previous frame back on top.

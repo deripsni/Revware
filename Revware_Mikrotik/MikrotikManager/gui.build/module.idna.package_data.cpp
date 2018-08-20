@@ -31,21 +31,22 @@ PyObject *module_idna$package_data;
 PyDictObject *moduledict_idna$package_data;
 
 /* The module constants used, if any. */
-static PyObject *const_str_digest_7c22664d780c7da30a7d9ae2295ceff9;
 extern PyObject *const_str_plain___file__;
 static PyObject *const_str_digest_3054b5ec22f6f3e39a016efbfb80bac6;
 extern PyObject *const_str_plain___version__;
 static PyObject *const_str_digest_b613c52bfa4ea5ca1812685ef6ae5431;
+static PyObject *const_str_digest_63f0700dcae8ce2a208254cc9e097f0e;
 extern PyObject *const_str_plain___doc__;
 extern PyObject *const_str_plain___cached__;
+static PyObject *module_filename_obj;
 
 static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_7c22664d780c7da30a7d9ae2295ceff9 = UNSTREAM_STRING( &constant_bin[ 211662 ], 92, 0 );
-    const_str_digest_3054b5ec22f6f3e39a016efbfb80bac6 = UNSTREAM_STRING( &constant_bin[ 211754 ], 17, 0 );
-    const_str_digest_b613c52bfa4ea5ca1812685ef6ae5431 = UNSTREAM_STRING( &constant_bin[ 21930 ], 3, 0 );
+    const_str_digest_3054b5ec22f6f3e39a016efbfb80bac6 = UNSTREAM_STRING( &constant_bin[ 205461 ], 17, 0 );
+    const_str_digest_b613c52bfa4ea5ca1812685ef6ae5431 = UNSTREAM_STRING( &constant_bin[ 20906 ], 3, 0 );
+    const_str_digest_63f0700dcae8ce2a208254cc9e097f0e = UNSTREAM_STRING( &constant_bin[ 205478 ], 20, 0 );
 
     constants_created = true;
 }
@@ -65,7 +66,7 @@ void checkModuleConstants_idna$package_data( void )
 
 static void createModuleCodeObjects(void)
 {
-
+    module_filename_obj = MAKE_RELATIVE_PATH( const_str_digest_63f0700dcae8ce2a208254cc9e097f0e );
 }
 
 // The module function declarations.
@@ -328,7 +329,7 @@ MOD_INIT_DECL( idna$package_data )
     // Module code.
     tmp_assign_source_1 = Py_None;
     UPDATE_STRING_DICT0( moduledict_idna$package_data, (Nuitka_StringObject *)const_str_plain___doc__, tmp_assign_source_1 );
-    tmp_assign_source_2 = const_str_digest_7c22664d780c7da30a7d9ae2295ceff9;
+    tmp_assign_source_2 = module_filename_obj;
     UPDATE_STRING_DICT0( moduledict_idna$package_data, (Nuitka_StringObject *)const_str_plain___file__, tmp_assign_source_2 );
     tmp_assign_source_3 = Py_None;
     UPDATE_STRING_DICT0( moduledict_idna$package_data, (Nuitka_StringObject *)const_str_plain___cached__, tmp_assign_source_3 );

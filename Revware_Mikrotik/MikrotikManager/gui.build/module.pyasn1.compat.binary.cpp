@@ -36,7 +36,6 @@ extern PyObject *const_str_plain_abs;
 extern PyObject *const_str_plain_sys;
 extern PyObject *const_str_plain_False;
 static PyObject *const_tuple_int_pos_2_int_pos_6_tuple;
-static PyObject *const_str_digest_2fa880849063e43a287eb30e842e6a26;
 extern PyObject *const_int_pos_1;
 extern PyObject *const_str_plain___file__;
 extern PyObject *const_str_plain_0;
@@ -55,6 +54,7 @@ extern PyObject *const_str_plain_version_info;
 extern PyObject *const_int_pos_6;
 extern PyObject *const_str_plain_None;
 extern PyObject *const_tuple_empty;
+static PyObject *const_str_digest_65043da29b288881a59d7353bbb839e5;
 extern PyObject *const_int_pos_2;
 extern PyObject *const_str_plain_append;
 extern PyObject *const_str_plain_bin;
@@ -75,16 +75,16 @@ static void createModuleConstants( void )
     const_tuple_int_pos_2_int_pos_6_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_int_pos_2_int_pos_6_tuple, 0, const_int_pos_2 ); Py_INCREF( const_int_pos_2 );
     PyTuple_SET_ITEM( const_tuple_int_pos_2_int_pos_6_tuple, 1, const_int_pos_6 ); Py_INCREF( const_int_pos_6 );
-    const_str_digest_2fa880849063e43a287eb30e842e6a26 = UNSTREAM_STRING( &constant_bin[ 630494 ], 95, 0 );
-    const_str_plain_bitstring = UNSTREAM_STRING( &constant_bin[ 630589 ], 9, 1 );
+    const_str_plain_bitstring = UNSTREAM_STRING( &constant_bin[ 618505 ], 9, 1 );
     const_tuple_str_plain_value_str_plain_bitstring_str_plain_prefix_tuple = PyTuple_New( 3 );
     PyTuple_SET_ITEM( const_tuple_str_plain_value_str_plain_bitstring_str_plain_prefix_tuple, 0, const_str_plain_value ); Py_INCREF( const_str_plain_value );
     PyTuple_SET_ITEM( const_tuple_str_plain_value_str_plain_bitstring_str_plain_prefix_tuple, 1, const_str_plain_bitstring ); Py_INCREF( const_str_plain_bitstring );
     PyTuple_SET_ITEM( const_tuple_str_plain_value_str_plain_bitstring_str_plain_prefix_tuple, 2, const_str_plain_prefix ); Py_INCREF( const_str_plain_prefix );
-    const_str_digest_1350fd4c86248194dddd035bb3e38203 = UNSTREAM_STRING( &constant_bin[ 630598 ], 3, 0 );
-    const_str_digest_bc95cb2008216b3ab18f393e5ae2c051 = UNSTREAM_STRING( &constant_bin[ 630601 ], 29, 0 );
-    const_str_plain_0b0 = UNSTREAM_STRING( &constant_bin[ 630630 ], 3, 0 );
-    const_str_digest_206f76f7a52f47ef7b96e6730becc746 = UNSTREAM_STRING( &constant_bin[ 630609 ], 20, 0 );
+    const_str_digest_1350fd4c86248194dddd035bb3e38203 = UNSTREAM_STRING( &constant_bin[ 618514 ], 3, 0 );
+    const_str_digest_bc95cb2008216b3ab18f393e5ae2c051 = UNSTREAM_STRING( &constant_bin[ 618517 ], 29, 0 );
+    const_str_plain_0b0 = UNSTREAM_STRING( &constant_bin[ 618546 ], 3, 0 );
+    const_str_digest_206f76f7a52f47ef7b96e6730becc746 = UNSTREAM_STRING( &constant_bin[ 618525 ], 20, 0 );
+    const_str_digest_65043da29b288881a59d7353bbb839e5 = UNSTREAM_STRING( &constant_bin[ 618549 ], 23, 0 );
     const_tuple_str_plain_1_tuple = PyTuple_New( 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain_1_tuple, 0, const_str_plain_1 ); Py_INCREF( const_str_plain_1 );
 
@@ -102,14 +102,14 @@ void checkModuleConstants_pyasn1$compat$binary( void )
 #endif
 
 // The module code objects.
-static PyCodeObject *codeobj_45bddc5f70a76df3c1ea49171e2011db;
-static PyCodeObject *codeobj_83a4c1ccd6e76f9b1a04bb3aac7f0003;
+static PyCodeObject *codeobj_fc641a22fa50387e208dc350af42ee74;
+static PyCodeObject *codeobj_a39cbec1456114f917975532f78ae32c;
 
 static void createModuleCodeObjects(void)
 {
-    module_filename_obj = const_str_digest_2fa880849063e43a287eb30e842e6a26;
-    codeobj_45bddc5f70a76df3c1ea49171e2011db = MAKE_CODEOBJ( module_filename_obj, const_str_digest_bc95cb2008216b3ab18f393e5ae2c051, 1, const_tuple_empty, 0, 0, CO_NOFREE );
-    codeobj_83a4c1ccd6e76f9b1a04bb3aac7f0003 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_bin, 10, const_tuple_str_plain_value_str_plain_bitstring_str_plain_prefix_tuple, 1, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    module_filename_obj = MAKE_RELATIVE_PATH( const_str_digest_65043da29b288881a59d7353bbb839e5 );
+    codeobj_fc641a22fa50387e208dc350af42ee74 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_bc95cb2008216b3ab18f393e5ae2c051, 1, const_tuple_empty, 0, 0, CO_NOFREE );
+    codeobj_a39cbec1456114f917975532f78ae32c = MAKE_CODEOBJ( module_filename_obj, const_str_plain_bin, 10, const_tuple_str_plain_value_str_plain_bitstring_str_plain_prefix_tuple, 1, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
 }
 
 // The module function declarations.
@@ -170,9 +170,9 @@ static PyObject *impl_pyasn1$compat$binary$$$function_1_bin( struct Nuitka_Funct
     PyObject *tmp_right_name_3;
     PyObject *tmp_source_name_1;
     NUITKA_MAY_BE_UNUSED PyObject *tmp_unused;
-    static struct Nuitka_FrameObject *cache_frame_83a4c1ccd6e76f9b1a04bb3aac7f0003 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_a39cbec1456114f917975532f78ae32c = NULL;
 
-    struct Nuitka_FrameObject *frame_83a4c1ccd6e76f9b1a04bb3aac7f0003;
+    struct Nuitka_FrameObject *frame_a39cbec1456114f917975532f78ae32c;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
@@ -183,14 +183,14 @@ static PyObject *impl_pyasn1$compat$binary$$$function_1_bin( struct Nuitka_Funct
     var_bitstring = tmp_assign_source_1;
 
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_83a4c1ccd6e76f9b1a04bb3aac7f0003, codeobj_83a4c1ccd6e76f9b1a04bb3aac7f0003, module_pyasn1$compat$binary, sizeof(void *)+sizeof(void *)+sizeof(void *) );
-    frame_83a4c1ccd6e76f9b1a04bb3aac7f0003 = cache_frame_83a4c1ccd6e76f9b1a04bb3aac7f0003;
+    MAKE_OR_REUSE_FRAME( cache_frame_a39cbec1456114f917975532f78ae32c, codeobj_a39cbec1456114f917975532f78ae32c, module_pyasn1$compat$binary, sizeof(void *)+sizeof(void *)+sizeof(void *) );
+    frame_a39cbec1456114f917975532f78ae32c = cache_frame_a39cbec1456114f917975532f78ae32c;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_83a4c1ccd6e76f9b1a04bb3aac7f0003 );
+    pushFrameStack( frame_a39cbec1456114f917975532f78ae32c );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_83a4c1ccd6e76f9b1a04bb3aac7f0003 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_a39cbec1456114f917975532f78ae32c ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_compare_left_1 = par_value;
@@ -288,7 +288,7 @@ static PyObject *impl_pyasn1$compat$binary$$$function_1_bin( struct Nuitka_Funct
         goto frame_exception_exit_1;
     }
 
-    frame_83a4c1ccd6e76f9b1a04bb3aac7f0003->m_frame.f_lineno = 17;
+    frame_a39cbec1456114f917975532f78ae32c->m_frame.f_lineno = 17;
     {
         PyObject *call_args[] = { tmp_args_element_name_1 };
         tmp_assign_source_4 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_1, call_args );
@@ -431,7 +431,7 @@ static PyObject *impl_pyasn1$compat$binary$$$function_1_bin( struct Nuitka_Funct
         goto frame_exception_exit_1;
     }
 
-    frame_83a4c1ccd6e76f9b1a04bb3aac7f0003->m_frame.f_lineno = 23;
+    frame_a39cbec1456114f917975532f78ae32c->m_frame.f_lineno = 23;
     tmp_unused = CALL_METHOD_WITH_ARGS1( tmp_called_instance_1, const_str_plain_append, &PyTuple_GET_ITEM( const_tuple_str_plain_1_tuple, 0 ) );
 
     if ( tmp_unused == NULL )
@@ -465,7 +465,7 @@ static PyObject *impl_pyasn1$compat$binary$$$function_1_bin( struct Nuitka_Funct
         goto frame_exception_exit_1;
     }
 
-    frame_83a4c1ccd6e76f9b1a04bb3aac7f0003->m_frame.f_lineno = 25;
+    frame_a39cbec1456114f917975532f78ae32c->m_frame.f_lineno = 25;
     tmp_unused = CALL_METHOD_WITH_ARGS1( tmp_called_instance_2, const_str_plain_append, &PyTuple_GET_ITEM( const_tuple_str_plain_0_tuple, 0 ) );
 
     if ( tmp_unused == NULL )
@@ -544,7 +544,7 @@ static PyObject *impl_pyasn1$compat$binary$$$function_1_bin( struct Nuitka_Funct
         goto frame_exception_exit_1;
     }
 
-    frame_83a4c1ccd6e76f9b1a04bb3aac7f0003->m_frame.f_lineno = 29;
+    frame_a39cbec1456114f917975532f78ae32c->m_frame.f_lineno = 29;
     tmp_unused = CALL_METHOD_NO_ARGS( tmp_called_instance_3, const_str_plain_reverse );
     if ( tmp_unused == NULL )
     {
@@ -595,7 +595,7 @@ static PyObject *impl_pyasn1$compat$binary$$$function_1_bin( struct Nuitka_Funct
         goto frame_exception_exit_1;
     }
 
-    frame_83a4c1ccd6e76f9b1a04bb3aac7f0003->m_frame.f_lineno = 31;
+    frame_a39cbec1456114f917975532f78ae32c->m_frame.f_lineno = 31;
     {
         PyObject *call_args[] = { tmp_args_element_name_2 };
         tmp_right_name_3 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_2, call_args );
@@ -629,7 +629,7 @@ static PyObject *impl_pyasn1$compat$binary$$$function_1_bin( struct Nuitka_Funct
     goto frame_return_exit_1;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_83a4c1ccd6e76f9b1a04bb3aac7f0003 );
+    RESTORE_FRAME_EXCEPTION( frame_a39cbec1456114f917975532f78ae32c );
 #endif
 
     // Put the previous frame back on top.
@@ -639,7 +639,7 @@ static PyObject *impl_pyasn1$compat$binary$$$function_1_bin( struct Nuitka_Funct
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_83a4c1ccd6e76f9b1a04bb3aac7f0003 );
+    RESTORE_FRAME_EXCEPTION( frame_a39cbec1456114f917975532f78ae32c );
 #endif
 
     // Put the previous frame back on top.
@@ -650,21 +650,21 @@ static PyObject *impl_pyasn1$compat$binary$$$function_1_bin( struct Nuitka_Funct
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_83a4c1ccd6e76f9b1a04bb3aac7f0003 );
+    RESTORE_FRAME_EXCEPTION( frame_a39cbec1456114f917975532f78ae32c );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_83a4c1ccd6e76f9b1a04bb3aac7f0003, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_a39cbec1456114f917975532f78ae32c, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_83a4c1ccd6e76f9b1a04bb3aac7f0003->m_frame )
+    else if ( exception_tb->tb_frame != &frame_a39cbec1456114f917975532f78ae32c->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_83a4c1ccd6e76f9b1a04bb3aac7f0003, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_a39cbec1456114f917975532f78ae32c, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_83a4c1ccd6e76f9b1a04bb3aac7f0003,
+        (struct Nuitka_FrameObject *)frame_a39cbec1456114f917975532f78ae32c,
         type_description_1,
         par_value,
         var_bitstring,
@@ -673,13 +673,13 @@ static PyObject *impl_pyasn1$compat$binary$$$function_1_bin( struct Nuitka_Funct
 
 
     // Release cached frame.
-    if ( frame_83a4c1ccd6e76f9b1a04bb3aac7f0003 == cache_frame_83a4c1ccd6e76f9b1a04bb3aac7f0003 )
+    if ( frame_a39cbec1456114f917975532f78ae32c == cache_frame_a39cbec1456114f917975532f78ae32c )
     {
-        Py_DECREF( frame_83a4c1ccd6e76f9b1a04bb3aac7f0003 );
+        Py_DECREF( frame_a39cbec1456114f917975532f78ae32c );
     }
-    cache_frame_83a4c1ccd6e76f9b1a04bb3aac7f0003 = NULL;
+    cache_frame_a39cbec1456114f917975532f78ae32c = NULL;
 
-    assertFrameObject( frame_83a4c1ccd6e76f9b1a04bb3aac7f0003 );
+    assertFrameObject( frame_a39cbec1456114f917975532f78ae32c );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -760,7 +760,7 @@ static PyObject *MAKE_FUNCTION_pyasn1$compat$binary$$$function_1_bin(  )
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_83a4c1ccd6e76f9b1a04bb3aac7f0003,
+        codeobj_a39cbec1456114f917975532f78ae32c,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -1043,14 +1043,14 @@ MOD_INIT_DECL( pyasn1$compat$binary )
     PyObject *tmp_name_name_1;
     PyObject *tmp_subscribed_name_1;
     PyObject *tmp_subscript_name_1;
-    struct Nuitka_FrameObject *frame_45bddc5f70a76df3c1ea49171e2011db;
+    struct Nuitka_FrameObject *frame_fc641a22fa50387e208dc350af42ee74;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
 
     // Module code.
     tmp_assign_source_1 = Py_None;
     UPDATE_STRING_DICT0( moduledict_pyasn1$compat$binary, (Nuitka_StringObject *)const_str_plain___doc__, tmp_assign_source_1 );
-    tmp_assign_source_2 = const_str_digest_2fa880849063e43a287eb30e842e6a26;
+    tmp_assign_source_2 = module_filename_obj;
     UPDATE_STRING_DICT0( moduledict_pyasn1$compat$binary, (Nuitka_StringObject *)const_str_plain___file__, tmp_assign_source_2 );
     tmp_assign_source_3 = Py_None;
     UPDATE_STRING_DICT0( moduledict_pyasn1$compat$binary, (Nuitka_StringObject *)const_str_plain___cached__, tmp_assign_source_3 );
@@ -1066,12 +1066,12 @@ MOD_INIT_DECL( pyasn1$compat$binary )
     assert( !(tmp_assign_source_4 == NULL) );
     UPDATE_STRING_DICT1( moduledict_pyasn1$compat$binary, (Nuitka_StringObject *)const_str_plain_version_info, tmp_assign_source_4 );
     // Frame without reuse.
-    frame_45bddc5f70a76df3c1ea49171e2011db = MAKE_MODULE_FRAME( codeobj_45bddc5f70a76df3c1ea49171e2011db, module_pyasn1$compat$binary );
+    frame_fc641a22fa50387e208dc350af42ee74 = MAKE_MODULE_FRAME( codeobj_fc641a22fa50387e208dc350af42ee74, module_pyasn1$compat$binary );
 
     // Push the new frame as the currently active one, and we should be exclusively
     // owning it.
-    pushFrameStack( frame_45bddc5f70a76df3c1ea49171e2011db );
-    assert( Py_REFCNT( frame_45bddc5f70a76df3c1ea49171e2011db ) == 2 );
+    pushFrameStack( frame_fc641a22fa50387e208dc350af42ee74 );
+    assert( Py_REFCNT( frame_fc641a22fa50387e208dc350af42ee74 ) == 2 );
 
     // Framed code:
     tmp_subscribed_name_1 = GET_STRING_DICT_VALUE( moduledict_pyasn1$compat$binary, (Nuitka_StringObject *)const_str_plain_version_info );
@@ -1149,25 +1149,25 @@ MOD_INIT_DECL( pyasn1$compat$binary )
 
     // Restore frame exception if necessary.
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_45bddc5f70a76df3c1ea49171e2011db );
+    RESTORE_FRAME_EXCEPTION( frame_fc641a22fa50387e208dc350af42ee74 );
 #endif
     popFrameStack();
 
-    assertFrameObject( frame_45bddc5f70a76df3c1ea49171e2011db );
+    assertFrameObject( frame_fc641a22fa50387e208dc350af42ee74 );
 
     goto frame_no_exception_1;
     frame_exception_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_45bddc5f70a76df3c1ea49171e2011db );
+    RESTORE_FRAME_EXCEPTION( frame_fc641a22fa50387e208dc350af42ee74 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_45bddc5f70a76df3c1ea49171e2011db, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_fc641a22fa50387e208dc350af42ee74, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_45bddc5f70a76df3c1ea49171e2011db->m_frame )
+    else if ( exception_tb->tb_frame != &frame_fc641a22fa50387e208dc350af42ee74->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_45bddc5f70a76df3c1ea49171e2011db, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_fc641a22fa50387e208dc350af42ee74, exception_lineno );
     }
 
     // Put the previous frame back on top.

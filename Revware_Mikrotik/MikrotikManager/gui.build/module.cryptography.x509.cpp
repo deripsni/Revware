@@ -48,6 +48,7 @@ extern PyObject *const_str_digest_7822abce90b4f23aa7a437cf95bbfec5;
 extern PyObject *const_str_plain_OtherName;
 extern PyObject *const_str_plain_ExtendedKeyUsage;
 extern PyObject *const_str_plain_random_serial_number;
+extern PyObject *const_tuple_495f0b9ca2f725dc9f357390583c7253_tuple;
 extern PyObject *const_str_plain_AuthorityKeyIdentifier;
 extern PyObject *const_str_plain___file__;
 extern PyObject *const_str_plain_ISSUER_ALTERNATIVE_NAME;
@@ -69,8 +70,8 @@ extern PyObject *const_str_plain_certificate_transparency;
 static PyObject *const_str_plain_OID_CRL_REASON;
 extern PyObject *const_str_plain_PolicyConstraints;
 static PyObject *const_str_plain_OID_SUBJECT_INFORMATION_ACCESS;
-static PyObject *const_str_digest_0bbedd0e949e720d28f7ba03a3294012;
 extern PyObject *const_str_plain_DSA_WITH_SHA224;
+static PyObject *const_str_plain_NUITKA_PACKAGE_cryptography_x509;
 extern PyObject *const_str_digest_0dcb6991fe0fe1dc113b1f3e65627e35;
 extern PyObject *const_str_plain_POLICY_CONSTRAINTS;
 static PyObject *const_str_plain_OID_POLICY_MAPPINGS;
@@ -82,6 +83,7 @@ static PyObject *const_str_digest_7efc2d5ba0c39ffda7ce4cc81cee206e;
 static PyObject *const_str_plain_OID_DSA_WITH_SHA224;
 extern PyObject *const_str_plain_GeneralName;
 extern PyObject *const_str_plain_INHIBIT_ANY_POLICY;
+extern PyObject *const_str_plain_join;
 static PyObject *const_str_plain_OID_OCSP_SIGNING;
 static PyObject *const_list_5de0344771eb0404125932cb98ccc45b_list;
 extern PyObject *const_str_plain___doc__;
@@ -92,9 +94,12 @@ extern PyObject *const_str_plain_SERIAL_NUMBER;
 extern PyObject *const_str_plain_CRLEntryExtensionOID;
 extern PyObject *const_str_plain_KEY_USAGE;
 static PyObject *const_str_plain_OID_DN_QUALIFIER;
+extern PyObject *const_str_plain_environ;
 extern PyObject *const_str_digest_957c81bc7a15c28c0c453fa3270dbc10;
+extern PyObject *const_str_plain_x509;
 extern PyObject *const_str_digest_97ac982b098bfd0facb64df38773c335;
 extern PyObject *const_str_plain_OID_CPS_QUALIFIER;
+static PyObject *const_tuple_b8789a7dea6d9440532c81d6d2cb3c71_tuple;
 static PyObject *const_str_plain_OID_ECDSA_WITH_SHA224;
 static PyObject *const_str_plain_OID_ORGANIZATION_NAME;
 extern PyObject *const_str_plain_load_der_x509_csr;
@@ -115,6 +120,7 @@ extern PyObject *const_str_plain__SIG_OIDS_TO_HASH;
 static PyObject *const_str_plain_OID_PSEUDONYM;
 static PyObject *const_str_plain_OID_TIME_STAMPING;
 extern PyObject *const_str_plain_CPS_USER_NOTICE;
+extern PyObject *const_str_plain_path;
 extern PyObject *const_str_plain_RevokedCertificate;
 static PyObject *const_str_plain_OID_ECDSA_WITH_SHA384;
 extern PyObject *const_str_plain_BasicConstraints;
@@ -136,6 +142,7 @@ extern PyObject *const_str_plain_STATE_OR_PROVINCE_NAME;
 extern PyObject *const_str_plain_DNSName;
 extern PyObject *const_str_plain_DeltaCRLIndicator;
 extern PyObject *const_str_plain_CertificateIssuer;
+static PyObject *const_str_digest_a7b34d5e2a03cf0bbc47b9174154ca45;
 extern PyObject *const_str_plain_SUBJECT_INFORMATION_ACCESS;
 extern PyObject *const_str_plain_AuthorityInformationAccess;
 extern PyObject *const_str_plain_UnsupportedGeneralNameType;
@@ -184,7 +191,6 @@ extern PyObject *const_str_plain_ReasonFlags;
 static PyObject *const_str_plain_OID_ORGANIZATIONAL_UNIT_NAME;
 extern PyObject *const_str_plain_AccessDescription;
 extern PyObject *const_str_plain_AuthorityInformationAccessOID;
-static PyObject *const_str_digest_aca7d42006c8522789b4a354492f15c5;
 extern PyObject *const_str_plain_TIME_STAMPING;
 extern PyObject *const_str_plain_UnrecognizedExtension;
 extern PyObject *const_str_plain_NameOID;
@@ -197,6 +203,7 @@ extern PyObject *const_str_plain_PolicyInformation;
 static PyObject *const_str_plain_OID_OCSP_NO_CHECK;
 extern PyObject *const_str_plain_GeneralNames;
 extern PyObject *const_str_plain_load_pem_x509_crl;
+extern PyObject *const_str_plain_dirname;
 extern PyObject *const_str_plain_ObjectIdentifier;
 extern PyObject *const_str_plain_OCSP_NO_CHECK;
 extern PyObject *const_str_plain___cached__;
@@ -217,6 +224,7 @@ static PyObject *const_str_plain_OID_RSA_WITH_SHA512;
 extern PyObject *const_str_plain_CertificateSigningRequestBuilder;
 extern PyObject *const_str_plain_InvalidityDate;
 extern PyObject *const_str_plain_SURNAME;
+extern PyObject *const_str_plain_NUITKA_PACKAGE_cryptography;
 static PyObject *const_str_plain_OID_INHIBIT_ANY_POLICY;
 static PyObject *const_str_plain_OID_GIVEN_NAME;
 extern PyObject *const_str_plain_OID_CPS_USER_NOTICE;
@@ -224,7 +232,6 @@ static PyObject *const_str_plain_OID_SUBJECT_ALTERNATIVE_NAME;
 extern PyObject *const_str_plain_AUTHORITY_INFORMATION_ACCESS;
 extern PyObject *const_str_plain_RSA_WITH_SHA1;
 extern PyObject *const_str_plain_InvalidVersion;
-static PyObject *const_list_str_digest_0bbedd0e949e720d28f7ba03a3294012_list;
 extern PyObject *const_str_plain_DSA_WITH_SHA1;
 extern PyObject *const_str_plain_DuplicateExtension;
 extern PyObject *const_str_plain_SubjectKeyIdentifier;
@@ -239,10 +246,12 @@ extern PyObject *const_str_plain_Certificate;
 extern PyObject *const_str_plain_Name;
 extern PyObject *const_str_plain_NameAttribute;
 static PyObject *const_tuple_c68e20a5591f5059c0231d123efb1167_tuple;
+extern PyObject *const_str_digest_5bfaf90dbd407b4fc29090c8f6415242;
 extern PyObject *const_str_plain_IPAddress;
 static PyObject *const_str_plain_OID_RSA_WITH_MD5;
 static PyObject *const_str_plain_OID_COMMON_NAME;
 extern PyObject *const_str_plain_RSA_WITH_MD5;
+extern PyObject *const_str_plain_get;
 static PyObject *const_str_plain_OID_EXTENDED_KEY_USAGE;
 extern PyObject *const_str_plain_CertificateSigningRequest;
 static PyObject *const_str_plain_OID_AUTHORITY_INFORMATION_ACCESS;
@@ -264,25 +273,25 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_60a1bac43ab19e7498cc2fb7d34f5b86 = UNSTREAM_STRING( &constant_bin[ 161443 ], 17, 0 );
-    const_str_plain_OID_CRL_DISTRIBUTION_POINTS = UNSTREAM_STRING( &constant_bin[ 161460 ], 27, 1 );
+    const_str_digest_60a1bac43ab19e7498cc2fb7d34f5b86 = UNSTREAM_STRING( &constant_bin[ 156148 ], 17, 0 );
+    const_str_plain_OID_CRL_DISTRIBUTION_POINTS = UNSTREAM_STRING( &constant_bin[ 156165 ], 27, 1 );
     const_tuple_str_plain_certificate_transparency_tuple = PyTuple_New( 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain_certificate_transparency_tuple, 0, const_str_plain_certificate_transparency ); Py_INCREF( const_str_plain_certificate_transparency );
-    const_str_plain_OID_FRESHEST_CRL = UNSTREAM_STRING( &constant_bin[ 161487 ], 16, 1 );
-    const_str_plain_OID_DSA_WITH_SHA1 = UNSTREAM_STRING( &constant_bin[ 161503 ], 17, 1 );
-    const_str_plain_OID_RSA_WITH_SHA256 = UNSTREAM_STRING( &constant_bin[ 161520 ], 19, 1 );
-    const_str_plain_OID_CERTIFICATE_POLICIES = UNSTREAM_STRING( &constant_bin[ 161539 ], 24, 1 );
-    const_str_plain_OID_ANY_POLICY = UNSTREAM_STRING( &constant_bin[ 161563 ], 14, 1 );
-    const_str_plain_OID_RSA_WITH_SHA224 = UNSTREAM_STRING( &constant_bin[ 161577 ], 19, 1 );
-    const_str_plain_OID_CRL_REASON = UNSTREAM_STRING( &constant_bin[ 161596 ], 14, 1 );
-    const_str_plain_OID_SUBJECT_INFORMATION_ACCESS = UNSTREAM_STRING( &constant_bin[ 161610 ], 30, 1 );
-    const_str_digest_0bbedd0e949e720d28f7ba03a3294012 = UNSTREAM_STRING( &constant_bin[ 161640 ], 89, 0 );
-    const_str_plain_OID_POLICY_MAPPINGS = UNSTREAM_STRING( &constant_bin[ 161729 ], 19, 1 );
-    const_str_plain_OID_EMAIL_PROTECTION = UNSTREAM_STRING( &constant_bin[ 161748 ], 20, 1 );
-    const_str_digest_7efc2d5ba0c39ffda7ce4cc81cee206e = UNSTREAM_STRING( &constant_bin[ 161768 ], 26, 0 );
-    const_str_plain_OID_DSA_WITH_SHA224 = UNSTREAM_STRING( &constant_bin[ 161794 ], 19, 1 );
-    const_str_plain_OID_OCSP_SIGNING = UNSTREAM_STRING( &constant_bin[ 161813 ], 16, 1 );
-    const_list_5de0344771eb0404125932cb98ccc45b_list = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 161829 ], 1328 );
+    const_str_plain_OID_FRESHEST_CRL = UNSTREAM_STRING( &constant_bin[ 156192 ], 16, 1 );
+    const_str_plain_OID_DSA_WITH_SHA1 = UNSTREAM_STRING( &constant_bin[ 156208 ], 17, 1 );
+    const_str_plain_OID_RSA_WITH_SHA256 = UNSTREAM_STRING( &constant_bin[ 156225 ], 19, 1 );
+    const_str_plain_OID_CERTIFICATE_POLICIES = UNSTREAM_STRING( &constant_bin[ 156244 ], 24, 1 );
+    const_str_plain_OID_ANY_POLICY = UNSTREAM_STRING( &constant_bin[ 156268 ], 14, 1 );
+    const_str_plain_OID_RSA_WITH_SHA224 = UNSTREAM_STRING( &constant_bin[ 156282 ], 19, 1 );
+    const_str_plain_OID_CRL_REASON = UNSTREAM_STRING( &constant_bin[ 156301 ], 14, 1 );
+    const_str_plain_OID_SUBJECT_INFORMATION_ACCESS = UNSTREAM_STRING( &constant_bin[ 156315 ], 30, 1 );
+    const_str_plain_NUITKA_PACKAGE_cryptography_x509 = UNSTREAM_STRING( &constant_bin[ 156345 ], 32, 1 );
+    const_str_plain_OID_POLICY_MAPPINGS = UNSTREAM_STRING( &constant_bin[ 156377 ], 19, 1 );
+    const_str_plain_OID_EMAIL_PROTECTION = UNSTREAM_STRING( &constant_bin[ 156396 ], 20, 1 );
+    const_str_digest_7efc2d5ba0c39ffda7ce4cc81cee206e = UNSTREAM_STRING( &constant_bin[ 156416 ], 26, 0 );
+    const_str_plain_OID_DSA_WITH_SHA224 = UNSTREAM_STRING( &constant_bin[ 156442 ], 19, 1 );
+    const_str_plain_OID_OCSP_SIGNING = UNSTREAM_STRING( &constant_bin[ 156461 ], 16, 1 );
+    const_list_5de0344771eb0404125932cb98ccc45b_list = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 156477 ], 1328 );
     const_tuple_c992ec5fe7bb072bb4084b191a56b771_tuple = PyTuple_New( 10 );
     PyTuple_SET_ITEM( const_tuple_c992ec5fe7bb072bb4084b191a56b771_tuple, 0, const_str_plain_DNSName ); Py_INCREF( const_str_plain_DNSName );
     PyTuple_SET_ITEM( const_tuple_c992ec5fe7bb072bb4084b191a56b771_tuple, 1, const_str_plain_DirectoryName ); Py_INCREF( const_str_plain_DirectoryName );
@@ -294,43 +303,46 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_c992ec5fe7bb072bb4084b191a56b771_tuple, 7, const_str_plain_UniformResourceIdentifier ); Py_INCREF( const_str_plain_UniformResourceIdentifier );
     PyTuple_SET_ITEM( const_tuple_c992ec5fe7bb072bb4084b191a56b771_tuple, 8, const_str_plain_UnsupportedGeneralNameType ); Py_INCREF( const_str_plain_UnsupportedGeneralNameType );
     PyTuple_SET_ITEM( const_tuple_c992ec5fe7bb072bb4084b191a56b771_tuple, 9, const_str_plain__GENERAL_NAMES ); Py_INCREF( const_str_plain__GENERAL_NAMES );
-    const_str_plain_OID_AUTHORITY_KEY_IDENTIFIER = UNSTREAM_STRING( &constant_bin[ 163157 ], 28, 1 );
-    const_str_plain_OID_DN_QUALIFIER = UNSTREAM_STRING( &constant_bin[ 163185 ], 16, 1 );
-    const_str_plain_OID_ECDSA_WITH_SHA224 = UNSTREAM_STRING( &constant_bin[ 163201 ], 21, 1 );
-    const_str_plain_OID_ORGANIZATION_NAME = UNSTREAM_STRING( &constant_bin[ 163222 ], 21, 1 );
-    const_str_plain_OID_RSA_WITH_SHA384 = UNSTREAM_STRING( &constant_bin[ 163243 ], 19, 1 );
-    const_str_plain_OID_DOMAIN_COMPONENT = UNSTREAM_STRING( &constant_bin[ 163262 ], 20, 1 );
-    const_str_plain_OID_SUBJECT_DIRECTORY_ATTRIBUTES = UNSTREAM_STRING( &constant_bin[ 163282 ], 32, 1 );
-    const_str_plain_OID_SERIAL_NUMBER = UNSTREAM_STRING( &constant_bin[ 163314 ], 17, 1 );
-    const_str_plain_OID_LOCALITY_NAME = UNSTREAM_STRING( &constant_bin[ 163331 ], 17, 1 );
-    const_str_plain_OID_INVALIDITY_DATE = UNSTREAM_STRING( &constant_bin[ 163348 ], 19, 1 );
-    const_str_plain_OID_PSEUDONYM = UNSTREAM_STRING( &constant_bin[ 163367 ], 13, 1 );
-    const_str_plain_OID_TIME_STAMPING = UNSTREAM_STRING( &constant_bin[ 163380 ], 17, 1 );
-    const_str_plain_OID_ECDSA_WITH_SHA384 = UNSTREAM_STRING( &constant_bin[ 163397 ], 21, 1 );
-    const_str_plain_OID_SUBJECT_KEY_IDENTIFIER = UNSTREAM_STRING( &constant_bin[ 163418 ], 26, 1 );
+    const_str_plain_OID_AUTHORITY_KEY_IDENTIFIER = UNSTREAM_STRING( &constant_bin[ 157805 ], 28, 1 );
+    const_str_plain_OID_DN_QUALIFIER = UNSTREAM_STRING( &constant_bin[ 157833 ], 16, 1 );
+    const_tuple_b8789a7dea6d9440532c81d6d2cb3c71_tuple = PyTuple_New( 2 );
+    PyTuple_SET_ITEM( const_tuple_b8789a7dea6d9440532c81d6d2cb3c71_tuple, 0, const_str_plain_NUITKA_PACKAGE_cryptography_x509 ); Py_INCREF( const_str_plain_NUITKA_PACKAGE_cryptography_x509 );
+    PyTuple_SET_ITEM( const_tuple_b8789a7dea6d9440532c81d6d2cb3c71_tuple, 1, const_str_digest_5bfaf90dbd407b4fc29090c8f6415242 ); Py_INCREF( const_str_digest_5bfaf90dbd407b4fc29090c8f6415242 );
+    const_str_plain_OID_ECDSA_WITH_SHA224 = UNSTREAM_STRING( &constant_bin[ 157849 ], 21, 1 );
+    const_str_plain_OID_ORGANIZATION_NAME = UNSTREAM_STRING( &constant_bin[ 157870 ], 21, 1 );
+    const_str_plain_OID_RSA_WITH_SHA384 = UNSTREAM_STRING( &constant_bin[ 157891 ], 19, 1 );
+    const_str_plain_OID_DOMAIN_COMPONENT = UNSTREAM_STRING( &constant_bin[ 157910 ], 20, 1 );
+    const_str_plain_OID_SUBJECT_DIRECTORY_ATTRIBUTES = UNSTREAM_STRING( &constant_bin[ 157930 ], 32, 1 );
+    const_str_plain_OID_SERIAL_NUMBER = UNSTREAM_STRING( &constant_bin[ 157962 ], 17, 1 );
+    const_str_plain_OID_LOCALITY_NAME = UNSTREAM_STRING( &constant_bin[ 157979 ], 17, 1 );
+    const_str_plain_OID_INVALIDITY_DATE = UNSTREAM_STRING( &constant_bin[ 157996 ], 19, 1 );
+    const_str_plain_OID_PSEUDONYM = UNSTREAM_STRING( &constant_bin[ 158015 ], 13, 1 );
+    const_str_plain_OID_TIME_STAMPING = UNSTREAM_STRING( &constant_bin[ 158028 ], 17, 1 );
+    const_str_plain_OID_ECDSA_WITH_SHA384 = UNSTREAM_STRING( &constant_bin[ 158045 ], 21, 1 );
+    const_str_plain_OID_SUBJECT_KEY_IDENTIFIER = UNSTREAM_STRING( &constant_bin[ 158066 ], 26, 1 );
     const_tuple_e6fbd74e2a994d2f68f56ed467b52de4_tuple = PyTuple_New( 3 );
     PyTuple_SET_ITEM( const_tuple_e6fbd74e2a994d2f68f56ed467b52de4_tuple, 0, const_str_plain_Name ); Py_INCREF( const_str_plain_Name );
     PyTuple_SET_ITEM( const_tuple_e6fbd74e2a994d2f68f56ed467b52de4_tuple, 1, const_str_plain_NameAttribute ); Py_INCREF( const_str_plain_NameAttribute );
     PyTuple_SET_ITEM( const_tuple_e6fbd74e2a994d2f68f56ed467b52de4_tuple, 2, const_str_plain_RelativeDistinguishedName ); Py_INCREF( const_str_plain_RelativeDistinguishedName );
-    const_str_plain_OID_ECDSA_WITH_SHA1 = UNSTREAM_STRING( &constant_bin[ 163444 ], 19, 1 );
-    const_str_plain_OID_ISSUER_ALTERNATIVE_NAME = UNSTREAM_STRING( &constant_bin[ 163463 ], 27, 1 );
-    const_str_plain_OID_POLICY_CONSTRAINTS = UNSTREAM_STRING( &constant_bin[ 163490 ], 22, 1 );
-    const_str_plain_OID_SERVER_AUTH = UNSTREAM_STRING( &constant_bin[ 163512 ], 15, 1 );
-    const_str_plain_OID_DSA_WITH_SHA256 = UNSTREAM_STRING( &constant_bin[ 163527 ], 19, 1 );
-    const_tuple_76141eef7fe185822f569cf108f2ed6b_tuple = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 163546 ], 653 );
-    const_str_plain_OID_RSA_WITH_SHA1 = UNSTREAM_STRING( &constant_bin[ 164199 ], 17, 1 );
-    const_str_plain_OID_KEY_USAGE = UNSTREAM_STRING( &constant_bin[ 164216 ], 13, 1 );
-    const_str_plain_OID_OCSP = UNSTREAM_STRING( &constant_bin[ 161813 ], 8, 1 );
-    const_str_plain_OID_CLIENT_AUTH = UNSTREAM_STRING( &constant_bin[ 164229 ], 15, 1 );
-    const_str_plain_OID_TITLE = UNSTREAM_STRING( &constant_bin[ 164244 ], 9, 1 );
-    const_str_plain_OID_CODE_SIGNING = UNSTREAM_STRING( &constant_bin[ 164253 ], 16, 1 );
-    const_str_plain_OID_BASIC_CONSTRAINTS = UNSTREAM_STRING( &constant_bin[ 164269 ], 21, 1 );
-    const_str_plain_OID_ECDSA_WITH_SHA512 = UNSTREAM_STRING( &constant_bin[ 164290 ], 21, 1 );
-    const_str_plain_OID_SURNAME = UNSTREAM_STRING( &constant_bin[ 164311 ], 11, 1 );
-    const_str_plain_OID_CA_ISSUERS = UNSTREAM_STRING( &constant_bin[ 162986 ], 14, 1 );
-    const_str_plain_OID_ORGANIZATIONAL_UNIT_NAME = UNSTREAM_STRING( &constant_bin[ 164322 ], 28, 1 );
-    const_str_digest_aca7d42006c8522789b4a354492f15c5 = UNSTREAM_STRING( &constant_bin[ 164350 ], 101, 0 );
-    const_str_plain_OID_OCSP_NO_CHECK = UNSTREAM_STRING( &constant_bin[ 164451 ], 17, 1 );
+    const_str_plain_OID_ECDSA_WITH_SHA1 = UNSTREAM_STRING( &constant_bin[ 158092 ], 19, 1 );
+    const_str_plain_OID_ISSUER_ALTERNATIVE_NAME = UNSTREAM_STRING( &constant_bin[ 158111 ], 27, 1 );
+    const_str_plain_OID_POLICY_CONSTRAINTS = UNSTREAM_STRING( &constant_bin[ 158138 ], 22, 1 );
+    const_str_plain_OID_SERVER_AUTH = UNSTREAM_STRING( &constant_bin[ 158160 ], 15, 1 );
+    const_str_digest_a7b34d5e2a03cf0bbc47b9174154ca45 = UNSTREAM_STRING( &constant_bin[ 158175 ], 29, 0 );
+    const_str_plain_OID_DSA_WITH_SHA256 = UNSTREAM_STRING( &constant_bin[ 158204 ], 19, 1 );
+    const_tuple_76141eef7fe185822f569cf108f2ed6b_tuple = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 158223 ], 653 );
+    const_str_plain_OID_RSA_WITH_SHA1 = UNSTREAM_STRING( &constant_bin[ 158876 ], 17, 1 );
+    const_str_plain_OID_KEY_USAGE = UNSTREAM_STRING( &constant_bin[ 158893 ], 13, 1 );
+    const_str_plain_OID_OCSP = UNSTREAM_STRING( &constant_bin[ 156461 ], 8, 1 );
+    const_str_plain_OID_CLIENT_AUTH = UNSTREAM_STRING( &constant_bin[ 158906 ], 15, 1 );
+    const_str_plain_OID_TITLE = UNSTREAM_STRING( &constant_bin[ 158921 ], 9, 1 );
+    const_str_plain_OID_CODE_SIGNING = UNSTREAM_STRING( &constant_bin[ 158930 ], 16, 1 );
+    const_str_plain_OID_BASIC_CONSTRAINTS = UNSTREAM_STRING( &constant_bin[ 158946 ], 21, 1 );
+    const_str_plain_OID_ECDSA_WITH_SHA512 = UNSTREAM_STRING( &constant_bin[ 158967 ], 21, 1 );
+    const_str_plain_OID_SURNAME = UNSTREAM_STRING( &constant_bin[ 158988 ], 11, 1 );
+    const_str_plain_OID_CA_ISSUERS = UNSTREAM_STRING( &constant_bin[ 157634 ], 14, 1 );
+    const_str_plain_OID_ORGANIZATIONAL_UNIT_NAME = UNSTREAM_STRING( &constant_bin[ 158999 ], 28, 1 );
+    const_str_plain_OID_OCSP_NO_CHECK = UNSTREAM_STRING( &constant_bin[ 159027 ], 17, 1 );
     const_tuple_aa25bec352c38dd8550148f01376e4ae_tuple = PyTuple_New( 17 );
     PyTuple_SET_ITEM( const_tuple_aa25bec352c38dd8550148f01376e4ae_tuple, 0, const_str_plain_Certificate ); Py_INCREF( const_str_plain_Certificate );
     PyTuple_SET_ITEM( const_tuple_aa25bec352c38dd8550148f01376e4ae_tuple, 1, const_str_plain_CertificateBuilder ); Py_INCREF( const_str_plain_CertificateBuilder );
@@ -349,16 +361,14 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_aa25bec352c38dd8550148f01376e4ae_tuple, 14, const_str_plain_load_pem_x509_crl ); Py_INCREF( const_str_plain_load_pem_x509_crl );
     PyTuple_SET_ITEM( const_tuple_aa25bec352c38dd8550148f01376e4ae_tuple, 15, const_str_plain_load_pem_x509_csr ); Py_INCREF( const_str_plain_load_pem_x509_csr );
     PyTuple_SET_ITEM( const_tuple_aa25bec352c38dd8550148f01376e4ae_tuple, 16, const_str_plain_random_serial_number ); Py_INCREF( const_str_plain_random_serial_number );
-    const_str_plain_OID_COUNTRY_NAME = UNSTREAM_STRING( &constant_bin[ 164468 ], 16, 1 );
-    const_str_plain_OID_STATE_OR_PROVINCE_NAME = UNSTREAM_STRING( &constant_bin[ 164484 ], 26, 1 );
-    const_str_plain_OID_RSA_WITH_SHA512 = UNSTREAM_STRING( &constant_bin[ 164510 ], 19, 1 );
-    const_str_plain_OID_INHIBIT_ANY_POLICY = UNSTREAM_STRING( &constant_bin[ 164529 ], 22, 1 );
-    const_str_plain_OID_GIVEN_NAME = UNSTREAM_STRING( &constant_bin[ 164551 ], 14, 1 );
-    const_str_plain_OID_SUBJECT_ALTERNATIVE_NAME = UNSTREAM_STRING( &constant_bin[ 164565 ], 28, 1 );
-    const_list_str_digest_0bbedd0e949e720d28f7ba03a3294012_list = PyList_New( 1 );
-    PyList_SET_ITEM( const_list_str_digest_0bbedd0e949e720d28f7ba03a3294012_list, 0, const_str_digest_0bbedd0e949e720d28f7ba03a3294012 ); Py_INCREF( const_str_digest_0bbedd0e949e720d28f7ba03a3294012 );
-    const_str_plain_OID_RSASSA_PSS = UNSTREAM_STRING( &constant_bin[ 164593 ], 14, 1 );
-    const_str_plain_OID_EMAIL_ADDRESS = UNSTREAM_STRING( &constant_bin[ 164607 ], 17, 1 );
+    const_str_plain_OID_COUNTRY_NAME = UNSTREAM_STRING( &constant_bin[ 159044 ], 16, 1 );
+    const_str_plain_OID_STATE_OR_PROVINCE_NAME = UNSTREAM_STRING( &constant_bin[ 159060 ], 26, 1 );
+    const_str_plain_OID_RSA_WITH_SHA512 = UNSTREAM_STRING( &constant_bin[ 159086 ], 19, 1 );
+    const_str_plain_OID_INHIBIT_ANY_POLICY = UNSTREAM_STRING( &constant_bin[ 159105 ], 22, 1 );
+    const_str_plain_OID_GIVEN_NAME = UNSTREAM_STRING( &constant_bin[ 159127 ], 14, 1 );
+    const_str_plain_OID_SUBJECT_ALTERNATIVE_NAME = UNSTREAM_STRING( &constant_bin[ 159141 ], 28, 1 );
+    const_str_plain_OID_RSASSA_PSS = UNSTREAM_STRING( &constant_bin[ 159169 ], 14, 1 );
+    const_str_plain_OID_EMAIL_ADDRESS = UNSTREAM_STRING( &constant_bin[ 159183 ], 17, 1 );
     const_tuple_c68e20a5591f5059c0231d123efb1167_tuple = PyTuple_New( 9 );
     PyTuple_SET_ITEM( const_tuple_c68e20a5591f5059c0231d123efb1167_tuple, 0, const_str_plain_AuthorityInformationAccessOID ); Py_INCREF( const_str_plain_AuthorityInformationAccessOID );
     PyTuple_SET_ITEM( const_tuple_c68e20a5591f5059c0231d123efb1167_tuple, 1, const_str_plain_CRLEntryExtensionOID ); Py_INCREF( const_str_plain_CRLEntryExtensionOID );
@@ -369,14 +379,14 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_c68e20a5591f5059c0231d123efb1167_tuple, 6, const_str_plain_ObjectIdentifier ); Py_INCREF( const_str_plain_ObjectIdentifier );
     PyTuple_SET_ITEM( const_tuple_c68e20a5591f5059c0231d123efb1167_tuple, 7, const_str_plain_SignatureAlgorithmOID ); Py_INCREF( const_str_plain_SignatureAlgorithmOID );
     PyTuple_SET_ITEM( const_tuple_c68e20a5591f5059c0231d123efb1167_tuple, 8, const_str_plain__SIG_OIDS_TO_HASH ); Py_INCREF( const_str_plain__SIG_OIDS_TO_HASH );
-    const_str_plain_OID_RSA_WITH_MD5 = UNSTREAM_STRING( &constant_bin[ 164624 ], 16, 1 );
-    const_str_plain_OID_COMMON_NAME = UNSTREAM_STRING( &constant_bin[ 164640 ], 15, 1 );
-    const_str_plain_OID_EXTENDED_KEY_USAGE = UNSTREAM_STRING( &constant_bin[ 164655 ], 22, 1 );
-    const_str_plain_OID_AUTHORITY_INFORMATION_ACCESS = UNSTREAM_STRING( &constant_bin[ 164677 ], 32, 1 );
-    const_str_plain_OID_GENERATION_QUALIFIER = UNSTREAM_STRING( &constant_bin[ 164709 ], 24, 1 );
-    const_str_plain_OID_NAME_CONSTRAINTS = UNSTREAM_STRING( &constant_bin[ 164733 ], 20, 1 );
-    const_str_plain_OID_CERTIFICATE_ISSUER = UNSTREAM_STRING( &constant_bin[ 164753 ], 22, 1 );
-    const_str_plain_OID_ECDSA_WITH_SHA256 = UNSTREAM_STRING( &constant_bin[ 164775 ], 21, 1 );
+    const_str_plain_OID_RSA_WITH_MD5 = UNSTREAM_STRING( &constant_bin[ 159200 ], 16, 1 );
+    const_str_plain_OID_COMMON_NAME = UNSTREAM_STRING( &constant_bin[ 159216 ], 15, 1 );
+    const_str_plain_OID_EXTENDED_KEY_USAGE = UNSTREAM_STRING( &constant_bin[ 159231 ], 22, 1 );
+    const_str_plain_OID_AUTHORITY_INFORMATION_ACCESS = UNSTREAM_STRING( &constant_bin[ 159253 ], 32, 1 );
+    const_str_plain_OID_GENERATION_QUALIFIER = UNSTREAM_STRING( &constant_bin[ 159285 ], 24, 1 );
+    const_str_plain_OID_NAME_CONSTRAINTS = UNSTREAM_STRING( &constant_bin[ 159309 ], 20, 1 );
+    const_str_plain_OID_CERTIFICATE_ISSUER = UNSTREAM_STRING( &constant_bin[ 159329 ], 22, 1 );
+    const_str_plain_OID_ECDSA_WITH_SHA256 = UNSTREAM_STRING( &constant_bin[ 159351 ], 21, 1 );
 
     constants_created = true;
 }
@@ -392,12 +402,12 @@ void checkModuleConstants_cryptography$x509( void )
 #endif
 
 // The module code objects.
-static PyCodeObject *codeobj_e8c86d84b3cd391c9a6746ab9e6519c6;
+static PyCodeObject *codeobj_cc5c490b1617b6c2f7075039d1fc5489;
 
 static void createModuleCodeObjects(void)
 {
-    module_filename_obj = const_str_digest_aca7d42006c8522789b4a354492f15c5;
-    codeobj_e8c86d84b3cd391c9a6746ab9e6519c6 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_7efc2d5ba0c39ffda7ce4cc81cee206e, 1, const_tuple_empty, 0, 0, CO_NOFREE );
+    module_filename_obj = MAKE_RELATIVE_PATH( const_str_digest_a7b34d5e2a03cf0bbc47b9174154ca45 );
+    codeobj_cc5c490b1617b6c2f7075039d1fc5489 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_7efc2d5ba0c39ffda7ce4cc81cee206e, 1, const_tuple_empty, 0, 0, CO_NOFREE );
 }
 
 // The module function declarations.
@@ -686,6 +696,9 @@ MOD_INIT_DECL( cryptography$x509 )
     PyObject *exception_keeper_value_6;
     PyTracebackObject *exception_keeper_tb_6;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_6;
+    PyObject *tmp_args_element_name_1;
+    PyObject *tmp_args_element_name_2;
+    PyObject *tmp_args_element_name_3;
     PyObject *tmp_assign_source_1;
     PyObject *tmp_assign_source_2;
     PyObject *tmp_assign_source_3;
@@ -838,6 +851,10 @@ MOD_INIT_DECL( cryptography$x509 )
     PyObject *tmp_assign_source_150;
     PyObject *tmp_assign_source_151;
     PyObject *tmp_assign_source_152;
+    PyObject *tmp_called_instance_1;
+    PyObject *tmp_called_instance_2;
+    PyObject *tmp_called_name_1;
+    PyObject *tmp_called_name_2;
     PyObject *tmp_fromlist_name_1;
     PyObject *tmp_fromlist_name_2;
     PyObject *tmp_fromlist_name_3;
@@ -935,6 +952,7 @@ MOD_INIT_DECL( cryptography$x509 )
     PyObject *tmp_level_name_4;
     PyObject *tmp_level_name_5;
     PyObject *tmp_level_name_6;
+    PyObject *tmp_list_element_1;
     PyObject *tmp_locals_name_1;
     PyObject *tmp_locals_name_2;
     PyObject *tmp_locals_name_3;
@@ -1009,34 +1027,229 @@ MOD_INIT_DECL( cryptography$x509 )
     PyObject *tmp_source_name_60;
     PyObject *tmp_source_name_61;
     PyObject *tmp_source_name_62;
-    struct Nuitka_FrameObject *frame_e8c86d84b3cd391c9a6746ab9e6519c6;
+    PyObject *tmp_source_name_63;
+    PyObject *tmp_source_name_64;
+    struct Nuitka_FrameObject *frame_cc5c490b1617b6c2f7075039d1fc5489;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
 
     // Module code.
     tmp_assign_source_1 = Py_None;
     UPDATE_STRING_DICT0( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain___doc__, tmp_assign_source_1 );
-    tmp_assign_source_2 = const_str_digest_aca7d42006c8522789b4a354492f15c5;
+    tmp_assign_source_2 = module_filename_obj;
     UPDATE_STRING_DICT0( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain___file__, tmp_assign_source_2 );
-    tmp_assign_source_3 = LIST_COPY( const_list_str_digest_0bbedd0e949e720d28f7ba03a3294012_list );
+    // Frame without reuse.
+    frame_cc5c490b1617b6c2f7075039d1fc5489 = MAKE_MODULE_FRAME( codeobj_cc5c490b1617b6c2f7075039d1fc5489, module_cryptography$x509 );
+
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
+    pushFrameStack( frame_cc5c490b1617b6c2f7075039d1fc5489 );
+    assert( Py_REFCNT( frame_cc5c490b1617b6c2f7075039d1fc5489 ) == 2 );
+
+    // Framed code:
+    frame_cc5c490b1617b6c2f7075039d1fc5489->m_frame.f_lineno = 1;
+    {
+        PyObject *module = PyImport_ImportModule("os");
+        if (likely( module != NULL ))
+        {
+            tmp_source_name_1 = PyObject_GetAttr( module, const_str_plain_path );
+        }
+        else
+        {
+            tmp_source_name_1 = NULL;
+        }
+    }
+
+    if ( tmp_source_name_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    tmp_called_name_1 = LOOKUP_ATTRIBUTE( tmp_source_name_1, const_str_plain_dirname );
+    if ( tmp_called_name_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    tmp_args_element_name_1 = module_filename_obj;
+    frame_cc5c490b1617b6c2f7075039d1fc5489->m_frame.f_lineno = 1;
+    {
+        PyObject *call_args[] = { tmp_args_element_name_1 };
+        tmp_list_element_1 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_1, call_args );
+    }
+
+    Py_DECREF( tmp_called_name_1 );
+    if ( tmp_list_element_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    tmp_assign_source_3 = PyList_New( 3 );
+    PyList_SET_ITEM( tmp_assign_source_3, 0, tmp_list_element_1 );
+    frame_cc5c490b1617b6c2f7075039d1fc5489->m_frame.f_lineno = 1;
+    {
+        PyObject *module = PyImport_ImportModule("os");
+        if (likely( module != NULL ))
+        {
+            tmp_source_name_2 = PyObject_GetAttr( module, const_str_plain_path );
+        }
+        else
+        {
+            tmp_source_name_2 = NULL;
+        }
+    }
+
+    if ( tmp_source_name_2 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+        Py_DECREF( tmp_assign_source_3 );
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    tmp_called_name_2 = LOOKUP_ATTRIBUTE( tmp_source_name_2, const_str_plain_join );
+    if ( tmp_called_name_2 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+        Py_DECREF( tmp_assign_source_3 );
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    frame_cc5c490b1617b6c2f7075039d1fc5489->m_frame.f_lineno = 1;
+    {
+        PyObject *module = PyImport_ImportModule("os");
+        if (likely( module != NULL ))
+        {
+            tmp_called_instance_1 = PyObject_GetAttr( module, const_str_plain_environ );
+        }
+        else
+        {
+            tmp_called_instance_1 = NULL;
+        }
+    }
+
+    if ( tmp_called_instance_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+        Py_DECREF( tmp_assign_source_3 );
+        Py_DECREF( tmp_called_name_2 );
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    frame_cc5c490b1617b6c2f7075039d1fc5489->m_frame.f_lineno = 1;
+    tmp_args_element_name_2 = CALL_METHOD_WITH_ARGS2( tmp_called_instance_1, const_str_plain_get, &PyTuple_GET_ITEM( const_tuple_495f0b9ca2f725dc9f357390583c7253_tuple, 0 ) );
+
+    if ( tmp_args_element_name_2 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+        Py_DECREF( tmp_assign_source_3 );
+        Py_DECREF( tmp_called_name_2 );
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    tmp_args_element_name_3 = const_str_plain_x509;
+    frame_cc5c490b1617b6c2f7075039d1fc5489->m_frame.f_lineno = 1;
+    {
+        PyObject *call_args[] = { tmp_args_element_name_2, tmp_args_element_name_3 };
+        tmp_list_element_1 = CALL_FUNCTION_WITH_ARGS2( tmp_called_name_2, call_args );
+    }
+
+    Py_DECREF( tmp_called_name_2 );
+    Py_DECREF( tmp_args_element_name_2 );
+    if ( tmp_list_element_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+        Py_DECREF( tmp_assign_source_3 );
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    PyList_SET_ITEM( tmp_assign_source_3, 1, tmp_list_element_1 );
+    frame_cc5c490b1617b6c2f7075039d1fc5489->m_frame.f_lineno = 1;
+    {
+        PyObject *module = PyImport_ImportModule("os");
+        if (likely( module != NULL ))
+        {
+            tmp_called_instance_2 = PyObject_GetAttr( module, const_str_plain_environ );
+        }
+        else
+        {
+            tmp_called_instance_2 = NULL;
+        }
+    }
+
+    if ( tmp_called_instance_2 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+        Py_DECREF( tmp_assign_source_3 );
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    frame_cc5c490b1617b6c2f7075039d1fc5489->m_frame.f_lineno = 1;
+    tmp_list_element_1 = CALL_METHOD_WITH_ARGS2( tmp_called_instance_2, const_str_plain_get, &PyTuple_GET_ITEM( const_tuple_b8789a7dea6d9440532c81d6d2cb3c71_tuple, 0 ) );
+
+    if ( tmp_list_element_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+        Py_DECREF( tmp_assign_source_3 );
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    PyList_SET_ITEM( tmp_assign_source_3, 2, tmp_list_element_1 );
     UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain___path__, tmp_assign_source_3 );
     tmp_assign_source_4 = Py_None;
     UPDATE_STRING_DICT0( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain___cached__, tmp_assign_source_4 );
+    frame_cc5c490b1617b6c2f7075039d1fc5489->m_frame.f_lineno = 5;
     tmp_assign_source_5 = PyImport_ImportModule("__future__");
     assert( !(tmp_assign_source_5 == NULL) );
     assert( tmp_import_from_1__module == NULL );
     Py_INCREF( tmp_assign_source_5 );
     tmp_import_from_1__module = tmp_assign_source_5;
 
-    // Frame without reuse.
-    frame_e8c86d84b3cd391c9a6746ab9e6519c6 = MAKE_MODULE_FRAME( codeobj_e8c86d84b3cd391c9a6746ab9e6519c6, module_cryptography$x509 );
-
-    // Push the new frame as the currently active one, and we should be exclusively
-    // owning it.
-    pushFrameStack( frame_e8c86d84b3cd391c9a6746ab9e6519c6 );
-    assert( Py_REFCNT( frame_e8c86d84b3cd391c9a6746ab9e6519c6 ) == 2 );
-
-    // Framed code:
     // Tried code:
     tmp_import_name_from_1 = tmp_import_from_1__module;
 
@@ -1120,7 +1333,7 @@ MOD_INIT_DECL( cryptography$x509 )
     tmp_locals_name_1 = Py_None;
     tmp_fromlist_name_1 = const_tuple_str_plain_certificate_transparency_tuple;
     tmp_level_name_1 = const_int_0;
-    frame_e8c86d84b3cd391c9a6746ab9e6519c6->m_frame.f_lineno = 7;
+    frame_cc5c490b1617b6c2f7075039d1fc5489->m_frame.f_lineno = 7;
     tmp_import_name_from_4 = IMPORT_MODULE5( tmp_name_name_1, tmp_globals_name_1, tmp_locals_name_1, tmp_fromlist_name_1, tmp_level_name_1 );
     if ( tmp_import_name_from_4 == NULL )
     {
@@ -1152,7 +1365,7 @@ MOD_INIT_DECL( cryptography$x509 )
     tmp_locals_name_2 = Py_None;
     tmp_fromlist_name_2 = const_tuple_aa25bec352c38dd8550148f01376e4ae_tuple;
     tmp_level_name_2 = const_int_0;
-    frame_e8c86d84b3cd391c9a6746ab9e6519c6->m_frame.f_lineno = 8;
+    frame_cc5c490b1617b6c2f7075039d1fc5489->m_frame.f_lineno = 8;
     tmp_assign_source_10 = IMPORT_MODULE5( tmp_name_name_2, tmp_globals_name_2, tmp_locals_name_2, tmp_fromlist_name_2, tmp_level_name_2 );
     if ( tmp_assign_source_10 == NULL )
     {
@@ -1475,7 +1688,7 @@ MOD_INIT_DECL( cryptography$x509 )
     tmp_locals_name_3 = Py_None;
     tmp_fromlist_name_3 = const_tuple_76141eef7fe185822f569cf108f2ed6b_tuple;
     tmp_level_name_3 = const_int_0;
-    frame_e8c86d84b3cd391c9a6746ab9e6519c6->m_frame.f_lineno = 17;
+    frame_cc5c490b1617b6c2f7075039d1fc5489->m_frame.f_lineno = 17;
     tmp_assign_source_28 = IMPORT_MODULE5( tmp_name_name_3, tmp_globals_name_3, tmp_locals_name_3, tmp_fromlist_name_3, tmp_level_name_3 );
     if ( tmp_assign_source_28 == NULL )
     {
@@ -2102,7 +2315,7 @@ MOD_INIT_DECL( cryptography$x509 )
     tmp_locals_name_4 = Py_None;
     tmp_fromlist_name_4 = const_tuple_c992ec5fe7bb072bb4084b191a56b771_tuple;
     tmp_level_name_4 = const_int_0;
-    frame_e8c86d84b3cd391c9a6746ab9e6519c6->m_frame.f_lineno = 29;
+    frame_cc5c490b1617b6c2f7075039d1fc5489->m_frame.f_lineno = 29;
     tmp_assign_source_65 = IMPORT_MODULE5( tmp_name_name_4, tmp_globals_name_4, tmp_locals_name_4, tmp_fromlist_name_4, tmp_level_name_4 );
     if ( tmp_assign_source_65 == NULL )
     {
@@ -2313,7 +2526,7 @@ MOD_INIT_DECL( cryptography$x509 )
     tmp_locals_name_5 = Py_None;
     tmp_fromlist_name_5 = const_tuple_e6fbd74e2a994d2f68f56ed467b52de4_tuple;
     tmp_level_name_5 = const_int_0;
-    frame_e8c86d84b3cd391c9a6746ab9e6519c6->m_frame.f_lineno = 34;
+    frame_cc5c490b1617b6c2f7075039d1fc5489->m_frame.f_lineno = 34;
     tmp_assign_source_76 = IMPORT_MODULE5( tmp_name_name_5, tmp_globals_name_5, tmp_locals_name_5, tmp_fromlist_name_5, tmp_level_name_5 );
     if ( tmp_assign_source_76 == NULL )
     {
@@ -2412,7 +2625,7 @@ MOD_INIT_DECL( cryptography$x509 )
     tmp_locals_name_6 = Py_None;
     tmp_fromlist_name_6 = const_tuple_c68e20a5591f5059c0231d123efb1167_tuple;
     tmp_level_name_6 = const_int_0;
-    frame_e8c86d84b3cd391c9a6746ab9e6519c6->m_frame.f_lineno = 37;
+    frame_cc5c490b1617b6c2f7075039d1fc5489->m_frame.f_lineno = 37;
     tmp_assign_source_80 = IMPORT_MODULE5( tmp_name_name_6, tmp_globals_name_6, tmp_locals_name_6, tmp_fromlist_name_6, tmp_level_name_6 );
     if ( tmp_assign_source_80 == NULL )
     {
@@ -2602,76 +2815,6 @@ MOD_INIT_DECL( cryptography$x509 )
     Py_DECREF( tmp_import_from_6__module );
     tmp_import_from_6__module = NULL;
 
-    tmp_source_name_1 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
-
-    if (unlikely( tmp_source_name_1 == NULL ))
-    {
-        tmp_source_name_1 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
-    }
-
-    if ( tmp_source_name_1 == NULL )
-    {
-
-        exception_type = PyExc_NameError;
-        Py_INCREF( exception_type );
-        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "ExtensionOID" );
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
-        CHAIN_EXCEPTION( exception_value );
-
-        exception_lineno = 44;
-
-        goto frame_exception_exit_1;
-    }
-
-    tmp_assign_source_90 = LOOKUP_ATTRIBUTE( tmp_source_name_1, const_str_plain_AUTHORITY_INFORMATION_ACCESS );
-    if ( tmp_assign_source_90 == NULL )
-    {
-        assert( ERROR_OCCURRED() );
-
-        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
-
-
-        exception_lineno = 44;
-
-        goto frame_exception_exit_1;
-    }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_AUTHORITY_INFORMATION_ACCESS, tmp_assign_source_90 );
-    tmp_source_name_2 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
-
-    if (unlikely( tmp_source_name_2 == NULL ))
-    {
-        tmp_source_name_2 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
-    }
-
-    if ( tmp_source_name_2 == NULL )
-    {
-
-        exception_type = PyExc_NameError;
-        Py_INCREF( exception_type );
-        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "ExtensionOID" );
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
-        CHAIN_EXCEPTION( exception_value );
-
-        exception_lineno = 45;
-
-        goto frame_exception_exit_1;
-    }
-
-    tmp_assign_source_91 = LOOKUP_ATTRIBUTE( tmp_source_name_2, const_str_plain_AUTHORITY_KEY_IDENTIFIER );
-    if ( tmp_assign_source_91 == NULL )
-    {
-        assert( ERROR_OCCURRED() );
-
-        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
-
-
-        exception_lineno = 45;
-
-        goto frame_exception_exit_1;
-    }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_AUTHORITY_KEY_IDENTIFIER, tmp_assign_source_91 );
     tmp_source_name_3 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
 
     if (unlikely( tmp_source_name_3 == NULL ))
@@ -2689,24 +2832,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 46;
+        exception_lineno = 44;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_92 = LOOKUP_ATTRIBUTE( tmp_source_name_3, const_str_plain_BASIC_CONSTRAINTS );
-    if ( tmp_assign_source_92 == NULL )
+    tmp_assign_source_90 = LOOKUP_ATTRIBUTE( tmp_source_name_3, const_str_plain_AUTHORITY_INFORMATION_ACCESS );
+    if ( tmp_assign_source_90 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 46;
+        exception_lineno = 44;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_BASIC_CONSTRAINTS, tmp_assign_source_92 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_AUTHORITY_INFORMATION_ACCESS, tmp_assign_source_90 );
     tmp_source_name_4 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
 
     if (unlikely( tmp_source_name_4 == NULL ))
@@ -2724,24 +2867,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 47;
+        exception_lineno = 45;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_93 = LOOKUP_ATTRIBUTE( tmp_source_name_4, const_str_plain_CERTIFICATE_POLICIES );
-    if ( tmp_assign_source_93 == NULL )
+    tmp_assign_source_91 = LOOKUP_ATTRIBUTE( tmp_source_name_4, const_str_plain_AUTHORITY_KEY_IDENTIFIER );
+    if ( tmp_assign_source_91 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 47;
+        exception_lineno = 45;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_CERTIFICATE_POLICIES, tmp_assign_source_93 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_AUTHORITY_KEY_IDENTIFIER, tmp_assign_source_91 );
     tmp_source_name_5 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
 
     if (unlikely( tmp_source_name_5 == NULL ))
@@ -2759,24 +2902,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 48;
+        exception_lineno = 46;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_94 = LOOKUP_ATTRIBUTE( tmp_source_name_5, const_str_plain_CRL_DISTRIBUTION_POINTS );
-    if ( tmp_assign_source_94 == NULL )
+    tmp_assign_source_92 = LOOKUP_ATTRIBUTE( tmp_source_name_5, const_str_plain_BASIC_CONSTRAINTS );
+    if ( tmp_assign_source_92 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 48;
+        exception_lineno = 46;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_CRL_DISTRIBUTION_POINTS, tmp_assign_source_94 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_BASIC_CONSTRAINTS, tmp_assign_source_92 );
     tmp_source_name_6 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
 
     if (unlikely( tmp_source_name_6 == NULL ))
@@ -2794,24 +2937,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 49;
+        exception_lineno = 47;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_95 = LOOKUP_ATTRIBUTE( tmp_source_name_6, const_str_plain_EXTENDED_KEY_USAGE );
-    if ( tmp_assign_source_95 == NULL )
+    tmp_assign_source_93 = LOOKUP_ATTRIBUTE( tmp_source_name_6, const_str_plain_CERTIFICATE_POLICIES );
+    if ( tmp_assign_source_93 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 49;
+        exception_lineno = 47;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_EXTENDED_KEY_USAGE, tmp_assign_source_95 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_CERTIFICATE_POLICIES, tmp_assign_source_93 );
     tmp_source_name_7 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
 
     if (unlikely( tmp_source_name_7 == NULL ))
@@ -2829,24 +2972,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 50;
+        exception_lineno = 48;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_96 = LOOKUP_ATTRIBUTE( tmp_source_name_7, const_str_plain_FRESHEST_CRL );
-    if ( tmp_assign_source_96 == NULL )
+    tmp_assign_source_94 = LOOKUP_ATTRIBUTE( tmp_source_name_7, const_str_plain_CRL_DISTRIBUTION_POINTS );
+    if ( tmp_assign_source_94 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 50;
+        exception_lineno = 48;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_FRESHEST_CRL, tmp_assign_source_96 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_CRL_DISTRIBUTION_POINTS, tmp_assign_source_94 );
     tmp_source_name_8 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
 
     if (unlikely( tmp_source_name_8 == NULL ))
@@ -2864,24 +3007,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 51;
+        exception_lineno = 49;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_97 = LOOKUP_ATTRIBUTE( tmp_source_name_8, const_str_plain_INHIBIT_ANY_POLICY );
-    if ( tmp_assign_source_97 == NULL )
+    tmp_assign_source_95 = LOOKUP_ATTRIBUTE( tmp_source_name_8, const_str_plain_EXTENDED_KEY_USAGE );
+    if ( tmp_assign_source_95 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 51;
+        exception_lineno = 49;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_INHIBIT_ANY_POLICY, tmp_assign_source_97 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_EXTENDED_KEY_USAGE, tmp_assign_source_95 );
     tmp_source_name_9 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
 
     if (unlikely( tmp_source_name_9 == NULL ))
@@ -2899,24 +3042,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 52;
+        exception_lineno = 50;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_98 = LOOKUP_ATTRIBUTE( tmp_source_name_9, const_str_plain_ISSUER_ALTERNATIVE_NAME );
-    if ( tmp_assign_source_98 == NULL )
+    tmp_assign_source_96 = LOOKUP_ATTRIBUTE( tmp_source_name_9, const_str_plain_FRESHEST_CRL );
+    if ( tmp_assign_source_96 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 52;
+        exception_lineno = 50;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_ISSUER_ALTERNATIVE_NAME, tmp_assign_source_98 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_FRESHEST_CRL, tmp_assign_source_96 );
     tmp_source_name_10 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
 
     if (unlikely( tmp_source_name_10 == NULL ))
@@ -2934,24 +3077,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 53;
+        exception_lineno = 51;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_99 = LOOKUP_ATTRIBUTE( tmp_source_name_10, const_str_plain_KEY_USAGE );
-    if ( tmp_assign_source_99 == NULL )
+    tmp_assign_source_97 = LOOKUP_ATTRIBUTE( tmp_source_name_10, const_str_plain_INHIBIT_ANY_POLICY );
+    if ( tmp_assign_source_97 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 53;
+        exception_lineno = 51;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_KEY_USAGE, tmp_assign_source_99 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_INHIBIT_ANY_POLICY, tmp_assign_source_97 );
     tmp_source_name_11 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
 
     if (unlikely( tmp_source_name_11 == NULL ))
@@ -2969,24 +3112,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 54;
+        exception_lineno = 52;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_100 = LOOKUP_ATTRIBUTE( tmp_source_name_11, const_str_plain_NAME_CONSTRAINTS );
-    if ( tmp_assign_source_100 == NULL )
+    tmp_assign_source_98 = LOOKUP_ATTRIBUTE( tmp_source_name_11, const_str_plain_ISSUER_ALTERNATIVE_NAME );
+    if ( tmp_assign_source_98 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 54;
+        exception_lineno = 52;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_NAME_CONSTRAINTS, tmp_assign_source_100 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_ISSUER_ALTERNATIVE_NAME, tmp_assign_source_98 );
     tmp_source_name_12 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
 
     if (unlikely( tmp_source_name_12 == NULL ))
@@ -3004,24 +3147,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 55;
+        exception_lineno = 53;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_101 = LOOKUP_ATTRIBUTE( tmp_source_name_12, const_str_plain_OCSP_NO_CHECK );
-    if ( tmp_assign_source_101 == NULL )
+    tmp_assign_source_99 = LOOKUP_ATTRIBUTE( tmp_source_name_12, const_str_plain_KEY_USAGE );
+    if ( tmp_assign_source_99 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 55;
+        exception_lineno = 53;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_OCSP_NO_CHECK, tmp_assign_source_101 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_KEY_USAGE, tmp_assign_source_99 );
     tmp_source_name_13 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
 
     if (unlikely( tmp_source_name_13 == NULL ))
@@ -3039,24 +3182,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 56;
+        exception_lineno = 54;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_102 = LOOKUP_ATTRIBUTE( tmp_source_name_13, const_str_plain_POLICY_CONSTRAINTS );
-    if ( tmp_assign_source_102 == NULL )
+    tmp_assign_source_100 = LOOKUP_ATTRIBUTE( tmp_source_name_13, const_str_plain_NAME_CONSTRAINTS );
+    if ( tmp_assign_source_100 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 56;
+        exception_lineno = 54;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_POLICY_CONSTRAINTS, tmp_assign_source_102 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_NAME_CONSTRAINTS, tmp_assign_source_100 );
     tmp_source_name_14 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
 
     if (unlikely( tmp_source_name_14 == NULL ))
@@ -3074,24 +3217,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 57;
+        exception_lineno = 55;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_103 = LOOKUP_ATTRIBUTE( tmp_source_name_14, const_str_plain_POLICY_MAPPINGS );
-    if ( tmp_assign_source_103 == NULL )
+    tmp_assign_source_101 = LOOKUP_ATTRIBUTE( tmp_source_name_14, const_str_plain_OCSP_NO_CHECK );
+    if ( tmp_assign_source_101 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 57;
+        exception_lineno = 55;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_POLICY_MAPPINGS, tmp_assign_source_103 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_OCSP_NO_CHECK, tmp_assign_source_101 );
     tmp_source_name_15 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
 
     if (unlikely( tmp_source_name_15 == NULL ))
@@ -3109,24 +3252,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 58;
+        exception_lineno = 56;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_104 = LOOKUP_ATTRIBUTE( tmp_source_name_15, const_str_plain_SUBJECT_ALTERNATIVE_NAME );
-    if ( tmp_assign_source_104 == NULL )
+    tmp_assign_source_102 = LOOKUP_ATTRIBUTE( tmp_source_name_15, const_str_plain_POLICY_CONSTRAINTS );
+    if ( tmp_assign_source_102 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 58;
+        exception_lineno = 56;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_SUBJECT_ALTERNATIVE_NAME, tmp_assign_source_104 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_POLICY_CONSTRAINTS, tmp_assign_source_102 );
     tmp_source_name_16 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
 
     if (unlikely( tmp_source_name_16 == NULL ))
@@ -3144,24 +3287,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 59;
+        exception_lineno = 57;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_105 = LOOKUP_ATTRIBUTE( tmp_source_name_16, const_str_plain_SUBJECT_DIRECTORY_ATTRIBUTES );
-    if ( tmp_assign_source_105 == NULL )
+    tmp_assign_source_103 = LOOKUP_ATTRIBUTE( tmp_source_name_16, const_str_plain_POLICY_MAPPINGS );
+    if ( tmp_assign_source_103 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 59;
+        exception_lineno = 57;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_SUBJECT_DIRECTORY_ATTRIBUTES, tmp_assign_source_105 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_POLICY_MAPPINGS, tmp_assign_source_103 );
     tmp_source_name_17 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
 
     if (unlikely( tmp_source_name_17 == NULL ))
@@ -3179,24 +3322,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 60;
+        exception_lineno = 58;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_106 = LOOKUP_ATTRIBUTE( tmp_source_name_17, const_str_plain_SUBJECT_INFORMATION_ACCESS );
-    if ( tmp_assign_source_106 == NULL )
+    tmp_assign_source_104 = LOOKUP_ATTRIBUTE( tmp_source_name_17, const_str_plain_SUBJECT_ALTERNATIVE_NAME );
+    if ( tmp_assign_source_104 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 60;
+        exception_lineno = 58;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_SUBJECT_INFORMATION_ACCESS, tmp_assign_source_106 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_SUBJECT_ALTERNATIVE_NAME, tmp_assign_source_104 );
     tmp_source_name_18 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
 
     if (unlikely( tmp_source_name_18 == NULL ))
@@ -3214,12 +3357,82 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
+        exception_lineno = 59;
+
+        goto frame_exception_exit_1;
+    }
+
+    tmp_assign_source_105 = LOOKUP_ATTRIBUTE( tmp_source_name_18, const_str_plain_SUBJECT_DIRECTORY_ATTRIBUTES );
+    if ( tmp_assign_source_105 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 59;
+
+        goto frame_exception_exit_1;
+    }
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_SUBJECT_DIRECTORY_ATTRIBUTES, tmp_assign_source_105 );
+    tmp_source_name_19 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
+
+    if (unlikely( tmp_source_name_19 == NULL ))
+    {
+        tmp_source_name_19 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
+    }
+
+    if ( tmp_source_name_19 == NULL )
+    {
+
+        exception_type = PyExc_NameError;
+        Py_INCREF( exception_type );
+        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "ExtensionOID" );
+        exception_tb = NULL;
+        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
+        CHAIN_EXCEPTION( exception_value );
+
+        exception_lineno = 60;
+
+        goto frame_exception_exit_1;
+    }
+
+    tmp_assign_source_106 = LOOKUP_ATTRIBUTE( tmp_source_name_19, const_str_plain_SUBJECT_INFORMATION_ACCESS );
+    if ( tmp_assign_source_106 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 60;
+
+        goto frame_exception_exit_1;
+    }
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_SUBJECT_INFORMATION_ACCESS, tmp_assign_source_106 );
+    tmp_source_name_20 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
+
+    if (unlikely( tmp_source_name_20 == NULL ))
+    {
+        tmp_source_name_20 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_ExtensionOID );
+    }
+
+    if ( tmp_source_name_20 == NULL )
+    {
+
+        exception_type = PyExc_NameError;
+        Py_INCREF( exception_type );
+        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "ExtensionOID" );
+        exception_tb = NULL;
+        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
+        CHAIN_EXCEPTION( exception_value );
+
         exception_lineno = 61;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_107 = LOOKUP_ATTRIBUTE( tmp_source_name_18, const_str_plain_SUBJECT_KEY_IDENTIFIER );
+    tmp_assign_source_107 = LOOKUP_ATTRIBUTE( tmp_source_name_20, const_str_plain_SUBJECT_KEY_IDENTIFIER );
     if ( tmp_assign_source_107 == NULL )
     {
         assert( ERROR_OCCURRED() );
@@ -3232,76 +3445,6 @@ MOD_INIT_DECL( cryptography$x509 )
         goto frame_exception_exit_1;
     }
     UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_SUBJECT_KEY_IDENTIFIER, tmp_assign_source_107 );
-    tmp_source_name_19 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
-
-    if (unlikely( tmp_source_name_19 == NULL ))
-    {
-        tmp_source_name_19 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
-    }
-
-    if ( tmp_source_name_19 == NULL )
-    {
-
-        exception_type = PyExc_NameError;
-        Py_INCREF( exception_type );
-        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "SignatureAlgorithmOID" );
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
-        CHAIN_EXCEPTION( exception_value );
-
-        exception_lineno = 63;
-
-        goto frame_exception_exit_1;
-    }
-
-    tmp_assign_source_108 = LOOKUP_ATTRIBUTE( tmp_source_name_19, const_str_plain_DSA_WITH_SHA1 );
-    if ( tmp_assign_source_108 == NULL )
-    {
-        assert( ERROR_OCCURRED() );
-
-        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
-
-
-        exception_lineno = 63;
-
-        goto frame_exception_exit_1;
-    }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_DSA_WITH_SHA1, tmp_assign_source_108 );
-    tmp_source_name_20 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
-
-    if (unlikely( tmp_source_name_20 == NULL ))
-    {
-        tmp_source_name_20 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
-    }
-
-    if ( tmp_source_name_20 == NULL )
-    {
-
-        exception_type = PyExc_NameError;
-        Py_INCREF( exception_type );
-        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "SignatureAlgorithmOID" );
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
-        CHAIN_EXCEPTION( exception_value );
-
-        exception_lineno = 64;
-
-        goto frame_exception_exit_1;
-    }
-
-    tmp_assign_source_109 = LOOKUP_ATTRIBUTE( tmp_source_name_20, const_str_plain_DSA_WITH_SHA224 );
-    if ( tmp_assign_source_109 == NULL )
-    {
-        assert( ERROR_OCCURRED() );
-
-        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
-
-
-        exception_lineno = 64;
-
-        goto frame_exception_exit_1;
-    }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_DSA_WITH_SHA224, tmp_assign_source_109 );
     tmp_source_name_21 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
 
     if (unlikely( tmp_source_name_21 == NULL ))
@@ -3319,24 +3462,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 65;
+        exception_lineno = 63;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_110 = LOOKUP_ATTRIBUTE( tmp_source_name_21, const_str_plain_DSA_WITH_SHA256 );
-    if ( tmp_assign_source_110 == NULL )
+    tmp_assign_source_108 = LOOKUP_ATTRIBUTE( tmp_source_name_21, const_str_plain_DSA_WITH_SHA1 );
+    if ( tmp_assign_source_108 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 65;
+        exception_lineno = 63;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_DSA_WITH_SHA256, tmp_assign_source_110 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_DSA_WITH_SHA1, tmp_assign_source_108 );
     tmp_source_name_22 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
 
     if (unlikely( tmp_source_name_22 == NULL ))
@@ -3354,24 +3497,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 66;
+        exception_lineno = 64;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_111 = LOOKUP_ATTRIBUTE( tmp_source_name_22, const_str_plain_ECDSA_WITH_SHA1 );
-    if ( tmp_assign_source_111 == NULL )
+    tmp_assign_source_109 = LOOKUP_ATTRIBUTE( tmp_source_name_22, const_str_plain_DSA_WITH_SHA224 );
+    if ( tmp_assign_source_109 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 66;
+        exception_lineno = 64;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_ECDSA_WITH_SHA1, tmp_assign_source_111 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_DSA_WITH_SHA224, tmp_assign_source_109 );
     tmp_source_name_23 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
 
     if (unlikely( tmp_source_name_23 == NULL ))
@@ -3389,24 +3532,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 67;
+        exception_lineno = 65;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_112 = LOOKUP_ATTRIBUTE( tmp_source_name_23, const_str_plain_ECDSA_WITH_SHA224 );
-    if ( tmp_assign_source_112 == NULL )
+    tmp_assign_source_110 = LOOKUP_ATTRIBUTE( tmp_source_name_23, const_str_plain_DSA_WITH_SHA256 );
+    if ( tmp_assign_source_110 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 67;
+        exception_lineno = 65;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_ECDSA_WITH_SHA224, tmp_assign_source_112 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_DSA_WITH_SHA256, tmp_assign_source_110 );
     tmp_source_name_24 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
 
     if (unlikely( tmp_source_name_24 == NULL ))
@@ -3424,24 +3567,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 68;
+        exception_lineno = 66;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_113 = LOOKUP_ATTRIBUTE( tmp_source_name_24, const_str_plain_ECDSA_WITH_SHA256 );
-    if ( tmp_assign_source_113 == NULL )
+    tmp_assign_source_111 = LOOKUP_ATTRIBUTE( tmp_source_name_24, const_str_plain_ECDSA_WITH_SHA1 );
+    if ( tmp_assign_source_111 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 68;
+        exception_lineno = 66;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_ECDSA_WITH_SHA256, tmp_assign_source_113 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_ECDSA_WITH_SHA1, tmp_assign_source_111 );
     tmp_source_name_25 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
 
     if (unlikely( tmp_source_name_25 == NULL ))
@@ -3459,24 +3602,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 69;
+        exception_lineno = 67;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_114 = LOOKUP_ATTRIBUTE( tmp_source_name_25, const_str_plain_ECDSA_WITH_SHA384 );
-    if ( tmp_assign_source_114 == NULL )
+    tmp_assign_source_112 = LOOKUP_ATTRIBUTE( tmp_source_name_25, const_str_plain_ECDSA_WITH_SHA224 );
+    if ( tmp_assign_source_112 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 69;
+        exception_lineno = 67;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_ECDSA_WITH_SHA384, tmp_assign_source_114 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_ECDSA_WITH_SHA224, tmp_assign_source_112 );
     tmp_source_name_26 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
 
     if (unlikely( tmp_source_name_26 == NULL ))
@@ -3494,24 +3637,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 70;
+        exception_lineno = 68;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_115 = LOOKUP_ATTRIBUTE( tmp_source_name_26, const_str_plain_ECDSA_WITH_SHA512 );
-    if ( tmp_assign_source_115 == NULL )
+    tmp_assign_source_113 = LOOKUP_ATTRIBUTE( tmp_source_name_26, const_str_plain_ECDSA_WITH_SHA256 );
+    if ( tmp_assign_source_113 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 70;
+        exception_lineno = 68;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_ECDSA_WITH_SHA512, tmp_assign_source_115 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_ECDSA_WITH_SHA256, tmp_assign_source_113 );
     tmp_source_name_27 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
 
     if (unlikely( tmp_source_name_27 == NULL ))
@@ -3529,24 +3672,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 71;
+        exception_lineno = 69;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_116 = LOOKUP_ATTRIBUTE( tmp_source_name_27, const_str_plain_RSA_WITH_MD5 );
-    if ( tmp_assign_source_116 == NULL )
+    tmp_assign_source_114 = LOOKUP_ATTRIBUTE( tmp_source_name_27, const_str_plain_ECDSA_WITH_SHA384 );
+    if ( tmp_assign_source_114 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 71;
+        exception_lineno = 69;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_RSA_WITH_MD5, tmp_assign_source_116 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_ECDSA_WITH_SHA384, tmp_assign_source_114 );
     tmp_source_name_28 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
 
     if (unlikely( tmp_source_name_28 == NULL ))
@@ -3564,24 +3707,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 72;
+        exception_lineno = 70;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_117 = LOOKUP_ATTRIBUTE( tmp_source_name_28, const_str_plain_RSA_WITH_SHA1 );
-    if ( tmp_assign_source_117 == NULL )
+    tmp_assign_source_115 = LOOKUP_ATTRIBUTE( tmp_source_name_28, const_str_plain_ECDSA_WITH_SHA512 );
+    if ( tmp_assign_source_115 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 72;
+        exception_lineno = 70;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_RSA_WITH_SHA1, tmp_assign_source_117 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_ECDSA_WITH_SHA512, tmp_assign_source_115 );
     tmp_source_name_29 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
 
     if (unlikely( tmp_source_name_29 == NULL ))
@@ -3599,24 +3742,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 73;
+        exception_lineno = 71;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_118 = LOOKUP_ATTRIBUTE( tmp_source_name_29, const_str_plain_RSA_WITH_SHA224 );
-    if ( tmp_assign_source_118 == NULL )
+    tmp_assign_source_116 = LOOKUP_ATTRIBUTE( tmp_source_name_29, const_str_plain_RSA_WITH_MD5 );
+    if ( tmp_assign_source_116 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 73;
+        exception_lineno = 71;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_RSA_WITH_SHA224, tmp_assign_source_118 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_RSA_WITH_MD5, tmp_assign_source_116 );
     tmp_source_name_30 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
 
     if (unlikely( tmp_source_name_30 == NULL ))
@@ -3634,24 +3777,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 74;
+        exception_lineno = 72;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_119 = LOOKUP_ATTRIBUTE( tmp_source_name_30, const_str_plain_RSA_WITH_SHA256 );
-    if ( tmp_assign_source_119 == NULL )
+    tmp_assign_source_117 = LOOKUP_ATTRIBUTE( tmp_source_name_30, const_str_plain_RSA_WITH_SHA1 );
+    if ( tmp_assign_source_117 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 74;
+        exception_lineno = 72;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_RSA_WITH_SHA256, tmp_assign_source_119 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_RSA_WITH_SHA1, tmp_assign_source_117 );
     tmp_source_name_31 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
 
     if (unlikely( tmp_source_name_31 == NULL ))
@@ -3669,24 +3812,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 75;
+        exception_lineno = 73;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_120 = LOOKUP_ATTRIBUTE( tmp_source_name_31, const_str_plain_RSA_WITH_SHA384 );
-    if ( tmp_assign_source_120 == NULL )
+    tmp_assign_source_118 = LOOKUP_ATTRIBUTE( tmp_source_name_31, const_str_plain_RSA_WITH_SHA224 );
+    if ( tmp_assign_source_118 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 75;
+        exception_lineno = 73;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_RSA_WITH_SHA384, tmp_assign_source_120 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_RSA_WITH_SHA224, tmp_assign_source_118 );
     tmp_source_name_32 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
 
     if (unlikely( tmp_source_name_32 == NULL ))
@@ -3704,24 +3847,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 76;
+        exception_lineno = 74;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_121 = LOOKUP_ATTRIBUTE( tmp_source_name_32, const_str_plain_RSA_WITH_SHA512 );
-    if ( tmp_assign_source_121 == NULL )
+    tmp_assign_source_119 = LOOKUP_ATTRIBUTE( tmp_source_name_32, const_str_plain_RSA_WITH_SHA256 );
+    if ( tmp_assign_source_119 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 76;
+        exception_lineno = 74;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_RSA_WITH_SHA512, tmp_assign_source_121 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_RSA_WITH_SHA256, tmp_assign_source_119 );
     tmp_source_name_33 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
 
     if (unlikely( tmp_source_name_33 == NULL ))
@@ -3739,12 +3882,82 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
+        exception_lineno = 75;
+
+        goto frame_exception_exit_1;
+    }
+
+    tmp_assign_source_120 = LOOKUP_ATTRIBUTE( tmp_source_name_33, const_str_plain_RSA_WITH_SHA384 );
+    if ( tmp_assign_source_120 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 75;
+
+        goto frame_exception_exit_1;
+    }
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_RSA_WITH_SHA384, tmp_assign_source_120 );
+    tmp_source_name_34 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
+
+    if (unlikely( tmp_source_name_34 == NULL ))
+    {
+        tmp_source_name_34 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
+    }
+
+    if ( tmp_source_name_34 == NULL )
+    {
+
+        exception_type = PyExc_NameError;
+        Py_INCREF( exception_type );
+        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "SignatureAlgorithmOID" );
+        exception_tb = NULL;
+        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
+        CHAIN_EXCEPTION( exception_value );
+
+        exception_lineno = 76;
+
+        goto frame_exception_exit_1;
+    }
+
+    tmp_assign_source_121 = LOOKUP_ATTRIBUTE( tmp_source_name_34, const_str_plain_RSA_WITH_SHA512 );
+    if ( tmp_assign_source_121 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 76;
+
+        goto frame_exception_exit_1;
+    }
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_RSA_WITH_SHA512, tmp_assign_source_121 );
+    tmp_source_name_35 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
+
+    if (unlikely( tmp_source_name_35 == NULL ))
+    {
+        tmp_source_name_35 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_SignatureAlgorithmOID );
+    }
+
+    if ( tmp_source_name_35 == NULL )
+    {
+
+        exception_type = PyExc_NameError;
+        Py_INCREF( exception_type );
+        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "SignatureAlgorithmOID" );
+        exception_tb = NULL;
+        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
+        CHAIN_EXCEPTION( exception_value );
+
         exception_lineno = 77;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_122 = LOOKUP_ATTRIBUTE( tmp_source_name_33, const_str_plain_RSASSA_PSS );
+    tmp_assign_source_122 = LOOKUP_ATTRIBUTE( tmp_source_name_35, const_str_plain_RSASSA_PSS );
     if ( tmp_assign_source_122 == NULL )
     {
         assert( ERROR_OCCURRED() );
@@ -3757,76 +3970,6 @@ MOD_INIT_DECL( cryptography$x509 )
         goto frame_exception_exit_1;
     }
     UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_RSASSA_PSS, tmp_assign_source_122 );
-    tmp_source_name_34 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_NameOID );
-
-    if (unlikely( tmp_source_name_34 == NULL ))
-    {
-        tmp_source_name_34 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_NameOID );
-    }
-
-    if ( tmp_source_name_34 == NULL )
-    {
-
-        exception_type = PyExc_NameError;
-        Py_INCREF( exception_type );
-        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "NameOID" );
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
-        CHAIN_EXCEPTION( exception_value );
-
-        exception_lineno = 79;
-
-        goto frame_exception_exit_1;
-    }
-
-    tmp_assign_source_123 = LOOKUP_ATTRIBUTE( tmp_source_name_34, const_str_plain_COMMON_NAME );
-    if ( tmp_assign_source_123 == NULL )
-    {
-        assert( ERROR_OCCURRED() );
-
-        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
-
-
-        exception_lineno = 79;
-
-        goto frame_exception_exit_1;
-    }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_COMMON_NAME, tmp_assign_source_123 );
-    tmp_source_name_35 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_NameOID );
-
-    if (unlikely( tmp_source_name_35 == NULL ))
-    {
-        tmp_source_name_35 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_NameOID );
-    }
-
-    if ( tmp_source_name_35 == NULL )
-    {
-
-        exception_type = PyExc_NameError;
-        Py_INCREF( exception_type );
-        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "NameOID" );
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
-        CHAIN_EXCEPTION( exception_value );
-
-        exception_lineno = 80;
-
-        goto frame_exception_exit_1;
-    }
-
-    tmp_assign_source_124 = LOOKUP_ATTRIBUTE( tmp_source_name_35, const_str_plain_COUNTRY_NAME );
-    if ( tmp_assign_source_124 == NULL )
-    {
-        assert( ERROR_OCCURRED() );
-
-        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
-
-
-        exception_lineno = 80;
-
-        goto frame_exception_exit_1;
-    }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_COUNTRY_NAME, tmp_assign_source_124 );
     tmp_source_name_36 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_NameOID );
 
     if (unlikely( tmp_source_name_36 == NULL ))
@@ -3844,24 +3987,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 81;
+        exception_lineno = 79;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_125 = LOOKUP_ATTRIBUTE( tmp_source_name_36, const_str_plain_DOMAIN_COMPONENT );
-    if ( tmp_assign_source_125 == NULL )
+    tmp_assign_source_123 = LOOKUP_ATTRIBUTE( tmp_source_name_36, const_str_plain_COMMON_NAME );
+    if ( tmp_assign_source_123 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 81;
+        exception_lineno = 79;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_DOMAIN_COMPONENT, tmp_assign_source_125 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_COMMON_NAME, tmp_assign_source_123 );
     tmp_source_name_37 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_NameOID );
 
     if (unlikely( tmp_source_name_37 == NULL ))
@@ -3879,24 +4022,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 82;
+        exception_lineno = 80;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_126 = LOOKUP_ATTRIBUTE( tmp_source_name_37, const_str_plain_DN_QUALIFIER );
-    if ( tmp_assign_source_126 == NULL )
+    tmp_assign_source_124 = LOOKUP_ATTRIBUTE( tmp_source_name_37, const_str_plain_COUNTRY_NAME );
+    if ( tmp_assign_source_124 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 82;
+        exception_lineno = 80;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_DN_QUALIFIER, tmp_assign_source_126 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_COUNTRY_NAME, tmp_assign_source_124 );
     tmp_source_name_38 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_NameOID );
 
     if (unlikely( tmp_source_name_38 == NULL ))
@@ -3914,24 +4057,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 83;
+        exception_lineno = 81;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_127 = LOOKUP_ATTRIBUTE( tmp_source_name_38, const_str_plain_EMAIL_ADDRESS );
-    if ( tmp_assign_source_127 == NULL )
+    tmp_assign_source_125 = LOOKUP_ATTRIBUTE( tmp_source_name_38, const_str_plain_DOMAIN_COMPONENT );
+    if ( tmp_assign_source_125 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 83;
+        exception_lineno = 81;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_EMAIL_ADDRESS, tmp_assign_source_127 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_DOMAIN_COMPONENT, tmp_assign_source_125 );
     tmp_source_name_39 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_NameOID );
 
     if (unlikely( tmp_source_name_39 == NULL ))
@@ -3949,24 +4092,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 84;
+        exception_lineno = 82;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_128 = LOOKUP_ATTRIBUTE( tmp_source_name_39, const_str_plain_GENERATION_QUALIFIER );
-    if ( tmp_assign_source_128 == NULL )
+    tmp_assign_source_126 = LOOKUP_ATTRIBUTE( tmp_source_name_39, const_str_plain_DN_QUALIFIER );
+    if ( tmp_assign_source_126 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 84;
+        exception_lineno = 82;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_GENERATION_QUALIFIER, tmp_assign_source_128 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_DN_QUALIFIER, tmp_assign_source_126 );
     tmp_source_name_40 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_NameOID );
 
     if (unlikely( tmp_source_name_40 == NULL ))
@@ -3984,24 +4127,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 85;
+        exception_lineno = 83;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_129 = LOOKUP_ATTRIBUTE( tmp_source_name_40, const_str_plain_GIVEN_NAME );
-    if ( tmp_assign_source_129 == NULL )
+    tmp_assign_source_127 = LOOKUP_ATTRIBUTE( tmp_source_name_40, const_str_plain_EMAIL_ADDRESS );
+    if ( tmp_assign_source_127 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 85;
+        exception_lineno = 83;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_GIVEN_NAME, tmp_assign_source_129 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_EMAIL_ADDRESS, tmp_assign_source_127 );
     tmp_source_name_41 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_NameOID );
 
     if (unlikely( tmp_source_name_41 == NULL ))
@@ -4019,24 +4162,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 86;
+        exception_lineno = 84;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_130 = LOOKUP_ATTRIBUTE( tmp_source_name_41, const_str_plain_LOCALITY_NAME );
-    if ( tmp_assign_source_130 == NULL )
+    tmp_assign_source_128 = LOOKUP_ATTRIBUTE( tmp_source_name_41, const_str_plain_GENERATION_QUALIFIER );
+    if ( tmp_assign_source_128 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 86;
+        exception_lineno = 84;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_LOCALITY_NAME, tmp_assign_source_130 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_GENERATION_QUALIFIER, tmp_assign_source_128 );
     tmp_source_name_42 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_NameOID );
 
     if (unlikely( tmp_source_name_42 == NULL ))
@@ -4054,24 +4197,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 87;
+        exception_lineno = 85;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_131 = LOOKUP_ATTRIBUTE( tmp_source_name_42, const_str_plain_ORGANIZATIONAL_UNIT_NAME );
-    if ( tmp_assign_source_131 == NULL )
+    tmp_assign_source_129 = LOOKUP_ATTRIBUTE( tmp_source_name_42, const_str_plain_GIVEN_NAME );
+    if ( tmp_assign_source_129 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 87;
+        exception_lineno = 85;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_ORGANIZATIONAL_UNIT_NAME, tmp_assign_source_131 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_GIVEN_NAME, tmp_assign_source_129 );
     tmp_source_name_43 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_NameOID );
 
     if (unlikely( tmp_source_name_43 == NULL ))
@@ -4089,24 +4232,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 88;
+        exception_lineno = 86;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_132 = LOOKUP_ATTRIBUTE( tmp_source_name_43, const_str_plain_ORGANIZATION_NAME );
-    if ( tmp_assign_source_132 == NULL )
+    tmp_assign_source_130 = LOOKUP_ATTRIBUTE( tmp_source_name_43, const_str_plain_LOCALITY_NAME );
+    if ( tmp_assign_source_130 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 88;
+        exception_lineno = 86;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_ORGANIZATION_NAME, tmp_assign_source_132 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_LOCALITY_NAME, tmp_assign_source_130 );
     tmp_source_name_44 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_NameOID );
 
     if (unlikely( tmp_source_name_44 == NULL ))
@@ -4124,24 +4267,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 89;
+        exception_lineno = 87;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_133 = LOOKUP_ATTRIBUTE( tmp_source_name_44, const_str_plain_PSEUDONYM );
-    if ( tmp_assign_source_133 == NULL )
+    tmp_assign_source_131 = LOOKUP_ATTRIBUTE( tmp_source_name_44, const_str_plain_ORGANIZATIONAL_UNIT_NAME );
+    if ( tmp_assign_source_131 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 89;
+        exception_lineno = 87;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_PSEUDONYM, tmp_assign_source_133 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_ORGANIZATIONAL_UNIT_NAME, tmp_assign_source_131 );
     tmp_source_name_45 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_NameOID );
 
     if (unlikely( tmp_source_name_45 == NULL ))
@@ -4159,24 +4302,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 90;
+        exception_lineno = 88;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_134 = LOOKUP_ATTRIBUTE( tmp_source_name_45, const_str_plain_SERIAL_NUMBER );
-    if ( tmp_assign_source_134 == NULL )
+    tmp_assign_source_132 = LOOKUP_ATTRIBUTE( tmp_source_name_45, const_str_plain_ORGANIZATION_NAME );
+    if ( tmp_assign_source_132 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 90;
+        exception_lineno = 88;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_SERIAL_NUMBER, tmp_assign_source_134 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_ORGANIZATION_NAME, tmp_assign_source_132 );
     tmp_source_name_46 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_NameOID );
 
     if (unlikely( tmp_source_name_46 == NULL ))
@@ -4194,24 +4337,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 91;
+        exception_lineno = 89;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_135 = LOOKUP_ATTRIBUTE( tmp_source_name_46, const_str_plain_STATE_OR_PROVINCE_NAME );
-    if ( tmp_assign_source_135 == NULL )
+    tmp_assign_source_133 = LOOKUP_ATTRIBUTE( tmp_source_name_46, const_str_plain_PSEUDONYM );
+    if ( tmp_assign_source_133 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 91;
+        exception_lineno = 89;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_STATE_OR_PROVINCE_NAME, tmp_assign_source_135 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_PSEUDONYM, tmp_assign_source_133 );
     tmp_source_name_47 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_NameOID );
 
     if (unlikely( tmp_source_name_47 == NULL ))
@@ -4229,24 +4372,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 92;
+        exception_lineno = 90;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_136 = LOOKUP_ATTRIBUTE( tmp_source_name_47, const_str_plain_SURNAME );
-    if ( tmp_assign_source_136 == NULL )
+    tmp_assign_source_134 = LOOKUP_ATTRIBUTE( tmp_source_name_47, const_str_plain_SERIAL_NUMBER );
+    if ( tmp_assign_source_134 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 92;
+        exception_lineno = 90;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_SURNAME, tmp_assign_source_136 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_SERIAL_NUMBER, tmp_assign_source_134 );
     tmp_source_name_48 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_NameOID );
 
     if (unlikely( tmp_source_name_48 == NULL ))
@@ -4264,12 +4407,82 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
+        exception_lineno = 91;
+
+        goto frame_exception_exit_1;
+    }
+
+    tmp_assign_source_135 = LOOKUP_ATTRIBUTE( tmp_source_name_48, const_str_plain_STATE_OR_PROVINCE_NAME );
+    if ( tmp_assign_source_135 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 91;
+
+        goto frame_exception_exit_1;
+    }
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_STATE_OR_PROVINCE_NAME, tmp_assign_source_135 );
+    tmp_source_name_49 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_NameOID );
+
+    if (unlikely( tmp_source_name_49 == NULL ))
+    {
+        tmp_source_name_49 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_NameOID );
+    }
+
+    if ( tmp_source_name_49 == NULL )
+    {
+
+        exception_type = PyExc_NameError;
+        Py_INCREF( exception_type );
+        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "NameOID" );
+        exception_tb = NULL;
+        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
+        CHAIN_EXCEPTION( exception_value );
+
+        exception_lineno = 92;
+
+        goto frame_exception_exit_1;
+    }
+
+    tmp_assign_source_136 = LOOKUP_ATTRIBUTE( tmp_source_name_49, const_str_plain_SURNAME );
+    if ( tmp_assign_source_136 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 92;
+
+        goto frame_exception_exit_1;
+    }
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_SURNAME, tmp_assign_source_136 );
+    tmp_source_name_50 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_NameOID );
+
+    if (unlikely( tmp_source_name_50 == NULL ))
+    {
+        tmp_source_name_50 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_NameOID );
+    }
+
+    if ( tmp_source_name_50 == NULL )
+    {
+
+        exception_type = PyExc_NameError;
+        Py_INCREF( exception_type );
+        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "NameOID" );
+        exception_tb = NULL;
+        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
+        CHAIN_EXCEPTION( exception_value );
+
         exception_lineno = 93;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_137 = LOOKUP_ATTRIBUTE( tmp_source_name_48, const_str_plain_TITLE );
+    tmp_assign_source_137 = LOOKUP_ATTRIBUTE( tmp_source_name_50, const_str_plain_TITLE );
     if ( tmp_assign_source_137 == NULL )
     {
         assert( ERROR_OCCURRED() );
@@ -4282,76 +4495,6 @@ MOD_INIT_DECL( cryptography$x509 )
         goto frame_exception_exit_1;
     }
     UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_TITLE, tmp_assign_source_137 );
-    tmp_source_name_49 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtendedKeyUsageOID );
-
-    if (unlikely( tmp_source_name_49 == NULL ))
-    {
-        tmp_source_name_49 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_ExtendedKeyUsageOID );
-    }
-
-    if ( tmp_source_name_49 == NULL )
-    {
-
-        exception_type = PyExc_NameError;
-        Py_INCREF( exception_type );
-        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "ExtendedKeyUsageOID" );
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
-        CHAIN_EXCEPTION( exception_value );
-
-        exception_lineno = 95;
-
-        goto frame_exception_exit_1;
-    }
-
-    tmp_assign_source_138 = LOOKUP_ATTRIBUTE( tmp_source_name_49, const_str_plain_CLIENT_AUTH );
-    if ( tmp_assign_source_138 == NULL )
-    {
-        assert( ERROR_OCCURRED() );
-
-        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
-
-
-        exception_lineno = 95;
-
-        goto frame_exception_exit_1;
-    }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_CLIENT_AUTH, tmp_assign_source_138 );
-    tmp_source_name_50 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtendedKeyUsageOID );
-
-    if (unlikely( tmp_source_name_50 == NULL ))
-    {
-        tmp_source_name_50 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_ExtendedKeyUsageOID );
-    }
-
-    if ( tmp_source_name_50 == NULL )
-    {
-
-        exception_type = PyExc_NameError;
-        Py_INCREF( exception_type );
-        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "ExtendedKeyUsageOID" );
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
-        CHAIN_EXCEPTION( exception_value );
-
-        exception_lineno = 96;
-
-        goto frame_exception_exit_1;
-    }
-
-    tmp_assign_source_139 = LOOKUP_ATTRIBUTE( tmp_source_name_50, const_str_plain_CODE_SIGNING );
-    if ( tmp_assign_source_139 == NULL )
-    {
-        assert( ERROR_OCCURRED() );
-
-        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
-
-
-        exception_lineno = 96;
-
-        goto frame_exception_exit_1;
-    }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_CODE_SIGNING, tmp_assign_source_139 );
     tmp_source_name_51 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtendedKeyUsageOID );
 
     if (unlikely( tmp_source_name_51 == NULL ))
@@ -4369,24 +4512,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 97;
+        exception_lineno = 95;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_140 = LOOKUP_ATTRIBUTE( tmp_source_name_51, const_str_plain_EMAIL_PROTECTION );
-    if ( tmp_assign_source_140 == NULL )
+    tmp_assign_source_138 = LOOKUP_ATTRIBUTE( tmp_source_name_51, const_str_plain_CLIENT_AUTH );
+    if ( tmp_assign_source_138 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 97;
+        exception_lineno = 95;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_EMAIL_PROTECTION, tmp_assign_source_140 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_CLIENT_AUTH, tmp_assign_source_138 );
     tmp_source_name_52 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtendedKeyUsageOID );
 
     if (unlikely( tmp_source_name_52 == NULL ))
@@ -4404,24 +4547,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 98;
+        exception_lineno = 96;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_141 = LOOKUP_ATTRIBUTE( tmp_source_name_52, const_str_plain_OCSP_SIGNING );
-    if ( tmp_assign_source_141 == NULL )
+    tmp_assign_source_139 = LOOKUP_ATTRIBUTE( tmp_source_name_52, const_str_plain_CODE_SIGNING );
+    if ( tmp_assign_source_139 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 98;
+        exception_lineno = 96;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_OCSP_SIGNING, tmp_assign_source_141 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_CODE_SIGNING, tmp_assign_source_139 );
     tmp_source_name_53 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtendedKeyUsageOID );
 
     if (unlikely( tmp_source_name_53 == NULL ))
@@ -4439,24 +4582,24 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
-        exception_lineno = 99;
+        exception_lineno = 97;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_142 = LOOKUP_ATTRIBUTE( tmp_source_name_53, const_str_plain_SERVER_AUTH );
-    if ( tmp_assign_source_142 == NULL )
+    tmp_assign_source_140 = LOOKUP_ATTRIBUTE( tmp_source_name_53, const_str_plain_EMAIL_PROTECTION );
+    if ( tmp_assign_source_140 == NULL )
     {
         assert( ERROR_OCCURRED() );
 
         FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
 
 
-        exception_lineno = 99;
+        exception_lineno = 97;
 
         goto frame_exception_exit_1;
     }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_SERVER_AUTH, tmp_assign_source_142 );
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_EMAIL_PROTECTION, tmp_assign_source_140 );
     tmp_source_name_54 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtendedKeyUsageOID );
 
     if (unlikely( tmp_source_name_54 == NULL ))
@@ -4474,12 +4617,82 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
+        exception_lineno = 98;
+
+        goto frame_exception_exit_1;
+    }
+
+    tmp_assign_source_141 = LOOKUP_ATTRIBUTE( tmp_source_name_54, const_str_plain_OCSP_SIGNING );
+    if ( tmp_assign_source_141 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 98;
+
+        goto frame_exception_exit_1;
+    }
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_OCSP_SIGNING, tmp_assign_source_141 );
+    tmp_source_name_55 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtendedKeyUsageOID );
+
+    if (unlikely( tmp_source_name_55 == NULL ))
+    {
+        tmp_source_name_55 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_ExtendedKeyUsageOID );
+    }
+
+    if ( tmp_source_name_55 == NULL )
+    {
+
+        exception_type = PyExc_NameError;
+        Py_INCREF( exception_type );
+        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "ExtendedKeyUsageOID" );
+        exception_tb = NULL;
+        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
+        CHAIN_EXCEPTION( exception_value );
+
+        exception_lineno = 99;
+
+        goto frame_exception_exit_1;
+    }
+
+    tmp_assign_source_142 = LOOKUP_ATTRIBUTE( tmp_source_name_55, const_str_plain_SERVER_AUTH );
+    if ( tmp_assign_source_142 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 99;
+
+        goto frame_exception_exit_1;
+    }
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_SERVER_AUTH, tmp_assign_source_142 );
+    tmp_source_name_56 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_ExtendedKeyUsageOID );
+
+    if (unlikely( tmp_source_name_56 == NULL ))
+    {
+        tmp_source_name_56 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_ExtendedKeyUsageOID );
+    }
+
+    if ( tmp_source_name_56 == NULL )
+    {
+
+        exception_type = PyExc_NameError;
+        Py_INCREF( exception_type );
+        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "ExtendedKeyUsageOID" );
+        exception_tb = NULL;
+        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
+        CHAIN_EXCEPTION( exception_value );
+
         exception_lineno = 100;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_143 = LOOKUP_ATTRIBUTE( tmp_source_name_54, const_str_plain_TIME_STAMPING );
+    tmp_assign_source_143 = LOOKUP_ATTRIBUTE( tmp_source_name_56, const_str_plain_TIME_STAMPING );
     if ( tmp_assign_source_143 == NULL )
     {
         assert( ERROR_OCCURRED() );
@@ -4492,76 +4705,6 @@ MOD_INIT_DECL( cryptography$x509 )
         goto frame_exception_exit_1;
     }
     UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_TIME_STAMPING, tmp_assign_source_143 );
-    tmp_source_name_55 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_CertificatePoliciesOID );
-
-    if (unlikely( tmp_source_name_55 == NULL ))
-    {
-        tmp_source_name_55 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_CertificatePoliciesOID );
-    }
-
-    if ( tmp_source_name_55 == NULL )
-    {
-
-        exception_type = PyExc_NameError;
-        Py_INCREF( exception_type );
-        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "CertificatePoliciesOID" );
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
-        CHAIN_EXCEPTION( exception_value );
-
-        exception_lineno = 102;
-
-        goto frame_exception_exit_1;
-    }
-
-    tmp_assign_source_144 = LOOKUP_ATTRIBUTE( tmp_source_name_55, const_str_plain_ANY_POLICY );
-    if ( tmp_assign_source_144 == NULL )
-    {
-        assert( ERROR_OCCURRED() );
-
-        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
-
-
-        exception_lineno = 102;
-
-        goto frame_exception_exit_1;
-    }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_ANY_POLICY, tmp_assign_source_144 );
-    tmp_source_name_56 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_CertificatePoliciesOID );
-
-    if (unlikely( tmp_source_name_56 == NULL ))
-    {
-        tmp_source_name_56 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_CertificatePoliciesOID );
-    }
-
-    if ( tmp_source_name_56 == NULL )
-    {
-
-        exception_type = PyExc_NameError;
-        Py_INCREF( exception_type );
-        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "CertificatePoliciesOID" );
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
-        CHAIN_EXCEPTION( exception_value );
-
-        exception_lineno = 103;
-
-        goto frame_exception_exit_1;
-    }
-
-    tmp_assign_source_145 = LOOKUP_ATTRIBUTE( tmp_source_name_56, const_str_plain_CPS_QUALIFIER );
-    if ( tmp_assign_source_145 == NULL )
-    {
-        assert( ERROR_OCCURRED() );
-
-        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
-
-
-        exception_lineno = 103;
-
-        goto frame_exception_exit_1;
-    }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_CPS_QUALIFIER, tmp_assign_source_145 );
     tmp_source_name_57 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_CertificatePoliciesOID );
 
     if (unlikely( tmp_source_name_57 == NULL ))
@@ -4579,12 +4722,82 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
+        exception_lineno = 102;
+
+        goto frame_exception_exit_1;
+    }
+
+    tmp_assign_source_144 = LOOKUP_ATTRIBUTE( tmp_source_name_57, const_str_plain_ANY_POLICY );
+    if ( tmp_assign_source_144 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 102;
+
+        goto frame_exception_exit_1;
+    }
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_ANY_POLICY, tmp_assign_source_144 );
+    tmp_source_name_58 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_CertificatePoliciesOID );
+
+    if (unlikely( tmp_source_name_58 == NULL ))
+    {
+        tmp_source_name_58 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_CertificatePoliciesOID );
+    }
+
+    if ( tmp_source_name_58 == NULL )
+    {
+
+        exception_type = PyExc_NameError;
+        Py_INCREF( exception_type );
+        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "CertificatePoliciesOID" );
+        exception_tb = NULL;
+        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
+        CHAIN_EXCEPTION( exception_value );
+
+        exception_lineno = 103;
+
+        goto frame_exception_exit_1;
+    }
+
+    tmp_assign_source_145 = LOOKUP_ATTRIBUTE( tmp_source_name_58, const_str_plain_CPS_QUALIFIER );
+    if ( tmp_assign_source_145 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 103;
+
+        goto frame_exception_exit_1;
+    }
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_CPS_QUALIFIER, tmp_assign_source_145 );
+    tmp_source_name_59 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_CertificatePoliciesOID );
+
+    if (unlikely( tmp_source_name_59 == NULL ))
+    {
+        tmp_source_name_59 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_CertificatePoliciesOID );
+    }
+
+    if ( tmp_source_name_59 == NULL )
+    {
+
+        exception_type = PyExc_NameError;
+        Py_INCREF( exception_type );
+        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "CertificatePoliciesOID" );
+        exception_tb = NULL;
+        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
+        CHAIN_EXCEPTION( exception_value );
+
         exception_lineno = 104;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_146 = LOOKUP_ATTRIBUTE( tmp_source_name_57, const_str_plain_CPS_USER_NOTICE );
+    tmp_assign_source_146 = LOOKUP_ATTRIBUTE( tmp_source_name_59, const_str_plain_CPS_USER_NOTICE );
     if ( tmp_assign_source_146 == NULL )
     {
         assert( ERROR_OCCURRED() );
@@ -4597,76 +4810,6 @@ MOD_INIT_DECL( cryptography$x509 )
         goto frame_exception_exit_1;
     }
     UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_CPS_USER_NOTICE, tmp_assign_source_146 );
-    tmp_source_name_58 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_CRLEntryExtensionOID );
-
-    if (unlikely( tmp_source_name_58 == NULL ))
-    {
-        tmp_source_name_58 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_CRLEntryExtensionOID );
-    }
-
-    if ( tmp_source_name_58 == NULL )
-    {
-
-        exception_type = PyExc_NameError;
-        Py_INCREF( exception_type );
-        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "CRLEntryExtensionOID" );
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
-        CHAIN_EXCEPTION( exception_value );
-
-        exception_lineno = 106;
-
-        goto frame_exception_exit_1;
-    }
-
-    tmp_assign_source_147 = LOOKUP_ATTRIBUTE( tmp_source_name_58, const_str_plain_CERTIFICATE_ISSUER );
-    if ( tmp_assign_source_147 == NULL )
-    {
-        assert( ERROR_OCCURRED() );
-
-        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
-
-
-        exception_lineno = 106;
-
-        goto frame_exception_exit_1;
-    }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_CERTIFICATE_ISSUER, tmp_assign_source_147 );
-    tmp_source_name_59 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_CRLEntryExtensionOID );
-
-    if (unlikely( tmp_source_name_59 == NULL ))
-    {
-        tmp_source_name_59 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_CRLEntryExtensionOID );
-    }
-
-    if ( tmp_source_name_59 == NULL )
-    {
-
-        exception_type = PyExc_NameError;
-        Py_INCREF( exception_type );
-        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "CRLEntryExtensionOID" );
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
-        CHAIN_EXCEPTION( exception_value );
-
-        exception_lineno = 107;
-
-        goto frame_exception_exit_1;
-    }
-
-    tmp_assign_source_148 = LOOKUP_ATTRIBUTE( tmp_source_name_59, const_str_plain_CRL_REASON );
-    if ( tmp_assign_source_148 == NULL )
-    {
-        assert( ERROR_OCCURRED() );
-
-        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
-
-
-        exception_lineno = 107;
-
-        goto frame_exception_exit_1;
-    }
-    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_CRL_REASON, tmp_assign_source_148 );
     tmp_source_name_60 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_CRLEntryExtensionOID );
 
     if (unlikely( tmp_source_name_60 == NULL ))
@@ -4684,12 +4827,82 @@ MOD_INIT_DECL( cryptography$x509 )
         NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
         CHAIN_EXCEPTION( exception_value );
 
+        exception_lineno = 106;
+
+        goto frame_exception_exit_1;
+    }
+
+    tmp_assign_source_147 = LOOKUP_ATTRIBUTE( tmp_source_name_60, const_str_plain_CERTIFICATE_ISSUER );
+    if ( tmp_assign_source_147 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 106;
+
+        goto frame_exception_exit_1;
+    }
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_CERTIFICATE_ISSUER, tmp_assign_source_147 );
+    tmp_source_name_61 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_CRLEntryExtensionOID );
+
+    if (unlikely( tmp_source_name_61 == NULL ))
+    {
+        tmp_source_name_61 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_CRLEntryExtensionOID );
+    }
+
+    if ( tmp_source_name_61 == NULL )
+    {
+
+        exception_type = PyExc_NameError;
+        Py_INCREF( exception_type );
+        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "CRLEntryExtensionOID" );
+        exception_tb = NULL;
+        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
+        CHAIN_EXCEPTION( exception_value );
+
+        exception_lineno = 107;
+
+        goto frame_exception_exit_1;
+    }
+
+    tmp_assign_source_148 = LOOKUP_ATTRIBUTE( tmp_source_name_61, const_str_plain_CRL_REASON );
+    if ( tmp_assign_source_148 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 107;
+
+        goto frame_exception_exit_1;
+    }
+    UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_CRL_REASON, tmp_assign_source_148 );
+    tmp_source_name_62 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_CRLEntryExtensionOID );
+
+    if (unlikely( tmp_source_name_62 == NULL ))
+    {
+        tmp_source_name_62 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_CRLEntryExtensionOID );
+    }
+
+    if ( tmp_source_name_62 == NULL )
+    {
+
+        exception_type = PyExc_NameError;
+        Py_INCREF( exception_type );
+        exception_value = PyUnicode_FromFormat( "name '%s' is not defined", "CRLEntryExtensionOID" );
+        exception_tb = NULL;
+        NORMALIZE_EXCEPTION( &exception_type, &exception_value, &exception_tb );
+        CHAIN_EXCEPTION( exception_value );
+
         exception_lineno = 108;
 
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_149 = LOOKUP_ATTRIBUTE( tmp_source_name_60, const_str_plain_INVALIDITY_DATE );
+    tmp_assign_source_149 = LOOKUP_ATTRIBUTE( tmp_source_name_62, const_str_plain_INVALIDITY_DATE );
     if ( tmp_assign_source_149 == NULL )
     {
         assert( ERROR_OCCURRED() );
@@ -4702,14 +4915,14 @@ MOD_INIT_DECL( cryptography$x509 )
         goto frame_exception_exit_1;
     }
     UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_INVALIDITY_DATE, tmp_assign_source_149 );
-    tmp_source_name_61 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_AuthorityInformationAccessOID );
+    tmp_source_name_63 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_AuthorityInformationAccessOID );
 
-    if (unlikely( tmp_source_name_61 == NULL ))
+    if (unlikely( tmp_source_name_63 == NULL ))
     {
-        tmp_source_name_61 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_AuthorityInformationAccessOID );
+        tmp_source_name_63 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_AuthorityInformationAccessOID );
     }
 
-    if ( tmp_source_name_61 == NULL )
+    if ( tmp_source_name_63 == NULL )
     {
 
         exception_type = PyExc_NameError;
@@ -4724,7 +4937,7 @@ MOD_INIT_DECL( cryptography$x509 )
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_150 = LOOKUP_ATTRIBUTE( tmp_source_name_61, const_str_plain_CA_ISSUERS );
+    tmp_assign_source_150 = LOOKUP_ATTRIBUTE( tmp_source_name_63, const_str_plain_CA_ISSUERS );
     if ( tmp_assign_source_150 == NULL )
     {
         assert( ERROR_OCCURRED() );
@@ -4737,14 +4950,14 @@ MOD_INIT_DECL( cryptography$x509 )
         goto frame_exception_exit_1;
     }
     UPDATE_STRING_DICT1( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_OID_CA_ISSUERS, tmp_assign_source_150 );
-    tmp_source_name_62 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_AuthorityInformationAccessOID );
+    tmp_source_name_64 = GET_STRING_DICT_VALUE( moduledict_cryptography$x509, (Nuitka_StringObject *)const_str_plain_AuthorityInformationAccessOID );
 
-    if (unlikely( tmp_source_name_62 == NULL ))
+    if (unlikely( tmp_source_name_64 == NULL ))
     {
-        tmp_source_name_62 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_AuthorityInformationAccessOID );
+        tmp_source_name_64 = GET_STRING_DICT_VALUE( dict_builtin, (Nuitka_StringObject *)const_str_plain_AuthorityInformationAccessOID );
     }
 
-    if ( tmp_source_name_62 == NULL )
+    if ( tmp_source_name_64 == NULL )
     {
 
         exception_type = PyExc_NameError;
@@ -4759,7 +4972,7 @@ MOD_INIT_DECL( cryptography$x509 )
         goto frame_exception_exit_1;
     }
 
-    tmp_assign_source_151 = LOOKUP_ATTRIBUTE( tmp_source_name_62, const_str_plain_OCSP );
+    tmp_assign_source_151 = LOOKUP_ATTRIBUTE( tmp_source_name_64, const_str_plain_OCSP );
     if ( tmp_assign_source_151 == NULL )
     {
         assert( ERROR_OCCURRED() );
@@ -4775,25 +4988,25 @@ MOD_INIT_DECL( cryptography$x509 )
 
     // Restore frame exception if necessary.
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_e8c86d84b3cd391c9a6746ab9e6519c6 );
+    RESTORE_FRAME_EXCEPTION( frame_cc5c490b1617b6c2f7075039d1fc5489 );
 #endif
     popFrameStack();
 
-    assertFrameObject( frame_e8c86d84b3cd391c9a6746ab9e6519c6 );
+    assertFrameObject( frame_cc5c490b1617b6c2f7075039d1fc5489 );
 
     goto frame_no_exception_1;
     frame_exception_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_e8c86d84b3cd391c9a6746ab9e6519c6 );
+    RESTORE_FRAME_EXCEPTION( frame_cc5c490b1617b6c2f7075039d1fc5489 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_e8c86d84b3cd391c9a6746ab9e6519c6, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_cc5c490b1617b6c2f7075039d1fc5489, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_e8c86d84b3cd391c9a6746ab9e6519c6->m_frame )
+    else if ( exception_tb->tb_frame != &frame_cc5c490b1617b6c2f7075039d1fc5489->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_e8c86d84b3cd391c9a6746ab9e6519c6, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_cc5c490b1617b6c2f7075039d1fc5489, exception_lineno );
     }
 
     // Put the previous frame back on top.

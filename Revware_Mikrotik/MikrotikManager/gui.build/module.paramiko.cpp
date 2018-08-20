@@ -39,7 +39,6 @@ static PyObject *const_list_e092e9d1b5a947ed4f3da6ee4528b25e_list;
 extern PyObject *const_str_digest_bb8bc94d89fb57480df2659e82281530;
 extern PyObject *const_str_plain_ChannelException;
 extern PyObject *const_str_plain___file__;
-static PyObject *const_list_str_digest_32e9c67eb17042720b4632060d8102b2_list;
 extern PyObject *const_tuple_str_plain_Ed25519Key_tuple;
 extern PyObject *const_str_plain_BaseSFTP;
 extern PyObject *const_str_plain_OPEN_FAILED_ADMINISTRATIVELY_PROHIBITED;
@@ -66,6 +65,7 @@ extern PyObject *const_str_plain_ECDSAKey;
 extern PyObject *const_str_plain_Channel;
 extern PyObject *const_str_plain_SFTPServerInterface;
 extern PyObject *const_str_plain_SFTP_NO_CONNECTION;
+extern PyObject *const_str_plain_environ;
 extern PyObject *const_str_digest_6c798e982d09b84f3b5b37b409594e71;
 extern PyObject *const_str_digest_1b46ff4cbbbd233e4fe77d234767f0e6;
 extern PyObject *const_str_plain_SFTPHandle;
@@ -75,11 +75,11 @@ extern PyObject *const_tuple_str_plain_RSAKey_tuple;
 extern PyObject *const_str_plain_SecurityOptions;
 extern PyObject *const_str_plain_SFTPError;
 extern PyObject *const_str_plain_SFTP_CONNECTION_LOST;
+extern PyObject *const_str_plain_path;
 extern PyObject *const_tuple_str_plain___version___str_plain___version_info___tuple;
 extern PyObject *const_str_digest_377ce7846e0f5871c80e88c27c40a3cc;
 extern PyObject *const_str_digest_18e732c5b74160f934dca4e0f09b4721;
 extern PyObject *const_str_plain_SFTP_OK;
-static PyObject *const_str_digest_32e9c67eb17042720b4632060d8102b2;
 static PyObject *const_str_digest_6dc7255153c6828bd23320f8af42430f;
 static PyObject *const_tuple_str_plain_SFTPError_str_plain_BaseSFTP_tuple;
 extern PyObject *const_str_plain_AgentKey;
@@ -98,6 +98,7 @@ extern PyObject *const_str_digest_8f2488a9b1a09b5004380be01694df85;
 extern PyObject *const_str_digest_6ac368d59ca291f01caa6acdfb3826a1;
 extern PyObject *const_str_plain_SFTPServer;
 extern PyObject *const_str_digest_043a098e3c8c7e01497500bb854d02ab;
+static PyObject *const_tuple_0ec73cdd2ffcd22ccaa9c89583aacfd4_tuple;
 extern PyObject *const_str_digest_874f199f8c615b74b51fea192429a12d;
 extern PyObject *const_str_digest_c9783714a145c70c37c4efbd57c939be;
 extern PyObject *const_str_plain_SFTP_NO_SUCH_FILE;
@@ -134,10 +135,10 @@ static PyObject *const_tuple_str_plain_PKey_str_plain_PublicBlob_tuple;
 extern PyObject *const_str_plain_ProxyCommand;
 extern PyObject *const_str_plain_RSAKey;
 extern PyObject *const_str_plain_ChannelFile;
+extern PyObject *const_str_plain_dirname;
 extern PyObject *const_str_plain_SFTP_FAILURE;
 extern PyObject *const_tuple_str_plain_SSHConfig_tuple;
 extern PyObject *const_str_plain_Packetizer;
-static PyObject *const_str_digest_cfe91fc4d0ca2579b0d9d40131dfb78c;
 extern PyObject *const_str_plain___cached__;
 extern PyObject *const_str_plain_GSS_AUTH_AVAILABLE;
 static PyObject *const_tuple_str_plain_io_sleep_tuple;
@@ -160,11 +161,14 @@ extern PyObject *const_str_digest_11ba6382faf5515e4e143075ca650637;
 static PyObject *const_tuple_aae5e2f3f2721015d0ada14e0665f0a1_tuple;
 extern PyObject *const_str_digest_17d934cba47c439459f681bdee6dbc70;
 extern PyObject *const_str_plain_HostKeys;
+static PyObject *const_str_plain_NUITKA_PACKAGE_paramiko;
 extern PyObject *const_str_plain_SFTPAttributes;
 extern PyObject *const_str_digest_ce3edf68c8854adb57c9a3c9f342ea07;
 static PyObject *const_tuple_str_plain_Agent_str_plain_AgentKey_tuple;
 extern PyObject *const_str_plain_PasswordRequiredException;
+extern PyObject *const_str_digest_5bfaf90dbd407b4fc29090c8f6415242;
 extern PyObject *const_str_plain_SFTP_OP_UNSUPPORTED;
+extern PyObject *const_str_plain_get;
 extern PyObject *const_tuple_str_plain_SFTPHandle_tuple;
 extern PyObject *const_str_plain_SSHConfig;
 extern PyObject *const_tuple_str_plain_DSSKey_tuple;
@@ -172,6 +176,7 @@ static PyObject *const_tuple_str_plain_SFTP_str_plain_SFTPClient_tuple;
 static PyObject *const_str_digest_8781a6305faae7bb50408bd7e4d22828;
 extern PyObject *const_tuple_str_plain_SFTPServer_tuple;
 extern PyObject *const_str_plain_SFTPClient;
+static PyObject *const_str_digest_9a1585dc551b63a8f1ac5c18689cfcb8;
 extern PyObject *const_str_plain_Agent;
 static PyObject *module_filename_obj;
 
@@ -179,10 +184,7 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_list_e092e9d1b5a947ed4f3da6ee4528b25e_list = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 383540 ], 516 );
-    const_list_str_digest_32e9c67eb17042720b4632060d8102b2_list = PyList_New( 1 );
-    const_str_digest_32e9c67eb17042720b4632060d8102b2 = UNSTREAM_STRING( &constant_bin[ 384056 ], 80, 0 );
-    PyList_SET_ITEM( const_list_str_digest_32e9c67eb17042720b4632060d8102b2_list, 0, const_str_digest_32e9c67eb17042720b4632060d8102b2 ); Py_INCREF( const_str_digest_32e9c67eb17042720b4632060d8102b2 );
+    const_list_e092e9d1b5a947ed4f3da6ee4528b25e_list = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 375709 ], 516 );
     const_tuple_b3ec56acb8e0d55f58f13251f7afdc16_tuple = PyTuple_New( 3 );
     PyTuple_SET_ITEM( const_tuple_b3ec56acb8e0d55f58f13251f7afdc16_tuple, 0, const_str_plain_GSSAuth ); Py_INCREF( const_str_plain_GSSAuth );
     PyTuple_SET_ITEM( const_tuple_b3ec56acb8e0d55f58f13251f7afdc16_tuple, 1, const_str_plain_GSS_AUTH_AVAILABLE ); Py_INCREF( const_str_plain_GSS_AUTH_AVAILABLE );
@@ -193,7 +195,7 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_9b1068fa21e43909ccc002c0c33e1f3d_tuple, 2, const_str_plain_AutoAddPolicy ); Py_INCREF( const_str_plain_AutoAddPolicy );
     PyTuple_SET_ITEM( const_tuple_9b1068fa21e43909ccc002c0c33e1f3d_tuple, 3, const_str_plain_RejectPolicy ); Py_INCREF( const_str_plain_RejectPolicy );
     PyTuple_SET_ITEM( const_tuple_9b1068fa21e43909ccc002c0c33e1f3d_tuple, 4, const_str_plain_WarningPolicy ); Py_INCREF( const_str_plain_WarningPolicy );
-    const_str_digest_6dc7255153c6828bd23320f8af42430f = UNSTREAM_STRING( &constant_bin[ 384136 ], 17, 0 );
+    const_str_digest_6dc7255153c6828bd23320f8af42430f = UNSTREAM_STRING( &constant_bin[ 376225 ], 17, 0 );
     const_tuple_str_plain_SFTPError_str_plain_BaseSFTP_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_SFTPError_str_plain_BaseSFTP_tuple, 0, const_str_plain_SFTPError ); Py_INCREF( const_str_plain_SFTPError );
     PyTuple_SET_ITEM( const_tuple_str_plain_SFTPError_str_plain_BaseSFTP_tuple, 1, const_str_plain_BaseSFTP ); Py_INCREF( const_str_plain_BaseSFTP );
@@ -210,6 +212,10 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_8e2632c4e27baba6265e1c4c20310308_tuple, 6, const_str_plain_SFTP_NO_CONNECTION ); Py_INCREF( const_str_plain_SFTP_NO_CONNECTION );
     PyTuple_SET_ITEM( const_tuple_8e2632c4e27baba6265e1c4c20310308_tuple, 7, const_str_plain_SFTP_CONNECTION_LOST ); Py_INCREF( const_str_plain_SFTP_CONNECTION_LOST );
     PyTuple_SET_ITEM( const_tuple_8e2632c4e27baba6265e1c4c20310308_tuple, 8, const_str_plain_SFTP_OP_UNSUPPORTED ); Py_INCREF( const_str_plain_SFTP_OP_UNSUPPORTED );
+    const_tuple_0ec73cdd2ffcd22ccaa9c89583aacfd4_tuple = PyTuple_New( 2 );
+    const_str_plain_NUITKA_PACKAGE_paramiko = UNSTREAM_STRING( &constant_bin[ 376242 ], 23, 1 );
+    PyTuple_SET_ITEM( const_tuple_0ec73cdd2ffcd22ccaa9c89583aacfd4_tuple, 0, const_str_plain_NUITKA_PACKAGE_paramiko ); Py_INCREF( const_str_plain_NUITKA_PACKAGE_paramiko );
+    PyTuple_SET_ITEM( const_tuple_0ec73cdd2ffcd22ccaa9c89583aacfd4_tuple, 1, const_str_digest_5bfaf90dbd407b4fc29090c8f6415242 ); Py_INCREF( const_str_digest_5bfaf90dbd407b4fc29090c8f6415242 );
     const_tuple_str_plain_ProxyCommand_tuple = PyTuple_New( 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain_ProxyCommand_tuple, 0, const_str_plain_ProxyCommand ); Py_INCREF( const_str_plain_ProxyCommand );
     const_tuple_str_plain_SecurityOptions_str_plain_Transport_tuple = PyTuple_New( 2 );
@@ -220,14 +226,13 @@ static void createModuleConstants( void )
     const_tuple_str_plain_PKey_str_plain_PublicBlob_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_PKey_str_plain_PublicBlob_tuple, 0, const_str_plain_PKey ); Py_INCREF( const_str_plain_PKey );
     PyTuple_SET_ITEM( const_tuple_str_plain_PKey_str_plain_PublicBlob_tuple, 1, const_str_plain_PublicBlob ); Py_INCREF( const_str_plain_PublicBlob );
-    const_str_digest_cfe91fc4d0ca2579b0d9d40131dfb78c = UNSTREAM_STRING( &constant_bin[ 384153 ], 92, 0 );
     const_tuple_str_plain_io_sleep_tuple = PyTuple_New( 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain_io_sleep_tuple, 0, const_str_plain_io_sleep ); Py_INCREF( const_str_plain_io_sleep );
     const_tuple_d575bf3c333066d9293690a629f277b6_tuple = PyTuple_New( 3 );
     PyTuple_SET_ITEM( const_tuple_d575bf3c333066d9293690a629f277b6_tuple, 0, const_str_plain_ServerInterface ); Py_INCREF( const_str_plain_ServerInterface );
     PyTuple_SET_ITEM( const_tuple_d575bf3c333066d9293690a629f277b6_tuple, 1, const_str_plain_SubsystemHandler ); Py_INCREF( const_str_plain_SubsystemHandler );
     PyTuple_SET_ITEM( const_tuple_d575bf3c333066d9293690a629f277b6_tuple, 2, const_str_plain_InteractiveQuery ); Py_INCREF( const_str_plain_InteractiveQuery );
-    const_str_digest_512387e87b3af62589a6dd18e88fd6f4 = UNSTREAM_STRING( &constant_bin[ 384245 ], 40, 0 );
+    const_str_digest_512387e87b3af62589a6dd18e88fd6f4 = UNSTREAM_STRING( &constant_bin[ 376265 ], 40, 0 );
     const_tuple_c1f0bda8f2a7c179b1a5b0ff0c9cf0e5_tuple = PyTuple_New( 8 );
     PyTuple_SET_ITEM( const_tuple_c1f0bda8f2a7c179b1a5b0ff0c9cf0e5_tuple, 0, const_str_plain_AUTH_SUCCESSFUL ); Py_INCREF( const_str_plain_AUTH_SUCCESSFUL );
     PyTuple_SET_ITEM( const_tuple_c1f0bda8f2a7c179b1a5b0ff0c9cf0e5_tuple, 1, const_str_plain_AUTH_PARTIALLY_SUCCESSFUL ); Py_INCREF( const_str_plain_AUTH_PARTIALLY_SUCCESSFUL );
@@ -251,7 +256,8 @@ static void createModuleConstants( void )
     const_tuple_str_plain_SFTP_str_plain_SFTPClient_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_SFTP_str_plain_SFTPClient_tuple, 0, const_str_plain_SFTP ); Py_INCREF( const_str_plain_SFTP );
     PyTuple_SET_ITEM( const_tuple_str_plain_SFTP_str_plain_SFTPClient_tuple, 1, const_str_plain_SFTPClient ); Py_INCREF( const_str_plain_SFTPClient );
-    const_str_digest_8781a6305faae7bb50408bd7e4d22828 = UNSTREAM_STRING( &constant_bin[ 384285 ], 34, 0 );
+    const_str_digest_8781a6305faae7bb50408bd7e4d22828 = UNSTREAM_STRING( &constant_bin[ 376305 ], 34, 0 );
+    const_str_digest_9a1585dc551b63a8f1ac5c18689cfcb8 = UNSTREAM_STRING( &constant_bin[ 376339 ], 20, 0 );
 
     constants_created = true;
 }
@@ -267,12 +273,12 @@ void checkModuleConstants_paramiko( void )
 #endif
 
 // The module code objects.
-static PyCodeObject *codeobj_983c531d7fbf1d42efc5fe069f5077de;
+static PyCodeObject *codeobj_f415cc475fe98663878d1943d4f30ad3;
 
 static void createModuleCodeObjects(void)
 {
-    module_filename_obj = const_str_digest_cfe91fc4d0ca2579b0d9d40131dfb78c;
-    codeobj_983c531d7fbf1d42efc5fe069f5077de = MAKE_CODEOBJ( module_filename_obj, const_str_digest_6dc7255153c6828bd23320f8af42430f, 1, const_tuple_empty, 0, 0, CO_NOFREE );
+    module_filename_obj = MAKE_RELATIVE_PATH( const_str_digest_9a1585dc551b63a8f1ac5c18689cfcb8 );
+    codeobj_f415cc475fe98663878d1943d4f30ad3 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_6dc7255153c6828bd23320f8af42430f, 1, const_tuple_empty, 0, 0, CO_NOFREE );
 }
 
 // The module function declarations.
@@ -596,6 +602,7 @@ MOD_INIT_DECL( paramiko )
     PyObject *exception_keeper_value_13;
     PyTracebackObject *exception_keeper_tb_13;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_13;
+    PyObject *tmp_args_element_name_1;
     PyObject *tmp_assign_source_1;
     PyObject *tmp_assign_source_2;
     PyObject *tmp_assign_source_3;
@@ -683,6 +690,8 @@ MOD_INIT_DECL( paramiko )
     PyObject *tmp_assign_source_85;
     PyObject *tmp_assign_source_86;
     PyObject *tmp_assign_source_87;
+    PyObject *tmp_called_instance_1;
+    PyObject *tmp_called_name_1;
     PyObject *tmp_fromlist_name_1;
     PyObject *tmp_fromlist_name_2;
     PyObject *tmp_fromlist_name_3;
@@ -842,6 +851,7 @@ MOD_INIT_DECL( paramiko )
     PyObject *tmp_level_name_29;
     PyObject *tmp_level_name_30;
     PyObject *tmp_level_name_31;
+    PyObject *tmp_list_element_1;
     PyObject *tmp_locals_name_1;
     PyObject *tmp_locals_name_2;
     PyObject *tmp_locals_name_3;
@@ -904,16 +914,121 @@ MOD_INIT_DECL( paramiko )
     PyObject *tmp_name_name_29;
     PyObject *tmp_name_name_30;
     PyObject *tmp_name_name_31;
-    struct Nuitka_FrameObject *frame_983c531d7fbf1d42efc5fe069f5077de;
+    PyObject *tmp_source_name_1;
+    struct Nuitka_FrameObject *frame_f415cc475fe98663878d1943d4f30ad3;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
 
     // Module code.
     tmp_assign_source_1 = Py_None;
     UPDATE_STRING_DICT0( moduledict_paramiko, (Nuitka_StringObject *)const_str_plain___doc__, tmp_assign_source_1 );
-    tmp_assign_source_2 = const_str_digest_cfe91fc4d0ca2579b0d9d40131dfb78c;
+    tmp_assign_source_2 = module_filename_obj;
     UPDATE_STRING_DICT0( moduledict_paramiko, (Nuitka_StringObject *)const_str_plain___file__, tmp_assign_source_2 );
-    tmp_assign_source_3 = LIST_COPY( const_list_str_digest_32e9c67eb17042720b4632060d8102b2_list );
+    // Frame without reuse.
+    frame_f415cc475fe98663878d1943d4f30ad3 = MAKE_MODULE_FRAME( codeobj_f415cc475fe98663878d1943d4f30ad3, module_paramiko );
+
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
+    pushFrameStack( frame_f415cc475fe98663878d1943d4f30ad3 );
+    assert( Py_REFCNT( frame_f415cc475fe98663878d1943d4f30ad3 ) == 2 );
+
+    // Framed code:
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 1;
+    {
+        PyObject *module = PyImport_ImportModule("os");
+        if (likely( module != NULL ))
+        {
+            tmp_source_name_1 = PyObject_GetAttr( module, const_str_plain_path );
+        }
+        else
+        {
+            tmp_source_name_1 = NULL;
+        }
+    }
+
+    if ( tmp_source_name_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    tmp_called_name_1 = LOOKUP_ATTRIBUTE( tmp_source_name_1, const_str_plain_dirname );
+    if ( tmp_called_name_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    tmp_args_element_name_1 = module_filename_obj;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 1;
+    {
+        PyObject *call_args[] = { tmp_args_element_name_1 };
+        tmp_list_element_1 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_1, call_args );
+    }
+
+    Py_DECREF( tmp_called_name_1 );
+    if ( tmp_list_element_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    tmp_assign_source_3 = PyList_New( 2 );
+    PyList_SET_ITEM( tmp_assign_source_3, 0, tmp_list_element_1 );
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 1;
+    {
+        PyObject *module = PyImport_ImportModule("os");
+        if (likely( module != NULL ))
+        {
+            tmp_called_instance_1 = PyObject_GetAttr( module, const_str_plain_environ );
+        }
+        else
+        {
+            tmp_called_instance_1 = NULL;
+        }
+    }
+
+    if ( tmp_called_instance_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+        Py_DECREF( tmp_assign_source_3 );
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 1;
+    tmp_list_element_1 = CALL_METHOD_WITH_ARGS2( tmp_called_instance_1, const_str_plain_get, &PyTuple_GET_ITEM( const_tuple_0ec73cdd2ffcd22ccaa9c89583aacfd4_tuple, 0 ) );
+
+    if ( tmp_list_element_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+        Py_DECREF( tmp_assign_source_3 );
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    PyList_SET_ITEM( tmp_assign_source_3, 1, tmp_list_element_1 );
     UPDATE_STRING_DICT1( moduledict_paramiko, (Nuitka_StringObject *)const_str_plain___path__, tmp_assign_source_3 );
     tmp_assign_source_4 = Py_None;
     UPDATE_STRING_DICT0( moduledict_paramiko, (Nuitka_StringObject *)const_str_plain___cached__, tmp_assign_source_4 );
@@ -922,24 +1037,16 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_1 = Py_None;
     tmp_fromlist_name_1 = Py_None;
     tmp_level_name_1 = const_int_0;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 20;
     tmp_assign_source_5 = IMPORT_MODULE5( tmp_name_name_1, tmp_globals_name_1, tmp_locals_name_1, tmp_fromlist_name_1, tmp_level_name_1 );
     assert( !(tmp_assign_source_5 == NULL) );
     UPDATE_STRING_DICT1( moduledict_paramiko, (Nuitka_StringObject *)const_str_plain_sys, tmp_assign_source_5 );
-    // Frame without reuse.
-    frame_983c531d7fbf1d42efc5fe069f5077de = MAKE_MODULE_FRAME( codeobj_983c531d7fbf1d42efc5fe069f5077de, module_paramiko );
-
-    // Push the new frame as the currently active one, and we should be exclusively
-    // owning it.
-    pushFrameStack( frame_983c531d7fbf1d42efc5fe069f5077de );
-    assert( Py_REFCNT( frame_983c531d7fbf1d42efc5fe069f5077de ) == 2 );
-
-    // Framed code:
     tmp_name_name_2 = const_str_digest_6ac368d59ca291f01caa6acdfb3826a1;
     tmp_globals_name_2 = (PyObject *)moduledict_paramiko;
     tmp_locals_name_2 = Py_None;
     tmp_fromlist_name_2 = const_tuple_str_plain___version___str_plain___version_info___tuple;
     tmp_level_name_2 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 21;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 21;
     tmp_assign_source_6 = IMPORT_MODULE5( tmp_name_name_2, tmp_globals_name_2, tmp_locals_name_2, tmp_fromlist_name_2, tmp_level_name_2 );
     if ( tmp_assign_source_6 == NULL )
     {
@@ -1022,7 +1129,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_3 = Py_None;
     tmp_fromlist_name_3 = const_tuple_str_plain_SecurityOptions_str_plain_Transport_tuple;
     tmp_level_name_3 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 22;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 22;
     tmp_assign_source_9 = IMPORT_MODULE5( tmp_name_name_3, tmp_globals_name_3, tmp_locals_name_3, tmp_fromlist_name_3, tmp_level_name_3 );
     if ( tmp_assign_source_9 == NULL )
     {
@@ -1105,7 +1212,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_4 = Py_None;
     tmp_fromlist_name_4 = const_tuple_9b1068fa21e43909ccc002c0c33e1f3d_tuple;
     tmp_level_name_4 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 23;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 23;
     tmp_assign_source_12 = IMPORT_MODULE5( tmp_name_name_4, tmp_globals_name_4, tmp_locals_name_4, tmp_fromlist_name_4, tmp_level_name_4 );
     if ( tmp_assign_source_12 == NULL )
     {
@@ -1236,7 +1343,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_5 = Py_None;
     tmp_fromlist_name_5 = const_tuple_str_plain_AuthHandler_tuple;
     tmp_level_name_5 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 27;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 27;
     tmp_import_name_from_10 = IMPORT_MODULE5( tmp_name_name_5, tmp_globals_name_5, tmp_locals_name_5, tmp_fromlist_name_5, tmp_level_name_5 );
     if ( tmp_import_name_from_10 == NULL )
     {
@@ -1268,7 +1375,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_6 = Py_None;
     tmp_fromlist_name_6 = const_tuple_b3ec56acb8e0d55f58f13251f7afdc16_tuple;
     tmp_level_name_6 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 28;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 28;
     tmp_assign_source_19 = IMPORT_MODULE5( tmp_name_name_6, tmp_globals_name_6, tmp_locals_name_6, tmp_fromlist_name_6, tmp_level_name_6 );
     if ( tmp_assign_source_19 == NULL )
     {
@@ -1367,7 +1474,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_7 = Py_None;
     tmp_fromlist_name_7 = const_tuple_str_plain_Channel_str_plain_ChannelFile_tuple;
     tmp_level_name_7 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 29;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 29;
     tmp_assign_source_23 = IMPORT_MODULE5( tmp_name_name_7, tmp_globals_name_7, tmp_locals_name_7, tmp_fromlist_name_7, tmp_level_name_7 );
     if ( tmp_assign_source_23 == NULL )
     {
@@ -1450,7 +1557,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_8 = Py_None;
     tmp_fromlist_name_8 = const_tuple_aae5e2f3f2721015d0ada14e0665f0a1_tuple;
     tmp_level_name_8 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 30;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 30;
     tmp_assign_source_26 = IMPORT_MODULE5( tmp_name_name_8, tmp_globals_name_8, tmp_locals_name_8, tmp_fromlist_name_8, tmp_level_name_8 );
     if ( tmp_assign_source_26 == NULL )
     {
@@ -1613,7 +1720,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_9 = Py_None;
     tmp_fromlist_name_9 = const_tuple_d575bf3c333066d9293690a629f277b6_tuple;
     tmp_level_name_9 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 35;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 35;
     tmp_assign_source_34 = IMPORT_MODULE5( tmp_name_name_9, tmp_globals_name_9, tmp_locals_name_9, tmp_fromlist_name_9, tmp_level_name_9 );
     if ( tmp_assign_source_34 == NULL )
     {
@@ -1712,7 +1819,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_10 = Py_None;
     tmp_fromlist_name_10 = const_tuple_str_plain_RSAKey_tuple;
     tmp_level_name_10 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 36;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 36;
     tmp_import_name_from_26 = IMPORT_MODULE5( tmp_name_name_10, tmp_globals_name_10, tmp_locals_name_10, tmp_fromlist_name_10, tmp_level_name_10 );
     if ( tmp_import_name_from_26 == NULL )
     {
@@ -1744,7 +1851,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_11 = Py_None;
     tmp_fromlist_name_11 = const_tuple_str_plain_DSSKey_tuple;
     tmp_level_name_11 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 37;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 37;
     tmp_import_name_from_27 = IMPORT_MODULE5( tmp_name_name_11, tmp_globals_name_11, tmp_locals_name_11, tmp_fromlist_name_11, tmp_level_name_11 );
     if ( tmp_import_name_from_27 == NULL )
     {
@@ -1776,7 +1883,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_12 = Py_None;
     tmp_fromlist_name_12 = const_tuple_str_plain_ECDSAKey_tuple;
     tmp_level_name_12 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 38;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 38;
     tmp_import_name_from_28 = IMPORT_MODULE5( tmp_name_name_12, tmp_globals_name_12, tmp_locals_name_12, tmp_fromlist_name_12, tmp_level_name_12 );
     if ( tmp_import_name_from_28 == NULL )
     {
@@ -1808,7 +1915,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_13 = Py_None;
     tmp_fromlist_name_13 = const_tuple_str_plain_Ed25519Key_tuple;
     tmp_level_name_13 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 39;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 39;
     tmp_import_name_from_29 = IMPORT_MODULE5( tmp_name_name_13, tmp_globals_name_13, tmp_locals_name_13, tmp_fromlist_name_13, tmp_level_name_13 );
     if ( tmp_import_name_from_29 == NULL )
     {
@@ -1840,7 +1947,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_14 = Py_None;
     tmp_fromlist_name_14 = const_tuple_str_plain_SFTPError_str_plain_BaseSFTP_tuple;
     tmp_level_name_14 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 40;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 40;
     tmp_assign_source_42 = IMPORT_MODULE5( tmp_name_name_14, tmp_globals_name_14, tmp_locals_name_14, tmp_fromlist_name_14, tmp_level_name_14 );
     if ( tmp_assign_source_42 == NULL )
     {
@@ -1923,7 +2030,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_15 = Py_None;
     tmp_fromlist_name_15 = const_tuple_str_plain_SFTP_str_plain_SFTPClient_tuple;
     tmp_level_name_15 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 41;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 41;
     tmp_assign_source_45 = IMPORT_MODULE5( tmp_name_name_15, tmp_globals_name_15, tmp_locals_name_15, tmp_fromlist_name_15, tmp_level_name_15 );
     if ( tmp_assign_source_45 == NULL )
     {
@@ -2006,7 +2113,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_16 = Py_None;
     tmp_fromlist_name_16 = const_tuple_str_plain_SFTPServer_tuple;
     tmp_level_name_16 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 42;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 42;
     tmp_import_name_from_34 = IMPORT_MODULE5( tmp_name_name_16, tmp_globals_name_16, tmp_locals_name_16, tmp_fromlist_name_16, tmp_level_name_16 );
     if ( tmp_import_name_from_34 == NULL )
     {
@@ -2038,7 +2145,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_17 = Py_None;
     tmp_fromlist_name_17 = const_tuple_str_plain_SFTPAttributes_tuple;
     tmp_level_name_17 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 43;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 43;
     tmp_import_name_from_35 = IMPORT_MODULE5( tmp_name_name_17, tmp_globals_name_17, tmp_locals_name_17, tmp_fromlist_name_17, tmp_level_name_17 );
     if ( tmp_import_name_from_35 == NULL )
     {
@@ -2070,7 +2177,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_18 = Py_None;
     tmp_fromlist_name_18 = const_tuple_str_plain_SFTPHandle_tuple;
     tmp_level_name_18 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 44;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 44;
     tmp_import_name_from_36 = IMPORT_MODULE5( tmp_name_name_18, tmp_globals_name_18, tmp_locals_name_18, tmp_fromlist_name_18, tmp_level_name_18 );
     if ( tmp_import_name_from_36 == NULL )
     {
@@ -2102,7 +2209,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_19 = Py_None;
     tmp_fromlist_name_19 = const_tuple_str_plain_SFTPServerInterface_tuple;
     tmp_level_name_19 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 45;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 45;
     tmp_import_name_from_37 = IMPORT_MODULE5( tmp_name_name_19, tmp_globals_name_19, tmp_locals_name_19, tmp_fromlist_name_19, tmp_level_name_19 );
     if ( tmp_import_name_from_37 == NULL )
     {
@@ -2134,7 +2241,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_20 = Py_None;
     tmp_fromlist_name_20 = const_tuple_str_plain_SFTPFile_tuple;
     tmp_level_name_20 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 46;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 46;
     tmp_import_name_from_38 = IMPORT_MODULE5( tmp_name_name_20, tmp_globals_name_20, tmp_locals_name_20, tmp_fromlist_name_20, tmp_level_name_20 );
     if ( tmp_import_name_from_38 == NULL )
     {
@@ -2166,7 +2273,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_21 = Py_None;
     tmp_fromlist_name_21 = const_tuple_str_plain_Message_tuple;
     tmp_level_name_21 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 47;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 47;
     tmp_import_name_from_39 = IMPORT_MODULE5( tmp_name_name_21, tmp_globals_name_21, tmp_locals_name_21, tmp_fromlist_name_21, tmp_level_name_21 );
     if ( tmp_import_name_from_39 == NULL )
     {
@@ -2198,7 +2305,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_22 = Py_None;
     tmp_fromlist_name_22 = const_tuple_str_plain_Packetizer_tuple;
     tmp_level_name_22 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 48;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 48;
     tmp_import_name_from_40 = IMPORT_MODULE5( tmp_name_name_22, tmp_globals_name_22, tmp_locals_name_22, tmp_fromlist_name_22, tmp_level_name_22 );
     if ( tmp_import_name_from_40 == NULL )
     {
@@ -2230,7 +2337,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_23 = Py_None;
     tmp_fromlist_name_23 = const_tuple_str_plain_BufferedFile_tuple;
     tmp_level_name_23 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 49;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 49;
     tmp_import_name_from_41 = IMPORT_MODULE5( tmp_name_name_23, tmp_globals_name_23, tmp_locals_name_23, tmp_fromlist_name_23, tmp_level_name_23 );
     if ( tmp_import_name_from_41 == NULL )
     {
@@ -2262,7 +2369,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_24 = Py_None;
     tmp_fromlist_name_24 = const_tuple_str_plain_Agent_str_plain_AgentKey_tuple;
     tmp_level_name_24 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 50;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 50;
     tmp_assign_source_56 = IMPORT_MODULE5( tmp_name_name_24, tmp_globals_name_24, tmp_locals_name_24, tmp_fromlist_name_24, tmp_level_name_24 );
     if ( tmp_assign_source_56 == NULL )
     {
@@ -2345,7 +2452,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_25 = Py_None;
     tmp_fromlist_name_25 = const_tuple_str_plain_PKey_str_plain_PublicBlob_tuple;
     tmp_level_name_25 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 51;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 51;
     tmp_assign_source_59 = IMPORT_MODULE5( tmp_name_name_25, tmp_globals_name_25, tmp_locals_name_25, tmp_fromlist_name_25, tmp_level_name_25 );
     if ( tmp_assign_source_59 == NULL )
     {
@@ -2428,7 +2535,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_26 = Py_None;
     tmp_fromlist_name_26 = const_tuple_str_plain_HostKeys_tuple;
     tmp_level_name_26 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 52;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 52;
     tmp_import_name_from_46 = IMPORT_MODULE5( tmp_name_name_26, tmp_globals_name_26, tmp_locals_name_26, tmp_fromlist_name_26, tmp_level_name_26 );
     if ( tmp_import_name_from_46 == NULL )
     {
@@ -2460,7 +2567,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_27 = Py_None;
     tmp_fromlist_name_27 = const_tuple_str_plain_SSHConfig_tuple;
     tmp_level_name_27 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 53;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 53;
     tmp_import_name_from_47 = IMPORT_MODULE5( tmp_name_name_27, tmp_globals_name_27, tmp_locals_name_27, tmp_fromlist_name_27, tmp_level_name_27 );
     if ( tmp_import_name_from_47 == NULL )
     {
@@ -2492,7 +2599,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_28 = Py_None;
     tmp_fromlist_name_28 = const_tuple_str_plain_ProxyCommand_tuple;
     tmp_level_name_28 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 54;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 54;
     tmp_import_name_from_48 = IMPORT_MODULE5( tmp_name_name_28, tmp_globals_name_28, tmp_locals_name_28, tmp_fromlist_name_28, tmp_level_name_28 );
     if ( tmp_import_name_from_48 == NULL )
     {
@@ -2524,7 +2631,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_29 = Py_None;
     tmp_fromlist_name_29 = const_tuple_c1f0bda8f2a7c179b1a5b0ff0c9cf0e5_tuple;
     tmp_level_name_29 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 56;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 56;
     tmp_assign_source_65 = IMPORT_MODULE5( tmp_name_name_29, tmp_globals_name_29, tmp_locals_name_29, tmp_fromlist_name_29, tmp_level_name_29 );
     if ( tmp_assign_source_65 == NULL )
     {
@@ -2703,7 +2810,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_30 = Py_None;
     tmp_fromlist_name_30 = const_tuple_8e2632c4e27baba6265e1c4c20310308_tuple;
     tmp_level_name_30 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 62;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 62;
     tmp_assign_source_74 = IMPORT_MODULE5( tmp_name_name_30, tmp_globals_name_30, tmp_locals_name_30, tmp_fromlist_name_30, tmp_level_name_30 );
     if ( tmp_assign_source_74 == NULL )
     {
@@ -2898,7 +3005,7 @@ MOD_INIT_DECL( paramiko )
     tmp_locals_name_31 = Py_None;
     tmp_fromlist_name_31 = const_tuple_str_plain_io_sleep_tuple;
     tmp_level_name_31 = const_int_0;
-    frame_983c531d7fbf1d42efc5fe069f5077de->m_frame.f_lineno = 68;
+    frame_f415cc475fe98663878d1943d4f30ad3->m_frame.f_lineno = 68;
     tmp_import_name_from_66 = IMPORT_MODULE5( tmp_name_name_31, tmp_globals_name_31, tmp_locals_name_31, tmp_fromlist_name_31, tmp_level_name_31 );
     if ( tmp_import_name_from_66 == NULL )
     {
@@ -2928,25 +3035,25 @@ MOD_INIT_DECL( paramiko )
 
     // Restore frame exception if necessary.
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_983c531d7fbf1d42efc5fe069f5077de );
+    RESTORE_FRAME_EXCEPTION( frame_f415cc475fe98663878d1943d4f30ad3 );
 #endif
     popFrameStack();
 
-    assertFrameObject( frame_983c531d7fbf1d42efc5fe069f5077de );
+    assertFrameObject( frame_f415cc475fe98663878d1943d4f30ad3 );
 
     goto frame_no_exception_1;
     frame_exception_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_983c531d7fbf1d42efc5fe069f5077de );
+    RESTORE_FRAME_EXCEPTION( frame_f415cc475fe98663878d1943d4f30ad3 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_983c531d7fbf1d42efc5fe069f5077de, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_f415cc475fe98663878d1943d4f30ad3, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_983c531d7fbf1d42efc5fe069f5077de->m_frame )
+    else if ( exception_tb->tb_frame != &frame_f415cc475fe98663878d1943d4f30ad3->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_983c531d7fbf1d42efc5fe069f5077de, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_f415cc475fe98663878d1943d4f30ad3, exception_lineno );
     }
 
     // Put the previous frame back on top.

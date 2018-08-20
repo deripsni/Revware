@@ -39,21 +39,22 @@ static PyObject *const_dict_5399f7b0439d9537c290649e07f4960c;
 extern PyObject *const_str_digest_655cfb14c03a4151ad3918e72d0b8b37;
 extern PyObject *const_str_plain___version__;
 extern PyObject *const_str_plain_joining_types;
-static PyObject *const_str_digest_a5a6a3eac9bb0534a36c90a60fb2264e;
+static PyObject *const_str_digest_8a88317164860b547beff038de474299;
 extern PyObject *const_str_plain_codepoint_classes;
 extern PyObject *const_str_plain___doc__;
 extern PyObject *const_str_plain___cached__;
 static PyObject *const_str_digest_4c41e0b73d97829c93c8a1dc02228f50;
+static PyObject *module_filename_obj;
 
 static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_dict_ba9d1c7b25ecbf0ae52dc9bdccfe586c = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 189844 ], 946 );
-    const_dict_1a23b084cdb91724f87685c38494c991 = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 190790 ], 6702 );
-    const_dict_5399f7b0439d9537c290649e07f4960c = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 197492 ], 13249 );
-    const_str_digest_a5a6a3eac9bb0534a36c90a60fb2264e = UNSTREAM_STRING( &constant_bin[ 210741 ], 88, 0 );
-    const_str_digest_4c41e0b73d97829c93c8a1dc02228f50 = UNSTREAM_STRING( &constant_bin[ 210829 ], 13, 0 );
+    const_dict_ba9d1c7b25ecbf0ae52dc9bdccfe586c = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 183787 ], 946 );
+    const_dict_1a23b084cdb91724f87685c38494c991 = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 184733 ], 6702 );
+    const_dict_5399f7b0439d9537c290649e07f4960c = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 191435 ], 13249 );
+    const_str_digest_8a88317164860b547beff038de474299 = UNSTREAM_STRING( &constant_bin[ 204684 ], 16, 0 );
+    const_str_digest_4c41e0b73d97829c93c8a1dc02228f50 = UNSTREAM_STRING( &constant_bin[ 204700 ], 13, 0 );
 
     constants_created = true;
 }
@@ -73,7 +74,7 @@ void checkModuleConstants_idna$idnadata( void )
 
 static void createModuleCodeObjects(void)
 {
-
+    module_filename_obj = MAKE_RELATIVE_PATH( const_str_digest_8a88317164860b547beff038de474299 );
 }
 
 // The module function declarations.
@@ -339,7 +340,7 @@ MOD_INIT_DECL( idna$idnadata )
     // Module code.
     tmp_assign_source_1 = Py_None;
     UPDATE_STRING_DICT0( moduledict_idna$idnadata, (Nuitka_StringObject *)const_str_plain___doc__, tmp_assign_source_1 );
-    tmp_assign_source_2 = const_str_digest_a5a6a3eac9bb0534a36c90a60fb2264e;
+    tmp_assign_source_2 = module_filename_obj;
     UPDATE_STRING_DICT0( moduledict_idna$idnadata, (Nuitka_StringObject *)const_str_plain___file__, tmp_assign_source_2 );
     tmp_assign_source_3 = Py_None;
     UPDATE_STRING_DICT0( moduledict_idna$idnadata, (Nuitka_StringObject *)const_str_plain___cached__, tmp_assign_source_3 );

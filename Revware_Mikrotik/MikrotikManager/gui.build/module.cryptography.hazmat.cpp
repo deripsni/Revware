@@ -31,18 +31,27 @@ PyObject *module_cryptography$hazmat;
 PyDictObject *moduledict_cryptography$hazmat;
 
 /* The module constants used, if any. */
-extern PyObject *const_str_plain___file__;
-static PyObject *const_list_str_digest_9a688feb1859948cb3cd3439669d17c7_list;
+extern PyObject *const_str_plain_environ;
 static PyObject *const_str_digest_2a39f05ed9e139c2a8e2a9a699f4a074;
+static PyObject *const_str_digest_6256eb2942a3906189630d8bae56357f;
+extern PyObject *const_tuple_495f0b9ca2f725dc9f357390583c7253_tuple;
+extern PyObject *const_str_plain___file__;
+extern PyObject *const_str_plain_NUITKA_PACKAGE_cryptography;
+extern PyObject *const_str_plain_path;
+static PyObject *const_str_plain_hazmat;
+extern PyObject *const_str_plain_division;
+extern PyObject *const_str_plain___doc__;
 static PyObject *const_str_digest_072f50675723127f2a186a841529ed33;
-extern PyObject *const_str_plain_absolute_import;
-static PyObject *const_str_digest_9a688feb1859948cb3cd3439669d17c7;
-static PyObject *const_str_digest_651f04c8a529852effa2e6ab7084801f;
+extern PyObject *const_tuple_b9fbcafca8e7c98b8c3f8d1dcc83edda_tuple;
+extern PyObject *const_str_plain_NUITKA_PACKAGE_cryptography_hazmat;
+extern PyObject *const_str_digest_5bfaf90dbd407b4fc29090c8f6415242;
 extern PyObject *const_str_plain___path__;
 extern PyObject *const_tuple_empty;
-extern PyObject *const_str_plain___doc__;
+extern PyObject *const_str_plain_get;
+extern PyObject *const_str_plain_join;
+extern PyObject *const_str_plain_dirname;
+extern PyObject *const_str_plain_absolute_import;
 extern PyObject *const_str_plain___cached__;
-extern PyObject *const_str_plain_division;
 extern PyObject *const_str_plain_print_function;
 static PyObject *const_str_digest_f6a5cc0cba3d9495847f9ca96ef756af;
 static PyObject *module_filename_obj;
@@ -51,13 +60,11 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_list_str_digest_9a688feb1859948cb3cd3439669d17c7_list = PyList_New( 1 );
-    const_str_digest_9a688feb1859948cb3cd3439669d17c7 = UNSTREAM_STRING( &constant_bin[ 103192 ], 91, 0 );
-    PyList_SET_ITEM( const_list_str_digest_9a688feb1859948cb3cd3439669d17c7_list, 0, const_str_digest_9a688feb1859948cb3cd3439669d17c7 ); Py_INCREF( const_str_digest_9a688feb1859948cb3cd3439669d17c7 );
-    const_str_digest_2a39f05ed9e139c2a8e2a9a699f4a074 = UNSTREAM_STRING( &constant_bin[ 103283 ], 231, 0 );
-    const_str_digest_072f50675723127f2a186a841529ed33 = UNSTREAM_STRING( &constant_bin[ 103514 ], 19, 0 );
-    const_str_digest_651f04c8a529852effa2e6ab7084801f = UNSTREAM_STRING( &constant_bin[ 103533 ], 103, 0 );
-    const_str_digest_f6a5cc0cba3d9495847f9ca96ef756af = UNSTREAM_STRING( &constant_bin[ 103636 ], 28, 0 );
+    const_str_digest_2a39f05ed9e139c2a8e2a9a699f4a074 = UNSTREAM_STRING( &constant_bin[ 101313 ], 231, 0 );
+    const_str_digest_6256eb2942a3906189630d8bae56357f = UNSTREAM_STRING( &constant_bin[ 101544 ], 31, 0 );
+    const_str_plain_hazmat = UNSTREAM_STRING( &constant_bin[ 101557 ], 6, 1 );
+    const_str_digest_072f50675723127f2a186a841529ed33 = UNSTREAM_STRING( &constant_bin[ 101575 ], 19, 0 );
+    const_str_digest_f6a5cc0cba3d9495847f9ca96ef756af = UNSTREAM_STRING( &constant_bin[ 101594 ], 28, 0 );
 
     constants_created = true;
 }
@@ -73,12 +80,12 @@ void checkModuleConstants_cryptography$hazmat( void )
 #endif
 
 // The module code objects.
-static PyCodeObject *codeobj_6f52a7bd8b5881f129a5e56b9f2d3625;
+static PyCodeObject *codeobj_0d762112cf25fb33d3edff72a5008966;
 
 static void createModuleCodeObjects(void)
 {
-    module_filename_obj = const_str_digest_651f04c8a529852effa2e6ab7084801f;
-    codeobj_6f52a7bd8b5881f129a5e56b9f2d3625 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_f6a5cc0cba3d9495847f9ca96ef756af, 1, const_tuple_empty, 0, 0, CO_NOFREE );
+    module_filename_obj = MAKE_RELATIVE_PATH( const_str_digest_6256eb2942a3906189630d8bae56357f );
+    codeobj_0d762112cf25fb33d3edff72a5008966 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_f6a5cc0cba3d9495847f9ca96ef756af, 1, const_tuple_empty, 0, 0, CO_NOFREE );
 }
 
 // The module function declarations.
@@ -342,6 +349,9 @@ MOD_INIT_DECL( cryptography$hazmat )
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
+    PyObject *tmp_args_element_name_1;
+    PyObject *tmp_args_element_name_2;
+    PyObject *tmp_args_element_name_3;
     PyObject *tmp_assign_source_1;
     PyObject *tmp_assign_source_2;
     PyObject *tmp_assign_source_3;
@@ -350,37 +360,237 @@ MOD_INIT_DECL( cryptography$hazmat )
     PyObject *tmp_assign_source_6;
     PyObject *tmp_assign_source_7;
     PyObject *tmp_assign_source_8;
+    PyObject *tmp_called_instance_1;
+    PyObject *tmp_called_instance_2;
+    PyObject *tmp_called_name_1;
+    PyObject *tmp_called_name_2;
     PyObject *tmp_import_name_from_1;
     PyObject *tmp_import_name_from_2;
     PyObject *tmp_import_name_from_3;
-    struct Nuitka_FrameObject *frame_6f52a7bd8b5881f129a5e56b9f2d3625;
+    PyObject *tmp_list_element_1;
+    PyObject *tmp_source_name_1;
+    PyObject *tmp_source_name_2;
+    struct Nuitka_FrameObject *frame_0d762112cf25fb33d3edff72a5008966;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
 
     // Module code.
     tmp_assign_source_1 = const_str_digest_2a39f05ed9e139c2a8e2a9a699f4a074;
     UPDATE_STRING_DICT0( moduledict_cryptography$hazmat, (Nuitka_StringObject *)const_str_plain___doc__, tmp_assign_source_1 );
-    tmp_assign_source_2 = const_str_digest_651f04c8a529852effa2e6ab7084801f;
+    tmp_assign_source_2 = module_filename_obj;
     UPDATE_STRING_DICT0( moduledict_cryptography$hazmat, (Nuitka_StringObject *)const_str_plain___file__, tmp_assign_source_2 );
-    tmp_assign_source_3 = LIST_COPY( const_list_str_digest_9a688feb1859948cb3cd3439669d17c7_list );
+    // Frame without reuse.
+    frame_0d762112cf25fb33d3edff72a5008966 = MAKE_MODULE_FRAME( codeobj_0d762112cf25fb33d3edff72a5008966, module_cryptography$hazmat );
+
+    // Push the new frame as the currently active one, and we should be exclusively
+    // owning it.
+    pushFrameStack( frame_0d762112cf25fb33d3edff72a5008966 );
+    assert( Py_REFCNT( frame_0d762112cf25fb33d3edff72a5008966 ) == 2 );
+
+    // Framed code:
+    frame_0d762112cf25fb33d3edff72a5008966->m_frame.f_lineno = 1;
+    {
+        PyObject *module = PyImport_ImportModule("os");
+        if (likely( module != NULL ))
+        {
+            tmp_source_name_1 = PyObject_GetAttr( module, const_str_plain_path );
+        }
+        else
+        {
+            tmp_source_name_1 = NULL;
+        }
+    }
+
+    if ( tmp_source_name_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    tmp_called_name_1 = LOOKUP_ATTRIBUTE( tmp_source_name_1, const_str_plain_dirname );
+    if ( tmp_called_name_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    tmp_args_element_name_1 = module_filename_obj;
+    frame_0d762112cf25fb33d3edff72a5008966->m_frame.f_lineno = 1;
+    {
+        PyObject *call_args[] = { tmp_args_element_name_1 };
+        tmp_list_element_1 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_1, call_args );
+    }
+
+    Py_DECREF( tmp_called_name_1 );
+    if ( tmp_list_element_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    tmp_assign_source_3 = PyList_New( 3 );
+    PyList_SET_ITEM( tmp_assign_source_3, 0, tmp_list_element_1 );
+    frame_0d762112cf25fb33d3edff72a5008966->m_frame.f_lineno = 1;
+    {
+        PyObject *module = PyImport_ImportModule("os");
+        if (likely( module != NULL ))
+        {
+            tmp_source_name_2 = PyObject_GetAttr( module, const_str_plain_path );
+        }
+        else
+        {
+            tmp_source_name_2 = NULL;
+        }
+    }
+
+    if ( tmp_source_name_2 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+        Py_DECREF( tmp_assign_source_3 );
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    tmp_called_name_2 = LOOKUP_ATTRIBUTE( tmp_source_name_2, const_str_plain_join );
+    if ( tmp_called_name_2 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+        Py_DECREF( tmp_assign_source_3 );
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    frame_0d762112cf25fb33d3edff72a5008966->m_frame.f_lineno = 1;
+    {
+        PyObject *module = PyImport_ImportModule("os");
+        if (likely( module != NULL ))
+        {
+            tmp_called_instance_1 = PyObject_GetAttr( module, const_str_plain_environ );
+        }
+        else
+        {
+            tmp_called_instance_1 = NULL;
+        }
+    }
+
+    if ( tmp_called_instance_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+        Py_DECREF( tmp_assign_source_3 );
+        Py_DECREF( tmp_called_name_2 );
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    frame_0d762112cf25fb33d3edff72a5008966->m_frame.f_lineno = 1;
+    tmp_args_element_name_2 = CALL_METHOD_WITH_ARGS2( tmp_called_instance_1, const_str_plain_get, &PyTuple_GET_ITEM( const_tuple_495f0b9ca2f725dc9f357390583c7253_tuple, 0 ) );
+
+    if ( tmp_args_element_name_2 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+        Py_DECREF( tmp_assign_source_3 );
+        Py_DECREF( tmp_called_name_2 );
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    tmp_args_element_name_3 = const_str_plain_hazmat;
+    frame_0d762112cf25fb33d3edff72a5008966->m_frame.f_lineno = 1;
+    {
+        PyObject *call_args[] = { tmp_args_element_name_2, tmp_args_element_name_3 };
+        tmp_list_element_1 = CALL_FUNCTION_WITH_ARGS2( tmp_called_name_2, call_args );
+    }
+
+    Py_DECREF( tmp_called_name_2 );
+    Py_DECREF( tmp_args_element_name_2 );
+    if ( tmp_list_element_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+        Py_DECREF( tmp_assign_source_3 );
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    PyList_SET_ITEM( tmp_assign_source_3, 1, tmp_list_element_1 );
+    frame_0d762112cf25fb33d3edff72a5008966->m_frame.f_lineno = 1;
+    {
+        PyObject *module = PyImport_ImportModule("os");
+        if (likely( module != NULL ))
+        {
+            tmp_called_instance_2 = PyObject_GetAttr( module, const_str_plain_environ );
+        }
+        else
+        {
+            tmp_called_instance_2 = NULL;
+        }
+    }
+
+    if ( tmp_called_instance_2 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+        Py_DECREF( tmp_assign_source_3 );
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    frame_0d762112cf25fb33d3edff72a5008966->m_frame.f_lineno = 1;
+    tmp_list_element_1 = CALL_METHOD_WITH_ARGS2( tmp_called_instance_2, const_str_plain_get, &PyTuple_GET_ITEM( const_tuple_b9fbcafca8e7c98b8c3f8d1dcc83edda_tuple, 0 ) );
+
+    if ( tmp_list_element_1 == NULL )
+    {
+        assert( ERROR_OCCURRED() );
+
+        FETCH_ERROR_OCCURRED( &exception_type, &exception_value, &exception_tb );
+        Py_DECREF( tmp_assign_source_3 );
+
+        exception_lineno = 1;
+
+        goto frame_exception_exit_1;
+    }
+    PyList_SET_ITEM( tmp_assign_source_3, 2, tmp_list_element_1 );
     UPDATE_STRING_DICT1( moduledict_cryptography$hazmat, (Nuitka_StringObject *)const_str_plain___path__, tmp_assign_source_3 );
     tmp_assign_source_4 = Py_None;
     UPDATE_STRING_DICT0( moduledict_cryptography$hazmat, (Nuitka_StringObject *)const_str_plain___cached__, tmp_assign_source_4 );
+    frame_0d762112cf25fb33d3edff72a5008966->m_frame.f_lineno = 11;
     tmp_assign_source_5 = PyImport_ImportModule("__future__");
     assert( !(tmp_assign_source_5 == NULL) );
     assert( tmp_import_from_1__module == NULL );
     Py_INCREF( tmp_assign_source_5 );
     tmp_import_from_1__module = tmp_assign_source_5;
 
-    // Frame without reuse.
-    frame_6f52a7bd8b5881f129a5e56b9f2d3625 = MAKE_MODULE_FRAME( codeobj_6f52a7bd8b5881f129a5e56b9f2d3625, module_cryptography$hazmat );
-
-    // Push the new frame as the currently active one, and we should be exclusively
-    // owning it.
-    pushFrameStack( frame_6f52a7bd8b5881f129a5e56b9f2d3625 );
-    assert( Py_REFCNT( frame_6f52a7bd8b5881f129a5e56b9f2d3625 ) == 2 );
-
-    // Framed code:
     // Tried code:
     tmp_import_name_from_1 = tmp_import_from_1__module;
 
@@ -458,25 +668,25 @@ MOD_INIT_DECL( cryptography$hazmat )
 
     // Restore frame exception if necessary.
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_6f52a7bd8b5881f129a5e56b9f2d3625 );
+    RESTORE_FRAME_EXCEPTION( frame_0d762112cf25fb33d3edff72a5008966 );
 #endif
     popFrameStack();
 
-    assertFrameObject( frame_6f52a7bd8b5881f129a5e56b9f2d3625 );
+    assertFrameObject( frame_0d762112cf25fb33d3edff72a5008966 );
 
     goto frame_no_exception_1;
     frame_exception_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_6f52a7bd8b5881f129a5e56b9f2d3625 );
+    RESTORE_FRAME_EXCEPTION( frame_0d762112cf25fb33d3edff72a5008966 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_6f52a7bd8b5881f129a5e56b9f2d3625, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_0d762112cf25fb33d3edff72a5008966, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_6f52a7bd8b5881f129a5e56b9f2d3625->m_frame )
+    else if ( exception_tb->tb_frame != &frame_0d762112cf25fb33d3edff72a5008966->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_6f52a7bd8b5881f129a5e56b9f2d3625, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_0d762112cf25fb33d3edff72a5008966, exception_lineno );
     }
 
     // Put the previous frame back on top.

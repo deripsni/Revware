@@ -105,6 +105,7 @@ class Master(QtCore.QObject):
 
 		self.batchfirmwarewindow.iptxt.setText(self.settings["defaultIPListLocation"])
 		self.batchpasswordwindow.iptxt.setText(self.settings["defaultIPListLocation"])
+		self.batchfirewallwindow.iptxt.setText(self.settings["defaultIPListLocation"])
 
 		self.settingswindow.b1.setText(self.settings["defaultUsername"])
 		self.settingswindow.b2.setText(self.settings["defaultPassword"])

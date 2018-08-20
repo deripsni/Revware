@@ -68,6 +68,7 @@ extern PyObject *const_str_plain_HIGHEST_USERAUTH_MESSAGE_ID;
 extern PyObject *const_int_pos_31;
 extern PyObject *const_tuple_int_pos_13_tuple;
 static PyObject *const_str_digest_76c8df24120d2b1949f3870a64a0f940;
+static PyObject *const_str_digest_186f18ed4b019012e39aa1310b09ef20;
 extern PyObject *const_int_pos_80;
 static PyObject *const_str_digest_db5706f62a1019e0db7d295c38a809b4;
 extern PyObject *const_str_plain_MSG_CHANNEL_EXTENDED_DATA;
@@ -132,7 +133,6 @@ static PyObject *const_str_plain_cMSG_USERAUTH_GSSAPI_EXCHANGE_COMPLETE;
 static PyObject *const_str_digest_2ca203a96a185861f409ff2a667ac4b2;
 extern PyObject *const_str_plain_cMSG_SERVICE_REQUEST;
 extern PyObject *const_str_digest_9a8c6cc831c838e9290e530598427e4a;
-static PyObject *const_str_digest_398090d6088114b6a2f0c8c642676ca0;
 extern PyObject *const_str_plain_MSG_KEXINIT;
 extern PyObject *const_str_plain_MSG_USERAUTH_GSSAPI_ERRTOK;
 extern PyObject *const_int_pos_83;
@@ -288,22 +288,23 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_int_pos_7_int_pos_13_int_pos_14_tuple, 1, const_int_pos_13 ); Py_INCREF( const_int_pos_13 );
     PyTuple_SET_ITEM( const_tuple_int_pos_7_int_pos_13_int_pos_14_tuple, 2, const_int_pos_14 ); Py_INCREF( const_int_pos_14 );
     const_dict_2f3feb38cf4698993fe350df5eafa43b = _PyDict_NewPresized( 4 );
-    const_str_digest_b50e455b0173ed2d6ad4605dd79a8baa = UNSTREAM_STRING( &constant_bin[ 439114 ], 27, 0 );
+    const_str_digest_b50e455b0173ed2d6ad4605dd79a8baa = UNSTREAM_STRING( &constant_bin[ 430578 ], 27, 0 );
     PyDict_SetItem( const_dict_2f3feb38cf4698993fe350df5eafa43b, const_int_pos_1, const_str_digest_b50e455b0173ed2d6ad4605dd79a8baa );
-    const_str_digest_9629daf16003f6cad98fa628106840e0 = UNSTREAM_STRING( &constant_bin[ 439141 ], 14, 0 );
+    const_str_digest_9629daf16003f6cad98fa628106840e0 = UNSTREAM_STRING( &constant_bin[ 430605 ], 14, 0 );
     PyDict_SetItem( const_dict_2f3feb38cf4698993fe350df5eafa43b, const_int_pos_2, const_str_digest_9629daf16003f6cad98fa628106840e0 );
-    const_str_digest_00ee6b9e7b545ea5f01da8d00a80ec32 = UNSTREAM_STRING( &constant_bin[ 439155 ], 20, 0 );
+    const_str_digest_00ee6b9e7b545ea5f01da8d00a80ec32 = UNSTREAM_STRING( &constant_bin[ 430619 ], 20, 0 );
     PyDict_SetItem( const_dict_2f3feb38cf4698993fe350df5eafa43b, const_int_pos_3, const_str_digest_00ee6b9e7b545ea5f01da8d00a80ec32 );
-    const_str_digest_a5845464038f6b6f2c2e9d81307cbcfc = UNSTREAM_STRING( &constant_bin[ 439175 ], 17, 0 );
+    const_str_digest_a5845464038f6b6f2c2e9d81307cbcfc = UNSTREAM_STRING( &constant_bin[ 430639 ], 17, 0 );
     PyDict_SetItem( const_dict_2f3feb38cf4698993fe350df5eafa43b, const_int_pos_4, const_str_digest_a5845464038f6b6f2c2e9d81307cbcfc );
     assert( PyDict_Size( const_dict_2f3feb38cf4698993fe350df5eafa43b ) == 4 );
-    const_str_plain_o660 = UNSTREAM_STRING( &constant_bin[ 439192 ], 4, 1 );
-    const_str_plain_CRITICAL = UNSTREAM_STRING( &constant_bin[ 439196 ], 8, 1 );
-    const_str_plain_cMSG_USERAUTH_GSSAPI_ERRTOK = UNSTREAM_STRING( &constant_bin[ 439204 ], 27, 1 );
+    const_str_plain_o660 = UNSTREAM_STRING( &constant_bin[ 430656 ], 4, 1 );
+    const_str_plain_CRITICAL = UNSTREAM_STRING( &constant_bin[ 430660 ], 8, 1 );
+    const_str_plain_cMSG_USERAUTH_GSSAPI_ERRTOK = UNSTREAM_STRING( &constant_bin[ 430668 ], 27, 1 );
     const_tuple_int_pos_4294967295_tuple = PyTuple_New( 1 );
     PyTuple_SET_ITEM( const_tuple_int_pos_4294967295_tuple, 0, const_int_pos_4294967295 ); Py_INCREF( const_int_pos_4294967295 );
-    const_str_digest_76c8df24120d2b1949f3870a64a0f940 = UNSTREAM_STRING( &constant_bin[ 439231 ], 48, 0 );
-    const_str_digest_db5706f62a1019e0db7d295c38a809b4 = UNSTREAM_STRING( &constant_bin[ 439279 ], 40, 0 );
+    const_str_digest_76c8df24120d2b1949f3870a64a0f940 = UNSTREAM_STRING( &constant_bin[ 430695 ], 48, 0 );
+    const_str_digest_186f18ed4b019012e39aa1310b09ef20 = UNSTREAM_STRING( &constant_bin[ 430743 ], 18, 0 );
+    const_str_digest_db5706f62a1019e0db7d295c38a809b4 = UNSTREAM_STRING( &constant_bin[ 430761 ], 40, 0 );
     const_xrange_80_83 = BUILTIN_XRANGE3( const_int_pos_80, const_int_pos_83, const_int_pos_1 );
     const_int_pos_448 = PyLong_FromUnsignedLong( 448ul );
     const_tuple_b7fd7d2c1fe1b6662269ea8df5424031_tuple = PyTuple_New( 5 );
@@ -312,76 +313,75 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_b7fd7d2c1fe1b6662269ea8df5424031_tuple, 2, const_str_plain_bytes_types ); Py_INCREF( const_str_plain_bytes_types );
     PyTuple_SET_ITEM( const_tuple_b7fd7d2c1fe1b6662269ea8df5424031_tuple, 3, const_str_plain_text_type ); Py_INCREF( const_str_plain_text_type );
     PyTuple_SET_ITEM( const_tuple_b7fd7d2c1fe1b6662269ea8df5424031_tuple, 4, const_str_plain_long ); Py_INCREF( const_str_plain_long );
-    const_str_digest_b1735d9d474334b4fe16983aa16ede5a = UNSTREAM_STRING( &constant_bin[ 439319 ], 24, 0 );
-    const_str_digest_b633102eb5c83343df21466439e32497 = UNSTREAM_STRING( &constant_bin[ 439343 ], 12, 0 );
+    const_str_digest_b1735d9d474334b4fe16983aa16ede5a = UNSTREAM_STRING( &constant_bin[ 430801 ], 24, 0 );
+    const_str_digest_b633102eb5c83343df21466439e32497 = UNSTREAM_STRING( &constant_bin[ 430825 ], 12, 0 );
     const_int_pos_67 = PyLong_FromUnsignedLong( 67ul );
     const_xrange_63_67 = BUILTIN_XRANGE3( const_int_pos_63, const_int_pos_67, const_int_pos_1 );
     const_int_pos_33 = PyLong_FromUnsignedLong( 33ul );
-    const_str_digest_cc65e74350041e6fd75c282555bd10cd = UNSTREAM_STRING( &constant_bin[ 439355 ], 15, 0 );
+    const_str_digest_cc65e74350041e6fd75c282555bd10cd = UNSTREAM_STRING( &constant_bin[ 430837 ], 15, 0 );
     const_int_pos_62 = PyLong_FromUnsignedLong( 62ul );
-    const_str_plain_o644 = UNSTREAM_STRING( &constant_bin[ 439370 ], 4, 1 );
-    const_str_digest_591947d6e6a0c90b66f0f033a15ccf73 = UNSTREAM_STRING( &constant_bin[ 439374 ], 20, 0 );
-    const_str_digest_46ed528cce86c8ef57e6fcd759f69eb6 = UNSTREAM_STRING( &constant_bin[ 439394 ], 15, 0 );
+    const_str_plain_o644 = UNSTREAM_STRING( &constant_bin[ 430852 ], 4, 1 );
+    const_str_digest_591947d6e6a0c90b66f0f033a15ccf73 = UNSTREAM_STRING( &constant_bin[ 430856 ], 20, 0 );
+    const_str_digest_46ed528cce86c8ef57e6fcd759f69eb6 = UNSTREAM_STRING( &constant_bin[ 430876 ], 15, 0 );
     const_int_pos_432 = PyLong_FromUnsignedLong( 432ul );
-    const_str_digest_52d3fd085b8e0f7759387d21d761d6dd = UNSTREAM_STRING( &constant_bin[ 439409 ], 15, 0 );
-    const_str_plain_MSG_USERAUTH_PK_OK = UNSTREAM_STRING( &constant_bin[ 393668 ], 18, 1 );
-    const_str_digest_0e2e9649fa6b73827d6f4cc17912f17c = UNSTREAM_STRING( &constant_bin[ 439424 ], 20, 0 );
-    const_str_plain_kexinit = UNSTREAM_STRING( &constant_bin[ 439444 ], 7, 1 );
-    const_str_digest_4aa2d0aa97cfdd0ddbe57aa686b84ce6 = UNSTREAM_STRING( &constant_bin[ 439451 ], 24, 0 );
-    const_str_plain_cMSG_USERAUTH_GSSAPI_EXCHANGE_COMPLETE = UNSTREAM_STRING( &constant_bin[ 439475 ], 38, 1 );
-    const_str_digest_2ca203a96a185861f409ff2a667ac4b2 = UNSTREAM_STRING( &constant_bin[ 439513 ], 13, 0 );
-    const_str_digest_398090d6088114b6a2f0c8c642676ca0 = UNSTREAM_STRING( &constant_bin[ 439526 ], 90, 0 );
-    const_str_digest_6270d2d12dded7ba3077409d411787e0 = UNSTREAM_STRING( &constant_bin[ 439616 ], 14, 0 );
+    const_str_digest_52d3fd085b8e0f7759387d21d761d6dd = UNSTREAM_STRING( &constant_bin[ 430891 ], 15, 0 );
+    const_str_plain_MSG_USERAUTH_PK_OK = UNSTREAM_STRING( &constant_bin[ 385420 ], 18, 1 );
+    const_str_digest_0e2e9649fa6b73827d6f4cc17912f17c = UNSTREAM_STRING( &constant_bin[ 430906 ], 20, 0 );
+    const_str_plain_kexinit = UNSTREAM_STRING( &constant_bin[ 430926 ], 7, 1 );
+    const_str_digest_4aa2d0aa97cfdd0ddbe57aa686b84ce6 = UNSTREAM_STRING( &constant_bin[ 430933 ], 24, 0 );
+    const_str_plain_cMSG_USERAUTH_GSSAPI_EXCHANGE_COMPLETE = UNSTREAM_STRING( &constant_bin[ 430957 ], 38, 1 );
+    const_str_digest_2ca203a96a185861f409ff2a667ac4b2 = UNSTREAM_STRING( &constant_bin[ 430995 ], 13, 0 );
+    const_str_digest_6270d2d12dded7ba3077409d411787e0 = UNSTREAM_STRING( &constant_bin[ 431008 ], 14, 0 );
     const_xrange_1_7 = BUILTIN_XRANGE3( const_int_pos_1, const_int_pos_7, const_int_pos_1 );
-    const_str_plain_newkeys = UNSTREAM_STRING( &constant_bin[ 439630 ], 7, 1 );
-    const_str_digest_8febd38d27015f3d41c300556b2ed9a7 = UNSTREAM_STRING( &constant_bin[ 439637 ], 19, 0 );
+    const_str_plain_newkeys = UNSTREAM_STRING( &constant_bin[ 431022 ], 7, 1 );
+    const_str_digest_8febd38d27015f3d41c300556b2ed9a7 = UNSTREAM_STRING( &constant_bin[ 431029 ], 19, 0 );
     const_int_pos_34 = PyLong_FromUnsignedLong( 34ul );
     const_int_pos_438 = PyLong_FromUnsignedLong( 438ul );
-    const_str_plain_DISCONNECT_AUTH_CANCELLED_BY_USER = UNSTREAM_STRING( &constant_bin[ 439656 ], 33, 1 );
-    const_str_plain_cMSG_USERAUTH_GSSAPI_ERROR = UNSTREAM_STRING( &constant_bin[ 439689 ], 26, 1 );
-    const_str_digest_a73b2de1245b9e98f5999bcc5574dc9a = UNSTREAM_STRING( &constant_bin[ 439715 ], 11, 0 );
-    const_str_digest_47d53fda6c78160bf7883d2da1ef9903 = UNSTREAM_STRING( &constant_bin[ 439726 ], 15, 0 );
-    const_str_plain_kex30 = UNSTREAM_STRING( &constant_bin[ 439741 ], 5, 1 );
+    const_str_plain_DISCONNECT_AUTH_CANCELLED_BY_USER = UNSTREAM_STRING( &constant_bin[ 431048 ], 33, 1 );
+    const_str_plain_cMSG_USERAUTH_GSSAPI_ERROR = UNSTREAM_STRING( &constant_bin[ 431081 ], 26, 1 );
+    const_str_digest_a73b2de1245b9e98f5999bcc5574dc9a = UNSTREAM_STRING( &constant_bin[ 431107 ], 11, 0 );
+    const_str_digest_47d53fda6c78160bf7883d2da1ef9903 = UNSTREAM_STRING( &constant_bin[ 431118 ], 15, 0 );
+    const_str_plain_kex30 = UNSTREAM_STRING( &constant_bin[ 431133 ], 5, 1 );
     const_xrange_90_101 = BUILTIN_XRANGE3( const_int_pos_90, const_int_pos_101, const_int_pos_1 );
-    const_str_digest_89f59c81e279de6acf2cfd7c12641ccb = UNSTREAM_STRING( &constant_bin[ 439746 ], 16, 0 );
+    const_str_digest_89f59c81e279de6acf2cfd7c12641ccb = UNSTREAM_STRING( &constant_bin[ 431138 ], 16, 0 );
     const_tuple_int_pos_2147483648_tuple = PyTuple_New( 1 );
     PyTuple_SET_ITEM( const_tuple_int_pos_2147483648_tuple, 0, const_int_pos_2147483648 ); Py_INCREF( const_int_pos_2147483648 );
-    const_str_digest_929abd662134ab2aae9a180d295883cd = UNSTREAM_STRING( &constant_bin[ 439762 ], 33, 0 );
+    const_str_digest_929abd662134ab2aae9a180d295883cd = UNSTREAM_STRING( &constant_bin[ 431154 ], 33, 0 );
     const_xrange_20_22 = BUILTIN_XRANGE3( const_int_pos_20, const_int_pos_22, const_int_pos_1 );
-    const_str_plain_cMSG_DEBUG = UNSTREAM_STRING( &constant_bin[ 439795 ], 10, 1 );
-    const_str_digest_4438805fe250c57093cee33c5c242db0 = UNSTREAM_STRING( &constant_bin[ 439805 ], 31, 0 );
-    const_str_digest_35acc9a5233b09d0dad38f7447e5e9f3 = UNSTREAM_STRING( &constant_bin[ 439836 ], 15, 0 );
-    const_str_digest_c2494a4dfb4ec690cc4dd4c32567b2c5 = UNSTREAM_STRING( &constant_bin[ 439851 ], 21, 0 );
-    const_str_digest_029bf3fa99f6dc75225e710ad4a34730 = UNSTREAM_STRING( &constant_bin[ 439872 ], 16, 0 );
-    const_str_plain_kex33 = UNSTREAM_STRING( &constant_bin[ 439888 ], 5, 1 );
-    const_str_plain_MSG_UNIMPLEMENTED = UNSTREAM_STRING( &constant_bin[ 439893 ], 17, 1 );
-    const_str_plain_kex41 = UNSTREAM_STRING( &constant_bin[ 439910 ], 5, 1 );
+    const_str_plain_cMSG_DEBUG = UNSTREAM_STRING( &constant_bin[ 431187 ], 10, 1 );
+    const_str_digest_4438805fe250c57093cee33c5c242db0 = UNSTREAM_STRING( &constant_bin[ 431197 ], 31, 0 );
+    const_str_digest_35acc9a5233b09d0dad38f7447e5e9f3 = UNSTREAM_STRING( &constant_bin[ 431228 ], 15, 0 );
+    const_str_digest_c2494a4dfb4ec690cc4dd4c32567b2c5 = UNSTREAM_STRING( &constant_bin[ 431243 ], 21, 0 );
+    const_str_digest_029bf3fa99f6dc75225e710ad4a34730 = UNSTREAM_STRING( &constant_bin[ 431264 ], 16, 0 );
+    const_str_plain_kex33 = UNSTREAM_STRING( &constant_bin[ 431280 ], 5, 1 );
+    const_str_plain_MSG_UNIMPLEMENTED = UNSTREAM_STRING( &constant_bin[ 431285 ], 17, 1 );
+    const_str_plain_kex41 = UNSTREAM_STRING( &constant_bin[ 431302 ], 5, 1 );
     const_int_pos_54 = PyLong_FromUnsignedLong( 54ul );
-    const_str_digest_419c2393b317612e83e0979cc66d01ca = UNSTREAM_STRING( &constant_bin[ 439915 ], 21, 0 );
-    const_str_digest_1172898702a8748e00ee868b40c129c2 = UNSTREAM_STRING( &constant_bin[ 439936 ], 16, 0 );
-    const_str_digest_ae40cf39c81d3d83a722eef6e4efaeac = UNSTREAM_STRING( &constant_bin[ 439952 ], 14, 0 );
-    const_str_plain_unimplemented = UNSTREAM_STRING( &constant_bin[ 439966 ], 13, 1 );
-    const_str_plain_kex34 = UNSTREAM_STRING( &constant_bin[ 439979 ], 5, 1 );
+    const_str_digest_419c2393b317612e83e0979cc66d01ca = UNSTREAM_STRING( &constant_bin[ 431307 ], 21, 0 );
+    const_str_digest_1172898702a8748e00ee868b40c129c2 = UNSTREAM_STRING( &constant_bin[ 431328 ], 16, 0 );
+    const_str_digest_ae40cf39c81d3d83a722eef6e4efaeac = UNSTREAM_STRING( &constant_bin[ 431344 ], 14, 0 );
+    const_str_plain_unimplemented = UNSTREAM_STRING( &constant_bin[ 431358 ], 13, 1 );
+    const_str_plain_kex34 = UNSTREAM_STRING( &constant_bin[ 431371 ], 5, 1 );
     const_xrange_60_62 = BUILTIN_XRANGE3( const_int_pos_60, const_int_pos_62, const_int_pos_1 );
-    const_str_digest_b0c0e3641044f6ffff36bfcc66ac116c = UNSTREAM_STRING( &constant_bin[ 439984 ], 16, 0 );
+    const_str_digest_b0c0e3641044f6ffff36bfcc66ac116c = UNSTREAM_STRING( &constant_bin[ 431376 ], 16, 0 );
     const_int_pos_511 = PyLong_FromUnsignedLong( 511ul );
     const_xrange_50_54 = BUILTIN_XRANGE3( const_int_pos_50, const_int_pos_54, const_int_pos_1 );
-    const_float_0_01 = UNSTREAM_FLOAT( &constant_bin[ 440000 ] );
+    const_float_0_01 = UNSTREAM_FLOAT( &constant_bin[ 431392 ] );
     const_xrange_0_5 = BUILTIN_XRANGE3( const_int_0, const_int_pos_5, const_int_pos_1 );
-    const_str_digest_bd1ddce9e2766dcf5a0698eb48f8d831 = UNSTREAM_STRING( &constant_bin[ 440008 ], 21, 0 );
+    const_str_digest_bd1ddce9e2766dcf5a0698eb48f8d831 = UNSTREAM_STRING( &constant_bin[ 431400 ], 21, 0 );
     const_tuple_str_plain_s_str_plain_asbytes_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_s_str_plain_asbytes_tuple, 0, const_str_plain_s ); Py_INCREF( const_str_plain_s );
     PyTuple_SET_ITEM( const_tuple_str_plain_s_str_plain_asbytes_tuple, 1, const_str_plain_asbytes ); Py_INCREF( const_str_plain_asbytes );
-    const_str_digest_8a7bf1168e04a88c17b45075b95f1b8f = UNSTREAM_STRING( &constant_bin[ 440029 ], 12, 0 );
-    const_str_plain_MSG_USERAUTH_GSSAPI_EXCHANGE_COMPLETE = UNSTREAM_STRING( &constant_bin[ 439476 ], 37, 1 );
-    const_str_digest_2f7a36184dad983441341840fa2953cc = UNSTREAM_STRING( &constant_bin[ 440041 ], 22, 0 );
-    const_str_plain_o666 = UNSTREAM_STRING( &constant_bin[ 440063 ], 4, 1 );
-    const_str_digest_071421bf01a6e9ffe85977ab8327d579 = UNSTREAM_STRING( &constant_bin[ 440067 ], 15, 0 );
-    const_str_digest_3cc365e1850246564ad009c5ecfd6d2b = UNSTREAM_STRING( &constant_bin[ 440082 ], 21, 0 );
-    const_str_plain_kex31 = UNSTREAM_STRING( &constant_bin[ 440103 ], 5, 1 );
-    const_str_plain_kex40 = UNSTREAM_STRING( &constant_bin[ 440108 ], 5, 1 );
-    const_str_plain_kex32 = UNSTREAM_STRING( &constant_bin[ 440113 ], 5, 1 );
-    const_str_digest_03e84f6126af9fe22524801baf0d033a = UNSTREAM_STRING( &constant_bin[ 440118 ], 27, 0 );
+    const_str_digest_8a7bf1168e04a88c17b45075b95f1b8f = UNSTREAM_STRING( &constant_bin[ 431421 ], 12, 0 );
+    const_str_plain_MSG_USERAUTH_GSSAPI_EXCHANGE_COMPLETE = UNSTREAM_STRING( &constant_bin[ 430958 ], 37, 1 );
+    const_str_digest_2f7a36184dad983441341840fa2953cc = UNSTREAM_STRING( &constant_bin[ 431433 ], 22, 0 );
+    const_str_plain_o666 = UNSTREAM_STRING( &constant_bin[ 431455 ], 4, 1 );
+    const_str_digest_071421bf01a6e9ffe85977ab8327d579 = UNSTREAM_STRING( &constant_bin[ 431459 ], 15, 0 );
+    const_str_digest_3cc365e1850246564ad009c5ecfd6d2b = UNSTREAM_STRING( &constant_bin[ 431474 ], 21, 0 );
+    const_str_plain_kex31 = UNSTREAM_STRING( &constant_bin[ 431495 ], 5, 1 );
+    const_str_plain_kex40 = UNSTREAM_STRING( &constant_bin[ 431500 ], 5, 1 );
+    const_str_plain_kex32 = UNSTREAM_STRING( &constant_bin[ 431505 ], 5, 1 );
+    const_str_digest_03e84f6126af9fe22524801baf0d033a = UNSTREAM_STRING( &constant_bin[ 431510 ], 27, 0 );
 
     constants_created = true;
 }
@@ -397,14 +397,14 @@ void checkModuleConstants_paramiko$common( void )
 #endif
 
 // The module code objects.
-static PyCodeObject *codeobj_1d0405c9630c12d7a5b523a210eb1f46;
-static PyCodeObject *codeobj_9fcfcde518175dc5b4855cde393e90ea;
+static PyCodeObject *codeobj_d4c98d164cdf3f2c7b5b0ee49938bf66;
+static PyCodeObject *codeobj_829742968ba076875cd423b04a0a7081;
 
 static void createModuleCodeObjects(void)
 {
-    module_filename_obj = const_str_digest_398090d6088114b6a2f0c8c642676ca0;
-    codeobj_1d0405c9630c12d7a5b523a210eb1f46 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_4aa2d0aa97cfdd0ddbe57aa686b84ce6, 1, const_tuple_empty, 0, 0, CO_NOFREE );
-    codeobj_9fcfcde518175dc5b4855cde393e90ea = MAKE_CODEOBJ( module_filename_obj, const_str_plain_asbytes, 164, const_tuple_str_plain_s_str_plain_asbytes_tuple, 1, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    module_filename_obj = MAKE_RELATIVE_PATH( const_str_digest_186f18ed4b019012e39aa1310b09ef20 );
+    codeobj_d4c98d164cdf3f2c7b5b0ee49938bf66 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_4aa2d0aa97cfdd0ddbe57aa686b84ce6, 1, const_tuple_empty, 0, 0, CO_NOFREE );
+    codeobj_829742968ba076875cd423b04a0a7081 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_asbytes, 164, const_tuple_str_plain_s_str_plain_asbytes_tuple, 1, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
 }
 
 // The module function declarations.
@@ -445,23 +445,23 @@ static PyObject *impl_paramiko$common$$$function_1_asbytes( struct Nuitka_Functi
     bool tmp_isnot_1;
     int tmp_res;
     PyObject *tmp_return_value;
-    static struct Nuitka_FrameObject *cache_frame_9fcfcde518175dc5b4855cde393e90ea = NULL;
+    static struct Nuitka_FrameObject *cache_frame_829742968ba076875cd423b04a0a7081 = NULL;
 
-    struct Nuitka_FrameObject *frame_9fcfcde518175dc5b4855cde393e90ea;
+    struct Nuitka_FrameObject *frame_829742968ba076875cd423b04a0a7081;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_9fcfcde518175dc5b4855cde393e90ea, codeobj_9fcfcde518175dc5b4855cde393e90ea, module_paramiko$common, sizeof(void *)+sizeof(void *) );
-    frame_9fcfcde518175dc5b4855cde393e90ea = cache_frame_9fcfcde518175dc5b4855cde393e90ea;
+    MAKE_OR_REUSE_FRAME( cache_frame_829742968ba076875cd423b04a0a7081, codeobj_829742968ba076875cd423b04a0a7081, module_paramiko$common, sizeof(void *)+sizeof(void *) );
+    frame_829742968ba076875cd423b04a0a7081 = cache_frame_829742968ba076875cd423b04a0a7081;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_9fcfcde518175dc5b4855cde393e90ea );
+    pushFrameStack( frame_829742968ba076875cd423b04a0a7081 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_9fcfcde518175dc5b4855cde393e90ea ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_829742968ba076875cd423b04a0a7081 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_isinstance_inst_1 = par_s;
@@ -565,7 +565,7 @@ static PyObject *impl_paramiko$common$$$function_1_asbytes( struct Nuitka_Functi
     tmp_called_instance_1 = par_s;
 
     CHECK_OBJECT( tmp_called_instance_1 );
-    frame_9fcfcde518175dc5b4855cde393e90ea->m_frame.f_lineno = 170;
+    frame_829742968ba076875cd423b04a0a7081->m_frame.f_lineno = 170;
     tmp_return_value = CALL_METHOD_WITH_ARGS1( tmp_called_instance_1, const_str_plain_encode, &PyTuple_GET_ITEM( const_tuple_str_digest_c075052d723d6707083e869a0e3659bb_tuple, 0 ) );
 
     if ( tmp_return_value == NULL )
@@ -632,7 +632,7 @@ static PyObject *impl_paramiko$common$$$function_1_asbytes( struct Nuitka_Functi
         goto frame_exception_exit_1;
     }
 
-    frame_9fcfcde518175dc5b4855cde393e90ea->m_frame.f_lineno = 173;
+    frame_829742968ba076875cd423b04a0a7081->m_frame.f_lineno = 173;
     tmp_return_value = CALL_FUNCTION_NO_ARGS( tmp_called_name_1 );
     if ( tmp_return_value == NULL )
     {
@@ -668,7 +668,7 @@ static PyObject *impl_paramiko$common$$$function_1_asbytes( struct Nuitka_Functi
     goto frame_return_exit_1;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_9fcfcde518175dc5b4855cde393e90ea );
+    RESTORE_FRAME_EXCEPTION( frame_829742968ba076875cd423b04a0a7081 );
 #endif
 
     // Put the previous frame back on top.
@@ -678,7 +678,7 @@ static PyObject *impl_paramiko$common$$$function_1_asbytes( struct Nuitka_Functi
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_9fcfcde518175dc5b4855cde393e90ea );
+    RESTORE_FRAME_EXCEPTION( frame_829742968ba076875cd423b04a0a7081 );
 #endif
 
     // Put the previous frame back on top.
@@ -689,21 +689,21 @@ static PyObject *impl_paramiko$common$$$function_1_asbytes( struct Nuitka_Functi
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_9fcfcde518175dc5b4855cde393e90ea );
+    RESTORE_FRAME_EXCEPTION( frame_829742968ba076875cd423b04a0a7081 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_9fcfcde518175dc5b4855cde393e90ea, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_829742968ba076875cd423b04a0a7081, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_9fcfcde518175dc5b4855cde393e90ea->m_frame )
+    else if ( exception_tb->tb_frame != &frame_829742968ba076875cd423b04a0a7081->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_9fcfcde518175dc5b4855cde393e90ea, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_829742968ba076875cd423b04a0a7081, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_9fcfcde518175dc5b4855cde393e90ea,
+        (struct Nuitka_FrameObject *)frame_829742968ba076875cd423b04a0a7081,
         type_description_1,
         par_s,
         var_asbytes
@@ -711,13 +711,13 @@ static PyObject *impl_paramiko$common$$$function_1_asbytes( struct Nuitka_Functi
 
 
     // Release cached frame.
-    if ( frame_9fcfcde518175dc5b4855cde393e90ea == cache_frame_9fcfcde518175dc5b4855cde393e90ea )
+    if ( frame_829742968ba076875cd423b04a0a7081 == cache_frame_829742968ba076875cd423b04a0a7081 )
     {
-        Py_DECREF( frame_9fcfcde518175dc5b4855cde393e90ea );
+        Py_DECREF( frame_829742968ba076875cd423b04a0a7081 );
     }
-    cache_frame_9fcfcde518175dc5b4855cde393e90ea = NULL;
+    cache_frame_829742968ba076875cd423b04a0a7081 = NULL;
 
-    assertFrameObject( frame_9fcfcde518175dc5b4855cde393e90ea );
+    assertFrameObject( frame_829742968ba076875cd423b04a0a7081 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -792,7 +792,7 @@ static PyObject *MAKE_FUNCTION_paramiko$common$$$function_1_asbytes(  )
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_9fcfcde518175dc5b4855cde393e90ea,
+        codeobj_829742968ba076875cd423b04a0a7081,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -1630,24 +1630,24 @@ MOD_INIT_DECL( paramiko$common )
     PyObject *tmp_unpack_43;
     PyObject *tmp_unpack_44;
     PyObject *tmp_unpack_45;
-    struct Nuitka_FrameObject *frame_1d0405c9630c12d7a5b523a210eb1f46;
+    struct Nuitka_FrameObject *frame_d4c98d164cdf3f2c7b5b0ee49938bf66;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
 
     // Module code.
     tmp_assign_source_1 = const_str_digest_db5706f62a1019e0db7d295c38a809b4;
     UPDATE_STRING_DICT0( moduledict_paramiko$common, (Nuitka_StringObject *)const_str_plain___doc__, tmp_assign_source_1 );
-    tmp_assign_source_2 = const_str_digest_398090d6088114b6a2f0c8c642676ca0;
+    tmp_assign_source_2 = module_filename_obj;
     UPDATE_STRING_DICT0( moduledict_paramiko$common, (Nuitka_StringObject *)const_str_plain___file__, tmp_assign_source_2 );
     tmp_assign_source_3 = Py_None;
     UPDATE_STRING_DICT0( moduledict_paramiko$common, (Nuitka_StringObject *)const_str_plain___cached__, tmp_assign_source_3 );
     // Frame without reuse.
-    frame_1d0405c9630c12d7a5b523a210eb1f46 = MAKE_MODULE_FRAME( codeobj_1d0405c9630c12d7a5b523a210eb1f46, module_paramiko$common );
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66 = MAKE_MODULE_FRAME( codeobj_d4c98d164cdf3f2c7b5b0ee49938bf66, module_paramiko$common );
 
     // Push the new frame as the currently active one, and we should be exclusively
     // owning it.
-    pushFrameStack( frame_1d0405c9630c12d7a5b523a210eb1f46 );
-    assert( Py_REFCNT( frame_1d0405c9630c12d7a5b523a210eb1f46 ) == 2 );
+    pushFrameStack( frame_d4c98d164cdf3f2c7b5b0ee49938bf66 );
+    assert( Py_REFCNT( frame_d4c98d164cdf3f2c7b5b0ee49938bf66 ) == 2 );
 
     // Framed code:
     tmp_name_name_1 = const_str_plain_logging;
@@ -1655,7 +1655,7 @@ MOD_INIT_DECL( paramiko$common )
     tmp_locals_name_1 = Py_None;
     tmp_fromlist_name_1 = Py_None;
     tmp_level_name_1 = const_int_0;
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 22;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 22;
     tmp_assign_source_4 = IMPORT_MODULE5( tmp_name_name_1, tmp_globals_name_1, tmp_locals_name_1, tmp_fromlist_name_1, tmp_level_name_1 );
     if ( tmp_assign_source_4 == NULL )
     {
@@ -1674,7 +1674,7 @@ MOD_INIT_DECL( paramiko$common )
     tmp_locals_name_2 = Py_None;
     tmp_fromlist_name_2 = const_tuple_b7fd7d2c1fe1b6662269ea8df5424031_tuple;
     tmp_level_name_2 = const_int_0;
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 23;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 23;
     tmp_assign_source_5 = IMPORT_MODULE5( tmp_name_name_2, tmp_globals_name_2, tmp_locals_name_2, tmp_fromlist_name_2, tmp_level_name_2 );
     if ( tmp_assign_source_5 == NULL )
     {
@@ -3512,7 +3512,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 42;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 42;
     {
         PyObject *call_args[] = { tmp_args_element_name_1 };
         tmp_assign_source_89 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_1, call_args );
@@ -3574,7 +3574,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 43;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 43;
     {
         PyObject *call_args[] = { tmp_args_element_name_2 };
         tmp_assign_source_90 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_2, call_args );
@@ -3636,7 +3636,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 44;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 44;
     {
         PyObject *call_args[] = { tmp_args_element_name_3 };
         tmp_assign_source_91 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_3, call_args );
@@ -3698,7 +3698,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 45;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 45;
     {
         PyObject *call_args[] = { tmp_args_element_name_4 };
         tmp_assign_source_92 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_4, call_args );
@@ -3760,7 +3760,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 46;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 46;
     {
         PyObject *call_args[] = { tmp_args_element_name_5 };
         tmp_assign_source_93 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_5, call_args );
@@ -3822,7 +3822,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 47;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 47;
     {
         PyObject *call_args[] = { tmp_args_element_name_6 };
         tmp_assign_source_94 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_6, call_args );
@@ -3884,7 +3884,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 48;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 48;
     {
         PyObject *call_args[] = { tmp_args_element_name_7 };
         tmp_assign_source_95 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_7, call_args );
@@ -3946,7 +3946,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 49;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 49;
     {
         PyObject *call_args[] = { tmp_args_element_name_8 };
         tmp_assign_source_96 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_8, call_args );
@@ -4008,7 +4008,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 50;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 50;
     {
         PyObject *call_args[] = { tmp_args_element_name_9 };
         tmp_assign_source_97 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_9, call_args );
@@ -4070,7 +4070,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 51;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 51;
     {
         PyObject *call_args[] = { tmp_args_element_name_10 };
         tmp_assign_source_98 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_10, call_args );
@@ -4132,7 +4132,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 52;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 52;
     {
         PyObject *call_args[] = { tmp_args_element_name_11 };
         tmp_assign_source_99 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_11, call_args );
@@ -4194,7 +4194,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 53;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 53;
     {
         PyObject *call_args[] = { tmp_args_element_name_12 };
         tmp_assign_source_100 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_12, call_args );
@@ -4256,7 +4256,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 54;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 54;
     {
         PyObject *call_args[] = { tmp_args_element_name_13 };
         tmp_assign_source_101 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_13, call_args );
@@ -4318,7 +4318,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 55;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 55;
     {
         PyObject *call_args[] = { tmp_args_element_name_14 };
         tmp_assign_source_102 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_14, call_args );
@@ -4380,7 +4380,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 56;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 56;
     {
         PyObject *call_args[] = { tmp_args_element_name_15 };
         tmp_assign_source_103 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_15, call_args );
@@ -4442,7 +4442,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 57;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 57;
     {
         PyObject *call_args[] = { tmp_args_element_name_16 };
         tmp_assign_source_104 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_16, call_args );
@@ -4504,7 +4504,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 58;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 58;
     {
         PyObject *call_args[] = { tmp_args_element_name_17 };
         tmp_assign_source_105 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_17, call_args );
@@ -4566,7 +4566,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 60;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 60;
     {
         PyObject *call_args[] = { tmp_args_element_name_18 };
         tmp_assign_source_106 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_18, call_args );
@@ -4628,7 +4628,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 61;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 61;
     {
         PyObject *call_args[] = { tmp_args_element_name_19 };
         tmp_assign_source_107 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_19, call_args );
@@ -4690,7 +4690,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 62;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 62;
     {
         PyObject *call_args[] = { tmp_args_element_name_20 };
         tmp_assign_source_108 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_20, call_args );
@@ -4752,7 +4752,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 63;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 63;
     {
         PyObject *call_args[] = { tmp_args_element_name_21 };
         tmp_assign_source_109 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_21, call_args );
@@ -4814,7 +4814,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 64;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 64;
     {
         PyObject *call_args[] = { tmp_args_element_name_22 };
         tmp_assign_source_110 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_22, call_args );
@@ -4876,7 +4876,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 65;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 65;
     {
         PyObject *call_args[] = { tmp_args_element_name_23 };
         tmp_assign_source_111 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_23, call_args );
@@ -4938,7 +4938,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 66;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 66;
     {
         PyObject *call_args[] = { tmp_args_element_name_24 };
         tmp_assign_source_112 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_24, call_args );
@@ -5000,7 +5000,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 67;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 67;
     {
         PyObject *call_args[] = { tmp_args_element_name_25 };
         tmp_assign_source_113 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_25, call_args );
@@ -5062,7 +5062,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 68;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 68;
     {
         PyObject *call_args[] = { tmp_args_element_name_26 };
         tmp_assign_source_114 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_26, call_args );
@@ -5124,7 +5124,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 69;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 69;
     {
         PyObject *call_args[] = { tmp_args_element_name_27 };
         tmp_assign_source_115 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_27, call_args );
@@ -5186,7 +5186,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 70;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 70;
     {
         PyObject *call_args[] = { tmp_args_element_name_28 };
         tmp_assign_source_116 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_28, call_args );
@@ -5248,7 +5248,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 71;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 71;
     {
         PyObject *call_args[] = { tmp_args_element_name_29 };
         tmp_assign_source_117 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_29, call_args );
@@ -5310,7 +5310,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 72;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 72;
     {
         PyObject *call_args[] = { tmp_args_element_name_30 };
         tmp_assign_source_118 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_30, call_args );
@@ -5372,7 +5372,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 73;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 73;
     {
         PyObject *call_args[] = { tmp_args_element_name_31 };
         tmp_assign_source_119 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_31, call_args );
@@ -5434,7 +5434,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 74;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 74;
     {
         PyObject *call_args[] = { tmp_args_element_name_32 };
         tmp_assign_source_120 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_32, call_args );
@@ -5496,7 +5496,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 75;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 75;
     {
         PyObject *call_args[] = { tmp_args_element_name_33 };
         tmp_assign_source_121 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_33, call_args );
@@ -5558,7 +5558,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 76;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 76;
     {
         PyObject *call_args[] = { tmp_args_element_name_34 };
         tmp_assign_source_122 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_34, call_args );
@@ -5620,7 +5620,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 77;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 77;
     {
         PyObject *call_args[] = { tmp_args_element_name_35 };
         tmp_assign_source_123 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_35, call_args );
@@ -7443,7 +7443,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 148;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 148;
     tmp_assign_source_151 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_36, &PyTuple_GET_ITEM( const_tuple_int_0_tuple, 0 ) );
 
     if ( tmp_assign_source_151 == NULL )
@@ -7480,7 +7480,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 149;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 149;
     tmp_assign_source_152 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_37, &PyTuple_GET_ITEM( const_tuple_int_pos_1_tuple, 0 ) );
 
     if ( tmp_assign_source_152 == NULL )
@@ -7517,7 +7517,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 150;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 150;
     tmp_assign_source_153 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_38, &PyTuple_GET_ITEM( const_tuple_int_pos_4_tuple, 0 ) );
 
     if ( tmp_assign_source_153 == NULL )
@@ -7554,7 +7554,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 151;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 151;
     tmp_assign_source_154 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_39, &PyTuple_GET_ITEM( const_tuple_int_pos_255_tuple, 0 ) );
 
     if ( tmp_assign_source_154 == NULL )
@@ -7591,7 +7591,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 152;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 152;
     tmp_assign_source_155 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_40, &PyTuple_GET_ITEM( const_tuple_int_pos_13_tuple, 0 ) );
 
     if ( tmp_assign_source_155 == NULL )
@@ -7628,7 +7628,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 153;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 153;
     tmp_assign_source_156 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_41, &PyTuple_GET_ITEM( const_tuple_int_pos_10_tuple, 0 ) );
 
     if ( tmp_assign_source_156 == NULL )
@@ -7806,7 +7806,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 178;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 178;
     tmp_assign_source_163 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_42, &PyTuple_GET_ITEM( const_tuple_int_pos_4294967295_tuple, 0 ) );
 
     if ( tmp_assign_source_163 == NULL )
@@ -7843,7 +7843,7 @@ MOD_INIT_DECL( paramiko$common )
         goto frame_exception_exit_1;
     }
 
-    frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame.f_lineno = 179;
+    frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame.f_lineno = 179;
     tmp_assign_source_164 = CALL_FUNCTION_WITH_ARGS1( tmp_called_name_43, &PyTuple_GET_ITEM( const_tuple_int_pos_2147483648_tuple, 0 ) );
 
     if ( tmp_assign_source_164 == NULL )
@@ -8050,25 +8050,25 @@ MOD_INIT_DECL( paramiko$common )
 
     // Restore frame exception if necessary.
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_1d0405c9630c12d7a5b523a210eb1f46 );
+    RESTORE_FRAME_EXCEPTION( frame_d4c98d164cdf3f2c7b5b0ee49938bf66 );
 #endif
     popFrameStack();
 
-    assertFrameObject( frame_1d0405c9630c12d7a5b523a210eb1f46 );
+    assertFrameObject( frame_d4c98d164cdf3f2c7b5b0ee49938bf66 );
 
     goto frame_no_exception_1;
     frame_exception_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_1d0405c9630c12d7a5b523a210eb1f46 );
+    RESTORE_FRAME_EXCEPTION( frame_d4c98d164cdf3f2c7b5b0ee49938bf66 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_1d0405c9630c12d7a5b523a210eb1f46, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_d4c98d164cdf3f2c7b5b0ee49938bf66, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_1d0405c9630c12d7a5b523a210eb1f46->m_frame )
+    else if ( exception_tb->tb_frame != &frame_d4c98d164cdf3f2c7b5b0ee49938bf66->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_1d0405c9630c12d7a5b523a210eb1f46, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_d4c98d164cdf3f2c7b5b0ee49938bf66, exception_lineno );
     }
 
     // Put the previous frame back on top.

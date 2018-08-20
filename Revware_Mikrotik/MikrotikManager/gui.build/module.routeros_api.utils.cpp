@@ -31,7 +31,6 @@ PyObject *module_routeros_api$utils;
 PyDictObject *moduledict_routeros_api$utils;
 
 /* The module constants used, if any. */
-static PyObject *const_str_digest_d5c5fad4bf4d265e8612e9bce27da235;
 extern PyObject *const_str_plain___file__;
 static PyObject *const_str_digest_4a27b037aca75a6ea0083f19d8d13713;
 extern PyObject *const_str_plain_encode;
@@ -40,14 +39,15 @@ extern PyObject *const_str_plain___doc__;
 extern PyObject *const_str_plain___cached__;
 extern PyObject *const_str_plain_get_bytes;
 extern PyObject *const_str_plain_string;
+static PyObject *const_str_digest_ca7f493a8132f8636ac1023f2086bbb8;
 static PyObject *module_filename_obj;
 
 static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_d5c5fad4bf4d265e8612e9bce27da235 = UNSTREAM_STRING( &constant_bin[ 715931 ], 93, 0 );
-    const_str_digest_4a27b037aca75a6ea0083f19d8d13713 = UNSTREAM_STRING( &constant_bin[ 716024 ], 18, 0 );
+    const_str_digest_4a27b037aca75a6ea0083f19d8d13713 = UNSTREAM_STRING( &constant_bin[ 701230 ], 18, 0 );
+    const_str_digest_ca7f493a8132f8636ac1023f2086bbb8 = UNSTREAM_STRING( &constant_bin[ 701248 ], 21, 0 );
 
     constants_created = true;
 }
@@ -63,12 +63,12 @@ void checkModuleConstants_routeros_api$utils( void )
 #endif
 
 // The module code objects.
-static PyCodeObject *codeobj_c9848b1afd59dd94bac804c67d1ebfd3;
+static PyCodeObject *codeobj_5cb0ac37cee8ba5e1d02a82051c58028;
 
 static void createModuleCodeObjects(void)
 {
-    module_filename_obj = const_str_digest_d5c5fad4bf4d265e8612e9bce27da235;
-    codeobj_c9848b1afd59dd94bac804c67d1ebfd3 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_get_bytes, 1, const_tuple_str_plain_string_tuple, 1, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    module_filename_obj = MAKE_RELATIVE_PATH( const_str_digest_ca7f493a8132f8636ac1023f2086bbb8 );
+    codeobj_5cb0ac37cee8ba5e1d02a82051c58028 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_get_bytes, 1, const_tuple_str_plain_string_tuple, 1, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
 }
 
 // The module function declarations.
@@ -98,23 +98,23 @@ static PyObject *impl_routeros_api$utils$$$function_1_get_bytes( struct Nuitka_F
     PyObject *tmp_hasattr_source_1;
     int tmp_res;
     PyObject *tmp_return_value;
-    static struct Nuitka_FrameObject *cache_frame_c9848b1afd59dd94bac804c67d1ebfd3 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_5cb0ac37cee8ba5e1d02a82051c58028 = NULL;
 
-    struct Nuitka_FrameObject *frame_c9848b1afd59dd94bac804c67d1ebfd3;
+    struct Nuitka_FrameObject *frame_5cb0ac37cee8ba5e1d02a82051c58028;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     tmp_return_value = NULL;
 
     // Actual function code.
     // Tried code:
-    MAKE_OR_REUSE_FRAME( cache_frame_c9848b1afd59dd94bac804c67d1ebfd3, codeobj_c9848b1afd59dd94bac804c67d1ebfd3, module_routeros_api$utils, sizeof(void *) );
-    frame_c9848b1afd59dd94bac804c67d1ebfd3 = cache_frame_c9848b1afd59dd94bac804c67d1ebfd3;
+    MAKE_OR_REUSE_FRAME( cache_frame_5cb0ac37cee8ba5e1d02a82051c58028, codeobj_5cb0ac37cee8ba5e1d02a82051c58028, module_routeros_api$utils, sizeof(void *) );
+    frame_5cb0ac37cee8ba5e1d02a82051c58028 = cache_frame_5cb0ac37cee8ba5e1d02a82051c58028;
 
     // Push the new frame as the currently active one.
-    pushFrameStack( frame_c9848b1afd59dd94bac804c67d1ebfd3 );
+    pushFrameStack( frame_5cb0ac37cee8ba5e1d02a82051c58028 );
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert( Py_REFCNT( frame_c9848b1afd59dd94bac804c67d1ebfd3 ) == 2 ); // Frame stack
+    assert( Py_REFCNT( frame_5cb0ac37cee8ba5e1d02a82051c58028 ) == 2 ); // Frame stack
 
     // Framed code:
     tmp_hasattr_source_1 = par_string;
@@ -145,7 +145,7 @@ static PyObject *impl_routeros_api$utils$$$function_1_get_bytes( struct Nuitka_F
     tmp_called_instance_1 = par_string;
 
     CHECK_OBJECT( tmp_called_instance_1 );
-    frame_c9848b1afd59dd94bac804c67d1ebfd3->m_frame.f_lineno = 3;
+    frame_5cb0ac37cee8ba5e1d02a82051c58028->m_frame.f_lineno = 3;
     tmp_return_value = CALL_METHOD_NO_ARGS( tmp_called_instance_1, const_str_plain_encode );
     if ( tmp_return_value == NULL )
     {
@@ -169,7 +169,7 @@ static PyObject *impl_routeros_api$utils$$$function_1_get_bytes( struct Nuitka_F
     branch_end_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_c9848b1afd59dd94bac804c67d1ebfd3 );
+    RESTORE_FRAME_EXCEPTION( frame_5cb0ac37cee8ba5e1d02a82051c58028 );
 #endif
 
     // Put the previous frame back on top.
@@ -179,7 +179,7 @@ static PyObject *impl_routeros_api$utils$$$function_1_get_bytes( struct Nuitka_F
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_c9848b1afd59dd94bac804c67d1ebfd3 );
+    RESTORE_FRAME_EXCEPTION( frame_5cb0ac37cee8ba5e1d02a82051c58028 );
 #endif
 
     // Put the previous frame back on top.
@@ -190,34 +190,34 @@ static PyObject *impl_routeros_api$utils$$$function_1_get_bytes( struct Nuitka_F
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_c9848b1afd59dd94bac804c67d1ebfd3 );
+    RESTORE_FRAME_EXCEPTION( frame_5cb0ac37cee8ba5e1d02a82051c58028 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_c9848b1afd59dd94bac804c67d1ebfd3, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_5cb0ac37cee8ba5e1d02a82051c58028, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_c9848b1afd59dd94bac804c67d1ebfd3->m_frame )
+    else if ( exception_tb->tb_frame != &frame_5cb0ac37cee8ba5e1d02a82051c58028->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_c9848b1afd59dd94bac804c67d1ebfd3, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_5cb0ac37cee8ba5e1d02a82051c58028, exception_lineno );
     }
 
     // Attachs locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        (struct Nuitka_FrameObject *)frame_c9848b1afd59dd94bac804c67d1ebfd3,
+        (struct Nuitka_FrameObject *)frame_5cb0ac37cee8ba5e1d02a82051c58028,
         type_description_1,
         par_string
     );
 
 
     // Release cached frame.
-    if ( frame_c9848b1afd59dd94bac804c67d1ebfd3 == cache_frame_c9848b1afd59dd94bac804c67d1ebfd3 )
+    if ( frame_5cb0ac37cee8ba5e1d02a82051c58028 == cache_frame_5cb0ac37cee8ba5e1d02a82051c58028 )
     {
-        Py_DECREF( frame_c9848b1afd59dd94bac804c67d1ebfd3 );
+        Py_DECREF( frame_5cb0ac37cee8ba5e1d02a82051c58028 );
     }
-    cache_frame_c9848b1afd59dd94bac804c67d1ebfd3 = NULL;
+    cache_frame_5cb0ac37cee8ba5e1d02a82051c58028 = NULL;
 
-    assertFrameObject( frame_c9848b1afd59dd94bac804c67d1ebfd3 );
+    assertFrameObject( frame_5cb0ac37cee8ba5e1d02a82051c58028 );
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -286,7 +286,7 @@ static PyObject *MAKE_FUNCTION_routeros_api$utils$$$function_1_get_bytes(  )
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_c9848b1afd59dd94bac804c67d1ebfd3,
+        codeobj_5cb0ac37cee8ba5e1d02a82051c58028,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -556,7 +556,7 @@ MOD_INIT_DECL( routeros_api$utils )
     // Module code.
     tmp_assign_source_1 = Py_None;
     UPDATE_STRING_DICT0( moduledict_routeros_api$utils, (Nuitka_StringObject *)const_str_plain___doc__, tmp_assign_source_1 );
-    tmp_assign_source_2 = const_str_digest_d5c5fad4bf4d265e8612e9bce27da235;
+    tmp_assign_source_2 = module_filename_obj;
     UPDATE_STRING_DICT0( moduledict_routeros_api$utils, (Nuitka_StringObject *)const_str_plain___file__, tmp_assign_source_2 );
     tmp_assign_source_3 = Py_None;
     UPDATE_STRING_DICT0( moduledict_routeros_api$utils, (Nuitka_StringObject *)const_str_plain___cached__, tmp_assign_source_3 );

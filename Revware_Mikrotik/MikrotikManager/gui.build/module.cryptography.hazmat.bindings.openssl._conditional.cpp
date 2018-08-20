@@ -71,6 +71,7 @@ static PyObject *const_str_plain_cryptography_has_x25519;
 static PyObject *const_list_str_plain_X509_V_FLAG_TRUSTED_FIRST_list;
 static PyObject *const_str_plain_SSL_set_cert_cb;
 extern PyObject *const_str_plain_sk_SCT_value;
+static PyObject *const_str_digest_47ba21151d4195fb9de5595022be41e7;
 static PyObject *const_str_plain_SCT_set_source;
 static PyObject *const_str_plain_X509_V_ERR_SUITE_B_INVALID_CURVE;
 extern PyObject *const_str_plain___doc__;
@@ -99,8 +100,8 @@ static PyObject *const_str_plain_DTLS_server_method;
 static PyObject *const_str_digest_4492d7ee374a0b9e687cf99e3c6facc1;
 static PyObject *const_str_plain_TLS_ST_BEFORE;
 static PyObject *const_str_plain_SSL_OP_NO_DTLSv1_2;
-static PyObject *const_list_8cf6be4317fa4d6df8e3c06784c94792_list;
 static PyObject *const_list_29407ac2cfa5bacd5103ba17ced806aa_list;
+static PyObject *const_list_8cf6be4317fa4d6df8e3c06784c94792_list;
 extern PyObject *const_str_plain_Cryptography_HAS_RSA_OAEP_MD;
 static PyObject *const_list_e42cf9fb2f8a01e0e48c289d44276588_list;
 extern PyObject *const_str_plain_EVP_PKEY_set1_tls_encodedpoint;
@@ -122,7 +123,6 @@ static PyObject *const_str_plain_SSL_CTX_set_alpn_select_cb;
 extern PyObject *const_str_plain_SCT_LIST_free;
 static PyObject *const_str_digest_05e8c3e45ca4a8d1991048b3b057a830;
 static PyObject *const_str_plain_X509_V_ERR_SUITE_B_INVALID_VERSION;
-static PyObject *const_str_digest_5ea884bc1c06e18ba071e8abb6f629d4;
 static PyObject *const_str_plain_Cryptography_HAS_COMPRESSION;
 static PyObject *const_str_plain_cryptography_has_openssl_cleanup;
 static PyObject *const_str_plain_cryptography_has_ssl_st;
@@ -227,113 +227,114 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_plain_SSL_OP_NO_DTLSv1 = UNSTREAM_STRING( &constant_bin[ 137089 ], 16, 1 );
-    const_str_plain_DTLS_client_method = UNSTREAM_STRING( &constant_bin[ 137105 ], 18, 1 );
-    const_str_plain_cryptography_has_compression = UNSTREAM_STRING( &constant_bin[ 137123 ], 28, 1 );
-    const_str_plain_Cryptography_CRYPTO_set_mem_functions = UNSTREAM_STRING( &constant_bin[ 137151 ], 37, 1 );
-    const_str_plain_SSL_CTX_use_psk_identity_hint = UNSTREAM_STRING( &constant_bin[ 137188 ], 29, 1 );
-    const_str_plain_Cryptography_HAS_SIGALGS = UNSTREAM_STRING( &constant_bin[ 137217 ], 24, 1 );
-    const_str_plain_SSLv3_client_method = UNSTREAM_STRING( &constant_bin[ 137241 ], 19, 1 );
-    const_str_plain_SSL_CTX_add_server_custom_ext = UNSTREAM_STRING( &constant_bin[ 137260 ], 29, 1 );
-    const_str_digest_fafbfe30544ba42854ed0b86baac5f84 = UNSTREAM_STRING( &constant_bin[ 137289 ], 58, 0 );
-    const_str_plain_SSL_ST_RENEGOTIATE = UNSTREAM_STRING( &constant_bin[ 137347 ], 18, 1 );
+    const_str_plain_SSL_OP_NO_DTLSv1 = UNSTREAM_STRING( &constant_bin[ 133558 ], 16, 1 );
+    const_str_plain_DTLS_client_method = UNSTREAM_STRING( &constant_bin[ 133574 ], 18, 1 );
+    const_str_plain_cryptography_has_compression = UNSTREAM_STRING( &constant_bin[ 133592 ], 28, 1 );
+    const_str_plain_Cryptography_CRYPTO_set_mem_functions = UNSTREAM_STRING( &constant_bin[ 133620 ], 37, 1 );
+    const_str_plain_SSL_CTX_use_psk_identity_hint = UNSTREAM_STRING( &constant_bin[ 133657 ], 29, 1 );
+    const_str_plain_Cryptography_HAS_SIGALGS = UNSTREAM_STRING( &constant_bin[ 133686 ], 24, 1 );
+    const_str_plain_SSLv3_client_method = UNSTREAM_STRING( &constant_bin[ 133710 ], 19, 1 );
+    const_str_plain_SSL_CTX_add_server_custom_ext = UNSTREAM_STRING( &constant_bin[ 133729 ], 29, 1 );
+    const_str_digest_fafbfe30544ba42854ed0b86baac5f84 = UNSTREAM_STRING( &constant_bin[ 133758 ], 58, 0 );
+    const_str_plain_SSL_ST_RENEGOTIATE = UNSTREAM_STRING( &constant_bin[ 133816 ], 18, 1 );
     const_list_2b0156be132bced5637961a9aa48cb51_list = PyList_New( 2 );
-    const_str_plain_X509_STORE_get_get_issuer = UNSTREAM_STRING( &constant_bin[ 137365 ], 25, 1 );
+    const_str_plain_X509_STORE_get_get_issuer = UNSTREAM_STRING( &constant_bin[ 133834 ], 25, 1 );
     PyList_SET_ITEM( const_list_2b0156be132bced5637961a9aa48cb51_list, 0, const_str_plain_X509_STORE_get_get_issuer ); Py_INCREF( const_str_plain_X509_STORE_get_get_issuer );
-    const_str_plain_X509_STORE_set_get_issuer = UNSTREAM_STRING( &constant_bin[ 137390 ], 25, 1 );
+    const_str_plain_X509_STORE_set_get_issuer = UNSTREAM_STRING( &constant_bin[ 133859 ], 25, 1 );
     PyList_SET_ITEM( const_list_2b0156be132bced5637961a9aa48cb51_list, 1, const_str_plain_X509_STORE_set_get_issuer ); Py_INCREF( const_str_plain_X509_STORE_set_get_issuer );
-    const_str_plain_SSL_CTX_set_alpn_protos = UNSTREAM_STRING( &constant_bin[ 137415 ], 23, 1 );
-    const_str_plain_SSL_get_current_compression = UNSTREAM_STRING( &constant_bin[ 137438 ], 27, 1 );
-    const_str_plain_SSL_CTX_set_ecdh_auto = UNSTREAM_STRING( &constant_bin[ 137465 ], 21, 1 );
-    const_str_plain_Cryptography_HAS_PSK = UNSTREAM_STRING( &constant_bin[ 137486 ], 20, 1 );
-    const_str_plain_SSL_set_alpn_protos = UNSTREAM_STRING( &constant_bin[ 137506 ], 19, 1 );
-    const_str_plain_SSLv3_method = UNSTREAM_STRING( &constant_bin[ 137525 ], 12, 1 );
-    const_str_digest_c8d4ed7f56a6990e5028c35f4876f90c = UNSTREAM_STRING( &constant_bin[ 137537 ], 50, 1 );
-    const_str_plain_SSL_ST_OK = UNSTREAM_STRING( &constant_bin[ 137587 ], 9, 1 );
-    const_str_plain_SSL_CTX_set_psk_client_callback = UNSTREAM_STRING( &constant_bin[ 137596 ], 31, 1 );
-    const_str_digest_d2c4bd506cf66a4d1c7adfe4f312872c = UNSTREAM_STRING( &constant_bin[ 137627 ], 42, 1 );
-    const_str_plain_Cryptography_HAS_102_VERIFICATION_PARAMS = UNSTREAM_STRING( &constant_bin[ 137669 ], 40, 1 );
-    const_str_digest_0a25da58d8b65f965de99956a1b5aad7 = UNSTREAM_STRING( &constant_bin[ 137709 ], 42, 1 );
+    const_str_plain_SSL_CTX_set_alpn_protos = UNSTREAM_STRING( &constant_bin[ 133884 ], 23, 1 );
+    const_str_plain_SSL_get_current_compression = UNSTREAM_STRING( &constant_bin[ 133907 ], 27, 1 );
+    const_str_plain_SSL_CTX_set_ecdh_auto = UNSTREAM_STRING( &constant_bin[ 133934 ], 21, 1 );
+    const_str_plain_Cryptography_HAS_PSK = UNSTREAM_STRING( &constant_bin[ 133955 ], 20, 1 );
+    const_str_plain_SSL_set_alpn_protos = UNSTREAM_STRING( &constant_bin[ 133975 ], 19, 1 );
+    const_str_plain_SSLv3_method = UNSTREAM_STRING( &constant_bin[ 133994 ], 12, 1 );
+    const_str_digest_c8d4ed7f56a6990e5028c35f4876f90c = UNSTREAM_STRING( &constant_bin[ 134006 ], 50, 1 );
+    const_str_plain_SSL_ST_OK = UNSTREAM_STRING( &constant_bin[ 134056 ], 9, 1 );
+    const_str_plain_SSL_CTX_set_psk_client_callback = UNSTREAM_STRING( &constant_bin[ 134065 ], 31, 1 );
+    const_str_digest_d2c4bd506cf66a4d1c7adfe4f312872c = UNSTREAM_STRING( &constant_bin[ 134096 ], 42, 1 );
+    const_str_plain_Cryptography_HAS_102_VERIFICATION_PARAMS = UNSTREAM_STRING( &constant_bin[ 134138 ], 40, 1 );
+    const_str_digest_0a25da58d8b65f965de99956a1b5aad7 = UNSTREAM_STRING( &constant_bin[ 134178 ], 42, 1 );
     const_list_str_plain_SSL_get_server_tmp_key_list = PyList_New( 1 );
-    const_str_plain_SSL_get_server_tmp_key = UNSTREAM_STRING( &constant_bin[ 137751 ], 22, 1 );
+    const_str_plain_SSL_get_server_tmp_key = UNSTREAM_STRING( &constant_bin[ 134220 ], 22, 1 );
     PyList_SET_ITEM( const_list_str_plain_SSL_get_server_tmp_key_list, 0, const_str_plain_SSL_get_server_tmp_key ); Py_INCREF( const_str_plain_SSL_get_server_tmp_key );
-    const_str_plain_SSL_get_sigalgs = UNSTREAM_STRING( &constant_bin[ 137773 ], 15, 1 );
-    const_str_digest_0134e31627bb74f9df2edcd82a96ece3 = UNSTREAM_STRING( &constant_bin[ 137788 ], 45, 1 );
-    const_str_plain_cryptography_has_sct = UNSTREAM_STRING( &constant_bin[ 137833 ], 20, 1 );
-    const_str_plain_X509_V_FLAG_TRUSTED_FIRST = UNSTREAM_STRING( &constant_bin[ 137726 ], 25, 1 );
-    const_str_plain_Cryptography_HAS_CUSTOM_EXT = UNSTREAM_STRING( &constant_bin[ 137853 ], 27, 1 );
+    const_str_plain_SSL_get_sigalgs = UNSTREAM_STRING( &constant_bin[ 134242 ], 15, 1 );
+    const_str_digest_0134e31627bb74f9df2edcd82a96ece3 = UNSTREAM_STRING( &constant_bin[ 134257 ], 45, 1 );
+    const_str_plain_cryptography_has_sct = UNSTREAM_STRING( &constant_bin[ 134302 ], 20, 1 );
+    const_str_plain_X509_V_FLAG_TRUSTED_FIRST = UNSTREAM_STRING( &constant_bin[ 134195 ], 25, 1 );
+    const_str_plain_Cryptography_HAS_CUSTOM_EXT = UNSTREAM_STRING( &constant_bin[ 134322 ], 27, 1 );
     const_list_str_plain_EVP_PKEY_DHX_list = PyList_New( 1 );
     PyList_SET_ITEM( const_list_str_plain_EVP_PKEY_DHX_list, 0, const_str_plain_EVP_PKEY_DHX ); Py_INCREF( const_str_plain_EVP_PKEY_DHX );
-    const_str_plain_cryptography_has_x25519 = UNSTREAM_STRING( &constant_bin[ 137880 ], 23, 1 );
+    const_str_plain_cryptography_has_x25519 = UNSTREAM_STRING( &constant_bin[ 134349 ], 23, 1 );
     const_list_str_plain_X509_V_FLAG_TRUSTED_FIRST_list = PyList_New( 1 );
     PyList_SET_ITEM( const_list_str_plain_X509_V_FLAG_TRUSTED_FIRST_list, 0, const_str_plain_X509_V_FLAG_TRUSTED_FIRST ); Py_INCREF( const_str_plain_X509_V_FLAG_TRUSTED_FIRST );
-    const_str_plain_SSL_set_cert_cb = UNSTREAM_STRING( &constant_bin[ 137903 ], 15, 1 );
-    const_str_plain_SCT_set_source = UNSTREAM_STRING( &constant_bin[ 137918 ], 14, 1 );
-    const_str_plain_X509_V_ERR_SUITE_B_INVALID_CURVE = UNSTREAM_STRING( &constant_bin[ 137932 ], 32, 1 );
-    const_str_plain_cryptography_has_scrypt = UNSTREAM_STRING( &constant_bin[ 137964 ], 23, 1 );
-    const_str_plain_Cryptography_HAS_GET_SERVER_TMP_KEY = UNSTREAM_STRING( &constant_bin[ 137987 ], 35, 1 );
-    const_str_plain_X509_V_ERR_EMAIL_MISMATCH = UNSTREAM_STRING( &constant_bin[ 138022 ], 25, 1 );
-    const_str_plain_cryptography_has_set_ecdh_auto = UNSTREAM_STRING( &constant_bin[ 138047 ], 30, 1 );
-    const_str_plain_Cryptography_HAS_EC_1_0_2 = UNSTREAM_STRING( &constant_bin[ 138077 ], 25, 1 );
+    const_str_plain_SSL_set_cert_cb = UNSTREAM_STRING( &constant_bin[ 134372 ], 15, 1 );
+    const_str_digest_47ba21151d4195fb9de5595022be41e7 = UNSTREAM_STRING( &constant_bin[ 134387 ], 52, 0 );
+    const_str_plain_SCT_set_source = UNSTREAM_STRING( &constant_bin[ 134439 ], 14, 1 );
+    const_str_plain_X509_V_ERR_SUITE_B_INVALID_CURVE = UNSTREAM_STRING( &constant_bin[ 134453 ], 32, 1 );
+    const_str_plain_cryptography_has_scrypt = UNSTREAM_STRING( &constant_bin[ 134485 ], 23, 1 );
+    const_str_plain_Cryptography_HAS_GET_SERVER_TMP_KEY = UNSTREAM_STRING( &constant_bin[ 134508 ], 35, 1 );
+    const_str_plain_X509_V_ERR_EMAIL_MISMATCH = UNSTREAM_STRING( &constant_bin[ 134543 ], 25, 1 );
+    const_str_plain_cryptography_has_set_ecdh_auto = UNSTREAM_STRING( &constant_bin[ 134568 ], 30, 1 );
+    const_str_plain_Cryptography_HAS_EC_1_0_2 = UNSTREAM_STRING( &constant_bin[ 134598 ], 25, 1 );
     const_list_str_plain_OPENSSL_cleanup_list = PyList_New( 1 );
-    const_str_plain_OPENSSL_cleanup = UNSTREAM_STRING( &constant_bin[ 138102 ], 15, 1 );
+    const_str_plain_OPENSSL_cleanup = UNSTREAM_STRING( &constant_bin[ 134623 ], 15, 1 );
     PyList_SET_ITEM( const_list_str_plain_OPENSSL_cleanup_list, 0, const_str_plain_OPENSSL_cleanup ); Py_INCREF( const_str_plain_OPENSSL_cleanup );
     const_list_45c2aad31922174b9e85f35567f07cbb_list = PyList_New( 8 );
-    const_str_plain_X509_V_FLAG_SUITEB_128_LOS_ONLY = UNSTREAM_STRING( &constant_bin[ 138117 ], 31, 1 );
+    const_str_plain_X509_V_FLAG_SUITEB_128_LOS_ONLY = UNSTREAM_STRING( &constant_bin[ 134638 ], 31, 1 );
     PyList_SET_ITEM( const_list_45c2aad31922174b9e85f35567f07cbb_list, 0, const_str_plain_X509_V_FLAG_SUITEB_128_LOS_ONLY ); Py_INCREF( const_str_plain_X509_V_FLAG_SUITEB_128_LOS_ONLY );
-    const_str_plain_X509_V_FLAG_SUITEB_192_LOS = UNSTREAM_STRING( &constant_bin[ 138148 ], 26, 1 );
+    const_str_plain_X509_V_FLAG_SUITEB_192_LOS = UNSTREAM_STRING( &constant_bin[ 134669 ], 26, 1 );
     PyList_SET_ITEM( const_list_45c2aad31922174b9e85f35567f07cbb_list, 1, const_str_plain_X509_V_FLAG_SUITEB_192_LOS ); Py_INCREF( const_str_plain_X509_V_FLAG_SUITEB_192_LOS );
-    const_str_plain_X509_V_FLAG_SUITEB_128_LOS = UNSTREAM_STRING( &constant_bin[ 138117 ], 26, 1 );
+    const_str_plain_X509_V_FLAG_SUITEB_128_LOS = UNSTREAM_STRING( &constant_bin[ 134638 ], 26, 1 );
     PyList_SET_ITEM( const_list_45c2aad31922174b9e85f35567f07cbb_list, 2, const_str_plain_X509_V_FLAG_SUITEB_128_LOS ); Py_INCREF( const_str_plain_X509_V_FLAG_SUITEB_128_LOS );
-    const_str_plain_X509_VERIFY_PARAM_set1_host = UNSTREAM_STRING( &constant_bin[ 138174 ], 27, 1 );
+    const_str_plain_X509_VERIFY_PARAM_set1_host = UNSTREAM_STRING( &constant_bin[ 134695 ], 27, 1 );
     PyList_SET_ITEM( const_list_45c2aad31922174b9e85f35567f07cbb_list, 3, const_str_plain_X509_VERIFY_PARAM_set1_host ); Py_INCREF( const_str_plain_X509_VERIFY_PARAM_set1_host );
-    const_str_plain_X509_VERIFY_PARAM_set1_email = UNSTREAM_STRING( &constant_bin[ 138201 ], 28, 1 );
+    const_str_plain_X509_VERIFY_PARAM_set1_email = UNSTREAM_STRING( &constant_bin[ 134722 ], 28, 1 );
     PyList_SET_ITEM( const_list_45c2aad31922174b9e85f35567f07cbb_list, 4, const_str_plain_X509_VERIFY_PARAM_set1_email ); Py_INCREF( const_str_plain_X509_VERIFY_PARAM_set1_email );
-    const_str_plain_X509_VERIFY_PARAM_set1_ip = UNSTREAM_STRING( &constant_bin[ 138229 ], 25, 1 );
+    const_str_plain_X509_VERIFY_PARAM_set1_ip = UNSTREAM_STRING( &constant_bin[ 134750 ], 25, 1 );
     PyList_SET_ITEM( const_list_45c2aad31922174b9e85f35567f07cbb_list, 5, const_str_plain_X509_VERIFY_PARAM_set1_ip ); Py_INCREF( const_str_plain_X509_VERIFY_PARAM_set1_ip );
-    const_str_plain_X509_VERIFY_PARAM_set1_ip_asc = UNSTREAM_STRING( &constant_bin[ 138254 ], 29, 1 );
+    const_str_plain_X509_VERIFY_PARAM_set1_ip_asc = UNSTREAM_STRING( &constant_bin[ 134775 ], 29, 1 );
     PyList_SET_ITEM( const_list_45c2aad31922174b9e85f35567f07cbb_list, 6, const_str_plain_X509_VERIFY_PARAM_set1_ip_asc ); Py_INCREF( const_str_plain_X509_VERIFY_PARAM_set1_ip_asc );
-    const_str_plain_X509_VERIFY_PARAM_set_hostflags = UNSTREAM_STRING( &constant_bin[ 138283 ], 31, 1 );
+    const_str_plain_X509_VERIFY_PARAM_set_hostflags = UNSTREAM_STRING( &constant_bin[ 134804 ], 31, 1 );
     PyList_SET_ITEM( const_list_45c2aad31922174b9e85f35567f07cbb_list, 7, const_str_plain_X509_VERIFY_PARAM_set_hostflags ); Py_INCREF( const_str_plain_X509_VERIFY_PARAM_set_hostflags );
-    const_str_plain_X509_V_ERR_HOSTNAME_MISMATCH = UNSTREAM_STRING( &constant_bin[ 138314 ], 28, 1 );
-    const_str_plain_Cryptography_HAS_FIPS = UNSTREAM_STRING( &constant_bin[ 138342 ], 21, 1 );
-    const_str_plain_Cryptography_HAS_SSL3_METHOD = UNSTREAM_STRING( &constant_bin[ 138363 ], 28, 1 );
-    const_str_plain_CRYPTO_lock = UNSTREAM_STRING( &constant_bin[ 138391 ], 11, 1 );
-    const_str_plain_DTLS_method = UNSTREAM_STRING( &constant_bin[ 138402 ], 11, 1 );
-    const_str_plain_DTLS_get_link_min_mtu = UNSTREAM_STRING( &constant_bin[ 138413 ], 21, 1 );
+    const_str_plain_X509_V_ERR_HOSTNAME_MISMATCH = UNSTREAM_STRING( &constant_bin[ 134835 ], 28, 1 );
+    const_str_plain_Cryptography_HAS_FIPS = UNSTREAM_STRING( &constant_bin[ 134863 ], 21, 1 );
+    const_str_plain_Cryptography_HAS_SSL3_METHOD = UNSTREAM_STRING( &constant_bin[ 134884 ], 28, 1 );
+    const_str_plain_CRYPTO_lock = UNSTREAM_STRING( &constant_bin[ 134912 ], 11, 1 );
+    const_str_plain_DTLS_method = UNSTREAM_STRING( &constant_bin[ 134923 ], 11, 1 );
+    const_str_plain_DTLS_get_link_min_mtu = UNSTREAM_STRING( &constant_bin[ 134934 ], 21, 1 );
     const_list_86c40a5c21cefd9f6af8769ff1175caf_list = PyList_New( 9 );
-    const_str_plain_X509_V_ERR_SUITE_B_INVALID_VERSION = UNSTREAM_STRING( &constant_bin[ 138434 ], 34, 1 );
+    const_str_plain_X509_V_ERR_SUITE_B_INVALID_VERSION = UNSTREAM_STRING( &constant_bin[ 134955 ], 34, 1 );
     PyList_SET_ITEM( const_list_86c40a5c21cefd9f6af8769ff1175caf_list, 0, const_str_plain_X509_V_ERR_SUITE_B_INVALID_VERSION ); Py_INCREF( const_str_plain_X509_V_ERR_SUITE_B_INVALID_VERSION );
-    const_str_plain_X509_V_ERR_SUITE_B_INVALID_ALGORITHM = UNSTREAM_STRING( &constant_bin[ 138468 ], 36, 1 );
+    const_str_plain_X509_V_ERR_SUITE_B_INVALID_ALGORITHM = UNSTREAM_STRING( &constant_bin[ 134989 ], 36, 1 );
     PyList_SET_ITEM( const_list_86c40a5c21cefd9f6af8769ff1175caf_list, 1, const_str_plain_X509_V_ERR_SUITE_B_INVALID_ALGORITHM ); Py_INCREF( const_str_plain_X509_V_ERR_SUITE_B_INVALID_ALGORITHM );
     PyList_SET_ITEM( const_list_86c40a5c21cefd9f6af8769ff1175caf_list, 2, const_str_plain_X509_V_ERR_SUITE_B_INVALID_CURVE ); Py_INCREF( const_str_plain_X509_V_ERR_SUITE_B_INVALID_CURVE );
-    const_str_digest_4492d7ee374a0b9e687cf99e3c6facc1 = UNSTREAM_STRING( &constant_bin[ 138504 ], 46, 1 );
+    const_str_digest_4492d7ee374a0b9e687cf99e3c6facc1 = UNSTREAM_STRING( &constant_bin[ 135025 ], 46, 1 );
     PyList_SET_ITEM( const_list_86c40a5c21cefd9f6af8769ff1175caf_list, 3, const_str_digest_4492d7ee374a0b9e687cf99e3c6facc1 ); Py_INCREF( const_str_digest_4492d7ee374a0b9e687cf99e3c6facc1 );
-    const_str_plain_X509_V_ERR_SUITE_B_LOS_NOT_ALLOWED = UNSTREAM_STRING( &constant_bin[ 138550 ], 34, 1 );
+    const_str_plain_X509_V_ERR_SUITE_B_LOS_NOT_ALLOWED = UNSTREAM_STRING( &constant_bin[ 135071 ], 34, 1 );
     PyList_SET_ITEM( const_list_86c40a5c21cefd9f6af8769ff1175caf_list, 4, const_str_plain_X509_V_ERR_SUITE_B_LOS_NOT_ALLOWED ); Py_INCREF( const_str_plain_X509_V_ERR_SUITE_B_LOS_NOT_ALLOWED );
-    const_str_digest_05e8c3e45ca4a8d1991048b3b057a830 = UNSTREAM_STRING( &constant_bin[ 138584 ], 47, 1 );
+    const_str_digest_05e8c3e45ca4a8d1991048b3b057a830 = UNSTREAM_STRING( &constant_bin[ 135105 ], 47, 1 );
     PyList_SET_ITEM( const_list_86c40a5c21cefd9f6af8769ff1175caf_list, 5, const_str_digest_05e8c3e45ca4a8d1991048b3b057a830 ); Py_INCREF( const_str_digest_05e8c3e45ca4a8d1991048b3b057a830 );
     PyList_SET_ITEM( const_list_86c40a5c21cefd9f6af8769ff1175caf_list, 6, const_str_plain_X509_V_ERR_HOSTNAME_MISMATCH ); Py_INCREF( const_str_plain_X509_V_ERR_HOSTNAME_MISMATCH );
     PyList_SET_ITEM( const_list_86c40a5c21cefd9f6af8769ff1175caf_list, 7, const_str_plain_X509_V_ERR_EMAIL_MISMATCH ); Py_INCREF( const_str_plain_X509_V_ERR_EMAIL_MISMATCH );
-    const_str_plain_X509_V_ERR_IP_ADDRESS_MISMATCH = UNSTREAM_STRING( &constant_bin[ 138631 ], 30, 1 );
+    const_str_plain_X509_V_ERR_IP_ADDRESS_MISMATCH = UNSTREAM_STRING( &constant_bin[ 135152 ], 30, 1 );
     PyList_SET_ITEM( const_list_86c40a5c21cefd9f6af8769ff1175caf_list, 8, const_str_plain_X509_V_ERR_IP_ADDRESS_MISMATCH ); Py_INCREF( const_str_plain_X509_V_ERR_IP_ADDRESS_MISMATCH );
-    const_str_digest_2fcc949fb99081eda00ddcfc8aa01f9a = UNSTREAM_STRING( &constant_bin[ 138661 ], 45, 1 );
-    const_str_plain_DTLS_server_method = UNSTREAM_STRING( &constant_bin[ 138706 ], 18, 1 );
-    const_str_plain_TLS_ST_BEFORE = UNSTREAM_STRING( &constant_bin[ 138724 ], 13, 1 );
-    const_str_plain_SSL_OP_NO_DTLSv1_2 = UNSTREAM_STRING( &constant_bin[ 138737 ], 18, 1 );
-    const_list_8cf6be4317fa4d6df8e3c06784c94792_list = PyList_New( 3 );
-    const_str_plain_EC_POINT_set_affine_coordinates_GF2m = UNSTREAM_STRING( &constant_bin[ 138755 ], 36, 1 );
-    PyList_SET_ITEM( const_list_8cf6be4317fa4d6df8e3c06784c94792_list, 0, const_str_plain_EC_POINT_set_affine_coordinates_GF2m ); Py_INCREF( const_str_plain_EC_POINT_set_affine_coordinates_GF2m );
-    PyList_SET_ITEM( const_list_8cf6be4317fa4d6df8e3c06784c94792_list, 1, const_str_plain_EC_POINT_get_affine_coordinates_GF2m ); Py_INCREF( const_str_plain_EC_POINT_get_affine_coordinates_GF2m );
-    const_str_plain_EC_POINT_set_compressed_coordinates_GF2m = UNSTREAM_STRING( &constant_bin[ 138791 ], 40, 1 );
-    PyList_SET_ITEM( const_list_8cf6be4317fa4d6df8e3c06784c94792_list, 2, const_str_plain_EC_POINT_set_compressed_coordinates_GF2m ); Py_INCREF( const_str_plain_EC_POINT_set_compressed_coordinates_GF2m );
+    const_str_digest_2fcc949fb99081eda00ddcfc8aa01f9a = UNSTREAM_STRING( &constant_bin[ 135182 ], 45, 1 );
+    const_str_plain_DTLS_server_method = UNSTREAM_STRING( &constant_bin[ 135227 ], 18, 1 );
+    const_str_plain_TLS_ST_BEFORE = UNSTREAM_STRING( &constant_bin[ 135245 ], 13, 1 );
+    const_str_plain_SSL_OP_NO_DTLSv1_2 = UNSTREAM_STRING( &constant_bin[ 135258 ], 18, 1 );
     const_list_29407ac2cfa5bacd5103ba17ced806aa_list = PyList_New( 4 );
-    const_str_plain_SSL_ST_BEFORE = UNSTREAM_STRING( &constant_bin[ 138831 ], 13, 1 );
+    const_str_plain_SSL_ST_BEFORE = UNSTREAM_STRING( &constant_bin[ 135276 ], 13, 1 );
     PyList_SET_ITEM( const_list_29407ac2cfa5bacd5103ba17ced806aa_list, 0, const_str_plain_SSL_ST_BEFORE ); Py_INCREF( const_str_plain_SSL_ST_BEFORE );
     PyList_SET_ITEM( const_list_29407ac2cfa5bacd5103ba17ced806aa_list, 1, const_str_plain_SSL_ST_OK ); Py_INCREF( const_str_plain_SSL_ST_OK );
-    const_str_plain_SSL_ST_INIT = UNSTREAM_STRING( &constant_bin[ 138844 ], 11, 1 );
+    const_str_plain_SSL_ST_INIT = UNSTREAM_STRING( &constant_bin[ 135289 ], 11, 1 );
     PyList_SET_ITEM( const_list_29407ac2cfa5bacd5103ba17ced806aa_list, 2, const_str_plain_SSL_ST_INIT ); Py_INCREF( const_str_plain_SSL_ST_INIT );
     PyList_SET_ITEM( const_list_29407ac2cfa5bacd5103ba17ced806aa_list, 3, const_str_plain_SSL_ST_RENEGOTIATE ); Py_INCREF( const_str_plain_SSL_ST_RENEGOTIATE );
+    const_list_8cf6be4317fa4d6df8e3c06784c94792_list = PyList_New( 3 );
+    const_str_plain_EC_POINT_set_affine_coordinates_GF2m = UNSTREAM_STRING( &constant_bin[ 135300 ], 36, 1 );
+    PyList_SET_ITEM( const_list_8cf6be4317fa4d6df8e3c06784c94792_list, 0, const_str_plain_EC_POINT_set_affine_coordinates_GF2m ); Py_INCREF( const_str_plain_EC_POINT_set_affine_coordinates_GF2m );
+    PyList_SET_ITEM( const_list_8cf6be4317fa4d6df8e3c06784c94792_list, 1, const_str_plain_EC_POINT_get_affine_coordinates_GF2m ); Py_INCREF( const_str_plain_EC_POINT_get_affine_coordinates_GF2m );
+    const_str_plain_EC_POINT_set_compressed_coordinates_GF2m = UNSTREAM_STRING( &constant_bin[ 135336 ], 40, 1 );
+    PyList_SET_ITEM( const_list_8cf6be4317fa4d6df8e3c06784c94792_list, 2, const_str_plain_EC_POINT_set_compressed_coordinates_GF2m ); Py_INCREF( const_str_plain_EC_POINT_set_compressed_coordinates_GF2m );
     const_list_e42cf9fb2f8a01e0e48c289d44276588_list = PyList_New( 8 );
     PyList_SET_ITEM( const_list_e42cf9fb2f8a01e0e48c289d44276588_list, 0, const_str_plain_SCT_get_version ); Py_INCREF( const_str_plain_SCT_get_version );
     PyList_SET_ITEM( const_list_e42cf9fb2f8a01e0e48c289d44276588_list, 1, const_str_plain_SCT_get_log_entry_type ); Py_INCREF( const_str_plain_SCT_get_log_entry_type );
@@ -343,85 +344,84 @@ static void createModuleConstants( void )
     PyList_SET_ITEM( const_list_e42cf9fb2f8a01e0e48c289d44276588_list, 5, const_str_plain_sk_SCT_num ); Py_INCREF( const_str_plain_sk_SCT_num );
     PyList_SET_ITEM( const_list_e42cf9fb2f8a01e0e48c289d44276588_list, 6, const_str_plain_sk_SCT_value ); Py_INCREF( const_str_plain_sk_SCT_value );
     PyList_SET_ITEM( const_list_e42cf9fb2f8a01e0e48c289d44276588_list, 7, const_str_plain_SCT_LIST_free ); Py_INCREF( const_str_plain_SCT_LIST_free );
-    const_str_plain_Cryptography_HAS_SCT = UNSTREAM_STRING( &constant_bin[ 138855 ], 20, 1 );
-    const_str_plain_cryptography_has_evp_pkey_dhx = UNSTREAM_STRING( &constant_bin[ 138875 ], 29, 1 );
-    const_str_plain_CRYPTO_LOCK = UNSTREAM_STRING( &constant_bin[ 138904 ], 11, 1 );
-    const_str_plain_Cryptography_HAS_SET_CERT_CB = UNSTREAM_STRING( &constant_bin[ 138915 ], 28, 1 );
-    const_str_plain_cryptography_has_psk = UNSTREAM_STRING( &constant_bin[ 138943 ], 20, 1 );
-    const_str_plain_SSL_CTX_set1_sigalgs_list = UNSTREAM_STRING( &constant_bin[ 138963 ], 25, 1 );
-    const_str_digest_8f29b4e065ff2a78b40f0f2a8209f3b9 = UNSTREAM_STRING( &constant_bin[ 138988 ], 42, 1 );
-    const_str_plain_Cryptography_HAS_SSL_ST = UNSTREAM_STRING( &constant_bin[ 139030 ], 23, 1 );
-    const_str_digest_89c6e3f07e56ca3212435467944ee8af = UNSTREAM_STRING( &constant_bin[ 139053 ], 42, 1 );
-    const_str_plain_FIPS_mode = UNSTREAM_STRING( &constant_bin[ 139095 ], 9, 1 );
-    const_str_plain_SSL_CTX_set_alpn_select_cb = UNSTREAM_STRING( &constant_bin[ 139104 ], 26, 1 );
-    const_str_digest_5ea884bc1c06e18ba071e8abb6f629d4 = UNSTREAM_STRING( &constant_bin[ 139130 ], 124, 0 );
-    const_str_plain_Cryptography_HAS_COMPRESSION = UNSTREAM_STRING( &constant_bin[ 139254 ], 28, 1 );
-    const_str_plain_cryptography_has_openssl_cleanup = UNSTREAM_STRING( &constant_bin[ 139282 ], 32, 1 );
-    const_str_plain_cryptography_has_ssl_st = UNSTREAM_STRING( &constant_bin[ 139314 ], 23, 1 );
+    const_str_plain_Cryptography_HAS_SCT = UNSTREAM_STRING( &constant_bin[ 135376 ], 20, 1 );
+    const_str_plain_cryptography_has_evp_pkey_dhx = UNSTREAM_STRING( &constant_bin[ 135396 ], 29, 1 );
+    const_str_plain_CRYPTO_LOCK = UNSTREAM_STRING( &constant_bin[ 135425 ], 11, 1 );
+    const_str_plain_Cryptography_HAS_SET_CERT_CB = UNSTREAM_STRING( &constant_bin[ 135436 ], 28, 1 );
+    const_str_plain_cryptography_has_psk = UNSTREAM_STRING( &constant_bin[ 135464 ], 20, 1 );
+    const_str_plain_SSL_CTX_set1_sigalgs_list = UNSTREAM_STRING( &constant_bin[ 135484 ], 25, 1 );
+    const_str_digest_8f29b4e065ff2a78b40f0f2a8209f3b9 = UNSTREAM_STRING( &constant_bin[ 135509 ], 42, 1 );
+    const_str_plain_Cryptography_HAS_SSL_ST = UNSTREAM_STRING( &constant_bin[ 135551 ], 23, 1 );
+    const_str_digest_89c6e3f07e56ca3212435467944ee8af = UNSTREAM_STRING( &constant_bin[ 135574 ], 42, 1 );
+    const_str_plain_FIPS_mode = UNSTREAM_STRING( &constant_bin[ 135616 ], 9, 1 );
+    const_str_plain_SSL_CTX_set_alpn_select_cb = UNSTREAM_STRING( &constant_bin[ 135625 ], 26, 1 );
+    const_str_plain_Cryptography_HAS_COMPRESSION = UNSTREAM_STRING( &constant_bin[ 135651 ], 28, 1 );
+    const_str_plain_cryptography_has_openssl_cleanup = UNSTREAM_STRING( &constant_bin[ 135679 ], 32, 1 );
+    const_str_plain_cryptography_has_ssl_st = UNSTREAM_STRING( &constant_bin[ 135711 ], 23, 1 );
     const_list_69b906847d25decb1cda42670e7e5241_list = PyList_New( 4 );
     PyList_SET_ITEM( const_list_69b906847d25decb1cda42670e7e5241_list, 0, const_str_plain_SSL_CTX_set_alpn_protos ); Py_INCREF( const_str_plain_SSL_CTX_set_alpn_protos );
     PyList_SET_ITEM( const_list_69b906847d25decb1cda42670e7e5241_list, 1, const_str_plain_SSL_set_alpn_protos ); Py_INCREF( const_str_plain_SSL_set_alpn_protos );
     PyList_SET_ITEM( const_list_69b906847d25decb1cda42670e7e5241_list, 2, const_str_plain_SSL_CTX_set_alpn_select_cb ); Py_INCREF( const_str_plain_SSL_CTX_set_alpn_select_cb );
-    const_str_plain_SSL_get0_alpn_selected = UNSTREAM_STRING( &constant_bin[ 139337 ], 22, 1 );
+    const_str_plain_SSL_get0_alpn_selected = UNSTREAM_STRING( &constant_bin[ 135734 ], 22, 1 );
     PyList_SET_ITEM( const_list_69b906847d25decb1cda42670e7e5241_list, 3, const_str_plain_SSL_get0_alpn_selected ); Py_INCREF( const_str_plain_SSL_get0_alpn_selected );
-    const_str_digest_b2405d2434f1275e2b8933b43c529fbe = UNSTREAM_STRING( &constant_bin[ 139359 ], 42, 1 );
-    const_str_plain_cryptography_has_ssl3_method = UNSTREAM_STRING( &constant_bin[ 139401 ], 28, 1 );
-    const_str_plain_SSL_CTX_add_client_custom_ext = UNSTREAM_STRING( &constant_bin[ 139429 ], 29, 1 );
-    const_str_plain_Cryptography_HAS_OPENSSL_CLEANUP = UNSTREAM_STRING( &constant_bin[ 139458 ], 32, 1 );
-    const_str_plain_CRYPTO_UNLOCK = UNSTREAM_STRING( &constant_bin[ 139490 ], 13, 1 );
-    const_str_plain_cryptography_has_rsa_oaep_md = UNSTREAM_STRING( &constant_bin[ 139503 ], 28, 1 );
-    const_str_plain_SSLv3_server_method = UNSTREAM_STRING( &constant_bin[ 139531 ], 19, 1 );
-    const_str_plain_Cryptography_HAS_X25519 = UNSTREAM_STRING( &constant_bin[ 139550 ], 23, 1 );
-    const_str_plain_X509_V_FLAG_PARTIAL_CHAIN = UNSTREAM_STRING( &constant_bin[ 139573 ], 25, 1 );
-    const_str_plain_cryptography_has_tls_st = UNSTREAM_STRING( &constant_bin[ 139598 ], 23, 1 );
-    const_str_plain_EC_curve_nid2nist = UNSTREAM_STRING( &constant_bin[ 139621 ], 17, 1 );
+    const_str_digest_b2405d2434f1275e2b8933b43c529fbe = UNSTREAM_STRING( &constant_bin[ 135756 ], 42, 1 );
+    const_str_plain_cryptography_has_ssl3_method = UNSTREAM_STRING( &constant_bin[ 135798 ], 28, 1 );
+    const_str_plain_SSL_CTX_add_client_custom_ext = UNSTREAM_STRING( &constant_bin[ 135826 ], 29, 1 );
+    const_str_plain_Cryptography_HAS_OPENSSL_CLEANUP = UNSTREAM_STRING( &constant_bin[ 135855 ], 32, 1 );
+    const_str_plain_CRYPTO_UNLOCK = UNSTREAM_STRING( &constant_bin[ 135887 ], 13, 1 );
+    const_str_plain_cryptography_has_rsa_oaep_md = UNSTREAM_STRING( &constant_bin[ 135900 ], 28, 1 );
+    const_str_plain_SSLv3_server_method = UNSTREAM_STRING( &constant_bin[ 135928 ], 19, 1 );
+    const_str_plain_Cryptography_HAS_X25519 = UNSTREAM_STRING( &constant_bin[ 135947 ], 23, 1 );
+    const_str_plain_X509_V_FLAG_PARTIAL_CHAIN = UNSTREAM_STRING( &constant_bin[ 135970 ], 25, 1 );
+    const_str_plain_cryptography_has_tls_st = UNSTREAM_STRING( &constant_bin[ 135995 ], 23, 1 );
+    const_str_plain_EC_curve_nid2nist = UNSTREAM_STRING( &constant_bin[ 136018 ], 17, 1 );
     const_list_70d66b11b8b83912e7ed175ae865dfed_list = PyList_New( 2 );
     PyList_SET_ITEM( const_list_70d66b11b8b83912e7ed175ae865dfed_list, 0, const_str_plain_SSL_CTX_set1_sigalgs_list ); Py_INCREF( const_str_plain_SSL_CTX_set1_sigalgs_list );
     PyList_SET_ITEM( const_list_70d66b11b8b83912e7ed175ae865dfed_list, 1, const_str_plain_SSL_get_sigalgs ); Py_INCREF( const_str_plain_SSL_get_sigalgs );
     const_list_136332fc21a01754e44f9a06545f3713_list = PyList_New( 2 );
     PyList_SET_ITEM( const_list_136332fc21a01754e44f9a06545f3713_list, 0, const_str_plain_EVP_PKEY_get1_tls_encodedpoint ); Py_INCREF( const_str_plain_EVP_PKEY_get1_tls_encodedpoint );
     PyList_SET_ITEM( const_list_136332fc21a01754e44f9a06545f3713_list, 1, const_str_plain_EVP_PKEY_set1_tls_encodedpoint ); Py_INCREF( const_str_plain_EVP_PKEY_set1_tls_encodedpoint );
-    const_str_plain_CRYPTO_LOCK_SSL = UNSTREAM_STRING( &constant_bin[ 139638 ], 15, 1 );
-    const_str_plain_cryptography_has_locking_callbacks = UNSTREAM_STRING( &constant_bin[ 139653 ], 34, 1 );
-    const_str_plain_SSL_get_current_expansion = UNSTREAM_STRING( &constant_bin[ 139687 ], 25, 1 );
-    const_str_plain_SSL_extension_supported = UNSTREAM_STRING( &constant_bin[ 139712 ], 23, 1 );
-    const_str_plain_SSL_CTX_set_psk_server_callback = UNSTREAM_STRING( &constant_bin[ 139735 ], 31, 1 );
+    const_str_plain_CRYPTO_LOCK_SSL = UNSTREAM_STRING( &constant_bin[ 136035 ], 15, 1 );
+    const_str_plain_cryptography_has_locking_callbacks = UNSTREAM_STRING( &constant_bin[ 136050 ], 34, 1 );
+    const_str_plain_SSL_get_current_expansion = UNSTREAM_STRING( &constant_bin[ 136084 ], 25, 1 );
+    const_str_plain_SSL_extension_supported = UNSTREAM_STRING( &constant_bin[ 136109 ], 23, 1 );
+    const_str_plain_SSL_CTX_set_psk_server_callback = UNSTREAM_STRING( &constant_bin[ 136132 ], 31, 1 );
     const_list_dc94f69f0c30ec1b61f8690466d0681f_list = PyList_New( 5 );
     PyList_SET_ITEM( const_list_dc94f69f0c30ec1b61f8690466d0681f_list, 0, const_str_plain_CRYPTO_LOCK ); Py_INCREF( const_str_plain_CRYPTO_LOCK );
     PyList_SET_ITEM( const_list_dc94f69f0c30ec1b61f8690466d0681f_list, 1, const_str_plain_CRYPTO_UNLOCK ); Py_INCREF( const_str_plain_CRYPTO_UNLOCK );
-    const_str_plain_CRYPTO_READ = UNSTREAM_STRING( &constant_bin[ 139766 ], 11, 1 );
+    const_str_plain_CRYPTO_READ = UNSTREAM_STRING( &constant_bin[ 136163 ], 11, 1 );
     PyList_SET_ITEM( const_list_dc94f69f0c30ec1b61f8690466d0681f_list, 2, const_str_plain_CRYPTO_READ ); Py_INCREF( const_str_plain_CRYPTO_READ );
     PyList_SET_ITEM( const_list_dc94f69f0c30ec1b61f8690466d0681f_list, 3, const_str_plain_CRYPTO_LOCK_SSL ); Py_INCREF( const_str_plain_CRYPTO_LOCK_SSL );
     PyList_SET_ITEM( const_list_dc94f69f0c30ec1b61f8690466d0681f_list, 4, const_str_plain_CRYPTO_lock ); Py_INCREF( const_str_plain_CRYPTO_lock );
-    const_str_plain_Cryptography_HAS_MEM_FUNCTIONS = UNSTREAM_STRING( &constant_bin[ 139777 ], 30, 1 );
+    const_str_plain_Cryptography_HAS_MEM_FUNCTIONS = UNSTREAM_STRING( &constant_bin[ 136174 ], 30, 1 );
     const_list_99d2a9f3afa4bd958ff3177b2faaca12_list = PyList_New( 3 );
     PyList_SET_ITEM( const_list_99d2a9f3afa4bd958ff3177b2faaca12_list, 0, const_str_plain_SSLv3_method ); Py_INCREF( const_str_plain_SSLv3_method );
     PyList_SET_ITEM( const_list_99d2a9f3afa4bd958ff3177b2faaca12_list, 1, const_str_plain_SSLv3_client_method ); Py_INCREF( const_str_plain_SSLv3_client_method );
     PyList_SET_ITEM( const_list_99d2a9f3afa4bd958ff3177b2faaca12_list, 2, const_str_plain_SSLv3_server_method ); Py_INCREF( const_str_plain_SSLv3_server_method );
-    const_str_plain_cryptography_has_custom_ext = UNSTREAM_STRING( &constant_bin[ 139807 ], 27, 1 );
-    const_str_plain_cryptography_has_ec2m = UNSTREAM_STRING( &constant_bin[ 139834 ], 21, 1 );
+    const_str_plain_cryptography_has_custom_ext = UNSTREAM_STRING( &constant_bin[ 136204 ], 27, 1 );
+    const_str_plain_cryptography_has_ec2m = UNSTREAM_STRING( &constant_bin[ 136231 ], 21, 1 );
     const_list_str_plain_EVP_PKEY_CTX_set_rsa_oaep_md_list = PyList_New( 1 );
     PyList_SET_ITEM( const_list_str_plain_EVP_PKEY_CTX_set_rsa_oaep_md_list, 0, const_str_plain_EVP_PKEY_CTX_set_rsa_oaep_md ); Py_INCREF( const_str_plain_EVP_PKEY_CTX_set_rsa_oaep_md );
-    const_str_plain_Cryptography_HAS_ALPN = UNSTREAM_STRING( &constant_bin[ 139855 ], 21, 1 );
-    const_str_plain_cryptography_has_ec_1_0_2 = UNSTREAM_STRING( &constant_bin[ 139876 ], 25, 1 );
-    const_str_plain_SSL_CTX_set_cert_cb = UNSTREAM_STRING( &constant_bin[ 139901 ], 19, 1 );
-    const_str_plain_cryptography_has_ssl_sigalgs = UNSTREAM_STRING( &constant_bin[ 139920 ], 28, 1 );
-    const_str_plain_SSL_COMP_get_name = UNSTREAM_STRING( &constant_bin[ 139948 ], 17, 1 );
-    const_str_plain_cryptography_has_fips = UNSTREAM_STRING( &constant_bin[ 139965 ], 21, 1 );
-    const_str_plain_TLS_ST_OK = UNSTREAM_STRING( &constant_bin[ 139986 ], 9, 1 );
-    const_str_digest_96e83fdb049b186bfc982a4b37cdf168 = UNSTREAM_STRING( &constant_bin[ 139995 ], 42, 1 );
-    const_str_plain_Cryptography_HAS_SET_ECDH_AUTO = UNSTREAM_STRING( &constant_bin[ 140037 ], 30, 1 );
-    const_str_plain_Cryptography_HAS_TLS_ST = UNSTREAM_STRING( &constant_bin[ 140067 ], 23, 1 );
-    const_str_plain_cryptography_has_rsa_oaep_label = UNSTREAM_STRING( &constant_bin[ 140090 ], 31, 1 );
-    const_str_plain_cryptography_has_generic_dtls_method = UNSTREAM_STRING( &constant_bin[ 140121 ], 36, 1 );
+    const_str_plain_Cryptography_HAS_ALPN = UNSTREAM_STRING( &constant_bin[ 136252 ], 21, 1 );
+    const_str_plain_cryptography_has_ec_1_0_2 = UNSTREAM_STRING( &constant_bin[ 136273 ], 25, 1 );
+    const_str_plain_SSL_CTX_set_cert_cb = UNSTREAM_STRING( &constant_bin[ 136298 ], 19, 1 );
+    const_str_plain_cryptography_has_ssl_sigalgs = UNSTREAM_STRING( &constant_bin[ 136317 ], 28, 1 );
+    const_str_plain_SSL_COMP_get_name = UNSTREAM_STRING( &constant_bin[ 136345 ], 17, 1 );
+    const_str_plain_cryptography_has_fips = UNSTREAM_STRING( &constant_bin[ 136362 ], 21, 1 );
+    const_str_plain_TLS_ST_OK = UNSTREAM_STRING( &constant_bin[ 136383 ], 9, 1 );
+    const_str_digest_96e83fdb049b186bfc982a4b37cdf168 = UNSTREAM_STRING( &constant_bin[ 136392 ], 42, 1 );
+    const_str_plain_Cryptography_HAS_SET_ECDH_AUTO = UNSTREAM_STRING( &constant_bin[ 136434 ], 30, 1 );
+    const_str_plain_Cryptography_HAS_TLS_ST = UNSTREAM_STRING( &constant_bin[ 136464 ], 23, 1 );
+    const_str_plain_cryptography_has_rsa_oaep_label = UNSTREAM_STRING( &constant_bin[ 136487 ], 31, 1 );
+    const_str_plain_cryptography_has_generic_dtls_method = UNSTREAM_STRING( &constant_bin[ 136518 ], 36, 1 );
     const_list_str_plain_FIPS_set_mode_str_plain_FIPS_mode_list = PyList_New( 2 );
-    const_str_plain_FIPS_set_mode = UNSTREAM_STRING( &constant_bin[ 140157 ], 13, 1 );
+    const_str_plain_FIPS_set_mode = UNSTREAM_STRING( &constant_bin[ 136554 ], 13, 1 );
     PyList_SET_ITEM( const_list_str_plain_FIPS_set_mode_str_plain_FIPS_mode_list, 0, const_str_plain_FIPS_set_mode ); Py_INCREF( const_str_plain_FIPS_set_mode );
     PyList_SET_ITEM( const_list_str_plain_FIPS_set_mode_str_plain_FIPS_mode_list, 1, const_str_plain_FIPS_mode ); Py_INCREF( const_str_plain_FIPS_mode );
     const_list_str_plain_EVP_PBE_scrypt_list = PyList_New( 1 );
     PyList_SET_ITEM( const_list_str_plain_EVP_PBE_scrypt_list, 0, const_str_plain_EVP_PBE_scrypt ); Py_INCREF( const_str_plain_EVP_PBE_scrypt );
-    const_str_digest_b532ee08e2c9464270b0cf4cd8c73f33 = UNSTREAM_STRING( &constant_bin[ 140170 ], 42, 1 );
-    const_str_plain_Cryptography_HAS_GENERIC_DTLS_METHOD = UNSTREAM_STRING( &constant_bin[ 140212 ], 36, 1 );
+    const_str_digest_b532ee08e2c9464270b0cf4cd8c73f33 = UNSTREAM_STRING( &constant_bin[ 136567 ], 42, 1 );
+    const_str_plain_Cryptography_HAS_GENERIC_DTLS_METHOD = UNSTREAM_STRING( &constant_bin[ 136609 ], 36, 1 );
     const_list_f501d0e9bfb78a701032fc968ff559f6_list = PyList_New( 3 );
     PyList_SET_ITEM( const_list_f501d0e9bfb78a701032fc968ff559f6_list, 0, const_str_plain_SSL_get_current_compression ); Py_INCREF( const_str_plain_SSL_get_current_compression );
     PyList_SET_ITEM( const_list_f501d0e9bfb78a701032fc968ff559f6_list, 1, const_str_plain_SSL_get_current_expansion ); Py_INCREF( const_str_plain_SSL_get_current_expansion );
@@ -430,9 +430,9 @@ static void createModuleConstants( void )
     PyList_SET_ITEM( const_list_03133653ae1f779dd1ae650a3a80ba30_list, 0, const_str_plain_SSL_CTX_add_client_custom_ext ); Py_INCREF( const_str_plain_SSL_CTX_add_client_custom_ext );
     PyList_SET_ITEM( const_list_03133653ae1f779dd1ae650a3a80ba30_list, 1, const_str_plain_SSL_CTX_add_server_custom_ext ); Py_INCREF( const_str_plain_SSL_CTX_add_server_custom_ext );
     PyList_SET_ITEM( const_list_03133653ae1f779dd1ae650a3a80ba30_list, 2, const_str_plain_SSL_extension_supported ); Py_INCREF( const_str_plain_SSL_extension_supported );
-    const_str_plain_Cryptography_HAS_LOCKING_CALLBACKS = UNSTREAM_STRING( &constant_bin[ 140248 ], 34, 1 );
-    const_str_plain_cryptography_has_get_server_tmp_key = UNSTREAM_STRING( &constant_bin[ 140282 ], 35, 1 );
-    const_str_plain_cryptography_has_102_verification_params = UNSTREAM_STRING( &constant_bin[ 140317 ], 40, 1 );
+    const_str_plain_Cryptography_HAS_LOCKING_CALLBACKS = UNSTREAM_STRING( &constant_bin[ 136645 ], 34, 1 );
+    const_str_plain_cryptography_has_get_server_tmp_key = UNSTREAM_STRING( &constant_bin[ 136679 ], 35, 1 );
+    const_str_plain_cryptography_has_102_verification_params = UNSTREAM_STRING( &constant_bin[ 136714 ], 40, 1 );
     const_list_str_plain_SSL_CTX_set_ecdh_auto_list = PyList_New( 1 );
     PyList_SET_ITEM( const_list_str_plain_SSL_CTX_set_ecdh_auto_list, 0, const_str_plain_SSL_CTX_set_ecdh_auto ); Py_INCREF( const_str_plain_SSL_CTX_set_ecdh_auto );
     const_list_str_plain_TLS_ST_BEFORE_str_plain_TLS_ST_OK_list = PyList_New( 2 );
@@ -444,18 +444,18 @@ static void createModuleConstants( void )
     PyList_SET_ITEM( const_list_a2ccfb1541ef6968650ac43562856e84_list, 2, const_str_plain_DTLS_client_method ); Py_INCREF( const_str_plain_DTLS_client_method );
     PyList_SET_ITEM( const_list_a2ccfb1541ef6968650ac43562856e84_list, 3, const_str_plain_SSL_OP_NO_DTLSv1 ); Py_INCREF( const_str_plain_SSL_OP_NO_DTLSv1 );
     PyList_SET_ITEM( const_list_a2ccfb1541ef6968650ac43562856e84_list, 4, const_str_plain_SSL_OP_NO_DTLSv1_2 ); Py_INCREF( const_str_plain_SSL_OP_NO_DTLSv1_2 );
-    const_str_plain_DTLS_set_link_mtu = UNSTREAM_STRING( &constant_bin[ 140357 ], 17, 1 );
+    const_str_plain_DTLS_set_link_mtu = UNSTREAM_STRING( &constant_bin[ 136754 ], 17, 1 );
     PyList_SET_ITEM( const_list_a2ccfb1541ef6968650ac43562856e84_list, 5, const_str_plain_DTLS_set_link_mtu ); Py_INCREF( const_str_plain_DTLS_set_link_mtu );
     PyList_SET_ITEM( const_list_a2ccfb1541ef6968650ac43562856e84_list, 6, const_str_plain_DTLS_get_link_min_mtu ); Py_INCREF( const_str_plain_DTLS_get_link_min_mtu );
     const_list_str_plain_EVP_PKEY_X25519_str_plain_NID_X25519_list = PyList_New( 2 );
     PyList_SET_ITEM( const_list_str_plain_EVP_PKEY_X25519_str_plain_NID_X25519_list, 0, const_str_plain_EVP_PKEY_X25519 ); Py_INCREF( const_str_plain_EVP_PKEY_X25519 );
     PyList_SET_ITEM( const_list_str_plain_EVP_PKEY_X25519_str_plain_NID_X25519_list, 1, const_str_plain_NID_X25519 ); Py_INCREF( const_str_plain_NID_X25519 );
-    const_str_plain_cryptography_has_mem_functions = UNSTREAM_STRING( &constant_bin[ 140374 ], 30, 1 );
+    const_str_plain_cryptography_has_mem_functions = UNSTREAM_STRING( &constant_bin[ 136771 ], 30, 1 );
     const_list_e5729eb47bb2bb77d896a48e0ba4a292_list = PyList_New( 3 );
     PyList_SET_ITEM( const_list_e5729eb47bb2bb77d896a48e0ba4a292_list, 0, const_str_plain_SSL_CTX_use_psk_identity_hint ); Py_INCREF( const_str_plain_SSL_CTX_use_psk_identity_hint );
     PyList_SET_ITEM( const_list_e5729eb47bb2bb77d896a48e0ba4a292_list, 1, const_str_plain_SSL_CTX_set_psk_server_callback ); Py_INCREF( const_str_plain_SSL_CTX_set_psk_server_callback );
     PyList_SET_ITEM( const_list_e5729eb47bb2bb77d896a48e0ba4a292_list, 2, const_str_plain_SSL_CTX_set_psk_client_callback ); Py_INCREF( const_str_plain_SSL_CTX_set_psk_client_callback );
-    const_str_plain_cryptography_has_alpn = UNSTREAM_STRING( &constant_bin[ 140404 ], 21, 1 );
+    const_str_plain_cryptography_has_alpn = UNSTREAM_STRING( &constant_bin[ 136801 ], 21, 1 );
     const_list_str_plain_SSL_CTX_set_cert_cb_str_plain_SSL_set_cert_cb_list = PyList_New( 2 );
     PyList_SET_ITEM( const_list_str_plain_SSL_CTX_set_cert_cb_str_plain_SSL_set_cert_cb_list, 0, const_str_plain_SSL_CTX_set_cert_cb ); Py_INCREF( const_str_plain_SSL_CTX_set_cert_cb );
     PyList_SET_ITEM( const_list_str_plain_SSL_CTX_set_cert_cb_str_plain_SSL_set_cert_cb_list, 1, const_str_plain_SSL_set_cert_cb ); Py_INCREF( const_str_plain_SSL_set_cert_cb );
@@ -465,8 +465,8 @@ static void createModuleConstants( void )
     PyList_SET_ITEM( const_list_str_plain_X509_V_FLAG_PARTIAL_CHAIN_list, 0, const_str_plain_X509_V_FLAG_PARTIAL_CHAIN ); Py_INCREF( const_str_plain_X509_V_FLAG_PARTIAL_CHAIN );
     const_list_str_plain_RSA_R_PKCS_DECODING_ERROR_list = PyList_New( 1 );
     PyList_SET_ITEM( const_list_str_plain_RSA_R_PKCS_DECODING_ERROR_list, 0, const_str_plain_RSA_R_PKCS_DECODING_ERROR ); Py_INCREF( const_str_plain_RSA_R_PKCS_DECODING_ERROR );
-    const_str_digest_38eba4904dfc59e8c0458109674fe900 = UNSTREAM_STRING( &constant_bin[ 140425 ], 50, 1 );
-    const_str_plain_cryptography_has_set_cert_cb = UNSTREAM_STRING( &constant_bin[ 140475 ], 28, 1 );
+    const_str_digest_38eba4904dfc59e8c0458109674fe900 = UNSTREAM_STRING( &constant_bin[ 136822 ], 50, 1 );
+    const_str_plain_cryptography_has_set_cert_cb = UNSTREAM_STRING( &constant_bin[ 136872 ], 28, 1 );
     const_list_str_plain_EC_curve_nid2nist_list = PyList_New( 1 );
     PyList_SET_ITEM( const_list_str_plain_EC_curve_nid2nist_list, 0, const_str_plain_EC_curve_nid2nist ); Py_INCREF( const_str_plain_EC_curve_nid2nist );
     const_list_str_plain_EVP_PKEY_CTX_set0_rsa_oaep_label_list = PyList_New( 1 );
@@ -486,74 +486,74 @@ void checkModuleConstants_cryptography$hazmat$bindings$openssl$_conditional( voi
 #endif
 
 // The module code objects.
-static PyCodeObject *codeobj_f493fe878196e9a92df50a6c1ed40aa7;
-static PyCodeObject *codeobj_28dff86e7feb1cd2950b20b00426f590;
-static PyCodeObject *codeobj_2fdd1d03e82c296a63e1a9007fd5a663;
-static PyCodeObject *codeobj_589ff7b1d00ee2ca0b0e6d30cb1446cf;
-static PyCodeObject *codeobj_32346353e3ab469b0626fefc9a09644b;
-static PyCodeObject *codeobj_67783254d3736a98e29d74918d7617f1;
-static PyCodeObject *codeobj_7a731479910f5e4fe187ee8faa166d5a;
-static PyCodeObject *codeobj_5588063523f9b867c818ee03deae5c46;
-static PyCodeObject *codeobj_18f7f2fbc1494f35d8ec70f782222cb0;
-static PyCodeObject *codeobj_952940ea93dc844437f884957601268e;
-static PyCodeObject *codeobj_1edc0b13390bd69ba83cb9e2d6d635fa;
-static PyCodeObject *codeobj_6891abe97584cf5726f28553780a1716;
-static PyCodeObject *codeobj_3719f91b16e08b51004b530a9fc04c0d;
-static PyCodeObject *codeobj_57814c47747fb37faf93882db2604bd8;
-static PyCodeObject *codeobj_9cb889908a52d460ade9f61402287a71;
-static PyCodeObject *codeobj_a3deb7365202e7887ed6d38d3db436e4;
-static PyCodeObject *codeobj_e66a1253c6bc534b5e6529d8a305e2fc;
-static PyCodeObject *codeobj_03a8eee50efd45f1c6b3c8041607ec13;
-static PyCodeObject *codeobj_75d51dca77e888b580ff0eedf36d5c78;
-static PyCodeObject *codeobj_6d4de2f82596785589a7765af36cbdb4;
-static PyCodeObject *codeobj_e9c312a2083110da65791ed6e5041839;
-static PyCodeObject *codeobj_dbaf28a9eb0b068c44c5345e497d207f;
-static PyCodeObject *codeobj_a3fa14758c5e5af3b88d0e3631b4657d;
-static PyCodeObject *codeobj_7fb7fd143f4c90af8b8d543a51fcd66e;
-static PyCodeObject *codeobj_697409e709c5d6c0f38af00345567e1e;
-static PyCodeObject *codeobj_89837ade39e5208839470f38a555e6f1;
-static PyCodeObject *codeobj_bf1214cb24fd95e1f752780a70557a67;
-static PyCodeObject *codeobj_812efbdd97bc29eb9c332ddd22df1b13;
-static PyCodeObject *codeobj_1abcd5964b99696b91bb14ca24f07d18;
-static PyCodeObject *codeobj_8951a36fa89ba58ca0de091c2e71b155;
-static PyCodeObject *codeobj_7b684557d1bb643cff7ab3799189254f;
-static PyCodeObject *codeobj_aeb952fd083b387c953a79f2220f5de2;
+static PyCodeObject *codeobj_1b030d728f2d75571c684bb212c3f739;
+static PyCodeObject *codeobj_258ca9c69fbc304bdd87e83a9799bcff;
+static PyCodeObject *codeobj_b0ba2c635c15d02f7426357c7eb861f7;
+static PyCodeObject *codeobj_93babb672dbd77cf6c3525283ace4541;
+static PyCodeObject *codeobj_693d298fd1b564656925d63da49faee1;
+static PyCodeObject *codeobj_167e52d54af2ad7c5a52aace484dbcb4;
+static PyCodeObject *codeobj_b8df54c163fa7ba31af1503bc4e9b042;
+static PyCodeObject *codeobj_5a6f3f271900b28d04b9599ed3fff861;
+static PyCodeObject *codeobj_b0a0989117b87a9879239c7b99e33612;
+static PyCodeObject *codeobj_969da506d2557ddcb158cd2217ed3d16;
+static PyCodeObject *codeobj_a955dffa8b3ef3f6bec080c4a909896c;
+static PyCodeObject *codeobj_a2c2105b5f3153a566d499cb91d223d0;
+static PyCodeObject *codeobj_8f58a22b75fb2528b31fef2eaaa7fe3c;
+static PyCodeObject *codeobj_83d1d056519e864ba79b130dd4caefb0;
+static PyCodeObject *codeobj_8913b924062fbaca4f8ef196f6330d7b;
+static PyCodeObject *codeobj_15054be9bde47823c664a7ed2d2c30ce;
+static PyCodeObject *codeobj_0fb8062d34e2a593a9955cc6c80e562d;
+static PyCodeObject *codeobj_65b5d5961a42565181ff1ecc788134ed;
+static PyCodeObject *codeobj_69fcf2315fe8179e3895f99cb4de84ca;
+static PyCodeObject *codeobj_3009cb3f650c195c4373de6254ab31a5;
+static PyCodeObject *codeobj_79673712c0eb23edc664fd2024afcf18;
+static PyCodeObject *codeobj_eb1d9dc1ae5fa03b3451362cb78dce06;
+static PyCodeObject *codeobj_3922be0778721d5f1d86277a1382b80a;
+static PyCodeObject *codeobj_f7af91054f9cb3ed0c86bd67241266bf;
+static PyCodeObject *codeobj_c1c22ea9b28a70a72fe492b5a24058e9;
+static PyCodeObject *codeobj_de1ac568b8734629bd61f7c79385cf9f;
+static PyCodeObject *codeobj_f05e55c4f43e82d9a3416d47dcab90bd;
+static PyCodeObject *codeobj_a536191007ec648eb197c7ab7b7d7919;
+static PyCodeObject *codeobj_294b04321a5d6d349eb8dd84dae5e1cd;
+static PyCodeObject *codeobj_56b025613884e40d156d6954b5646aa8;
+static PyCodeObject *codeobj_cfd90043e190dc6f09021327dcce39f1;
+static PyCodeObject *codeobj_d2f6a85b8caf9039850f2c5681e1cdad;
 
 static void createModuleCodeObjects(void)
 {
-    module_filename_obj = const_str_digest_5ea884bc1c06e18ba071e8abb6f629d4;
-    codeobj_f493fe878196e9a92df50a6c1ed40aa7 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_fafbfe30544ba42854ed0b86baac5f84, 1, const_tuple_empty, 0, 0, CO_NOFREE );
-    codeobj_28dff86e7feb1cd2950b20b00426f590 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_0134e31627bb74f9df2edcd82a96ece3, 77, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_2fdd1d03e82c296a63e1a9007fd5a663 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_102_verification_params, 91, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_589ff7b1d00ee2ca0b0e6d30cb1446cf = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_alpn, 54, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_32346353e3ab469b0626fefc9a09644b = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_compression, 63, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_67783254d3736a98e29d74918d7617f1 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_custom_ext, 235, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_7a731479910f5e4fe187ee8faa166d5a = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_ec2m, 8, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_5588063523f9b867c818ee03deae5c46 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_ec_1_0_2, 16, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_18f7f2fbc1494f35d8ec70f782222cb0 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_evp_pkey_dhx, 167, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_952940ea93dc844437f884957601268e = MAKE_CODEOBJ( module_filename_obj, const_str_digest_38eba4904dfc59e8c0458109674fe900, 206, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_1edc0b13390bd69ba83cb9e2d6d635fa = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_fips, 213, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_6891abe97584cf5726f28553780a1716 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_generic_dtls_method, 155, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_3719f91b16e08b51004b530a9fc04c0d = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_get_server_tmp_key, 71, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_57814c47747fb37faf93882db2604bd8 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_locking_callbacks, 139, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_9cb889908a52d460ade9f61402287a71 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_mem_functions, 173, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_a3deb7365202e7887ed6d38d3db436e4 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_openssl_cleanup, 243, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_e66a1253c6bc534b5e6529d8a305e2fc = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_psk, 227, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_03a8eee50efd45f1c6b3c8041607ec13 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_rsa_oaep_label, 40, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_75d51dca77e888b580ff0eedf36d5c78 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_rsa_oaep_md, 34, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_6d4de2f82596785589a7765af36cbdb4 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_8f29b4e065ff2a78b40f0f2a8209f3b9, 28, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_e9c312a2083110da65791ed6e5041839 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_scrypt, 149, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_dbaf28a9eb0b068c44c5345e497d207f = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_sct, 179, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_a3fa14758c5e5af3b88d0e3631b4657d = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_set_cert_cb, 116, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_7fb7fd143f4c90af8b8d543a51fcd66e = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_set_ecdh_auto, 22, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_697409e709c5d6c0f38af00345567e1e = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_ssl3_method, 46, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_89837ade39e5208839470f38a555e6f1 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_ssl_sigalgs, 220, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_bf1214cb24fd95e1f752780a70557a67 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_ssl_st, 123, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_812efbdd97bc29eb9c332ddd22df1b13 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_tls_st, 132, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_1abcd5964b99696b91bb14ca24f07d18 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_x25519, 199, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_8951a36fa89ba58ca0de091c2e71b155 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_b532ee08e2c9464270b0cf4cd8c73f33, 192, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_7b684557d1bb643cff7ab3799189254f = MAKE_CODEOBJ( module_filename_obj, const_str_digest_89c6e3f07e56ca3212435467944ee8af, 110, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
-    codeobj_aeb952fd083b387c953a79f2220f5de2 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_b2405d2434f1275e2b8933b43c529fbe, 104, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    module_filename_obj = MAKE_RELATIVE_PATH( const_str_digest_47ba21151d4195fb9de5595022be41e7 );
+    codeobj_1b030d728f2d75571c684bb212c3f739 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_fafbfe30544ba42854ed0b86baac5f84, 1, const_tuple_empty, 0, 0, CO_NOFREE );
+    codeobj_258ca9c69fbc304bdd87e83a9799bcff = MAKE_CODEOBJ( module_filename_obj, const_str_digest_0134e31627bb74f9df2edcd82a96ece3, 77, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_b0ba2c635c15d02f7426357c7eb861f7 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_102_verification_params, 91, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_93babb672dbd77cf6c3525283ace4541 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_alpn, 54, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_693d298fd1b564656925d63da49faee1 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_compression, 63, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_167e52d54af2ad7c5a52aace484dbcb4 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_custom_ext, 235, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_b8df54c163fa7ba31af1503bc4e9b042 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_ec2m, 8, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_5a6f3f271900b28d04b9599ed3fff861 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_ec_1_0_2, 16, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_b0a0989117b87a9879239c7b99e33612 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_evp_pkey_dhx, 167, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_969da506d2557ddcb158cd2217ed3d16 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_38eba4904dfc59e8c0458109674fe900, 206, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_a955dffa8b3ef3f6bec080c4a909896c = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_fips, 213, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_a2c2105b5f3153a566d499cb91d223d0 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_generic_dtls_method, 155, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_8f58a22b75fb2528b31fef2eaaa7fe3c = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_get_server_tmp_key, 71, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_83d1d056519e864ba79b130dd4caefb0 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_locking_callbacks, 139, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_8913b924062fbaca4f8ef196f6330d7b = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_mem_functions, 173, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_15054be9bde47823c664a7ed2d2c30ce = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_openssl_cleanup, 243, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_0fb8062d34e2a593a9955cc6c80e562d = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_psk, 227, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_65b5d5961a42565181ff1ecc788134ed = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_rsa_oaep_label, 40, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_69fcf2315fe8179e3895f99cb4de84ca = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_rsa_oaep_md, 34, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_3009cb3f650c195c4373de6254ab31a5 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_8f29b4e065ff2a78b40f0f2a8209f3b9, 28, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_79673712c0eb23edc664fd2024afcf18 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_scrypt, 149, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_eb1d9dc1ae5fa03b3451362cb78dce06 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_sct, 179, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_3922be0778721d5f1d86277a1382b80a = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_set_cert_cb, 116, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_f7af91054f9cb3ed0c86bd67241266bf = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_set_ecdh_auto, 22, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_c1c22ea9b28a70a72fe492b5a24058e9 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_ssl3_method, 46, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_de1ac568b8734629bd61f7c79385cf9f = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_ssl_sigalgs, 220, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_f05e55c4f43e82d9a3416d47dcab90bd = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_ssl_st, 123, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_a536191007ec648eb197c7ab7b7d7919 = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_tls_st, 132, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_294b04321a5d6d349eb8dd84dae5e1cd = MAKE_CODEOBJ( module_filename_obj, const_str_plain_cryptography_has_x25519, 199, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_56b025613884e40d156d6954b5646aa8 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_b532ee08e2c9464270b0cf4cd8c73f33, 192, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_cfd90043e190dc6f09021327dcce39f1 = MAKE_CODEOBJ( module_filename_obj, const_str_digest_89c6e3f07e56ca3212435467944ee8af, 110, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
+    codeobj_d2f6a85b8caf9039850f2c5681e1cdad = MAKE_CODEOBJ( module_filename_obj, const_str_digest_b2405d2434f1275e2b8933b43c529fbe, 104, const_tuple_empty, 0, 0, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE );
 }
 
 // The module function declarations.
@@ -1528,7 +1528,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_3719f91b16e08b51004b530a9fc04c0d,
+        codeobj_8f58a22b75fb2528b31fef2eaaa7fe3c,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -1553,7 +1553,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_28dff86e7feb1cd2950b20b00426f590,
+        codeobj_258ca9c69fbc304bdd87e83a9799bcff,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -1578,7 +1578,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_2fdd1d03e82c296a63e1a9007fd5a663,
+        codeobj_b0ba2c635c15d02f7426357c7eb861f7,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -1603,7 +1603,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_aeb952fd083b387c953a79f2220f5de2,
+        codeobj_d2f6a85b8caf9039850f2c5681e1cdad,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -1628,7 +1628,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_7b684557d1bb643cff7ab3799189254f,
+        codeobj_cfd90043e190dc6f09021327dcce39f1,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -1653,7 +1653,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_a3fa14758c5e5af3b88d0e3631b4657d,
+        codeobj_3922be0778721d5f1d86277a1382b80a,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -1678,7 +1678,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_bf1214cb24fd95e1f752780a70557a67,
+        codeobj_f05e55c4f43e82d9a3416d47dcab90bd,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -1703,7 +1703,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_812efbdd97bc29eb9c332ddd22df1b13,
+        codeobj_a536191007ec648eb197c7ab7b7d7919,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -1728,7 +1728,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_57814c47747fb37faf93882db2604bd8,
+        codeobj_83d1d056519e864ba79b130dd4caefb0,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -1753,7 +1753,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_e9c312a2083110da65791ed6e5041839,
+        codeobj_79673712c0eb23edc664fd2024afcf18,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -1778,7 +1778,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_7a731479910f5e4fe187ee8faa166d5a,
+        codeobj_b8df54c163fa7ba31af1503bc4e9b042,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -1803,7 +1803,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_6891abe97584cf5726f28553780a1716,
+        codeobj_a2c2105b5f3153a566d499cb91d223d0,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -1828,7 +1828,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_18f7f2fbc1494f35d8ec70f782222cb0,
+        codeobj_b0a0989117b87a9879239c7b99e33612,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -1853,7 +1853,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_9cb889908a52d460ade9f61402287a71,
+        codeobj_8913b924062fbaca4f8ef196f6330d7b,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -1878,7 +1878,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_dbaf28a9eb0b068c44c5345e497d207f,
+        codeobj_eb1d9dc1ae5fa03b3451362cb78dce06,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -1903,7 +1903,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_8951a36fa89ba58ca0de091c2e71b155,
+        codeobj_56b025613884e40d156d6954b5646aa8,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -1928,7 +1928,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_1abcd5964b99696b91bb14ca24f07d18,
+        codeobj_294b04321a5d6d349eb8dd84dae5e1cd,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -1953,7 +1953,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_952940ea93dc844437f884957601268e,
+        codeobj_969da506d2557ddcb158cd2217ed3d16,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -1978,7 +1978,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_1edc0b13390bd69ba83cb9e2d6d635fa,
+        codeobj_a955dffa8b3ef3f6bec080c4a909896c,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -2003,7 +2003,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_89837ade39e5208839470f38a555e6f1,
+        codeobj_de1ac568b8734629bd61f7c79385cf9f,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -2028,7 +2028,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_e66a1253c6bc534b5e6529d8a305e2fc,
+        codeobj_0fb8062d34e2a593a9955cc6c80e562d,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -2053,7 +2053,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_5588063523f9b867c818ee03deae5c46,
+        codeobj_5a6f3f271900b28d04b9599ed3fff861,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -2078,7 +2078,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_67783254d3736a98e29d74918d7617f1,
+        codeobj_167e52d54af2ad7c5a52aace484dbcb4,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -2103,7 +2103,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_a3deb7365202e7887ed6d38d3db436e4,
+        codeobj_15054be9bde47823c664a7ed2d2c30ce,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -2128,7 +2128,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_7fb7fd143f4c90af8b8d543a51fcd66e,
+        codeobj_f7af91054f9cb3ed0c86bd67241266bf,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -2153,7 +2153,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_6d4de2f82596785589a7765af36cbdb4,
+        codeobj_3009cb3f650c195c4373de6254ab31a5,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -2178,7 +2178,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_75d51dca77e888b580ff0eedf36d5c78,
+        codeobj_69fcf2315fe8179e3895f99cb4de84ca,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -2203,7 +2203,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_03a8eee50efd45f1c6b3c8041607ec13,
+        codeobj_65b5d5961a42565181ff1ecc788134ed,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -2228,7 +2228,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_697409e709c5d6c0f38af00345567e1e,
+        codeobj_c1c22ea9b28a70a72fe492b5a24058e9,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -2253,7 +2253,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_589ff7b1d00ee2ca0b0e6d30cb1446cf,
+        codeobj_93babb672dbd77cf6c3525283ace4541,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -2278,7 +2278,7 @@ static PyObject *MAKE_FUNCTION_cryptography$hazmat$bindings$openssl$_conditional
 #if PYTHON_VERSION >= 300
         NULL,
 #endif
-        codeobj_32346353e3ab469b0626fefc9a09644b,
+        codeobj_693d298fd1b564656925d63da49faee1,
         NULL,
 #if PYTHON_VERSION >= 300
         NULL,
@@ -2654,14 +2654,14 @@ MOD_INIT_DECL( cryptography$hazmat$bindings$openssl$_conditional )
     PyObject *tmp_import_name_from_2;
     PyObject *tmp_import_name_from_3;
     int tmp_res;
-    struct Nuitka_FrameObject *frame_f493fe878196e9a92df50a6c1ed40aa7;
+    struct Nuitka_FrameObject *frame_1b030d728f2d75571c684bb212c3f739;
 
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
 
     // Module code.
     tmp_assign_source_1 = Py_None;
     UPDATE_STRING_DICT0( moduledict_cryptography$hazmat$bindings$openssl$_conditional, (Nuitka_StringObject *)const_str_plain___doc__, tmp_assign_source_1 );
-    tmp_assign_source_2 = const_str_digest_5ea884bc1c06e18ba071e8abb6f629d4;
+    tmp_assign_source_2 = module_filename_obj;
     UPDATE_STRING_DICT0( moduledict_cryptography$hazmat$bindings$openssl$_conditional, (Nuitka_StringObject *)const_str_plain___file__, tmp_assign_source_2 );
     tmp_assign_source_3 = Py_None;
     UPDATE_STRING_DICT0( moduledict_cryptography$hazmat$bindings$openssl$_conditional, (Nuitka_StringObject *)const_str_plain___cached__, tmp_assign_source_3 );
@@ -2672,12 +2672,12 @@ MOD_INIT_DECL( cryptography$hazmat$bindings$openssl$_conditional )
     tmp_import_from_1__module = tmp_assign_source_4;
 
     // Frame without reuse.
-    frame_f493fe878196e9a92df50a6c1ed40aa7 = MAKE_MODULE_FRAME( codeobj_f493fe878196e9a92df50a6c1ed40aa7, module_cryptography$hazmat$bindings$openssl$_conditional );
+    frame_1b030d728f2d75571c684bb212c3f739 = MAKE_MODULE_FRAME( codeobj_1b030d728f2d75571c684bb212c3f739, module_cryptography$hazmat$bindings$openssl$_conditional );
 
     // Push the new frame as the currently active one, and we should be exclusively
     // owning it.
-    pushFrameStack( frame_f493fe878196e9a92df50a6c1ed40aa7 );
-    assert( Py_REFCNT( frame_f493fe878196e9a92df50a6c1ed40aa7 ) == 2 );
+    pushFrameStack( frame_1b030d728f2d75571c684bb212c3f739 );
+    assert( Py_REFCNT( frame_1b030d728f2d75571c684bb212c3f739 ) == 2 );
 
     // Framed code:
     // Tried code:
@@ -2757,25 +2757,25 @@ MOD_INIT_DECL( cryptography$hazmat$bindings$openssl$_conditional )
 
     // Restore frame exception if necessary.
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_f493fe878196e9a92df50a6c1ed40aa7 );
+    RESTORE_FRAME_EXCEPTION( frame_1b030d728f2d75571c684bb212c3f739 );
 #endif
     popFrameStack();
 
-    assertFrameObject( frame_f493fe878196e9a92df50a6c1ed40aa7 );
+    assertFrameObject( frame_1b030d728f2d75571c684bb212c3f739 );
 
     goto frame_no_exception_1;
     frame_exception_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION( frame_f493fe878196e9a92df50a6c1ed40aa7 );
+    RESTORE_FRAME_EXCEPTION( frame_1b030d728f2d75571c684bb212c3f739 );
 #endif
 
     if ( exception_tb == NULL )
     {
-        exception_tb = MAKE_TRACEBACK( frame_f493fe878196e9a92df50a6c1ed40aa7, exception_lineno );
+        exception_tb = MAKE_TRACEBACK( frame_1b030d728f2d75571c684bb212c3f739, exception_lineno );
     }
-    else if ( exception_tb->tb_frame != &frame_f493fe878196e9a92df50a6c1ed40aa7->m_frame )
+    else if ( exception_tb->tb_frame != &frame_1b030d728f2d75571c684bb212c3f739->m_frame )
     {
-        exception_tb = ADD_TRACEBACK( exception_tb, frame_f493fe878196e9a92df50a6c1ed40aa7, exception_lineno );
+        exception_tb = ADD_TRACEBACK( exception_tb, frame_1b030d728f2d75571c684bb212c3f739, exception_lineno );
     }
 
     // Put the previous frame back on top.
