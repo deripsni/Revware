@@ -60,11 +60,11 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_2a39f05ed9e139c2a8e2a9a699f4a074 = UNSTREAM_STRING( &constant_bin[ 101313 ], 231, 0 );
-    const_str_digest_6256eb2942a3906189630d8bae56357f = UNSTREAM_STRING( &constant_bin[ 101544 ], 31, 0 );
-    const_str_plain_hazmat = UNSTREAM_STRING( &constant_bin[ 101557 ], 6, 1 );
-    const_str_digest_072f50675723127f2a186a841529ed33 = UNSTREAM_STRING( &constant_bin[ 101575 ], 19, 0 );
-    const_str_digest_f6a5cc0cba3d9495847f9ca96ef756af = UNSTREAM_STRING( &constant_bin[ 101594 ], 28, 0 );
+    const_str_digest_2a39f05ed9e139c2a8e2a9a699f4a074 = UNSTREAM_STRING( &constant_bin[ 101273 ], 231, 0 );
+    const_str_digest_6256eb2942a3906189630d8bae56357f = UNSTREAM_STRING( &constant_bin[ 101504 ], 31, 0 );
+    const_str_plain_hazmat = UNSTREAM_STRING( &constant_bin[ 101517 ], 6, 1 );
+    const_str_digest_072f50675723127f2a186a841529ed33 = UNSTREAM_STRING( &constant_bin[ 101535 ], 19, 0 );
+    const_str_digest_f6a5cc0cba3d9495847f9ca96ef756af = UNSTREAM_STRING( &constant_bin[ 101554 ], 28, 0 );
 
     constants_created = true;
 }

@@ -74,14 +74,14 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_b1442a09494200dde573cbc96618c180 = UNSTREAM_STRING( &constant_bin[ 342653 ], 31, 0 );
-    const_str_digest_a00d9a801526c1beb04775c9d8f1e43d = UNSTREAM_STRING( &constant_bin[ 342684 ], 13, 0 );
-    const_str_digest_48f9fd122989e1c42e5e39c0598531b5 = UNSTREAM_STRING( &constant_bin[ 342697 ], 18, 0 );
-    const_str_digest_8f3d3af232f1581b98aa8a9d66ebce62 = UNSTREAM_STRING( &constant_bin[ 342715 ], 64, 0 );
-    const_str_digest_d79c558723ab099b4512c0267cd18c84 = UNSTREAM_STRING( &constant_bin[ 342779 ], 16, 0 );
-    const_str_digest_75c5309dbbf74787e0982979d7597020 = UNSTREAM_STRING( &constant_bin[ 342795 ], 21, 0 );
-    const_str_plain_PyNaCl = UNSTREAM_STRING( &constant_bin[ 342799 ], 6, 1 );
-    const_str_digest_5194cad37767eb2d4b684d7a2b76325e = UNSTREAM_STRING( &constant_bin[ 79672 ], 5, 0 );
+    const_str_digest_b1442a09494200dde573cbc96618c180 = UNSTREAM_STRING( &constant_bin[ 342613 ], 31, 0 );
+    const_str_digest_a00d9a801526c1beb04775c9d8f1e43d = UNSTREAM_STRING( &constant_bin[ 342644 ], 13, 0 );
+    const_str_digest_48f9fd122989e1c42e5e39c0598531b5 = UNSTREAM_STRING( &constant_bin[ 342657 ], 18, 0 );
+    const_str_digest_8f3d3af232f1581b98aa8a9d66ebce62 = UNSTREAM_STRING( &constant_bin[ 342675 ], 64, 0 );
+    const_str_digest_d79c558723ab099b4512c0267cd18c84 = UNSTREAM_STRING( &constant_bin[ 342739 ], 16, 0 );
+    const_str_digest_75c5309dbbf74787e0982979d7597020 = UNSTREAM_STRING( &constant_bin[ 342755 ], 21, 0 );
+    const_str_plain_PyNaCl = UNSTREAM_STRING( &constant_bin[ 342759 ], 6, 1 );
+    const_str_digest_5194cad37767eb2d4b684d7a2b76325e = UNSTREAM_STRING( &constant_bin[ 79632 ], 5, 0 );
 
     constants_created = true;
 }

@@ -212,12 +212,12 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_plain_crypto_shorthash_siphashx24_KEYBYTES = UNSTREAM_STRING( &constant_bin[ 342816 ], 36, 1 );
+    const_str_plain_crypto_shorthash_siphashx24_KEYBYTES = UNSTREAM_STRING( &constant_bin[ 342776 ], 36, 1 );
     const_tuple_076a554aafe9d5c84f720ccdaf6ae40d_tuple = PyTuple_New( 2 );
-    const_str_plain_NUITKA_PACKAGE_nacl_bindings = UNSTREAM_STRING( &constant_bin[ 342852 ], 28, 1 );
+    const_str_plain_NUITKA_PACKAGE_nacl_bindings = UNSTREAM_STRING( &constant_bin[ 342812 ], 28, 1 );
     PyTuple_SET_ITEM( const_tuple_076a554aafe9d5c84f720ccdaf6ae40d_tuple, 0, const_str_plain_NUITKA_PACKAGE_nacl_bindings ); Py_INCREF( const_str_plain_NUITKA_PACKAGE_nacl_bindings );
     PyTuple_SET_ITEM( const_tuple_076a554aafe9d5c84f720ccdaf6ae40d_tuple, 1, const_str_digest_5bfaf90dbd407b4fc29090c8f6415242 ); Py_INCREF( const_str_digest_5bfaf90dbd407b4fc29090c8f6415242 );
-    const_str_plain_crypto_shorthash_siphashx24_BYTES = UNSTREAM_STRING( &constant_bin[ 342880 ], 33, 1 );
+    const_str_plain_crypto_shorthash_siphashx24_BYTES = UNSTREAM_STRING( &constant_bin[ 342840 ], 33, 1 );
     const_tuple_701a6d2453d730e138282116e64c58b0_tuple = PyTuple_New( 14 );
     PyTuple_SET_ITEM( const_tuple_701a6d2453d730e138282116e64c58b0_tuple, 0, const_str_plain_crypto_generichash_BYTES ); Py_INCREF( const_str_plain_crypto_generichash_BYTES );
     PyTuple_SET_ITEM( const_tuple_701a6d2453d730e138282116e64c58b0_tuple, 1, const_str_plain_crypto_generichash_BYTES_MAX ); Py_INCREF( const_str_plain_crypto_generichash_BYTES_MAX );
@@ -238,8 +238,8 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_2d043b331bccbd22c9124dcdd011f383_tuple, 1, const_str_plain_crypto_scalarmult_BYTES ); Py_INCREF( const_str_plain_crypto_scalarmult_BYTES );
     PyTuple_SET_ITEM( const_tuple_2d043b331bccbd22c9124dcdd011f383_tuple, 2, const_str_plain_crypto_scalarmult_SCALARBYTES ); Py_INCREF( const_str_plain_crypto_scalarmult_SCALARBYTES );
     PyTuple_SET_ITEM( const_tuple_2d043b331bccbd22c9124dcdd011f383_tuple, 3, const_str_plain_crypto_scalarmult_base ); Py_INCREF( const_str_plain_crypto_scalarmult_base );
-    const_str_digest_7d5ec38c0732ecbc2579b9416e1095ce = UNSTREAM_STRING( &constant_bin[ 342913 ], 25, 0 );
-    const_str_plain_crypto_generichash_blake2b_init = UNSTREAM_STRING( &constant_bin[ 342938 ], 31, 1 );
+    const_str_digest_7d5ec38c0732ecbc2579b9416e1095ce = UNSTREAM_STRING( &constant_bin[ 342873 ], 25, 0 );
+    const_str_plain_crypto_generichash_blake2b_init = UNSTREAM_STRING( &constant_bin[ 342898 ], 31, 1 );
     const_tuple_3bbf8373ccb62e1d5bd0337392044c7e_tuple = PyTuple_New( 10 );
     PyTuple_SET_ITEM( const_tuple_3bbf8373ccb62e1d5bd0337392044c7e_tuple, 0, const_str_plain_crypto_sign ); Py_INCREF( const_str_plain_crypto_sign );
     PyTuple_SET_ITEM( const_tuple_3bbf8373ccb62e1d5bd0337392044c7e_tuple, 1, const_str_plain_crypto_sign_BYTES ); Py_INCREF( const_str_plain_crypto_sign_BYTES );
@@ -253,7 +253,7 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_3bbf8373ccb62e1d5bd0337392044c7e_tuple, 9, const_str_plain_crypto_sign_seed_keypair ); Py_INCREF( const_str_plain_crypto_sign_seed_keypair );
     const_tuple_str_plain_sodium_memcmp_tuple = PyTuple_New( 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain_sodium_memcmp_tuple, 0, const_str_plain_sodium_memcmp ); Py_INCREF( const_str_plain_sodium_memcmp );
-    const_str_plain_crypto_shorthash_siphash24_BYTES = UNSTREAM_STRING( &constant_bin[ 342969 ], 32, 1 );
+    const_str_plain_crypto_shorthash_siphash24_BYTES = UNSTREAM_STRING( &constant_bin[ 342929 ], 32, 1 );
     const_tuple_5678ed613d7da51393c811b5c4e6905a_tuple = PyTuple_New( 6 );
     PyTuple_SET_ITEM( const_tuple_5678ed613d7da51393c811b5c4e6905a_tuple, 0, const_str_plain_BYTES ); Py_INCREF( const_str_plain_BYTES );
     PyTuple_SET_ITEM( const_tuple_5678ed613d7da51393c811b5c4e6905a_tuple, 1, const_str_plain_KEYBYTES ); Py_INCREF( const_str_plain_KEYBYTES );
@@ -261,11 +261,11 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_5678ed613d7da51393c811b5c4e6905a_tuple, 3, const_str_plain_XKEYBYTES ); Py_INCREF( const_str_plain_XKEYBYTES );
     PyTuple_SET_ITEM( const_tuple_5678ed613d7da51393c811b5c4e6905a_tuple, 4, const_str_plain_crypto_shorthash_siphash24 ); Py_INCREF( const_str_plain_crypto_shorthash_siphash24 );
     PyTuple_SET_ITEM( const_tuple_5678ed613d7da51393c811b5c4e6905a_tuple, 5, const_str_plain_crypto_shorthash_siphashx24 ); Py_INCREF( const_str_plain_crypto_shorthash_siphashx24 );
-    const_str_plain_crypto_generichash_blake2b_state_copy = UNSTREAM_STRING( &constant_bin[ 343001 ], 37, 1 );
-    const_str_plain_crypto_shorthash_siphash24_KEYBYTES = UNSTREAM_STRING( &constant_bin[ 343038 ], 35, 1 );
+    const_str_plain_crypto_generichash_blake2b_state_copy = UNSTREAM_STRING( &constant_bin[ 342961 ], 37, 1 );
+    const_str_plain_crypto_shorthash_siphash24_KEYBYTES = UNSTREAM_STRING( &constant_bin[ 342998 ], 35, 1 );
     const_tuple_str_plain_randombytes_tuple = PyTuple_New( 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain_randombytes_tuple, 0, const_str_plain_randombytes ); Py_INCREF( const_str_plain_randombytes );
-    const_tuple_8aa3812e16bb67c80d283aa113add14f_tuple = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 343073 ], 2083 );
+    const_tuple_8aa3812e16bb67c80d283aa113add14f_tuple = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 343033 ], 2083 );
     const_tuple_8ded8811b26ce4c43e4a017c2b226ff3_tuple = PyTuple_New( 6 );
     PyTuple_SET_ITEM( const_tuple_8ded8811b26ce4c43e4a017c2b226ff3_tuple, 0, const_str_plain_crypto_hash ); Py_INCREF( const_str_plain_crypto_hash );
     PyTuple_SET_ITEM( const_tuple_8ded8811b26ce4c43e4a017c2b226ff3_tuple, 1, const_str_plain_crypto_hash_BYTES ); Py_INCREF( const_str_plain_crypto_hash_BYTES );
@@ -273,7 +273,7 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_8ded8811b26ce4c43e4a017c2b226ff3_tuple, 3, const_str_plain_crypto_hash_sha256_BYTES ); Py_INCREF( const_str_plain_crypto_hash_sha256_BYTES );
     PyTuple_SET_ITEM( const_tuple_8ded8811b26ce4c43e4a017c2b226ff3_tuple, 4, const_str_plain_crypto_hash_sha512 ); Py_INCREF( const_str_plain_crypto_hash_sha512 );
     PyTuple_SET_ITEM( const_tuple_8ded8811b26ce4c43e4a017c2b226ff3_tuple, 5, const_str_plain_crypto_hash_sha512_BYTES ); Py_INCREF( const_str_plain_crypto_hash_sha512_BYTES );
-    const_str_digest_56bad0912fd812c5f3071de38f278cdb = UNSTREAM_STRING( &constant_bin[ 345156 ], 22, 0 );
+    const_str_digest_56bad0912fd812c5f3071de38f278cdb = UNSTREAM_STRING( &constant_bin[ 345116 ], 22, 0 );
     const_tuple_str_plain_sodium_init_tuple = PyTuple_New( 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain_sodium_init_tuple, 0, const_str_plain_sodium_init ); Py_INCREF( const_str_plain_sodium_init );
     const_tuple_b0ec598a0573f7f7c6cd2538492678e4_tuple = PyTuple_New( 6 );
@@ -301,7 +301,7 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_a074d0ef280c96356e50adbc0dfe6e02_tuple, 14, const_str_plain_crypto_box_seal ); Py_INCREF( const_str_plain_crypto_box_seal );
     PyTuple_SET_ITEM( const_tuple_a074d0ef280c96356e50adbc0dfe6e02_tuple, 15, const_str_plain_crypto_box_seal_open ); Py_INCREF( const_str_plain_crypto_box_seal_open );
     PyTuple_SET_ITEM( const_tuple_a074d0ef280c96356e50adbc0dfe6e02_tuple, 16, const_str_plain_crypto_box_seed_keypair ); Py_INCREF( const_str_plain_crypto_box_seed_keypair );
-    const_list_9b31ac6b7e6750ebaf27aca4f38ad7de_list = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 345178 ], 3903 );
+    const_list_9b31ac6b7e6750ebaf27aca4f38ad7de_list = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 345138 ], 3903 );
 
     constants_created = true;
 }

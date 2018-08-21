@@ -67,10 +67,10 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_b7f543b7e3e6754930f0c80def2cb266 = UNSTREAM_STRING( &constant_bin[ 699522 ], 32, 0 );
-    const_str_digest_2f4b1b0034e692c8dff4882750d407ad = UNSTREAM_STRING( &constant_bin[ 699554 ], 26, 0 );
-    const_str_digest_4c993b941e6484511d1f13456a14298d = UNSTREAM_STRING( &constant_bin[ 699530 ], 23, 0 );
-    const_str_digest_f27551d1f135d7244d2b1fd90f5580da = UNSTREAM_STRING( &constant_bin[ 699580 ], 38, 0 );
+    const_str_digest_b7f543b7e3e6754930f0c80def2cb266 = UNSTREAM_STRING( &constant_bin[ 699482 ], 32, 0 );
+    const_str_digest_2f4b1b0034e692c8dff4882750d407ad = UNSTREAM_STRING( &constant_bin[ 699514 ], 26, 0 );
+    const_str_digest_4c993b941e6484511d1f13456a14298d = UNSTREAM_STRING( &constant_bin[ 699490 ], 23, 0 );
+    const_str_digest_f27551d1f135d7244d2b1fd90f5580da = UNSTREAM_STRING( &constant_bin[ 699540 ], 38, 0 );
     const_tuple_str_plain_RouterOsApiError_tuple_type_Exception_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_RouterOsApiError_tuple_type_Exception_tuple_tuple, 0, const_str_plain_RouterOsApiError ); Py_INCREF( const_str_plain_RouterOsApiError );
     PyTuple_SET_ITEM( const_tuple_str_plain_RouterOsApiError_tuple_type_Exception_tuple_tuple, 1, const_tuple_type_Exception_tuple ); Py_INCREF( const_tuple_type_Exception_tuple );

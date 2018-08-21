@@ -174,32 +174,32 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_0398d30b8fb35c3aa347eb29ec26e8bc = UNSTREAM_STRING( &constant_bin[ 450781 ], 143, 0 );
-    const_str_digest_b125229e08f753cd0e9fc49ae9632a7d = UNSTREAM_STRING( &constant_bin[ 450924 ], 27, 0 );
-    const_str_digest_58732769351a72d1ad691692e763088b = UNSTREAM_STRING( &constant_bin[ 450951 ], 22, 0 );
-    const_str_plain__MSG_KEXDH_INIT = UNSTREAM_STRING( &constant_bin[ 450973 ], 15, 1 );
+    const_str_digest_0398d30b8fb35c3aa347eb29ec26e8bc = UNSTREAM_STRING( &constant_bin[ 450741 ], 143, 0 );
+    const_str_digest_b125229e08f753cd0e9fc49ae9632a7d = UNSTREAM_STRING( &constant_bin[ 450884 ], 27, 0 );
+    const_str_digest_58732769351a72d1ad691692e763088b = UNSTREAM_STRING( &constant_bin[ 450911 ], 22, 0 );
+    const_str_plain__MSG_KEXDH_INIT = UNSTREAM_STRING( &constant_bin[ 450933 ], 15, 1 );
     const_tuple_str_plain_self_str_plain_x_bytes_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_self_str_plain_x_bytes_tuple, 0, const_str_plain_self ); Py_INCREF( const_str_plain_self );
     PyTuple_SET_ITEM( const_tuple_str_plain_self_str_plain_x_bytes_tuple, 1, const_str_plain_x_bytes ); Py_INCREF( const_str_plain_x_bytes );
-    const_str_digest_f8c0a1c41957bbfb3b4f7ba48eae068a = UNSTREAM_STRING( &constant_bin[ 450988 ], 28, 0 );
-    const_str_plain_c_MSG_KEXDH_REPLY = UNSTREAM_STRING( &constant_bin[ 451016 ], 17, 1 );
-    const_str_digest_2630d659e95c7739cc61f01e32ea7ccf = UNSTREAM_STRING( &constant_bin[ 451033 ], 28, 0 );
+    const_str_digest_f8c0a1c41957bbfb3b4f7ba48eae068a = UNSTREAM_STRING( &constant_bin[ 450948 ], 28, 0 );
+    const_str_plain_c_MSG_KEXDH_REPLY = UNSTREAM_STRING( &constant_bin[ 450976 ], 17, 1 );
+    const_str_digest_2630d659e95c7739cc61f01e32ea7ccf = UNSTREAM_STRING( &constant_bin[ 450993 ], 28, 0 );
     const_tuple_str_plain_KexGroup1_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_KexGroup1_tuple_type_object_tuple_tuple, 0, const_str_plain_KexGroup1 ); Py_INCREF( const_str_plain_KexGroup1 );
     PyTuple_SET_ITEM( const_tuple_str_plain_KexGroup1_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
-    const_str_digest_c86096a8e82899f888889dd0dce78a58 = UNSTREAM_STRING( &constant_bin[ 451061 ], 21, 0 );
-    const_str_plain_c_MSG_KEXDH_INIT = UNSTREAM_STRING( &constant_bin[ 451082 ], 16, 1 );
-    const_str_digest_c246aa3f4c0516b697bb9139b6a0ffa3 = UNSTREAM_STRING( &constant_bin[ 451098 ], 20, 0 );
-    const_str_digest_c47935721233e11997cf6d625b373b4b = UNSTREAM_STRING( &constant_bin[ 451118 ], 18, 0 );
+    const_str_digest_c86096a8e82899f888889dd0dce78a58 = UNSTREAM_STRING( &constant_bin[ 451021 ], 21, 0 );
+    const_str_plain_c_MSG_KEXDH_INIT = UNSTREAM_STRING( &constant_bin[ 451042 ], 16, 1 );
+    const_str_digest_c246aa3f4c0516b697bb9139b6a0ffa3 = UNSTREAM_STRING( &constant_bin[ 451058 ], 20, 0 );
+    const_str_digest_c47935721233e11997cf6d625b373b4b = UNSTREAM_STRING( &constant_bin[ 451078 ], 18, 0 );
     const_tuple_str_plain_byte_chr_str_plain_long_str_plain_byte_mask_tuple = PyTuple_New( 3 );
     PyTuple_SET_ITEM( const_tuple_str_plain_byte_chr_str_plain_long_str_plain_byte_mask_tuple, 0, const_str_plain_byte_chr ); Py_INCREF( const_str_plain_byte_chr );
     PyTuple_SET_ITEM( const_tuple_str_plain_byte_chr_str_plain_long_str_plain_byte_mask_tuple, 1, const_str_plain_long ); Py_INCREF( const_str_plain_long );
     PyTuple_SET_ITEM( const_tuple_str_plain_byte_chr_str_plain_long_str_plain_byte_mask_tuple, 2, const_str_plain_byte_mask ); Py_INCREF( const_str_plain_byte_mask );
-    const_str_digest_a9671d83662b8970ce1efe29d496235b = UNSTREAM_STRING( &constant_bin[ 451136 ], 42, 0 );
-    const_str_digest_3deea568a76bc1e75597b56d47bcb870 = UNSTREAM_STRING( &constant_bin[ 451178 ], 19, 0 );
-    const_str_plain__parse_kexdh_reply = UNSTREAM_STRING( &constant_bin[ 451043 ], 18, 1 );
-    const_str_plain__MSG_KEXDH_REPLY = UNSTREAM_STRING( &constant_bin[ 451017 ], 16, 1 );
-    const_str_plain__parse_kexdh_init = UNSTREAM_STRING( &constant_bin[ 450934 ], 17, 1 );
+    const_str_digest_a9671d83662b8970ce1efe29d496235b = UNSTREAM_STRING( &constant_bin[ 451096 ], 42, 0 );
+    const_str_digest_3deea568a76bc1e75597b56d47bcb870 = UNSTREAM_STRING( &constant_bin[ 451138 ], 19, 0 );
+    const_str_plain__parse_kexdh_reply = UNSTREAM_STRING( &constant_bin[ 451003 ], 18, 1 );
+    const_str_plain__MSG_KEXDH_REPLY = UNSTREAM_STRING( &constant_bin[ 450977 ], 16, 1 );
+    const_str_plain__parse_kexdh_init = UNSTREAM_STRING( &constant_bin[ 450894 ], 17, 1 );
 
     constants_created = true;
 }

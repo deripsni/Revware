@@ -93,9 +93,9 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_bac37bceeb18017a6aa94e7e5579c293 = UNSTREAM_STRING( &constant_bin[ 361247 ], 39, 0 );
-    const_str_digest_48b3f98c21aadd1ad43156a0c855588e = UNSTREAM_STRING( &constant_bin[ 361286 ], 17, 0 );
-    const_str_plain_crypto_secretbox_keybytes = UNSTREAM_STRING( &constant_bin[ 361303 ], 25, 1 );
+    const_str_digest_bac37bceeb18017a6aa94e7e5579c293 = UNSTREAM_STRING( &constant_bin[ 361207 ], 39, 0 );
+    const_str_digest_48b3f98c21aadd1ad43156a0c855588e = UNSTREAM_STRING( &constant_bin[ 361246 ], 17, 0 );
+    const_str_plain_crypto_secretbox_keybytes = UNSTREAM_STRING( &constant_bin[ 361263 ], 25, 1 );
     const_tuple_638e02ad3646aac6c5e712eac7efc82d_tuple = PyTuple_New( 6 );
     PyTuple_SET_ITEM( const_tuple_638e02ad3646aac6c5e712eac7efc82d_tuple, 0, const_str_plain_message ); Py_INCREF( const_str_plain_message );
     PyTuple_SET_ITEM( const_tuple_638e02ad3646aac6c5e712eac7efc82d_tuple, 1, const_str_plain_nonce ); Py_INCREF( const_str_plain_nonce );
@@ -103,10 +103,10 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_638e02ad3646aac6c5e712eac7efc82d_tuple, 3, const_str_plain_res ); Py_INCREF( const_str_plain_res );
     PyTuple_SET_ITEM( const_tuple_638e02ad3646aac6c5e712eac7efc82d_tuple, 4, const_str_plain_padded ); Py_INCREF( const_str_plain_padded );
     PyTuple_SET_ITEM( const_tuple_638e02ad3646aac6c5e712eac7efc82d_tuple, 5, const_str_plain_ciphertext ); Py_INCREF( const_str_plain_ciphertext );
-    const_str_digest_274a40ef4392d07f58e0c2a43af8f342 = UNSTREAM_STRING( &constant_bin[ 361328 ], 198, 0 );
-    const_str_plain_crypto_secretbox_zerobytes = UNSTREAM_STRING( &constant_bin[ 361526 ], 26, 1 );
-    const_str_plain_crypto_secretbox_noncebytes = UNSTREAM_STRING( &constant_bin[ 361552 ], 27, 1 );
-    const_str_digest_8296a9c7c4b3affefe07f6bc5404af5f = UNSTREAM_STRING( &constant_bin[ 361579 ], 33, 0 );
+    const_str_digest_274a40ef4392d07f58e0c2a43af8f342 = UNSTREAM_STRING( &constant_bin[ 361288 ], 198, 0 );
+    const_str_plain_crypto_secretbox_zerobytes = UNSTREAM_STRING( &constant_bin[ 361486 ], 26, 1 );
+    const_str_plain_crypto_secretbox_noncebytes = UNSTREAM_STRING( &constant_bin[ 361512 ], 27, 1 );
+    const_str_digest_8296a9c7c4b3affefe07f6bc5404af5f = UNSTREAM_STRING( &constant_bin[ 361539 ], 33, 0 );
     const_tuple_4dd66d1efbee077b897c3508b687fee7_tuple = PyTuple_New( 6 );
     PyTuple_SET_ITEM( const_tuple_4dd66d1efbee077b897c3508b687fee7_tuple, 0, const_str_plain_ciphertext ); Py_INCREF( const_str_plain_ciphertext );
     PyTuple_SET_ITEM( const_tuple_4dd66d1efbee077b897c3508b687fee7_tuple, 1, const_str_plain_nonce ); Py_INCREF( const_str_plain_nonce );
@@ -114,9 +114,9 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_4dd66d1efbee077b897c3508b687fee7_tuple, 3, const_str_plain_res ); Py_INCREF( const_str_plain_res );
     PyTuple_SET_ITEM( const_tuple_4dd66d1efbee077b897c3508b687fee7_tuple, 4, const_str_plain_plaintext ); Py_INCREF( const_str_plain_plaintext );
     PyTuple_SET_ITEM( const_tuple_4dd66d1efbee077b897c3508b687fee7_tuple, 5, const_str_plain_padded ); Py_INCREF( const_str_plain_padded );
-    const_str_digest_128bd213bb2b8f7d31b60549ad72525f = UNSTREAM_STRING( &constant_bin[ 361612 ], 49, 0 );
-    const_str_plain_crypto_secretbox_boxzerobytes = UNSTREAM_STRING( &constant_bin[ 361661 ], 29, 1 );
-    const_str_digest_e5e2af8703f08c9b9079b33d73ab70ad = UNSTREAM_STRING( &constant_bin[ 361690 ], 213, 0 );
+    const_str_digest_128bd213bb2b8f7d31b60549ad72525f = UNSTREAM_STRING( &constant_bin[ 361572 ], 49, 0 );
+    const_str_plain_crypto_secretbox_boxzerobytes = UNSTREAM_STRING( &constant_bin[ 361621 ], 29, 1 );
+    const_str_digest_e5e2af8703f08c9b9079b33d73ab70ad = UNSTREAM_STRING( &constant_bin[ 361650 ], 213, 0 );
 
     constants_created = true;
 }

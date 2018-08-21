@@ -68,14 +68,14 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_6d97180dc2ddb79a9fcfe7151ae0361c = UNSTREAM_STRING( &constant_bin[ 151878 ], 53, 0 );
-    const_str_plain_compare_digest = UNSTREAM_STRING( &constant_bin[ 151931 ], 14, 1 );
-    const_str_digest_8b49f949e4bea362e906f1be645023df = UNSTREAM_STRING( &constant_bin[ 151945 ], 22, 0 );
-    const_str_plain_Cryptography_constant_time_bytes_eq = UNSTREAM_STRING( &constant_bin[ 151967 ], 35, 1 );
-    const_str_digest_524818e77c440fd203e039b3488daf8b = UNSTREAM_STRING( &constant_bin[ 151886 ], 44, 0 );
-    const_str_digest_157cbdd622914fc29116098da624bcc6 = UNSTREAM_STRING( &constant_bin[ 152002 ], 47, 0 );
-    const_str_digest_cfe72c0ac20443521cae7f22dfce5cb3 = UNSTREAM_STRING( &constant_bin[ 152049 ], 43, 0 );
-    const_str_digest_e145c1a532f5990b5d88e1ff0e990547 = UNSTREAM_STRING( &constant_bin[ 152092 ], 189, 0 );
+    const_str_digest_6d97180dc2ddb79a9fcfe7151ae0361c = UNSTREAM_STRING( &constant_bin[ 151838 ], 53, 0 );
+    const_str_plain_compare_digest = UNSTREAM_STRING( &constant_bin[ 151891 ], 14, 1 );
+    const_str_digest_8b49f949e4bea362e906f1be645023df = UNSTREAM_STRING( &constant_bin[ 151905 ], 22, 0 );
+    const_str_plain_Cryptography_constant_time_bytes_eq = UNSTREAM_STRING( &constant_bin[ 151927 ], 35, 1 );
+    const_str_digest_524818e77c440fd203e039b3488daf8b = UNSTREAM_STRING( &constant_bin[ 151846 ], 44, 0 );
+    const_str_digest_157cbdd622914fc29116098da624bcc6 = UNSTREAM_STRING( &constant_bin[ 151962 ], 47, 0 );
+    const_str_digest_cfe72c0ac20443521cae7f22dfce5cb3 = UNSTREAM_STRING( &constant_bin[ 152009 ], 43, 0 );
+    const_str_digest_e145c1a532f5990b5d88e1ff0e990547 = UNSTREAM_STRING( &constant_bin[ 152052 ], 189, 0 );
     const_tuple_str_plain_a_str_plain_b_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_a_str_plain_b_tuple, 0, const_str_plain_a ); Py_INCREF( const_str_plain_a );
     PyTuple_SET_ITEM( const_tuple_str_plain_a_str_plain_b_tuple, 1, const_str_plain_b ); Py_INCREF( const_str_plain_b );

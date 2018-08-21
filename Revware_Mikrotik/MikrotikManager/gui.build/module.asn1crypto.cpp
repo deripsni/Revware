@@ -66,9 +66,9 @@ static void createModuleConstants( void )
     const_list_str_plain___version___str_plain___version_info___list = PyList_New( 2 );
     PyList_SET_ITEM( const_list_str_plain___version___str_plain___version_info___list, 0, const_str_plain___version__ ); Py_INCREF( const_str_plain___version__ );
     PyList_SET_ITEM( const_list_str_plain___version___str_plain___version_info___list, 1, const_str_plain___version_info__ ); Py_INCREF( const_str_plain___version_info__ );
-    const_str_digest_2df2ef73d40e3b7476c4a3d86df8877d = UNSTREAM_STRING( &constant_bin[ 5050 ], 22, 0 );
-    const_str_digest_d3f736d24da8b4d682f6bf78dc051281 = UNSTREAM_STRING( &constant_bin[ 5072 ], 19, 0 );
-    const_str_plain_asn1crypto = UNSTREAM_STRING( &constant_bin[ 5050 ], 10, 1 );
+    const_str_digest_2df2ef73d40e3b7476c4a3d86df8877d = UNSTREAM_STRING( &constant_bin[ 5010 ], 22, 0 );
+    const_str_digest_d3f736d24da8b4d682f6bf78dc051281 = UNSTREAM_STRING( &constant_bin[ 5032 ], 19, 0 );
+    const_str_plain_asn1crypto = UNSTREAM_STRING( &constant_bin[ 5010 ], 10, 1 );
 
     constants_created = true;
 }

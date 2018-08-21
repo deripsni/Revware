@@ -84,11 +84,11 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_str_plain_message_str_plain_rc_str_plain_digest_tuple, 0, const_str_plain_message ); Py_INCREF( const_str_plain_message );
     PyTuple_SET_ITEM( const_tuple_str_plain_message_str_plain_rc_str_plain_digest_tuple, 1, const_str_plain_rc ); Py_INCREF( const_str_plain_rc );
     PyTuple_SET_ITEM( const_tuple_str_plain_message_str_plain_rc_str_plain_digest_tuple, 2, const_str_plain_digest ); Py_INCREF( const_str_plain_digest );
-    const_str_digest_c5b6ec507818d57e2a2b10ddca9cb558 = UNSTREAM_STRING( &constant_bin[ 355037 ], 98, 0 );
-    const_str_plain_crypto_hash_sha256_bytes = UNSTREAM_STRING( &constant_bin[ 355135 ], 24, 1 );
-    const_str_digest_4dbfef528d1a4d07beb8cbb76a3a592c = UNSTREAM_STRING( &constant_bin[ 355159 ], 34, 0 );
-    const_str_plain_crypto_hash_sha512_bytes = UNSTREAM_STRING( &constant_bin[ 355193 ], 24, 1 );
-    const_str_digest_c18d8c556d08428fa215d9605c2e296d = UNSTREAM_STRING( &constant_bin[ 355217 ], 28, 0 );
+    const_str_digest_c5b6ec507818d57e2a2b10ddca9cb558 = UNSTREAM_STRING( &constant_bin[ 354997 ], 98, 0 );
+    const_str_plain_crypto_hash_sha256_bytes = UNSTREAM_STRING( &constant_bin[ 355095 ], 24, 1 );
+    const_str_digest_4dbfef528d1a4d07beb8cbb76a3a592c = UNSTREAM_STRING( &constant_bin[ 355119 ], 34, 0 );
+    const_str_plain_crypto_hash_sha512_bytes = UNSTREAM_STRING( &constant_bin[ 355153 ], 24, 1 );
+    const_str_digest_c18d8c556d08428fa215d9605c2e296d = UNSTREAM_STRING( &constant_bin[ 355177 ], 28, 0 );
 
     constants_created = true;
 }

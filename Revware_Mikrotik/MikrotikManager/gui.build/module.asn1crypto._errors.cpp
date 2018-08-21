@@ -67,14 +67,14 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_2b588ef3ff5d0d01f9315b5f4bbda486 = UNSTREAM_STRING( &constant_bin[ 9666 ], 25, 0 );
-    const_str_digest_bfd42c8ae74f5b4221d5535953ddfbfe = UNSTREAM_STRING( &constant_bin[ 9691 ], 27, 0 );
-    const_str_digest_f635afea213071192ae0c119793f15ea = UNSTREAM_STRING( &constant_bin[ 9718 ], 351, 0 );
-    const_str_plain_dedent = UNSTREAM_STRING( &constant_bin[ 9781 ], 6, 1 );
-    const_str_digest_c0da26603f4e32aab6794f7b17964a91 = UNSTREAM_STRING( &constant_bin[ 10069 ], 21, 0 );
-    const_str_digest_2099d9f5b7c0d938d93d2e59e2e95252 = UNSTREAM_STRING( &constant_bin[ 10090 ], 85, 0 );
-    const_str_plain_textwrap = UNSTREAM_STRING( &constant_bin[ 10175 ], 8, 1 );
-    const_str_digest_605fdecd174127592ba0089489615969 = UNSTREAM_STRING( &constant_bin[ 9699 ], 18, 0 );
+    const_str_digest_2b588ef3ff5d0d01f9315b5f4bbda486 = UNSTREAM_STRING( &constant_bin[ 9626 ], 25, 0 );
+    const_str_digest_bfd42c8ae74f5b4221d5535953ddfbfe = UNSTREAM_STRING( &constant_bin[ 9651 ], 27, 0 );
+    const_str_digest_f635afea213071192ae0c119793f15ea = UNSTREAM_STRING( &constant_bin[ 9678 ], 351, 0 );
+    const_str_plain_dedent = UNSTREAM_STRING( &constant_bin[ 9741 ], 6, 1 );
+    const_str_digest_c0da26603f4e32aab6794f7b17964a91 = UNSTREAM_STRING( &constant_bin[ 10029 ], 21, 0 );
+    const_str_digest_2099d9f5b7c0d938d93d2e59e2e95252 = UNSTREAM_STRING( &constant_bin[ 10050 ], 85, 0 );
+    const_str_plain_textwrap = UNSTREAM_STRING( &constant_bin[ 10135 ], 8, 1 );
+    const_str_digest_605fdecd174127592ba0089489615969 = UNSTREAM_STRING( &constant_bin[ 9659 ], 18, 0 );
     const_tuple_str_plain_string_str_plain_params_str_plain_output_tuple = PyTuple_New( 3 );
     PyTuple_SET_ITEM( const_tuple_str_plain_string_str_plain_params_str_plain_output_tuple, 0, const_str_plain_string ); Py_INCREF( const_str_plain_string );
     PyTuple_SET_ITEM( const_tuple_str_plain_string_str_plain_params_str_plain_output_tuple, 1, const_str_plain_params ); Py_INCREF( const_str_plain_params );

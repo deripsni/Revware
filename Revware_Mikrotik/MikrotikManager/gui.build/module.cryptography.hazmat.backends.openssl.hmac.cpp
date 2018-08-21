@@ -138,23 +138,23 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_5c0308c4d29aeb9a06a2642b14b3e821 = UNSTREAM_STRING( &constant_bin[ 126885 ], 43, 0 );
-    const_str_digest_871695c206934809ee5e3f974763c7d0 = UNSTREAM_STRING( &constant_bin[ 127145 ], 19, 0 );
-    const_str_plain_HMAC_Update = UNSTREAM_STRING( &constant_bin[ 127164 ], 11, 1 );
+    const_str_digest_5c0308c4d29aeb9a06a2642b14b3e821 = UNSTREAM_STRING( &constant_bin[ 126845 ], 43, 0 );
+    const_str_digest_871695c206934809ee5e3f974763c7d0 = UNSTREAM_STRING( &constant_bin[ 127105 ], 19, 0 );
+    const_str_plain_HMAC_Update = UNSTREAM_STRING( &constant_bin[ 127124 ], 11, 1 );
     const_tuple_str_plain_constant_time_str_plain_hashes_str_plain_mac_tuple = PyTuple_New( 3 );
     PyTuple_SET_ITEM( const_tuple_str_plain_constant_time_str_plain_hashes_str_plain_mac_tuple, 0, const_str_plain_constant_time ); Py_INCREF( const_str_plain_constant_time );
     PyTuple_SET_ITEM( const_tuple_str_plain_constant_time_str_plain_hashes_str_plain_mac_tuple, 1, const_str_plain_hashes ); Py_INCREF( const_str_plain_hashes );
     PyTuple_SET_ITEM( const_tuple_str_plain_constant_time_str_plain_hashes_str_plain_mac_tuple, 2, const_str_plain_mac ); Py_INCREF( const_str_plain_mac );
-    const_str_plain_HMAC_Final = UNSTREAM_STRING( &constant_bin[ 127175 ], 10, 1 );
-    const_str_digest_119afacb78a06eb24b4acccfe2636827 = UNSTREAM_STRING( &constant_bin[ 127185 ], 19, 0 );
-    const_str_plain_HMAC_Init_ex = UNSTREAM_STRING( &constant_bin[ 127204 ], 12, 1 );
-    const_str_digest_fda50a44ceaaa08cdbf91d160ab8da54 = UNSTREAM_STRING( &constant_bin[ 127216 ], 21, 0 );
-    const_str_digest_42be6b1b913f3de024ae454615b670a5 = UNSTREAM_STRING( &constant_bin[ 127237 ], 50, 0 );
-    const_str_digest_fbfd4018b7df89665f6567bb403c8dd5 = UNSTREAM_STRING( &constant_bin[ 127287 ], 21, 0 );
+    const_str_plain_HMAC_Final = UNSTREAM_STRING( &constant_bin[ 127135 ], 10, 1 );
+    const_str_digest_119afacb78a06eb24b4acccfe2636827 = UNSTREAM_STRING( &constant_bin[ 127145 ], 19, 0 );
+    const_str_plain_HMAC_Init_ex = UNSTREAM_STRING( &constant_bin[ 127164 ], 12, 1 );
+    const_str_digest_fda50a44ceaaa08cdbf91d160ab8da54 = UNSTREAM_STRING( &constant_bin[ 127176 ], 21, 0 );
+    const_str_digest_42be6b1b913f3de024ae454615b670a5 = UNSTREAM_STRING( &constant_bin[ 127197 ], 50, 0 );
+    const_str_digest_fbfd4018b7df89665f6567bb403c8dd5 = UNSTREAM_STRING( &constant_bin[ 127247 ], 21, 0 );
     const_tuple_str_plain__HMACContext_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain__HMACContext_tuple_type_object_tuple_tuple, 0, const_str_plain__HMACContext ); Py_INCREF( const_str_plain__HMACContext );
     PyTuple_SET_ITEM( const_tuple_str_plain__HMACContext_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
-    const_str_digest_2cbcfa830d5c9e3bf7d1e1875ec03723 = UNSTREAM_STRING( &constant_bin[ 127308 ], 17, 0 );
+    const_str_digest_2cbcfa830d5c9e3bf7d1e1875ec03723 = UNSTREAM_STRING( &constant_bin[ 127268 ], 17, 0 );
     const_tuple_4ee567c64756d549ca80134660e9fd73_tuple = PyTuple_New( 8 );
     PyTuple_SET_ITEM( const_tuple_4ee567c64756d549ca80134660e9fd73_tuple, 0, const_str_plain_self ); Py_INCREF( const_str_plain_self );
     PyTuple_SET_ITEM( const_tuple_4ee567c64756d549ca80134660e9fd73_tuple, 1, const_str_plain_backend ); Py_INCREF( const_str_plain_backend );
@@ -164,10 +164,10 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_4ee567c64756d549ca80134660e9fd73_tuple, 5, const_str_plain_res ); Py_INCREF( const_str_plain_res );
     PyTuple_SET_ITEM( const_tuple_4ee567c64756d549ca80134660e9fd73_tuple, 6, const_str_plain_name ); Py_INCREF( const_str_plain_name );
     PyTuple_SET_ITEM( const_tuple_4ee567c64756d549ca80134660e9fd73_tuple, 7, const_str_plain_evp_md ); Py_INCREF( const_str_plain_evp_md );
-    const_str_plain_Cryptography_HMAC_CTX_free = UNSTREAM_STRING( &constant_bin[ 127325 ], 26, 1 );
-    const_str_digest_e7095f43c048a5f34bc015e1824b99b9 = UNSTREAM_STRING( &constant_bin[ 127351 ], 44, 0 );
-    const_str_plain_HMAC_CTX_copy = UNSTREAM_STRING( &constant_bin[ 127395 ], 13, 1 );
-    const_str_plain_Cryptography_HMAC_CTX_new = UNSTREAM_STRING( &constant_bin[ 127408 ], 25, 1 );
+    const_str_plain_Cryptography_HMAC_CTX_free = UNSTREAM_STRING( &constant_bin[ 127285 ], 26, 1 );
+    const_str_digest_e7095f43c048a5f34bc015e1824b99b9 = UNSTREAM_STRING( &constant_bin[ 127311 ], 44, 0 );
+    const_str_plain_HMAC_CTX_copy = UNSTREAM_STRING( &constant_bin[ 127355 ], 13, 1 );
+    const_str_plain_Cryptography_HMAC_CTX_new = UNSTREAM_STRING( &constant_bin[ 127368 ], 25, 1 );
 
     constants_created = true;
 }

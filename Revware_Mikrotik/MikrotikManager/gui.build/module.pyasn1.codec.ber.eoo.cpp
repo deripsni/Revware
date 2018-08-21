@@ -75,17 +75,17 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_a825e74d9ae491e4c11c5482907f2c1a = UNSTREAM_STRING( &constant_bin[ 617207 ], 20, 0 );
-    const_str_digest_8c6ddcf233fcffdd9a0286cd72f951ad = UNSTREAM_STRING( &constant_bin[ 617227 ], 29, 0 );
+    const_str_digest_a825e74d9ae491e4c11c5482907f2c1a = UNSTREAM_STRING( &constant_bin[ 617167 ], 20, 0 );
+    const_str_digest_8c6ddcf233fcffdd9a0286cd72f951ad = UNSTREAM_STRING( &constant_bin[ 617187 ], 29, 0 );
     const_tuple_str_plain_cls_str_plain_args_str_plain_kwargs_tuple = PyTuple_New( 3 );
     PyTuple_SET_ITEM( const_tuple_str_plain_cls_str_plain_args_str_plain_kwargs_tuple, 0, const_str_plain_cls ); Py_INCREF( const_str_plain_cls );
     PyTuple_SET_ITEM( const_tuple_str_plain_cls_str_plain_args_str_plain_kwargs_tuple, 1, const_str_plain_args ); Py_INCREF( const_str_plain_args );
     PyTuple_SET_ITEM( const_tuple_str_plain_cls_str_plain_args_str_plain_kwargs_tuple, 2, const_str_plain_kwargs ); Py_INCREF( const_str_plain_kwargs );
-    const_str_plain_EndOfOctets = UNSTREAM_STRING( &constant_bin[ 616129 ], 11, 1 );
-    const_str_digest_9f14fccb9c67fd2a52ccef9fd539873e = UNSTREAM_STRING( &constant_bin[ 617256 ], 19, 0 );
+    const_str_plain_EndOfOctets = UNSTREAM_STRING( &constant_bin[ 616089 ], 11, 1 );
+    const_str_digest_9f14fccb9c67fd2a52ccef9fd539873e = UNSTREAM_STRING( &constant_bin[ 617216 ], 19, 0 );
     const_list_str_plain_endOfOctets_list = PyList_New( 1 );
     PyList_SET_ITEM( const_list_str_plain_endOfOctets_list, 0, const_str_plain_endOfOctets ); Py_INCREF( const_str_plain_endOfOctets );
-    const_str_digest_004c97326163dc8ff2e29dee36dfec38 = UNSTREAM_STRING( &constant_bin[ 617275 ], 23, 0 );
+    const_str_digest_004c97326163dc8ff2e29dee36dfec38 = UNSTREAM_STRING( &constant_bin[ 617235 ], 23, 0 );
 
     constants_created = true;
 }

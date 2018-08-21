@@ -77,23 +77,23 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_plain_decompressobj = UNSTREAM_STRING( &constant_bin[ 431537 ], 13, 1 );
+    const_str_plain_decompressobj = UNSTREAM_STRING( &constant_bin[ 431497 ], 13, 1 );
     const_tuple_str_plain_ZlibCompressor_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_ZlibCompressor_tuple_type_object_tuple_tuple, 0, const_str_plain_ZlibCompressor ); Py_INCREF( const_str_plain_ZlibCompressor );
     PyTuple_SET_ITEM( const_tuple_str_plain_ZlibCompressor_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
-    const_str_digest_ef086843c67df9f33e29beff6ab6e873 = UNSTREAM_STRING( &constant_bin[ 431550 ], 20, 0 );
+    const_str_digest_ef086843c67df9f33e29beff6ab6e873 = UNSTREAM_STRING( &constant_bin[ 431510 ], 20, 0 );
     const_tuple_str_plain_ZlibDecompressor_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_ZlibDecompressor_tuple_type_object_tuple_tuple, 0, const_str_plain_ZlibDecompressor ); Py_INCREF( const_str_plain_ZlibDecompressor );
     PyTuple_SET_ITEM( const_tuple_str_plain_ZlibDecompressor_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
-    const_str_digest_ef7a21acf721a0fbd0ef05efb4d24894 = UNSTREAM_STRING( &constant_bin[ 431570 ], 23, 0 );
-    const_str_plain_compressobj = UNSTREAM_STRING( &constant_bin[ 431539 ], 11, 1 );
-    const_str_digest_858479e25f61a60390a178fa189352f2 = UNSTREAM_STRING( &constant_bin[ 431593 ], 25, 0 );
-    const_str_digest_d2e523f806232a07323881a829d71905 = UNSTREAM_STRING( &constant_bin[ 431618 ], 25, 0 );
-    const_str_plain_decompress = UNSTREAM_STRING( &constant_bin[ 431537 ], 10, 1 );
-    const_str_digest_30fda9cae8537572c79c74a206f12d83 = UNSTREAM_STRING( &constant_bin[ 431643 ], 46, 0 );
-    const_str_digest_8d27da5e903496168569847df74840b6 = UNSTREAM_STRING( &constant_bin[ 431689 ], 26, 0 );
-    const_str_digest_7b59ffd1e2aaa758a60ad25f4cd3d4f7 = UNSTREAM_STRING( &constant_bin[ 431715 ], 23, 0 );
-    const_str_plain_Z_FULL_FLUSH = UNSTREAM_STRING( &constant_bin[ 431738 ], 12, 1 );
+    const_str_digest_ef7a21acf721a0fbd0ef05efb4d24894 = UNSTREAM_STRING( &constant_bin[ 431530 ], 23, 0 );
+    const_str_plain_compressobj = UNSTREAM_STRING( &constant_bin[ 431499 ], 11, 1 );
+    const_str_digest_858479e25f61a60390a178fa189352f2 = UNSTREAM_STRING( &constant_bin[ 431553 ], 25, 0 );
+    const_str_digest_d2e523f806232a07323881a829d71905 = UNSTREAM_STRING( &constant_bin[ 431578 ], 25, 0 );
+    const_str_plain_decompress = UNSTREAM_STRING( &constant_bin[ 431497 ], 10, 1 );
+    const_str_digest_30fda9cae8537572c79c74a206f12d83 = UNSTREAM_STRING( &constant_bin[ 431603 ], 46, 0 );
+    const_str_digest_8d27da5e903496168569847df74840b6 = UNSTREAM_STRING( &constant_bin[ 431649 ], 26, 0 );
+    const_str_digest_7b59ffd1e2aaa758a60ad25f4cd3d4f7 = UNSTREAM_STRING( &constant_bin[ 431675 ], 23, 0 );
+    const_str_plain_Z_FULL_FLUSH = UNSTREAM_STRING( &constant_bin[ 431698 ], 12, 1 );
 
     constants_created = true;
 }

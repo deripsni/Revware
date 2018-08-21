@@ -64,12 +64,12 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_7c82c874b5f47ad9a9f9336b7d576587 = UNSTREAM_STRING( &constant_bin[ 694462 ], 21, 0 );
+    const_str_digest_7c82c874b5f47ad9a9f9336b7d576587 = UNSTREAM_STRING( &constant_bin[ 694422 ], 21, 0 );
     const_tuple_str_plain_connect_tuple = PyTuple_New( 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain_connect_tuple, 0, const_str_plain_connect ); Py_INCREF( const_str_plain_connect );
     const_tuple_str_plain_RouterOsApiPool_tuple = PyTuple_New( 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain_RouterOsApiPool_tuple, 0, const_str_plain_RouterOsApiPool ); Py_INCREF( const_str_plain_RouterOsApiPool );
-    const_str_digest_374ebe34231feeea77e0f42be04a84aa = UNSTREAM_STRING( &constant_bin[ 694483 ], 24, 0 );
+    const_str_digest_374ebe34231feeea77e0f42be04a84aa = UNSTREAM_STRING( &constant_bin[ 694443 ], 24, 0 );
     const_list_2541c3598968a47d6cfafafdf019ff91_list = PyList_New( 4 );
     PyList_SET_ITEM( const_list_2541c3598968a47d6cfafafdf019ff91_list, 0, const_str_plain_connect ); Py_INCREF( const_str_plain_connect );
     PyList_SET_ITEM( const_list_2541c3598968a47d6cfafafdf019ff91_list, 1, const_str_plain_RouterOsApiPool ); Py_INCREF( const_str_plain_RouterOsApiPool );

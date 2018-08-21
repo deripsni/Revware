@@ -58,14 +58,14 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_ff85ed2e1a2cfea67ede0ec11414bade = UNSTREAM_STRING( &constant_bin[ 619497 ], 21, 0 );
-    const_str_digest_48a8da77a0be5788c8fc9bdcf277efa7 = UNSTREAM_STRING( &constant_bin[ 619518 ], 128, 0 );
-    const_str_digest_64864a33f0ba34ed88188d3389d9143b = UNSTREAM_STRING( &constant_bin[ 619646 ], 15, 0 );
-    const_str_digest_2786acc43f58585c58e5acc1a3b831fc = UNSTREAM_STRING( &constant_bin[ 619661 ], 161, 0 );
+    const_str_digest_ff85ed2e1a2cfea67ede0ec11414bade = UNSTREAM_STRING( &constant_bin[ 619457 ], 21, 0 );
+    const_str_digest_48a8da77a0be5788c8fc9bdcf277efa7 = UNSTREAM_STRING( &constant_bin[ 619478 ], 128, 0 );
+    const_str_digest_64864a33f0ba34ed88188d3389d9143b = UNSTREAM_STRING( &constant_bin[ 619606 ], 15, 0 );
+    const_str_digest_2786acc43f58585c58e5acc1a3b831fc = UNSTREAM_STRING( &constant_bin[ 619621 ], 161, 0 );
     const_tuple_str_plain_PyAsn1Error_tuple_type_Exception_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_PyAsn1Error_tuple_type_Exception_tuple_tuple, 0, const_str_plain_PyAsn1Error ); Py_INCREF( const_str_plain_PyAsn1Error );
     PyTuple_SET_ITEM( const_tuple_str_plain_PyAsn1Error_tuple_type_Exception_tuple_tuple, 1, const_tuple_type_Exception_tuple ); Py_INCREF( const_tuple_type_Exception_tuple );
-    const_str_digest_7b6fcfa645374d987b7a51aa9dd64ddb = UNSTREAM_STRING( &constant_bin[ 619822 ], 110, 0 );
+    const_str_digest_7b6fcfa645374d987b7a51aa9dd64ddb = UNSTREAM_STRING( &constant_bin[ 619782 ], 110, 0 );
 
     constants_created = true;
 }

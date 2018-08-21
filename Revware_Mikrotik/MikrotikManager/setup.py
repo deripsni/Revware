@@ -12,4 +12,4 @@ if sys.platform == "win32":
 
 setup(
 	name="guifoo", version="0.1", description="My GUI application!", options={"build_exe": build_exe_options},
-	executables=[Executable("gui.py", base=base)])
+	executables=[Executable("gui.pyw", base=base)])

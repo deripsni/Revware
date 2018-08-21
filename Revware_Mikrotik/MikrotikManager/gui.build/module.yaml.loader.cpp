@@ -81,18 +81,18 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_cc14384f533a76c2fad71ef2ad7551ab = UNSTREAM_STRING( &constant_bin[ 734055 ], 14, 0 );
-    const_str_plain_BaseLoader = UNSTREAM_STRING( &constant_bin[ 730034 ], 10, 1 );
-    const_str_digest_062b1916f4c4297dfb2d3db11cd06d8a = UNSTREAM_STRING( &constant_bin[ 730089 ], 15, 0 );
-    const_str_digest_ffd11fd27693fe203637d96d51b6d64f = UNSTREAM_STRING( &constant_bin[ 734069 ], 20, 0 );
+    const_str_digest_cc14384f533a76c2fad71ef2ad7551ab = UNSTREAM_STRING( &constant_bin[ 734015 ], 14, 0 );
+    const_str_plain_BaseLoader = UNSTREAM_STRING( &constant_bin[ 729994 ], 10, 1 );
+    const_str_digest_062b1916f4c4297dfb2d3db11cd06d8a = UNSTREAM_STRING( &constant_bin[ 730049 ], 15, 0 );
+    const_str_digest_ffd11fd27693fe203637d96d51b6d64f = UNSTREAM_STRING( &constant_bin[ 734029 ], 20, 0 );
     const_list_str_plain_BaseLoader_str_plain_SafeLoader_str_plain_Loader_list = PyList_New( 3 );
     PyList_SET_ITEM( const_list_str_plain_BaseLoader_str_plain_SafeLoader_str_plain_Loader_list, 0, const_str_plain_BaseLoader ); Py_INCREF( const_str_plain_BaseLoader );
     PyList_SET_ITEM( const_list_str_plain_BaseLoader_str_plain_SafeLoader_str_plain_Loader_list, 1, const_str_plain_SafeLoader ); Py_INCREF( const_str_plain_SafeLoader );
     PyList_SET_ITEM( const_list_str_plain_BaseLoader_str_plain_SafeLoader_str_plain_Loader_list, 2, const_str_plain_Loader ); Py_INCREF( const_str_plain_Loader );
-    const_str_digest_a44b1499d6484da2779527e4d20762dc = UNSTREAM_STRING( &constant_bin[ 734077 ], 11, 0 );
-    const_str_plain_composer = UNSTREAM_STRING( &constant_bin[ 725925 ], 8, 1 );
-    const_str_digest_074eab73b58637df83a3370161d0e330 = UNSTREAM_STRING( &constant_bin[ 730085 ], 19, 0 );
-    const_str_digest_6d7c19cc39fc317817774235a51db9d9 = UNSTREAM_STRING( &constant_bin[ 730160 ], 19, 0 );
+    const_str_digest_a44b1499d6484da2779527e4d20762dc = UNSTREAM_STRING( &constant_bin[ 734037 ], 11, 0 );
+    const_str_plain_composer = UNSTREAM_STRING( &constant_bin[ 725885 ], 8, 1 );
+    const_str_digest_074eab73b58637df83a3370161d0e330 = UNSTREAM_STRING( &constant_bin[ 730045 ], 19, 0 );
+    const_str_digest_6d7c19cc39fc317817774235a51db9d9 = UNSTREAM_STRING( &constant_bin[ 730120 ], 19, 0 );
 
     constants_created = true;
 }

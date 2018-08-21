@@ -125,14 +125,14 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_19ad7110c6de8fa0fe651a83621dd3f4_tuple, 10, const_str_plain_head ); Py_INCREF( const_str_plain_head );
     PyTuple_SET_ITEM( const_tuple_19ad7110c6de8fa0fe651a83621dd3f4_tuple, 11, const_str_plain_byte ); Py_INCREF( const_str_plain_byte );
     PyTuple_SET_ITEM( const_tuple_19ad7110c6de8fa0fe651a83621dd3f4_tuple, 12, const_str_plain_tail ); Py_INCREF( const_str_plain_tail );
-    const_str_digest_5b5e47f7065479a7151b4127a9c13ad0 = UNSTREAM_STRING( &constant_bin[ 617382 ], 27, 0 );
+    const_str_digest_5b5e47f7065479a7151b4127a9c13ad0 = UNSTREAM_STRING( &constant_bin[ 617342 ], 27, 0 );
     const_tuple_str_plain_oct2int_tuple = PyTuple_New( 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain_oct2int_tuple, 0, const_str_plain_oct2int ); Py_INCREF( const_str_plain_oct2int );
-    const_str_digest_fe1f0d80ff95465e1481dc7deeb463f2 = UNSTREAM_STRING( &constant_bin[ 617409 ], 32, 0 );
-    const_str_digest_6e21cf3f1db056d9c43afdb25a5b89a8 = UNSTREAM_STRING( &constant_bin[ 617441 ], 30, 0 );
-    const_str_digest_d655a8d8980fb94e87d86591c07ab047 = UNSTREAM_STRING( &constant_bin[ 617471 ], 33, 0 );
-    const_str_digest_b1b8ebbb11211fb5cf17db6ec2cff07a = UNSTREAM_STRING( &constant_bin[ 617479 ], 24, 0 );
-    const_str_digest_b5b3688a7f48242ab9c7b5da59131694 = UNSTREAM_STRING( &constant_bin[ 617504 ], 27, 0 );
+    const_str_digest_fe1f0d80ff95465e1481dc7deeb463f2 = UNSTREAM_STRING( &constant_bin[ 617369 ], 32, 0 );
+    const_str_digest_6e21cf3f1db056d9c43afdb25a5b89a8 = UNSTREAM_STRING( &constant_bin[ 617401 ], 30, 0 );
+    const_str_digest_d655a8d8980fb94e87d86591c07ab047 = UNSTREAM_STRING( &constant_bin[ 617431 ], 33, 0 );
+    const_str_digest_b1b8ebbb11211fb5cf17db6ec2cff07a = UNSTREAM_STRING( &constant_bin[ 617439 ], 24, 0 );
+    const_str_digest_b5b3688a7f48242ab9c7b5da59131694 = UNSTREAM_STRING( &constant_bin[ 617464 ], 27, 0 );
     const_tuple_str_digest_fe1f0d80ff95465e1481dc7deeb463f2_tuple = PyTuple_New( 1 );
     PyTuple_SET_ITEM( const_tuple_str_digest_fe1f0d80ff95465e1481dc7deeb463f2_tuple, 0, const_str_digest_fe1f0d80ff95465e1481dc7deeb463f2 ); Py_INCREF( const_str_digest_fe1f0d80ff95465e1481dc7deeb463f2 );
 

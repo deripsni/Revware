@@ -83,23 +83,23 @@ static void createModuleConstants( void )
     const_tuple_str_plain_AsyncApiCommunicator_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_AsyncApiCommunicator_tuple_type_object_tuple_tuple, 0, const_str_plain_AsyncApiCommunicator ); Py_INCREF( const_str_plain_AsyncApiCommunicator );
     PyTuple_SET_ITEM( const_tuple_str_plain_AsyncApiCommunicator_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
-    const_str_digest_9c42d974903f63c94e4ab94ff98bc4be = UNSTREAM_STRING( &constant_bin[ 695327 ], 45, 0 );
-    const_str_digest_80bb2c15c3949e32afc5698b0e813bce = UNSTREAM_STRING( &constant_bin[ 695372 ], 48, 0 );
+    const_str_digest_9c42d974903f63c94e4ab94ff98bc4be = UNSTREAM_STRING( &constant_bin[ 695287 ], 45, 0 );
+    const_str_digest_80bb2c15c3949e32afc5698b0e813bce = UNSTREAM_STRING( &constant_bin[ 695332 ], 48, 0 );
     const_tuple_str_plain_self_str_plain_args_str_plain_kwargs_str_plain_tag_tuple = PyTuple_New( 4 );
     PyTuple_SET_ITEM( const_tuple_str_plain_self_str_plain_args_str_plain_kwargs_str_plain_tag_tuple, 0, const_str_plain_self ); Py_INCREF( const_str_plain_self );
     PyTuple_SET_ITEM( const_tuple_str_plain_self_str_plain_args_str_plain_kwargs_str_plain_tag_tuple, 1, const_str_plain_args ); Py_INCREF( const_str_plain_args );
     PyTuple_SET_ITEM( const_tuple_str_plain_self_str_plain_args_str_plain_kwargs_str_plain_tag_tuple, 2, const_str_plain_kwargs ); Py_INCREF( const_str_plain_kwargs );
     PyTuple_SET_ITEM( const_tuple_str_plain_self_str_plain_args_str_plain_kwargs_str_plain_tag_tuple, 3, const_str_plain_tag ); Py_INCREF( const_str_plain_tag );
-    const_str_digest_cd0e03a1e0f954f4d3b9777d4edffc15 = UNSTREAM_STRING( &constant_bin[ 695420 ], 24, 0 );
-    const_str_digest_2392f7e92f82f9721666ee9968572f27 = UNSTREAM_STRING( &constant_bin[ 695444 ], 54, 0 );
-    const_str_digest_72b09ddb7f6e01a003c95f298c10c0d3 = UNSTREAM_STRING( &constant_bin[ 695498 ], 29, 0 );
-    const_str_digest_84578b8a85ae4bfb48ea3231a0618045 = UNSTREAM_STRING( &constant_bin[ 695527 ], 24, 0 );
-    const_str_digest_36c773612a827f19013f9ccbdfac6029 = UNSTREAM_STRING( &constant_bin[ 695551 ], 25, 0 );
+    const_str_digest_cd0e03a1e0f954f4d3b9777d4edffc15 = UNSTREAM_STRING( &constant_bin[ 695380 ], 24, 0 );
+    const_str_digest_2392f7e92f82f9721666ee9968572f27 = UNSTREAM_STRING( &constant_bin[ 695404 ], 54, 0 );
+    const_str_digest_72b09ddb7f6e01a003c95f298c10c0d3 = UNSTREAM_STRING( &constant_bin[ 695458 ], 29, 0 );
+    const_str_digest_84578b8a85ae4bfb48ea3231a0618045 = UNSTREAM_STRING( &constant_bin[ 695487 ], 24, 0 );
+    const_str_digest_36c773612a827f19013f9ccbdfac6029 = UNSTREAM_STRING( &constant_bin[ 695511 ], 25, 0 );
     const_tuple_str_plain_ResponsePromise_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
-    const_str_plain_ResponsePromise = UNSTREAM_STRING( &constant_bin[ 695420 ], 15, 1 );
+    const_str_plain_ResponsePromise = UNSTREAM_STRING( &constant_bin[ 695380 ], 15, 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain_ResponsePromise_tuple_type_object_tuple_tuple, 0, const_str_plain_ResponsePromise ); Py_INCREF( const_str_plain_ResponsePromise );
     PyTuple_SET_ITEM( const_tuple_str_plain_ResponsePromise_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
-    const_str_digest_81a7582271d0842a004b38b185a6e2c9 = UNSTREAM_STRING( &constant_bin[ 695576 ], 19, 0 );
+    const_str_digest_81a7582271d0842a004b38b185a6e2c9 = UNSTREAM_STRING( &constant_bin[ 695536 ], 19, 0 );
 
     constants_created = true;
 }

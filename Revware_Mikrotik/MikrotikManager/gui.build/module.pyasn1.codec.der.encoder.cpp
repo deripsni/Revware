@@ -97,19 +97,19 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_1341560babe2818ae5cd3d2e2f979fea = UNSTREAM_STRING( &constant_bin[ 618245 ], 101, 0 );
-    const_str_digest_09c05ac7300495dc65058c90ff55a280 = UNSTREAM_STRING( &constant_bin[ 618346 ], 27, 0 );
+    const_str_digest_1341560babe2818ae5cd3d2e2f979fea = UNSTREAM_STRING( &constant_bin[ 618205 ], 101, 0 );
+    const_str_digest_09c05ac7300495dc65058c90ff55a280 = UNSTREAM_STRING( &constant_bin[ 618306 ], 27, 0 );
     const_tuple_15d367f6107727fbad0babc6a29b8a24_tuple = PyTuple_New( 5 );
     PyTuple_SET_ITEM( const_tuple_15d367f6107727fbad0babc6a29b8a24_tuple, 0, const_str_plain_componentAndType ); Py_INCREF( const_str_plain_componentAndType );
     PyTuple_SET_ITEM( const_tuple_15d367f6107727fbad0babc6a29b8a24_tuple, 1, const_str_plain_asn1Spec ); Py_INCREF( const_str_plain_asn1Spec );
     PyTuple_SET_ITEM( const_tuple_15d367f6107727fbad0babc6a29b8a24_tuple, 2, const_str_plain_names ); Py_INCREF( const_str_plain_names );
     PyTuple_SET_ITEM( const_tuple_15d367f6107727fbad0babc6a29b8a24_tuple, 3, const_str_plain_component ); Py_INCREF( const_str_plain_component );
     PyTuple_SET_ITEM( const_tuple_15d367f6107727fbad0babc6a29b8a24_tuple, 4, const_str_plain_compType ); Py_INCREF( const_str_plain_compType );
-    const_str_digest_922453edc4f37e5cfebf496648dceafc = UNSTREAM_STRING( &constant_bin[ 618373 ], 24, 0 );
+    const_str_digest_922453edc4f37e5cfebf496648dceafc = UNSTREAM_STRING( &constant_bin[ 618333 ], 24, 0 );
     const_tuple_str_plain_component_str_plain_namedType_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_component_str_plain_namedType_tuple, 0, const_str_plain_component ); Py_INCREF( const_str_plain_component );
     PyTuple_SET_ITEM( const_tuple_str_plain_component_str_plain_namedType_tuple, 1, const_str_plain_namedType ); Py_INCREF( const_str_plain_namedType );
-    const_str_digest_fc8b616339128a1af5450c2edc8bd489 = UNSTREAM_STRING( &constant_bin[ 618397 ], 33, 0 );
+    const_str_digest_fc8b616339128a1af5450c2edc8bd489 = UNSTREAM_STRING( &constant_bin[ 618357 ], 33, 0 );
 
     constants_created = true;
 }

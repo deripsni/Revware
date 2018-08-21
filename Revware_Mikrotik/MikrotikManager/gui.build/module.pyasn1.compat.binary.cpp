@@ -75,16 +75,16 @@ static void createModuleConstants( void )
     const_tuple_int_pos_2_int_pos_6_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_int_pos_2_int_pos_6_tuple, 0, const_int_pos_2 ); Py_INCREF( const_int_pos_2 );
     PyTuple_SET_ITEM( const_tuple_int_pos_2_int_pos_6_tuple, 1, const_int_pos_6 ); Py_INCREF( const_int_pos_6 );
-    const_str_plain_bitstring = UNSTREAM_STRING( &constant_bin[ 618505 ], 9, 1 );
+    const_str_plain_bitstring = UNSTREAM_STRING( &constant_bin[ 618465 ], 9, 1 );
     const_tuple_str_plain_value_str_plain_bitstring_str_plain_prefix_tuple = PyTuple_New( 3 );
     PyTuple_SET_ITEM( const_tuple_str_plain_value_str_plain_bitstring_str_plain_prefix_tuple, 0, const_str_plain_value ); Py_INCREF( const_str_plain_value );
     PyTuple_SET_ITEM( const_tuple_str_plain_value_str_plain_bitstring_str_plain_prefix_tuple, 1, const_str_plain_bitstring ); Py_INCREF( const_str_plain_bitstring );
     PyTuple_SET_ITEM( const_tuple_str_plain_value_str_plain_bitstring_str_plain_prefix_tuple, 2, const_str_plain_prefix ); Py_INCREF( const_str_plain_prefix );
-    const_str_digest_1350fd4c86248194dddd035bb3e38203 = UNSTREAM_STRING( &constant_bin[ 618514 ], 3, 0 );
-    const_str_digest_bc95cb2008216b3ab18f393e5ae2c051 = UNSTREAM_STRING( &constant_bin[ 618517 ], 29, 0 );
-    const_str_plain_0b0 = UNSTREAM_STRING( &constant_bin[ 618546 ], 3, 0 );
-    const_str_digest_206f76f7a52f47ef7b96e6730becc746 = UNSTREAM_STRING( &constant_bin[ 618525 ], 20, 0 );
-    const_str_digest_65043da29b288881a59d7353bbb839e5 = UNSTREAM_STRING( &constant_bin[ 618549 ], 23, 0 );
+    const_str_digest_1350fd4c86248194dddd035bb3e38203 = UNSTREAM_STRING( &constant_bin[ 618474 ], 3, 0 );
+    const_str_digest_bc95cb2008216b3ab18f393e5ae2c051 = UNSTREAM_STRING( &constant_bin[ 618477 ], 29, 0 );
+    const_str_plain_0b0 = UNSTREAM_STRING( &constant_bin[ 618506 ], 3, 0 );
+    const_str_digest_206f76f7a52f47ef7b96e6730becc746 = UNSTREAM_STRING( &constant_bin[ 618485 ], 20, 0 );
+    const_str_digest_65043da29b288881a59d7353bbb839e5 = UNSTREAM_STRING( &constant_bin[ 618509 ], 23, 0 );
     const_tuple_str_plain_1_tuple = PyTuple_New( 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain_1_tuple, 0, const_str_plain_1 ); Py_INCREF( const_str_plain_1 );
 

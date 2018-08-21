@@ -81,22 +81,22 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_8a436d580746d7a07b8fac6ee560dece = UNSTREAM_STRING( &constant_bin[ 129293 ], 51, 0 );
+    const_str_digest_8a436d580746d7a07b8fac6ee560dece = UNSTREAM_STRING( &constant_bin[ 129253 ], 51, 0 );
     const_tuple_a1ff885ba1f99ea40e28f4932782aa6c_tuple = PyTuple_New( 4 );
     PyTuple_SET_ITEM( const_tuple_a1ff885ba1f99ea40e28f4932782aa6c_tuple, 0, const_str_plain_backend ); Py_INCREF( const_str_plain_backend );
     PyTuple_SET_ITEM( const_tuple_a1ff885ba1f99ea40e28f4932782aa6c_tuple, 1, const_str_plain_data ); Py_INCREF( const_str_plain_data );
     PyTuple_SET_ITEM( const_tuple_a1ff885ba1f99ea40e28f4932782aa6c_tuple, 2, const_str_plain_algorithm ); Py_INCREF( const_str_plain_algorithm );
-    const_str_plain_hash_ctx = UNSTREAM_STRING( &constant_bin[ 107927 ], 8, 1 );
+    const_str_plain_hash_ctx = UNSTREAM_STRING( &constant_bin[ 107887 ], 8, 1 );
     PyTuple_SET_ITEM( const_tuple_a1ff885ba1f99ea40e28f4932782aa6c_tuple, 3, const_str_plain_hash_ctx ); Py_INCREF( const_str_plain_hash_ctx );
     const_tuple_str_plain_Prehashed_tuple = PyTuple_New( 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain_Prehashed_tuple, 0, const_str_plain_Prehashed ); Py_INCREF( const_str_plain_Prehashed );
-    const_str_digest_5ce81634600177822ae5a0d5a4e46723 = UNSTREAM_STRING( &constant_bin[ 129344 ], 78, 0 );
+    const_str_digest_5ce81634600177822ae5a0d5a4e46723 = UNSTREAM_STRING( &constant_bin[ 129304 ], 78, 0 );
     const_dict_2254aca578e492e580f4e46a40647b9b = _PyDict_NewPresized( 1 );
     PyDict_SetItem( const_dict_2254aca578e492e580f4e46a40647b9b, const_str_plain_stacklevel, const_int_pos_3 );
     assert( PyDict_Size( const_dict_2254aca578e492e580f4e46a40647b9b ) == 1 );
-    const_str_digest_ee6822ba158fbc94c25a6b301e592f99 = UNSTREAM_STRING( &constant_bin[ 129422 ], 102, 0 );
-    const_str_digest_edf0149cad52f7aa20cf44bcce6d582a = UNSTREAM_STRING( &constant_bin[ 129524 ], 45, 0 );
-    const_str_digest_b5ff1ed078f6189b19f1987693fa19e0 = UNSTREAM_STRING( &constant_bin[ 129569 ], 77, 0 );
+    const_str_digest_ee6822ba158fbc94c25a6b301e592f99 = UNSTREAM_STRING( &constant_bin[ 129382 ], 102, 0 );
+    const_str_digest_edf0149cad52f7aa20cf44bcce6d582a = UNSTREAM_STRING( &constant_bin[ 129484 ], 45, 0 );
+    const_str_digest_b5ff1ed078f6189b19f1987693fa19e0 = UNSTREAM_STRING( &constant_bin[ 129529 ], 77, 0 );
 
     constants_created = true;
 }

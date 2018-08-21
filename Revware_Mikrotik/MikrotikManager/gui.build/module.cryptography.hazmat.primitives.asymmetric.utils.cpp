@@ -108,16 +108,16 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_9386007fca022c92f08755a74e237f1c = UNSTREAM_STRING( &constant_bin[ 146542 ], 113, 0 );
-    const_str_digest_9ff37639e07aa36ed99aa48063c8fbae = UNSTREAM_STRING( &constant_bin[ 146655 ], 29, 0 );
-    const_str_digest_bfb75981a7bdb1a4ba3ad1f959508ca8 = UNSTREAM_STRING( &constant_bin[ 146684 ], 18, 0 );
-    const_str_plain_encode_rfc6979_signature = UNSTREAM_STRING( &constant_bin[ 146542 ], 24, 1 );
-    const_str_digest_2aa13318a714ccf6702aadadb7137df5 = UNSTREAM_STRING( &constant_bin[ 146702 ], 113, 0 );
-    const_str_digest_a8eb5e417efea5e98b6bb5e5fca846f3 = UNSTREAM_STRING( &constant_bin[ 146815 ], 56, 0 );
+    const_str_digest_9386007fca022c92f08755a74e237f1c = UNSTREAM_STRING( &constant_bin[ 146502 ], 113, 0 );
+    const_str_digest_9ff37639e07aa36ed99aa48063c8fbae = UNSTREAM_STRING( &constant_bin[ 146615 ], 29, 0 );
+    const_str_digest_bfb75981a7bdb1a4ba3ad1f959508ca8 = UNSTREAM_STRING( &constant_bin[ 146644 ], 18, 0 );
+    const_str_plain_encode_rfc6979_signature = UNSTREAM_STRING( &constant_bin[ 146502 ], 24, 1 );
+    const_str_digest_2aa13318a714ccf6702aadadb7137df5 = UNSTREAM_STRING( &constant_bin[ 146662 ], 113, 0 );
+    const_str_digest_a8eb5e417efea5e98b6bb5e5fca846f3 = UNSTREAM_STRING( &constant_bin[ 146775 ], 56, 0 );
     const_tuple_str_plain_signature_tuple = PyTuple_New( 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain_signature_tuple, 0, const_str_plain_signature ); Py_INCREF( const_str_plain_signature );
-    const_str_plain_decode_rfc6979_signature = UNSTREAM_STRING( &constant_bin[ 146702 ], 24, 1 );
-    const_str_digest_65470eb7c1622c21cbba57db7d869979 = UNSTREAM_STRING( &constant_bin[ 146871 ], 35, 0 );
+    const_str_plain_decode_rfc6979_signature = UNSTREAM_STRING( &constant_bin[ 146662 ], 24, 1 );
+    const_str_digest_65470eb7c1622c21cbba57db7d869979 = UNSTREAM_STRING( &constant_bin[ 146831 ], 35, 0 );
     const_dict_5fd2975b496ad094d2ad659352f35a02 = _PyDict_NewPresized( 1 );
     PyDict_SetItem( const_dict_5fd2975b496ad094d2ad659352f35a02, const_str_plain_strict, Py_True );
     assert( PyDict_Size( const_dict_5fd2975b496ad094d2ad659352f35a02 ) == 1 );
@@ -129,7 +129,7 @@ static void createModuleConstants( void )
     const_tuple_str_plain_signature_str_plain_data_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_signature_str_plain_data_tuple, 0, const_str_plain_signature ); Py_INCREF( const_str_plain_signature );
     PyTuple_SET_ITEM( const_tuple_str_plain_signature_str_plain_data_tuple, 1, const_str_plain_data ); Py_INCREF( const_str_plain_data );
-    const_str_digest_a5fd18b8ed45f424d57c11f3b8650987 = UNSTREAM_STRING( &constant_bin[ 146906 ], 50, 0 );
+    const_str_digest_a5fd18b8ed45f424d57c11f3b8650987 = UNSTREAM_STRING( &constant_bin[ 146866 ], 50, 0 );
     const_tuple_str_plain_Prehashed_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_Prehashed_tuple_type_object_tuple_tuple, 0, const_str_plain_Prehashed ); Py_INCREF( const_str_plain_Prehashed );
     PyTuple_SET_ITEM( const_tuple_str_plain_Prehashed_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );

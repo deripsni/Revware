@@ -85,8 +85,8 @@ static void createModuleConstants( void )
     PyList_SET_ITEM( const_list_2b054774c0066cbef99416ec16db7f55_list, 4, const_str_plain_AEADCipherContext ); Py_INCREF( const_str_plain_AEADCipherContext );
     PyList_SET_ITEM( const_list_2b054774c0066cbef99416ec16db7f55_list, 5, const_str_plain_AEADDecryptionContext ); Py_INCREF( const_str_plain_AEADDecryptionContext );
     PyList_SET_ITEM( const_list_2b054774c0066cbef99416ec16db7f55_list, 6, const_str_plain_AEADEncryptionContext ); Py_INCREF( const_str_plain_AEADEncryptionContext );
-    const_str_digest_50be226755fb35a1992c4b8f94050655 = UNSTREAM_STRING( &constant_bin[ 147209 ], 47, 0 );
-    const_str_digest_e65cb85a2906542d716fa53bcd873647 = UNSTREAM_STRING( &constant_bin[ 147256 ], 50, 0 );
+    const_str_digest_50be226755fb35a1992c4b8f94050655 = UNSTREAM_STRING( &constant_bin[ 147169 ], 47, 0 );
+    const_str_digest_e65cb85a2906542d716fa53bcd873647 = UNSTREAM_STRING( &constant_bin[ 147216 ], 50, 0 );
     const_tuple_d65a6a29ac71ba4a818ba18f2d8f4b96_tuple = PyTuple_New( 7 );
     PyTuple_SET_ITEM( const_tuple_d65a6a29ac71ba4a818ba18f2d8f4b96_tuple, 0, const_str_plain_AEADCipherContext ); Py_INCREF( const_str_plain_AEADCipherContext );
     PyTuple_SET_ITEM( const_tuple_d65a6a29ac71ba4a818ba18f2d8f4b96_tuple, 1, const_str_plain_AEADDecryptionContext ); Py_INCREF( const_str_plain_AEADDecryptionContext );
@@ -95,10 +95,10 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_d65a6a29ac71ba4a818ba18f2d8f4b96_tuple, 4, const_str_plain_Cipher ); Py_INCREF( const_str_plain_Cipher );
     PyTuple_SET_ITEM( const_tuple_d65a6a29ac71ba4a818ba18f2d8f4b96_tuple, 5, const_str_plain_CipherAlgorithm ); Py_INCREF( const_str_plain_CipherAlgorithm );
     PyTuple_SET_ITEM( const_tuple_d65a6a29ac71ba4a818ba18f2d8f4b96_tuple, 6, const_str_plain_CipherContext ); Py_INCREF( const_str_plain_CipherContext );
-    const_str_digest_89b46b31daaff92a53d107e5d1f25223 = UNSTREAM_STRING( &constant_bin[ 147276 ], 18, 0 );
-    const_str_digest_8ed7e658913caae1e56fbf9c58d5125f = UNSTREAM_STRING( &constant_bin[ 147269 ], 25, 0 );
+    const_str_digest_89b46b31daaff92a53d107e5d1f25223 = UNSTREAM_STRING( &constant_bin[ 147236 ], 18, 0 );
+    const_str_digest_8ed7e658913caae1e56fbf9c58d5125f = UNSTREAM_STRING( &constant_bin[ 147229 ], 25, 0 );
     const_tuple_f729191728af12ca0c0704afdcd1ee41_tuple = PyTuple_New( 2 );
-    const_str_digest_c79c7700f135ad30b3dbd4b96a4a8fef = UNSTREAM_STRING( &constant_bin[ 147306 ], 53, 1 );
+    const_str_digest_c79c7700f135ad30b3dbd4b96a4a8fef = UNSTREAM_STRING( &constant_bin[ 147266 ], 53, 1 );
     PyTuple_SET_ITEM( const_tuple_f729191728af12ca0c0704afdcd1ee41_tuple, 0, const_str_digest_c79c7700f135ad30b3dbd4b96a4a8fef ); Py_INCREF( const_str_digest_c79c7700f135ad30b3dbd4b96a4a8fef );
     PyTuple_SET_ITEM( const_tuple_f729191728af12ca0c0704afdcd1ee41_tuple, 1, const_str_digest_5bfaf90dbd407b4fc29090c8f6415242 ); Py_INCREF( const_str_digest_5bfaf90dbd407b4fc29090c8f6415242 );
 

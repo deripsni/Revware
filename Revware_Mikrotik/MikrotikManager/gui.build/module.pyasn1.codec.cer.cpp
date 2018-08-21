@@ -59,14 +59,14 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_8b183b3a610f6b75707a16e9be0eb3dd = UNSTREAM_STRING( &constant_bin[ 617298 ], 28, 0 );
-    const_str_plain_NUITKA_PACKAGE_pyasn1_codec_cer = UNSTREAM_STRING( &constant_bin[ 617326 ], 31, 1 );
-    const_str_digest_6aea6553a54afb7df9afd2009d6b22ff = UNSTREAM_STRING( &constant_bin[ 617305 ], 9, 0 );
+    const_str_digest_8b183b3a610f6b75707a16e9be0eb3dd = UNSTREAM_STRING( &constant_bin[ 617258 ], 28, 0 );
+    const_str_plain_NUITKA_PACKAGE_pyasn1_codec_cer = UNSTREAM_STRING( &constant_bin[ 617286 ], 31, 1 );
+    const_str_digest_6aea6553a54afb7df9afd2009d6b22ff = UNSTREAM_STRING( &constant_bin[ 617265 ], 9, 0 );
     const_tuple_18c8eb029e382130a5a51f31f58bf9b6_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_18c8eb029e382130a5a51f31f58bf9b6_tuple, 0, const_str_plain_NUITKA_PACKAGE_pyasn1_codec_cer ); Py_INCREF( const_str_plain_NUITKA_PACKAGE_pyasn1_codec_cer );
     PyTuple_SET_ITEM( const_tuple_18c8eb029e382130a5a51f31f58bf9b6_tuple, 1, const_str_digest_5bfaf90dbd407b4fc29090c8f6415242 ); Py_INCREF( const_str_digest_5bfaf90dbd407b4fc29090c8f6415242 );
-    const_str_plain_cer = UNSTREAM_STRING( &constant_bin[ 19071 ], 3, 1 );
-    const_str_digest_4c92f6d6956edc5a4f7aa71fc2e6e8df = UNSTREAM_STRING( &constant_bin[ 617357 ], 25, 0 );
+    const_str_plain_cer = UNSTREAM_STRING( &constant_bin[ 19031 ], 3, 1 );
+    const_str_digest_4c92f6d6956edc5a4f7aa71fc2e6e8df = UNSTREAM_STRING( &constant_bin[ 617317 ], 25, 0 );
 
     constants_created = true;
 }

@@ -108,23 +108,23 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_557583e2d8df8edd75f1400b40b03b3e = UNSTREAM_STRING( &constant_bin[ 696792 ], 44, 0 );
-    const_str_digest_5d56aa6e423872f6a7b643cf7a5646ec = UNSTREAM_STRING( &constant_bin[ 696836 ], 32, 0 );
-    const_str_digest_365f4b6be288de60922027c0b1960440 = UNSTREAM_STRING( &constant_bin[ 696868 ], 57, 0 );
-    const_str_digest_65bbf624ccf0f8612a3395fb09b9d329 = UNSTREAM_STRING( &constant_bin[ 696925 ], 63, 0 );
-    const_str_digest_a524bf4386e806a320972317338b46f7 = UNSTREAM_STRING( &constant_bin[ 696988 ], 51, 0 );
-    const_str_digest_f5aeeb9c96254fd7b0b40089152b34d1 = UNSTREAM_STRING( &constant_bin[ 697039 ], 40, 0 );
-    const_str_digest_6edc81a22ff7e50dab93f45b429af3dc = UNSTREAM_STRING( &constant_bin[ 697079 ], 27, 0 );
-    const_str_digest_2ad3bb20e7ed3f83186a545b41b7a3b4 = UNSTREAM_STRING( &constant_bin[ 697106 ], 37, 0 );
-    const_str_digest_68485768b873e49e8ae42d3e84c2b26e = UNSTREAM_STRING( &constant_bin[ 696876 ], 48, 0 );
-    const_str_digest_bedcf776e578bbe79039ee2167f1ef21 = UNSTREAM_STRING( &constant_bin[ 697143 ], 32, 0 );
+    const_str_digest_557583e2d8df8edd75f1400b40b03b3e = UNSTREAM_STRING( &constant_bin[ 696752 ], 44, 0 );
+    const_str_digest_5d56aa6e423872f6a7b643cf7a5646ec = UNSTREAM_STRING( &constant_bin[ 696796 ], 32, 0 );
+    const_str_digest_365f4b6be288de60922027c0b1960440 = UNSTREAM_STRING( &constant_bin[ 696828 ], 57, 0 );
+    const_str_digest_65bbf624ccf0f8612a3395fb09b9d329 = UNSTREAM_STRING( &constant_bin[ 696885 ], 63, 0 );
+    const_str_digest_a524bf4386e806a320972317338b46f7 = UNSTREAM_STRING( &constant_bin[ 696948 ], 51, 0 );
+    const_str_digest_f5aeeb9c96254fd7b0b40089152b34d1 = UNSTREAM_STRING( &constant_bin[ 696999 ], 40, 0 );
+    const_str_digest_6edc81a22ff7e50dab93f45b429af3dc = UNSTREAM_STRING( &constant_bin[ 697039 ], 27, 0 );
+    const_str_digest_2ad3bb20e7ed3f83186a545b41b7a3b4 = UNSTREAM_STRING( &constant_bin[ 697066 ], 37, 0 );
+    const_str_digest_68485768b873e49e8ae42d3e84c2b26e = UNSTREAM_STRING( &constant_bin[ 696836 ], 48, 0 );
+    const_str_digest_bedcf776e578bbe79039ee2167f1ef21 = UNSTREAM_STRING( &constant_bin[ 697103 ], 32, 0 );
     const_tuple_str_plain_EncodedPromiseDecorator_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
-    const_str_plain_EncodedPromiseDecorator = UNSTREAM_STRING( &constant_bin[ 696836 ], 23, 1 );
+    const_str_plain_EncodedPromiseDecorator = UNSTREAM_STRING( &constant_bin[ 696796 ], 23, 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain_EncodedPromiseDecorator_tuple_type_object_tuple_tuple, 0, const_str_plain_EncodedPromiseDecorator ); Py_INCREF( const_str_plain_EncodedPromiseDecorator );
     PyTuple_SET_ITEM( const_tuple_str_plain_EncodedPromiseDecorator_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
-    const_str_digest_a0dba46bd02abd5d28aec45e97509800 = UNSTREAM_STRING( &constant_bin[ 697175 ], 56, 0 );
-    const_str_plain_transform_row = UNSTREAM_STRING( &constant_bin[ 697130 ], 13, 1 );
-    const_str_digest_ff4e445c22c969cf4b2015c474c2842a = UNSTREAM_STRING( &constant_bin[ 697231 ], 38, 0 );
+    const_str_digest_a0dba46bd02abd5d28aec45e97509800 = UNSTREAM_STRING( &constant_bin[ 697135 ], 56, 0 );
+    const_str_plain_transform_row = UNSTREAM_STRING( &constant_bin[ 697090 ], 13, 1 );
+    const_str_digest_ff4e445c22c969cf4b2015c474c2842a = UNSTREAM_STRING( &constant_bin[ 697191 ], 38, 0 );
     const_tuple_30d5628e63f3e23784db409557ec17c9_tuple = PyTuple_New( 7 );
     PyTuple_SET_ITEM( const_tuple_30d5628e63f3e23784db409557ec17c9_tuple, 0, const_str_plain_self ); Py_INCREF( const_str_plain_self );
     PyTuple_SET_ITEM( const_tuple_30d5628e63f3e23784db409557ec17c9_tuple, 1, const_str_plain_path ); Py_INCREF( const_str_plain_path );
@@ -133,12 +133,12 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_30d5628e63f3e23784db409557ec17c9_tuple, 4, const_str_plain_queries ); Py_INCREF( const_str_plain_queries );
     PyTuple_SET_ITEM( const_tuple_30d5628e63f3e23784db409557ec17c9_tuple, 5, const_str_plain_additional_queries ); Py_INCREF( const_str_plain_additional_queries );
     PyTuple_SET_ITEM( const_tuple_30d5628e63f3e23784db409557ec17c9_tuple, 6, const_str_plain_promise ); Py_INCREF( const_str_plain_promise );
-    const_str_digest_357ab5f0ee664e3c0dbc3ba2bc444e0d = UNSTREAM_STRING( &constant_bin[ 697269 ], 28, 0 );
+    const_str_digest_357ab5f0ee664e3c0dbc3ba2bc444e0d = UNSTREAM_STRING( &constant_bin[ 697229 ], 28, 0 );
     const_tuple_str_plain_EncodingApiCommunicator_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_EncodingApiCommunicator_tuple_type_object_tuple_tuple, 0, const_str_plain_EncodingApiCommunicator ); Py_INCREF( const_str_plain_EncodingApiCommunicator );
     PyTuple_SET_ITEM( const_tuple_str_plain_EncodingApiCommunicator_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
-    const_str_digest_448da7ac0e789ce229b8b0ab770992a9 = UNSTREAM_STRING( &constant_bin[ 697297 ], 32, 0 );
-    const_str_digest_5bb5acb0926b086f384d7bd83c49c450 = UNSTREAM_STRING( &constant_bin[ 697329 ], 38, 0 );
+    const_str_digest_448da7ac0e789ce229b8b0ab770992a9 = UNSTREAM_STRING( &constant_bin[ 697257 ], 32, 0 );
+    const_str_digest_5bb5acb0926b086f384d7bd83c49c450 = UNSTREAM_STRING( &constant_bin[ 697289 ], 38, 0 );
 
     constants_created = true;
 }

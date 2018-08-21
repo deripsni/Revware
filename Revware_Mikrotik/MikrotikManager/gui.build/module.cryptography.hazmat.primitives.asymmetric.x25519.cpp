@@ -100,30 +100,30 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_790bc7af17b36fa600fe5f38fcc02991 = UNSTREAM_STRING( &constant_bin[ 146956 ], 33, 0 );
-    const_str_digest_92762476848ae2f4818c508784af4a14 = UNSTREAM_STRING( &constant_bin[ 146989 ], 36, 0 );
+    const_str_digest_790bc7af17b36fa600fe5f38fcc02991 = UNSTREAM_STRING( &constant_bin[ 146916 ], 33, 0 );
+    const_str_digest_92762476848ae2f4818c508784af4a14 = UNSTREAM_STRING( &constant_bin[ 146949 ], 36, 0 );
     const_tuple_str_plain_X25519PrivateKey_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_X25519PrivateKey_tuple_type_object_tuple_tuple, 0, const_str_plain_X25519PrivateKey ); Py_INCREF( const_str_plain_X25519PrivateKey );
     PyTuple_SET_ITEM( const_tuple_str_plain_X25519PrivateKey_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
-    const_str_digest_a73c00f52ea8350cb5b4b56951406999 = UNSTREAM_STRING( &constant_bin[ 129819 ], 25, 0 );
+    const_str_digest_a73c00f52ea8350cb5b4b56951406999 = UNSTREAM_STRING( &constant_bin[ 129779 ], 25, 0 );
     const_tuple_str_plain_cls_str_plain_data_str_plain_backend_tuple = PyTuple_New( 3 );
     PyTuple_SET_ITEM( const_tuple_str_plain_cls_str_plain_data_str_plain_backend_tuple, 0, const_str_plain_cls ); Py_INCREF( const_str_plain_cls );
     PyTuple_SET_ITEM( const_tuple_str_plain_cls_str_plain_data_str_plain_backend_tuple, 1, const_str_plain_data ); Py_INCREF( const_str_plain_data );
     PyTuple_SET_ITEM( const_tuple_str_plain_cls_str_plain_data_str_plain_backend_tuple, 2, const_str_plain_backend ); Py_INCREF( const_str_plain_backend );
-    const_str_digest_9136a10fbe19aee8bb746987fabae463 = UNSTREAM_STRING( &constant_bin[ 147025 ], 51, 0 );
-    const_str_digest_8a20b993a61f2c6dfbd046c80267336a = UNSTREAM_STRING( &constant_bin[ 130011 ], 28, 0 );
-    const_str_digest_1f609a4db4a9dd1eb91e8fe7f8f5fc72 = UNSTREAM_STRING( &constant_bin[ 147076 ], 51, 0 );
+    const_str_digest_9136a10fbe19aee8bb746987fabae463 = UNSTREAM_STRING( &constant_bin[ 146985 ], 51, 0 );
+    const_str_digest_8a20b993a61f2c6dfbd046c80267336a = UNSTREAM_STRING( &constant_bin[ 129971 ], 28, 0 );
+    const_str_digest_1f609a4db4a9dd1eb91e8fe7f8f5fc72 = UNSTREAM_STRING( &constant_bin[ 147036 ], 51, 0 );
     const_tuple_str_plain_cls_str_plain_backend_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_cls_str_plain_backend_tuple, 0, const_str_plain_cls ); Py_INCREF( const_str_plain_cls );
     PyTuple_SET_ITEM( const_tuple_str_plain_cls_str_plain_backend_tuple, 1, const_str_plain_backend ); Py_INCREF( const_str_plain_backend );
     const_tuple_str_plain_X25519PublicKey_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_X25519PublicKey_tuple_type_object_tuple_tuple, 0, const_str_plain_X25519PublicKey ); Py_INCREF( const_str_plain_X25519PublicKey );
     PyTuple_SET_ITEM( const_tuple_str_plain_X25519PublicKey_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
-    const_str_digest_d2f9b74adc886a9e1808a93bb0a49f9d = UNSTREAM_STRING( &constant_bin[ 129745 ], 27, 0 );
-    const_str_digest_6bdd203415d3b6fa2c3a0235dc2bfa94 = UNSTREAM_STRING( &constant_bin[ 147127 ], 25, 0 );
-    const_str_plain__from_private_bytes = UNSTREAM_STRING( &constant_bin[ 147006 ], 19, 1 );
-    const_str_digest_9725cd7dd30fb3edfe84dcde59709fe6 = UNSTREAM_STRING( &constant_bin[ 147152 ], 57, 0 );
-    const_str_plain_from_public_bytes = UNSTREAM_STRING( &constant_bin[ 146972 ], 17, 1 );
+    const_str_digest_d2f9b74adc886a9e1808a93bb0a49f9d = UNSTREAM_STRING( &constant_bin[ 129705 ], 27, 0 );
+    const_str_digest_6bdd203415d3b6fa2c3a0235dc2bfa94 = UNSTREAM_STRING( &constant_bin[ 147087 ], 25, 0 );
+    const_str_plain__from_private_bytes = UNSTREAM_STRING( &constant_bin[ 146966 ], 19, 1 );
+    const_str_digest_9725cd7dd30fb3edfe84dcde59709fe6 = UNSTREAM_STRING( &constant_bin[ 147112 ], 57, 0 );
+    const_str_plain_from_public_bytes = UNSTREAM_STRING( &constant_bin[ 146932 ], 17, 1 );
 
     constants_created = true;
 }

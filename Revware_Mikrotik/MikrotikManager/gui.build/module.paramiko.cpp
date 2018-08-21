@@ -184,7 +184,7 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_list_e092e9d1b5a947ed4f3da6ee4528b25e_list = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 375709 ], 516 );
+    const_list_e092e9d1b5a947ed4f3da6ee4528b25e_list = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 375669 ], 516 );
     const_tuple_b3ec56acb8e0d55f58f13251f7afdc16_tuple = PyTuple_New( 3 );
     PyTuple_SET_ITEM( const_tuple_b3ec56acb8e0d55f58f13251f7afdc16_tuple, 0, const_str_plain_GSSAuth ); Py_INCREF( const_str_plain_GSSAuth );
     PyTuple_SET_ITEM( const_tuple_b3ec56acb8e0d55f58f13251f7afdc16_tuple, 1, const_str_plain_GSS_AUTH_AVAILABLE ); Py_INCREF( const_str_plain_GSS_AUTH_AVAILABLE );
@@ -195,7 +195,7 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_9b1068fa21e43909ccc002c0c33e1f3d_tuple, 2, const_str_plain_AutoAddPolicy ); Py_INCREF( const_str_plain_AutoAddPolicy );
     PyTuple_SET_ITEM( const_tuple_9b1068fa21e43909ccc002c0c33e1f3d_tuple, 3, const_str_plain_RejectPolicy ); Py_INCREF( const_str_plain_RejectPolicy );
     PyTuple_SET_ITEM( const_tuple_9b1068fa21e43909ccc002c0c33e1f3d_tuple, 4, const_str_plain_WarningPolicy ); Py_INCREF( const_str_plain_WarningPolicy );
-    const_str_digest_6dc7255153c6828bd23320f8af42430f = UNSTREAM_STRING( &constant_bin[ 376225 ], 17, 0 );
+    const_str_digest_6dc7255153c6828bd23320f8af42430f = UNSTREAM_STRING( &constant_bin[ 376185 ], 17, 0 );
     const_tuple_str_plain_SFTPError_str_plain_BaseSFTP_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_SFTPError_str_plain_BaseSFTP_tuple, 0, const_str_plain_SFTPError ); Py_INCREF( const_str_plain_SFTPError );
     PyTuple_SET_ITEM( const_tuple_str_plain_SFTPError_str_plain_BaseSFTP_tuple, 1, const_str_plain_BaseSFTP ); Py_INCREF( const_str_plain_BaseSFTP );
@@ -213,7 +213,7 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_8e2632c4e27baba6265e1c4c20310308_tuple, 7, const_str_plain_SFTP_CONNECTION_LOST ); Py_INCREF( const_str_plain_SFTP_CONNECTION_LOST );
     PyTuple_SET_ITEM( const_tuple_8e2632c4e27baba6265e1c4c20310308_tuple, 8, const_str_plain_SFTP_OP_UNSUPPORTED ); Py_INCREF( const_str_plain_SFTP_OP_UNSUPPORTED );
     const_tuple_0ec73cdd2ffcd22ccaa9c89583aacfd4_tuple = PyTuple_New( 2 );
-    const_str_plain_NUITKA_PACKAGE_paramiko = UNSTREAM_STRING( &constant_bin[ 376242 ], 23, 1 );
+    const_str_plain_NUITKA_PACKAGE_paramiko = UNSTREAM_STRING( &constant_bin[ 376202 ], 23, 1 );
     PyTuple_SET_ITEM( const_tuple_0ec73cdd2ffcd22ccaa9c89583aacfd4_tuple, 0, const_str_plain_NUITKA_PACKAGE_paramiko ); Py_INCREF( const_str_plain_NUITKA_PACKAGE_paramiko );
     PyTuple_SET_ITEM( const_tuple_0ec73cdd2ffcd22ccaa9c89583aacfd4_tuple, 1, const_str_digest_5bfaf90dbd407b4fc29090c8f6415242 ); Py_INCREF( const_str_digest_5bfaf90dbd407b4fc29090c8f6415242 );
     const_tuple_str_plain_ProxyCommand_tuple = PyTuple_New( 1 );
@@ -232,7 +232,7 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_d575bf3c333066d9293690a629f277b6_tuple, 0, const_str_plain_ServerInterface ); Py_INCREF( const_str_plain_ServerInterface );
     PyTuple_SET_ITEM( const_tuple_d575bf3c333066d9293690a629f277b6_tuple, 1, const_str_plain_SubsystemHandler ); Py_INCREF( const_str_plain_SubsystemHandler );
     PyTuple_SET_ITEM( const_tuple_d575bf3c333066d9293690a629f277b6_tuple, 2, const_str_plain_InteractiveQuery ); Py_INCREF( const_str_plain_InteractiveQuery );
-    const_str_digest_512387e87b3af62589a6dd18e88fd6f4 = UNSTREAM_STRING( &constant_bin[ 376265 ], 40, 0 );
+    const_str_digest_512387e87b3af62589a6dd18e88fd6f4 = UNSTREAM_STRING( &constant_bin[ 376225 ], 40, 0 );
     const_tuple_c1f0bda8f2a7c179b1a5b0ff0c9cf0e5_tuple = PyTuple_New( 8 );
     PyTuple_SET_ITEM( const_tuple_c1f0bda8f2a7c179b1a5b0ff0c9cf0e5_tuple, 0, const_str_plain_AUTH_SUCCESSFUL ); Py_INCREF( const_str_plain_AUTH_SUCCESSFUL );
     PyTuple_SET_ITEM( const_tuple_c1f0bda8f2a7c179b1a5b0ff0c9cf0e5_tuple, 1, const_str_plain_AUTH_PARTIALLY_SUCCESSFUL ); Py_INCREF( const_str_plain_AUTH_PARTIALLY_SUCCESSFUL );
@@ -256,8 +256,8 @@ static void createModuleConstants( void )
     const_tuple_str_plain_SFTP_str_plain_SFTPClient_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_SFTP_str_plain_SFTPClient_tuple, 0, const_str_plain_SFTP ); Py_INCREF( const_str_plain_SFTP );
     PyTuple_SET_ITEM( const_tuple_str_plain_SFTP_str_plain_SFTPClient_tuple, 1, const_str_plain_SFTPClient ); Py_INCREF( const_str_plain_SFTPClient );
-    const_str_digest_8781a6305faae7bb50408bd7e4d22828 = UNSTREAM_STRING( &constant_bin[ 376305 ], 34, 0 );
-    const_str_digest_9a1585dc551b63a8f1ac5c18689cfcb8 = UNSTREAM_STRING( &constant_bin[ 376339 ], 20, 0 );
+    const_str_digest_8781a6305faae7bb50408bd7e4d22828 = UNSTREAM_STRING( &constant_bin[ 376265 ], 34, 0 );
+    const_str_digest_9a1585dc551b63a8f1ac5c18689cfcb8 = UNSTREAM_STRING( &constant_bin[ 376299 ], 20, 0 );
 
     constants_created = true;
 }

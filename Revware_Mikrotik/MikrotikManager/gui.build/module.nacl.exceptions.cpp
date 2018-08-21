@@ -76,11 +76,11 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_8533d5eb56e88f4a3ba2bcf750b0c446 = UNSTREAM_STRING( &constant_bin[ 365013 ], 18, 0 );
-    const_str_digest_71dbfd534b9ccb713cbb5cebb18da48c = UNSTREAM_STRING( &constant_bin[ 365031 ], 56, 0 );
-    const_str_plain__CHK_UNEXP = UNSTREAM_STRING( &constant_bin[ 365087 ], 10, 1 );
+    const_str_digest_8533d5eb56e88f4a3ba2bcf750b0c446 = UNSTREAM_STRING( &constant_bin[ 364973 ], 18, 0 );
+    const_str_digest_71dbfd534b9ccb713cbb5cebb18da48c = UNSTREAM_STRING( &constant_bin[ 364991 ], 56, 0 );
+    const_str_plain__CHK_UNEXP = UNSTREAM_STRING( &constant_bin[ 365047 ], 10, 1 );
     const_tuple_9bf2c5e0589d488a0b123c6434dfce1e_tuple = PyTuple_New( 5 );
-    const_str_plain_cond = UNSTREAM_STRING( &constant_bin[ 7485 ], 4, 1 );
+    const_str_plain_cond = UNSTREAM_STRING( &constant_bin[ 7445 ], 4, 1 );
     PyTuple_SET_ITEM( const_tuple_9bf2c5e0589d488a0b123c6434dfce1e_tuple, 0, const_str_plain_cond ); Py_INCREF( const_str_plain_cond );
     PyTuple_SET_ITEM( const_tuple_9bf2c5e0589d488a0b123c6434dfce1e_tuple, 1, const_str_plain_args ); Py_INCREF( const_str_plain_args );
     PyTuple_SET_ITEM( const_tuple_9bf2c5e0589d488a0b123c6434dfce1e_tuple, 2, const_str_plain_kwds ); Py_INCREF( const_str_plain_kwds );
@@ -89,11 +89,11 @@ static void createModuleConstants( void )
     const_tuple_str_plain_CryptoError_tuple_type_Exception_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_CryptoError_tuple_type_Exception_tuple_tuple, 0, const_str_plain_CryptoError ); Py_INCREF( const_str_plain_CryptoError );
     PyTuple_SET_ITEM( const_tuple_str_plain_CryptoError_tuple_type_Exception_tuple_tuple, 1, const_tuple_type_Exception_tuple ); Py_INCREF( const_tuple_type_Exception_tuple );
-    const_str_digest_2f81955f2c1510df168ae1e6f01abc0a = UNSTREAM_STRING( &constant_bin[ 365097 ], 388, 0 );
-    const_str_plain_AssertionError = UNSTREAM_STRING( &constant_bin[ 365485 ], 14, 1 );
-    const_str_digest_4f1f7edfd5f732f275dfe2df16906933 = UNSTREAM_STRING( &constant_bin[ 365499 ], 24, 0 );
-    const_str_digest_b2aba2a823be3147d627215ce37fc8fb = UNSTREAM_STRING( &constant_bin[ 365523 ], 68, 0 );
-    const_str_digest_94713e3a3e62a731b1e40a90645cb329 = UNSTREAM_STRING( &constant_bin[ 365591 ], 52, 0 );
+    const_str_digest_2f81955f2c1510df168ae1e6f01abc0a = UNSTREAM_STRING( &constant_bin[ 365057 ], 388, 0 );
+    const_str_plain_AssertionError = UNSTREAM_STRING( &constant_bin[ 365445 ], 14, 1 );
+    const_str_digest_4f1f7edfd5f732f275dfe2df16906933 = UNSTREAM_STRING( &constant_bin[ 365459 ], 24, 0 );
+    const_str_digest_b2aba2a823be3147d627215ce37fc8fb = UNSTREAM_STRING( &constant_bin[ 365483 ], 68, 0 );
+    const_str_digest_94713e3a3e62a731b1e40a90645cb329 = UNSTREAM_STRING( &constant_bin[ 365551 ], 52, 0 );
 
     constants_created = true;
 }

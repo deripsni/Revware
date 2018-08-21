@@ -78,9 +78,9 @@ static void createModuleConstants( void )
 {
     const_tuple_str_digest_20861594150da1e43b5ee3f86b9deef6_tuple = PyTuple_New( 1 );
     PyTuple_SET_ITEM( const_tuple_str_digest_20861594150da1e43b5ee3f86b9deef6_tuple, 0, const_str_digest_20861594150da1e43b5ee3f86b9deef6 ); Py_INCREF( const_str_digest_20861594150da1e43b5ee3f86b9deef6 );
-    const_str_digest_4da1538565907750615f680748878fd2 = UNSTREAM_STRING( &constant_bin[ 618905 ], 23, 0 );
-    const_str_digest_58c2836bd656d96de4fce58c5a6f004c = UNSTREAM_STRING( &constant_bin[ 618928 ], 29, 0 );
-    const_str_plain_octs2str = UNSTREAM_STRING( &constant_bin[ 618957 ], 8, 1 );
+    const_str_digest_4da1538565907750615f680748878fd2 = UNSTREAM_STRING( &constant_bin[ 618865 ], 23, 0 );
+    const_str_digest_58c2836bd656d96de4fce58c5a6f004c = UNSTREAM_STRING( &constant_bin[ 618888 ], 29, 0 );
+    const_str_plain_octs2str = UNSTREAM_STRING( &constant_bin[ 618917 ], 8, 1 );
 
     constants_created = true;
 }

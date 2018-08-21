@@ -81,10 +81,10 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_plain_crypto_scalarmult_scalarbytes = UNSTREAM_STRING( &constant_bin[ 360818 ], 29, 1 );
-    const_str_digest_9838d47fe516017e8935d6ba50f295a2 = UNSTREAM_STRING( &constant_bin[ 360847 ], 34, 0 );
-    const_str_digest_37b335e2f1566b37a406ee79e1264d09 = UNSTREAM_STRING( &constant_bin[ 360881 ], 142, 0 );
-    const_str_digest_690349ab92a9b106d9fbfb45509870ee = UNSTREAM_STRING( &constant_bin[ 361023 ], 161, 0 );
+    const_str_plain_crypto_scalarmult_scalarbytes = UNSTREAM_STRING( &constant_bin[ 360778 ], 29, 1 );
+    const_str_digest_9838d47fe516017e8935d6ba50f295a2 = UNSTREAM_STRING( &constant_bin[ 360807 ], 34, 0 );
+    const_str_digest_37b335e2f1566b37a406ee79e1264d09 = UNSTREAM_STRING( &constant_bin[ 360841 ], 142, 0 );
+    const_str_digest_690349ab92a9b106d9fbfb45509870ee = UNSTREAM_STRING( &constant_bin[ 360983 ], 161, 0 );
     const_tuple_str_plain_n_str_plain_rc_str_plain_q_tuple = PyTuple_New( 3 );
     PyTuple_SET_ITEM( const_tuple_str_plain_n_str_plain_rc_str_plain_q_tuple, 0, const_str_plain_n ); Py_INCREF( const_str_plain_n );
     PyTuple_SET_ITEM( const_tuple_str_plain_n_str_plain_rc_str_plain_q_tuple, 1, const_str_plain_rc ); Py_INCREF( const_str_plain_rc );
@@ -94,8 +94,8 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_str_plain_n_str_plain_p_str_plain_rc_str_plain_q_tuple, 1, const_str_plain_p ); Py_INCREF( const_str_plain_p );
     PyTuple_SET_ITEM( const_tuple_str_plain_n_str_plain_p_str_plain_rc_str_plain_q_tuple, 2, const_str_plain_rc ); Py_INCREF( const_str_plain_rc );
     PyTuple_SET_ITEM( const_tuple_str_plain_n_str_plain_p_str_plain_rc_str_plain_q_tuple, 3, const_str_plain_q ); Py_INCREF( const_str_plain_q );
-    const_str_plain_crypto_scalarmult_bytes = UNSTREAM_STRING( &constant_bin[ 361184 ], 23, 1 );
-    const_str_digest_b598c011119a42d57cdf799a7dd97a45 = UNSTREAM_STRING( &constant_bin[ 361207 ], 40, 0 );
+    const_str_plain_crypto_scalarmult_bytes = UNSTREAM_STRING( &constant_bin[ 361144 ], 23, 1 );
+    const_str_digest_b598c011119a42d57cdf799a7dd97a45 = UNSTREAM_STRING( &constant_bin[ 361167 ], 40, 0 );
 
     constants_created = true;
 }

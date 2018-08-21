@@ -91,18 +91,18 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_ceb76215673d3e68b77c12bac964ec8c = UNSTREAM_STRING( &constant_bin[ 730195 ], 11, 0 );
-    const_str_digest_6069f029ca4642609fa093ba6bda86e7 = UNSTREAM_STRING( &constant_bin[ 730206 ], 14, 0 );
-    const_str_digest_435e1e5d7d051fdfcdefeba90604dde2 = UNSTREAM_STRING( &constant_bin[ 729986 ], 15, 0 );
-    const_str_digest_dfb373aa089aa7fb20047bc2b39a5fb0 = UNSTREAM_STRING( &constant_bin[ 730220 ], 20, 0 );
+    const_str_digest_ceb76215673d3e68b77c12bac964ec8c = UNSTREAM_STRING( &constant_bin[ 730155 ], 11, 0 );
+    const_str_digest_6069f029ca4642609fa093ba6bda86e7 = UNSTREAM_STRING( &constant_bin[ 730166 ], 14, 0 );
+    const_str_digest_435e1e5d7d051fdfcdefeba90604dde2 = UNSTREAM_STRING( &constant_bin[ 729946 ], 15, 0 );
+    const_str_digest_dfb373aa089aa7fb20047bc2b39a5fb0 = UNSTREAM_STRING( &constant_bin[ 730180 ], 20, 0 );
     const_list_str_plain_BaseDumper_str_plain_SafeDumper_str_plain_Dumper_list = PyList_New( 3 );
-    const_str_plain_BaseDumper = UNSTREAM_STRING( &constant_bin[ 730063 ], 10, 1 );
+    const_str_plain_BaseDumper = UNSTREAM_STRING( &constant_bin[ 730023 ], 10, 1 );
     PyList_SET_ITEM( const_list_str_plain_BaseDumper_str_plain_SafeDumper_str_plain_Dumper_list, 0, const_str_plain_BaseDumper ); Py_INCREF( const_str_plain_BaseDumper );
     PyList_SET_ITEM( const_list_str_plain_BaseDumper_str_plain_SafeDumper_str_plain_Dumper_list, 1, const_str_plain_SafeDumper ); Py_INCREF( const_str_plain_SafeDumper );
     PyList_SET_ITEM( const_list_str_plain_BaseDumper_str_plain_SafeDumper_str_plain_Dumper_list, 2, const_str_plain_Dumper ); Py_INCREF( const_str_plain_Dumper );
-    const_str_digest_17e49ff4ba79fbcf07fd1ad1c80133ee = UNSTREAM_STRING( &constant_bin[ 730105 ], 19, 0 );
-    const_str_plain_emitter = UNSTREAM_STRING( &constant_bin[ 730240 ], 7, 1 );
-    const_str_digest_3f27ed2fb82064d67fcb86a06535aa92 = UNSTREAM_STRING( &constant_bin[ 730133 ], 19, 0 );
+    const_str_digest_17e49ff4ba79fbcf07fd1ad1c80133ee = UNSTREAM_STRING( &constant_bin[ 730065 ], 19, 0 );
+    const_str_plain_emitter = UNSTREAM_STRING( &constant_bin[ 730200 ], 7, 1 );
+    const_str_digest_3f27ed2fb82064d67fcb86a06535aa92 = UNSTREAM_STRING( &constant_bin[ 730093 ], 19, 0 );
 
     constants_created = true;
 }

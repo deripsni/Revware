@@ -67,15 +67,15 @@ static void createModuleConstants( void )
 {
     const_list_str_plain_strptime_list = PyList_New( 1 );
     PyList_SET_ITEM( const_list_str_plain_strptime_list, 0, const_str_plain_strptime ); Py_INCREF( const_str_plain_strptime );
-    const_str_digest_282a2fc8c3e8ead271b37e8a59171563 = UNSTREAM_STRING( &constant_bin[ 618647 ], 34, 0 );
-    const_str_plain_dateFormat = UNSTREAM_STRING( &constant_bin[ 618681 ], 10, 1 );
+    const_str_digest_282a2fc8c3e8ead271b37e8a59171563 = UNSTREAM_STRING( &constant_bin[ 618607 ], 34, 0 );
+    const_str_plain_dateFormat = UNSTREAM_STRING( &constant_bin[ 618641 ], 10, 1 );
     const_tuple_str_plain_text_str_plain_dateFormat_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_text_str_plain_dateFormat_tuple, 0, const_str_plain_text ); Py_INCREF( const_str_plain_text );
     PyTuple_SET_ITEM( const_tuple_str_plain_text_str_plain_dateFormat_tuple, 1, const_str_plain_dateFormat ); Py_INCREF( const_str_plain_dateFormat );
-    const_str_digest_cbc7e492f4f2812186dac3730bfc01ff = UNSTREAM_STRING( &constant_bin[ 618691 ], 28, 0 );
+    const_str_digest_cbc7e492f4f2812186dac3730bfc01ff = UNSTREAM_STRING( &constant_bin[ 618651 ], 28, 0 );
     const_tuple_str_plain_datetime_tuple = PyTuple_New( 1 );
     PyTuple_SET_ITEM( const_tuple_str_plain_datetime_tuple, 0, const_str_plain_datetime ); Py_INCREF( const_str_plain_datetime );
-    const_str_digest_b53df38eef39fe37c62bd4af646d6b6f = UNSTREAM_STRING( &constant_bin[ 618655 ], 25, 0 );
+    const_str_digest_b53df38eef39fe37c62bd4af646d6b6f = UNSTREAM_STRING( &constant_bin[ 618615 ], 25, 0 );
 
     constants_created = true;
 }

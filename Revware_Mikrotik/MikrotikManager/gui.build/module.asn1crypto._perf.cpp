@@ -56,11 +56,11 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_plain_NUITKA_PACKAGE_asn1crypto__perf = UNSTREAM_STRING( &constant_bin[ 16616 ], 31, 1 );
-    const_str_plain__perf = UNSTREAM_STRING( &constant_bin[ 13926 ], 5, 1 );
-    const_str_digest_332c4dc79ce6edaa99c93dc635ad2b8c = UNSTREAM_STRING( &constant_bin[ 16647 ], 16, 0 );
-    const_str_digest_fad8a59eba8ec1e80bd4198a9a02cbf4 = UNSTREAM_STRING( &constant_bin[ 16663 ], 28, 0 );
-    const_str_digest_5ed93ae1de5463f3d40e13b98f3fa2d5 = UNSTREAM_STRING( &constant_bin[ 16691 ], 25, 0 );
+    const_str_plain_NUITKA_PACKAGE_asn1crypto__perf = UNSTREAM_STRING( &constant_bin[ 16576 ], 31, 1 );
+    const_str_plain__perf = UNSTREAM_STRING( &constant_bin[ 13886 ], 5, 1 );
+    const_str_digest_332c4dc79ce6edaa99c93dc635ad2b8c = UNSTREAM_STRING( &constant_bin[ 16607 ], 16, 0 );
+    const_str_digest_fad8a59eba8ec1e80bd4198a9a02cbf4 = UNSTREAM_STRING( &constant_bin[ 16623 ], 28, 0 );
+    const_str_digest_5ed93ae1de5463f3d40e13b98f3fa2d5 = UNSTREAM_STRING( &constant_bin[ 16651 ], 25, 0 );
     const_tuple_719131a86fbb4413a4c8f4d24e54abdd_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_719131a86fbb4413a4c8f4d24e54abdd_tuple, 0, const_str_plain_NUITKA_PACKAGE_asn1crypto__perf ); Py_INCREF( const_str_plain_NUITKA_PACKAGE_asn1crypto__perf );
     PyTuple_SET_ITEM( const_tuple_719131a86fbb4413a4c8f4d24e54abdd_tuple, 1, const_str_digest_5bfaf90dbd407b4fc29090c8f6415242 ); Py_INCREF( const_str_digest_5bfaf90dbd407b4fc29090c8f6415242 );

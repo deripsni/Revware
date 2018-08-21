@@ -84,20 +84,20 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_plain_crypto_shorthash_siphashx24_bytes = UNSTREAM_STRING( &constant_bin[ 361903 ], 33, 1 );
+    const_str_plain_crypto_shorthash_siphashx24_bytes = UNSTREAM_STRING( &constant_bin[ 361863 ], 33, 1 );
     const_tuple_str_plain_data_str_plain_key_str_plain_digest_str_plain_rc_tuple = PyTuple_New( 4 );
     PyTuple_SET_ITEM( const_tuple_str_plain_data_str_plain_key_str_plain_digest_str_plain_rc_tuple, 0, const_str_plain_data ); Py_INCREF( const_str_plain_data );
     PyTuple_SET_ITEM( const_tuple_str_plain_data_str_plain_key_str_plain_digest_str_plain_rc_tuple, 1, const_str_plain_key ); Py_INCREF( const_str_plain_key );
     PyTuple_SET_ITEM( const_tuple_str_plain_data_str_plain_key_str_plain_digest_str_plain_rc_tuple, 2, const_str_plain_digest ); Py_INCREF( const_str_plain_digest );
     PyTuple_SET_ITEM( const_tuple_str_plain_data_str_plain_key_str_plain_digest_str_plain_rc_tuple, 3, const_str_plain_rc ); Py_INCREF( const_str_plain_rc );
-    const_str_plain_crypto_shorthash_siphashx24_keybytes = UNSTREAM_STRING( &constant_bin[ 361936 ], 36, 1 );
-    const_str_digest_f5c50c54d654f439d88d923f87e0dc82 = UNSTREAM_STRING( &constant_bin[ 361972 ], 36, 0 );
-    const_str_plain_crypto_shorthash_siphash24_bytes = UNSTREAM_STRING( &constant_bin[ 362008 ], 32, 1 );
-    const_str_plain_crypto_shorthash_siphash24_keybytes = UNSTREAM_STRING( &constant_bin[ 362040 ], 35, 1 );
-    const_str_digest_a1c09680f09f74f573868c880e65d8c9 = UNSTREAM_STRING( &constant_bin[ 362075 ], 33, 0 );
-    const_str_digest_44e0ce2a34e64e4c0e243001d06db1a2 = UNSTREAM_STRING( &constant_bin[ 362108 ], 39, 0 );
-    const_str_digest_5e98a32cec08f999b1716d017b0eca9f = UNSTREAM_STRING( &constant_bin[ 362147 ], 218, 0 );
-    const_str_digest_8b4ae143169f40b77faf07ab45a6ee45 = UNSTREAM_STRING( &constant_bin[ 362365 ], 217, 0 );
+    const_str_plain_crypto_shorthash_siphashx24_keybytes = UNSTREAM_STRING( &constant_bin[ 361896 ], 36, 1 );
+    const_str_digest_f5c50c54d654f439d88d923f87e0dc82 = UNSTREAM_STRING( &constant_bin[ 361932 ], 36, 0 );
+    const_str_plain_crypto_shorthash_siphash24_bytes = UNSTREAM_STRING( &constant_bin[ 361968 ], 32, 1 );
+    const_str_plain_crypto_shorthash_siphash24_keybytes = UNSTREAM_STRING( &constant_bin[ 362000 ], 35, 1 );
+    const_str_digest_a1c09680f09f74f573868c880e65d8c9 = UNSTREAM_STRING( &constant_bin[ 362035 ], 33, 0 );
+    const_str_digest_44e0ce2a34e64e4c0e243001d06db1a2 = UNSTREAM_STRING( &constant_bin[ 362068 ], 39, 0 );
+    const_str_digest_5e98a32cec08f999b1716d017b0eca9f = UNSTREAM_STRING( &constant_bin[ 362107 ], 218, 0 );
+    const_str_digest_8b4ae143169f40b77faf07ab45a6ee45 = UNSTREAM_STRING( &constant_bin[ 362325 ], 217, 0 );
 
     constants_created = true;
 }

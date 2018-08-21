@@ -81,19 +81,19 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_digest_5adfe60a7768150a7930c46865708289 = UNSTREAM_STRING( &constant_bin[ 699232 ], 47, 0 );
+    const_str_digest_5adfe60a7768150a7930c46865708289 = UNSTREAM_STRING( &constant_bin[ 699192 ], 47, 0 );
     const_tuple_str_plain_self_str_plain_exception_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_self_str_plain_exception_tuple, 0, const_str_plain_self ); Py_INCREF( const_str_plain_self );
     PyTuple_SET_ITEM( const_tuple_str_plain_self_str_plain_exception_tuple, 1, const_str_plain_exception ); Py_INCREF( const_str_plain_exception );
     const_tuple_d45fe267f8aec99e75791192b1ee1869_tuple = PyTuple_New( 4 );
     PyTuple_SET_ITEM( const_tuple_d45fe267f8aec99e75791192b1ee1869_tuple, 0, const_str_plain_self ); Py_INCREF( const_str_plain_self );
     PyTuple_SET_ITEM( const_tuple_d45fe267f8aec99e75791192b1ee1869_tuple, 1, const_str_plain_exception ); Py_INCREF( const_str_plain_exception );
-    const_str_plain_exception_class = UNSTREAM_STRING( &constant_bin[ 699279 ], 15, 1 );
+    const_str_plain_exception_class = UNSTREAM_STRING( &constant_bin[ 699239 ], 15, 1 );
     PyTuple_SET_ITEM( const_tuple_d45fe267f8aec99e75791192b1ee1869_tuple, 2, const_str_plain_exception_class ); Py_INCREF( const_str_plain_exception_class );
-    const_str_plain_message_re = UNSTREAM_STRING( &constant_bin[ 699294 ], 10, 1 );
+    const_str_plain_message_re = UNSTREAM_STRING( &constant_bin[ 699254 ], 10, 1 );
     PyTuple_SET_ITEM( const_tuple_d45fe267f8aec99e75791192b1ee1869_tuple, 3, const_str_plain_message_re ); Py_INCREF( const_str_plain_message_re );
-    const_str_digest_15a563ac5bd27a100a88e3087c3fa2b4 = UNSTREAM_STRING( &constant_bin[ 699304 ], 48, 0 );
-    const_str_digest_c80a3394ac4b0728981c0df6a0bbfb32 = UNSTREAM_STRING( &constant_bin[ 694946 ], 25, 0 );
+    const_str_digest_15a563ac5bd27a100a88e3087c3fa2b4 = UNSTREAM_STRING( &constant_bin[ 699264 ], 48, 0 );
+    const_str_digest_c80a3394ac4b0728981c0df6a0bbfb32 = UNSTREAM_STRING( &constant_bin[ 694906 ], 25, 0 );
     const_tuple_str_plain_ExceptionHandler_tuple_type_object_tuple_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_str_plain_ExceptionHandler_tuple_type_object_tuple_tuple, 0, const_str_plain_ExceptionHandler ); Py_INCREF( const_str_plain_ExceptionHandler );
     PyTuple_SET_ITEM( const_tuple_str_plain_ExceptionHandler_tuple_type_object_tuple_tuple, 1, const_tuple_type_object_tuple ); Py_INCREF( const_tuple_type_object_tuple );
@@ -101,13 +101,13 @@ static void createModuleConstants( void )
     PyTuple_SET_ITEM( const_tuple_b08d7204638cac7e16d75da776f798f5_tuple, 0, const_str_plain_self ); Py_INCREF( const_str_plain_self );
     PyTuple_SET_ITEM( const_tuple_b08d7204638cac7e16d75da776f798f5_tuple, 1, const_str_plain_message_re ); Py_INCREF( const_str_plain_message_re );
     PyTuple_SET_ITEM( const_tuple_b08d7204638cac7e16d75da776f798f5_tuple, 2, const_str_plain_exception_class ); Py_INCREF( const_str_plain_exception_class );
-    const_str_digest_94f41d8cc2f9b554031ed0c1adbb0a3c = UNSTREAM_STRING( &constant_bin[ 699352 ], 44, 0 );
-    const_str_digest_64ccaa0abf5f2a0ee4597b5e74c06e7e = UNSTREAM_STRING( &constant_bin[ 694571 ], 23, 0 );
-    const_str_plain_add_exception_type = UNSTREAM_STRING( &constant_bin[ 699396 ], 18, 1 );
-    const_str_digest_05edf3c43a1a90eda3ce776e1b39a1ab = UNSTREAM_STRING( &constant_bin[ 699414 ], 53, 0 );
-    const_str_digest_7da3725d968b769dc4d92d7ba54da4b8 = UNSTREAM_STRING( &constant_bin[ 699467 ], 35, 0 );
-    const_str_plain_message_to_class_map = UNSTREAM_STRING( &constant_bin[ 699502 ], 20, 1 );
-    const_str_plain__handle_communication_exception = UNSTREAM_STRING( &constant_bin[ 699321 ], 31, 1 );
+    const_str_digest_94f41d8cc2f9b554031ed0c1adbb0a3c = UNSTREAM_STRING( &constant_bin[ 699312 ], 44, 0 );
+    const_str_digest_64ccaa0abf5f2a0ee4597b5e74c06e7e = UNSTREAM_STRING( &constant_bin[ 694531 ], 23, 0 );
+    const_str_plain_add_exception_type = UNSTREAM_STRING( &constant_bin[ 699356 ], 18, 1 );
+    const_str_digest_05edf3c43a1a90eda3ce776e1b39a1ab = UNSTREAM_STRING( &constant_bin[ 699374 ], 53, 0 );
+    const_str_digest_7da3725d968b769dc4d92d7ba54da4b8 = UNSTREAM_STRING( &constant_bin[ 699427 ], 35, 0 );
+    const_str_plain_message_to_class_map = UNSTREAM_STRING( &constant_bin[ 699462 ], 20, 1 );
+    const_str_plain__handle_communication_exception = UNSTREAM_STRING( &constant_bin[ 699281 ], 31, 1 );
 
     constants_created = true;
 }

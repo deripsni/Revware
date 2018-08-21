@@ -68,13 +68,13 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_plain_libsodium = UNSTREAM_STRING( &constant_bin[ 356080 ], 9, 1 );
-    const_str_digest_8bdf8b3125f7f8300572a17df8265fcb = UNSTREAM_STRING( &constant_bin[ 364270 ], 94, 0 );
-    const_str_plain__sodium_init = UNSTREAM_STRING( &constant_bin[ 364364 ], 12, 1 );
-    const_str_plain_init_once = UNSTREAM_STRING( &constant_bin[ 364376 ], 9, 1 );
-    const_str_digest_3c229a006d18acc1b7b319a309226072 = UNSTREAM_STRING( &constant_bin[ 364385 ], 28, 0 );
-    const_str_digest_ef482f86b175f6d20a9398b3b2d35a9f = UNSTREAM_STRING( &constant_bin[ 364413 ], 34, 0 );
-    const_str_digest_8034160bd918646f767db9f060eb907d = UNSTREAM_STRING( &constant_bin[ 364447 ], 27, 0 );
+    const_str_plain_libsodium = UNSTREAM_STRING( &constant_bin[ 356040 ], 9, 1 );
+    const_str_digest_8bdf8b3125f7f8300572a17df8265fcb = UNSTREAM_STRING( &constant_bin[ 364230 ], 94, 0 );
+    const_str_plain__sodium_init = UNSTREAM_STRING( &constant_bin[ 364324 ], 12, 1 );
+    const_str_plain_init_once = UNSTREAM_STRING( &constant_bin[ 364336 ], 9, 1 );
+    const_str_digest_3c229a006d18acc1b7b319a309226072 = UNSTREAM_STRING( &constant_bin[ 364345 ], 28, 0 );
+    const_str_digest_ef482f86b175f6d20a9398b3b2d35a9f = UNSTREAM_STRING( &constant_bin[ 364373 ], 34, 0 );
+    const_str_digest_8034160bd918646f767db9f060eb907d = UNSTREAM_STRING( &constant_bin[ 364407 ], 27, 0 );
 
     constants_created = true;
 }

@@ -50,11 +50,11 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_dict_ba9d1c7b25ecbf0ae52dc9bdccfe586c = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 183787 ], 946 );
-    const_dict_1a23b084cdb91724f87685c38494c991 = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 184733 ], 6702 );
-    const_dict_5399f7b0439d9537c290649e07f4960c = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 191435 ], 13249 );
-    const_str_digest_8a88317164860b547beff038de474299 = UNSTREAM_STRING( &constant_bin[ 204684 ], 16, 0 );
-    const_str_digest_4c41e0b73d97829c93c8a1dc02228f50 = UNSTREAM_STRING( &constant_bin[ 204700 ], 13, 0 );
+    const_dict_ba9d1c7b25ecbf0ae52dc9bdccfe586c = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 183747 ], 946 );
+    const_dict_1a23b084cdb91724f87685c38494c991 = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 184693 ], 6702 );
+    const_dict_5399f7b0439d9537c290649e07f4960c = PyMarshal_ReadObjectFromString( (char *)&constant_bin[ 191395 ], 13249 );
+    const_str_digest_8a88317164860b547beff038de474299 = UNSTREAM_STRING( &constant_bin[ 204644 ], 16, 0 );
+    const_str_digest_4c41e0b73d97829c93c8a1dc02228f50 = UNSTREAM_STRING( &constant_bin[ 204660 ], 13, 0 );
 
     constants_created = true;
 }

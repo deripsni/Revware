@@ -59,13 +59,13 @@ static bool constants_created = false;
 
 static void createModuleConstants( void )
 {
-    const_str_plain_NUITKA_PACKAGE_idna = UNSTREAM_STRING( &constant_bin[ 181971 ], 19, 1 );
-    const_str_digest_6113d5b8ddc90108c594903d68250893 = UNSTREAM_STRING( &constant_bin[ 181990 ], 16, 0 );
-    const_str_plain_package_data = UNSTREAM_STRING( &constant_bin[ 182006 ], 12, 1 );
+    const_str_plain_NUITKA_PACKAGE_idna = UNSTREAM_STRING( &constant_bin[ 181931 ], 19, 1 );
+    const_str_digest_6113d5b8ddc90108c594903d68250893 = UNSTREAM_STRING( &constant_bin[ 181950 ], 16, 0 );
+    const_str_plain_package_data = UNSTREAM_STRING( &constant_bin[ 181966 ], 12, 1 );
     const_tuple_396fd6b3084f05d722a687aa03b9e50c_tuple = PyTuple_New( 2 );
     PyTuple_SET_ITEM( const_tuple_396fd6b3084f05d722a687aa03b9e50c_tuple, 0, const_str_plain_NUITKA_PACKAGE_idna ); Py_INCREF( const_str_plain_NUITKA_PACKAGE_idna );
     PyTuple_SET_ITEM( const_tuple_396fd6b3084f05d722a687aa03b9e50c_tuple, 1, const_str_digest_5bfaf90dbd407b4fc29090c8f6415242 ); Py_INCREF( const_str_digest_5bfaf90dbd407b4fc29090c8f6415242 );
-    const_str_digest_b524b2931bfefb9a3de889a85999899a = UNSTREAM_STRING( &constant_bin[ 182018 ], 13, 0 );
+    const_str_digest_b524b2931bfefb9a3de889a85999899a = UNSTREAM_STRING( &constant_bin[ 181978 ], 13, 0 );
 
     constants_created = true;
 }
