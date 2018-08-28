@@ -82,6 +82,7 @@ class Firewall(QtCore.QThread):
 		self.localip = ip_input
 		self.localu = username_input
 		self.localp = password_input
+		self.tries = 0
 		self.create_ssh()
 
 	def run(self):
@@ -107,10 +108,14 @@ class Firewall(QtCore.QThread):
 				self.list.add(action="drop", chain='forward', disabled='false')
 				self.run()
 		except routeros_api.exceptions.RouterOsApiConnectionError:
-			self.printToScreen.emit("Could not establish API connection")
-			self.printToScreen.emit("Attempting to enable API through Telnet")
-			self.tel.telnet(self.localip, self.localu, self.localp, "api")
-			self.run()
+			if self.tries == 0:
+				self.printToScreen.emit("Could not establish API connection")
+				self.printToScreen.emit("Attempting to enable API through Telnet")
+				self.tel.telnet(self.localip, self.localu, self.localp, "api")
+				self.tries = self.tries + 1
+				self.run()
+			else:
+				self.printToScreen.emit("Telnet failed, please check your credentials")
 
 	def create_ssh(self):
 		self.sshc = ssh.SSHConnection(parent=self)
@@ -126,6 +131,7 @@ class DeviceName(QtCore.QThread):
 		self.localip = ip_input
 		self.localu = username_input
 		self.localp = password_input
+		self.tries = 0
 		self.create_ssh()
 
 	@QtCore.pyqtSlot(str, str, str)
@@ -140,10 +146,14 @@ class DeviceName(QtCore.QThread):
 			self.printToScreen.emit('Name: ' + self.filter[0]['name'])
 
 		except routeros_api.exceptions.RouterOsApiConnectionError:
-			self.printToScreen.emit("Could not establish API connection")
-			self.printToScreen.emit("Attempting to enable API through Telnet")
-			self.tel.telnet(self.localip, self.localu, self.localp, "api")
-			self.run()
+			if self.tries == 0:
+				self.printToScreen.emit("Could not establish API connection")
+				self.printToScreen.emit("Attempting to enable API through Telnet")
+				self.tel.telnet(self.localip, self.localu, self.localp, "api")
+				self.tries = self.tries + 1
+				self.run()
+			else:
+				self.printToScreen.emit("Telnet failed, please check your credentials")
 
 	def create_ssh(self):
 		self.sshc = ssh.SSHConnection(parent=self)

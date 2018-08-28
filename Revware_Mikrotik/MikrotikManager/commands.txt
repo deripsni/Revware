@@ -1,3 +1,0 @@
-user set admin password=west07
-ip firewall filter print
-

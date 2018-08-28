@@ -38,13 +38,13 @@ class Master(QtCore.QObject):
 	mikroSignal = QtCore.pyqtSignal(str, str, str)
 
 	# Makes the program display silent exceptions for debugging
-	# sys._excepthook = sys.excepthook
-	#
-	# def exception_hook(exctype, value, traceback):
-	# 	print(exctype, value, traceback)
-	# 	sys.excepthook(exctype, value, traceback)
-	# 	sys.exit(1)
-	# sys.excepthook = exception_hook
+	sys._excepthook = sys.excepthook
+
+	def exception_hook(exctype, value, traceback):
+		print(exctype, value, traceback)
+		sys.excepthook(exctype, value, traceback)
+		sys.exit(1)
+	sys.excepthook = exception_hook
 	#########################################################
 
 	def __init__(self, parent=None):
@@ -55,8 +55,11 @@ class Master(QtCore.QObject):
 
 		try:
 			self.theme = self.settings["defaultTheme"]
-			with open(self.theme, 'r') as myfile:
-				self.theme = myfile.read()
+			if self.theme == "Basic":
+				pass
+			else:
+				with open(self.theme, 'r') as myfile:
+					self.theme = myfile.read()
 		except FileNotFoundError:
 			pass
 
@@ -117,7 +120,7 @@ class Master(QtCore.QObject):
 		self.gui.btn1.clicked.connect(self.fwindow.show)
 		self.gui.btn2.clicked.connect(self.pwindow.show)
 		self.gui.btn3.clicked.connect(self.create_firewall_thread)
-		self.gui.btn4.clicked.connect(self.create_device_name_thread)
+		# self.gui.btn4.clicked.connect(self.create_device_name_thread)
 		self.gui.btn5.clicked.connect(self.cwindow.show)
 		self.gui.btn6.clicked.connect(self.twindow.show)
 		self.gui.btn7.clicked.connect(self.batchstackwindow.show)
@@ -369,12 +372,30 @@ class CommandWindow(QMainWindow):
 		self.clabel.resize(90, 30)
 
 		self.btn = QPushButton("Submit", self)
-		self.btn.move(200, 35)
+		self.btn.move(220, 35)
+		self.btn.resize(85, 30)
 		self.btn.setAutoDefault(True)
 
-		self.statusBar()
+		self.wlabel1 = QLabel("Warning: Sending a custom command may", self)
+		self.wlabel2 = QLabel("cause unintended consequences.", self)
+		self.wlabel3 = QLabel("Be sure you know the effects of your ", self)
+		self.wlabel4 = QLabel("command before you submit.", self)
+		self.wlabel1.setStyleSheet('font-size: 10px;')
+		self.wlabel2.setStyleSheet('font-size: 10px;')
+		self.wlabel3.setStyleSheet('font-size: 10px;')
+		self.wlabel4.setStyleSheet('font-size: 10px;')
+		self.wlabel1.move(5, 35)
+		self.wlabel2.move(5, 50)
+		self.wlabel3.move(5, 65)
+		self.wlabel4.move(5, 80)
+		self.wlabel1.resize(200, 15)
+		self.wlabel2.resize(200, 15)
+		self.wlabel3.resize(200, 15)
+		self.wlabel4.resize(200, 15)
 
-		self.setGeometry(90, 200, 320, 90)
+		# self.statusBar()
+
+		self.setGeometry(90, 200, 320, 110)
 		self.setWindowTitle('Enter Custom Command')
 
 		self.setWindowModality(QtCore.Qt.ApplicationModal)
@@ -646,12 +667,12 @@ class SubnetRow(QWidget):
 	def setup(self):
 		self.rowlayout = QHBoxLayout()
 
-		self.l1 = QLabel("Base Ip:")
+		self.l1 = QLabel("Subnet:")
 		self.l1.setFixedWidth(40)
 		self.b1 = QLineEdit()
 		self.b1.setFixedWidth(100)
-		self.l2 = QLabel("Subnet Prefix:")
-		self.l2.setFixedWidth(70)
+		self.l2 = QLabel("/")
+		self.l2.setFixedWidth(5)
 		self.b2 = QLineEdit()
 		self.b2.setFixedWidth(30)
 		self.b2.setMaxLength(3)
@@ -720,7 +741,7 @@ class MikroWindow(QMainWindow):
 
 		self.setWindowTitle('MikroTik Poller')
 
-		self.resize(400, self.height)
+		self.resize(300, self.height)
 		self.move(500, 0)
 
 		# self.add_widget()
@@ -730,7 +751,7 @@ class MikroWindow(QMainWindow):
 		if self.height == (self.frameGeometry().height()-39) or self.height == 80:
 			if self.height <= 400:
 				self.height = self.height + 45
-				self.resize(400, self.height)
+				self.resize(300, self.height)
 		self.rowlist.append(SubnetRow(self))
 		self.scrollLayout.addRow(self.rowlist[self.count])
 		self.baselist.append(self.rowlist[self.count].b1)
@@ -748,6 +769,7 @@ class MikroWindow(QMainWindow):
 		self.resize(400, self.height)
 		self.add_widget()
 		self.show()
+
 
 class ProgressWindow(QWidget):
 
@@ -962,6 +984,8 @@ class MainWindow(QMainWindow):
 		self.helpMenu = self.mainMenu.addMenu('Help')
 
 		self.themeMenu = self.viewMenu.addMenu('Themes')
+		self.basicAction = self.themeMenu.addAction('Basic')
+		self.basicAction.triggered.connect(lambda: self.update_theme("Basic"))
 		self.darkAction = self.themeMenu.addAction('Dark')
 		self.darkAction.triggered.connect(lambda: self.update_theme("DarkOrange.qss"))
 		self.coffeeAction = self.themeMenu.addAction('Coffee')
@@ -984,7 +1008,7 @@ class MainWindow(QMainWindow):
 		self.ipbox.move(80, 30)
 		self.ipbox.resize(390, 20)
 
-		self.iplabel = QLabel('Ip: ', self)
+		self.iplabel = QLabel('IP: ', self)
 		self.iplabel.move(63, 23)
 		self.iplabel.resize(15, 30)
 
@@ -1035,22 +1059,22 @@ class MainWindow(QMainWindow):
 		self.btn1.resize(100, 30)
 		self.btn3.setAutoDefault(True)
 
-		self.btn4 = QPushButton("Radio Name", self)
-		self.btn4.move(20, 240)
-		self.btn1.resize(100, 30)
-		self.btn4.setAutoDefault(True)
+		# self.btn4 = QPushButton("Radio Name", self)
+		# self.btn4.move(20, 240)
+		# self.btn1.resize(100, 30)
+		# self.btn4.setAutoDefault(True)
 
 		self.btn5 = QPushButton("Custom Command", self)
-		self.btn5.move(20, 275)
+		self.btn5.move(20, 240)
 		self.btn1.resize(100, 30)
 		self.btn5.setAutoDefault(True)
 
-		self.btn6 = QPushButton("Telnet", self)
-		self.btn6.move(20, 310)
+		self.btn6 = QPushButton("Protocol", self)
+		self.btn6.move(20, 275)
 		self.btn1.resize(100, 30)
 		self.btn6.setAutoDefault(True)
 
-		self.btn7 = QPushButton("Batch SFTP", self)
+		self.btn7 = QPushButton("Batch Operation", self)
 		self.btn7.move(20, 345)
 		self.btn1.resize(100, 30)
 		self.btn7.setAutoDefault(True)
@@ -1100,12 +1124,16 @@ class MainWindow(QMainWindow):
 		print(status)
 
 	def update_theme(self, name):
-		with open(name, 'r') as myfile:
-			theme = myfile.read()
+		if name == "Basic":
+			app.setStyleSheet(" ")
+		else:
+			with open(name, 'r') as myfile:
+				theme = myfile.read()
+				app.setStyleSheet(theme)
 		master.settings['defaultTheme'] = name
 		with open('settings.yaml', 'w') as f:
 			dump(master.settings, f)
-		app.setStyleSheet(theme)
+
 
 	def open_url(self):
 		url = QtCore.QUrl('https://github.com/Revand/Revware/issues')

@@ -1,7 +1,5 @@
-import ssh
 import paramiko
 import time
-import ping
 import routeros_api
 from PyQt5 import QtCore
 from PyQt5 import QtWidgets
@@ -42,6 +40,12 @@ class SFTP(QtCore.QObject):
 		self.openpexecutewindow.connect(parent.parent().batchpasswordexecutewindow.show)
 		self.openaexecutewindow.connect(parent.parent().batchfirewallexecutewindow.show)
 
+		self.ips = []
+		self.names = []
+		self.versions = []
+		self.architectures = []
+		self.changes = []
+
 	def get_ips(self, ifile):
 		with open(ifile, 'r') as infile:
 			self.ips = infile.read().splitlines()
@@ -70,22 +74,66 @@ class SFTP(QtCore.QObject):
 				self.setcellcolorsignal.emit(i, 4, 'red')
 				self.setcelltextsignal.emit(i, 5, 'Offline')
 
+	@QtCore.pyqtSlot(str)
+	def print_log(self, round):
+		print("Creating Log")
+
+
+
+		if round == "Initial":
+			self.log = open("batch.log", 'w+')
+			self.log.write("Initial Device Configurations\n")
+			self.log.write("=============================\n\n")
+
+		if round == "Final":
+			self.log = open("batch.log", 'a+')
+			self.log.write("Final Device Configurations\n")
+			self.log.write("===========================\n\n")
+
+		for i in range(len(self.indexesonline)):
+			self.log.write("IP: " + self.ips[i] + "\n")
+			self.log.write("Name: " + self.names[i] + "\n")
+			self.log.write("Firmware: " + self.versions[i] + "\n")
+			self.log.write("Architecture: " + self.architectures[i] + "\n")
+			if round == "Final":
+				self.log.write(self.changes[i] + "\n\n")
+			else:
+				self.log.write("\n")
+
+		self.log.write("\n")
+		self.log.close()
+
+
 	def get_variables(self, i):
 		try:
 			connection = routeros_api.RouterOsApiPool(self.ips[i], username=self.uname, password=self.password)
+
 			api = connection.get_api()
 
 			self.identity = api.get_resource('/system/identity')
 			self.filter = self.identity.get()
 			self.setcelltextsignal.emit(i, 1, self.filter[0]['name'])
+			self.names.append(self.filter[0]['name'])
 
 			self.version = api.get_resource('/system/resource')
 			self.filter = self.version.get()
 			self.setcelltextsignal.emit(i, 2, self.filter[0]['version'])
+			if len(self.versions) < i+1:
+				print("first time")
+				self.versions.append(self.filter[0]['version'])
+				self.changes.append("No Change Detected")
+			else:
+				if not self.versions[i] == self.filter[0]['version']:
+					print("New Version")
+					self.changes[i] = "Firmware changed from " + self.versions[i] + " to " + str(self.filter[0]['version'])
+					print(self.changes[i])
+				self.versions[i] = self.filter[0]['version']
+
 
 			self.architecture = api.get_resource('/system/resource')
 			self.filter = self.version.get()
 			self.setcelltextsignal.emit(i, 3, self.filter[0]['architecture-name'])
+			self.architectures.append(self.filter[0]['architecture-name'])
 
 			return None
 
@@ -103,9 +151,10 @@ class SFTP(QtCore.QObject):
 				time.sleep(0.5)
 				self.get_variables(i)
 		except routeros_api.exceptions.RouterOsApiCommunicationError:
-
+			self.setcelltextsignal.emit(i, 5, 'Failed')
+			self.indexesonline.pop()
+			return None
 			print("Communication Error")
-
 	def filecallback(self):   # callback function that does nothing
 		pass
 
@@ -115,6 +164,7 @@ class SFTP(QtCore.QObject):
 		self.get_ips(ifile)
 		self.table_setup()
 		self.openfexecutewindow.emit()
+		self.print_log("Initial")
 
 	def batchfirmware(self, username, password, cfile):
 
@@ -131,6 +181,7 @@ class SFTP(QtCore.QObject):
 			if self.count == 2:
 				self.batch_ping_thread = PingMachines(self.indexesonline, self.ips, parent=self)
 				self.batch_ping_thread.start()
+		# self.print_log("Final")
 		self.uploading = None
 
 	def batchfirmware2(self, username, password, ip, cfile, i):
@@ -166,6 +217,7 @@ class SFTP(QtCore.QObject):
 		self.get_ips(ifile)
 		self.table_setup()
 		self.openpexecutewindow.emit()
+		self.print_log("Initial")
 
 	def batchpassword(self, username, password, command):
 
@@ -186,8 +238,14 @@ class SFTP(QtCore.QObject):
 			try:
 				self.parent().sshc.ssh(self.ips[i], username, self.parent().p1, "")
 				self.setcelltextsignal.emit(i, 5, 'Verified')
+				self.changes[i] = "Password was changed"
 			except (paramiko.ssh_exception.SSHException, paramiko.ssh_exception.AuthenticationException):
 				self.setcelltextsignal.emit(i, 5, 'Failed')
+				self.changes[i] = "Password could not be changed"
+			except IndexError:
+				self.changes.append("Password was changed")
+
+		self.print_log("Final")
 		self.uploading = None
 
 	def setup_batchfirewall(self, username, password, ifile):
@@ -196,6 +254,7 @@ class SFTP(QtCore.QObject):
 		self.get_ips(ifile)
 		self.table_setup()
 		self.openaexecutewindow.emit()
+		self.print_log("Initial")
 
 	def batchfirewall(self, username, password):
 
@@ -203,15 +262,16 @@ class SFTP(QtCore.QObject):
 
 		for i in self.indexesonline:
 			self.checkfirewall(username, password, i)
+		self.print_log("Final")
 
 	def checkfirewall(self, username, password, ip):
 		try:
 			connection = routeros_api.RouterOsApiPool(self.ips[ip], username=username, password=password)
-			self.errormessage = (
-								"U: " + username + " P: " + password + " IP: " + str(ip) + " Also IP: " +
-								str(self.indexesonline[ip]))
-
-			self.printToScreen.emit(self.errormessage)
+			# self.errormessage = (
+			# 					"U: " + username + " P: " + password + " IP: " + str(ip) + " Also IP: " +
+			# 					str(self.indexesonline[ip]))
+			#
+			# self.printToScreen.emit(self.errormessage)
 			api = connection.get_api()
 			self.list = api.get_resource('/ip/firewall/filter')
 			self.filter = self.list.get()
@@ -227,12 +287,20 @@ class SFTP(QtCore.QObject):
 			if self.index == self.dropindex:
 				self.printToScreen.emit("Drop rule is enabled")
 				self.setcelltextsignal.emit(ip, 5, 'Enabled')
+				try:
+					self.changes[ip] = "Drop rule was already enabled"
+				except IndexError:
+					self.changes.append("Drop rule was already enabled")
 			else:
 				self.printToScreen.emit("Drop rule is not enabled")
 				self.setcelltextsignal.emit(ip, 5, 'Not Enabled')
 				self.printToScreen.emit("Adding drop rule...")
 				self.setcelltextsignal.emit(ip, 5, 'Enabling')
 				self.list.add(action="drop", chain='forward', disabled='false')
+				try:
+					self.changes[ip] = "Enabled drop rule"
+				except IndexError:
+					self.changes.append("Enabled drop rule")
 				self.checkfirewall(username, password, ip)
 
 		except routeros_api.exceptions.RouterOsApiConnectionError:
@@ -257,6 +325,7 @@ class PingMachines(QtCore.QThread):
 	setcelltextsignal = QtCore.pyqtSignal(int, int, str)
 	setcellcolorsignal = QtCore.pyqtSignal(int, int, str)
 	setcellwidgetsignal = QtCore.pyqtSignal(int, int, QtWidgets.QWidget)
+	printlogsignal = QtCore.pyqtSignal(str)
 
 	def __init__(self, indexesonline, ips, parent=None):
 		super(self.__class__, self).__init__(parent)
@@ -268,6 +337,7 @@ class PingMachines(QtCore.QThread):
 		self.setcelltextsignal.connect(parent.parent().parent().swindow.set_cell)
 		self.setcellcolorsignal.connect(parent.parent().parent().swindow.set_cell_color)
 		self.setcellwidgetsignal.connect(parent.parent().parent().swindow.set_cell_widget)
+		self.printlogsignal.connect(parent.print_log)
 
 	def run(self):
 		for j in self.indexesonline:
@@ -285,3 +355,4 @@ class PingMachines(QtCore.QThread):
 				self.setcellcolorsignal.emit(j, 4, 'green')
 				time.sleep(2)
 				self.parent.get_variables(j)
+		self.printlogsignal.emit("Final")

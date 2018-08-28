@@ -3,11 +3,11 @@
 block_cipher = None
 
 
-a = Analysis(['gui.py'],
-             pathex=['C:\\Users\\brich\\Documents\\GitHub\\Revware\\Revware_Mikrotik'],
+a = Analysis(['gui.pyw'],
+             pathex=['C:\\Users\\brich\\AppData\\Local\\Programs\\Python\\Python36\\include', 'C:\\Users\\brich\\Documents\\GitHub\\Revware\\Revware_Mikrotik\\MikrotikManager'],
              binaries=[],
              datas=[],
-             hiddenimports=[],
+             hiddenimports=['PyQt5.sip'],
              hookspath=[],
              runtime_hooks=[],
              excludes=[],
