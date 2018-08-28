@@ -1,5 +1,5 @@
 ('C:\\Users\\brich\\Documents\\GitHub\\Revware\\Revware_Mikrotik\\MikrotikManager\\build\\gui\\gui.exe',
- True,
+ False,
  False,
  True,
  None,
@@ -39,7 +39,7 @@
  [],
  False,
  False,
- 1535472946,
- [('run.exe',
-   'c:\\users\\brich\\appdata\\local\\programs\\python\\python36\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit\\run.exe',
+ 1535479639,
+ [('runw.exe',
+   'c:\\users\\brich\\appdata\\local\\programs\\python\\python36\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit\\runw.exe',
    'EXECUTABLE')])

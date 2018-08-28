@@ -1,9 +1,9 @@
 
 import subprocess
+import platform
 import ipaddress
 import socket
 from PyQt5 import QtCore
-
 
 class IPTest(QtCore.QObject):
 
@@ -29,12 +29,17 @@ class IPTest(QtCore.QObject):
 		timeout_total = 0
 
 		while self.current_try < self.max_tries:
-			QtCore.QCoreApplication.processEvents()
-			self.p = subprocess.Popen("ping -n 1 " + self.ip, stdout=subprocess.PIPE).communicate()[0]
+
+			self.startupinfo = subprocess.STARTUPINFO()
+			self.startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+			self.startupinfo.wShowWindow = subprocess.SW_HIDE
+
+			self.p = subprocess.Popen("ping -n 1 " + self.ip, stdout=subprocess.PIPE, stderr=subprocess.PIPE, startupinfo=self.startupinfo)
 			# print(p.decode("utf-8")) 		# display ping results
-			if b"unreachable" in self.p:
+			self.output = self.p.stdout.read()
+			if b"unreachable" in self.output:
 				print("!", end="", flush=True)
-			elif b"timed out" in self.p:
+			elif b"timed out" in self.output:
 				timeout_total += 1
 				print(".", end="", flush=True)
 			else:

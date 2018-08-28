@@ -2,860 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7315902-3ca4-45e6-a654-f5510cc2e68e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Revware_Mikrotik.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Revware_Mikrotik.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/commands.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/dfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/.sconsign.dblite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/CompiledCellType.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/CompiledCellType.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/CompiledCodeHelpers.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/CompiledCodeHelpers.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/CompiledCoroutineType.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/CompiledCoroutineType.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/CompiledFrameType.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/CompiledFrameType.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/CompiledFunctionType.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/CompiledFunctionType.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/CompiledGeneratorType.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/CompiledGeneratorType.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/CompiledMethodType.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/CompiledMethodType.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/InspectPatcher.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/InspectPatcher.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/MainProgram.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/MainProgram.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/MetaPathBasedLoader.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/MetaPathBasedLoader.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/__constants.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/__constants.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/__constants.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/__frozen.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/__frozen.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/__helpers.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/__helpers.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/__helpers.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/__internal__.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/__internal__.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/build_definitions.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/02/0291aa35af1d8f451f9f71465777c2a0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/03/03a5fd5ae9a2b68628fb4a4fb1d9c262" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/03/03a777039070d22655b4e24dd9345344" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/05/05627451102cfd7cb038ea7627eb260e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/09/09d229f8c6c45be68751ac460c3a835f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/0B/0b2b3db1619a6edfb47018ba331f60fc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/0B/0b912fe99e2d0a1587900436aec03f4e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/0C/0c1c617298bd6162ba6d63a87cc021a4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/0C/0c309a424970810e8ef4d08817c6a4a3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/0D/0d627af8ce9549a0ba3886d714635921" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/0E/0e58dc048813e2979260c8243c6c2373" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/0E/0e7fdbf931d4079eb45c7a701a7ffde0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/0E/0eb7e670d37aa361c91bef323c5418ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/0F/0fb43f7cbcb8591684073d4615a714d7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/0F/0fb781290664da1df95ce125ef96a68e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/10/1098e8e4860de59c2b486329942cb02f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/11/11eb858330dd6f003c33515d611af94b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/13/133e99b953d5fb9bb61d8f2d6710d5cf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/15/158fdaa593aabf2a0337dab08fcd6f3d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/15/159ac5985483b23f588977e6d80478d8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/18/18dea166f95aa22665731545d82ddbdd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/1B/1bb72543276e0c99b2a160747d52b091" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/1C/1cbaf717a8f2d6b979a53a20ff468983" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/1D/1d40149441d50d0cca3f914e1f6fc0d3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/1E/1ebfd864ae2db8a9bb8a2ba9ace02605" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/1F/1f0e1a90989417e3c489eba66f5b3c51" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/1F/1fe1dc5585461e789b820183526f589c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/20/20056dc376c8d2e928aafcc07a52c814" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/20/20121be756eedc013d7b9d13c7a35ebb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/21/215e93488866b4a8468b74b01ea9c066" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/22/227e65a56e68add1ef030792f4912236" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/24/2443beb9e1a8bab46fb7a139252dae9e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/24/2484a450db82d69dcc5880473a2e8ac4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/24/24ba4444d47272cf6ede63ea8d7f423a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/24/24cab83dc4eebe1d0bd1d228c6ff39b5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/25/25764a06523ec682187f2dac95b0b9ae" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/26/269b3d204016dab30afb3d52c41c95ed" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/26/269c4dcfc4fbd109d77de221c5c45b92" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/28/284d66932a9b262ee2256513d144405e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/28/286542d2f3b06a55d159071de987779d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/28/28958f92395bcffb433e90494dad8c3e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/29/2915dd7ccac2687bdeb61ffceff79f91" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/29/29a595bb824fa776d918a0c8ec900702" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/2C/2c4c64923e6d7cb92db214cc31b1faed" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/2C/2cd128725a5ffcc83ed60c01f10c4b7d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/2E/2e223fd4ebf5ac299434c1585185881e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/2E/2e4a01859cdbdb11aeaeef337db23ca1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/2E/2ea08fa1270e85a8887874089dfb60e9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/2E/2ed1c62ad3e37e725c72cf357889ef06" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/30/30598a5b7523a0a065b2ec4ac8470a11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/30/30da6a3bb42ce118090f17e8ca93707c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/32/3229d86c77f761ec6460dd521e3bac18" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/32/3297ee06981ef9e6e87bfbc2c814caae" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/32/32e768e4ae187604a0cd609490ecf615" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/33/3319fedfa81a588d32ae4d2458ead6ef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/33/33fc458d7d90296451508b63c7a0a045" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/34/3413f8b18f139a34f2bb0e2d56972bac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/34/348e17c35d214b0847c43634459dd9c9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/35/35d58552afcd1082d57aa44462a3f6f3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/36/367f22722988a291b6b20689595566ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/38/381dcb152b9928310ce0afb7bc74d19c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/39/39254d649976ae908fae0fecb75d7668" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/3A/3a64e32c3a7390cbfd99d28a8b59d849" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/3E/3e588f030fca3838d370ba3dc2a81850" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/43/43d8aa01682545ec47af300358090047" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/44/44d88210a351d03f367abff58bce2032" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/45/45b9fa3df618adf59989839240c81abf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/46/4606729f575733b88523d4e3423bdbaf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/46/46e637cefc5e827e270f8649c304cbaa" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/48/48b0c56b96072feb5357c77bf7a36560" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/49/49d00c85e76decbfae55f21d4ecc7ef6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/4A/4a90f156c77d2c1c20f5ad758c9c1c03" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/4B/4bbb96a66ec38732535bcaa7e017e599" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/50/50bd05b51b5439d577beba5648a41bab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/51/51464fa6a5d82bbdfab45be4dcdf3766" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/51/51c1901ab4c4d24a38c8e1cf8ae4f005" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/52/520d793d33a4db0eefb330f68b389c75" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/55/5500605863746a5af8bb40e58fea12a2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/55/5517ac89916b2adecbc1ea08f8b6f2ce" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/56/56db0193ba5ad7c229f9f7e75aab3e86" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/57/577256cc91deae0dca59b48003353061" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/58/58ca347b49dbf00a2bef079471a188bd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/5A/5a7244f6f6bae9f19b6c37a147d248c6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/5B/5b388cb71cd0158707995e917dae91fa" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/5B/5b55201c3684a59fd18f0143fbf99b6b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/5B/5b893068ad316d759c4222df51499c1a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/5B/5bc42ffca62a3f73231bac65eb6759b5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/5D/5d0f1d0c24e4c58c06ba7e2a9723cdca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/60/6013489820bc77b18733f07aa5335871" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/60/6036b0c687ba763bb40c6203296c89f5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/60/606f317f3a990ede767a38c063395b70" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/62/62fbff52fe57cce02769ba0813fa24e7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/65/65599751a300afbcddff373bbb3428c0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/67/67033efff7187a8d0dce95d900aa120b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/67/677c7da5db33acad52615719598a029d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/67/67f37a4e924b9bcbf9278f61a509586c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/68/68145a7d30e6de7359d2891859185fd0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/68/682bcc3f57347e32d6c4b09b39d21b91" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/68/687a29e714c00abb959f0bbe7c821a57" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/68/688857112c5915465194cd472765f584" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/68/6891645d6e1be7c638f47f1c8d851904" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/69/69d46dcdf56eaff0119b2ab3c7775e20" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/6B/6b6633d93408af93b2134c34f3fd139a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/6B/6bcc28ec9e28417551201527f0e535bf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/6D/6df8c6597ff92844b82f1e1b0a4feda8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/70/700164b651af64daae2bfa79b6983244" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/70/708324f005d71678b9f81894a7edb30c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/71/71bb21e9bf982555b2a495b9779664b5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/72/72ccb07e52a9d4bbf346d2a9e645ef65" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/72/72cde43ce61059b47dd8039e6886485e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/77/7719152bd6a55e14ac4206c48ac74dbd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/77/77ee1b92d22dcf8acab83d3f03946cbd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/7A/7a29d7e3d176c80da234b1126dac6c1e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/7A/7af0b34918ba713f6b3667a19d76a78b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/7C/7cc933f050cb86acb9124bf6d6381a0e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/7C/7ce66593958880314c6778543189bc9d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/7D/7dc440a21615e0d13a8404b2f8e82bcb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/7E/7eaab5e55827a0141712bd8ea74672bc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/7F/7f53c33ce51a6ca116f352a61c162ee5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/7F/7feff73c49a1e61623eeb43be8728280" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/80/80e9753e5b4d6962e18524a4a218ee31" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/82/82154a06b163230288df8ec17b8364a7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/83/83c03d770bca155b4c0990258d455e2e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/84/8426d5ddb753b373b34d15bcd1484008" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/85/850dab0891175fbd44f8318f87be1365" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/85/8595596936bf5888f2a78c6cdaa49a77" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/86/86da2f2dc4f8e3fafa157a7fd74a53b5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/88/8842b031a7ff80f12f4435e1ff8c8adb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/88/8859b2df1875ecd0e35f4fab2c5aff00" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/88/88ed0feb80a70a5f76fced1682c9ce3b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/89/89708d74bfbd190a81348c999cc06a70" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/8A/8adb41987c7e750e6d6d4a62995cf0ef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/8B/8b1d495697fee7e59acf666d2193c2ff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/8B/8b73af75e52961629742774d54e88fff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/8D/8df95b0f14dd9471baf1e9a2d87c0e10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/8F/8fe830525dd52e013ad4baf91784abe4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/90/9033730352a1bc8bf689064a9d1fd9aa" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/90/904a4b778cca9a5249bdb0f6ed578b70" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/90/90544436f55fb9d13d2c24e7c61a1772" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/91/91de2e06502e8ceaea5172fc098a251c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/92/920613c22d8658828ade8ec035096929" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/92/927988130756fb4922b1bdc7a1bb4067" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/93/9318f489c2838fba9fbf7ce45e068110" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/94/94cf1af1ab3e9314caf8a82268c22251" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/95/9508dab7f2d9b861f9f3cb886f4e5877" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/95/95b75f769da14444314c63d5d559403d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/95/95f0a61460edfd6223889e0250e144bb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/97/97a6fa0c6c48e90220c6a2adb1ecb853" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/98/9873e08be68a73e6f438e15a789af500" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/9B/9b0edda96afed621f7f6786dc59ad416" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/9E/9eafe6490f2614ed21c0ccf4c0272a5a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/9E/9ed407c7cbef948f751faa1f62eef3ed" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/9E/9effb4cc9d7441e014de88a3025323d7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/9F/9f06dc9a459f901179421af5f5210696" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/A0/a02789864b8b22083b3f55dc4c98cadd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/A1/a1b7c66db2203b89192f35ab490db173" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/A3/a3381536745896fe7580675c29e7110d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/A3/a37c671040bc6c199d13853586aae6fe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/A7/a77e03e49bb1ea3aa9624fd3782d688b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/A7/a79989cf6c54fa9c7c68506c785f1819" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/A8/a852567351adb047d9dcc94c6864ff9a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/A8/a886bd8336ff3f201edde93f8bedc417" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/A9/a91a0120231cc28084aa16abcd891e05" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/A9/a9241c92feaebb99ae0275f447e3ea74" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/AA/aa28f4f2ac6279cac770693dba165cae" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/AD/ad6ed30a57d9cd1cc4d50028684fc60a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/AD/ad8b0ba80f3da008d59570cacabd2def" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/AE/ae8c2da14500788f28ec8e552ec8a4b6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/B0/b053809c3f9b5bdfdf98a4716671001c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/B0/b06f90bd0f0817edfa604e424163efe3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/B2/b2bf3e87943845e380a856b642c48080" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/B2/b2e9830cfd47865225987c2f2101a682" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/B4/b40c30b85a67762c4d1eb8849e05f70e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/B5/b54f16e5e4f633b9b8961e71e965d941" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/B6/b6a18e43cfc1d485a1c423e87be73e44" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/B7/b708dfeffe0fd68e33e68d1654fc332b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/B7/b718fbebdd8ebaeb1d946efd63cfd950" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/B7/b75053bbb1d67e9b826217c82b5e5980" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/B7/b7b75282581aa3312ebb7a429df86e83" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/B7/b7e43c11afaaeea2dd62ecd071a427de" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/B9/b92849f2c225c27d1c0977d50f9e4aee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/BC/bc2a64f4b5e369a21a37558575b5ceef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/BD/bd4def4c315ffa1fdf524e1c8dde3e62" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/BF/bf4b0edb41097242fd43229e6b12d651" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/BF/bf6581420a148d8ac511d5b674443663" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/BF/bf920b27511fd5b3ddce05457f855200" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/C2/c24cb1882c294706e97fb21450c599f6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/C2/c2c247d3222e9408f7804c4814ad88de" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/C3/c33a8662b2e9de61c57ffa312f65282a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/C6/c68b8eef65b5b3f38e8192c667e1ff27" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/C6/c6d27dd00825b65e8ca10deaca367c16" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/C7/c7f25769935e9d8d238915b995495544" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/C7/c7fa9daee6ec1252297b67b29209693e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/C8/c8e1b2fd427983cc5d3f1ec39eb815a0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/CA/cae1bbcecca474f442ad6129fc0375ac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/CB/cb3d1658701bad8d494e2a137bdc233a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/CB/cbeef6e2b41bfc3ab7f8cb33c843f453" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/D1/d10603a34d5c770378af8211752be5d6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/D3/d3c64a4d4fa6541f82927476e5f905fc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/D6/d6593c952da6addfa13dd0a1e50b30b2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/D6/d675229de3475feea48c15ed0b814fb5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/DA/da4e255847bdad048358fe7b01d36623" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/DC/dc8dba4ad409e2c5a099939bcc5909b1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/DD/dd4c48c0f131ef6b8b8f54d4ad4437f2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/DD/dd9f27b89c6abd8218559c94179b73a0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/DF/df4e2f0ae8eead596c56bc90dd313c80" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/E0/e0636f6f4b59c80bb9e94d1b646038e8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/E0/e09058a3928078c8f0d47b4538bca07c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/E1/e187684aa19d7b5950460fe92853fcdc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/E3/e399b3811051c0d9a2e0436dd0e8a7e8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/E3/e3c971b3c5873e3bc7b12531e2909fea" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/E4/e454f8fab358307dd79bdd66253b9c3e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/E4/e483619c584d8c16da5255ad5cf51f5c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/E4/e4b21ce1e07507724554079547f65844" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/E5/e58082bba5f096eb72bcf3842ca4d8af" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/E6/e6384e2d08501e572fa92271d45dc9e6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/E6/e6af0867d0aa38953705aadc8e7310ef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/E6/e6dd4c0831804d32c42afb5d11365879" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/E7/e7060a25e09ecf2936ca81af8ba39f66" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/EA/ea337105ad860b643e910f9e22b0ebf6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/EA/ea5b7953e347f718ef332213de408ba3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/EA/eafd9cd5b2596b9cb165cbf14bd7bbbe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/ED/edcc8431ba4d7e5ee88f63ef97552816" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/EE/ee202d0a26e296ca1707946e4c9617d8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/F1/f11a73838dcac76b65aaa9aa3e4d9e65" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/F2/f24d8b87ace6fc1b218a0999eb78b67e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/F5/f5ad87f3e017ee1c1c676aa6b58891c9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/F5/f5d069e87dcbb295c913fcd701220a7f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/F5/f5ed1da3500488c295e173ccc9e7c5ad" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/F7/f7057e222ca9df14a12fffbd06de34bf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/F8/f825dac073e842ddc194d8b4c9767f6b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/F9/f9e21d850a1cc3fa20b8fcffc621b212" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/FB/fb23635f7b5c6bd868b32037d5f62889" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/FC/fc5550b02204afe9fab53641900a0921" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/FC/fc5e43c946bb601edb997159eef2cb17" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/FF/ff7a5aff47acfeff2f39d3664d250cc0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/cache-x86_64-3.5/config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/fibers_win32.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/fibers_win32.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.PyQt5.QtCore-postLoad.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.PyQt5.QtCore-postLoad.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.PyQt5.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.PyQt5.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.__main__.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.__main__.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._elliptic_curve.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._elliptic_curve.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._errors.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._errors.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._ffi.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._ffi.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._inet.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._inet.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._int.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._int.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._iri.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._iri.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._ordereddict.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._ordereddict.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._perf._big_num_ctypes.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._perf._big_num_ctypes.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._perf.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._perf.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._teletex_codec.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._teletex_codec.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._types.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto._types.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto.algos.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto.algos.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto.core.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto.core.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto.keys.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto.keys.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto.parser.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto.parser.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto.util.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto.util.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto.version.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.asn1crypto.version.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.bcrypt.__about__.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.bcrypt.__about__.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.bcrypt.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.bcrypt.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.__about__.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.__about__.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.exceptions.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.exceptions.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.interfaces.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.interfaces.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.aead.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.aead.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.backend.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.backend.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.ciphers.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.ciphers.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.cmac.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.cmac.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.decode_asn1.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.decode_asn1.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.dh.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.dh.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.dsa.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.dsa.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.ec.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.ec.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.encode_asn1.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.encode_asn1.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.hashes.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.hashes.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.hmac.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.hmac.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.rsa.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.rsa.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.utils.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.utils.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.x25519.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.x25519.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.x509.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.backends.openssl.x509.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.bindings.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.bindings.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.bindings.openssl._conditional.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.bindings.openssl._conditional.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.bindings.openssl.binding.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.bindings.openssl.binding.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.bindings.openssl.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.bindings.openssl.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.asymmetric.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.asymmetric.dh.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.asymmetric.dh.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.asymmetric.dsa.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.asymmetric.dsa.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.asymmetric.ec.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.asymmetric.ec.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.asymmetric.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.asymmetric.padding.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.asymmetric.padding.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.asymmetric.rsa.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.asymmetric.rsa.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.asymmetric.utils.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.asymmetric.utils.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.asymmetric.x25519.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.asymmetric.x25519.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.ciphers.aead.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.ciphers.aead.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.ciphers.algorithms.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.ciphers.algorithms.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.ciphers.base.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.ciphers.base.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.ciphers.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.ciphers.modes.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.ciphers.modes.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.ciphers.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.constant_time.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.constant_time.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.hashes.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.hashes.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.kdf.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.kdf.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.kdf.scrypt.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.kdf.scrypt.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.mac.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.mac.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.serialization.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.hazmat.primitives.serialization.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.utils.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.utils.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.x509.base.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.x509.base.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.x509.certificate_transparency.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.x509.certificate_transparency.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.x509.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.x509.extensions.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.x509.extensions.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.x509.general_name.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.x509.general_name.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.x509.name.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.x509.name.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.x509.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.x509.oid.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.cryptography.x509.oid.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.idna.core.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.idna.core.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.idna.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.idna.idnadata.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.idna.idnadata.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.idna.intranges.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.idna.intranges.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.idna.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.idna.package_data.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.idna.package_data.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.idna.uts46data.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.idna.uts46data.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.menu.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.menu.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.crypto_box.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.crypto_box.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.crypto_generichash.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.crypto_generichash.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.crypto_hash.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.crypto_hash.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.crypto_pwhash.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.crypto_pwhash.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.crypto_scalarmult.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.crypto_scalarmult.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.crypto_secretbox.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.crypto_secretbox.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.crypto_shorthash.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.crypto_shorthash.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.crypto_sign.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.crypto_sign.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.randombytes.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.randombytes.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.sodium_core.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.sodium_core.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.utils.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.bindings.utils.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.encoding.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.encoding.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.exceptions.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.exceptions.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.public.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.public.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.signing.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.signing.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.utils.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.nacl.utils.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko._version.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko._version.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko._winapi.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko._winapi.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.agent.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.agent.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.auth_handler.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.auth_handler.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.ber.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.ber.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.buffered_pipe.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.buffered_pipe.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.channel.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.channel.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.client.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.client.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.common.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.common.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.compress.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.compress.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.config.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.config.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.dsskey.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.dsskey.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.ecdsakey.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.ecdsakey.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.ed25519key.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.ed25519key.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.file.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.file.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.hostkeys.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.hostkeys.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.kex_ecdh_nist.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.kex_ecdh_nist.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.kex_gex.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.kex_gex.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.kex_group1.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.kex_group1.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.kex_group14.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.kex_group14.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.kex_gss.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.kex_gss.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.message.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.message.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.packet.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.packet.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.pipe.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.pipe.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.pkey.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.pkey.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.primes.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.primes.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.proxy.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.proxy.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.py3compat.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.py3compat.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.rsakey.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.rsakey.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.server.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.server.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.sftp.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.sftp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.sftp_attr.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.sftp_attr.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.sftp_client.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.sftp_client.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.sftp_file.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.sftp_file.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.sftp_handle.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.sftp_handle.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.sftp_server.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.sftp_server.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.sftp_si.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.sftp_si.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.ssh_exception.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.ssh_exception.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.ssh_gss.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.ssh_gss.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.transport.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.transport.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.util.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.util.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.win_pageant.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.paramiko.win_pageant.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.ping.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.ping.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.ber.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.ber.decoder.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.ber.decoder.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.ber.encoder.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.ber.encoder.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.ber.eoo.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.ber.eoo.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.ber.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.cer.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.cer.decoder.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.cer.decoder.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.cer.encoder.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.cer.encoder.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.cer.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.der.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.der.decoder.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.der.decoder.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.der.encoder.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.der.encoder.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.der.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.codec.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.compat.binary.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.compat.binary.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.compat.calling.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.compat.calling.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.compat.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.compat.dateandtime.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.compat.dateandtime.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.compat.integer.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.compat.integer.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.compat.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.compat.octets.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.compat.octets.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.compat.string.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.compat.string.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.debug.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.debug.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.error.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.error.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.base.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.base.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.char.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.char.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.constraint.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.constraint.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.error.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.error.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.namedtype.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.namedtype.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.namedval.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.namedval.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.tag.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.tag.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.tagmap.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.tagmap.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.univ.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.univ.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.useful.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pyasn1.type.useful.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pywintypes.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.pywintypes.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.api.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.api.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.api_communicator.async_decorator.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.api_communicator.async_decorator.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.api_communicator.base.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.api_communicator.base.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.api_communicator.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.api_communicator.encoding_decorator.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.api_communicator.encoding_decorator.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.api_communicator.exception_decorator.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.api_communicator.exception_decorator.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.api_communicator.key_cleaner_decorator.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.api_communicator.key_cleaner_decorator.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.api_communicator.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.api_socket.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.api_socket.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.api_structure.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.api_structure.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.base_api.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.base_api.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.communication_exception_parsers.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.communication_exception_parsers.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.exceptions.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.exceptions.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.query.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.query.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.resource.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.resource.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.sentence.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.sentence.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.utils.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.routeros_api.utils.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.sftp.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.sftp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.six.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.six.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.ssh.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.ssh.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.sspi.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.sspi.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.sspicon.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.sspicon.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.telnet.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.telnet.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.composer.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.composer.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.constructor.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.constructor.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.cyaml.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.cyaml.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.dumper.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.dumper.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.emitter.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.emitter.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.error.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.error.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.events.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.events.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.loader.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.loader.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.nodes.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.nodes.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.parser.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.parser.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.reader.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.reader.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.representer.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.representer.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.resolver.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.resolver.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.scanner.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.scanner.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.serializer.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.serializer.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.tokens.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/module.yaml.tokens.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/resources.rc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/resources.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.build/scons-report.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/Coffee.qss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/DarkOrange.qss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/PyQt5/QtCore.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/PyQt5/QtGui.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/PyQt5/QtWidgets.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/PyQt5/qt-plugins/iconengines/qsvgicon.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/PyQt5/qt-plugins/imageformats/qgif.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/PyQt5/qt-plugins/imageformats/qicns.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/PyQt5/qt-plugins/imageformats/qico.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/PyQt5/qt-plugins/imageformats/qjpeg.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/PyQt5/qt-plugins/imageformats/qsvg.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/PyQt5/qt-plugins/imageformats/qtga.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/PyQt5/qt-plugins/imageformats/qtiff.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/PyQt5/qt-plugins/imageformats/qwbmp.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/PyQt5/qt-plugins/imageformats/qwebp.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/PyQt5/qt-plugins/mediaservice/dsengine.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/PyQt5/qt-plugins/mediaservice/qtmedia_audioengine.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/PyQt5/qt-plugins/mediaservice/wmfengine.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/PyQt5/qt-plugins/platforms/qminimal.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/PyQt5/qt-plugins/platforms/qoffscreen.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/PyQt5/qt-plugins/platforms/qwindows.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/PyQt5/qt-plugins/printsupport/windowsprintersupport.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/_bz2.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/_cffi_backend.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/_ctypes.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/_decimal.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/_elementtree.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/_hashlib.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/_lzma.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/_msi.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/_multiprocessing.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/_overlapped.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/_socket.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/_sqlite3.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/_ssl.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/_tkinter.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/_win32sysloader.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/_yaml.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/aepic.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/bcp47mrm.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/bcrypt/_bcrypt.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/chakra.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/cldapi.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/comppkgsup.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/concrt140.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/contactactivation.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/coremessaging.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/coreuicomponents.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/cryptnet.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/cryptngc.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/cryptography/hazmat/bindings/_constant_time.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/cryptography/hazmat/bindings/_openssl.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/crypttpmeksvc.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/d3d12.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/d3d9.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/d3dscache.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/dbgcore.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/dbgeng.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/dbgmodel.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/dmenterprisediagnostics.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/dsclient.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/dsreg.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/dxilconv.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/dxva2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/edgeiso.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/edpauditapi.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/edputil.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/efscore.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/efswrt.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/evr.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/fwbase.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/fwpolicyiomgr.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/gui.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/hid.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/ieapfltr.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/ksuser.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/mf.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/mfasfsrcsnk.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/mfcore.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/mfnetcore.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/mfnetsrc.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/mfreadwrite.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/mftranscode.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/mi.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/miutils.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/msiso.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/msvcp110_win.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/msvcp140.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/msvcp_win.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/msvcrt.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/nacl/_sodium.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/ngcrecovery.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/pkeyhelper.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/policymanager.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/pyexpat.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/python3.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/python35.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/pywintypes35.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/qt5core.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/qt5gui.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/qt5multimedia.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/qt5network.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/qt5printsupport.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/qt5svg.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/qt5widgets.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/rmclient.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/rtworkq.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/select.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/settings.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/sip.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/sqlite3.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/srpapi.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/tcl86t.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/textinputframework.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/tk86t.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/tokenbinding.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/tpmcoreprovisioning.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/unicodedata.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/userdatatypehelperutil.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/vcruntime140.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/webauthn.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/wer.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/win32security.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/win32u.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/windowsperformancerecordercontrol.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/winipcfile.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/winmsipc.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/wpaxholder.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/wpcwebfilter.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.dist/wuceffects.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.pyw" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/gui.pyw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MikrotikManager/build/gui/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/build/gui/base_library.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MikrotikManager/build/gui/gui.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/build/gui/gui.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-Analysis.toc" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-Analysis.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-COLLECT.toc" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-COLLECT.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-EXE.toc" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-EXE.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-PKG.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-PKG.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-PYZ.pyz" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-PYZ.pyz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-PYZ.toc" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-PYZ.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MikrotikManager/build/gui/warngui.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/build/gui/warngui.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MikrotikManager/build/gui/xref-gui.html" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/build/gui/xref-gui.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MikrotikManager/dist/gui/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/dist/gui/base_library.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MikrotikManager/dist/gui/batch.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MikrotikManager/dist/gui/gui.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/dist/gui/gui.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.spec" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/gui.spec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/ipList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/ipList.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/ips.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/sftp.py" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/sftp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/ssh.py" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/ssh.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MikrotikManager/menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MikrotikManager/ping.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MikrotikManager/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MikrotikManager/sftp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MikrotikManager/ssh.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MikrotikManager/telnet.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -891,7 +58,7 @@
         <counts>
           <entry key="dummy" value="38" />
           <entry key="py" value="20283" />
-          <entry key="pyw" value="988" />
+          <entry key="pyw" value="1350" />
           <entry key="qss" value="58" />
           <entry key="yaml" value="84" />
         </counts>
@@ -899,7 +66,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="96" />
-          <entry key="Python" value="21271" />
+          <entry key="Python" value="21633" />
           <entry key="YAML" value="84" />
         </counts>
       </usages-collector>
@@ -907,6 +74,7 @@
         <counts>
           <entry key="py" value="18" />
           <entry key="pyi" value="2" />
+          <entry key="pyw" value="2" />
           <entry key="qss" value="3" />
           <entry key="yaml" value="1" />
         </counts>
@@ -914,7 +82,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="18" />
+          <entry key="Python" value="20" />
           <entry key="PythonStub" value="2" />
           <entry key="YAML" value="1" />
         </counts>
@@ -950,57 +118,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MikrotikManager/menu.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2380">
-              <caret line="147" column="64" selection-start-line="147" selection-start-column="64" selection-end-line="147" selection-end-column="64" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MikrotikManager/sftp.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="138" selection-start-line="138" selection-end-line="138" />
-              <folding>
-                <marker date="1535385539948" expanded="true" signature="2507:2508" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/paramiko/transport.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
+            <state relative-caret-position="3750">
               <caret line="2043" selection-start-line="2043" selection-end-line="2043" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MikrotikManager/ssh.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MikrotikManager/ping.pyw">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+            <state relative-caret-position="197">
+              <caret line="36" column="108" selection-start-line="36" selection-start-column="108" selection-end-line="36" selection-end-column="108" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#1#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MikrotikManager/ping.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MikrotikManager/menu.pyw">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+            <state relative-caret-position="425">
+              <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
               <folding>
-                <element signature="e#1#18#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1067,10 +211,11 @@
         <option value="$PROJECT_DIR$/MikrotikManager/gui.pyw" />
         <option value="$PROJECT_DIR$/MikrotikManager/sftp.py" />
         <option value="$PROJECT_DIR$/MikrotikManager/ssh.py" />
+        <option value="$PROJECT_DIR$/MikrotikManager/ping.pyw" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-516" />
     <option name="y" value="-10" />
     <option name="width" value="1616" />
@@ -1097,6 +242,37 @@
             <path>
               <item name="Revware_Mikrotik" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="Revware_Mikrotik" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="Revware_Mikrotik" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="Python36" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Revware_Mikrotik" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="Python36" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Revware_Mikrotik" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="Python36" type="462c0819:PsiDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Revware_Mikrotik" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1271,7 +447,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47439352" visible="true" weight="0.121673" />
@@ -1444,16 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="138" selection-start-line="138" selection-end-line="138" />
-          <folding>
-            <marker date="1535385539948" expanded="true" signature="2507:2508" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/paramiko/transport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="2043" selection-start-line="2043" selection-end-line="2043" />
         </state>
       </provider>
     </entry>
@@ -1469,8 +635,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MikrotikManager/ping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#1#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/paramiko/transport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3750">
+          <caret line="2043" selection-start-line="2043" selection-end-line="2043" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MikrotikManager/menu.pyw">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MikrotikManager/ping.pyw">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="36" column="108" selection-start-line="36" selection-start-column="108" selection-end-line="36" selection-end-column="108" />
           <folding>
             <element signature="e#1#18#0" expanded="true" />
           </folding>
