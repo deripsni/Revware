@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7315902-3ca4-45e6-a654-f5510cc2e68e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/build/gui/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/build/gui/base_library.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/build/gui/gui.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/build/gui/gui.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-Analysis.toc" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-Analysis.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-COLLECT.toc" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-COLLECT.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-EXE.toc" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-EXE.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-PKG.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-PKG.pkg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-PYZ.pyz" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-PYZ.pyz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-PYZ.toc" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/build/gui/out00-PYZ.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/build/gui/warngui.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/build/gui/warngui.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/build/gui/xref-gui.html" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/build/gui/xref-gui.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/dist/gui/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/dist/gui/base_library.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/dist/gui/batch.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/dist/gui/gui.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/dist/gui/gui.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/gui.spec" beforeDir="false" afterPath="$PROJECT_DIR$/MikrotikManager/gui.spec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/menu.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/ping.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/setup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/sftp.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/ssh.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MikrotikManager/telnet.py" beforeDir="false" />
-    </list>
+    <list default="true" id="e7315902-3ca4-45e6-a654-f5510cc2e68e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -447,7 +425,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47439352" visible="true" weight="0.121673" />
