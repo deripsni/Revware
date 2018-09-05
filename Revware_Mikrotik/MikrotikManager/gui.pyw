@@ -291,7 +291,6 @@ class FirmwareWindow(QMainWindow):
 		super(self.__class__, self).__init__(parent)
 		self.init_ui()
 
-
 	def init_ui(self):
 		self.fbtn = QPushButton('Browse', self)
 		self.fbtn.move(100, 10)

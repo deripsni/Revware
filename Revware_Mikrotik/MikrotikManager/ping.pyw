@@ -1,9 +1,9 @@
 
 import subprocess
-import platform
 import ipaddress
 import socket
 from PyQt5 import QtCore
+
 
 class IPTest(QtCore.QObject):
 
@@ -34,8 +34,10 @@ class IPTest(QtCore.QObject):
 			self.startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
 			self.startupinfo.wShowWindow = subprocess.SW_HIDE
 
-			self.p = subprocess.Popen("ping -n 1 " + self.ip, stdout=subprocess.PIPE, stderr=subprocess.PIPE, startupinfo=self.startupinfo)
-			# print(p.decode("utf-8")) 		# display ping results
+			self.p = subprocess.Popen(
+										"ping -n 1 " + self.ip, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+										startupinfo=self.startupinfo)
+
 			self.output = self.p.stdout.read()
 			if b"unreachable" in self.output:
 				print("!", end="", flush=True)
@@ -45,7 +47,6 @@ class IPTest(QtCore.QObject):
 			else:
 				x = "%s online \n" % self.ip
 				self.printToScreen.emit(x)
-				QtCore.QCoreApplication.processEvents()
 				return "online"
 
 			self.current_try += 1
@@ -74,20 +75,19 @@ class IPTest(QtCore.QObject):
 		for i in self.subnets:
 			self.number = self.number + 2 ** (32 - int(i[-2:]))
 
-
 		while self.i < len(ips):
-			# self.number = 2 ** (32 - int(self.subnets[self.i][-2:]))
+
 			self.network = ipaddress.IPv4Network(self.ips[self.i] + "/" + self.subnets[self.i][-2:])
 			self.gateway = self.network[1]
 			print("This subnets gateway is")
 			print(self.gateway)
 			self.pMaxSignal.emit(self.number)
+
 			for addr in self.network:
 				if addr == self.gateway:	  # Skips the gateway
 					pass
 				else:
 					self.count = self.count + 1
-					QtCore.QCoreApplication.processEvents()
 					self.status = self.ping(str(addr), tries=2, timeout_include=self.option)
 					if self.status == "online":
 						self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

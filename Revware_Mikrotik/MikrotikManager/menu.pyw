@@ -93,7 +93,7 @@ class Firewall(QtCore.QThread):
 			api = connection.get_api()
 			self.list = api.get_resource('/ip/firewall/filter')
 			self.filter = self.list.get()
-		# print(self.filter[2])
+
 			self.index = -1
 			self.dropindex = None
 			for i in self.filter:
