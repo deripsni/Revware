@@ -154,7 +154,7 @@ class SFTP(QtCore.QObject):
 			self.setcelltextsignal.emit(i, 5, 'Failed')
 			self.indexesonline.pop()
 			return None
-			print("Communication Error")
+
 	def filecallback(self):   # callback function that does nothing
 		pass
 
@@ -302,45 +302,6 @@ class SFTP(QtCore.QObject):
 				except IndexError:
 					self.changes.append("Enabled drop rule")
 				self.checkfirewall(username, password, ip)
-
-		# def checkfirewall(self, username, password, ip):
-		# 	try:
-		# 		connection = routeros_api.RouterOsApiPool(self.ips[ip], username=username, password=password)
-		# 		# self.errormessage = (
-		# 		# 					"U: " + username + " P: " + password + " IP: " + str(ip) + " Also IP: " +
-		# 		# 					str(self.indexesonline[ip]))
-		# 		#
-		# 		# self.printToScreen.emit(self.errormessage)
-		# 		api = connection.get_api()
-		# 		self.list = api.get_resource('/ip/firewall/filter')
-		# 		self.filter = self.list.get()
-		#
-		# 		self.index = -1
-		# 		self.dropindex = None
-		#
-		# 		for j in self.filter:
-		# 			self.index = self.index + 1
-		# 			if j['action'] == 'drop' and j['disabled'] == 'false':
-		# 				self.dropindex = self.index
-		#
-		# 		if self.index == self.dropindex:
-		# 			self.printToScreen.emit("Drop rule is enabled")
-		# 			self.setcelltextsignal.emit(ip, 5, 'Enabled')
-		# 			try:
-		# 				self.changes[ip] = "Drop rule was already enabled"
-		# 			except IndexError:
-		# 				self.changes.append("Drop rule was already enabled")
-		# 		else:
-		# 			self.printToScreen.emit("Drop rule is not enabled")
-		# 			self.setcelltextsignal.emit(ip, 5, 'Not Enabled')
-		# 			self.printToScreen.emit("Adding drop rule...")
-		# 			self.setcelltextsignal.emit(ip, 5, 'Enabling')
-		# 			self.list.add(action="drop", chain='forward', disabled='false')
-		# 			try:
-		# 				self.changes[ip] = "Enabled drop rule"
-		# 			except IndexError:
-		# 				self.changes.append("Enabled drop rule")
-		# 			self.checkfirewall(username, password, ip)
 
 		except routeros_api.exceptions.RouterOsApiConnectionError:
 			self.printToScreen.emit("Could not establish API connection")
