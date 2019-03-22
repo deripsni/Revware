@@ -1,12 +1,9 @@
 # Revware
 
-[![Build Status](https://travis-ci.org/Revand/Revware.svg?branch=master)](https://travis-ci.org/Revand/Revware)
 [![Github All Releases](https://img.shields.io/github/downloads/Revand/Revware/total.svg)](https://github.com/Revand/Revware/tree/master)
 [![GitHub release](https://img.shields.io/github/release/Revand/Revware.svg)](https://github.com/Revand/Revware)
 
-Revware is a Python Tool to manipulate Mikrotik device(s) using SSH. Originally conceived by support staff at PocketiNet Communications to automate tasks that use to be done by point and click.
-
-![Screenshot of main page](Revware.PNG "Main Menu")
+Revware is a Python Tool to manipulate Mikrotik device(s) using Mikrotik API. Originally conceived by support staff at PocketiNet Communications to automate tasks that use to be done by point and click.
 
 # Installation
   WIP
