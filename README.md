@@ -1,22 +1,18 @@
 # Revware
 
-[![Github All Releases](https://img.shields.io/github/downloads/Revand/Revware/total.svg)](https://github.com/Revand/Revware/tree/master)
-[![GitHub release](https://img.shields.io/github/release/Revand/Revware.svg)](https://github.com/Revand/Revware)
-
 Revware is a Python Tool to manipulate Mikrotik device(s) using Mikrotik API. Originally conceived by support staff at PocketiNet Communications to automate tasks that use to be done by point and click.
 
 # Installation
-  WIP
+  Run Setup.exe
 
 # Version
-- 0.1.0 Intial Release
+- 1.0.7
   - Firmware
   - Password
   - Radio Name
-  - Custom Command
-  - Telnet
-  - Batch SFTP
-  - Mikrotik Checker
+  - Custom Commands
+  - Mass update and password
+  - Mikrotik Poller
 
 # Developers & Contributors
 
