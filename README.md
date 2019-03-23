@@ -5,7 +5,7 @@ Revware is a Python Tool to manipulate Mikrotik device(s) using Mikrotik API. Or
 # Installation
   Run SetupRevware.exe
 
-![Screenshot of main page](Revware.PNG "Main Menu")
+![Screenshot of main page](Capture.PNG "Main Menu")
 
 # Version
 - 1.0.7
